@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# N1Hub Vault
 
-## Getting Started
+N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with branch workflows (real/dream), version history, import/export, and activity auditing.
 
-First, run the development server:
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm test -- --run
+npm run test:e2e
+```
 
-## Learn More
+## Capsule Validation
 
-To learn more about Next.js, take a look at the following resources:
+The Capsule Validator is fully integrated into backend routes, editor workflows, imports, A2C ingest, CLI, audits, and CI.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Technical reference: [`docs/validator.md`](docs/validator.md)
+- OpenAPI spec: [`docs/openapi/validate.openapi.json`](docs/openapi/validate.openapi.json)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### CLI quick start
 
-## Deploy on Vercel
+```bash
+npm run validate -- --dir data/capsules --strict --report
+npm run validate -- data/capsules/capsule.foundation.capsuleos.v1.json --fix
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### API quick start
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `POST /api/validate`
+- `POST /api/validate/batch`
+- `POST /api/validate/fix`
+- `GET /api/validate/stats`
+- `GET /api/validate/gates`
+
+Use `Authorization: Bearer <token>` headers matching current app auth.
+
+## Automation
+
+- Pre-commit staged-capsule validation: `npm run validate-staged`
+- Background full-vault audit: `npm run audit:capsules`
+- CI workflow: `.github/workflows/validate-capsules.yml`
+
+## Projects - Organize Your Sovereign Work
+
+The Projects tab provides a project-oriented projection of the capsule graph:
+
+- project capsules are explicit (`metadata.type: "project"`, `subtype: "hub"`)
+- hierarchy is modeled with `part_of` links (child -> parent)
+- cycle prevention is enforced in both UI and API
+- create/edit/link/re-parent flows use the same capsule APIs and validator pipeline
+
+Read the full guide in [`docs/projects.md`](docs/projects.md).

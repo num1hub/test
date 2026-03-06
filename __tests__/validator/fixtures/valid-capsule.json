@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.test.valid.v1",
+    "type": "concept",
+    "subtype": "atomic",
+    "status": "active",
+    "version": "1.0.0",
+    "author": "Test Harness",
+    "created_at": "2026-03-05T00:00:00.000Z",
+    "semantic_hash": "capsuleos-validator-gate-model-quality-trace-proof-chain",
+    "source": {
+      "uri": "https://example.com/capsule/test/valid",
+      "type": "test-fixture"
+    }
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Fixture\n\nThis capsule is intentionally well-formed so every validation gate can pass during baseline tests."
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS validation is a gate-based integrity discipline that ensures each capsule remains structurally coherent, semantically aligned, and traceable inside the sovereign graph. This fixture exists to test runtime checks across metadata, payload, neuro concentrate quality, recursive links, and cryptographic sealing. It intentionally uses explicit provenance, canonical relation types, and realistic confidence dimensions so validators can verify boundaries, parity, and deterministic hashing behavior under practical editor, API, batch, and audit workflows without brittle assumptions.",
+    "confidence_vector": {
+      "extraction": 0.99,
+      "synthesis": 0.97,
+      "linking": 0.96,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.08
+    },
+    "keywords": [
+      "capsuleos",
+      "validator",
+      "integrity",
+      "confidence-vector",
+      "gate-model",
+      "sovereign-graph"
+    ],
+    "semantic_hash": "capsuleos-validator-gate-model-quality-trace-proof-chain"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      }
+    ]
+  },
+  "integrity_sha3_512": "065e172840283d709adee7994067640bfb6d65ae481aa804fc2b2b1465638c88637a0f12af7098f9f0c7c6b2594b7def584fd7b59a65893893ffde57c667aac7"
+}
