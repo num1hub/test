@@ -12,7 +12,7 @@ interface CapsuleStore {
   >;
   isLoading: boolean;
   error: string | null;
-  fetchCapsules: () => Promise<void>;
+  fetchCapsules: (branch?: string) => Promise<void>;
   addCapsuleLocally: (capsule: SovereignCapsule) => void;
   deleteCapsuleLocally: (id: string) => void;
   removeCapsulesLocally: (ids: string[]) => void;
@@ -31,13 +31,18 @@ export const useCapsuleStore = create<CapsuleStore>((set, get) => ({
   validationStatus: {},
   isLoading: true,
   error: null,
-  fetchCapsules: async () => {
+  fetchCapsules: async (branch = 'real') => {
     set({ isLoading: true, error: null });
     try {
       const token = localStorage.getItem('n1hub_vault_token');
       if (!token) throw new Error('No token found');
 
-      const res = await fetch('/api/capsules', {
+      const params = new URLSearchParams();
+      if (branch && branch !== 'real') {
+        params.set('branch', branch);
+      }
+
+      const res = await fetch(`/api/capsules${params.toString() ? `?${params.toString()}` : ''}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

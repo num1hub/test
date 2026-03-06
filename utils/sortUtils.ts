@@ -1,6 +1,6 @@
 import { SovereignCapsule } from '@/types/capsule';
 
-export type SortOption = 'name-asc' | 'name-desc' | 'date-new' | 'date-old' | 'type';
+export type SortOption = 'name-asc' | 'name-desc' | 'date-new' | 'date-old' | 'type' | 'tier';
 
 const toTimestamp = (input?: string) => {
   if (!input) return 0;
@@ -29,6 +29,12 @@ export function sortCapsules(
         const typeB = b.metadata.type || '';
         const typeCompare = typeA.localeCompare(typeB);
         if (typeCompare !== 0) return typeCompare;
+        return a.metadata.capsule_id.localeCompare(b.metadata.capsule_id);
+      }
+      case 'tier': {
+        const tierA = typeof a.metadata.tier === 'number' ? a.metadata.tier : Number.MAX_SAFE_INTEGER;
+        const tierB = typeof b.metadata.tier === 'number' ? b.metadata.tier : Number.MAX_SAFE_INTEGER;
+        if (tierA !== tierB) return tierA - tierB;
         return a.metadata.capsule_id.localeCompare(b.metadata.capsule_id);
       }
       default:

@@ -1,11 +1,12 @@
 'use client';
 
-import type { BranchType } from '@/types/branch';
+import type { BranchName } from '@/types/branch';
 
 interface BranchToggleProps {
-  currentBranch: BranchType;
+  currentBranch: BranchName;
   hasDreamBranch: boolean;
-  onSwitchBranch: (branch: BranchType) => void;
+  availableBranches: BranchName[];
+  onSwitchBranch: (branch: BranchName) => void;
   onFork: () => void;
   onPromote: () => void;
   onViewDiff: () => void;
@@ -48,11 +49,14 @@ function DiffIcon({ className }: IconProps) {
 export default function BranchToggle({
   currentBranch,
   hasDreamBranch,
+  availableBranches,
   onSwitchBranch,
   onFork,
   onPromote,
   onViewDiff,
 }: BranchToggleProps) {
+  const extraBranches = availableBranches.filter((branch) => branch !== 'real' && branch !== 'dream');
+
   return (
     <div className="flex flex-wrap items-center gap-3 rounded-xl border border-slate-800 bg-slate-900 p-2 shadow-sm">
       <div className="flex rounded-lg border border-slate-800 bg-slate-950 p-1">
@@ -91,7 +95,22 @@ export default function BranchToggle({
         </button>
       </div>
 
-      <div className="mx-1 hidden h-6 w-px bg-slate-700 sm:block" />
+      {extraBranches.length > 0 && (
+        <select
+          value={extraBranches.includes(currentBranch) ? currentBranch : ''}
+          onChange={(event) => {
+            if (event.target.value) onSwitchBranch(event.target.value);
+          }}
+          className="rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 outline-none focus:border-amber-500"
+        >
+          <option value="">Other Branches</option>
+          {extraBranches.map((branch) => (
+            <option key={branch} value={branch}>
+              {branch}
+            </option>
+          ))}
+        </select>
+      )}
 
       {!hasDreamBranch ? (
         <button
@@ -99,7 +118,7 @@ export default function BranchToggle({
           title="Fork Real state into an editable Dream workspace"
           className="flex items-center rounded-lg border border-violet-900/50 bg-violet-900/20 px-3 py-1.5 text-sm font-medium text-violet-400 transition-colors hover:bg-violet-900/40 hover:text-violet-300"
         >
-          <BranchIcon className="mr-1.5 h-4 w-4" /> Fork to Dream
+          <BranchIcon className="mr-1.5 h-4 w-4" /> Create Dream
         </button>
       ) : (
         <>
@@ -110,13 +129,17 @@ export default function BranchToggle({
             <DiffIcon className="mr-1.5 h-4 w-4" /> Diff
           </button>
 
-          {currentBranch === 'dream' && (
+          {currentBranch !== 'real' && (
             <button
               onClick={onPromote}
-              title="Overwrite Real state with current Dream state"
+              title={
+                currentBranch === 'dream'
+                  ? 'Preview and promote Dream state into Real'
+                  : 'Preview and apply the current branch into Real'
+              }
               className="ml-auto flex items-center rounded-lg border border-emerald-900/50 bg-emerald-900/20 px-3 py-1.5 text-sm font-medium text-emerald-400 transition-colors hover:bg-emerald-900/40 hover:text-emerald-300"
             >
-              <MergeIcon className="mr-1.5 h-4 w-4" /> Promote to Real
+              <MergeIcon className="mr-1.5 h-4 w-4" /> {currentBranch === 'dream' ? 'Promote to Real' : 'Apply to Real'}
             </button>
           )}
         </>

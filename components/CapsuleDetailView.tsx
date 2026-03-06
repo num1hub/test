@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SovereignCapsule } from '@/types/capsule';
 import ProgressBar from '@/components/ui/ProgressBar';
+import { capsuleTierBadgeClass, formatCapsuleTier } from '@/lib/capsuleTier';
 
 export default function CapsuleDetailView({ capsule }: { capsule: SovereignCapsule }) {
   const { metadata, core_payload, neuro_concentrate, recursive_layer, integrity_sha3_512 } = capsule;
@@ -47,6 +48,13 @@ export default function CapsuleDetailView({ capsule }: { capsule: SovereignCapsu
           <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
             SUBTYPE: {metadata.subtype || 'unknown'}
           </span>
+          <span
+            className={`rounded border px-2 py-1 font-mono text-xs ${capsuleTierBadgeClass(
+              metadata.tier,
+            )}`}
+          >
+            {formatCapsuleTier(metadata.tier)}
+          </span>
           <span className="ml-auto rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-400">
             v{metadata.version ?? '-'}
           </span>
@@ -69,6 +77,10 @@ export default function CapsuleDetailView({ capsule }: { capsule: SovereignCapsu
           <div>
             <span className="mr-2 text-slate-500">Created:</span>
             {createdAtLabel}
+          </div>
+          <div>
+            <span className="mr-2 text-slate-500">Tier:</span>
+            {formatCapsuleTier(metadata.tier)}
           </div>
           <div className="col-span-1 flex items-start md:col-span-2">
             <span className="mr-2 mt-0.5 text-slate-500">Hash:</span>

@@ -2,6 +2,26 @@
 
 N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with branch workflows (real/dream), version history, import/export, and activity auditing.
 
+## Universal Branching
+
+N1Hub now supports sparse overlay branches on top of `real`:
+
+- real capsules stay at `data/capsules/<id>.json`
+- non-real branches materialize as `data/capsules/<id>@<branch>.json`
+- branch tombstones live at `data/capsules/<id>@<branch>.tombstone.json`
+- branch manifests live at `data/branches/<branch>.manifest.json`
+- Dream keeps legacy `.dream.json` read compatibility until migration
+- structured diff and merge APIs are available at `POST /api/diff` and `POST /api/diff/apply`
+
+Architecture and API details: [`docs/real-dream-diff.md`](docs/real-dream-diff.md)
+
+### Branch migration
+
+```bash
+npm run migrate:branches -- --dry-run
+npm run migrate:branches
+```
+
 ## Development
 
 ```bash

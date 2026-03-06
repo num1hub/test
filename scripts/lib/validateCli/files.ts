@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import { parseBranchFilename } from '../../../lib/capsuleVault';
 import { isRecordObject } from '../../../lib/validator/utils';
 
 export function extractCapsuleId(capsule: unknown): string | null {
@@ -20,7 +21,10 @@ export async function listJsonFiles(targetPath: string): Promise<string[]> {
 
   const files = await fs.readdir(targetPath);
   return files
-    .filter((file) => file.endsWith('.json') && !file.endsWith('.dream.json'))
+    .filter((file) => {
+      const parsed = parseBranchFilename(file);
+      return parsed?.branch === 'real' && !parsed.isTombstone;
+    })
     .map((file) => path.join(targetPath, file));
 }
 

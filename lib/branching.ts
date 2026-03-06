@@ -1,88 +1,92 @@
-import fs from 'fs/promises';
-import path from 'path';
 import type { SovereignCapsule } from '@/types/capsule';
 import type { BranchType } from '@/types/branch';
-import { saveVersionedCapsule } from '@/lib/versioning';
 import { logActivity } from '@/lib/activity';
-import { dataPath } from '@/lib/dataPath';
-
-const CAPSULES_DIR = dataPath('capsules');
-
-async function ensureCapsulesDir() {
-  try {
-    await fs.access(CAPSULES_DIR);
-  } catch {
-    await fs.mkdir(CAPSULES_DIR, { recursive: true });
-  }
-}
+import {
+  branchFileExists,
+  ensureCapsulesInBranch,
+  getCanonicalBranchPath,
+  getRealCapsulePath,
+  getTombstonePath,
+  normalizeBranchName,
+  readOverlayCapsule,
+  tombstoneCapsule,
+  writeOverlayCapsule,
+} from '@/lib/diff/branch-manager';
 
 /**
- * Generates the file path for a specific capsule branch.
- * Real branch: `capsule_id.json`
- * Dream branch: `capsule_id.dream.json`
+ * Compatibility wrapper for legacy callers that still need a direct branch
+ * path. Real keeps the unsuffixed file and non-real branches resolve to the
+ * canonical @branch overlay path.
  */
 export function getCapsulePath(baseId: string, branch: BranchType): string {
-  const safeId = path.basename(baseId);
-  if (branch === 'dream') {
-    return path.join(CAPSULES_DIR, `${safeId}.dream.json`);
-  }
-  return path.join(CAPSULES_DIR, `${safeId}.json`);
+  const normalizedBranch = normalizeBranchName(branch);
+  return normalizedBranch === 'real'
+    ? getRealCapsulePath(baseId)
+    : getCanonicalBranchPath(baseId, normalizedBranch);
 }
 
 /**
- * Checks if a specific branch exists for a capsule.
+ * Legacy branch existence continues to mean an explicit branch artifact exists,
+ * which preserves the old "dream instantiated or not" behavior in the UI.
  */
 export async function branchExists(baseId: string, branch: BranchType): Promise<boolean> {
-  try {
-    await fs.access(getCapsulePath(baseId, branch));
-    return true;
-  } catch {
-    return false;
-  }
+  return branchFileExists(baseId, branch);
 }
 
 /**
- * Reads a capsule from a specific branch.
+ * Branch reads now use sparse overlay semantics so non-real branches inherit
+ * real state unless an explicit file or tombstone overrides it.
  */
 export async function readCapsuleBranch(
   baseId: string,
   branch: BranchType,
 ): Promise<SovereignCapsule> {
-  const filePath = getCapsulePath(baseId, branch);
-  const content = await fs.readFile(filePath, 'utf-8');
-  return JSON.parse(content) as SovereignCapsule;
+  const capsule = await readOverlayCapsule(baseId, branch);
+  if (!capsule) {
+    const error = new Error('Capsule branch not found') as NodeJS.ErrnoException;
+    error.code = 'ENOENT';
+    throw error;
+  }
+  return capsule;
 }
 
 /**
- * Writes a capsule to a specific branch.
- * For the 'real' branch, it also creates a version backup.
+ * Writes route through the branch manager so manifests, histories, and overlay
+ * files stay synchronized behind the existing branching API.
  */
 export async function writeCapsuleBranch(
   baseId: string,
   branch: BranchType,
   capsule: SovereignCapsule,
 ): Promise<void> {
-  const normalizedCapsule: SovereignCapsule = {
-    ...capsule,
-    metadata: {
-      ...capsule.metadata,
-      capsule_id: baseId,
+  await writeOverlayCapsule(
+    {
+      ...capsule,
+      metadata: {
+        ...capsule.metadata,
+        capsule_id: baseId,
+      },
     },
-  };
-
-  if (branch === 'real') {
-    await saveVersionedCapsule(normalizedCapsule);
-  } else {
-    await ensureCapsulesDir();
-    const filePath = getCapsulePath(baseId, branch);
-    await fs.writeFile(filePath, JSON.stringify(normalizedCapsule, null, 2), 'utf-8');
-  }
+    branch,
+  );
 }
 
 /**
- * Forks a capsule: Copies the 'real' state to the 'dream' state.
+ * Fork-to-Dream now lazily seeds the dream branch while keeping the historical
+ * status mutation that current callers expect from the old UX.
  */
 export async function forkCapsule(baseId: string): Promise<SovereignCapsule> {
+  await ensureCapsulesInBranch({
+    branch: 'dream',
+    capsuleIds: [baseId],
+    sourceBranch: 'real',
+    scopeSeed: {
+      scopeType: 'capsule',
+      scopeRootId: baseId,
+      recursive: false,
+    },
+  });
+
   const realCapsule = await readCapsuleBranch(baseId, 'real');
   const dreamCapsule: SovereignCapsule = {
     ...realCapsule,
@@ -104,7 +108,9 @@ export async function forkCapsule(baseId: string): Promise<SovereignCapsule> {
 }
 
 /**
- * Promotes a capsule: Overwrites 'real' with 'dream', backs up old 'real', and deletes 'dream'.
+ * This compatibility promote path keeps older callers working until they are
+ * rewired to the merge engine. It writes Dream into Real and then clears the
+ * explicit dream overlay so the branch falls back to real again.
  */
 export async function promoteCapsule(baseId: string): Promise<SovereignCapsule> {
   const dreamCapsule = await readCapsuleBranch(baseId, 'dream');
@@ -119,9 +125,14 @@ export async function promoteCapsule(baseId: string): Promise<SovereignCapsule> 
   };
 
   await writeCapsuleBranch(baseId, 'real', promotedCapsule);
-
-  const dreamPath = getCapsulePath(baseId, 'dream');
-  await fs.unlink(dreamPath);
+  await tombstoneCapsule(baseId, 'dream', 'Promoted to real baseline');
+  try {
+    await (await import('fs/promises')).unlink(getTombstonePath(baseId, 'dream'));
+  } catch (error: unknown) {
+    if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+      throw error;
+    }
+  }
 
   await logActivity('update', {
     capsule_id: baseId,

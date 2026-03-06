@@ -39,6 +39,7 @@ export default function VaultControls({
           <option value="name-asc">Name (A-Z)</option>
           <option value="name-desc">Name (Z-A)</option>
           <option value="type">Group by Type</option>
+          <option value="tier">Group by Tier</option>
         </select>
 
         <div className="flex rounded-lg border border-slate-700 bg-slate-950 p-1">

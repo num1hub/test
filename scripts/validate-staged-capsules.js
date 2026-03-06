@@ -19,7 +19,12 @@ const stagedFiles = staged
   .filter(Boolean)
   .filter((file) => file.endsWith('.json'))
   .filter((file) => file.startsWith('data/capsules/'))
-  .filter((file) => !file.endsWith('.dream.json'));
+  .filter((file) => {
+    const name = file.replace(/^data\/capsules\//, '');
+    if (name.endsWith('.dream.json')) return false;
+    if (name.endsWith('.tombstone.json')) return false;
+    return !name.includes('@');
+  });
 
 if (stagedFiles.length === 0) {
   process.exit(0);

@@ -1,31 +1,57 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/contexts/ToastContext';
-import { useCapsuleStore } from '@/store/capsuleStore';
+import { fetchBranchCapsules, getVaultToken } from '@/lib/vault/capsuleBranchApi';
+import type { SovereignCapsule } from '@/types/capsule';
 import type { ProjectCapsule } from '@/types/project';
 import { isProject } from '@/types/project';
+import type { BranchName } from '@/types/branch';
 
-export function useProjectDetailState(projectId: string) {
+export function useProjectDetailState(projectId: string, branch: BranchName = 'real') {
   const router = useRouter();
   const { showToast } = useToast();
-  const { capsules, fetchCapsules, deleteCapsuleLocally, isLoading } = useCapsuleStore();
 
+  const [capsules, setCapsules] = useState<SovereignCapsule[]>([]);
+  const [baselineCapsules, setBaselineCapsules] = useState<SovereignCapsule[] | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [showAddModal, setShowAddModal] = useState(false);
   const [showGraph, setShowGraph] = useState(false);
   const [graphFullscreen, setGraphFullscreen] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
+  const refetchCapsules = useCallback(async () => {
+    const token = getVaultToken();
     if (!token) {
       router.push('/login');
       return;
     }
 
-    void fetchCapsules();
-  }, [fetchCapsules, router]);
+    setIsLoading(true);
+    try {
+      const [{ response, data }, baseline] = await Promise.all([
+        fetchBranchCapsules(branch, token),
+        branch === 'real' ? Promise.resolve(null) : fetchBranchCapsules('real', token),
+      ]);
+
+      if (!response.ok || !data) {
+        throw new Error('Failed to load project capsules.');
+      }
+      setCapsules(Array.isArray(data) ? data : []);
+      setBaselineCapsules(
+        baseline && baseline.response.ok && Array.isArray(baseline.data) ? baseline.data : null,
+      );
+    } catch (error: unknown) {
+      showToast(error instanceof Error ? error.message : 'Failed to load project capsules.', 'error');
+    } finally {
+      setIsLoading(false);
+    }
+  }, [branch, router, showToast]);
+
+  useEffect(() => {
+    void refetchCapsules();
+  }, [refetchCapsules]);
 
   const project = useMemo(
     () =>
@@ -33,6 +59,14 @@ export function useProjectDetailState(projectId: string) {
         (capsule) => capsule.metadata.capsule_id === projectId && isProject(capsule),
       ) as ProjectCapsule | undefined,
     [capsules, projectId],
+  );
+
+  const baselineProject = useMemo(
+    () =>
+      baselineCapsules?.find(
+        (capsule) => capsule.metadata.capsule_id === projectId && isProject(capsule),
+      ) as ProjectCapsule | undefined,
+    [baselineCapsules, projectId],
   );
 
   const children = useMemo(
@@ -45,9 +79,24 @@ export function useProjectDetailState(projectId: string) {
     [capsules, projectId],
   );
 
+  const baselineChildren = useMemo(
+    () =>
+      (baselineCapsules ?? []).filter((capsule) =>
+        (capsule.recursive_layer.links ?? []).some(
+          (link) => link.relation_type === 'part_of' && link.target_id === projectId,
+        ),
+      ),
+    [baselineCapsules, projectId],
+  );
+
   const subprojects = useMemo(
     () => children.filter((capsule) => isProject(capsule)) as ProjectCapsule[],
     [children],
+  );
+
+  const baselineSubprojects = useMemo(
+    () => baselineChildren.filter((capsule) => isProject(capsule)) as ProjectCapsule[],
+    [baselineChildren],
   );
 
   const atomicCapsules = useMemo(
@@ -55,9 +104,13 @@ export function useProjectDetailState(projectId: string) {
     [children],
   );
 
+  const baselineAtomicCapsules = useMemo(
+    () => baselineChildren.filter((capsule) => !isProject(capsule)),
+    [baselineChildren],
+  );
+
   const parentProject = useMemo(() => {
     if (!project) return undefined;
-
     const parentLink = (project.recursive_layer.links ?? []).find(
       (link) => link.relation_type === 'part_of',
     );
@@ -117,7 +170,6 @@ export function useProjectDetailState(projectId: string) {
         throw new Error(data.error || 'Deletion failed');
       }
 
-      deleteCapsuleLocally(project.metadata.capsule_id);
       showToast('Project deleted. Child capsules are now orphan roots.', 'info');
       router.push('/projects');
     } catch (error: unknown) {
@@ -128,21 +180,25 @@ export function useProjectDetailState(projectId: string) {
   };
 
   const handleGraphNodeClick = (capsuleId: string) => {
+    const branchSuffix = branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`;
     if (capsules.some((capsule) => capsule.metadata.capsule_id === capsuleId && isProject(capsule))) {
-      router.push(`/projects/${encodeURIComponent(capsuleId)}`);
+      router.push(`/projects/${encodeURIComponent(capsuleId)}${branchSuffix}`);
       return;
     }
 
-    router.push(`/vault/capsule/${encodeURIComponent(capsuleId)}`);
+    router.push(`/vault/capsule/${encodeURIComponent(capsuleId)}${branchSuffix}`);
   };
 
   return {
     project,
+    baselineProject,
     isLoading,
     capsules,
     children,
     subprojects,
+    baselineSubprojects,
     atomicCapsules,
+    baselineAtomicCapsules,
     parentProject,
     neighborhoodCapsules,
     showAddModal,
@@ -154,6 +210,6 @@ export function useProjectDetailState(projectId: string) {
     deleting,
     handleDelete,
     handleGraphNodeClick,
-    refetchCapsules: fetchCapsules,
+    refetchCapsules,
   };
 }

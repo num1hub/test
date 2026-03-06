@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Layers } from 'lucide-react';
+import { capsuleTierBadgeClass, formatCapsuleTier } from '@/lib/capsuleTier';
 import type { SovereignCapsule } from '@/types/capsule';
 
 interface ProjectLinkedCapsulesSectionProps {
@@ -40,6 +41,21 @@ export default function ProjectLinkedCapsulesSection({
                 {capsule.metadata.name ?? capsule.metadata.capsule_id}
               </h3>
               <p className="mt-1 line-clamp-2 text-sm text-slate-400">{getSubtitle(capsule)}</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="rounded border border-slate-700 bg-slate-950 px-2 py-1 text-[11px] font-mono text-slate-300">
+                  {capsule.metadata.type} / {capsule.metadata.subtype}
+                </span>
+                <span className="rounded border border-slate-700 bg-slate-950 px-2 py-1 text-[11px] font-mono text-slate-300">
+                  {capsule.metadata.status}
+                </span>
+                <span
+                  className={`rounded border px-2 py-1 text-[11px] font-mono ${capsuleTierBadgeClass(
+                    capsule.metadata.tier,
+                  )}`}
+                >
+                  {formatCapsuleTier(capsule.metadata.tier)}
+                </span>
+              </div>
             </Link>
           ))}
         </div>

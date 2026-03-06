@@ -99,16 +99,16 @@ describe('projectForm helpers', () => {
 
     expect(payload.metadata.capsule_id).toBe('capsule.project.tilesims.v1')
     expect(payload.metadata.type).toBe('project')
-    expect(payload.recursive_layer.links).toContainEqual({
+    expect(payload.recursive_layer.links ?? []).toContainEqual({
       target_id: 'capsule.project.workspace.v1',
       relation_type: 'part_of',
     })
-    expect(payload.recursive_layer.links).toContainEqual({
+    expect(payload.recursive_layer.links ?? []).toContainEqual({
       target_id: 'capsule.foundation.workspace.v1',
       relation_type: 'references',
     })
     expect(
-      payload.recursive_layer.links.filter((link) => link.relation_type === 'part_of'),
+      (payload.recursive_layer.links ?? []).filter((link) => link.relation_type === 'part_of'),
     ).toHaveLength(1)
   })
 })

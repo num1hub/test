@@ -1,6 +1,7 @@
 #!/usr/bin/env tsx
 import fs from 'fs/promises';
 import path from 'path';
+import { parseBranchFilename } from '../lib/capsuleVault';
 import { appendValidationLog } from '../lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '../lib/validator';
 import type { ValidationIssue } from '../lib/validator/types';
@@ -53,7 +54,10 @@ async function main() {
   const options = parseArgs(process.argv.slice(2));
 
   const files = (await fs.readdir(options.dir))
-    .filter((file) => file.endsWith('.json') && !file.endsWith('.dream.json'))
+    .filter((file) => {
+      const parsed = parseBranchFilename(file);
+      return parsed?.branch === 'real' && !parsed.isTombstone;
+    })
     .map((file) => path.join(options.dir, file));
 
   const existingIds = new Set<string>();

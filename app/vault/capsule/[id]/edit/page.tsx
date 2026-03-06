@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useCapsuleStore } from '@/store/capsuleStore';
 import { SovereignCapsule } from '@/types/capsule';
 import { useToast } from '@/contexts/ToastContext';
-import { isBranchType, type BranchType } from '@/types/branch';
+import { normalizeBranchName } from '@/types/branch';
 import { useDebounce } from '@/hooks/useDebounce';
 import ValidationPanel, { type ValidationPanelResult } from '@/components/validation/ValidationPanel';
 
@@ -25,10 +25,7 @@ export default function EditCapsulePage({ params }: { params: Promise<{ id: stri
   const searchParams = useSearchParams();
   const { updateCapsuleLocally, setValidationStatus } = useCapsuleStore();
   const { showToast } = useToast();
-  const branch: BranchType = (() => {
-    const raw = searchParams.get('branch');
-    return isBranchType(raw) ? raw : 'real';
-  })();
+  const branch = normalizeBranchName(searchParams.get('branch') ?? 'real') ?? 'real';
 
   const [jsonInput, setJsonInput] = useState('');
   const [loadingFetch, setLoadingFetch] = useState(true);
@@ -221,7 +218,10 @@ export default function EditCapsulePage({ params }: { params: Promise<{ id: stri
       if (branch === 'real') {
         updateCapsuleLocally(id, updatedCapsule);
       }
-      showToast(`${branch === 'dream' ? 'Dream branch' : 'Capsule'} updated successfully.`, 'success');
+      showToast(
+        `${branch === 'real' ? 'Capsule' : `${branch} branch`} updated successfully.`,
+        'success',
+      );
       router.push(`/vault/capsule/${id}?branch=${branch}`);
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : 'Invalid JSON format';
@@ -246,7 +246,7 @@ export default function EditCapsulePage({ params }: { params: Promise<{ id: stri
             &lt;- Cancel Edit
           </Link>
           <h1 className="flex items-center text-2xl font-bold text-slate-100">
-            Modifying {branch === 'dream' ? 'Dream' : 'Real'}:
+            Modifying {branch === 'real' ? 'Real' : branch}:
             <span className="ml-2 font-mono text-lg text-slate-400">{id}</span>
           </h1>
         </div>
@@ -297,7 +297,7 @@ export default function EditCapsulePage({ params }: { params: Promise<{ id: stri
               disabled={isSaving || !jsonInput.trim()}
               className="rounded-lg bg-amber-600 px-8 py-3 font-bold text-white shadow-lg shadow-amber-900/20 transition-all hover:bg-amber-500 disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {isSaving ? 'Overwriting Record...' : `Save ${branch === 'dream' ? 'Dream' : 'Capsule'}`}
+              {isSaving ? 'Overwriting Record...' : `Save ${branch === 'real' ? 'Capsule' : branch}`}
             </button>
           </div>
         </div>

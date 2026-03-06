@@ -1,6 +1,7 @@
 #!/usr/bin/env tsx
 import fs from 'fs';
 import path from 'path';
+import { parseBranchFilename } from '../lib/capsuleVault';
 import { deriveDisplayName } from '../lib/projectUtils';
 import { computeIntegrityHash, isRecordObject } from '../lib/validator/utils';
 
@@ -39,7 +40,10 @@ const migrate = (): void => {
 
   const files = fs
     .readdirSync(CAPSULES_DIR)
-    .filter((file) => file.endsWith('.json') && !file.endsWith('.dream.json'));
+    .filter((file) => {
+      const parsed = parseBranchFilename(file);
+      return parsed?.branch === 'real' && !parsed.isTombstone;
+    });
 
   let migrated = 0;
 

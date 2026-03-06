@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SovereignCapsule } from '@/types/capsule';
 import ValidationBadge from '@/components/validation/ValidationBadge';
+import { capsuleTierBadgeClass, formatCapsuleTier } from '@/lib/capsuleTier';
 import { useCapsuleStore } from '@/store/capsuleStore';
 
 export default function CapsuleCard({ capsule }: { capsule: SovereignCapsule }) {
@@ -26,9 +27,18 @@ export default function CapsuleCard({ capsule }: { capsule: SovereignCapsule }) 
           <span className={`px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider rounded border ${badgeClass}`}>
             {metadata.type}
           </span>
-          <span className="text-[10px] text-slate-500 uppercase tracking-widest">
-            {metadata.status}
-          </span>
+          <div className="flex flex-col items-end gap-1">
+            <span className="text-[10px] text-slate-500 uppercase tracking-widest">
+              {metadata.status}
+            </span>
+            <span
+              className={`rounded border px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider ${capsuleTierBadgeClass(
+                metadata.tier,
+              )}`}
+            >
+              {formatCapsuleTier(metadata.tier)}
+            </span>
+          </div>
         </div>
         
         <div className="mb-2 flex items-start justify-between gap-2">

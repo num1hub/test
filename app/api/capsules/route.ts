@@ -1,84 +1,104 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import { isAuthorized, checkRateLimit, resolveRole } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
 import { getExistingCapsuleIds, readCapsulesFromDisk } from '@/lib/capsuleVault';
-import { dataPath } from '@/lib/dataPath';
+import {
+  getOverlayExistenceSet,
+  listExplicitBranchCapsules,
+  loadOverlayGraph,
+  readBranchManifest,
+  readOverlayCapsule,
+  writeOverlayCapsule,
+} from '@/lib/diff/branch-manager';
 import { appendValidationLog } from '@/lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '@/lib/validator';
-import { isRecordObject } from '@/lib/validator/utils';
 import type { ValidationIssue } from '@/lib/validator/types';
-
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
-
-const getCapsulesDir = async () => {
-  const dir = dataPath('capsules');
-  try {
-    await fs.access(dir);
-  } catch {
-    await fs.mkdir(dir, { recursive: true });
-  }
-  return dir;
-};
+import { isRecordObject } from '@/lib/validator/utils';
+import { branchNameSchema } from '@/contracts/diff';
 
 const isFixableGate = (gate: string): boolean => {
   return gate === 'G10' || gate === 'G11' || gate === 'G15' || gate === 'G16';
 };
 
+const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
+
+function requireAuthorized(request: Request): NextResponse | null {
+  if (!isAuthorized(request)) return jsonError(401, 'Unauthorized');
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+  return null;
+}
+
+function requireEditor(request: Request): NextResponse | null {
+  const role = resolveRole(request);
+  return role === 'owner' || role === 'editor' ? null : jsonError(401, 'Unauthorized');
+}
+
+function resolveBranch(request: Request): string | null {
+  const raw = new URL(request.url).searchParams.get('branch') ?? 'real';
+  const parsed = branchNameSchema.safeParse(raw);
+  return parsed.success ? parsed.data : null;
+}
+
 export async function GET(request: Request) {
-  if (!isAuthorized(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const authError = requireAuthorized(request);
+  if (authError) return authError;
 
   try {
     const { searchParams } = new URL(request.url);
     const typeFilter = searchParams.get('type');
-    const capsulesDir = await getCapsulesDir();
-    const files = await fs.readdir(capsulesDir);
-    const jsonFiles = files.filter((file) => file.endsWith('.json') && !file.endsWith('.dream.json'));
-
-    const capsules = await Promise.all(
-      jsonFiles.map(async (file) => {
-        try {
-          const content = await fs.readFile(path.join(capsulesDir, file), 'utf-8');
-          return JSON.parse(content);
-        } catch {
-          return null;
-        }
-      }),
-    );
-
-    const filteredCapsules = capsules.filter(Boolean);
-    if (!typeFilter) {
-      return NextResponse.json(filteredCapsules);
+    const materializedOnly = searchParams.get('materialized') === 'true';
+    const branch = resolveBranch(request);
+    if (!branch) return jsonError(400, 'Invalid branch name');
+    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+      return jsonError(404, 'Branch not found');
     }
 
-    return NextResponse.json(
-      filteredCapsules.filter((capsule) => {
-        if (!isRecordObject(capsule)) return false;
-        const metadata = isRecordObject(capsule.metadata) ? capsule.metadata : null;
-        return metadata?.type === typeFilter;
-      }),
-    );
+    const capsules =
+      branch === 'real'
+        ? ((await readCapsulesFromDisk()) as unknown[])
+        : materializedOnly
+          ? await listExplicitBranchCapsules(branch)
+          : await loadOverlayGraph(branch);
+
+    const filteredCapsules = capsules.filter((capsule) => {
+      if (!typeFilter) return true;
+      if (!isRecordObject(capsule)) return false;
+      const metadata = isRecordObject(capsule.metadata) ? capsule.metadata : null;
+      return metadata?.type === typeFilter;
+    });
+
+    return NextResponse.json(filteredCapsules);
   } catch {
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return jsonError(500, 'Internal Server Error');
   }
 }
 
 export async function POST(request: Request) {
-  if (!isAuthorized(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const authError = requireAuthorized(request) ?? requireEditor(request);
+  if (authError) return authError;
 
   try {
+    const branch = resolveBranch(request);
+    if (!branch) return jsonError(400, 'Invalid branch name');
+    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+      return jsonError(404, 'Branch not found');
+    }
+
     const body = (await request.json()) as unknown;
     if (!isRecordObject(body)) {
-      return NextResponse.json({ error: 'Bad Request: Invalid JSON' }, { status: 400 });
+      return jsonError(400, 'Bad Request: Invalid JSON');
     }
 
     const capsule = JSON.parse(JSON.stringify(body)) as Record<string, unknown>;
     const rawParentId = typeof capsule.parentId === 'string' ? capsule.parentId.trim() : '';
     if (rawParentId) {
-      const allCapsules = await readCapsulesFromDisk();
+      const allCapsules = branch === 'real' ? await readCapsulesFromDisk() : await loadOverlayGraph(branch);
       const parentExists = allCapsules.some((candidate) => {
         if (!isRecordObject(candidate)) return false;
         const metadata = isRecordObject(candidate.metadata) ? candidate.metadata : null;
@@ -91,11 +111,9 @@ export async function POST(request: Request) {
       });
 
       if (!parentExists) {
-        return NextResponse.json(
-          {
-            error: `Invalid parentId "${rawParentId}". Parent project must exist and be type=project subtype=hub.`,
-          },
-          { status: 400 },
+        return jsonError(
+          400,
+          `Invalid parentId "${rawParentId}". Parent project must exist and be type=project subtype=hub.`,
         );
       }
 
@@ -120,12 +138,15 @@ export async function POST(request: Request) {
     }
 
     delete capsule.parentId;
-    const existingIds = await getExistingCapsuleIds();
+    const existingIds = branch === 'real' ? await getExistingCapsuleIds() : await getOverlayExistenceSet(branch);
 
     let validation = await validateCapsule(capsule, { existingIds });
     let finalCapsule = capsule;
 
-    if (!validation.valid && validation.errors.every((issue: ValidationIssue) => isFixableGate(issue.gate))) {
+    if (
+      !validation.valid &&
+      validation.errors.every((issue: ValidationIssue) => isFixableGate(issue.gate))
+    ) {
       const fixed = autoFixCapsule(capsule);
       finalCapsule = fixed.fixedData;
       validation = await validateCapsule(finalCapsule, { existingIds });
@@ -157,28 +178,23 @@ export async function POST(request: Request) {
     }
 
     if (typeof capsuleId !== 'string' || capsuleId.length === 0) {
-      return NextResponse.json(
-        {
-          error: 'Validation passed but capsule_id is missing or invalid.',
-        },
-        { status: 400 },
-      );
+      return jsonError(400, 'Validation passed but capsule_id is missing or invalid.');
     }
 
-    const safeId = path.basename(capsuleId);
-    const capsulesDir = await getCapsulesDir();
-    const filePath = path.join(capsulesDir, `${safeId}.json`);
-
-    try {
-      await fs.access(filePath);
-      return NextResponse.json({ error: 'Conflict: Capsule ID already exists' }, { status: 409 });
-    } catch {
-      await fs.writeFile(filePath, JSON.stringify(finalCapsule, null, 2), 'utf-8');
-      const type = typeof finalMetadata?.type === 'string' ? finalMetadata.type : 'unknown';
-      await logActivity('create', { capsule_id: safeId, type });
-      return NextResponse.json(finalCapsule, { status: 201 });
+    if (existingIds.has(capsuleId) || (await readOverlayCapsule(capsuleId, branch))) {
+      return jsonError(409, 'Conflict: Capsule ID already exists');
     }
+
+    await writeOverlayCapsule(finalCapsule as never, branch);
+    await logActivity('create', {
+      capsule_id: capsuleId,
+      branch,
+      type: typeof finalMetadata?.type === 'string' ? finalMetadata.type : 'unknown',
+    });
+    return NextResponse.json(finalCapsule, { status: 201 });
   } catch {
-    return NextResponse.json({ error: 'Bad Request: Invalid JSON' }, { status: 400 });
+    return jsonError(400, 'Bad Request: Invalid JSON');
   }
 }
+
+export const dynamic = 'force-dynamic';

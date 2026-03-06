@@ -5,6 +5,7 @@ export type CapsuleType =
   | 'physical_object'
   | 'project';
 export type CapsuleSubtype = 'hub' | 'atomic';
+export type CapsuleTier = 1 | 2 | 3 | 4;
 export type CapsuleStatus =
   | 'draft'
   | 'active'
@@ -18,12 +19,20 @@ export interface CapsuleMetadata {
   capsule_id: string;
   type?: CapsuleType;
   subtype?: CapsuleSubtype;
+  tier?: CapsuleTier;
   status?: CapsuleStatus;
   version?: string | number;
   author?: string;
   created_at?: string;
   updated_at?: string;
   name?: string;
+  dueDate?: string;
+  priority?: string | number;
+  progress?: number;
+  estimatedHours?: number;
+  actualHours?: number;
+  estimatedCost?: number;
+  cost?: number;
   semantic_hash?: string;
   source?: {
     uri?: string;
@@ -45,6 +54,10 @@ export interface SovereignCapsule {
   core_payload: {
     content_type?: string;
     content?: string;
+    estimatedHours?: number;
+    actualHours?: number;
+    estimatedCost?: number;
+    cost?: number;
     [key: string]: unknown;
   };
   neuro_concentrate: {

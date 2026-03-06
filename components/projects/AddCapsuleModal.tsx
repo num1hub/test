@@ -1,15 +1,16 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
-import { useCapsuleStore } from '@/store/capsuleStore';
 import { useToast } from '@/contexts/ToastContext';
+import type { BranchName } from '@/types/branch';
 import type { SovereignCapsule } from '@/types/capsule';
 import { isProject } from '@/types/project';
 import { wouldCreateCycle } from '@/lib/projectUtils';
 
 interface AddCapsuleModalProps {
   projectId: string;
+  branch?: BranchName;
   onClose: () => void;
   onAdded: () => void;
 }
@@ -20,13 +21,43 @@ interface AddCapsuleModalProps {
  */
 export default function AddCapsuleModal({
   projectId,
+  branch = 'real',
   onClose,
   onAdded,
 }: AddCapsuleModalProps) {
-  const capsules = useCapsuleStore((state) => state.capsules);
   const { showToast } = useToast();
+  const [capsules, setCapsules] = useState<SovereignCapsule[]>([]);
+  const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState('');
   const [submittingId, setSubmittingId] = useState<string | null>(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem('n1hub_vault_token');
+    if (!token) return;
+
+    setLoading(true);
+    void fetch(`/api/capsules?branch=${encodeURIComponent(branch)}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error('Failed to load capsules for linking.');
+        }
+        return (await response.json()) as SovereignCapsule[];
+      })
+      .then((data) => {
+        setCapsules(Array.isArray(data) ? data : []);
+      })
+      .catch((error: unknown) => {
+        showToast(
+          error instanceof Error ? error.message : 'Failed to load capsules for linking.',
+          'error',
+        );
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [branch, showToast]);
 
   const candidates = useMemo(() => {
     const lowerQuery = query.trim().toLowerCase();
@@ -73,7 +104,7 @@ export default function AddCapsuleModal({
     setSubmittingId(capsule.metadata.capsule_id);
     try {
       const response = await fetch(
-        `/api/capsules/${encodeURIComponent(capsule.metadata.capsule_id)}`,
+        `/api/capsules/${encodeURIComponent(capsule.metadata.capsule_id)}${branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`}`,
         {
           method: 'PUT',
           headers: {
@@ -118,6 +149,12 @@ export default function AddCapsuleModal({
         />
 
         <div className="max-h-80 space-y-2 overflow-y-auto">
+          {loading && (
+            <div className="rounded border border-slate-800 bg-slate-950 px-4 py-3 text-sm text-slate-400">
+              Loading branch capsules...
+            </div>
+          )}
+
           {candidates.slice(0, 50).map((capsule) => (
             <div
               key={capsule.metadata.capsule_id}

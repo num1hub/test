@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { CheckSquare, Square } from 'lucide-react';
+import { capsuleTierBadgeClass, formatCapsuleTier } from '@/lib/capsuleTier';
 import type { ProjectCapsule } from '@/types/project';
 
 const STATUS_COLORS: Record<string, string> = {
@@ -59,13 +60,22 @@ export default function ProjectCard({
           }`}
         >
           <div className="mb-3 flex items-start justify-between">
-            <span
-              className={`text-xs font-mono px-2 py-1 rounded text-white ${
-                STATUS_COLORS[metadata.status ?? ''] ?? 'bg-slate-600'
-              }`}
-            >
-              {metadata.status}
-            </span>
+            <div className="flex flex-wrap gap-2">
+              <span
+                className={`text-xs font-mono px-2 py-1 rounded text-white ${
+                  STATUS_COLORS[metadata.status ?? ''] ?? 'bg-slate-600'
+                }`}
+              >
+                {metadata.status}
+              </span>
+              <span
+                className={`rounded border px-2 py-1 text-xs font-mono ${capsuleTierBadgeClass(
+                  metadata.tier,
+                )}`}
+              >
+                {formatCapsuleTier(metadata.tier)}
+              </span>
+            </div>
             {childCount !== undefined && (
               <span className="text-xs text-slate-500">
                 {childCount} sub-project{childCount !== 1 ? 's' : ''}

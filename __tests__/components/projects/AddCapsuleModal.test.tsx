@@ -3,7 +3,6 @@ import { HttpResponse, http } from 'msw'
 import { vi } from 'vitest'
 import AddCapsuleModal from '@/components/projects/AddCapsuleModal'
 import { ToastProvider } from '@/contexts/ToastContext'
-import { useCapsuleStore } from '@/store/capsuleStore'
 import { server } from '../../setup'
 import type { SovereignCapsule } from '@/types/capsule'
 
@@ -37,18 +36,18 @@ const makeCapsule = (id: string, type: 'project' | 'concept' = 'concept'): Sover
 describe('AddCapsuleModal', () => {
   beforeEach(() => {
     window.localStorage.setItem('n1hub_vault_token', 'mock-token')
-    useCapsuleStore.setState({
-      capsules: [
-        makeCapsule('capsule.project.parent.v1', 'project'),
-        makeCapsule('capsule.concept.alpha.v1'),
-        makeCapsule('capsule.concept.beta.v1'),
-      ],
-      isLoading: false,
-      error: null,
-    })
+    server.use(
+      http.get('/api/capsules', () => {
+        return HttpResponse.json([
+          makeCapsule('capsule.project.parent.v1', 'project'),
+          makeCapsule('capsule.concept.alpha.v1'),
+          makeCapsule('capsule.concept.beta.v1'),
+        ])
+      }),
+    )
   })
 
-  it('filters candidates via search and closes', () => {
+  it('filters candidates via search and closes', async () => {
     const onClose = vi.fn()
 
     render(
@@ -57,12 +56,16 @@ describe('AddCapsuleModal', () => {
       </ToastProvider>,
     )
 
+    await screen.findByText('capsule.concept.alpha.v1')
+
     fireEvent.change(screen.getByPlaceholderText('Search capsules...'), {
       target: { value: 'beta' },
     })
 
-    expect(screen.queryByText('capsule.concept.alpha.v1')).not.toBeInTheDocument()
-    expect(screen.getByText('capsule.concept.beta.v1')).toBeInTheDocument()
+    await waitFor(() => {
+      expect(screen.queryByText('capsule.concept.alpha.v1')).not.toBeInTheDocument()
+      expect(screen.getByText('capsule.concept.beta.v1')).toBeInTheDocument()
+    })
 
     fireEvent.click(screen.getByLabelText('Close'))
     expect(onClose).toHaveBeenCalledTimes(1)
@@ -83,7 +86,7 @@ describe('AddCapsuleModal', () => {
       </ToastProvider>,
     )
 
-    fireEvent.click(screen.getAllByRole('button', { name: 'Add' })[0])
+    fireEvent.click((await screen.findAllByRole('button', { name: 'Add' }))[0])
 
     await waitFor(() => {
       expect(onAdded).toHaveBeenCalledTimes(1)

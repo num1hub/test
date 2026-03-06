@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Edit, Plus, Share2, Trash2 } from 'lucide-react';
 import AppNav from '@/components/AppNav';
+import { formatCapsuleTier } from '@/lib/capsuleTier';
 import type { ProjectCapsule } from '@/types/project';
 
 interface ProjectDetailSummaryProps {
@@ -73,6 +74,9 @@ export default function ProjectDetailSummary({
           </p>
           <p>
             <span className="text-slate-500">Type:</span> {project.metadata.type}/{project.metadata.subtype}
+          </p>
+          <p>
+            <span className="text-slate-500">Tier:</span> {formatCapsuleTier(project.metadata.tier)}
           </p>
           <p>
             <span className="text-slate-500">Author:</span> {project.metadata.author ?? 'Unknown'}

@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import { logActivity } from '@/lib/activity';
 import { dataPath } from '@/lib/dataPath';
-import { getExistingCapsuleIds } from '@/lib/capsuleVault';
+import { getExistingCapsuleIds, parseBranchFilename } from '@/lib/capsuleVault';
 import { appendValidationLog } from '@/lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '@/lib/validator';
 import type { ValidationIssue } from '@/lib/validator/types';
@@ -164,7 +164,6 @@ export async function DELETE(request: Request) {
     for (const id of capsuleIds) {
       const safeId = path.basename(id);
       const realPath = path.join(dir, `${safeId}.json`);
-      const dreamPath = path.join(dir, `${safeId}.dream.json`);
       let deletedForId = false;
 
       try {
@@ -178,13 +177,22 @@ export async function DELETE(request: Request) {
         }
       }
 
-      try {
-        await fs.unlink(dreamPath);
-        deletedForId = true;
-      } catch (error: unknown) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-          const message = error instanceof Error ? error.message : 'Failed to delete dream branch';
-          errors.push({ id, message });
+      const branchFiles = (await fs.readdir(dir))
+        .filter((file) => {
+          const parsed = parseBranchFilename(file);
+          return parsed?.capsuleId === safeId && parsed.branch !== 'real';
+        })
+        .map((file) => path.join(dir, file));
+
+      for (const branchFile of branchFiles) {
+        try {
+          await fs.unlink(branchFile);
+          deletedForId = true;
+        } catch (error: unknown) {
+          if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
+            const message = error instanceof Error ? error.message : 'Failed to delete branch file';
+            errors.push({ id, message });
+          }
         }
       }
 

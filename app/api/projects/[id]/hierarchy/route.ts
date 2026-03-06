@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isAuthorized } from '@/lib/apiSecurity';
-import { readCapsulesFromDisk } from '@/lib/capsuleVault';
+import { isAuthorized, checkRateLimit } from '@/lib/apiSecurity';
+import { loadOverlayGraph } from '@/lib/diff/branch-manager';
 import type { SovereignCapsule } from '@/types/capsule';
+import { branchNameSchema } from '@/contracts/diff';
 import { isRecordObject } from '@/lib/validator/utils';
 
 const isCapsuleLike = (value: unknown): value is SovereignCapsule => {
@@ -31,16 +32,24 @@ export async function GET(
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
 
   const { id } = await params;
   const url = new URL(request.url);
-  const maxDepth = Math.max(
-    1,
-    Math.min(Number(url.searchParams.get('depth') ?? 10), 50),
-  );
+  const maxDepth = Math.max(1, Math.min(Number(url.searchParams.get('depth') ?? 10), 50));
+  const branchParsed = branchNameSchema.safeParse(url.searchParams.get('branch') ?? 'real');
+  if (!branchParsed.success) {
+    return NextResponse.json({ error: 'Invalid branch name' }, { status: 400 });
+  }
 
   try {
-    const capsules = (await readCapsulesFromDisk()).filter(isCapsuleLike);
+    const capsules = (await loadOverlayGraph(branchParsed.data)).filter(isCapsuleLike);
     const root = capsules.find((capsule) => capsule.metadata.capsule_id === id);
 
     if (!root || root.metadata.type !== 'project') {

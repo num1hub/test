@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import BranchToggle from '@/components/BranchToggle';
-import type { BranchType } from '@/types/branch';
+import BranchToggle from '../../BranchToggle';
+import type { BranchName } from '@/types/branch';
 
 function HistoryIcon({ className }: { className?: string }) {
   return (
@@ -16,10 +16,11 @@ function HistoryIcon({ className }: { className?: string }) {
 
 interface CapsuleDetailToolbarProps {
   capsuleId: string;
-  currentBranch: BranchType;
+  currentBranch: BranchName;
   hasDreamBranch: boolean;
+  availableBranches: BranchName[];
   isDeleting: boolean;
-  onSwitchBranch: (branch: BranchType) => void;
+  onSwitchBranch: (branch: BranchName) => void;
   onOpenHistory: () => void;
   onFork: () => void;
   onPromote: () => void;
@@ -31,6 +32,7 @@ export default function CapsuleDetailToolbar({
   capsuleId,
   currentBranch,
   hasDreamBranch,
+  availableBranches,
   isDeleting,
   onSwitchBranch,
   onOpenHistory,
@@ -53,7 +55,9 @@ export default function CapsuleDetailToolbar({
             className={`rounded border px-2 py-1 text-xs font-mono uppercase tracking-wider ${
               currentBranch === 'dream'
                 ? 'border-violet-700 bg-violet-900/20 text-violet-400'
-                : 'border-amber-700 bg-amber-900/20 text-amber-400'
+                : currentBranch === 'real'
+                  ? 'border-amber-700 bg-amber-900/20 text-amber-400'
+                  : 'border-sky-700 bg-sky-900/20 text-sky-400'
             }`}
           >
             Branch: {currentBranch}
@@ -63,6 +67,7 @@ export default function CapsuleDetailToolbar({
         <BranchToggle
           currentBranch={currentBranch}
           hasDreamBranch={hasDreamBranch}
+          availableBranches={availableBranches}
           onSwitchBranch={onSwitchBranch}
           onFork={onFork}
           onPromote={onPromote}

@@ -1,32 +1,41 @@
 import { NextResponse } from 'next/server';
+import { isAuthorized, checkRateLimit, resolveRole } from '@/lib/apiSecurity';
 import { branchExists, forkCapsule } from '@/lib/branching';
 
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
+const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
 
 export async function POST(
   request: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
   if (!isAuthorized(request)) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    return jsonError(401, 'Unauthorized');
+  }
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+  const role = resolveRole(request);
+  if (role !== 'owner' && role !== 'editor') {
+    return jsonError(401, 'Unauthorized');
   }
 
   try {
     const { id } = await params;
-
     if (await branchExists(id, 'dream')) {
-      return NextResponse.json({ error: 'Dream branch already exists.' }, { status: 409 });
+      return jsonError(409, 'Dream branch already exists.');
     }
 
     const dreamCapsule = await forkCapsule(id);
     return NextResponse.json(dreamCapsule, { status: 201 });
   } catch (error: unknown) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return NextResponse.json({ error: 'Real capsule not found to fork.' }, { status: 404 });
+      return jsonError(404, 'Real capsule not found to fork.');
     }
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    const message = error instanceof Error ? error.message : 'Internal Server Error';
+    return jsonError(message.includes('already exists') ? 409 : 500, message);
   }
 }

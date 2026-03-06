@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from 'vitest'
 import { GET } from '@/app/api/projects/[id]/hierarchy/route'
 
-vi.mock('@/lib/capsuleVault', () => ({
-  readCapsulesFromDisk: vi.fn(async () => [
+vi.mock('@/lib/diff/branch-manager', () => ({
+  loadOverlayGraph: vi.fn(async () => [
     {
       metadata: { capsule_id: 'capsule.project.root.v1', type: 'project', subtype: 'hub' },
       recursive_layer: { links: [] },

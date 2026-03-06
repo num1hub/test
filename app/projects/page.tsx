@@ -45,6 +45,7 @@ export default function ProjectsPage() {
     search,
     setSearch,
     statusFilter,
+    tierFilter,
     sortMode,
     setSortMode,
     selectedIds,
@@ -54,6 +55,8 @@ export default function ProjectsPage() {
     filteredTree,
     toggleStatusFilter,
     clearStatusFilters,
+    toggleTierFilter,
+    clearTierFilters,
     toggleSelection,
     clearSelection,
     selectAllVisible,
@@ -88,8 +91,11 @@ export default function ProjectsPage() {
           sortMode={sortMode}
           onSortModeChange={setSortMode}
           statusFilter={statusFilter}
+          tierFilter={tierFilter}
           onToggleStatus={toggleStatusFilter}
           onClearStatuses={clearStatusFilters}
+          onToggleTier={toggleTierFilter}
+          onClearTiers={clearTierFilters}
           visibleCount={filteredProjects.length}
           totalCount={projects.length}
         />

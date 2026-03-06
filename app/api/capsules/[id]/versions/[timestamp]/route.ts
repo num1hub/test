@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
+import { isAuthorized, checkRateLimit } from '@/lib/apiSecurity';
 import { getVersion, restoreVersion } from '@/lib/versioning';
+import { branchNameSchema } from '@/contracts/diff';
 
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
+function resolveBranch(request: Request): string | null {
+  const parsed = branchNameSchema.safeParse(new URL(request.url).searchParams.get('branch') ?? 'real');
+  return parsed.success ? parsed.data : null;
 }
 
 export async function GET(
@@ -13,15 +15,27 @@ export async function GET(
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
+  const branch = resolveBranch(request);
+  if (!branch) {
+    return NextResponse.json({ error: 'Invalid branch name' }, { status: 400 });
+  }
 
   try {
     const { id, timestamp } = await params;
-    const versionData = await getVersion(id, timestamp);
-    return NextResponse.json(versionData);
-  } catch (error: unknown) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+    const versionData = await getVersion(id, timestamp, { branch });
+    if (!versionData) {
       return NextResponse.json({ error: 'Version not found' }, { status: 404 });
     }
+    return NextResponse.json(versionData);
+  } catch {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
@@ -33,10 +47,22 @@ export async function POST(
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+
+  const branch = resolveBranch(request);
+  if (!branch) {
+    return NextResponse.json({ error: 'Invalid branch name' }, { status: 400 });
+  }
 
   try {
     const { id, timestamp } = await params;
-    const restoredCapsule = await restoreVersion(id, timestamp);
+    const restoredCapsule = await restoreVersion(id, timestamp, { branch });
     return NextResponse.json(restoredCapsule);
   } catch (error: unknown) {
     if ((error as NodeJS.ErrnoException).code === 'ENOENT') {

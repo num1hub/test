@@ -6,6 +6,7 @@ import CapsuleDetailView from '@/components/CapsuleDetailView';
 import DiffViewer from '@/components/DiffViewer';
 import VersionHistoryModal from '@/components/VersionHistoryModal';
 import ValidationPanel from '@/components/validation/ValidationPanel';
+import CapsuleBranchMergePanel from '@/components/vault/detail/CapsuleBranchMergePanel';
 import {
   CapsuleDetailEmptyState,
   CapsuleDetailErrorState,
@@ -14,7 +15,7 @@ import {
 import CapsuleDetailToolbar from '@/components/vault/detail/CapsuleDetailToolbar';
 import { useCapsuleBranchState } from '@/hooks/useCapsuleBranchState';
 import { useCapsuleValidation } from '@/hooks/useCapsuleValidation';
-import { isBranchType, type BranchType } from '@/types/branch';
+import { isBranchType, type BranchName } from '@/types/branch';
 
 export default function CapsuleDetailPage({
   params,
@@ -24,27 +25,33 @@ export default function CapsuleDetailPage({
   const resolvedParams = use(params);
   const capsuleId = resolvedParams.id;
   const searchParams = useSearchParams();
-  const requestedBranch = useMemo<BranchType>(() => {
+  const requestedBranch = useMemo<BranchName>(() => {
     const raw = searchParams.get('branch');
     return isBranchType(raw) ? raw : 'real';
   }, [searchParams]);
 
   const {
     capsule,
-    realCapsule,
     loading,
     error,
     isDeleting,
     isHistoryOpen,
     currentBranch,
+    availableBranches,
     hasDreamBranch,
     isDiffOpen,
+    diff,
+    mergePreview,
+    isPreviewingMerge,
+    isApplyingMerge,
     fetchBranch,
     setIsHistoryOpen,
     setIsDiffOpen,
     handleRestoreComplete,
     handleFork,
     handlePromote,
+    handlePreviewMerge,
+    handleApplyMerge,
     handleViewDiff,
     handleDelete,
   } = useCapsuleBranchState(capsuleId, requestedBranch);
@@ -62,6 +69,7 @@ export default function CapsuleDetailPage({
           capsuleId={capsuleId}
           currentBranch={currentBranch}
           hasDreamBranch={hasDreamBranch}
+          availableBranches={availableBranches.map((branch) => branch.name)}
           isDeleting={isDeleting}
           onSwitchBranch={(branch) => void fetchBranch(branch)}
           onOpenHistory={() => setIsHistoryOpen(true)}
@@ -75,7 +83,9 @@ export default function CapsuleDetailPage({
           className={`rounded-xl p-1 transition-colors duration-500 ${
             currentBranch === 'dream'
               ? 'border border-violet-900/50 bg-violet-900/20 shadow-lg shadow-violet-900/10'
-              : ''
+              : currentBranch !== 'real'
+                ? 'border border-sky-900/50 bg-sky-900/10 shadow-lg shadow-sky-900/10'
+                : ''
           }`}
         >
           <CapsuleDetailView capsule={capsule} />
@@ -87,6 +97,19 @@ export default function CapsuleDetailPage({
           title={`Branch Validation (${currentBranch})`}
         />
 
+        <CapsuleBranchMergePanel
+          branch={currentBranch}
+          preview={mergePreview}
+          isPreviewing={isPreviewingMerge}
+          isApplying={isApplyingMerge}
+          onPreview={() => void handlePreviewMerge()}
+          onApply={() => void handleApplyMerge()}
+          onOpenPreview={() => {
+            if (!mergePreview) return;
+            setIsDiffOpen(true);
+          }}
+        />
+
         <VersionHistoryModal
           capsuleId={capsuleId}
           isOpen={isHistoryOpen}
@@ -94,10 +117,9 @@ export default function CapsuleDetailPage({
           onRestoreComplete={handleRestoreComplete}
         />
 
-        {isDiffOpen && realCapsule && currentBranch === 'dream' && (
+        {isDiffOpen && diff && (
           <DiffViewer
-            realCapsule={realCapsule}
-            dreamCapsule={capsule}
+            diff={diff}
             isOpen={isDiffOpen}
             onClose={() => setIsDiffOpen(false)}
           />

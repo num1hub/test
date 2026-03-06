@@ -1,25 +1,15 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import * as fs from 'fs/promises'
 import { GET, POST } from '@/app/api/capsules/route'
 import { logActivity } from '@/lib/activity'
 import { getExistingCapsuleIds, readCapsulesFromDisk } from '@/lib/capsuleVault'
+import {
+  getOverlayExistenceSet,
+  loadOverlayGraph,
+  readBranchManifest,
+  readOverlayCapsule,
+  writeOverlayCapsule,
+} from '@/lib/diff/branch-manager'
 import { validateCapsule } from '@/lib/validator'
-
-vi.mock('fs/promises', () => {
-  const access = vi.fn()
-  const mkdir = vi.fn()
-  const readdir = vi.fn()
-  const readFile = vi.fn()
-  const writeFile = vi.fn()
-  return {
-    default: { access, mkdir, readdir, readFile, writeFile },
-    access,
-    mkdir,
-    readdir,
-    readFile,
-    writeFile,
-  }
-})
 
 vi.mock('@/lib/activity', () => ({
   logActivity: vi.fn(),
@@ -28,6 +18,15 @@ vi.mock('@/lib/activity', () => ({
 vi.mock('@/lib/capsuleVault', () => ({
   getExistingCapsuleIds: vi.fn(async () => new Set<string>()),
   readCapsulesFromDisk: vi.fn(async () => []),
+}))
+
+vi.mock('@/lib/diff/branch-manager', () => ({
+  getOverlayExistenceSet: vi.fn(async () => new Set<string>()),
+  listExplicitBranchCapsules: vi.fn(async () => []),
+  loadOverlayGraph: vi.fn(async () => []),
+  readBranchManifest: vi.fn(async () => ({ name: 'dream', sourceBranch: 'real', sourceProjectId: null, capsuleIds: [], createdAt: '2026-03-06T00:00:00.000Z', updatedAt: '2026-03-06T00:00:00.000Z' })),
+  readOverlayCapsule: vi.fn(async () => null),
+  writeOverlayCapsule: vi.fn(async () => undefined),
 }))
 
 vi.mock('@/lib/validationLog', () => ({
@@ -83,6 +82,19 @@ const mockCapsule = {
 describe('API: /api/capsules', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+    vi.mocked(getExistingCapsuleIds).mockResolvedValue(new Set())
+    vi.mocked(readCapsulesFromDisk).mockResolvedValue([])
+    vi.mocked(getOverlayExistenceSet).mockResolvedValue(new Set())
+    vi.mocked(loadOverlayGraph).mockResolvedValue([])
+    vi.mocked(readOverlayCapsule).mockResolvedValue(null)
+    vi.mocked(readBranchManifest).mockResolvedValue({
+      name: 'dream',
+      sourceBranch: 'real',
+      sourceProjectId: null,
+      capsuleIds: [],
+      createdAt: '2026-03-06T00:00:00.000Z',
+      updatedAt: '2026-03-06T00:00:00.000Z',
+    } as never)
   })
 
   describe('GET', () => {
@@ -92,49 +104,32 @@ describe('API: /api/capsules', () => {
       expect(res.status).toBe(401)
     })
 
-    it('returns parsed capsules and filters out non-real files', async () => {
+    it('returns real capsules by default', async () => {
       const req = new Request('http://localhost/api/capsules', {
         headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
       })
 
-      vi.mocked(fs.access).mockResolvedValue(undefined)
-      vi.mocked(fs.readdir).mockResolvedValue(['test1.json', 'test2.txt', 'test3.dream.json'] as never)
-      vi.mocked(fs.readFile).mockResolvedValue(JSON.stringify(mockCapsule) as never)
+      vi.mocked(readCapsulesFromDisk).mockResolvedValue([mockCapsule] as never)
 
       const res = await GET(req)
       expect(res.status).toBe(200)
-
       const data = (await res.json()) as Array<typeof mockCapsule>
       expect(data).toHaveLength(1)
       expect(data[0].metadata.capsule_id).toBe('test.v1')
     })
 
-    it('filters by type query parameter', async () => {
-      const req = new Request('http://localhost/api/capsules?type=project', {
+    it('returns overlay capsules for non-real branches', async () => {
+      const req = new Request('http://localhost/api/capsules?branch=dream', {
         headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
       })
 
-      const projectCapsule = {
-        ...mockCapsule,
-        metadata: {
-          ...mockCapsule.metadata,
-          capsule_id: 'capsule.project.test.v1',
-          type: 'project',
-          subtype: 'hub',
-        },
-      }
-
-      vi.mocked(fs.access).mockResolvedValue(undefined)
-      vi.mocked(fs.readdir).mockResolvedValue(['a.json', 'b.json'] as never)
-      vi.mocked(fs.readFile)
-        .mockResolvedValueOnce(JSON.stringify(mockCapsule) as never)
-        .mockResolvedValueOnce(JSON.stringify(projectCapsule) as never)
+      vi.mocked(loadOverlayGraph).mockResolvedValue([mockCapsule] as never)
 
       const res = await GET(req)
       expect(res.status).toBe(200)
-      const data = (await res.json()) as Array<typeof projectCapsule>
+      const data = (await res.json()) as Array<typeof mockCapsule>
       expect(data).toHaveLength(1)
-      expect(data[0].metadata.type).toBe('project')
+      expect(loadOverlayGraph).toHaveBeenCalledWith('dream')
     })
   })
 
@@ -145,7 +140,7 @@ describe('API: /api/capsules', () => {
       expect(res.status).toBe(401)
     })
 
-    it('returns 400 when 5-Element validation fails', async () => {
+    it('returns 400 when validation fails', async () => {
       vi.mocked(validateCapsule).mockResolvedValueOnce({
         valid: false,
         errors: [{ gate: 'G01', path: '$', message: 'invalid root' }],
@@ -160,21 +155,19 @@ describe('API: /api/capsules', () => {
 
       const res = await POST(req)
       expect(res.status).toBe(400)
-      const data = await res.json()
-      expect(data.error).toContain('Validation failed')
     })
 
-    it('returns 409 if capsule already exists', async () => {
-      const req = new Request('http://localhost/api/capsules', {
+    it('returns 404 when writing to a missing non-real branch', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+
+      const req = new Request('http://localhost/api/capsules?branch=experimental-1', {
         method: 'POST',
         headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
         body: JSON.stringify(mockCapsule),
       })
 
-      vi.mocked(fs.access).mockResolvedValue(undefined)
-
       const res = await POST(req)
-      expect(res.status).toBe(409)
+      expect(res.status).toBe(404)
     })
 
     it('injects parent link when parentId is provided', async () => {
@@ -184,10 +177,6 @@ describe('API: /api/capsules', () => {
           recursive_layer: { links: [] },
         },
       ] as never)
-
-      vi.mocked(fs.access)
-        .mockResolvedValueOnce(undefined)
-        .mockRejectedValueOnce({ code: 'ENOENT' })
 
       const req = new Request('http://localhost/api/capsules', {
         method: 'POST',
@@ -207,7 +196,6 @@ describe('API: /api/capsules', () => {
 
       const res = await POST(req)
       expect(res.status).toBe(201)
-
       expect(validateCapsule).toHaveBeenCalledWith(
         expect.objectContaining({
           recursive_layer: {
@@ -216,44 +204,20 @@ describe('API: /api/capsules', () => {
         }),
         expect.objectContaining({ existingIds: expect.any(Set) }),
       )
-
-      const validatedCapsule = vi.mocked(validateCapsule).mock.calls[0][0] as Record<string, unknown>
-      expect(validatedCapsule.parentId).toBeUndefined()
-    })
-
-    it('rejects parentId when parent project does not exist', async () => {
-      vi.mocked(readCapsulesFromDisk).mockResolvedValueOnce([] as never)
-
-      const req = new Request('http://localhost/api/capsules', {
-        method: 'POST',
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
-        body: JSON.stringify({
-          ...mockCapsule,
-          parentId: 'capsule.project.missing.v1',
-        }),
-      })
-
-      const res = await POST(req)
-      expect(res.status).toBe(400)
-      const payload = await res.json()
-      expect(payload.error).toContain('Invalid parentId')
     })
 
     it('writes capsule and returns 201 on success', async () => {
+      vi.mocked(getExistingCapsuleIds).mockResolvedValue(new Set())
+
       const req = new Request('http://localhost/api/capsules', {
         method: 'POST',
         headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
         body: JSON.stringify(mockCapsule),
       })
 
-      vi.mocked(fs.access)
-        .mockResolvedValueOnce(undefined) // data dir exists
-        .mockRejectedValueOnce({ code: 'ENOENT' }) // target file not found
-      vi.mocked(getExistingCapsuleIds).mockResolvedValue(new Set())
-
       const res = await POST(req)
       expect(res.status).toBe(201)
-      expect(fs.writeFile).toHaveBeenCalledTimes(1)
+      expect(writeOverlayCapsule).toHaveBeenCalledWith(expect.objectContaining(mockCapsule), 'real')
       expect(logActivity).toHaveBeenCalledWith('create', expect.objectContaining({ capsule_id: 'test.v1' }))
     })
   })

@@ -1,24 +1,54 @@
-import { NextResponse } from 'next/server';
 import fs from 'fs/promises';
-import { branchExists, getCapsulePath, readCapsuleBranch, writeCapsuleBranch } from '@/lib/branching';
+import { NextResponse } from 'next/server';
+import { isAuthorized, checkRateLimit, resolveRole } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
-import { getExistingCapsuleIds, readCapsulesFromDisk } from '@/lib/capsuleVault';
+import { CAPSULES_DIR, getExistingCapsuleIds, getOverlayExistenceSet } from '@/lib/capsuleVault';
+import {
+  dematerializeOverlayCapsule,
+  getRealCapsulePath,
+  listBranches,
+  loadOverlayGraph,
+  parseCapsuleBranchFilename,
+  readOverlayCapsule,
+  readBranchManifest,
+  writeOverlayCapsule,
+} from '@/lib/diff/branch-manager';
 import { wouldCreateCycle } from '@/lib/projectUtils';
 import { appendValidationLog } from '@/lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '@/lib/validator';
 import type { ValidationIssue } from '@/lib/validator/types';
 import type { SovereignCapsule } from '@/types/capsule';
-import { isBranchType, type BranchType } from '@/types/branch';
 import { isProject } from '@/types/project';
+import { branchNameSchema } from '@/contracts/diff';
 import { isRecordObject } from '@/lib/validator/utils';
 
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
+const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
 
 const isFixableGate = (gate: string): boolean => {
   return gate === 'G10' || gate === 'G11' || gate === 'G15' || gate === 'G16';
+};
+
+function requireAuthorized(request: Request): NextResponse | null {
+  if (!isAuthorized(request)) return jsonError(401, 'Unauthorized');
+  const rate = checkRateLimit(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { error: 'Rate limit exceeded' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } },
+    );
+  }
+  return null;
+}
+
+function requireEditor(request: Request): NextResponse | null {
+  const role = resolveRole(request);
+  return role === 'owner' || role === 'editor' ? null : jsonError(401, 'Unauthorized');
+}
+
+const resolveBranch = (request: Request): string | null => {
+  const raw = new URL(request.url).searchParams.get('branch') ?? 'real';
+  const parsed = branchNameSchema.safeParse(raw);
+  return parsed.success ? parsed.data : null;
 };
 
 const getPartOfTargets = (capsule: SovereignCapsule): string[] => {
@@ -40,107 +70,108 @@ const isCapsuleLike = (value: unknown): value is SovereignCapsule => {
   );
 };
 
-const resolveBranch = (request: Request): BranchType => {
-  const { searchParams } = new URL(request.url);
-  const raw = searchParams.get('branch');
-  return isBranchType(raw) ? raw : 'real';
-};
-
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  if (!isAuthorized(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const authError = requireAuthorized(request);
+  if (authError) return authError;
+
+  const branch = resolveBranch(request);
+  if (!branch) return jsonError(400, 'Invalid branch name');
 
   try {
     const { id } = await params;
-    const branch = resolveBranch(request);
-    const capsule = await readCapsuleBranch(id, branch);
-    return NextResponse.json(capsule);
-  } catch (err: unknown) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') {
-      return NextResponse.json({ error: 'Capsule branch not found' }, { status: 404 });
+    const capsule = await readOverlayCapsule(id, branch);
+    if (!capsule) {
+      return jsonError(404, 'Capsule branch not found');
     }
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json(capsule);
+  } catch {
+    return jsonError(500, 'Internal Server Error');
   }
 }
 
 export async function PUT(
   request: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  if (!isAuthorized(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const authError = requireAuthorized(request) ?? requireEditor(request);
+  if (authError) return authError;
 
   let capsule: SovereignCapsule;
   try {
     capsule = (await request.json()) as SovereignCapsule;
   } catch {
-    return NextResponse.json({ error: 'Bad Request' }, { status: 400 });
+    return jsonError(400, 'Bad Request');
   }
 
   try {
     const { id } = await params;
     const branch = resolveBranch(request);
-    const exists = await branchExists(id, branch);
-    if (!exists) {
-      return NextResponse.json({ error: 'Capsule not found' }, { status: 404 });
+    if (!branch) return jsonError(400, 'Invalid branch name');
+    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+      return jsonError(404, 'Branch not found');
+    }
+
+    const existingCapsule = await readOverlayCapsule(id, branch);
+    if (!existingCapsule) {
+      return jsonError(404, 'Capsule not found');
     }
 
     if (!capsule?.metadata || typeof capsule.metadata !== 'object') {
-      return NextResponse.json({ error: 'Bad Request' }, { status: 400 });
+      return jsonError(400, 'Bad Request');
     }
     if (capsule.metadata.capsule_id !== id) {
-      return NextResponse.json({ error: 'Capsule ID mismatch' }, { status: 400 });
+      return jsonError(400, 'Capsule ID mismatch');
     }
 
-    const existingCapsule = await readCapsuleBranch(id, branch);
     const previousPartOfTargets = getPartOfTargets(existingCapsule);
     const nextPartOfTargets = getPartOfTargets(capsule);
-
     const partOfChanged =
       previousPartOfTargets.length !== nextPartOfTargets.length ||
       previousPartOfTargets.some((targetId) => !nextPartOfTargets.includes(targetId));
 
     if (partOfChanged && isProject(capsule)) {
-      const diskCapsules = (await readCapsulesFromDisk()).filter(isCapsuleLike);
-      const graphCapsules: SovereignCapsule[] = [
-        ...diskCapsules.filter((candidate) => candidate.metadata.capsule_id !== id),
+      const graphCapsules = (await loadOverlayGraph(branch)).filter(isCapsuleLike);
+      const projectGraph: SovereignCapsule[] = [
+        ...graphCapsules.filter((candidate) => candidate.metadata.capsule_id !== id),
         capsule,
       ];
       const projectIds = new Set(
-        graphCapsules
+        projectGraph
           .filter((candidate) => isProject(candidate))
           .map((candidate) => candidate.metadata.capsule_id),
       );
 
       for (const parentId of nextPartOfTargets) {
         if (!projectIds.has(parentId)) {
-          return NextResponse.json(
-            {
-              error: `Invalid parent project "${parentId}". Project capsules can only be part_of other project hubs.`,
-            },
-            { status: 400 },
+          return jsonError(
+            400,
+            `Invalid parent project "${parentId}". Project capsules can only be part_of other project hubs.`,
           );
         }
 
-        if (wouldCreateCycle(graphCapsules, id, parentId)) {
-          return NextResponse.json(
-            {
-              error: `Cycle detected: assigning "${id}" under "${parentId}" would create a project hierarchy cycle.`,
-            },
-            { status: 409 },
+        if (wouldCreateCycle(projectGraph, id, parentId)) {
+          return jsonError(
+            409,
+            `Cycle detected: assigning "${id}" under "${parentId}" would create a project hierarchy cycle.`,
           );
         }
       }
     }
 
-    const existingIds = await getExistingCapsuleIds();
+    const existingIds =
+      branch === 'real' ? await getExistingCapsuleIds() : await getOverlayExistenceSet(branch);
     existingIds.add(id);
 
     let validation = await validateCapsule(capsule, { existingIds });
     let finalCapsule = capsule;
 
-    if (!validation.valid && validation.errors.every((issue: ValidationIssue) => isFixableGate(issue.gate))) {
+    if (
+      !validation.valid &&
+      validation.errors.every((issue: ValidationIssue) => isFixableGate(issue.gate))
+    ) {
       const fixed = autoFixCapsule(capsule);
       finalCapsule = fixed.fixedData as SovereignCapsule;
       validation = await validateCapsule(finalCapsule, { existingIds });
@@ -166,49 +197,70 @@ export async function PUT(
     }
 
     finalCapsule.metadata.updated_at = new Date().toISOString();
-    await writeCapsuleBranch(id, branch, finalCapsule);
+    await writeOverlayCapsule(finalCapsule, branch);
     await logActivity('update', {
       capsule_id: id,
+      branch,
       message: `Updated ${branch} branch.`,
     });
     return NextResponse.json(finalCapsule);
   } catch {
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return jsonError(500, 'Internal Server Error');
   }
 }
 
 export async function DELETE(
   request: Request,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  if (!isAuthorized(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  const authError = requireAuthorized(request) ?? requireEditor(request);
+  if (authError) return authError;
 
   try {
     const { id } = await params;
-    const deletedBranches: BranchType[] = [];
+    const deletedBranches = new Set<string>();
 
-    for (const branch of ['real', 'dream'] as const) {
-      const filePath = getCapsulePath(id, branch);
-      try {
-        await fs.unlink(filePath);
-        deletedBranches.push(branch);
-      } catch (error: unknown) {
-        if ((error as NodeJS.ErrnoException).code !== 'ENOENT') {
-          throw error;
-        }
+    try {
+      await fs.unlink(getRealCapsulePath(id));
+      deletedBranches.add('real');
+    } catch (error: unknown) {
+      if ((error as NodeJS.ErrnoException).code !== 'ENOENT') throw error;
+    }
+
+    const files = await fs.readdir(CAPSULES_DIR).catch((error: unknown) =>
+      (error as NodeJS.ErrnoException).code === 'ENOENT' ? [] : Promise.reject(error),
+    );
+
+    const branches = new Set<string>();
+    for (const file of files) {
+      const parsed = parseCapsuleBranchFilename(file);
+      if (parsed?.capsuleId === id && parsed.branch !== 'real') {
+        branches.add(parsed.branch);
       }
     }
 
-    if (deletedBranches.length === 0) {
-      return NextResponse.json({ error: 'Capsule not found' }, { status: 404 });
+    for (const branch of branches) {
+      await dematerializeOverlayCapsule(id, branch, { removeFromManifest: true });
+      deletedBranches.add(branch);
+    }
+
+    for (const branchInfo of await listBranches()) {
+      if (branchInfo.name === 'real' || !branchInfo.capsuleIds.includes(id)) continue;
+      await dematerializeOverlayCapsule(id, branchInfo.name, { removeFromManifest: true });
+    }
+
+    if (deletedBranches.size === 0) {
+      return jsonError(404, 'Capsule not found');
     }
 
     await logActivity('delete', {
       capsule_id: id,
-      message: `Deleted branches: ${deletedBranches.join(', ')}`,
+      message: `Deleted branches: ${[...deletedBranches].sort().join(', ')}`,
     });
     return new NextResponse(null, { status: 204 });
   } catch {
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return jsonError(500, 'Internal Server Error');
   }
 }
+
+export const dynamic = 'force-dynamic';

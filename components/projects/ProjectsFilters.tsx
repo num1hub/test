@@ -1,10 +1,12 @@
 'use client';
 
 import SearchBar from '@/components/SearchBar';
+import { CAPSULE_TIERS } from '@/lib/capsuleTier';
 import {
   PROJECT_STATUSES,
   type ProjectsSortMode,
 } from '@/hooks/useProjectsDashboardState';
+import type { CapsuleTier } from '@/types/capsule';
 
 interface ProjectsFiltersProps {
   search: string;
@@ -12,8 +14,11 @@ interface ProjectsFiltersProps {
   sortMode: ProjectsSortMode;
   onSortModeChange: (value: ProjectsSortMode) => void;
   statusFilter: Set<string>;
+  tierFilter: Set<CapsuleTier>;
   onToggleStatus: (status: string) => void;
   onClearStatuses: () => void;
+  onToggleTier: (tier: CapsuleTier) => void;
+  onClearTiers: () => void;
   visibleCount: number;
   totalCount: number;
 }
@@ -24,8 +29,11 @@ export default function ProjectsFilters({
   sortMode,
   onSortModeChange,
   statusFilter,
+  tierFilter,
   onToggleStatus,
   onClearStatuses,
+  onToggleTier,
+  onClearTiers,
   visibleCount,
   totalCount,
 }: ProjectsFiltersProps) {
@@ -47,6 +55,7 @@ export default function ProjectsFilters({
         >
           <option value="name">Sort: Name</option>
           <option value="status">Sort: Status</option>
+          <option value="tier">Sort: Tier</option>
           <option value="date-new">Sort: Newest</option>
           <option value="date-old">Sort: Oldest</option>
         </select>
@@ -74,6 +83,32 @@ export default function ProjectsFilters({
             }`}
           >
             {status}
+          </button>
+        ))}
+      </div>
+
+      <div className="flex flex-wrap gap-2">
+        <button
+          onClick={onClearTiers}
+          className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
+            tierFilter.size === 0
+              ? 'border-slate-200 bg-slate-200 text-slate-900'
+              : 'border-slate-700 bg-slate-800 text-slate-400 hover:border-slate-500'
+          }`}
+        >
+          All tiers
+        </button>
+        {CAPSULE_TIERS.map((tier) => (
+          <button
+            key={tier}
+            onClick={() => onToggleTier(tier)}
+            className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
+              tierFilter.has(tier)
+                ? 'border-cyan-600 bg-cyan-900/20 text-cyan-300'
+                : 'border-slate-700 bg-slate-900 text-slate-500 hover:border-slate-600'
+            }`}
+          >
+            Tier {tier}
           </button>
         ))}
       </div>

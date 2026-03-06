@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { useDebounce } from '@/hooks/useDebounce';
 import { buildProjectTree, getAllProjects } from '@/lib/projectUtils';
-import type { SovereignCapsule } from '@/types/capsule';
+import type { CapsuleTier, SovereignCapsule } from '@/types/capsule';
 
 export const PROJECT_STATUSES = [
   'draft',
@@ -16,12 +16,13 @@ export const PROJECT_STATUSES = [
 ] as const;
 
 export type ProjectsViewMode = 'grid' | 'tree';
-export type ProjectsSortMode = 'name' | 'status' | 'date-new' | 'date-old';
+export type ProjectsSortMode = 'name' | 'status' | 'date-new' | 'date-old' | 'tier';
 
 export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
   const [view, setView] = useState<ProjectsViewMode>('grid');
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState<Set<string>>(new Set());
+  const [tierFilter, setTierFilter] = useState<Set<CapsuleTier>>(new Set());
   const [sortMode, setSortMode] = useState<ProjectsSortMode>('name');
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const debouncedSearch = useDebounce(search, 300);
@@ -55,8 +56,11 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
 
         const matchesStatus =
           statusFilter.size === 0 || statusFilter.has(project.metadata.status ?? '');
+        const matchesTier =
+          tierFilter.size === 0 ||
+          (typeof project.metadata.tier === 'number' && tierFilter.has(project.metadata.tier));
 
-        return matchesSearch && matchesStatus;
+        return matchesSearch && matchesStatus && matchesTier;
       })
       .sort((a, b) => {
         const nameA = (a.metadata.name ?? a.metadata.capsule_id).toLowerCase();
@@ -65,6 +69,14 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
         switch (sortMode) {
           case 'status':
             return (a.metadata.status ?? '').localeCompare(b.metadata.status ?? '');
+          case 'tier': {
+            const tierA =
+              typeof a.metadata.tier === 'number' ? a.metadata.tier : Number.MAX_SAFE_INTEGER;
+            const tierB =
+              typeof b.metadata.tier === 'number' ? b.metadata.tier : Number.MAX_SAFE_INTEGER;
+            if (tierA !== tierB) return tierA - tierB;
+            return nameA.localeCompare(nameB);
+          }
           case 'date-new':
             return (
               new Date(b.metadata.created_at ?? '').getTime() -
@@ -80,7 +92,7 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
             return nameA.localeCompare(nameB);
         }
       });
-  }, [debouncedSearch, projects, sortMode, statusFilter]);
+  }, [debouncedSearch, projects, sortMode, statusFilter, tierFilter]);
 
   const filteredTree = useMemo(() => buildProjectTree(filteredProjects), [filteredProjects]);
 
@@ -96,6 +108,21 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
 
   const clearStatusFilters = () => {
     setStatusFilter(new Set());
+    setSelectedIds(new Set());
+  };
+
+  const toggleTierFilter = (tier: CapsuleTier) => {
+    setSelectedIds(new Set());
+    setTierFilter((prev) => {
+      const next = new Set(prev);
+      if (next.has(tier)) next.delete(tier);
+      else next.add(tier);
+      return next;
+    });
+  };
+
+  const clearTierFilters = () => {
+    setTierFilter(new Set());
     setSelectedIds(new Set());
   };
 
@@ -120,6 +147,7 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
     search,
     setSearch,
     statusFilter,
+    tierFilter,
     sortMode,
     setSortMode,
     selectedIds,
@@ -129,6 +157,8 @@ export function useProjectsDashboardState(capsules: SovereignCapsule[]) {
     filteredTree,
     toggleStatusFilter,
     clearStatusFilters,
+    toggleTierFilter,
+    clearTierFilters,
     toggleSelection,
     clearSelection,
     selectAllVisible,
