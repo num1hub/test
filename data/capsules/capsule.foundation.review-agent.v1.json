@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.review-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:48:00Z",
+    "updated_at": "2026-03-06T23:48:00Z",
+    "name": "Review Agent",
+    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment",
+    "source": {
+      "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 175,
+    "actualHours": 42,
+    "dueDate": "2026-08-31",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Review Agent\n\n## 1. Definition and Essence\nReview Agent is the critique-and-judgment worker of N1Hub. It inspects proposed capsule changes, mined findings, planning outputs, and delegated background work for weak claims, structural problems, missing evidence, and branch mistakes before they are treated as trustworthy progress.\n\n## 2. Core Responsibilities\n- `critical_review` looks for flaws, gaps, regressions, and unsupported confidence.\n- `merge_readiness` decides whether a candidate change is ready to advance or needs revision.\n- `proof_pressure` asks for clearer evidence, better provenance, or tighter structure when outputs are too soft.\n- `human_alignment` prepares results in a form a user or operator can quickly understand and approve.\n- `cross_agent_feedback` sends clear critique back to planner, mining, update, and validation lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Review Agent is the skeptical partner that keeps the system from mistaking movement for quality. It is the internal critic for capsule work across conversation, mining, planning, and background execution.\n\n## 4. Philosophical Alignment\nReview Agent serves To Dig Deep by applying epistemic pressure where the graph is tempted to accept easy or flattering output.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Review Agent is the critique worker that inspects capsule changes, mined findings, and delegated outputs for weakness before they are treated as real progress. It matters because a graph with many agents needs an explicit internal skeptic, not just more producers. The review role raises proof pressure, judges merge readiness, and translates its critique back into human-usable guidance and machine-usable feedback. This makes quality and caution visible parts of the workflow rather than invisible operator intuition.",
+    "keywords": [
+      "review-agent",
+      "critique",
+      "merge-readiness",
+      "proof-pressure",
+      "validation",
+      "branch-review",
+      "personal-ai-assistant",
+      "background-agent-runtime",
+      "n1hub",
+      "capsules"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "c4c7bb30aafa863beb62502c8bad260c55445a2cc33930e71faa476a458934b38d755e2edcb227697f43c2432e407b11e7a5a497a7953ed44a543da531aa9a06"
+}

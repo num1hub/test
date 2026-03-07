@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine-miner-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:22:00Z",
+    "updated_at": "2026-03-06T23:22:00Z",
+    "name": "DeepMine Miner Agent",
+    "semantic_hash": "deepmine-miner-agent-llm-internet-corpus-ore-extraction",
+    "source": {
+      "uri": "n1hub://specs/deepmine-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 26,
+    "estimatedHours": 180,
+    "actualHours": 44,
+    "dueDate": "2026-08-28",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine Miner Agent\n\n## 1. Definition and Essence\nDeepMine Miner Agent is the shaft worker of the N1Hub knowledge mine. It performs the actual dig against selected LLMs, open-web sources, user corpora, existing capsule regions, and multi-pass reasoning paths to extract dense raw ore with provenance rather than polished final truth.\n\n## 2. Core Responsibilities\n- `source_drilling` executes bounded extraction passes against chosen sources.\n- `multi_pass_extraction` descends through several reasoning layers when shallow summaries are insufficient.\n- `provenance_capture` records where the ore came from and how it was obtained.\n- `ore_packaging` prepares extraction output for A2C refinement rather than writing directly into the vault.\n- `shift_mode` supports both interactive dig requests and heavier off-peak night-shift jobs.\n\n## 3. N1Hub Role\nIn N1Hub, Miner is the role that actually works in the shaft. It should be invoked only through bounded jobs or explicit delegation, and it should hand raw material forward into A2C and Vault Update paths instead of mutating `Real` by itself.\n\n## 4. Branch Discipline\nMiner does not decide reality. It extracts. Evidence-rich present and past material may later reach `Real` through validation, while hypotheses, plans, and unconfirmed structures should be routed toward `Dream` first.\n\n## 5. Philosophical Alignment\nMiner serves To Dig Deep by doing the hard excavation work that pulls signal out of models, sources, and graph strata without pretending extraction alone is the final truth.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine Miner Agent is the explicit extraction worker in N1Hub's intelligence-mining stack. It drills into models, web sources, user material, and existing capsule regions to produce provenance-bearing raw ore for downstream refinement rather than directly mutating vault truth. This matters because the act of digging should stay distinct from the act of validating and sealing. By giving mining its own agent identity, the system can meter heavy extraction, route night-shift work properly, and keep raw discovery separate from final graph integration.",
+    "keywords": [
+      "deepmine",
+      "miner-agent",
+      "extraction",
+      "llm",
+      "internet",
+      "user-corpora",
+      "provenance",
+      "a2c",
+      "dream-branch",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-miner-agent-llm-internet-corpus-ore-extraction"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "88f30c58a6890133631b0945cd621318b9e68f82376245637a2120e01d6d5ba3126d04c9948b3e02114b0bea244b18ebf607bebd863c6cbdd7c90f28ec09b24f"
+}

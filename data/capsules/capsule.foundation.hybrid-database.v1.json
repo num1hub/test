@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.hybrid-database.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:01:40.853Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Hybrid Database",
+    "semantic_hash": "capsule-foundation-hybrid-database-v1-postgresql-neo4j-synchronization",
+    "priority": "medium",
+    "progress": 51,
+    "estimatedHours": 180,
+    "actualHours": 95,
+    "dueDate": "2026-07-08",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Hybrid Database\n\n## 1. Definition and Essence\nHybrid Database defines the architectural pairing of PostgreSQL and Neo4j for structured transactional records and graph-native relationship traversal. It formalizes synchronization contracts, consistency boundaries, and query responsibilities across both stores.\n\n## 2. Core Attributes\n- `store_roles` relational vs graph responsibilities\n- `sync_strategy` event-driven and reconciliation mechanisms\n- `consistency_model` transactional and eventual consistency boundaries\n- `query_routing` criteria for selecting storage backend\n- `recovery_plan` backup, replay, and divergence remediation\n\n## 3. Lifecycle\nThe architecture evolves through schema migrations, sync tuning, and observability-driven reliability improvements while preserving data lineage and integrity.\n\n## 4. Integration\n- **CapsuleOS Core:** foundational persistence substrate.\n- **Workspace and Projects:** read/write consumers across modules.\n- **Audit Log:** captures cross-store mutation traceability.\n- **Testing:** validates consistency and failover behavior.\n\n## 5. Philosophical Alignment\nHybrid persistence supports To Dig Deep by preserving rich relational and graph context without forcing a shallow single-store compromise.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Hybrid Database captures the two-store persistence strategy underpinning the vault: relational durability where structured transactions matter and graph-native traversal where link intelligence matters. The capsule formalizes why PostgreSQL and Neo4j coexist, where each store is authoritative, and how synchronization, recovery, and query routing are kept intelligible over time. It is therefore less a storage preference than a boundary-setting artifact for consistency and performance. By making the persistence split explicit, the system preserves both operational rigor and rich graph reasoning without collapsing into a shallow one-store compromise.",
+    "keywords": [
+      "hybrid-database",
+      "postgresql",
+      "neo4j",
+      "persistence-strategy",
+      "synchronization",
+      "query-routing",
+      "consistency",
+      "graph-reasoning",
+      "recovery"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-hybrid-database-v1-postgresql-neo4j-synchronization"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.audit-log.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "depends_on"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "be6d7627f1c409b6c0301f0fd8d120143b50caa3cbad4396f785f4d63f88c8df7d845bb65beedace65982e97b81c9b1950e158819d03598e4c0ff67d7feedb5e"
+}

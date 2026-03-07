@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.royalty-engine.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:56:44.830Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Royalty Engine",
+    "semantic_hash": "capsule-foundation-royalty-engine-v1-payout-lineage-tokenomics",
+    "priority": "medium",
+    "progress": 31,
+    "estimatedHours": 190,
+    "actualHours": 54,
+    "dueDate": "2026-08-10",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Royalty Engine\n\n## 1. Definition and Essence\nRoyalty Engine defines deterministic distribution of value to original creators and contributors when templates or derivative assets generate economic activity. It enforces payout rules, lineage attribution, and auditable settlement records.\n\n## 2. Core Attributes\n- `royalty_policy` percentage and split computation rules\n- `beneficiary_refs` identities eligible for payout\n- `lineage_evidence` ancestry links proving entitlement\n- `settlement_log` immutable payout transaction records\n- `dispute_path` challenge and arbitration process\n\n## 3. Lifecycle\nRoyalties are computed at settlement events, distributed according to policy, reconciled with payment records, and audited for fairness and policy conformance.\n\n## 4. Integration\n- **Marketplace:** source of monetization events.\n- **Sovereign Template:** lineage source for entitlement.\n- **N1 Coin Tokenomics:** payout currency and economic controls.\n- **SIAF Governance:** policy-level oversight for disputes.\n\n## 5. Philosophical Alignment\nRoyalty mechanics serve To Dig Deep by sustaining long-term creation incentives through transparent contribution economics.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Royalty Engine is the payout and attribution subsystem that keeps derivative value from breaking lineage. It defines how revenue is split across creators or upstream contributors when templates, assets, or marketplace listings generate economic activity. This capsule is strategically important because the ecosystem promises reusable sovereign artifacts, and reuse only remains fair if distribution rules stay transparent and computable. By binding payouts to ancestry evidence, settlement logs, and dispute policy, Royalty Engine turns long-tail contribution economics into a governed mechanism rather than an informal promise.",
+    "keywords": [
+      "royalty-engine",
+      "payouts",
+      "attribution",
+      "lineage",
+      "settlement",
+      "creator-economics",
+      "templates",
+      "marketplace",
+      "dispute-policy"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-royalty-engine-v1-payout-lineage-tokenomics"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-template.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.siaf-governance.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "4105e89f6842d69ef2a6d0ae7f1c2953ef1d75ce73a443cec5620e0bf76174ccd31d80adcfc11c72c772a08345d48a5c35f036eee642b1ceacd8463e657e6e5d"
+}

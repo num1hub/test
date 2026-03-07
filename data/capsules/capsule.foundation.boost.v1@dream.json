@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.boost.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:56:44.830Z",
+    "updated_at": "2026-03-06T18:43:16.187Z",
+    "name": "Boost",
+    "semantic_hash": "capsule-foundation-boost-v1-acceleration-compute-throughput-priority",
+    "priority": "medium",
+    "progress": 22,
+    "estimatedHours": 180,
+    "actualHours": 35,
+    "dueDate": "2026-09-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Boost\n\n## 1. Definition and Essence\nBoost defines optional acceleration packages such as priority queues, additional model budget, and higher throughput for critical workflows. It formalizes short-term performance amplification with explicit policy boundaries.\n\n## 2. Core Attributes\n- `boost_type` compute, queue priority, model budget, storage\n- `allocation_window` duration and consumption boundaries\n- `eligibility_rules` who can request and apply boosts\n- `usage_meter` measured consumption against purchased capacity\n- `throttle_policy` fallback behavior when allocation is exhausted\n\n## 3. Lifecycle\nBoosts are activated via subscription or purchase, consumed by eligible workloads, monitored in real time, and retired or renewed according to policy and utilization.\n\n## 4. Integration\n- **N1 Pass:** may grant baseline boost allowances.\n- **DeepMine and A2C:** key consumers of accelerated processing.\n- **Tokenomics:** links boost spend to ecosystem economy.\n- **Workspace:** provides visibility into active acceleration state.\n\n## 5. Philosophical Alignment\nBoost capsules support To Dig Deep by enabling strategic bursts of execution intensity when timing and momentum matter most.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Boost in the Dream branch represents a more deliberate acceleration asset than the current throughput override model. It imagines clearer burst semantics, better fairness under shared compute, stronger coupling to entitlement policy, and more visible cost-to-impact tradeoffs when users push urgent workloads. The capsule matters because unmanaged urgency becomes architecture debt. Dream therefore preserves Boost as a future execution amplifier that can increase speed without dissolving governance, pricing clarity, or queue discipline.",
+    "keywords": [
+      "boost",
+      "acceleration",
+      "queue-priority",
+      "model-budget",
+      "throughput",
+      "a2c",
+      "deepmine",
+      "entitlements",
+      "fairness"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-boost-v1-acceleration-compute-throughput-priority"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "63e3ce6e5f9f96181fd04002af7f8034e9cce2469bf464410c5d8662be100fbce8c5de6f3c9337e62c017ec4c32ee6dd5f21a9d49b37b814b814eb756f9259ab"
+}

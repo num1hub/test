@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.security.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:01:40.853Z",
+    "updated_at": "2026-03-06T18:43:16.988Z",
+    "name": "Security",
+    "semantic_hash": "capsule-foundation-security-v1-access-control-cryptography-audit",
+    "priority": "high",
+    "progress": 44,
+    "estimatedHours": 330,
+    "actualHours": 130,
+    "dueDate": "2026-09-15",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Security\n\n## 1. Definition and Essence\nSecurity defines identity, access control, cryptography, and operational safeguards required to protect sovereign capsule data and platform integrity. It codifies defensive posture, incident handling, and policy enforcement boundaries.\n\n## 2. Core Attributes\n- `threat_model` catalog of prioritized attack vectors\n- `control_set` authentication, authorization, encryption controls\n- `incident_protocol` detection, containment, remediation workflow\n- `secret_policy` key and credential management standards\n- `compliance_mapping` policy traceability to regulatory expectations\n\n## 3. Lifecycle\nSecurity policy is continuously assessed, updated with emerging threats, validated through tests, and enforced by runtime checks and governance review.\n\n## 4. Integration\n- **Permission/Role:** primary access-control policy substrate.\n- **Audit Log:** forensics and anomaly evidence stream.\n- **Hybrid Database:** data-at-rest and data-in-transit controls.\n- **API/Integrations:** boundary hardening for external surfaces.\n\n## 5. Philosophical Alignment\nSecurity supports To Dig Deep by preserving trust in the substrate where all sovereign knowledge is created, stored, and transformed.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Security in the Dream branch captures the future trust operating system of the platform. It imagines a tighter synthesis of identity, access, incident response, cryptographic guarantees, audit evidence, and exception handling than the current runtime can fully enforce today. The capsule matters because large systems become fragile where trust assumptions remain implicit. Dream therefore preserves Security as a future command layer for defensive coherence, where protection becomes a first-class architectural capability rather than a set of scattered controls.",
+    "keywords": [
+      "security",
+      "trust-boundary",
+      "access-control",
+      "cryptography",
+      "incident-response",
+      "auditability",
+      "quarantine",
+      "override-discipline",
+      "system-integrity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-security-v1-access-control-cryptography-audit"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.audit-log.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-database.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "fc81e26c346eace6c7c4a6b65f9a05a03b989fe0e6bc8ce949b263a5bc8b262151167229f137b44d08d2ff1b5488f7cc56d873b6c6a3a67054dc91424444960f"
+}

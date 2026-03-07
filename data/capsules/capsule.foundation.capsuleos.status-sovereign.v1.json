@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.status-sovereign.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "status-sovereign-immutable-gold-master-eternal-gold-core",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Status: Sovereign",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Status: Sovereign\n\n## 1. Definition\nIn the CapsuleOS architecture, the `sovereign` status represents the absolute apex of a capsule's lifecycle. It is the terminal, immutable, \"Gold Master\" state. When a capsule is declared `sovereign`, it has been fully crystallized, perfectly aligned with the 5-Element Law, and permanently locked by its `integrity_sha3_512` cryptographic seal. \n\n## 2. Operational Characteristics\n- **Absolute Immutability**: A `sovereign` capsule cannot be edited, appended, or altered under any circumstances. It is \"cold storage\" knowledge.\n- **The Ultimate Source of Truth**: Within the Cognitive Plane, N-Infinity agents and human users treat `sovereign` capsules as unchallengeable facts or axioms. For `foundation` type capsules, this mandates a `contradiction_pressure` of exactly `0.0`.\n- **Supersede Protocol**: If the knowledge contained within a `sovereign` capsule requires updating due to a paradigm shift or new epoch, the original capsule is never modified. Instead, a completely new capsule is minted to replace it, and the original is transitioned to the `legacy` status, preserving a flawless historical record.\n\n## 3. Use Cases\n- **Systemic Axioms**: The core definitions of CapsuleOS itself (like this very capsule).\n- **Finalized Projects**: A completed client deliverable, architecturally signed off and mathematically sealed to prevent post-delivery tampering.\n- **Marketplace Templates**: A perfected project blueprint (e.g., a complex A2C pipeline template or a TileSims layout) that is listed for sale or licensing. Its sovereign status guarantees buyers that they are receiving an unadulterated, verified asset."
+  },
+  "neuro_concentrate": {
+    "summary": "The 'sovereign' status in CapsuleOS designates a capsule that has reached its terminal, immutable, 'Gold Master' state. Fully crystallized and permanently locked by its SHA3-512 cryptographic seal, a sovereign capsule serves as the ultimate, unchallengeable source of truth within the N1Hub ecosystem. Editing is strictly prohibited; any necessary updates must be achieved by minting a new capsule and transitioning the original to a 'legacy' state, ensuring a flawless historical record. This status is exclusively utilized for systemic axioms, finalized client deliverables, and verifiable marketplace templates, guaranteeing absolute integrity and provenance.",
+    "keywords": [
+      "capsule-status",
+      "sovereign",
+      "immutable",
+      "gold-master",
+      "source-of-truth",
+      "cryptographic-seal",
+      "capsuleos",
+      "n1hub",
+      "terminal-state"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "status-sovereign-immutable-gold-master-eternal-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.5-element-law.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "01a9e68843ac14a65946dd8de6d5a504d11d4736cd25b65a3bd88db97eaad5647951b0d0e43a20b63d148c1a60270e8fc4fb8c5737fd591b6fa996c90ceca106"
+}

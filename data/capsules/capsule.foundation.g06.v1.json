@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.g06.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Validation Gate G06: Payload Integrity",
+    "semantic_hash": "capsule-foundation-g06-v1-validation-gate-payload-integrity",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gate G06: Payload Integrity\n\n## 1. Definition and Essence\nThis capsule formalizes G06 within the CapsuleOS validation sequence. Validates payload encodings and truncation-note typing. It defines why the gate exists, what conditions must be true, and how failures should be interpreted by humans and autonomous systems before capsule admission.\n\n## 2. Core Attributes\n- `gate_id` canonical identifier used in validator output\n- `intent` concise statement of epistemic purpose\n- \n      \n`pass_condition` threshold: safe payload encoding\n- `failure_examples` representative anti-patterns\n- `autofix_policy` indicating whether non-destructive correction is allowed\n\n## 3. Lifecycle\nG06 is executed in deterministic order during validation. Failures produce structured issues, optional autofix may apply where safe, and unresolved errors block publication until corrected or explicitly overridden by governance policy.\n\n## 4. Integration\n- **16 Gates Hub:** grouped under canonical gate taxonomy.\n- **Validator Engine:** emits machine-readable issues tagged by gate ID.\n- **A2C Validate Stage:** uses gate outcomes to route accept/reject/quarantine.\n- **Architect Override:** allows audited exception pathways where governance permits.\n\n## 5. Philosophical Alignment\nG06 serves To Dig Deep by enforcing precise epistemic boundaries so knowledge enters the graph through rigor rather than convenience.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gate G06 verifies that payload content is safely encoded and structurally sane before the system treats it as trustworthy material. It catches malformed encodings, invalid truncation metadata, and other payload-shape problems that can corrupt later processing or misrepresent what was actually captured. The gate matters because a capsule may look valid at the metadata level while still carrying unusable or deceptive core content. G06 therefore defends the semantic center of the artifact, ensuring the payload itself deserves further computation and storage.",
+    "keywords": [
+      "validation",
+      "gate",
+      "g06",
+      "capsuleos",
+      "quality",
+      "integrity",
+      "epistemic"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-g06-v1-validation-gate-payload-integrity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "634aa923d9d7e2def8913a5497fd734ad4c1e64d907374a16056482259475590472cd9b16957f6fd823deaf49623f226d13641149e88789716bd370fc20a0ab6"
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.g11.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Validation Gate G11: Canonical Relation Types",
+    "semantic_hash": "capsule-foundation-g11-v1-validation-gate-canonical-relation",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gate G11: Canonical Relation Types\n\n## 1. Definition and Essence\nThis capsule formalizes G11 within the CapsuleOS validation sequence. Rejects non-canonical relation types and deprecates refutes. It defines why the gate exists, what conditions must be true, and how failures should be interpreted by humans and autonomous systems before capsule admission.\n\n## 2. Core Attributes\n- `gate_id` canonical identifier used in validator output\n- `intent` concise statement of epistemic purpose\n- \n      \n`pass_condition` threshold: relation_type must be canonical\n- `failure_examples` representative anti-patterns\n- `autofix_policy` indicating whether non-destructive correction is allowed\n\n## 3. Lifecycle\nG11 is executed in deterministic order during validation. Failures produce structured issues, optional autofix may apply where safe, and unresolved errors block publication until corrected or explicitly overridden by governance policy.\n\n## 4. Integration\n- **16 Gates Hub:** grouped under canonical gate taxonomy.\n- **Validator Engine:** emits machine-readable issues tagged by gate ID.\n- **A2C Validate Stage:** uses gate outcomes to route accept/reject/quarantine.\n- **Architect Override:** allows audited exception pathways where governance permits.\n\n## 5. Philosophical Alignment\nG11 serves To Dig Deep by enforcing precise epistemic boundaries so knowledge enters the graph through rigor rather than convenience.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gate G11 constrains graph edges to the canonical set of supported relation types. It matters because relation drift breaks computability faster than prose drift: once arbitrary edge labels appear, traversal logic, contradiction handling, and topology-aware automation become inconsistent. G11 therefore protects the shared grammar of the recursive layer by rejecting unsupported or deprecated relation semantics. The result is a graph whose links remain interpretable by validators, interfaces, and agents rather than becoming an uncontrolled folk taxonomy.",
+    "keywords": [
+      "validation",
+      "gate",
+      "g11",
+      "capsuleos",
+      "quality",
+      "integrity",
+      "epistemic"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-g11-v1-validation-gate-canonical-relation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e084c609578fb620be5bd6157ce46cf99f83fb357b254f09ee86f90597d63307188437e517f9208f37d34a1146b4cf816d38a67c7e08ff23809b864d8ae7e14b"
+}

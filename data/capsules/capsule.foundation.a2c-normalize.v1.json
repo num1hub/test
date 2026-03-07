@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c-normalize.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "A2C Stage: Normalize",
+    "semantic_hash": "capsule-foundation-a2c-normalize-v1-stage-canonicalization-schema",
+    "priority": "high",
+    "progress": 59,
+    "estimatedHours": 84,
+    "actualHours": 46,
+    "dueDate": "2026-05-22",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C Stage: Normalize\n\n## 1. Definition and Essence\nThe Normalize stage converts heterogeneous ingest artifacts into stable intermediate representations. It enforces canonical encodings, field naming conventions, and structural consistency so later stages operate predictably regardless of original source format.\n\n## 2. Core Attributes\n- `canonical_format` indicator for normalized payload\n- `schema_hints` describing inferred source structure\n- `normalization_ruleset` version reference\n- `normalization_warnings` for lossy or ambiguous transforms\n- `trace_id` inherited from ingest artifact\n\n## 3. Lifecycle\nNormalize consumes ingest artifacts, applies deterministic transforms, records warnings, and emits canonical intermediate data for segmentation. Any non-recoverable ambiguity is routed to quarantine with explicit diagnostics.\n\n## 4. Integration\n- **Ingest Stage:** receives raw-capture artifacts.\n- **Segment Stage:** provides canonical input for chunking.\n- **CapsuleOS Schema:** aligns field semantics with 5-element expectations.\n- **Validator Stack:** prepares predictable structures for downstream gates.\n\n## 5. Philosophical Alignment\nNormalize advances To Dig Deep by reducing noise without erasing context, creating clear substrate where true structure can emerge rather than forcing brittle assumptions.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "A2C Stage: Normalize turns heterogeneous input into a canonical intermediate form that the rest of the pipeline can trust. It harmonizes encodings, field conventions, and structural shape so segmentation and extraction operate on stable material instead of source-specific noise. This stage matters because many failures that look semantic are actually formatting or schema drift problems upstream. By making normalization explicit, the vault preserves warnings about ambiguity while still producing a predictable substrate for later reasoning, validation, and synthesis.",
+    "keywords": [
+      "a2c",
+      "normalize",
+      "canonicalization",
+      "schema",
+      "pipeline",
+      "preprocessing"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-a2c-normalize-v1-stage-canonicalization-schema"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-segment.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "52620d2407edbf017bcc9d3cbe4239904da244c97ffb78afca0df9f8f27d658a663b1ac6ef01eaa283a48c66e94bbb0bf7e511ac3265f32723158b3bfad57892"
+}

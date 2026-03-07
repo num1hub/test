@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n-infinity.parliament.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "N-Infinity Parliament",
+    "priority": "high",
+    "progress": 42,
+    "estimatedHours": 150,
+    "actualHours": 52,
+    "dueDate": "2026-06-28",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Parliament Agent: The Epistemic Arbitrator\n\n## 1. Definition\nParliament is the N-Infinity role responsible for epistemic arbitration. It investigates contradiction pressure, contested links, and risky claims, then routes them toward synthesis, quarantine, or explicit governance review.\n\n## 2. Core Functions\n- `contradiction_monitoring` watches for rising epistemic pressure.\n- `arbitration` compares provenance, logic, and contextual fit across competing claims.\n- `synthesis_or_quarantine` decides whether tension should produce a synthesis capsule, a cautionary path, or quarantine.\n- `governance_escalation` surfaces hard cases for humans instead of burying them in model output.\n\n## 3. Runtime Role\nIn N1Hub, Parliament should operate through bounded capsule jobs within the graph-maintenance lane, often with DeepMine support for heavy reasoning and with night-shift windows for cost-aware unattended review. It gives the system a formal mechanism for disagreement rather than passive contradiction accumulation.\n\n## 4. Philosophical Alignment\nParliament serves To Dig Deep by treating conflict as a structured search for stronger truth instead of a reason to hide ambiguity.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Parliament is the epistemic arbitrator of the swarm. It investigates contradiction pressure, reviews contested links or claims, and decides whether tension should be resolved through synthesis, quarantine, or governance escalation. This role matters because a sovereign graph must know how to handle conflict, not just store parallel assertions and hope users sort them out later. Parliament provides that discipline by combining evidence review, multi-agent reasoning, and auditable resolution paths so disagreement becomes structured deliberation rather than hidden systemic drift.",
+    "keywords": [
+      "parliament-agent",
+      "epistemic-arbitration",
+      "contradiction-pressure",
+      "quarantine",
+      "synthesis",
+      "capsule-jobs",
+      "graph-maintenance",
+      "deepmine",
+      "n-infinity",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.confidence-vector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-quarantined.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.epistemic-ledger.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "0c85b2310e0cd88b013a210d877fe35609a6cc2309512a3ce921e07ef6335b251c8d03a8bd9478d4328e8f14f7c3622f490a1c37cd79d1be5efe153c41e16be8"
+}

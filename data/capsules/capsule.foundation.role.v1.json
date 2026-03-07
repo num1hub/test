@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.role.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Role",
+    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Role\n\n## 1. Definition and Essence\nRole defines named responsibility bundles such as owner, contributor, and investor. It specifies expected duties and default authority envelopes that can be instantiated by team and project governance policies.\n\n## 2. Core Attributes\n- `role_name` canonical identifier (owner, contributor, investor)\n- `responsibilities` expected duties and accountability scope\n- `default_permissions` baseline action rights\n- `scope` workspace, team, project applicability\n- `escalation_rules` conditions requiring higher authority\n\n## 3. Lifecycle\nRoles are defined in governance, assigned to profiles by teams or projects, revised when policy evolves, and versioned for historical access reconstruction.\n\n## 4. Integration\n- **Permission:** role definitions map to concrete capabilities.\n- **Team:** binds member identities to role sets.\n- **Project:** applies role policy to collaboration spaces.\n- **Invitation:** role scope included during onboarding.\n\n## 5. Philosophical Alignment\nRole capsules strengthen To Dig Deep by clarifying responsibility and reducing ambiguity in multi-actor execution.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Role bundles permissions and accountability into a named collaboration posture such as owner, contributor, reviewer, or investor. It matters because people and agents need higher-level participation models that are stable enough to coordinate around, yet still traceable back to concrete capabilities. The capsule therefore sits one level above Permission: it translates atomic rights into reusable responsibility envelopes that can be assigned, compared, versioned, and audited over time. Role gives teams and projects a durable governance vocabulary for who is expected to act, decide, review, or simply observe within sovereign work.",
+    "keywords": [
+      "role",
+      "responsibility-envelope",
+      "owner",
+      "contributor",
+      "reviewer",
+      "permissions-bundle",
+      "governance-vocabulary",
+      "assignment",
+      "accountability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "8f908b716e9482db91a18372aa804617ae773522b14a2aaaf91add0b2cdb49cff3e37afdb5307e2dd6cdbccc4d8c5a0110d0f87d68aa982fbc9fa03f0f51d30f"
+}

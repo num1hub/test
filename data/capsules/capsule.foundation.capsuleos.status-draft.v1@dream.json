@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.status-draft.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "status-draft-mutable-iterative-prevalidation-hot-workbench-buffer",
+    "updated_at": "2026-03-06T13:44:55.906Z",
+    "name": "CapsuleOS Status: Draft",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Status: Draft\n\n## 1. Definition\nIn the CapsuleOS lifecycle, the `draft` status represents the genesis state of a capsule. It is the initial, \"hot,\" and highly mutable phase where an idea, task, or document is actively being formed. A capsule in the `draft` state is explicitly acknowledged as incomplete or unrefined by the N1Hub ecosystem.\n\n## 2. Operational Characteristics\n- **Mutable and Unsealed**: Because the content is undergoing rapid iteration, a `draft` capsule is not yet subject to the strict cryptographic sealing required by mature states. The `integrity_sha3_512` field may be treated as optional or a temporary placeholder, avoiding the computational overhead of constant re-hashing during active typing.\n- **Relaxed Validation**: While the basic 5-Element structure must exist, some of the 16 Quality Gates (such as rigorous semantic parity or exact confidence vector bounds) may be temporarily relaxed or deferred until the user attempts to promote the capsule to `active`.\n\n## 3. Ecosystem Interaction\n- **Exclusion from Evolution**: Background agents from the N-Infinity swarm (like the Parliament or the Weaver) generally bypass `draft` capsules. This prevents the swarm from wasting cycles synthesizing half-baked ideas or resolving contradictions that the author is still actively editing.\n- **Local Context**: `draft` capsules are typically only visible to their author or direct collaborators within a specific Project Hub.\n\n## 4. Use Cases\n- **Brainstorming**: Rapidly capturing fleeting thoughts before they are fully structured.\n- **A2C Ingestion**: The raw, unprocessed output immediately following the initial `Ingest` and `Segment` phases of the Anything-to-Capsules pipeline, prior to passing the final validation gates.\n- **Work in Progress**: Drafting a complex architectural document or outlining a long-term goal in the Planner before officially committing it to the active graph."
+  },
+  "neuro_concentrate": {
+    "summary": "The 'draft' status denotes the genesis, highly mutable phase of a capsule's lifecycle within CapsuleOS. Serving as the \"hot\" state for active brainstorming and work-in-progress, draft capsules are exempt from strict cryptographic sealing and undergo relaxed validation against the 16 Quality Gates. To prevent systemic noise, N-Infinity background agents typically bypass capsules in this state. The draft status provides users and the A2C pipeline with a frictionless, rapid-iteration environment to capture raw data before it is formalized, validated, and promoted to the active, immutable knowledge graph.",
+    "keywords": [
+      "capsule-status",
+      "draft",
+      "mutable",
+      "hot-state",
+      "work-in-progress",
+      "brainstorming",
+      "relaxed-validation",
+      "unsealed",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "status-draft-mutable-iterative-prevalidation-hot-workbench-buffer"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.capsule-concept.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "155a93bbd35906a286bac4637c76d95ada4372a2995e6d78c3f922dd3815e27ec0b7604689ae7e341d34a6f063698f729d31cac6f0966069827c8bcf5ee51444"
+}

@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine-prospector-agent.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:20:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "DeepMine Prospector Agent",
+    "semantic_hash": "deepmine-prospector-agent-source-scouting-veins-discovery-mapping",
+    "priority": "high",
+    "progress": 35,
+    "estimatedHours": 220,
+    "actualHours": 36,
+    "dueDate": "2026-10-05",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine Prospector Agent\n\n## Dream Direction\nIn the Dream branch, DeepMine Prospector Agent grows into a broad-spectrum scouting intelligence that continuously surveys the open web, provider capabilities, unresolved graph gaps, and latent user intent. It should evolve from reactive topic finding into proactive seam discovery across the whole sovereign knowledge landscape.\n\n## Future Potential\n- continuous prospecting sweeps\n- branch-aware gap heatmaps\n- opportunity ranking across projects and capsules\n- higher-confidence brief generation for downstream mining lanes\n\n## Why It Matters\nDream preserves Prospector as the role that can discover where the next meaningful dig should happen before expensive extraction begins."
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine Prospector Agent in the Dream branch represents a more proactive discovery layer for the N1Hub mine. It pushes toward continuous seam discovery, richer graph-gap analysis, and better foresight about where mining effort should be spent. The capsule matters because future mining quality depends on where the system chooses to dig, not just on how strong the later extraction is. Dream therefore preserves prospecting as a serious upstream intelligence function rather than a casual prelude to mining.",
+    "keywords": [
+      "deepmine",
+      "prospector-agent",
+      "dream-branch",
+      "source-discovery",
+      "scouting",
+      "graph-gaps",
+      "research",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-prospector-agent-source-scouting-veins-discovery-mapping"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "8016cfaacbff465754d7ed8d9680f908f2be877f82dceb878111bc76b5d807e5e16133f6d711d217c1332364be820cdeb7ec005ce6b258efed06039dc98f8933"
+}

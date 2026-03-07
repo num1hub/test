@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-generation-protocol.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:00Z",
+    "semantic_hash": "capsule-generation-protocol-master-prompt-matrix-gold-core",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Capsule Generation Protocol",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The Capsule Generation Protocol: The Master Matrix\n\n## 1. Definition and Essence\nThe Capsule Generation Protocol is the absolute meta-directive—the \"Master Prompt\"—utilized by human architects and AI entities to forge new Sovereign Foundation Capsules. Even when a specific topic is omitted or left as a placeholder, the protocol itself demands structural perfection. It is the linguistic and architectural mold that ensures every newly minted concept perfectly aligns with the CapsuleOS physics.\n\n## 2. Core Principles\n- **Strict Conformity**: It enforces the 5-Element Law without exception, ensuring metadata, payload, neuro-concentrate, recursive links, and cryptographic seals are meticulously populated.\n- **Epistemic Rigor**: It mandates deep, visionary content generation, rejecting superficiality in favor of the \"To Dig Deep\" philosophy, forcing the AI to act as a Chief Architect.\n\n## 3. Interactions\nThis protocol acts as the primary interface between the human Architect and the LLM (DeepMine extraction). It serves as the programmatic inception point for the A2C (Anything-to-Capsules) pipeline, bootstrapping the cognitive engine into a state of structural negentropy.\n\n## 4. Philosophical Alignment\nBy standardizing the creation of knowledge, this protocol embodies the journey \"Between Zero and One.\" It is the exact catalyst that transforms the chaotic potential of an unwritten idea (Zero) into a crystallized, mathematically verifiable sovereign capsule (One)."
+  },
+  "neuro_concentrate": {
+    "summary": "The Capsule Generation Protocol is the definitive meta-directive and master prompt used to forge new sovereign foundation capsules within the N1Hub ecosystem. Acting as the ultimate interface between human architects and AI models, it enforces absolute adherence to the 5-Element Law and the 16 Validation Gates. By mandating epistemic rigor and structural negentropy, it ensures that every newly minted capsule embodies the 'To Dig Deep' philosophy, successfully transforming chaotic abstract potential into crystallized, cryptographically sealed intellectual capital.",
+    "keywords": [
+      "capsule-generation",
+      "protocol",
+      "master-prompt",
+      "meta-directive",
+      "5-element-law",
+      "capsuleos",
+      "n1hub",
+      "negentropy",
+      "to-dig-deep",
+      "between-zero-and-one"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-generation-protocol-master-prompt-matrix-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "7e42751819e645cdb9a496aeec249e8e978de9be5a99f59023afaba8fa90805d2feb5abcbfbcdee205b3bd0452deabf031daa8cfb181d024ca5722e129e36724"
+}

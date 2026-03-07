@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.branch-steward-agent.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:44:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "Branch Steward Agent",
+    "semantic_hash": "branch-steward-agent-real-dream-governance-sync-discipline",
+    "priority": "high",
+    "progress": 40,
+    "estimatedHours": 280,
+    "actualHours": 40,
+    "dueDate": "2026-10-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Branch Steward Agent\n\n## Dream Direction\nIn the Dream branch, Branch Steward Agent becomes a more formal branch-governance role that can explain diffs, detect contamination, guide promotion, and keep Real and Dream structurally legible even as the vault scales.\n\n## Future Potential\n- richer branch diff and promotion explanations\n- clearer cleanup of stale Dream debris\n- stronger coordination with review and vault-update lanes\n- better operator visibility into branch drift\n\n## Why It Matters\nDream preserves Branch Steward as the role that keeps exploration and reality from collapsing into the same graph blur."
+  },
+  "neuro_concentrate": {
+    "summary": "Branch Steward Agent in the Dream branch describes a more advanced governance role for Real and Dream branch discipline. It aims toward stronger diff review, contamination detection, and clearer promotion paths between exploratory and evidence-backed structures. The capsule matters because branch clarity is one of the core sovereign advantages of the N1Hub vault. Dream therefore protects branch literacy as an operating discipline rather than a loose naming convention or improvised workflow habit.",
+    "keywords": [
+      "branch-steward-agent",
+      "dream-branch",
+      "real-branch",
+      "governance",
+      "promotion",
+      "diff-review",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "branch-steward-agent-real-dream-governance-sync-discipline"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "85330f72e8d672d573de09c7e8ab0e9244a7014a4941eeae26a9275cd36786b8a8e1a329aa1b499a07fa9fde5ba06953c6e2b1cd42d42adbc11adeecc5c34bb8"
+}

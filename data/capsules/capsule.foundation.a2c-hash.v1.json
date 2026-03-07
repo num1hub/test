@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c-hash.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "A2C Stage: Hash",
+    "semantic_hash": "capsule-foundation-a2c-hash-v1-stage-semantic-integrity",
+    "priority": "medium",
+    "progress": 67,
+    "estimatedHours": 62,
+    "actualHours": 39,
+    "dueDate": "2026-05-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C Stage: Hash\n\n## 1. Definition and Essence\nThe Hash stage computes semantic and integrity seals for capsule candidates using canonical serialization and cryptographic hashing. It guarantees deterministic identity signals before validation and persistence.\n\n## 2. Core Attributes\n- `semantic_hash` generation inputs and tokenization profile\n- `integrity_sha3_512` computed from canonical 5-element payload subset\n- `hash_profile` indicating algorithm and canonicalization version\n- `hash_mismatch_flags` for parity and integrity inconsistencies\n- `seal_timestamp` for audit traceability\n\n## 3. Lifecycle\nHash receives linked candidate capsules, computes semantic and integrity digests, syncs parity fields, and emits sealed candidates to validation. Any digest mismatch becomes a hard pre-storage failure.\n\n## 4. Integration\n- **Link Stage:** receives graph-complete capsule drafts.\n- **Validate Stage:** supplies cryptographically sealed candidates for gate checks.\n- **CapsuleOS Semantic Hash:** aligns 8-token semantic digest format.\n- **Capsule Validator G16:** enforces integrity seal parity.\n\n## 5. Philosophical Alignment\nHashing supports To Dig Deep by making meaning and integrity explicit, preventing invisible drift between what a capsule claims and what it actually contains.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "A2C Stage: Hash computes the semantic and cryptographic seals that turn a capsule candidate into a deterministic identity-bearing artifact. It synchronizes canonical serialization, semantic hash generation, and integrity hashing before validation proceeds. This stage matters because meaning and integrity both need explicit, reproducible signatures; without them, downstream systems cannot reliably compare, trust, or version artifacts. By making sealing a separate step, Hash exposes mismatches early and prevents silent drift between what a capsule claims to represent and what its payload actually contains.",
+    "keywords": [
+      "a2c",
+      "hash",
+      "semantic-hash",
+      "integrity",
+      "sha3",
+      "canonical-json"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-a2c-hash-v1-stage-semantic-integrity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-link.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
+        "relation_type": "depends_on"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "de0ccce30d03b4687a7b71c319a1aae698599584ada7520a938b8a4c8a19bfd6ce070ee525ccdfffd4f791ce37404c25f4776e1d6212618fe565e9c8d6255b54"
+}

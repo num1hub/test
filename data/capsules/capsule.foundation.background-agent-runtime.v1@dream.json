@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.background-agent-runtime.v1",
+    "version": "1.1.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-06T18:43:16.124Z",
+    "name": "Background Agent Runtime",
+    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
+    "source": {
+      "uri": "internal://docs/agents-operations.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 18,
+    "estimatedHours": 480,
+    "actualHours": 96,
+    "dueDate": "2026-11-20",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, and local skills into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Background Agent Runtime in the Dream branch describes the fuller durable substrate beneath N1Hub autonomy. It pushes toward stronger resumability, cleaner lane isolation, better crash recovery, richer operator controls, and a more explicit bridge between conversational ingress, delegated tasks, and long-lived daemon work. The capsule matters because background agents only become trustworthy when the runtime beneath them is more disciplined than the models they call. Dream therefore preserves this hub as the future always-on harness for N-Infinity, Symphony, and other autonomous lanes rather than only the first night-shift runtime.",
+    "keywords": [
+      "background-agent-runtime",
+      "daemon",
+      "durable-runtime",
+      "capsule-jobs",
+      "agent-delegation",
+      "chat-to-capsules",
+      "n-infinity",
+      "symphony",
+      "deepmine",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "f302618248d7feff22ce4fdce7543c4907387aff00f2146b08dabdc359e6d8f035c93532051cc6c0e5d3cf434321a98b5e92119f63288d843a958ce7e60a6c19"
+}

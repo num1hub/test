@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1-coin-tokenomics.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "n1-coin-token-economy-sovereign-fund-gold-core",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "N1 Coin Tokenomics",
+    "priority": "medium",
+    "progress": 29,
+    "estimatedHours": 210,
+    "actualHours": 60,
+    "dueDate": "2026-08-20",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1 Coin and the Sovereign Independent Autonomous Fund\n\n## 1. The N1 Coin Ecosystem\nThe **N1 Coin** is the native utility and governance token of the N1Hub ecosystem. Operating on a decentralized blockchain layer, it transforms the intellectual capital encapsulated within CapsuleOS into a liquid, verifiable, and programmable digital economy. It bridges the gap between raw knowledge creation and equitable financial compensation.\n\n## 2. Core Token Utility\n- **Automated Royalties**: Smart contracts autonomously distribute N1 Coins to creators whenever their sovereign capsules (e.g., project templates, architectural blueprints) are forked, reused, or integrated into new pipelines.\n- **Marketplace Currency**: N1 Coin serves as the primary medium of exchange within the N1Hub Marketplace for purchasing premium capsules, proprietary A2C extraction prompts, or consulting services.\n- **Staking and Access**: Users can stake N1 Coins to unlock premium Workspace features, gain priority processing in the A2C pipeline, or secure higher-tier LLM access via DeepMine.\n- **Incentivization**: Tokens are dynamically minted or distributed to reward high-value community contributions, such as resolving epistemic contradictions (Parliamentary duties) or discovering novel semantic links (Weaver functions).\n- **Governance**: Staked tokens grant voting rights, allowing the community to steer protocol upgrades and economic policies via decentralized autonomous organization (DAO) mechanisms.\n\n## 3. The Sovereign Independent Autonomous Fund (SIAF)\nTo guarantee the perpetual evolution and sustainability of the ecosystem, N1Hub establishes the **Sovereign Independent Autonomous Fund (SIAF)**.\n- **Purpose**: The SIAF acts as the economic treasury of the N1 family. It funds foundational R&D, incentivizes third-party open-source development, and supports creators building critical infrastructure.\n- **Ownership Structure**: The fund operates on a strict, mathematically enforced **51% / 49% split**. \n  - **51%** of the voting weight and treasury allocation is controlled by the original Project Creator (Number One Projects), ensuring that the founding vision, strict architectural adherence (the 5-Element Law), and the \"To Dig Deep\" philosophy are never compromised by hostile governance takeovers.\n  - **49%** is controlled by the community and the N1 family (governed by distributed token holders), ensuring decentralized representation, equitable wealth distribution, and robust community participation.\n\n## 4. Architectural Integration\n- **CapsuleOS**: Financial assets, token holdings, and smart-contract triggers are natively represented as specialized `operations` capsules, complete with SHA3-512 cryptographic seals.\n- **Workspace**: The user interface seamlessly integrates a secure, non-custodial Web3 wallet, allowing users to track their N1 Coin balances, claim royalties, and execute stakes directly alongside their Planner and Tracker.\n- **N-Infinity**: Background agents continuously audit the economic graph, detecting anomalous transaction patterns or fraudulent royalty claims, reporting them directly to the SIAF for arbitration.\n\nBuilding directly upon our established Open Source strategy, the N1 Coin ecosystem proves that true intellectual sovereignty requires both cryptographic immutability and decentralized economic independence."
+  },
+  "neuro_concentrate": {
+    "summary": "This sovereign capsule defines the economic architecture of the N1Hub ecosystem, centered around the native N1 Coin and the Sovereign Independent Autonomous Fund (SIAF). N1 Coin facilitates decentralized value exchange through automated royalties, marketplace transactions, staking for premium Workspace features, and community governance. To ensure long-term systemic sustainability while protecting the founder's vision, the SIAF operates on a strict 51% (Creator) / 49% (Community) ownership split. This hybrid treasury funds ecosystem growth and open-source initiatives. Fully integrated into CapsuleOS, financial transactions and token holdings are represented as cryptographically sealed capsules, monitored by N-Infinity agents, and seamlessly managed within the user's Workspace, fulfilling the promise of true intellectual and economic sovereignty.",
+    "keywords": [
+      "n1-coin",
+      "tokenomics",
+      "sovereign-autonomous-fund",
+      "siaf",
+      "51-49-split",
+      "royalties",
+      "staking",
+      "governance",
+      "capsuleos",
+      "decentralized-economy"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1-coin-token-economy-sovereign-fund-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.blockchain-opensource.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.royalty-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.boost.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.siaf-governance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "5a18056d2b07e50f5717260066a875fd05d771b95eb1b0e4bb0242079e3559ee556b3744b67e45642a2f2164504105bef1509eee1b82e18b8ed2f4b5f5166b2a"
+}

@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n-infinity.weaver.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "weaver-agent-soft-links-connector-discovery-gold-core",
+    "name": "N-Infinity Weaver",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "priority": "high",
+    "progress": 43,
+    "estimatedHours": 138,
+    "actualHours": 47,
+    "dueDate": "2026-07-02",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Weaver Agent: The Relational Architect\n\n## 1. Definition\nWeaver is the N-Infinity role responsible for discovering hidden semantic adjacency in the capsule graph. It proposes soft links and relational hypotheses where the graph appears fragmented or underconnected.\n\n## 2. Core Functions\n- `soft_link_discovery` proposes reviewable `might_relate` style hypotheses.\n- `probabilistic_weighting` records strength rather than pretending instant certainty.\n- `graph_gap_detection` finds orphaned or weakly embedded capsules.\n- `handoff_for_validation` routes strong clusters toward Suggestion Agent, Parliament, or human review.\n\n## 3. Runtime Role\nIn N1Hub, Weaver work is expected to become bounded capsule jobs inside the graph-maintenance lane rather than free ambient prompting. It is a night-shift-friendly role because broad graph scanning benefits from off-peak compute and careful cooldowns.\n\n## 4. Philosophical Alignment\nWeaver serves To Dig Deep by searching for real structural adjacency beneath surface separation.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Weaver is the relational architect that looks for connections the graph does not yet explicitly encode. It proposes soft links with probabilistic weight, helping isolated capsules find meaningful context without prematurely asserting hard truth. The agent matters because innovation and navigation often depend on seeing plausible adjacency before certainty is available. By generating reviewable hypotheses instead of irreversible structure, Weaver expands the graph’s exploratory surface while preserving the stricter integrity demanded of canonical relation types.",
+    "keywords": [
+      "weaver-agent",
+      "soft-links",
+      "capsule-jobs",
+      "graph-maintenance",
+      "n-infinity",
+      "relational-discovery",
+      "night-shift",
+      "capsuleos",
+      "background-agent",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "weaver-agent-soft-links-connector-discovery-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "3c89eac554004a3ea6165f6d33f3c22183aaf3feee79bcc12d0471ca26063d9aed917d708c8e63c5c8a1a0e2de358fe19e3ccfe61b3e23c0555888d947d37916"
+}

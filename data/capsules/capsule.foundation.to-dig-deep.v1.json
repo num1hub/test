@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.to-dig-deep.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "to-dig-deep-philosophy-manifesto-negentropy-gold-core",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "To Dig Deep",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# To Dig Deep: The Ideological Manifesto\n\n## 1. The Rejection of the Superficial\n\"To Dig Deep\" is the foundational philosophy and animating spirit of the N1Hub ecosystem. We live in an era of entropic noise, where AI generates plausible but hollow, \"deep-sounding\" answers within seconds. This manifesto is our formal rejection of the superficial. We do not settle for surface-level data; we are intellectually starved for the absolute truth. We commit to drilling through the strata of the DIKWE hierarchy—Data, Information, Knowledge, Wisdom, and ultimately, Experience.\n\n## 2. The Mining Paradigm\nThis philosophy manifests physically in our architecture as an industrial mining operation for cognitive assets:\n- **DeepMine**: The cognitive quarry where we drill into elite LLMs and the internet, extracting raw ore rather than accepting pre-packaged answers.\n- **A2C (Anything-to-Capsules)**: The refinery that ruthlessly strips away conversational slag and hallucinations, smelting the raw data into pure, structurally sound atoms.\n- **N-Infinity**: The perpetual forge where background agents continuously weave and arbitrate the crystallized knowledge, generating intellectual compound interest.\n\n## 3. Architectural Manifestation\n\"To Dig Deep\" is not merely a slogan; it is hardcoded into the physics of CapsuleOS. It is the reason we enforce the **5-Element Law** and the **16 Validation Gates**—ensuring that only verified, highly concentrated knowledge enters our cognitive graph. It is the reason we utilize **SHA3-512 cryptographic seals**, transforming ephemeral thoughts into immutable, sovereign intellectual capital. It is the driving force behind **Real/Dream branching**, allowing us to simulate profound structural changes without corrupting the bedrock of reality.\n\n## 4. The Guiding Star\nTo Dig Deep is the soul of N1Hub. It is the mechanism by which we bridge the gap \"Between Zero and One,\" transforming chaotic, entropic data into a sovereign, ever-evolving digital habitat."
+  },
+  "neuro_concentrate": {
+    "summary": "To Dig Deep is the cultural operating principle that forces the ecosystem to prefer evidence, structure, and sustained synthesis over fast but hollow output. It explains why DeepMine extracts instead of accepts surface answers, why A2C refines rather than merely stores, and why validation and Dream branches exist before Real state is trusted. The capsule matters because this philosophy is not decorative branding; it is the reason the platform accepts computational and governance cost in exchange for higher-quality knowledge. To Dig Deep is therefore the normative pressure that keeps ambition tied to rigor across the entire vault.",
+    "keywords": [
+      "to-dig-deep",
+      "cultural-principle",
+      "epistemic-rigor",
+      "deepmine",
+      "a2c",
+      "validation",
+      "dream-branching",
+      "evidence-over-speed",
+      "vault-philosophy"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "to-dig-deep-philosophy-manifesto-negentropy-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.between-zero-and-one.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.manifesto.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e9b2359fd5eec037f2ed600a8bffc29776fd3da1619c5da56c2693f8c5e54b714240c8b4d97598a5bb1adef683e9044475d88994c0852bb97aa6a2e30e79ac2e"
+}

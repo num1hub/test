@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub-projects.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "n1hub-project-platform-creation-hub-gold-master-core",
+    "updated_at": "2026-03-06T18:43:16.768Z",
+    "name": "N1Hub Projects",
+    "priority": "medium",
+    "progress": 41,
+    "estimatedHours": 310,
+    "actualHours": 82,
+    "dueDate": "2026-09-05",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub.com: The Ultimate Project Platform\n\n## 1. Vision of the Digital Continent\nN1Hub.com is not merely a productivity tool or a note-taking app; it is a sprawling digital continent designed explicitly for the creation, development, and monetization of sovereign projects. It is a digital habitat where creators, builders, and visionaries arrive to transform chaotic ideas into perfectly structured, evolving entities. Driven by the philosophy \"To Dig Deep\" and the monumental leap \"Between Zero and One,\" N1Hub empowers anyone to build projects of any complexity—from personal task lists to enterprise-scale digital twins.\n\n## 2. The Hub/Atomic Paradigm in Action\nOn N1Hub, every project is a **capsule-hub**. It is a structural nexus that aggregates atomic capsules—tasks, documents, user profiles, financial ledgers, and physical objects—into a single, interconnected, and cryptographically sealed knowledge graph. This architecture ensures absolute data integrity and prevents the loss of context that plagues traditional folder-based systems.\n\n## 3. The Full Project Lifecycle\n- **Genesis**: Users can instantiate projects from scratch, utilize A2C to parse external blueprints, or leverage the AI Project Generator to structure abstract ideas instantly.\n- **Execution**: The integrated Workspace (featuring a Planner and Tracker) acts as the command center, managing the transition of operational capsules from `draft` to `sovereign`.\n- **Collaboration**: Projects inherently support granular roles (Owner, Contributor, Investor). Team members collaborate within the same graph, communicating via interconnected discussion capsules.\n- **Monetization**: Mature projects can be sealed as Sovereign Templates and published to the N1Hub Marketplace. Creators earn royalties whenever their project architecture is forked or instantiated by others.\n\n## 4. Unparalleled Architectural Features\n- **Real/Dream Branching**: Creators can safely fork a project graph. The `Real` branch maintains the current reality, while the `Dream` branch allows for speculative design changes. A recursive diff algorithm automatically calculates the gap (e.g., generating cost estimates or resource requirements).\n- **Agentic Evolution**: N-Infinity background agents continuously patrol active projects, discovering hidden semantic links, pruning dead ends, and proposing novel structural improvements.\n- **DeepMine Supply**: Projects can pull raw intelligence directly from the world's most advanced LLMs, ensuring that the knowledge within N1Hub remains cutting-edge."
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Projects in the Dream branch represents a more mature portfolio fabric for project creation, branching, collaboration, delivery, and template publication. It pushes toward cleaner transitions between project inception, project operations, microproject decomposition, and later commercialization without breaking lineage. The capsule matters because projects are one of the main units through which the ecosystem becomes useful to humans and teams. Dream therefore preserves a stronger project model where execution and capital formation stay connected from the beginning rather than stitched together later.",
+    "keywords": [
+      "n1hub",
+      "project-platform",
+      "digital-habitat",
+      "capsule-hub",
+      "marketplace",
+      "real-dream-branching",
+      "n-infinity-agents",
+      "to-dig-deep",
+      "between-zero-and-one",
+      "sovereign-templates"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-project-platform-creation-hub-gold-master-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hub-atomic.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.restart-challenge.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.apsnytravel.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesimsv2.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a16dfdaa6fa3158ce47ee2aac975bc4145123dffaf2483e8ef4194f573dce7e4f184877a0089352945b6954735f3f0a8819e2a6ba16de4b214f81037c0e95d3e"
+}

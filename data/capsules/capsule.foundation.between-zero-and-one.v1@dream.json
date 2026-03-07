@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.between-zero-and-one.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:00Z",
+    "semantic_hash": "between-zero-and-one-entropy-to-negentropy-gold",
+    "updated_at": "2026-03-06T18:43:16.146Z",
+    "name": "Between Zero and One",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The Between Zero and One Principle: From Chaos to Sovereign Order\n\n## 1. Definition and Essence\nWithin the N1Hub ecosystem, **\"Between Zero and One\"** is the fundamental epistemological axiom defining the transition from entropic chaos to absolute, structured order. \n\n- **Zero (0)** represents raw data, ambient internet noise, unfiltered LLM outputs, and fragmented human thought. It is pure entropy—formless and susceptible to decay.\n- **One (1)** represents the Sovereign Capsule. It is absolute negentropy—cryptographically sealed, semantically linked, structurally infallible, and legally significant intellectual capital.\n\n\"Number One Projects\" derives its name from this very destination. The platform exists solely to facilitate the perilous, industrial journey across the chasm between Zero and One.\n\n## 2. Core Principles and Architecture\nThe journey from 0 to 1 is not spontaneous; it is a mechanical, deterministic process governed by the physics of CapsuleOS:\n- **The Chasm of Refinement**: Data does not leap from 0 to 1. It must be processed through the **A2C (Anything-to-Capsules)** pipeline. As it moves through Ingestion (0.1), Normalization (0.3), Extraction (0.5), and Synthesis (0.8), its entropy drops, and its semantic density increases.\n- **The Singularity of Validation**: To reach the state of 'One', a digital artifact must survive the **16 Validation Gates**. Only by achieving perfect structural parity and obtaining the SHA3-512 cryptographic seal does the artifact cross the threshold into sovereignty.\n\n## 3. Interactions within the Ecosystem\nThis philosophical axiom dictates the function of every major N1Hub component:\n- **DeepMine** operates in the realm of Zero, excavating raw potential from external models.\n- **A2C** is the physical manifestation of the journey *Between* Zero and One.\n- **CapsuleOS** is the vault of Ones, the digital continent where entropy is permanently locked out.\n- **N-Infinity** agents operate exclusively on Ones, colliding them to synthesize higher-order, compound intelligence.\n\n## 4. Philosophical Alignment\nPaired intrinsically with the **\"To Dig Deep\"** manifesto, this principle rejects the illusion of 0.5—the \"deep-sounding\" but structurally hollow answers pervasive in modern AI. N1Hub demands the absolute realization of knowledge. A project, a physical space (TileSims), or a thought is not considered truly possessed until it has been transmuted into a One.\n\n## 5. Future Potential\nAs the N1Hub ecosystem expands globally, the \"Between Zero and One\" principle will guide the assimilation of entire corporate knowledge bases, decentralized Web3 economies, and physical real estate into the CapsuleOS graph. It is the universal equation for turning the fleeting noise of the universe into an immortal digital heritage."
+  },
+  "neuro_concentrate": {
+    "summary": "Between Zero and One in the Dream branch describes a more articulated passage from raw possibility to trusted sovereign capital. It imagines clearer intermediate states between noisy intake, branch-local drafts, validator-earned acceptance, and market-grade reusable knowledge than the current doctrine spells out. The capsule matters because future scale will depend on managing transitions, not only endpoints. Dream therefore preserves this threshold as a richer operational gradient for how entropy becomes accountable graph value.",
+    "keywords": [
+      "between-zero-and-one",
+      "transformation-boundary",
+      "entropy",
+      "negentropy",
+      "a2c",
+      "validation-threshold",
+      "sovereign-artifact",
+      "digital-capital",
+      "knowledge-conversion"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "between-zero-and-one-entropy-to-negentropy-gold"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "4590c2d6e8eb5302ed2ddbcb66fc55edb320ebe93e0c2ddbe97c8336b3eace44a71ce898b5f9f669ccea3e3a77d06230073391a5da9cc0884de4e90c2d495339"
+}

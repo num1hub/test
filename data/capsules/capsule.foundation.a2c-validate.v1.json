@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c-validate.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "A2C Stage: Validate",
+    "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix",
+    "priority": "critical",
+    "progress": 64,
+    "estimatedHours": 112,
+    "actualHours": 71,
+    "dueDate": "2026-05-24",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C Stage: Validate\n\n## 1. Definition and Essence\nThe Validate stage executes the 16 Validation Gates against sealed capsule candidates. It classifies failures, applies safe autofixes when policy allows, and determines whether a candidate is accepted, retried, or quarantined.\n\n## 2. Core Attributes\n- `gate_results` pass/fail matrix with issue details\n- `autofix_actions` record of non-destructive corrections applied\n- `severity_class` used for routing decisions\n- `validation_latency_ms` performance metric for observability\n- `quarantine_reason` for rejected candidates\n\n## 3. Lifecycle\nValidate runs all configured gates, applies optional autofix for eligible issues, revalidates fixed candidates, and routes failures to quarantine. Successful candidates proceed to emit and persistence workflows.\n\n## 4. Integration\n- **Hash Stage:** consumes sealed capsule candidates.\n- **Emit Stage:** forwards only validated capsules.\n- **16 Gates:** depends on canonical gate definitions and thresholds.\n- **Quarantine Buffer:** isolates persistent failures for audit.\n\n## 5. Philosophical Alignment\nValidation reflects To Dig Deep through disciplined epistemic gates that block superficial or malformed knowledge from entering the sovereign graph.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "A2C Stage: Validate is the quality gate where sealed candidates either earn entry into the sovereign graph or are stopped. It runs the 16 Validation Gates, records failures, applies safe autofixes when policy allows, and routes unresolved problems to quarantine rather than letting malformed knowledge leak into reality. This stage matters because the pipeline must be rigorous precisely where it is most tempting to be convenient. Validate is therefore the disciplined checkpoint that separates structured output from trustworthy structured knowledge.",
+    "keywords": [
+      "a2c",
+      "validate",
+      "gates",
+      "autofix",
+      "quarantine",
+      "quality-control"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-hash.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-emit.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "862edacf7aad9bf1d5e80093cf00fe6fb1da466e7b269c58667bd8d4e474a6b77449fd7133f8faf9f586fc38c2d1cdfd989b5d14d9761391174c5cc370bca674"
+}

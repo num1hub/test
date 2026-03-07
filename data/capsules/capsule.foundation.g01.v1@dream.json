@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.g01.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:55.983Z",
+    "name": "Validation Gate G01: Root Structure",
+    "semantic_hash": "capsule-foundation-g01-v1-validation-gate-root-structure",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gate G01: Root Structure\n\n## 1. Definition and Essence\nThis capsule formalizes G01 within the CapsuleOS validation sequence. Ensures exactly five root keys with no extras. It defines why the gate exists, what conditions must be true, and how failures should be interpreted by humans and autonomous systems before capsule admission.\n\n## 2. Core Attributes\n- `gate_id` canonical identifier used in validator output\n- `intent` concise statement of epistemic purpose\n- \n      \n`pass_condition` threshold: root keys must equal the 5-element law\n- `failure_examples` representative anti-patterns\n- `autofix_policy` indicating whether non-destructive correction is allowed\n\n## 3. Lifecycle\nG01 is executed in deterministic order during validation. Failures produce structured issues, optional autofix may apply where safe, and unresolved errors block publication until corrected or explicitly overridden by governance policy.\n\n## 4. Integration\n- **16 Gates Hub:** grouped under canonical gate taxonomy.\n- **Validator Engine:** emits machine-readable issues tagged by gate ID.\n- **A2C Validate Stage:** uses gate outcomes to route accept/reject/quarantine.\n- **Architect Override:** allows audited exception pathways where governance permits.\n\n## 5. Philosophical Alignment\nG01 serves To Dig Deep by enforcing precise epistemic boundaries so knowledge enters the graph through rigor rather than convenience.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gate G01 protects the 5-Element Law at the outermost boundary of every capsule. It checks that exactly the five canonical root keys exist and that no stray container or missing top-level element slips through before deeper rules run. This gate matters because every other validator assumes the same structural frame; if the frame drifts, all downstream semantics become unreliable. In practice G01 is the hard stop that prevents arbitrary JSON blobs from masquerading as sovereign capsules inside CapsuleOS.",
+    "keywords": [
+      "validation",
+      "gate",
+      "g01",
+      "capsuleos",
+      "quality",
+      "integrity",
+      "epistemic"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-g01-v1-validation-gate-root-structure"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "9fc7b510f4434b876e65263ed8c84e82f429e9316b9be61e35fad615afd9379840f4e517bd71147bddc7b3acba1912bd8b7a5c3ae7d131026a8a0da701b3c5fd"
+}

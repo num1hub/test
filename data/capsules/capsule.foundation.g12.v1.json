@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.g12.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Validation Gate G12: Target Existence",
+    "semantic_hash": "capsule-foundation-g12-v1-validation-gate-target-existence",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gate G12: Target Existence\n\n## 1. Definition and Essence\nThis capsule formalizes G12 within the CapsuleOS validation sequence. Verifies all link targets resolve inside known capsule IDs. It defines why the gate exists, what conditions must be true, and how failures should be interpreted by humans and autonomous systems before capsule admission.\n\n## 2. Core Attributes\n- `gate_id` canonical identifier used in validator output\n- `intent` concise statement of epistemic purpose\n- \n      \n`pass_condition` threshold: all target_id values resolvable\n- `failure_examples` representative anti-patterns\n- `autofix_policy` indicating whether non-destructive correction is allowed\n\n## 3. Lifecycle\nG12 is executed in deterministic order during validation. Failures produce structured issues, optional autofix may apply where safe, and unresolved errors block publication until corrected or explicitly overridden by governance policy.\n\n## 4. Integration\n- **16 Gates Hub:** grouped under canonical gate taxonomy.\n- **Validator Engine:** emits machine-readable issues tagged by gate ID.\n- **A2C Validate Stage:** uses gate outcomes to route accept/reject/quarantine.\n- **Architect Override:** allows audited exception pathways where governance permits.\n\n## 5. Philosophical Alignment\nG12 serves To Dig Deep by enforcing precise epistemic boundaries so knowledge enters the graph through rigor rather than convenience.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gate G12 verifies that every linked target actually resolves to a known capsule. The gate matters because a graph full of broken references becomes both misleading and fragile, especially for automated reasoning and navigation. By checking target existence at validation time, G12 prevents dead edges from becoming normalized as acceptable structure. It is therefore a key anti-entropy rule: the graph should point to real knowledge artifacts, not imagined destinations or stale identifiers that slowly degrade systemic trust.",
+    "keywords": [
+      "validation",
+      "gate",
+      "g12",
+      "capsuleos",
+      "quality",
+      "integrity",
+      "epistemic"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-g12-v1-validation-gate-target-existence"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "3a52ba08be33377ea55c4d328caf720ec2dbcb9f1c1c24d4d7daf7e1a371ad542382646a7c6b93ab255b377a0764ac10b46fab863843da13f84792fb7a766bf6"
+}

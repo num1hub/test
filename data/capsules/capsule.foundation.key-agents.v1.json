@@ -1,0 +1,147 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.key-agents.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:50:00Z",
+    "updated_at": "2026-03-06T23:50:00Z",
+    "name": "Key Agents",
+    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
+    "source": {
+      "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 31,
+    "estimatedHours": 240,
+    "actualHours": 72,
+    "dueDate": "2026-09-07",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, and the review/governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction and routing\n- mining and extraction\n- planning across short and long horizons\n- graph maintenance and vault stewardship\n- review, validation, and branch discipline\n\n## 3. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future agent implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity.\n\n## 4. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about \"AI\" and instead naming the bounded roles that actually think, dig, plan, critique, and maintain the graph.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the Personal AI Assistant, DeepMine mining workers, planning agents, N-Infinity maintenance roles, and review or validation roles into one graph-visible cluster. The hub matters because the project is no longer powered by a single generic assistant; it is becoming a routed system of specialized intelligence surfaces. By naming the cluster, the vault makes ownership, delegation, and future implementation much easier to reason about.",
+    "keywords": [
+      "key-agents",
+      "agent-hub",
+      "personal-ai-assistant",
+      "deepmine",
+      "n-infinity",
+      "planning-agents",
+      "review-agent",
+      "validation",
+      "background-agents",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.gardener.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.innovator.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b93eab90ade6b6f460f678068642aba5909d96b0fedbca01d4e1c53c8f85b4e03d6f2b1361f4e73be515a0b656f1fc935ef00ac18b1b569d0d157cd2632eb9d7"
+}

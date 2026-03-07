@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.graph-3d-visualization.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:37:01.182Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "graph3d-visualization-immersive-spatial-workspace-knowledge-gold-core",
+    "name": "3D Graph Visualization",
+    "priority": "medium",
+    "progress": 23,
+    "estimatedHours": 240,
+    "actualHours": 45,
+    "dueDate": "2026-09-25",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# 3D Graph Visualization: Volumetric View for the Capsule Knowledge Graph\n\n## 1. Definition and Essence\n3D Graph Visualization is an optional volumetric representation of the CapsuleOS knowledge graph. It renders capsules as nodes and recursive relationships as edges in an interactive three-dimensional scene, adding the Z-axis as an additional semantic encoding channel. The feature is designed as a complementary perspective to the existing 2D graph, not a replacement. Users can toggle between 2D and 3D while preserving the same capsule selection, filtering, navigation, and detail workflows.\n\nThe capsule data model remains unchanged. Capsules, relation types, IDs, and integrity semantics are exactly the same as in 2D mode. The difference is strictly presentation: spatial layout, depth cues, camera controls, and rendering behavior.\n\n## 2. Motivation and Benefits\n- Spatial clustering: As capsule count and link density increase, 2D layouts can become visually congested. Depth allows semantically related clusters to separate without losing global continuity.\n- Hierarchy encoding: The Z-axis can represent layered 'part_of' depth, where major hubs remain near primary focus planes and sub-projects or atoms are arranged farther into depth.\n- Physical-twin compatibility: TileSims already operates in three-dimensional contexts. A 3D graph view creates a natural bridge between abstract knowledge capsules and physical-object capsules.\n- Immersive communication: For demos, strategy sessions, and investor storytelling, a navigable 3D graph provides stronger narrative impact and easier explanation of system structure.\n\n## 3. Limitations and Considerations\n- Cognitive load: 3D navigation introduces orientation overhead. For day-to-day editing and fast lookup, 2D remains the default and generally more efficient.\n- Performance profile: Rendering many nodes, links, and labels in 3D is heavier on CPU/GPU resources than 2D force graphs. Device capability checks and adaptive fallbacks are required.\n- Label readability: Text labels must billboard toward the camera or use overlay renderers, which can slightly reduce rigid world realism. This is an acceptable tradeoff for legibility and usability.\n\n## 4. Technical Architecture\n- Rendering stack: Three.js via React Three Fiber (@react-three/fiber) and drei, aligned with the existing TileSims stack.\n- Component contract: CapsuleGraph3D.tsx consumes the same core props as the 2D graph (capsules, onNodeClick) so integration remains low-friction.\n- Loading strategy: Lazy-load with React.lazy or next/dynamic to avoid shipping heavy 3D bundles when the user does not enable 3D mode.\n- Layout engine: Force-directed 3D layout (d3-force-3d or equivalent spring simulation) with optional force groups by capsule type, project, or relation semantics.\n- Node model: Spheres or typed geometries; color by capsule type (foundation gold, concept blue, operations green, physical_object orange, fallback gray); size by degree or hub heuristics.\n- Label model: Billboard sprites, CSS2D overlays, or texture labels with user toggle controls for label density.\n- Edge model: Lines or thin cylinders, relation-color encoding, optional arrows for direction, optional thickness weighting.\n- Interaction model: Orbit controls, click-to-open capsule details, hover-based focus highlighting, and optional orientation aids (axes/minimap).\n- Optimization model: Instancing, frustum culling, LOD degradation, and selective label rendering for large vaults.\n\n## 5. Integration with Workspace and Other Modules\n3D graph mode is activated from the Workspace/Vault graph controls and shares the same filtered capsule list used by the 2D graph. Search, status filters, type filters, and selection state stay synchronized across modes. Fullscreen behavior mirrors existing 2D fullscreen support.\n\nPlanner and Tracker capsules can be visualized in 3D as dependency neighborhoods, deadline pressure clusters, or progress planes. AI Assistant flows can highlight paths, focus candidate clusters, and eventually generate automated fly-through sequences for guided exploration. TileSims integration extends this by rendering physical-object-related capsules with richer meshes where appropriate.\n\n## 6. Philosophical Alignment\nThis capsule directly implements To Dig Deep: the system literally and conceptually moves from flat adjacency toward layered structure. Depth becomes an epistemic tool, exposing hidden relationships that may be compressed in planar views.\n\nIt also reflects Between Zero and One. The shift from a flat 2D abstraction to volumetric representation is a move toward richer, more complete structure while preserving the same sovereign capsule truth underneath.\n\n## 7. Future Potential\n- VR/AR exploration modes for full immersive interaction.\n- Agent-generated camera paths that explain graph structure and priority clusters.\n- Time-aware layouts where active or urgent capsules shift dynamically.\n- Side-by-side branch visualization for strategic comparison workflows.\n- Embedded 3D previews for physical objects and spatial assets.\n- Multi-user collaborative exploration with shared cursors/avatars.\n- Embedding-driven clustering to continuously improve semantic spatial layout."
+  },
+  "neuro_concentrate": {
+    "summary": "The 3D Graph Visualization capsule defines an optional immersive mode for the N1Hub Workspace that renders the existing capsule graph in a navigable three-dimensional scene using React Three Fiber and Three.js. It keeps the same CapsuleOS data model and interaction semantics as the 2D graph while adding depth as an encoding channel for hierarchy, clustering, and structure discovery. The mode supports camera orbit, zoom, highlighting, and scalable rendering techniques, and it aligns naturally with TileSims digital-twin contexts. It embodies To Dig Deep by revealing deeper structural layers without replacing the faster default 2D operational view.",
+    "keywords": [
+      "3d-graph",
+      "visualization",
+      "threejs",
+      "react-three-fiber",
+      "immersive-mode",
+      "spatial-rendering",
+      "knowledge-graph",
+      "workspace",
+      "tilesims",
+      "digital-twin",
+      "force-layout",
+      "exploration"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "graph3d-visualization-immersive-spatial-workspace-knowledge-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "54cb77c4b43b2f2ff5a131787dda09e81c13c88c990380ff230e6c422703e69c6c53f43a960a2991b1d51103aa0ab9bd296e2407df40f3d45987c65d878a48bc"
+}

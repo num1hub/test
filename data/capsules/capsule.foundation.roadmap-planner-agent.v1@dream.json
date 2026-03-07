@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.roadmap-planner-agent.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:40:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "Roadmap Planner Agent",
+    "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy",
+    "priority": "high",
+    "progress": 40,
+    "estimatedHours": 260,
+    "actualHours": 40,
+    "dueDate": "2026-10-10",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Roadmap Planner Agent\n\n## Dream Direction\nIn the Dream branch, Roadmap Planner Agent becomes a more dynamic strategic planner capable of branch-aware sequencing, scenario comparison, and clearer adaptation under uncertainty without degrading roadmap readability.\n\n## Future Potential\n- stronger phase design across multi-project horizons\n- roadmap variants for Dream exploration versus Real delivery\n- tighter linkage between risks, milestones, and replanning\n- better strategic briefs for Personal AI Assistant and operators\n\n## Why It Matters\nDream preserves Roadmap Planner Agent as the long-horizon intelligence that stops the vault from becoming purely reactive."
+  },
+  "neuro_concentrate": {
+    "summary": "Roadmap Planner Agent in the Dream branch represents a more adaptive strategic planning role for N1Hub. It pushes toward branch-aware sequencing, scenario comparison, and better integration between roadmap structure and execution uncertainty. The capsule matters because future planning needs more than static timelines; it needs a strategic worker that can keep long-range coherence under pressure. Dream therefore preserves planning as a living strategic capability instead of a frozen roadmap artifact.",
+    "keywords": [
+      "roadmap-planner-agent",
+      "dream-branch",
+      "strategy",
+      "roadmap",
+      "phases",
+      "scenario-planning",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.suggestion.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "f2edae86c12f3f44f2b30f34da67cdecf9eb56c6c60e1ec1abdffd188dc0f231f532e07bcd9bcb1e7550d18fff0f7f325251b0b4013956cf9ae2702a0092579b"
+}

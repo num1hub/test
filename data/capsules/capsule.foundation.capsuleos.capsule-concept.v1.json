@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.capsule-concept.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "capsule-definition-core-atomic-hub-blueprint-gold-master",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Capsule Concept",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The Capsule: The Atom of Sovereign Knowledge\n\n## 1. Definition\nA **Capsule** is the fundamental, irreducible building block of the N1Hub ecosystem and the CapsuleOS architecture. It is a cryptographically sealed, self-descriptive, and semantically aware unit of knowledge. Unlike traditional, entropic computer files that degrade and lose context over time, a capsule is an intelligent, graph-native object designed to compound in value, resisting entropy through strict structural laws and algorithmic oversight.\n\n## 2. The 5-Element Law\nEvery capsule is structurally bound by the **5-Element Law**, which acts as its systemic constitution. It must contain:\n- **`metadata`**: Identity, authorship, and temporal parameters.\n- **`core_payload`**: The raw content (text, code, or geometry).\n- **`neuro_concentrate`**: AI-extracted essence, summarizing the content and asserting its quality via a 6-dimensional confidence vector.\n- **`recursive_layer`**: Topological edges that weave the capsule into the broader knowledge graph.\n- **`integrity_sha3_512`**: A cryptographic seal ensuring absolute immutability and provenance.\n\n## 3. Typology: Atomic and Hub\nTo navigate structural complexity, capsules are bifurcated into two primary subtypes:\n- **Atomic Capsules**: Elemental, singular units of meaning (e.g., a specific task, a single document, a user profile).\n- **Hub Capsules**: Aggregating nexuses that organize, contextualize, and link together multiple other capsules (e.g., a Project, a Team, a Knowledge Base).\n\n## 4. Lifecycle and Evolution\nA capsule is born from chaotic raw data via the A2C pipeline or manual creation. It enters the system as a `draft` and must survive 16 rigorous validation gates before becoming `active`. Over time, as it is refined by users or synthesized by N-Infinity agents, it may reach a terminal, golden state of `sovereign`, where it is fully crystallized and permanently sealed. \n\n## 5. Topological Integration and Integrity\nA capsule never exists in isolation. Through its `recursive_layer`, it forms typed, multidimensional relations (`supports`, `extends`, `depends_on`) with other capsules, constructing a living, traversable knowledge graph. The ultimate guarantee of a capsule's truth is its `integrity_sha3_512` hash. This seal ensures that any alteration to the capsule breaks its signature, guaranteeing perfect historical provenance and establishing the capsule as a unit of legally and intellectually sovereign capital."
+  },
+  "neuro_concentrate": {
+    "summary": "A Capsule is defined as the fundamental, atomic unit of knowledge within the CapsuleOS and N1Hub ecosystem. It replaces traditional files with cryptographically sealed, self-descriptive, and semantically aware digital objects. Governed strictly by the 5-Element Law, every capsule contains metadata, a core payload, an AI-generated neuro-concentrate, recursive graph links, and a SHA3-512 integrity hash to guarantee absolute provenance. Capsules are categorized as either irreducible atomic units or aggregating hubs, and they progress through a rigorous lifecycle from draft to sovereign immutability. Bound together by typed topological links, capsules form a living, self-evolving knowledge graph, transforming entropic data into secure, structured, and legally significant intellectual capital.",
+    "keywords": [
+      "capsule",
+      "atomic-unit",
+      "sovereign-knowledge",
+      "capsuleos",
+      "5-element-law",
+      "knowledge-graph",
+      "cryptographic-seal",
+      "negentropy",
+      "hub-capsule",
+      "intellectual-capital",
+      "provenance-tracking"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-definition-core-atomic-hub-blueprint-gold-master"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hub-atomic.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "6ba8a9c650509a0a5fa4604d41fd03942867115c22028bb5b862ca79fd1bc09ff43ac52ec5b1f4971565296a087bc0c913a90d539d2a2ae9a4731503893f051d"
+}

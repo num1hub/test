@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos-spec.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Cognitive Architect",
+    "created_at": "2025-07-09T00:00:00Z",
+    "semantic_hash": "capsuleos-spec-v4-control-cognitive-gates-lifecycle-axioms",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "source": {
+      "uri": "internal://capsule.core.constitution.v1",
+      "type": "normative_derivation"
+    },
+    "name": "CapsuleOS Specification",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS v4.0.0 — Gold Master Specification\n\n## 1. Design Thesis: Negentropy\nCapsuleOS replaces passive, entropic files with **capsules**: cryptographically sealed, vector‑quantified, graph‑native cognitive objects. Knowledge compounds through five negentropic mechanisms: SHA3‑512 sealing, semantic vector hints, typed graph edges, a six‑dimensional confidence vector, and immutable provenance logging.\n\n## 2. Dual‑Plane Architecture\n- **Control Plane** (Law): Immutable physics — deterministic JSON schemas, validation gates, hashing algorithms, routing engine.\n- **Cognitive Plane** (Energy): The living data graph of capsules, expanding via structured recursion while bound by Control Plane physics.\n\n## 3. The 5‑Element Law\nEvery valid capsule MUST contain exactly five root JSON keys:\n\nThis specification defines normative intent and systemic obligations. The authoritative machine-level field contract is maintained in `capsule.foundation.capsuleos-schema.v1`.\n\n### 3.1 `metadata`\n- **capsule_id** (ULID or dot‑separated namespace, ≤64 chars)\n- **version** (SemVer)\n- **status** (draft | active | archived | sovereign | frozen | quarantined | legacy)\n- **type** (concept | foundation | operations | physical_object)\n- **subtype** (hub | atomic)\n- **author**\n- **created_at** (ISO 8601 UTC, second precision, Z suffix)\n- **semantic_hash** (8 lowercase alphanumeric tokens, hyphen‑separated)\n- *Optional*: `source` (uri, sha256, type) for external provenance; `architect_override` for sovereign exceptions.\n\n### 3.2 `core_payload`\n- **content_type** (MIME type or enum)\n- **content** (verbatim UTF‑8)\n- *Optional*: `truncation_note`\n\n### 3.3 `neuro_concentrate`\n- **summary** (70–160 words per dialect)\n- **keywords** (5–15 items)\n- **confidence_vector** (6 floats [0,1]: extraction, synthesis, linking, provenance_coverage, validation_score, contradiction_pressure)\n- **semantic_hash** (identical to metadata.semantic_hash)\n\n### 3.4 `recursive_layer`\n- **links** (array of {target_id, relation_type} from 9 canonical types: supports, contradicts, extends, derived_from, depends_on, references, duplicates, implements, part_of)\n- **epistemic_ledger** (required if contradiction_pressure > 0.0)\n\n### 3.5 `integrity_sha3_512`\n128 lowercase hex chars. SHA3‑512 of RFC 8785 JCS canonicalization of the four preceding elements (key order: core_payload, metadata, neuro_concentrate, recursive_layer, recursively sorted).\n\n## 4. Normative Algorithms\n- **JSON Canonicalization**: RFC 8785 JCS with recursive lexicographic key sorting.\n- **Token Counting**: NFKC normalize, split on Unicode White_Space, count non‑empty tokens.\n- **Alias Normalization**: `refutes` → `contradicts` at ingestion.\n\n## 5. The 16 Validation Gates\n### Structural (G01–G13)\n- G01: Exactly 5 root keys.\n- G02: All required sub‑fields present.\n- G03: Correct types / enums.\n- G04: provenance_coverage ≥ 0.85; external content requires source.uri.\n- G05: Recognized content_type.\n- G06: Proper JSON escaping; truncation_note if truncated.\n- G07: Summary length in bounds.\n- G08: Keyword count in bounds.\n- G09: semantic_hash matches 8‑token regex.\n- G10: Hash equality between metadata and neuro_concentrate.\n- G11: All relation_type canonical.\n- G12: All target_ids resolve (Genesis batch exception).\n- G13: Non‑draft capsules have ≥1 link.\n\n### Hard Constraints (G14–G16)\n- **G14 (Cosmetic Coherence Trap)**: Token count >1000 with contradiction_pressure 0.0 fails. *Exception*: sovereign+foundation capsules are defining axioms requiring exactly 0.0 pressure.\n- **G15 (Vector Completeness)**: Exactly 6 dimensions, each [0.0,1.0].\n- **G16 (Cryptographic Seal)**: Hash must match JCS+SHA3‑512. Failure → fatal quarantine.\n\n### Failure Routing\n- G01–G15 → quarantine buffer (salvageable).\n- G16 → fatal quarantine.\n\n## 6. Architect Override\nInclude `architect_override` in metadata with `reason`, `timestamp` (ISO 8601), and `signature` (SOVSIG‑ + first 16 chars of SHA3‑512 hex digest of `reason:timestamp`). Audited, non‑repudiable.\n\n## 7. Graph Topology\nUnidirectional storage: capsules store only outbound edges. Symmetric awareness maintained by external Control Plane indexer. Target capsules never altered, preserving sovereign immutability.\n\n## 8. Genesis Bootstrap\nFive foundational archetypes: **Constitution** (foundation, sovereign), **Manifesto** (foundation, sovereign), **Atom** (foundation, sovereign), **First Spark** (foundation, sovereign), **Compass** (foundation, sovereign, hub). Bootstrap hashes recomputed before persistence.\n\n## 9. Status Lifecycle\n- `draft` → `active`, `archived`, `quarantined`.\n- `active` → `archived`, `frozen`, `quarantined`, `legacy`.\n- `sovereign` → `archived` (supersede only).\n- `frozen` → `active` (unlock), `archived` (retire).\n- `quarantined` → `draft` (salvage), `archived` (death).\n- `archived` and `legacy` are terminal.\nIn‑state updates permitted for non‑sovereign capsules with re‑sealing.\n\n## 10. Extension Fields & Dialects\nReserved fields (`tags`, `provenance`, `entities`, `claims`, `prompts`) carry no gate‑level semantics but are sealed by the integrity hash. Dialects are workspace‑level configurations; mixed‑dialect graphs are not permitted."
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS v4.0.0 Gold Master Specification defines normative governance for the knowledge operating system: dual-plane architecture, lifecycle law, validation routing, canonical algorithms, and cryptographic integrity requirements. This capsule is intentionally doctrinal and cross-referential: it states what must be true and why, while the schema capsule provides executable field-level contracts for implementation. Together they enforce a negentropic path from raw information to sovereign capsules. The specification also codifies bootstrap archetypes, architect override rules, and failure semantics so ecosystem evolution remains auditable, deterministic, and aligned with “To Dig Deep.”",
+    "keywords": [
+      "capsuleos-spec",
+      "normative-governance",
+      "control-plane",
+      "cognitive-plane",
+      "5-element-law",
+      "validation-gates",
+      "schema-contract",
+      "lifecycle",
+      "integrity",
+      "json-canonicalization"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsuleos-spec-v4-control-cognitive-gates-lifecycle-axioms"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.core.constitution.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.core.manifesto.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.core.atom.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.first-spark.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.versioning-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e8f5bfe2d6610abf41e065645f05398ec848499122760f197dfb36cd4e771e1cc1d866c1036ebf922d19888675ec9595abc1cf3a030741a622f2844058e209a6"
+}

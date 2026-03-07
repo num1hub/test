@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.concept.lidar-scanning.v1",
+    "version": "1.1.0",
+    "status": "active",
+    "type": "concept",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "lidar-scanning-roomplan-geometry-capture-calibration-modeling-tilesims",
+    "source": {
+      "uri": "internal://capsule.project.tilesims.v1",
+      "type": "internal_derivation"
+    },
+    "name": "LiDAR Scanning",
+    "priority": "medium",
+    "progress": 26,
+    "estimatedHours": 120,
+    "actualHours": 35,
+    "dueDate": "2026-08-25",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# LiDAR Scanning Concept for TileSims\n\n## 1. Goal\nDefine a scanning flow that captures room geometry quickly while preserving precision for tile planning and material estimates.\n\n## 2. Method\nUse RoomPlan output as baseline geometry, then apply user calibration points to reduce drift on critical surfaces.\n\n## 3. Output\nProduce a normalized model with surface segmentation and uncertainty metadata ready for downstream design algorithms.\n\n## 4. Open Question\nHow should scan uncertainty propagate into layout and cost recommendations?"
+  },
+  "neuro_concentrate": {
+    "summary": "This active concept capsule frames LiDAR scanning as the geometry acquisition layer for TileSims. It proposes rapid RoomPlan capture followed by calibration points on high impact surfaces to improve dimensional reliability. The concept requires normalized output that downstream layout systems can consume directly, including segmentation and uncertainty metadata. It also identifies a key unresolved problem: how measurement confidence should influence algorithmic layout quality and pricing guidance in a way that remains transparent and actionable for both professionals and homeowners.",
+    "keywords": [
+      "concept",
+      "lidar",
+      "roomplan",
+      "geometry-capture",
+      "calibration",
+      "uncertainty-modeling",
+      "tilesims",
+      "spatial-ingestion",
+      "surface-segmentation"
+    ],
+    "confidence_vector": {
+      "extraction": 0.93,
+      "synthesis": 0.91,
+      "linking": 0.88,
+      "provenance_coverage": 0.92,
+      "validation_score": 0.9,
+      "contradiction_pressure": 0.18
+    },
+    "semantic_hash": "lidar-scanning-roomplan-geometry-capture-calibration-modeling-tilesims"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.type-physical-object.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a3c02804287758880915a30790f22f7a4554c783ea258971789a4453afec3b96acb61e7cae4c8a8f51651c69eb0b85b44b25d2c5e707f8fe866b82b806af2b64"
+}

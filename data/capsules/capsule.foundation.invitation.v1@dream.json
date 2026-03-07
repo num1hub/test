@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.invitation.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T18:43:16.521Z",
+    "name": "Invitation",
+    "semantic_hash": "capsule-foundation-invitation-v1-onboarding-team-project-access",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Invitation\n\n## 1. Definition and Essence\nInvitation defines secure participation onboarding into teams and projects. It captures inviter authority, recipient identity claims, scope of access, expiry semantics, and acceptance outcomes for auditable collaboration.\n\n## 2. Core Attributes\n- `inviter_id` profile issuing the invitation\n- `recipient_handle` email or identity reference\n- `scope` team, project, or role-specific access grant\n- `expires_at` validity boundary for acceptance\n- `state` pending, accepted, declined, revoked\n\n## 3. Lifecycle\nInvitations are issued by authorized actors, validated against role and permission policy, accepted or declined by recipients, and preserved for compliance and audit reconstruction.\n\n## 4. Integration\n- **Team:** primary recipient container for membership.\n- **Role/Permission:** determines access granted upon acceptance.\n- **Profile:** resolves recipient identity and ownership.\n- **Project:** enables scoped contributor onboarding.\n\n## 5. Philosophical Alignment\nInvitation capsules align with To Dig Deep by making trust boundaries explicit and auditable during collaboration growth.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Invitation in the Dream branch describes a more deliberate onboarding contract for multi-actor collaboration. It imagines staged acceptance, richer trust negotiation, clearer temporary scopes, and better integration with role, team, and project policy before a collaborator becomes an active participant in the graph. The capsule matters because scaling collaboration safely requires more than sending access links. Dream therefore preserves Invitation as a future membership-governance instrument rather than only the current onboarding artifact.",
+    "keywords": [
+      "invitation",
+      "onboarding-artifact",
+      "trust-boundary",
+      "membership-history",
+      "role-assignment",
+      "expiry",
+      "team",
+      "project",
+      "access-review"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-invitation-v1-onboarding-team-project-access"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.role.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b2998bddcdb605b91589326551ddb4b8e342aca341aa97b098d911824585482aff5ec1e079186225ac23096e472c60c4a576f8b1e4065fcb924becc744eee630"
+}

@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.profile.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Profile",
+    "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Profile\n\n## 1. Definition and Essence\nProfile defines the canonical identity envelope for a workspace actor, including stable identifiers, public metadata, and personalization anchors. It is the reference node for user-linked activity, ownership, and personalization across modules.\n\n## 2. Core Attributes\n- `user_id` sovereign principal identifier\n- `display_name` human-readable profile label\n- `public_keys` cryptographic identity materials\n- `avatar_and_theme` user-facing personalization settings\n- `contact_handles` optional communication channels\n\n## 3. Lifecycle\nProfiles are created during onboarding, updated as identity and preferences evolve, and archived or transferred under governance rules without breaking historical provenance links.\n\n## 4. Integration\n- **Workspace:** core identity surface for authenticated interaction.\n- **User Preferences:** derives behavioral defaults and constraints.\n- **Team and Role:** associates actors with collaborative structures.\n- **Audit/Activity:** anchors actor attribution for mutations.\n\n## 5. Philosophical Alignment\nProfile capsules align with To Dig Deep by grounding every action in accountable identity rather than anonymous mutation.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Profile is the durable identity envelope for a workspace actor. It matters because actions, authorship, preferences, and access decisions all become harder to trust when the system lacks a stable identity anchor. This capsule holds the continuity layer that lets the vault connect one person or principal across projects, teams, activity history, and personalization behavior without collapsing identity into transient session state. By modeling profiles explicitly, N1Hub preserves accountable authorship, portable user context, and a clean boundary between who someone is, what they can do, and how the workspace adapts around them.",
+    "keywords": [
+      "profile",
+      "identity-envelope",
+      "authorship",
+      "workspace-actor",
+      "personalization",
+      "portable-context",
+      "accountability",
+      "principal",
+      "user-boundary"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "352be79db3093e10db16d768cd3df313537f68a557f85d7c1078d630a58812c8e73bea6e7939d71866242edfa20be1fdac22bf96e6d4cd483056875ad6887741"
+}

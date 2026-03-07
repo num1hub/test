@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.siaf-governance.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:56:44.830Z",
+    "updated_at": "2026-03-06T18:43:17.010Z",
+    "name": "SIAF Governance",
+    "semantic_hash": "capsule-foundation-siaf-governance-v1-fund-voting-allocation",
+    "priority": "medium",
+    "progress": 12,
+    "estimatedHours": 280,
+    "actualHours": 42,
+    "dueDate": "2027-01-15",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# SIAF Governance\n\n## 1. Definition and Essence\nSIAF Governance defines policy and voting mechanics for the sovereign intellectual asset fund, including proposal flow, allocation criteria, and accountability requirements for ecosystem capital deployment.\n\n## 2. Core Attributes\n- `proposal_model` structure for funding and policy proposals\n- `voting_rules` quorum, weighting, and decision thresholds\n- `allocation_policy` capital distribution and risk controls\n- `reporting_requirements` transparency obligations after allocation\n- `intervention_process` emergency governance pathways\n\n## 3. Lifecycle\nGovernance proposals are submitted, reviewed, voted, executed, and audited, with policy revisions encoded as capsule updates for transparent institutional memory.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** voting and treasury interaction substrate.\n- **Marketplace and Royalty Engine:** economic policy impact zones.\n- **Sovereign Intellectual Capital:** strategic asset stewardship.\n- **Parliament:** governance logic alignment for epistemic disputes.\n\n## 5. Philosophical Alignment\nSIAF governance applies To Dig Deep institutionally by coupling capital decisions with explicit rules, evidence, and accountability.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "SIAF Governance in the Dream branch describes a more mature institutional layer for treasury and capital allocation. It imagines clearer proposal pathways, stronger intervention rules, better transparency artifacts, and a more robust relationship between funding decisions and long-horizon ecosystem strategy. The capsule matters because governance quality determines whether capital compounds wisdom or merely noise. Dream therefore preserves SIAF as a future decision system for economic stewardship, not just a symbolic fund wrapper.",
+    "keywords": [
+      "siaf-governance",
+      "capital-allocation",
+      "proposals",
+      "voting",
+      "treasury",
+      "tokenomics",
+      "transparency",
+      "asset-fund",
+      "policy-layer"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-siaf-governance-v1-fund-voting-allocation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.royalty-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-intellectual-capital.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "348955e8855d8f797ebc355090f71e90f0ed870b48f48d6297ae6ed6ea0690e6e8ff30dda94067ee3b5c4b55b55061f20254b34433b7777fc46fc22410ab7cc0"
+}

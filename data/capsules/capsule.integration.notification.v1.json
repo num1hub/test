@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.integration.notification.v1",
+    "version": "1.1.0",
+    "status": "active",
+    "type": "operations",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:03:03.522Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Notification Integration",
+    "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery",
+    "source": {
+      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
+      "sha256": "71155031e3e8f441f023dbd23aa498655a91f23e23513d30c6b3f1b6ef9bbc01",
+      "type": "architect_prompt"
+    },
+    "priority": "medium",
+    "progress": 47,
+    "estimatedHours": 118,
+    "actualHours": 51,
+    "dueDate": "2026-06-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Notification Integration\n\n## 1. Definition and Essence\nNotification Integration defines external delivery connectors for channels such as email, push, and Telegram. It governs payload adaptation, delivery guarantees, rate limits, and acknowledgment handling.\n\n## 2. Core Attributes\n- `channel_provider` smtp, push, telegram, webhook\n- `delivery_contract` payload templates and action links\n- `rate_limits` channel throughput and burst constraints\n- `ack_model` confirmation and readback semantics\n- `failure_policy` retries, dead-letter, and escalation behavior\n\n## 3. Lifecycle\nIntegrations are configured with credentials, validated through test sends, used by reminder and assistant workflows, and continuously monitored for delivery health.\n\n## 4. Integration\n- **Notification Module:** core producer of outbound events.\n- **Reminder/Tracker:** scheduling and urgency context.\n- **API Gateway:** secure egress and callback management.\n- **Security:** secret handling and abuse protection.\n\n## 5. Philosophical Alignment\nNotification integration advances To Dig Deep by making timely signals reliable across channels users actually trust.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Notification Integration is the outbound connector layer that carries internal graph signals into trusted external channels such as email, push, Telegram, or webhooks. It matters because a notification system is only as useful as its delivery path, and those paths come with rate limits, credentials, retries, and acknowledgment semantics of their own. By representing the connector boundary explicitly, the vault can govern payload adaptation, failure handling, and secret-aware operations without burying them in opaque code. Notification Integration is therefore the operational bridge between internal urgency and real-world delivery reliability.",
+    "keywords": [
+      "notification-integration",
+      "email",
+      "push",
+      "telegram",
+      "delivery",
+      "tracker",
+      "reminder"
+    ],
+    "confidence_vector": {
+      "extraction": 0.9,
+      "synthesis": 0.91,
+      "linking": 0.9,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.2
+    },
+    "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.api-gateway.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2d62d713ba8381150f210f072d88638612409f54e7fe63aa55c841b6e19082b5b53a253674fc9e611127feb95badc188902b4470184c8acb15281a2535806d99"
+}

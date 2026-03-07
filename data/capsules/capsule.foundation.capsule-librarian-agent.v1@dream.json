@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-librarian-agent.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:42:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "Capsule Librarian Agent",
+    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map",
+    "priority": "high",
+    "progress": 42,
+    "estimatedHours": 270,
+    "actualHours": 46,
+    "dueDate": "2026-10-18",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Librarian Agent\n\n## Dream Direction\nIn the Dream branch, Capsule Librarian Agent grows into a richer vault-memory guide with stronger retrieval, branch literacy, archive intelligence, and graph-neighborhood explanation for both users and other agents.\n\n## Future Potential\n- clearer graph-neighborhood retrieval and ranking\n- stronger duplicate and overlap detection\n- better guidance across Real, Dream, and archive contexts\n- deeper support for chat grounding and cross-agent memory\n\n## Why It Matters\nDream preserves Librarian as the role that lets a large capsule vault remain navigable instead of turning into sovereign fog."
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Librarian Agent in the Dream branch represents a more capable retrieval and vault-literacy layer for N1Hub. It aims toward stronger graph-neighborhood explanation, better archive awareness, and more reliable distinction between Real, Dream, and historical material. The capsule matters because a growing sovereign library needs a first-class guide to remain usable. Dream therefore keeps vault literacy visible as a named intelligence role rather than an accidental side effect of search.",
+    "keywords": [
+      "capsule-librarian-agent",
+      "dream-branch",
+      "retrieval",
+      "vault-navigation",
+      "real-branch",
+      "dream-branch",
+      "archive",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.ai.conversation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "052d0367dcac1d984cee407f750c2ce52dfd714dcc977a76a2611a73b1b261be622433a3c8e90b2313cee2ec50d7190d1291387a44a9f74ae0b7596b377ea3a5"
+}

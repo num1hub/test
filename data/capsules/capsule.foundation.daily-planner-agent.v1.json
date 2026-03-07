@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.daily-planner-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:28:00Z",
+    "updated_at": "2026-03-06T23:28:00Z",
+    "name": "Daily Planner Agent",
+    "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution",
+    "source": {
+      "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 140,
+    "actualHours": 34,
+    "dueDate": "2026-08-22",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Daily Planner Agent\n\n## 1. Definition and Essence\nDaily Planner Agent is the near-horizon planning worker of N1Hub. It translates goals, tasks, calendar pressure, reminder signals, and current project reality into a practical plan for `today` and `tomorrow` without losing alignment with the broader roadmap.\n\n## 2. Core Responsibilities\n- `today_tomorrow_planning` shapes the immediate execution window into focused next actions.\n- `focus_selection` chooses what deserves attention now and what should explicitly wait.\n- `capacity_estimation` compares task load against realistic time and energy limits.\n- `deadline_alignment` respects tracker urgency, reminder pressure, and risk signals.\n- `handoff_to_user` returns a plan that the Personal AI Assistant can explain conversationally.\n\n## 3. N1Hub Role\nIn N1Hub, Daily Planner Agent is the pragmatic short-horizon planner. It prevents the assistant from giving vague motivational advice by grounding immediate planning in actual graph, task, and schedule state.\n\n## 4. Philosophical Alignment\nDaily Planner Agent serves To Dig Deep by turning long-term intent into disciplined present-tense action instead of leaving strategy disconnected from the day.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Daily Planner Agent is the short-horizon planning specialist of N1Hub. It builds actionable plans for today and tomorrow from goals, tasks, tracker urgency, reminder pressure, and realistic capacity instead of letting the assistant improvise vague schedule advice. The role matters because users live in days, not in abstract roadmaps. By making daily planning an explicit agent, the vault gets a dependable bridge between long-horizon structure and immediate execution discipline daily.",
+    "keywords": [
+      "daily-planner-agent",
+      "today-plan",
+      "tomorrow-plan",
+      "planner",
+      "tracker",
+      "reminders",
+      "risk-signals",
+      "personal-ai-assistant",
+      "workspace",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.conversation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.suggestion.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d16d7f40431402085883c850eb02f102037854c79bb367146fca0ca7e0c7971202c516a34067bea70acd3ef0d06c7252b355f63b5f8b35c90b7a77ad0685e957"
+}

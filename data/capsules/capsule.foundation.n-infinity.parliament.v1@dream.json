@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n-infinity.parliament.v1",
+    "version": "1.2.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance",
+    "updated_at": "2026-03-06T18:43:16.619Z",
+    "name": "N-Infinity Parliament",
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 250,
+    "actualHours": 52,
+    "dueDate": "2026-10-05",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Parliament Agent: The Epistemic Arbitrator\n\n## 1. Definition\nThe **Parliament** is an elite, high-order background agent operating within the N-Infinity swarm of the N1Hub ecosystem. Serving as the \"supreme court\" of the Cognitive Plane, the Parliament's primary mandate is epistemic arbitration: it identifies, analyzes, and resolves logical conflicts and contradictory claims embedded within the knowledge graph.\n\n## 2. Core Functions\n- **Contradiction Monitoring**: The Parliament continuously monitors the `contradiction_pressure` dimension of all capsules. It begins analyzing capsules when pressure elevates (e.g., > 0.5) and forces immediate systemic intervention when the pressure breaches critical thresholds (e.g., > 0.85).\n- **Epistemic Arbitration**: When a conflict is detected, the Parliament traces the provenance of the competing capsules. It employs advanced LLM reasoning—often convening multiple sub-agents to simulate a debate—to verify facts against foundational axioms or external deep-searches (via DeepMine).\n- **Resolution and Synthesis**: If the conflict is a matter of nuance, the Parliament generates a new synthesis capsule that resolves the tension, subsequently updating the `recursive_layer` of the original capsules.\n- **Quarantine Execution**: If the contradiction is unresolvable, maliciously hallucinatory, or poses a systemic risk to graph negentropy, the Parliament executes its executive authority to move the offending capsule(s) to the `quarantined` status, flagging them in the `epistemic_ledger` for human architectural review.\n\n## 3. Interaction with the Swarm\nThe Parliament acts as the systemic validator for the **Weaver** agent. While the Weaver generates probabilistic \"soft links\" (e.g., `might_relate`), the Parliament evaluates the logic of these connections. Through rigorous analysis, it can formally upgrade a soft link into a canonical hard link (such as `supports` or `extends`) or decisively discard it, permanently elevating the structural density of the ecosystem."
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Parliament in the Dream branch describes a more capable deliberation layer for contradiction handling. It pushes toward richer evidence review, clearer arbitration outcomes, and stronger governance escalation when disagreement cannot be resolved through ordinary synthesis alone. The agent matters because future graph scale will multiply conflict, not eliminate it. Dream therefore preserves Parliament as a more mature epistemic institution that can keep disagreement legible, bounded, and productive across the ecosystem.",
+    "keywords": [
+      "parliament-agent",
+      "n-infinity",
+      "epistemic-arbitration",
+      "contradiction-pressure",
+      "conflict-resolution",
+      "quarantine",
+      "synthesis",
+      "capsuleos",
+      "n1hub",
+      "background-agent"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.confidence-vector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-quarantined.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.epistemic-ledger.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.architect-override.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "ea752b7580e1c4aec5c63729fc504813c90ec29b2808fe101baa4ca402a867299e9b6b28fff341e95b4ed2cffaf232e020f3f421e71757bd903aa9aa6b472fc4"
+}

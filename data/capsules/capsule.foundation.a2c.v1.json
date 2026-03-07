@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "A2C Pipeline",
+    "priority": "high",
+    "progress": 63,
+    "estimatedHours": 310,
+    "actualHours": 190,
+    "dueDate": "2026-07-18",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Essence\nA2C is the industrial-grade pipeline of the N1Hub ecosystem, acting as the \"Demon of Structure.\" It transforms chaotic, entropic raw data—files, texts, LiDAR scans, voice notes, and LLM outputs—into pure, cryptographically sealed, and semantically linked capsules governed by the CapsuleOS 5-Element Law.\n\n## 2. The 9-Step Pipeline\nA2C operates through a deterministic, high-rigor factory floor:\n1. **Ingest**: Receives raw material from users or DeepMine.\n2. **Normalize**: Cleanses noise, formatting artifacts, and irrelevant boilerplate.\n3. **Segment**: Fractures the payload into atomic, digestible chunks.\n4. **Extract (Paranoid Mode)**: Employs targeted AI to ruthlessly isolate factual kernels and core logic, discarding unverified claims.\n5. **Synthesize (Shadow Integration)**: Resolves contradictions and fuses complementary insights into a cohesive whole.\n6. **Link**: Automatically generates typed topological edges (e.g., `supports`, `extends`) to existing capsules in the graph.\n7. **Hash**: Applies RFC 8785 JSON Canonicalization and computes the provisional SHA3-512 seal.\n8. **Validate**: Forces the candidate through the 16 Quality Gates.\n9. **Emit & Seal**: Commits the finalized, sovereign capsule into the CapsuleOS Cognitive Plane or diverts it to the Quarantine Buffer if validation fails.\n\n## 3. Synergy\nA2C relies on **DeepMine** to supply high-grade raw ore from top LLMs. Once A2C mints a capsule, it is deposited into **CapsuleOS**, where **N-Infinity** background agents continuously weave, garden, and evolve the newly structured knowledge. The refinery is now complemented by explicit quality and integration roles: Validation Gatekeeper interprets acceptance risk, while Vault Update Agent helps route refined changes into Dream, Real, or quarantine with branch discipline. A2C is the definitive bridge \"Between Zero and One\"—the mechanism that materializes the \"To Dig Deep\" philosophy."
+  },
+  "neuro_concentrate": {
+    "summary": "A2C (Anything-to-Capsules) is the core refinement engine of the N1Hub ecosystem, colloquially known as the Demon of Structure. It is an industrial-grade, 9-step processing pipeline designed to ingest chaotic raw data—such as documents, LLM outputs from DeepMine, and physical scans—and transmute it into pristine, cryptographically sealed capsules. By executing a rigorous sequence of normalization, paranoid-mode extraction, synthesis, and strict validation against the 16 Quality Gates, A2C ensures that only coherent, verified intellectual capital enters the CapsuleOS graph. It embodies the 'To Dig Deep' philosophy by rejecting surface-level noise and extracting fundamental truths, serving as the critical bridge that converts entropic information into sovereign knowledge assets ready for N-Infinity's evolutionary agents.",
+    "keywords": [
+      "a2c",
+      "anything-to-capsules",
+      "pipeline",
+      "refinery",
+      "data-ingestion",
+      "ai-extraction",
+      "capsuleos",
+      "deepmine",
+      "demon-of-structure"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-normalize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-segment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-extract.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-synthesize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-link.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-hash.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-emit.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a7881a798ce69888caaecd313d177bde78d4837e12518a13bbe411bf37a75240244370ac9cba434bd14e74871f54de4ec8d45b3b272de72d244e3f503d3bcfc1"
+}

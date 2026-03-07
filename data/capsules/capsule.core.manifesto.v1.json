@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.core.manifesto.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "core-manifesto-to-dig-deep-negentropy-mission-principles",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos-spec.v1",
+      "type": "internal_derivation"
+    },
+    "name": "Manifesto",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Core Manifesto: Deep Synthesis Ethos\n\n## 1. Mission\nThe manifesto states why CapsuleOS exists: to convert chaotic signal into reliable and compounding knowledge assets.\n\n## 2. Commitments\n- Depth over superficial outputs.\n- Structural rigor over ad hoc shortcuts.\n- Provenance over unsupported claims.\n- Compounding intelligence over disposable text.\n\n## 3. Execution\nA2C, validation gates, and N-Infinity arbitration operationalize this ethos and keep the graph negentropic as it scales.\n\n## 4. Expected Outcome\nA trustworthy ecosystem where ideas become auditable, sovereign, and economically meaningful knowledge objects."
+  },
+  "neuro_concentrate": {
+    "summary": "Core Manifesto states why CapsuleOS should exist and what standards of depth it refuses to abandon in exchange for speed or convenience. It translates philosophy into explicit commitments: rigor over theater, provenance over unsupported fluency, and compounding knowledge over disposable output. The capsule matters because large systems do not drift only through broken code; they also drift through softened intent. Manifesto is therefore the normative counterweight to shallow optimization. It keeps execution aligned with purpose, ensuring that A2C, validation, and agent behavior continue to serve epistemic seriousness instead of merely producing impressive-looking artifacts.",
+    "keywords": [
+      "core",
+      "manifesto",
+      "purpose",
+      "epistemic-rigor",
+      "provenance",
+      "a2c",
+      "validation",
+      "agent-behavior",
+      "anti-drift"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "core-manifesto-to-dig-deep-negentropy-mission-principles"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.core.constitution.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e4fd65d6145c8fca0c405450bae0568cf80deda71aba00b2ccd043eb21076fb0e6bddc7059c822110de4f95e012e4b09c88c1e43aa9861653510841aecda3631"
+}

@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.key-agents.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:50:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "Key Agents",
+    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
+    "priority": "high",
+    "progress": 43,
+    "estimatedHours": 340,
+    "actualHours": 72,
+    "dueDate": "2026-10-28",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about \"AI features.\"\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Key Agents in the Dream branch captures a more mature operating map for the N1Hub intelligence system. It aims toward clearer role boundaries, better orchestration between agent clusters, and more legible ownership of user-facing, mining, planning, maintenance, and review work. The capsule matters because the system is becoming a routed swarm rather than a single assistant surface. Dream therefore preserves the future command map of the agent ecosystem, not just a static list of roles.",
+    "keywords": [
+      "key-agents",
+      "dream-branch",
+      "agent-hub",
+      "swarm-architecture",
+      "personal-ai-assistant",
+      "deepmine",
+      "n-infinity",
+      "planning",
+      "review",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.gardener.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.innovator.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "ebe5134c786beb1fd304a247d84802377d1347d7a1cdd059084a63ae5d7857c6f5f39636a4a193d489a4a5796fcd7c93b4ce0a14b00b52a4dcda48e65960d1b8"
+}

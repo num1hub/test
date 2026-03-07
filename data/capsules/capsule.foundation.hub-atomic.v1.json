@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.hub-atomic.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:00Z",
+    "semantic_hash": "hub-atomic-paradigm-knowledge-organization-graph-gold-core",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Hub / Atomic Topology",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The Hub & Atomic Paradigm: Scaling Sovereign Knowledge\n\n## 1. Definition and Essence\nThe Hub/Atomic Paradigm is the topological framework of CapsuleOS, classifying every capsule into one of two systemic subtypes: `atomic` or `hub`. This duality eliminates the rigid fragility of traditional folder hierarchies, replacing them with a multidimensional, scalable, and computationally efficient knowledge graph.\n\n## 2. Core Principles / Architecture\n\n### The Atomic Capsule\n- **Nature**: The elemental, irreducible quantum of knowledge.\n- **Function**: Atomic capsules are content-heavy. Their primary value resides in their `core_payload` (e.g., a specific task, a single document, an individual person's profile, or a discrete physical wall in TileSims).\n- **Topology**: They form the \"leaves\" of the ecosystem. They cannot be meaningfully fractured further without destroying their semantic value.\n\n### The Hub Capsule\n- **Nature**: The aggregating nexus and structural container.\n- **Function**: Hubs are relation-heavy. Their true power lies in their `recursive_layer`, where they marshal dense arrays of typed links pointing to constituent atoms and sub-hubs.\n- **Topology**: Hubs act as gravitational wells within the graph (e.g., a Project Hub tying together task atoms, people atoms, and discussion atoms). Hubs can nest infinitely within other Hubs, allowing fractal organizational scaling.\n\n## 3. Interactions\nThis paradigm introduces **Polymorphic Membership**: an atomic capsule can simultaneously belong to multiple Hubs without data duplication. The A2C pipeline intelligently mints both atoms and coordinating hubs during extraction. The N-Infinity agent swarm relies on this distinction: Weavers cluster atoms to propose new Hubs, while Gardeners prune empty Hubs to maintain graph ecology.\n\n## 4. Philosophical Alignment\nIn the pursuit to \"Dig Deep,\" the Hub/Atomic Paradigm prevents cognitive overload. It organizes the chaotic extraction of DeepMine into an elegant geometry, guiding users and AI seamlessly from macro-vision (Hubs) to micro-truth (Atoms)."
+  },
+  "neuro_concentrate": {
+    "summary": "The Hub and Atomic Paradigm defines the fundamental topological organization of the CapsuleOS knowledge graph. By strictly bifurcating capsules into 'atomic' (irreducible units of content like tasks or notes) and 'hub' (aggregating containers defined by their relational links, like projects or teams), the ecosystem circumvents the limitations of rigid folder hierarchies. This allows for polymorphic membership, where a single atom can belong to multiple hubs without duplication, and infinite fractal nesting. Crucial for N-Infinity swarm navigation and A2C data structuring, this paradigm ensures scalable, negentropic organization across the N1Hub digital continent.",
+    "keywords": [
+      "hub-capsule",
+      "atomic-capsule",
+      "graph-topology",
+      "knowledge-organization",
+      "polymorphic-membership",
+      "fractal-scaling",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "hub-atomic-paradigm-knowledge-organization-graph-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-projects.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "5a9b18aa243f34149052f50164519d3acb67b990acc9e68e05c758214104868fdc38f5e36e2fd11b814ef018d65c7fa0a7f5394f52f4e845a86d74470c5c070a"
+}

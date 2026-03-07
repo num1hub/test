@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.integration.calendar.v1",
+    "version": "1.1.0",
+    "status": "active",
+    "type": "operations",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:03:03.522Z",
+    "updated_at": "2026-03-06T18:43:17.282Z",
+    "name": "Calendar Integration",
+    "semantic_hash": "capsule-integration-calendar-v1-google-ical-sync-events",
+    "source": {
+      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
+      "sha256": "32ef1a6e5f38cc42c8df2d09da877c99493bd28d99c5ff88b1b7d3675f0f3c47",
+      "type": "architect_prompt"
+    },
+    "priority": "medium",
+    "progress": 33,
+    "estimatedHours": 190,
+    "actualHours": 48,
+    "dueDate": "2026-08-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Calendar Integration\n\n## 1. Definition and Essence\nCalendar Integration specifies synchronization semantics with external calendar providers such as Google Calendar and iCal endpoints, including event mapping, conflict handling, and two-way update safety.\n\n## 2. Core Attributes\n- `provider` google, outlook, ical, custom bridge\n- `sync_direction` import, export, bidirectional\n- `event_mapping` field correspondence with internal capsules\n- `conflict_policy` merge strategy on concurrent updates\n- `sync_health` status and error telemetry\n\n## 3. Lifecycle\nConnector instances are authorized, synchronized on schedule or event trigger, monitored for drift, and revalidated when schema or provider APIs change.\n\n## 4. Integration\n- **Calendar Module:** primary consumer and source of events.\n- **Planner/Tracker:** event generation and due-date alignment.\n- **API Gateway:** transport and auth boundary.\n- **User Preferences:** timezone and locale consistency.\n\n## 5. Philosophical Alignment\nCalendar integration supports To Dig Deep by keeping temporal commitments coherent across internal and external systems.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Calendar Integration in the Dream branch represents a more intelligent bridge between internal planning reality and external calendar ecosystems. It pushes toward cleaner sync semantics, richer conflict policy, better branch awareness, and stronger protection against external systems quietly rewriting the platform’s temporal truth. The capsule matters because calendar sync becomes dangerous when convenience outruns governance. Dream therefore preserves Calendar Integration as a future connector discipline where interoperability stays useful without compromising local sovereignty.",
+    "keywords": [
+      "calendar-integration",
+      "google-calendar",
+      "ical",
+      "sync",
+      "events",
+      "planner",
+      "tracker"
+    ],
+    "confidence_vector": {
+      "extraction": 0.9,
+      "synthesis": 0.91,
+      "linking": 0.9,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.2
+    },
+    "semantic_hash": "capsule-integration-calendar-v1-google-ical-sync-events"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.api-gateway.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d646d762a35b89584eebe65a123b8f9a8d9a797291b77cb88675b54d8204c272073f46b41628a9744208bf563eaebd034d7532a0196f949997a63a4db9c44dec"
+}

@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.person.egor-n1.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "egor-n1-identity-creator-founder-visionary-gold-core",
+    "updated_at": "2026-03-06T18:43:17.316Z",
+    "name": "Egor N1",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Identity Profile: Egor N1\n\n## 1. Primary Designation\nThis capsule establishes the sovereign digital identity of **Egor N1**, the principal creator, visionary founder, and Chief Mining Architect of the N1Hub ecosystem and the DeepMine corporate entity.\n\n## 2. Role and Vision\nEgor N1 operates at the absolute apex of the CapsuleOS hierarchy. He is the original architect of the \"To Dig Deep\" philosophy, driving the paradigm shift from entropic, file-based chaos toward the negentropic, cryptographically sealed reality of the 5-Element Law. His vision birthed the A2C pipeline, the N-Infinity agent swarm, and the concept of bridging physical reality via TileSims.\n\n## 3. Systemic Authority\nAs the founding node of the ecosystem, this identity capsule holds absolute cryptographic provenance over the Genesis Boot sequences of N1Hub. It serves as the primary anchor for all subsequent high-level access grants, architectural templates, and sovereign intellectual property minted within the Cognitive Plane."
+  },
+  "neuro_concentrate": {
+    "summary": "Egor N1 in the Dream branch represents not only the founder-origin of the graph, but the future strategic author node around which doctrine, direction, authorship, and stewardship continue to converge. It imagines clearer lineage between founder intent, delegated systems, institutional structures, and the broader knowledge economy the platform is trying to build. The capsule matters because founder identity becomes part of governance once the system outgrows its bootstrap phase. Dream therefore preserves Egor N1 as a future-facing provenance and stewardship anchor rather than only the human source of genesis.",
+    "keywords": [
+      "egor-n1",
+      "founder-identity",
+      "provenance-anchor",
+      "doctrinal-origin",
+      "genesis-access",
+      "project-lineage",
+      "intellectual-ownership",
+      "human-node",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "egor-n1-identity-creator-founder-visionary-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.access.egor-n1-n1hub-v0.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d875413e2c057b88255086cf6f83e1c96c67aaffdb2b6a6cbc150d2c0ef03320e2581c163506d76c8d9fbe6b52ed4c01a1ebe338aba2217bdf57e9427c0225c9"
+}

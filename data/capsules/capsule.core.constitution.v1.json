@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.core.constitution.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "core-constitution-capsuleos-laws-control-plane-sovereign-foundation",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos-spec.v1",
+      "type": "internal_derivation"
+    },
+    "name": "Constitution",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Core Constitution: CapsuleOS Foundational Law\n\n## 1. Purpose\nThis capsule codifies the constitutional layer of CapsuleOS: non-negotiable laws governing structure, trust, and provenance across N1Hub.\n\n## 2. Constitutional Clauses\n- Every capsule must follow the 5-Element structure exactly.\n- Canonical relation typing and resolvable links are mandatory.\n- Non-draft capsules must preserve deterministic integrity sealing.\n- Mutation of protected knowledge requires versioned lineage, never destructive overwrite.\n\n## 3. Enforcement\nValidation gates, schema constraints, and lifecycle rules enforce constitutional operation across the Control Plane and Cognitive Plane.\n\n## 4. Scope\nThis constitution anchors subordinate core capsules and serves as the legal reference for future extensions."
+  },
+  "neuro_concentrate": {
+    "summary": "Core Constitution is the non-negotiable law surface of CapsuleOS. It defines which structural, provenance, link, and integrity rules are absolute, and it clarifies that system growth must happen through versioned lineage rather than destructive mutation. The capsule matters because every validator, branch merge, and governance decision ultimately depends on one stable constitutional reference. Without that reference, architecture turns into local preference and trust degrades over time. Constitution therefore anchors the legal boundary of the graph, giving downstream runtime modules freedom to evolve only inside clearly defended systemic constraints.",
+    "keywords": [
+      "core",
+      "constitution",
+      "non-negotiable-law",
+      "governance",
+      "lineage",
+      "validation",
+      "trust-boundary",
+      "integrity",
+      "capsuleos"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "core-constitution-capsuleos-laws-control-plane-sovereign-foundation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.5-element-law.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.manifesto.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d843f7b011c90007bec02cc691d9a18522a6e20771cda4c776acf366b93f2e2ace8dc6849f0492439cb7a8af062918a05d1d20168d689331288e6abb8a02e922"
+}

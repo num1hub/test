@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.role.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T18:43:16.961Z",
+    "name": "Role",
+    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Role\n\n## 1. Definition and Essence\nRole defines named responsibility bundles such as owner, contributor, and investor. It specifies expected duties and default authority envelopes that can be instantiated by team and project governance policies.\n\n## 2. Core Attributes\n- `role_name` canonical identifier (owner, contributor, investor)\n- `responsibilities` expected duties and accountability scope\n- `default_permissions` baseline action rights\n- `scope` workspace, team, project applicability\n- `escalation_rules` conditions requiring higher authority\n\n## 3. Lifecycle\nRoles are defined in governance, assigned to profiles by teams or projects, revised when policy evolves, and versioned for historical access reconstruction.\n\n## 4. Integration\n- **Permission:** role definitions map to concrete capabilities.\n- **Team:** binds member identities to role sets.\n- **Project:** applies role policy to collaboration spaces.\n- **Invitation:** role scope included during onboarding.\n\n## 5. Philosophical Alignment\nRole capsules strengthen To Dig Deep by clarifying responsibility and reducing ambiguity in multi-actor execution.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Role in the Dream branch captures a more adaptive responsibility system for both humans and agents. It imagines clearer delegation patterns, better review obligations, stronger escalation paths, and more legible coordination between permissions, teams, invitations, and project authority than the current role model yet expresses. The capsule matters because large ecosystems fail when responsibility stays ambiguous even if permissions are technically correct. Dream therefore preserves Role as a future accountability lattice rather than only today’s reusable bundle of rights.",
+    "keywords": [
+      "role",
+      "responsibility-envelope",
+      "owner",
+      "contributor",
+      "reviewer",
+      "permissions-bundle",
+      "governance-vocabulary",
+      "assignment",
+      "accountability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "f2dac2b808ab4c1ab0f4cf0c953b9a32560fda259484c843a3a901d258dc72d6d984e4c51e1e51d43703cf637d7f3a8d8df49f412f9aa54e9b601f8dc9d1e93f"
+}

@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.testing.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:01:40.853Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Testing",
+    "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression",
+    "priority": "high",
+    "progress": 57,
+    "estimatedHours": 180,
+    "actualHours": 96,
+    "dueDate": "2026-06-30",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Testing\n\n## 1. Definition and Essence\nTesting defines quality assurance strategy for capsule schema conformance, graph integrity, module behavior, and release safety. It codifies test layers, coverage goals, and regression controls across the ecosystem.\n\n## 2. Core Attributes\n- `test_layers` unit, integration, component, e2e, load\n- `coverage_targets` required baseline for critical modules\n- `fixture_strategy` canonical sample capsule catalog\n- `regression_policy` release-blocking failure criteria\n- `quality_metrics` reliability and defect escape indicators\n\n## 3. Lifecycle\nTesting standards are revised alongside architecture changes, enforced in CI, and validated continuously through automated and targeted manual checks.\n\n## 4. Integration\n- **Validator:** schema and gate conformance checks.\n- **A2C and Workspace:** behavior and integration test targets.\n- **Hybrid Database:** consistency and recovery validation.\n- **Security:** includes adversarial and access-control tests.\n\n## 5. Philosophical Alignment\nTesting expresses To Dig Deep by challenging assumptions with repeatable evidence before knowledge or code is trusted.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Testing is the evidence discipline of the platform. It defines how the vault checks schema conformance, graph integrity, runtime behavior, regressions, and release readiness across modules rather than relying on intuition or one-off manual confidence. The capsule is intentionally broad because trust in CapsuleOS requires coordinated quality signals across validator logic, APIs, storage, UI flows, and security boundaries. In practice it anchors the expectation that knowledge and code are challenged before they are trusted, making reliability a governed subsystem instead of a hopeful side effect.",
+    "keywords": [
+      "testing",
+      "quality-assurance",
+      "schema-conformance",
+      "graph-integrity",
+      "regression",
+      "release-safety",
+      "validator",
+      "reliability",
+      "evidence-discipline"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-database.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "supports"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d62e664bcd2c06f78aaabc7b6af8f75501730d1531bea231563ffc19c8808e147285ed9429048c72806653bc39e9bd90e5313af50b77d726ce079abd6420a627"
+}

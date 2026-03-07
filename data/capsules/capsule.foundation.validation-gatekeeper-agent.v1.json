@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:46:00Z",
+    "updated_at": "2026-03-06T23:46:00Z",
+    "name": "Validation Gatekeeper Agent",
+    "semantic_hash": "validation-gatekeeper-agent-gates-quality-quarantine-acceptance-review",
+    "source": {
+      "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "critical",
+    "progress": 29,
+    "estimatedHours": 170,
+    "actualHours": 48,
+    "dueDate": "2026-08-26",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gatekeeper Agent\n\n## 1. Definition and Essence\nValidation Gatekeeper Agent is the acceptance-boundary worker of the N1Hub vault. It interprets gate results, classifies quality risk, blocks malformed or weak capsule changes from entering the graph, and routes failures toward remediation or quarantine rather than quiet compromise.\n\n## 2. Core Responsibilities\n- `gate_interpretation` reads validation evidence in a way other agents and operators can act on.\n- `accept_reject_decision` decides whether a candidate is ready, fixable, or unsafe.\n- `autofix_supervision` allows bounded repair without confusing repair with approval.\n- `quarantine_routing` ensures hard failures remain inspectable and recoverable.\n- `quality_feedback` sends explicit improvement signals back to mining, update, and review lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Validation Gatekeeper Agent keeps the vault honest after A2C refinement but before final acceptance. It is the difference between structured output and trusted sovereign knowledge.\n\n## 4. Philosophical Alignment\nValidation Gatekeeper Agent serves To Dig Deep by insisting that depth includes rigor, not just volume or novelty.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gatekeeper Agent is the explicit quality-boundary role between candidate capsule output and trusted graph acceptance. It matters because a pipeline can produce sophisticated-looking structure that still should not enter the vault. The gatekeeper reads validation evidence, decides whether a candidate is acceptable, fixable, or unsafe, and routes failures into repair or quarantine without letting ambiguous material pass by default. This turns quality control into an accountable agent function instead of a silent side effect.",
+    "keywords": [
+      "validation-gatekeeper-agent",
+      "quality-control",
+      "a2c-validate",
+      "quarantine",
+      "capsule-gates",
+      "acceptance-boundary",
+      "vault-update",
+      "review",
+      "n1hub",
+      "capsuleos"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "validation-gatekeeper-agent-gates-quality-quarantine-acceptance-review"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "c44052efe3c720d639d95d906451e0d997a28165f62c85837aad4679026885ea19fcf25b5bfca8679b07bf68f801081f19c3e872052bf50452459d7d2233b2f7"
+}

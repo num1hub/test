@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.core.first-spark.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "semantic_hash": "core-first-spark-genesis-activation-bootstrap-cognitive-plane",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos-spec.v1",
+      "type": "internal_derivation"
+    },
+    "name": "First Spark",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Core First Spark: Genesis Activation\n\n## 1. Function\nFirst Spark marks the activation point where constitutional doctrine becomes an operational graph.\n\n## 2. Meaning\nIt records the controlled transition from static foundational capsules to live cognitive expansion.\n\n## 3. Constraints\nActivation never bypasses validation physics. It authorizes growth only within constitutional boundaries.\n\n## 4. Audit Role\nThis capsule remains a provenance checkpoint for reconstructing and verifying genesis state over time."
+  },
+  "neuro_concentrate": {
+    "summary": "First Spark records the controlled bootstrap moment when constitutional doctrine became an active graph rather than a static specification. It matters because genesis should be reconstructable: future maintainers need to know when the system first crossed from authored principles into live, governed execution. This capsule makes that transition explicit without pretending bootstrap exempted the platform from validation or audit discipline. As a provenance checkpoint, First Spark lets the vault explain how CapsuleOS activation began, which laws already applied at that moment, and why later growth can still trace itself back to an accountable origin event.",
+    "keywords": [
+      "core",
+      "first-spark",
+      "genesis",
+      "bootstrap",
+      "activation",
+      "provenance-checkpoint",
+      "auditability",
+      "capsuleos",
+      "origin-event"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "core-first-spark-genesis-activation-bootstrap-cognitive-plane"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.core.constitution.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.core.manifesto.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.core.atom.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.core.compass.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b99c558b5495cab52415886e781c4a3f7175f969d31e20e836a770118c117c4f20a0b8a93edf875e10fb2dc899a391f784eae7b6a68d71b441871192430efb41"
+}

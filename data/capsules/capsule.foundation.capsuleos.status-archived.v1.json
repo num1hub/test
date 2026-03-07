@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.status-archived.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "status-archived-retired-history-queryable-immutable-cold-storage",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "CapsuleOS Status: Archived",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Status: Archived\n\n## 1. Definition\nIn the CapsuleOS ecosystem, the `archived` status designates a capsule that has been officially retired from the active Cognitive Plane. These capsules contain knowledge, operations, or concepts that are no longer actively relevant or utilized, but possess historical, legal, or contextual value that necessitates permanent preservation rather than deletion.\n\n## 2. Operational Characteristics\n- **Search and Indexing**: To maintain optimal signal-to-noise ratios and prevent cognitive overload, `archived` capsules are strictly excluded from default global searches, N-Infinity routine patrols, and A2C synthesis operations. They can only be retrieved via explicit, targeted \"archive queries.\"\n- **Immutability**: Like `sovereign` and `frozen` states, an `archived` capsule is treated as immutable to preserve an accurate historical record. However, unlike `sovereign` capsules, they are not treated as axiomatic truths.\n- **Graph Pruning**: When a capsule is archived, its outbound `recursive_layer` links may be deprioritized by N-Infinity Gardeners to ensure they do not exert undue influence on the active, living graph.\n\n## 3. Use Cases\n- **Completed Operations**: A project hub that has been successfully delivered and closed, but whose task history and financial ledgers must be retained for audits.\n- **Obsolete Knowledge**: A `concept` capsule detailing a software framework or API version that has been deprecated, preserved only to maintain the provenance of older, dependent systems.\n- **Dead Ends**: Hypotheses or workflows that were rigorously tested and ultimately disproven, kept as an epistemic record to prevent future users from repeating identical logical errors."
+  },
+  "neuro_concentrate": {
+    "summary": "The 'archived' status within CapsuleOS applies to capsules that have been retired from active use but must be retained for historical, legal, or contextual integrity. To preserve the systemic negentropy and optimize graph performance, archived capsules are systematically excluded from default searches and routine N-Infinity agent patrols, requiring explicit queries for retrieval. While rendered immutable to protect historical accuracy, they do not hold the axiomatic weight of sovereign capsules. This status is primarily utilized for closed projects, deprecated technical frameworks, and disproven hypotheses, ensuring the active Cognitive Plane remains pristine while maintaining a flawless long-term epistemic record.",
+    "keywords": [
+      "capsule-status",
+      "archived",
+      "retired-knowledge",
+      "historical-reference",
+      "search-exclusion",
+      "immutability",
+      "obsolete-concept",
+      "completed-project",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "status-archived-retired-history-queryable-immutable-cold-storage"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-active.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "fd4deebaad19e52074020dc779ee61ec81da0d8824883f195db5c0db058e7e9add69abe5de16aa06e0b36785af4608e26d3fdfd60707de3d55274e1001d5529b"
+}

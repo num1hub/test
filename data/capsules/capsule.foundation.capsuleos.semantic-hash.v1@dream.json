@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.semantic-hash.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:00Z",
+    "semantic_hash": "semantic-hash-format-eight-tokens-hyphen-separated-gold",
+    "updated_at": "2026-03-06T13:44:55.890Z",
+    "name": "CapsuleOS Semantic Hash",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# The Semantic Hash\n\n## 1. Definition and Essence\nWithin the CapsuleOS architecture, the Semantic Hash is a standardized, human-readable cognitive fingerprint assigned to every capsule. It effectively bridges the gap between machine-readable cryptographic hashes and human memory, providing immediate contextual identity.\n\n## 2. Core Architecture\nBy absolute systemic law, the semantic hash must consist of exactly 8 lowercase alphanumeric tokens, cleanly separated by hyphens (e.g., `[a-z0-9]+(-[a-z0-9]+){7}`). To guarantee semantic parity, Validation Gate 10 (G10) mandates that the `metadata.semantic_hash` string must identically match the `neuro_concentrate.semantic_hash` string.\n\n## 3. Interactions\nWhile the `integrity_sha3_512` field handles absolute cryptographic verification and anti-tampering measures, the semantic hash allows creators, system architects, and N-Infinity agents to immediately grasp the core theme of a capsule. It facilitates rapid indexing, contextual grouping, and semantic clustering without requiring the system to parse the entire markdown payload.\n\n## 4. Philosophical Alignment\nThe 8-token format embodies the extreme clarity required to move \"Between Zero and One.\" By distilling a massive, complex capsule down to exactly eight precise words, the A2C pipeline forces a deep, non-superficial understanding of the asset's true essence, fully realizing the \"To Dig Deep\" mandate."
+  },
+  "neuro_concentrate": {
+    "summary": "The Semantic Hash is a standardized human readable identity string required in every CapsuleOS capsule, encoded as eight lowercase alphanumeric tokens separated by hyphens. It provides rapid contextual recognition for users and agents without full payload parsing. Validation rules enforce strict parity between metadata and neuro concentrate values to preserve semantic consistency. This field complements the cryptographic integrity seal by improving discoverability, clustering quality, and operational interpretability across the evolving N1Hub knowledge graph.",
+    "keywords": [
+      "semantic-hash",
+      "cognitive-fingerprint",
+      "eight-tokens",
+      "hyphen-separated",
+      "capsuleos",
+      "gate-10",
+      "epistemic-clarity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "semantic-hash-format-eight-tokens-hyphen-separated-gold"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.5-element-law.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "59db7a00b4ce885a9ac09ca85788aa849dbfdd29ee0e8b75744e23f22d2b6f1047b91a3a93b498e9a9bcf92f9f1af2fee136769d5cd40c82362059b85f7749fd"
+}

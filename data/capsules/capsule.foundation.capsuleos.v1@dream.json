@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.v1",
+    "version": "1.4.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-02-26T12:00:00Z",
+    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity",
+    "updated_at": "2026-03-06T18:43:16.310Z",
+    "name": "CapsuleOS Foundation",
+    "priority": "high",
+    "progress": 54,
+    "estimatedHours": 760,
+    "actualHours": 330,
+    "dueDate": "2026-10-15",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS: The Sovereign Operating System for Knowledge\n\n## 1. Essence\nCapsuleOS is the immutable foundation of the N1Hub ecosystem. It replaces entropic files with cryptographically sealed, self-descriptive, and semantically aware **capsules**. Every piece of information — a task, a note, a physical object, a person — is a capsule governed by the **5-Element Law**. Capsules are linked into a dynamic knowledge graph, enabling machines and AI to understand, trust, and evolve knowledge without human intervention.\n\n## 2. The 5-Element Law\nEvery capsule must contain exactly five root keys:\n- **metadata**: Identity, version, status, authorship, timestamps, semantic hash, and optional source/override.\n- **core_payload**: The actual content (text, JSON, geometry, etc.) with a declared content type.\n- **neuro_concentrate**: AI-extracted essence: summary, keywords, and a 6‑dimensional confidence vector (extraction, synthesis, linking, provenance coverage, validation score, contradiction pressure).\n- **recursive_layer**: Typed links to other capsules (supports, contradicts, extends, depends_on, references, etc.), forming a traversable graph.\n- **integrity_sha3_512**: A cryptographic seal computed via RFC 8785 JCS canonicalization of the four preceding elements, guaranteeing immutability and provenance.\n\n## 3. The 16 Gates (Validation)\nBefore any capsule enters the Cognitive Plane, it must pass 16 deterministic gates:\n- G01: Exactly five root keys.\n- G02: All required subfields present.\n- G03: Correct enums and types.\n- G04: Provenance coverage ≥ 0.85; external sources require a source URI.\n- G05: Recognized content type.\n- G06: Proper JSON escaping; truncation note if truncated.\n- G07: Summary length (70–160 words).\n- G08: Keywords count (5–15).\n- G09: Semantic hash format (8 hyphen‑separated lowercase alphanumeric tokens).\n- G10: Semantic hash parity between metadata and neuro_concentrate.\n- G11: Canonical relation types.\n- G12: All target IDs resolve (batch exception for Genesis).\n- G13: Non‑draft capsules have at least one link.\n- G14: Cosmetic coherence trap (content >1000 tokens with contradiction_pressure = 0.0 is only allowed for sovereign foundation axioms).\n- G15: Exactly six confidence dimensions, each in [0,1].\n- G16: Cryptographic seal must match recomputed JCS+SHA3‑512 (fatal if mismatch).\n\n## 4. Hot / Cold Storage & Evolution\nCapsules can exist in different states:\n- **Hot (draft / active)**: Fast, mutable, no strict seal (integrity field optional). Used for daily work.\n- **Cold (sovereign / frozen)**: Immutable, fully sealed, cryptographically anchored. Used for final versions, axioms, and shareable assets.\n- **Quarantine**: Capsules with high contradiction pressure (>0.85) or failed validation are isolated for human or parliamentary review.\n- **Legacy**: Superseded versions, kept for history.\n\n## 5. Graph and Agents\nThe recursive_layer turns isolated capsules into a living graph. This graph is stored in a hybrid database (PostgreSQL for payload, Neo4j for edges) to enable fast traversal by N‑Infinity agents. CapsuleOS is the bedrock upon which A2C refines raw data and N‑Infinity evolves knowledge."
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS Foundation in the Dream branch describes the next stability layer beneath the platform. It pushes toward stricter branch-aware validation, clearer merge discipline, richer activity provenance, and a more explicit contract between graph law and runtime automation. The capsule matters because future scale will fail if constitutional mechanics remain only adequate for the current vault. Dream therefore preserves CapsuleOS as a deeper operating substrate for multi-branch sovereignty rather than simply the law set that got the first system working.",
+    "keywords": [
+      "capsuleos",
+      "5-element-law",
+      "sovereign-knowledge",
+      "16-gates",
+      "cryptographic-seal",
+      "knowledge-graph",
+      "hot-cold-storage",
+      "quarantine",
+      "validation",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-spec.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-database.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.audit-log.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "875ee2701dff0240992bc1f8d9b238134aaf9f70e6e8d498ffeda9ae5251a60380ba3f4b573805c363420b10cfa37197ed323ff9aa2e34d35093e48395bda7f9"
+}

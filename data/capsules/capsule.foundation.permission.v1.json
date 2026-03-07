@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.permission.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Permission",
+    "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Permission\n\n## 1. Definition and Essence\nPermission defines fine-grained capability semantics such as read, write, execute, and administrative rights. It enables policy-driven access control across capsules while preserving auditability and least-privilege governance.\n\n## 2. Core Attributes\n- `permission_key` canonical capability identifier\n- `resource_scope` capsule or module boundary affected\n- `grant_conditions` policy predicates for assignment\n- `revocation_rules` conditions for automatic or manual removal\n- `audit_requirements` logging and review obligations\n\n## 3. Lifecycle\nPermissions are granted through role bindings or direct policy, checked on every protected operation, and continuously audited for least-privilege compliance.\n\n## 4. Integration\n- **Role:** groups permissions into reusable authority bundles.\n- **Project and Team:** enforces scoped collaboration rights.\n- **Workspace:** secures module operations and settings.\n- **Architect Override:** provides exceptional audited bypass path.\n\n## 5. Philosophical Alignment\nPermission capsules operationalize To Dig Deep by enforcing rigorous trust boundaries around sovereign knowledge mutation.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Permission is the smallest governable capability unit in the collaboration layer. It defines exactly which action is allowed on which scope, under what conditions, and with which audit expectations. The capsule matters because access control loses precision when systems jump directly from identity to broad role labels without modeling actual rights. By making permissions explicit, N1Hub can reason about least privilege, exceptional overrides, policy drift, and machine-enforced boundaries with far more rigor. Permission is therefore the atomic control surface from which trustworthy roles, teams, and project governance can be assembled.",
+    "keywords": [
+      "permission",
+      "capability-unit",
+      "least-privilege",
+      "access-control",
+      "policy",
+      "auditability",
+      "scope",
+      "governance",
+      "security"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.role.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.architect-override.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2c4275fcfc00d7673f1cb4453579e916aa90adfeba64f9402cf146c9c4b5e80a1aff3aa29cdaff9b0f04fb20b0d47c2cc70b941085f49cf9d2cc78711f63c022"
+}

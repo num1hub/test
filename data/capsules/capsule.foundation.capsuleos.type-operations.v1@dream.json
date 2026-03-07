@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.type-operations.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "capsule-type-operations-actionable-task-workflow-execution-gold",
+    "updated_at": "2026-03-06T13:44:55.950Z",
+    "name": "CapsuleOS Type: Operations",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Type: Operations\n\n## 1. Definition\nIn the CapsuleOS schema, a capsule designated with `type: \"operations\"` represents the kinetic energy of the ecosystem. It encapsulates actionable items, specific tasks, procedural workflows, event logs, and transactional records. If `concept` capsules are thoughts and `foundation` capsules are the laws of physics, `operations` capsules are the physical movements that drive the N1Hub ecosystem forward.\n\n## 2. Epistemic and Structural Characteristics\n- **High Mutability**: Unlike axiomatic foundation capsules, operations capsules are highly dynamic. They frequently transition through statuses from `draft` to `active` and eventually to `archived` or `legacy` as tasks are completed or processes evolve.\n- **Temporal Sensitivity**: Operations are inextricably linked to time. Their metadata and core payload often reflect specific deadlines, execution windows, and chronological logging.\n\n## 3. Topological Context\nOperations capsules rarely exist in isolation; they are the connective tissue bridging intent and execution within the graph:\n- **Implementation**: They frequently forge `implements` links to `concept` capsules, translating abstract theories into concrete steps.\n- **Obedience**: They maintain `depends_on` or `references` links to `foundation` capsules, ensuring that executed processes strictly adhere to systemic laws.\n- **Aggregation**: They are the primary atomic constituents of `hub` capsules, such as Projects or Teams.\n\n## 4. Canonical Examples\n- **A Project Task**: An actionable to-do item assigned to a developer, detailing the implementation of a specific UI component.\n- **A Workflow Step**: A specific phase in the A2C pipeline execution, logging the transition of data from `Normalize` to `Segment`.\n- **System Logs & Transactions**: A cryptographic record of a financial transaction, a smart contract execution, or a significant status change within a project hub."
+  },
+  "neuro_concentrate": {
+    "summary": "Within the CapsuleOS architecture, the 'operations' type designates capsules that represent the kinetic, executable layer of the N1Hub ecosystem. This type is exclusively used for actionable items, tasks, procedural workflows, event logs, and transactions. Unlike immutable foundational axioms or fluid concepts, operations capsules are highly dynamic and temporally sensitive, actively driving projects forward. Topologically, they act as bridges—implementing the abstract theories defined in 'concept' capsules while strictly adhering to the systemic laws codified in 'foundation' capsules. They are the primary atomic constituents of project hubs, transforming intent into measurable progress.",
+    "keywords": [
+      "capsule-type",
+      "operations",
+      "actionable-item",
+      "workflow",
+      "execution",
+      "task",
+      "event-log",
+      "capsuleos",
+      "n1hub",
+      "kinetic-layer"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-type-operations-actionable-task-workflow-execution-gold"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.capsule-concept.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "aa409bcbd15aea84fa9e10b6b9038cef7e0bc1c3bb50cdafff5c1c1c87c5983fbaaddf7af93896350d318c422c3e90b60d1afbadf34a9874d633a4f8aff7f258"
+}

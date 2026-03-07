@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c-link.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T18:43:15.844Z",
+    "name": "A2C Stage: Link",
+    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph",
+    "priority": "medium",
+    "progress": 35,
+    "estimatedHours": 155,
+    "actualHours": 41,
+    "dueDate": "2026-08-05",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C Stage: Link\n\n## 1. Definition and Essence\nThe Link stage infers and validates graph relationships for synthesized capsules. It maps entities to existing capsule IDs, selects canonical relation types, and prevents semantically meaningless over-linking.\n\n## 2. Core Attributes\n- `candidate_links` with relation intent and confidence\n- `target_resolution` status for each target_id lookup\n- `linking_policy` constraints for canonical relation usage\n- `redundancy_flags` to remove duplicate or weak links\n- `linking_score` summarizing graph coherence contribution\n\n## 3. Lifecycle\nLink resolves targets against known IDs, filters invalid relation proposals, and emits a recursively linked capsule candidate. Unresolved references trigger warnings or quarantine depending on policy.\n\n## 4. Integration\n- **Synthesize Stage:** receives draft capsule content.\n- **Hash Stage:** forwards linked capsule for semantic and integrity sealing.\n- **Validator G11/G12:** aligns relation canon and target existence.\n- **Capsule Vault Graph:** preserves sparse but meaningful topology.\n\n## 5. Philosophical Alignment\nLinking applies To Dig Deep by connecting ideas with precision, preferring truthful structure over dense but shallow connectivity.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "A2C Stage: Link in the Dream branch aims toward a smarter topology-construction layer. It imagines stronger target resolution, cleaner relation inference, and better discrimination between weak adjacency and links worthy of entering the canonical graph. The stage matters because graph quality depends as much on edge discipline as on payload quality. Dream therefore preserves Link as a future topological reasoning stage that can enrich the graph without flooding it with low-value relations.",
+    "keywords": [
+      "a2c",
+      "linking",
+      "graph",
+      "relations",
+      "target-resolution",
+      "capsuleos"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-synthesize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-hash.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "depends_on"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d67d1e286d90cb7f05d5e94b56f02575110700c93618ad41d6aaf0a0a511d37420a14c6938bb291cb60734ed3bd736d9c1d643f4d1a98b3ecf94202cc56d3615"
+}

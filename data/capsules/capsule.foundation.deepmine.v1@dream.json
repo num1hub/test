@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine.v1",
+    "version": "1.3.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry",
+    "updated_at": "2026-03-06T18:43:16.376Z",
+    "name": "DeepMine",
+    "priority": "high",
+    "progress": 37,
+    "estimatedHours": 540,
+    "actualHours": 160,
+    "dueDate": "2026-10-20",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine: The Cognitive Quarry\n\n## 1. Essence\nWithin the N1Hub ecosystem, **DeepMine** operates as the primary extraction layer. It is the \"cognitive quarry\"—a highly orchestrated interfacing system that drills into external Large Language Models (Anthropic, OpenAI, Gemini), parses the open internet, and digests user-uploaded corpora. Its sole purpose is to extract high-value raw intellectual material (data, reasoning, and context) and feed it directly into the **A2C (Anything-to-Capsules)** refinery.\n\n## 2. The Extraction Mechanism\nDeepMine does not produce finished capsules; it produces raw ore. It executes complex, multi-stage prompts (the \"drills\") designed to bypass surface-level conversational noise and extract deep logical structures, coding patterns, and semantic truths. \n\n## 3. Internal Optimization and Routing\nTo operate efficiently at industrial scale, DeepMine employs advanced cost and performance architecture:\n- **Cost-Aware Routing**: It dynamically evaluates the complexity of a task and routes it to the most efficient LLM provider (e.g., using a cheaper model for initial text summarization, but deploying an advanced model for resolving logical contradictions).\n- **Caching**: Frequent queries and common semantic extractions are heavily cached to prevent redundant API calls and reduce token expenditure.\n- **Load Balancing**: API requests are distributed optimally to avoid rate limits across various provider accounts.\n\n## 4. Sleep-Time Compute\nDeepMine embodies the \"To Dig Deep\" philosophy of resource maximization by leveraging **sleep-time compute**. Highly complex, asynchronous extraction tasks—such as processing massive PDF libraries or running deep-reasoning chains—are scheduled for off-peak hours. This takes advantage of discounted batch-API pricing and ensures that heavy processing never blocks the active user interface.\n\n## 5. Architectural Integration\nDeepMine is fully asynchronous. Built on robust queuing systems (BullMQ/Redis), it allows the user to initiate a massive extraction operation and walk away. Once DeepMine successfully hauls the raw data to the surface, it automatically triggers the A2C pipeline to begin normalization, extraction, and eventual sealing into the CapsuleOS graph."
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine in the Dream branch describes the future extraction substrate rather than only the current quarry implementation. It imagines broader provider routing, more autonomous research sweeps, stronger cache intelligence, and a cleaner conversion of expensive external intelligence into reusable raw material for the rest of the ecosystem. The capsule matters because every higher-order refinement layer is limited by extraction quality and extraction economics. Dream therefore preserves DeepMine as a more strategic intelligence-mining fabric, not merely the first asynchronous ingestion service.",
+    "keywords": [
+      "deepmine",
+      "extraction-layer",
+      "cognitive-quarry",
+      "llm-integration",
+      "a2c-supply",
+      "cost-aware-routing",
+      "sleep-time-compute",
+      "asynchronous-processing",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2ff2c3dbf0d12f6e3a219ae12695e4644d5a9be776410629611694adefb74a71cd239e2ff7dc418bafb8c9407203067aa81535732e2035b23ffacc917b7d8261"
+}

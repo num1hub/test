@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.integrations.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:03:03.522Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Integrations",
+    "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security",
+    "priority": "medium",
+    "progress": 44,
+    "estimatedHours": 170,
+    "actualHours": 63,
+    "dueDate": "2026-07-05",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations defines the general architecture for external service connectivity, including credential boundaries, webhook contracts, inbound/outbound event mapping, and resilience policy for third-party dependencies.\n\n## 2. Core Attributes\n- `integration_catalog` supported connector definitions\n- `auth_model` credential handling and rotation policy\n- `event_contracts` inbound/outbound payload schema standards\n- `retry_policy` failure handling and backoff controls\n- `governance_flags` consent and data-sharing constraints\n\n## 3. Lifecycle\nIntegration definitions are added through governed review, deployed with explicit policy contracts, monitored for reliability, and retired with migration plans when deprecated.\n\n## 4. Integration\n- **Workspace:** host surface for user-configured connectors.\n- **API Gateway:** secure boundary for external traffic.\n- **Calendar/Notification Integrations:** specialized connector capsules.\n- **Security:** enforces secrets and policy controls.\n\n## 5. Philosophical Alignment\nIntegrations support To Dig Deep by extending capability without surrendering sovereignty or observability.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Integrations defines an integration boundary in the N1Hub graph so external service interactions remain governed, auditable, and consistent with sovereign data policy. It standardizes payload contracts, authentication expectations, delivery behavior, and failure handling semantics used by workspace modules and agents. By representing integration behavior as capsules, platform evolution stays explicit and testable rather than hard-coded in opaque connectors. This improves reliability, security, and maintainability while preserving user control over what information leaves or enters the vault.",
+    "keywords": [
+      "integrations",
+      "connectors",
+      "webhooks",
+      "api",
+      "security",
+      "workspace",
+      "architecture"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.api-gateway.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.integration.calendar.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.integration.notification.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "eedf2aaddb25f17fdd820f3b8f2909c4df0885cfaa50a2ae597524116ebc61953c3206ad7799bbd8208b5295050d47d1d4a00faca64239c3531a328a97186cde"
+}

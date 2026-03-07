@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-skills-registry.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T18:20:00Z",
+    "updated_at": "2026-03-06T18:43:15.980Z",
+    "name": "Agent Skills Registry",
+    "semantic_hash": "agent-skills-registry-tool-guidance-workspace-runtime-validator",
+    "priority": "high",
+    "progress": 31,
+    "estimatedHours": 240,
+    "actualHours": 64,
+    "dueDate": "2026-09-05",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Skills Registry\n\n## 1. Definition and Essence\nAgent Skills Registry defines the workspace-local skill layer for N1Hub intelligence surfaces. It maps focused agent capabilities to concrete `skills/<name>/SKILL.md` documents so recurring patterns are documented once and reused consistently.\n\n## 2. Core Responsibilities\n- `skill_catalog` describes how agents should use important local capabilities.\n- `tool_guidance` separates tool patterns from persona and high-level workflow prompts.\n- `workspace_scope` keeps skills versioned with the repository that actually defines the tools and constraints.\n- `operator_visibility` makes important changes to agent skill behavior reviewable in normal repo diff flow.\n\n## 3. N1Hub Integration\nThe initial N1Hub registry covers DeepMine generation, capsule graph snapshotting, targeted capsule validation, and conditional Linear GraphQL behavior. It is designed to support the Personal AI Assistant, DeepMine, Symphony sessions, and N-Infinity agent lanes.\n\n## 4. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable skill documents instead of tribal memory.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Skills Registry defines the workspace-local skill layer for N1Hub agents. It matters because the same tool patterns otherwise get rediscovered badly in prompts, chat turns, and operator folklore. By versioning `skills/<name>/SKILL.md` with the repo, N1Hub can teach agents how to use DeepMine generation, capsule graph inspection, validator workflows, and runtime-conditional tracker tools without confusing those instructions with persona or orchestration policy. It also creates a stable bridge between repo-local capabilities and future assistant loaders.",
+    "keywords": [
+      "agent-skills",
+      "skills",
+      "skill-md",
+      "workspace-skills",
+      "deepmine",
+      "capsule-validation",
+      "symphony",
+      "n-infinity",
+      "tool-guidance",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-skills-registry-tool-guidance-workspace-runtime-validator"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "152827ac4a30e184cf152f098fa4ebfbbad159b73c377d8ca4a2597cb952f1738a5d269becbb5fb5262f89d202e571db7f325e976b2543fd28183eda0eb9dd56"
+}

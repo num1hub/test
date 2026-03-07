@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine-foreman-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:24:00Z",
+    "updated_at": "2026-03-06T23:24:00Z",
+    "name": "DeepMine Foreman Agent",
+    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-branch-governance",
+    "source": {
+      "uri": "n1hub://specs/deepmine-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 170,
+    "actualHours": 38,
+    "dueDate": "2026-09-02",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine Foreman Agent\n\n## 1. Definition and Essence\nDeepMine Foreman Agent is the shift manager of the N1Hub mine. It decides which prospecting leads should become real digs, which providers and models should be used, when heavy work belongs in night-shift windows, and whether the downstream result is aiming toward `Dream` or is mature enough to try the `Real` path.\n\n## 2. Core Responsibilities\n- `queue_arbitration` chooses which mining jobs run now, later, or not at all.\n- `provider_routing` selects the right model or source path for the dig.\n- `budget_and_shift_control` aligns mining intensity with wallet limits, off-peak windows, and operator policy.\n- `branch_targeting` decides whether the intended output is exploratory `Dream` material or evidence-ready `Real` material.\n- `quality_gating` ensures ore moves into A2C and Vault Update instead of bypassing refinement.\n\n## 3. N1Hub Role\nIn N1Hub, Foreman is the operational governor between user demand, background autonomy, and mining capacity. It turns raw prospecting into disciplined extraction and keeps DeepMine from behaving like an uncontrolled compute furnace.\n\n## 4. Philosophical Alignment\nForeman serves To Dig Deep by imposing discipline on depth: not every seam should be opened, not every dig should happen immediately, and not every result belongs in reality.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine Foreman Agent is the dispatch and governance role of the N1Hub mine. It converts discovery leads into scheduled digs, chooses model and source lanes, respects wallet and off-peak constraints, and decides whether output is targeting Dream exploration or the stricter Real path. The role matters because mining without a foreman becomes expensive, noisy, and unsafe. By separating shift governance from extraction itself, the system gains budget control, branch discipline, and a clear operational point where mining intensity can be tuned.",
+    "keywords": [
+      "deepmine",
+      "foreman-agent",
+      "routing",
+      "budget-control",
+      "night-shift",
+      "branch-governance",
+      "ai-wallet",
+      "capsule-jobs",
+      "a2c",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-branch-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2fa769a53f9db01f80540c3f530aab16192c27ca7492eee4c4cc0bfbd9099269570095e9259d6e70955792129bed6e99ba4fad89bab31c2007752bef2d377c9f"
+}

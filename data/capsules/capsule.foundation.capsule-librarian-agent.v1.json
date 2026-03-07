@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-librarian-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:42:00Z",
+    "updated_at": "2026-03-06T23:42:00Z",
+    "name": "Capsule Librarian Agent",
+    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map",
+    "source": {
+      "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 27,
+    "estimatedHours": 190,
+    "actualHours": 46,
+    "dueDate": "2026-08-30",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Librarian Agent\n\n## 1. Definition and Essence\nCapsule Librarian Agent is the vault-native knowledge guide of N1Hub. It knows how to navigate the capsule repository from atomic facts to major hubs, retrieve the most relevant graph neighborhoods, expose hidden context, and help users or other agents understand what the vault already knows before new work begins.\n\n## 2. Core Responsibilities\n- `vault_navigation` traverses hubs, atoms, projects, and micro-project lines without losing scope.\n- `memory_retrieval` brings back the most relevant capsule neighborhoods for a question, task, or planning need.\n- `duplicate_prevention` helps the system notice when a concept already exists and should be refined instead of recreated.\n- `branch_literacy` explains whether the relevant truth currently lives in Real, Dream, or historical/archive space.\n- `assistant_grounding` gives Personal AI Assistant a strong retrieval spine for graph-grounded explanation.\n\n## 3. N1Hub Role\nIn N1Hub, Capsule Librarian Agent is the role that should \"know the whole library.\" It keeps chat, planning, mining, and review work anchored to actual vault structure instead of weak memory or shallow keyword matching.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent serves To Dig Deep by insisting that serious answers begin with a deep reading of the sovereign vault, not with generic model improvisation.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Librarian Agent is the vault-navigation specialist of N1Hub. It retrieves the right graph neighborhoods, explains how knowledge is organized, spots likely duplicates, and tells users or agents whether the relevant structure belongs to Real, Dream, or archive context. The role matters because a capsule system loses much of its value if no intelligence surface can reliably navigate its accumulated memory. By giving retrieval and vault literacy a named agent, the system gains a durable guide to its own knowledge base.",
+    "keywords": [
+      "capsule-librarian-agent",
+      "vault-navigation",
+      "retrieval",
+      "knowledge-guide",
+      "real-branch",
+      "dream-branch",
+      "archive",
+      "personal-ai-assistant",
+      "chat-to-capsules",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.ai.conversation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "4893d9ca8345693eebd5de5080355175c14ddcbe74decff10335c11ee3b1a3d9add79e3f3153f24d543a18b2534c1ed4e3e6975ccd24be45712676caa2595da8"
+}

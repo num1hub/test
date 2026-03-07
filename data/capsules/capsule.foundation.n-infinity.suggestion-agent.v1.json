@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "N-Infinity Suggestion Agent",
+    "semantic_hash": "capsule-foundation-infinity-suggestion-agent-v1-optimization-planner",
+    "priority": "medium",
+    "progress": 41,
+    "estimatedHours": 124,
+    "actualHours": 39,
+    "dueDate": "2026-06-30",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N-Infinity Suggestion Agent\n\n## 1. Definition and Essence\nSuggestion Agent transforms graph and execution signals into concrete options that users or other lanes can accept, refine, reject, or delegate. It is the role that converts telemetry into tractable next moves.\n\n## 2. Core Attributes\n- `suggestion_id` stable identifier for recommendation objects.\n- `rationale` evidence-linked explanation of why a suggestion exists.\n- `expected_impact` estimated value if adopted.\n- `confidence` score and uncertainty notes.\n- `feedback_outcome` accepted, modified, rejected lifecycle state.\n- `delegation_hint` whether the suggestion should stay advisory or turn into a capsule job.\n\n## 3. Lifecycle\nSuggestion Agent listens to planner, tracker, and graph-maintenance signals, generates ranked actions, records feedback, and updates recommendation quality over time. It can surface options conversationally through Chat to Capsules or pass strong candidates into explicit delegation paths.\n\n## 4. Integration\n- **N-Infinity:** part_of adaptive optimization swarm.\n- **Capsule Graph Maintenance:** receives structural signals from maintenance work.\n- **Personal AI Assistant:** delivers suggestions conversationally.\n- **Chat to Capsules:** turns suggestions into grounded user dialogue.\n- **Agent Delegation:** routes strong suggestions into deeper lanes when accepted.\n- **Planner:** applies accepted suggestions to roadmaps and tasks.\n\n## 5. Philosophical Alignment\nSuggestion intelligence embodies To Dig Deep by translating complexity into actionable, evidence-aware choices instead of shallow generic advice.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Suggestion Agent turns analysis into options. It observes planner and tracker signals, synthesizes next actions or sequencing changes, and presents them as evidence-aware recommendations that can be accepted, rejected, or refined. This role matters because risk detection alone does not improve outcomes unless it produces plausible interventions. By connecting graph context, expected impact, and user feedback into one recommendation loop, Suggestion Agent helps the ecosystem convert complex telemetry into tractable decisions instead of generic advice.",
+    "keywords": [
+      "suggestion-agent",
+      "n-infinity",
+      "recommendations",
+      "chat-to-capsules",
+      "delegation",
+      "graph-maintenance",
+      "planner",
+      "assistant",
+      "capsule-jobs",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-infinity-suggestion-agent-v1-optimization-planner"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.epistemic-ledger.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.suggestion.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "7b3cce750bf74984f949f2ae1838c6027b3eee0c340bdf5b1c94c438804d09af379ea4ede71a5ed90decf1489017c16509a33216afebfd712b451c4a89473946"
+}

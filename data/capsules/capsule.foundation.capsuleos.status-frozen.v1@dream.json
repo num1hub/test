@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.status-frozen.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "status-frozen-temporarily-locked-stable-state-gold-core",
+    "updated_at": "2026-03-06T13:44:55.910Z",
+    "name": "CapsuleOS Status: Frozen",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Status: Frozen\n\n## 1. Definition\nWithin the CapsuleOS lifecycle, the `frozen` status dictates a temporary, strictly read-only state for a capsule. While it shares the uneditable nature of the `sovereign` status, a `frozen` capsule is not considered a terminal or absolute \"Gold Master.\" Instead, it is an operational pause—a deliberate lock placed on a previously `active` capsule to stabilize its data without permanently archiving it.\n\n## 2. Operational Characteristics\n- **Read-Only Lock**: No modifications can be made to the `core_payload`, `metadata`, or `recursive_layer` of a `frozen` capsule. N-Infinity agents (such as Innovators) will treat it as a stable foundation for synthesis but are blocked from injecting new data or altering its topological links.\n- **Reversibility**: Unlike `sovereign` or `archived` states, the `frozen` status is fully reversible. Authorized users (e.g., project `owner` or `reviewer`) can transition the capsule back to `active` to resume editing, or shift it to `archived` if the knowledge is no longer relevant.\n\n## 3. Use Cases\n- **Pre-Release Stabilization**: Locking a project hub and all its atomic constituent capsules right before a major release or client presentation, ensuring no accidental edits alter the deliverable.\n- **Peer Review**: Temporarily freezing a high-value `concept` or `operations` capsule so that an Epistemic Parliament or human reviewers can evaluate a static version of the artifact without moving targets.\n- **Dispute Resolution**: If a capsule begins generating dangerously high `contradiction_pressure`, it can be frozen to halt further entropic decay while agents analyze the logical fault."
+  },
+  "neuro_concentrate": {
+    "summary": "The 'frozen' status within CapsuleOS designates a capsule that has been temporarily locked into a read-only state. Distinct from the terminal immutability of the 'sovereign' status, 'frozen' acts as an operational pause, stabilizing the capsule's data without permanently retiring it. N-Infinity agents can read but cannot alter a frozen artifact. This reversible state is primarily utilized during critical phases such as pre-release stabilization, rigorous peer reviews, or dispute resolutions when contradiction pressure spikes. Once the necessary evaluations are complete, a frozen capsule can be seamlessly transitioned back to 'active' for continued evolution, or moved to 'archived'.",
+    "keywords": [
+      "capsule-status",
+      "frozen",
+      "temporarily-locked",
+      "read-only",
+      "stabilization",
+      "peer-review",
+      "pre-release",
+      "reversible-state",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "status-frozen-temporarily-locked-stable-state-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.status-active.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "6459cd4a8e8e9dbabfb2049b312add8d65c5050d963c8d02aa92411b9c8d7b59ae9ae6115cb4d95095e597a8238721cabc3654027159435295fe254549806db2"
+}

@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.user-preferences.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:55:08.091Z",
+    "updated_at": "2026-03-06T18:43:17.247Z",
+    "name": "User Preferences",
+    "semantic_hash": "capsule-foundation-user-preferences-v1-timezone-work-hours",
+    "priority": "medium",
+    "progress": 48,
+    "estimatedHours": 180,
+    "actualHours": 72,
+    "dueDate": "2026-08-10",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# User Preferences\n\n## 1. Definition and Essence\nUser Preferences defines configurable behavioral settings that shape planning, reminders, assistant behavior, and interface defaults. It centralizes timezone, working-hour, language, and notification policies in a reusable capsule.\n\n## 2. Core Attributes\n- `timezone` canonical IANA timezone string\n- `work_hours` preferred planning and focus windows\n- `language_and_locale` interface and NLP defaults\n- `notification_policy` channel priorities and quiet hours\n- `assistant_style` guidance for interaction tone and proactivity\n\n## 3. Lifecycle\nPreference capsules are initialized with defaults, tuned over time, and consumed by runtime modules during scheduling, notification dispatch, and assistant orchestration.\n\n## 4. Integration\n- **Personal AI Assistant:** adapts suggestions and interaction style.\n- **Planner and Tracker:** applies timezone and quiet-hour constraints.\n- **Calendar:** normalizes temporal presentation and scheduling.\n- **Notification:** enforces delivery channel and urgency preferences.\n\n## 5. Philosophical Alignment\nPreference capsules support To Dig Deep by aligning execution systems to human rhythms, reducing friction without sacrificing rigor.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "User Preferences is the capsule that adapts the workspace to human rhythm without sacrificing rigor. It centralizes timezone, work-hour boundaries, notification policy, locale, and assistant style so scheduling, reminders, and AI behavior can respond to a coherent personal contract instead of scattered settings. The capsule matters because execution systems become noisy and brittle when they ignore the conditions under which a user actually works. By treating preferences as structured knowledge, the vault can make planning and notification behavior more humane while still keeping those adaptations explicit, reviewable, and portable across modules.",
+    "keywords": [
+      "user-preferences",
+      "timezone",
+      "work-hours",
+      "notifications",
+      "assistant",
+      "calendar",
+      "planner"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-user-preferences-v1-timezone-work-hours"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a9faee2327e75479d43a840c54d148d2028a980b712311f57b21c5e694aa0de561a2131972a514365f5ff9f45e2622078b0360bbcf252bdb301e9686fadc8773"
+}

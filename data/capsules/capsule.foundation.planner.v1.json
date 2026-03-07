@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.planner.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T15:00:00Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Planner",
+    "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core",
+    "priority": "high",
+    "progress": 62,
+    "estimatedHours": 260,
+    "actualHours": 140,
+    "dueDate": "2026-05-31",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## 1. Definition and Essence\nThe Planner is the foundational module within the N1Hub Workspace responsible for structuring intent over time. It transforms abstract goals and long-term vision into actionable, time-bound tasks, milestones, and roadmaps. It is the bridge between ambition and daily execution. Built on the CapsuleOS graph, the Planner treats every plan item as a capsule linked to projects, dependencies, and supporting knowledge.\n\n## 2. Core Functions\n- Roadmap definition with phases, milestones, and key results.\n- Goal setting across quarterly and yearly horizons with hierarchical decomposition.\n- Task management with priority, due dates, estimated effort, and dependencies.\n- Daily and weekly plan generation based on load, deadlines, and preferences.\n- AI-assisted planning that uses A2C for natural language task extraction.\n- Explicit agent lanes for short-horizon and long-horizon planning through Daily Planner Agent and Roadmap Planner Agent.\n\n## 3. Data Model\nPlanner-relevant metadata includes dueDate, priority, progress, status, estimatedHours, actualHours, recurrence, and completedAt. Tasks, goals, and milestones are represented as capsules and connected with part_of, depends_on, and references links.\n\n## 4. Integration\nThe Planner coordinates with Tracker for execution telemetry, with the Personal AI Assistant for decomposition and scheduling suggestions, with project capsules for scope boundaries, and with N-Infinity for background risk detection and re-planning. The new planner agents make the split between strategic and tactical planning explicit instead of leaving all schedule intelligence buried in one generic assistant surface.\n\n## 5. Philosophical Alignment\nPlanner operationalizes To Dig Deep by converting high-level intent into verifiable and sovereign units of execution that can be tracked, audited, and improved over time.\n\n## 6. Future Potential\nAutomatic re-planning, calendar synchronization, and team planning overlays can extend the Planner while preserving capsule-native sovereignty.\n\n## Canonical Planner Entities\nGoal, Milestone, Task, and Roadmap are now defined as dedicated sovereign foundation capsules and linked from this Planner capsule."
+  },
+  "neuro_concentrate": {
+    "summary": "The Planner is the strategic and tactical engine of the N1Hub Workspace. It captures goals, decomposes them into milestones and tasks, and schedules execution as linked capsules across the graph. By combining roadmap structure, dependency awareness, and time metadata, it turns abstract intent into accountable daily action. The Planner integrates with the Personal AI Assistant for decomposition and scheduling suggestions, with the Tracker for execution feedback, and with N-Infinity for risk detection and adaptive replanning, embodying To Dig Deep through disciplined progression from vision to verifiable outcomes.",
+    "keywords": [
+      "planner",
+      "roadmap",
+      "goals",
+      "tasks",
+      "deadlines",
+      "milestones",
+      "scheduling",
+      "workspace",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d947df84eefd89895115721b2c16cb4a16121919ee5f3807152c2acdf01f27bba5b8e84bd8090602ba8950c27c4c71f1f3f17eed2b9d3d8c6af9b2c9280df8d9"
+}

@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.g08.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T18:49:09.572Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Validation Gate G08: Keyword Count",
+    "semantic_hash": "capsule-foundation-g08-v1-validation-gate-keyword-count",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Validation Gate G08: Keyword Count\n\n## 1. Definition and Essence\nThis capsule formalizes G08 within the CapsuleOS validation sequence. Ensures keywords remain focused and bounded. It defines why the gate exists, what conditions must be true, and how failures should be interpreted by humans and autonomous systems before capsule admission.\n\n## 2. Core Attributes\n- `gate_id` canonical identifier used in validator output\n- `intent` concise statement of epistemic purpose\n- \n      \n`pass_condition` threshold: 5 <= keywords <= 15\n- `failure_examples` representative anti-patterns\n- `autofix_policy` indicating whether non-destructive correction is allowed\n\n## 3. Lifecycle\nG08 is executed in deterministic order during validation. Failures produce structured issues, optional autofix may apply where safe, and unresolved errors block publication until corrected or explicitly overridden by governance policy.\n\n## 4. Integration\n- **16 Gates Hub:** grouped under canonical gate taxonomy.\n- **Validator Engine:** emits machine-readable issues tagged by gate ID.\n- **A2C Validate Stage:** uses gate outcomes to route accept/reject/quarantine.\n- **Architect Override:** allows audited exception pathways where governance permits.\n\n## 5. Philosophical Alignment\nG08 serves To Dig Deep by enforcing precise epistemic boundaries so knowledge enters the graph through rigor rather than convenience.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Validation Gate G08 keeps keyword sets focused and bounded. It exists because keywords are meant to sharpen retrieval, clustering, and graph discovery, but they quickly lose value when authors overstuff them or provide too little signal. The gate matters as a discipline on semantic indexing: it prevents keyword lists from becoming either meaningless noise or anemic labels. By forcing a reasonable range, G08 improves searchability and topic clarity while keeping neuro-concentrate metadata compact enough to remain useful across interfaces and automation.",
+    "keywords": [
+      "validation",
+      "gate",
+      "g08",
+      "capsuleos",
+      "quality",
+      "integrity",
+      "epistemic"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-foundation-g08-v1-validation-gate-keyword-count"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.16-gates.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-validate.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "8a1bb9b237234e96aa5c87860c5daa4680fe78e05a1e91f7a5deb1496f557fefef3ef89e4fc9e7c544f4578867298ed846702dc7d040af67d0e7c874b7ac2fe2"
+}

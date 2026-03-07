@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.tilesimsv2.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:00:10.536Z",
+    "updated_at": "2026-03-06T18:43:17.546Z",
+    "name": "TileSims V2",
+    "semantic_hash": "capsule-project-tilesimsv2-v1-tilesims-v2-simulation-generation",
+    "priority": "medium",
+    "progress": 8,
+    "estimatedHours": 1200,
+    "actualHours": 80,
+    "dueDate": "2027-02-15",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# TileSims V2\n\n## 1. Definition and Essence\nTileSims V2 represents the next-generation execution hub for tile simulation and generation workflows, extending lessons from earlier TileSims efforts into an upgraded architecture and product direction.\n\n## 2. Core Attributes\n- `upgrade_scope` capabilities introduced beyond prior TileSims version\n- `migration_plan` transition path from current TileSims assets\n- `simulation_pipeline` core generation and optimization steps\n- `integration_surface` AI, layout algorithms, and scanning inputs\n- `release_milestones` staged rollout checkpoints\n\n## 3. Lifecycle\nTileSims V2 advances through prototyping, migration, validation, and release phases while preserving lineage to earlier simulation artifacts.\n\n## 4. Integration\n- **TileSims Existing Project:** lineage and migration reference.\n- **Lidar/Layout/Generative Concepts:** conceptual technical inputs.\n- **Planner/Tracker:** execution decomposition and monitoring.\n- **Independent Project Set:** root-level project unless explicitly nested.\n\n## 5. Philosophical Alignment\nTileSims V2 reflects To Dig Deep through iterative product refinement grounded in real technical feedback and measurable progress.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "TileSims V2 in the Dream branch is the explicit successor program for the spatial product line. It treats the next version as a clean execution arc for migration, stronger simulation fidelity, more production-grade workflows, and a clearer bridge from prototype logic to a marketable system. The branch matters because V2 is not maintenance; it is a forward architectural bet. Dream preserves that bet as an accountable project trajectory rather than leaving it as an informal aspiration.",
+    "keywords": [
+      "tilesimsv2",
+      "next-generation",
+      "migration",
+      "architecture-upgrade",
+      "simulation",
+      "release-sequencing",
+      "product-validation",
+      "tilesims-lineage",
+      "roadmap"
+    ],
+    "confidence_vector": {
+      "extraction": 0.93,
+      "synthesis": 0.95,
+      "linking": 0.95,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.12
+    },
+    "semantic_hash": "capsule-project-tilesimsv2-v1-tilesims-v2-simulation-generation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.concept.lidar-scanning.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.concept.tile-layout-algorithm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.concept.generative-ai-tile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "00509823a2292c85dcb19c2b6f8ac6b7fab63fd6fd2e3e46f788ffd742cb1b4c0584f3e06f56c91c32db5da608f5a0e9591cc823a00249330e17795ec6f767e9"
+}

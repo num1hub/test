@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine-prospector-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:20:00Z",
+    "updated_at": "2026-03-06T23:20:00Z",
+    "name": "DeepMine Prospector Agent",
+    "semantic_hash": "deepmine-prospector-agent-source-scouting-veins-discovery-mapping",
+    "source": {
+      "uri": "n1hub://specs/deepmine-agent-cluster-2026-03-06",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 22,
+    "estimatedHours": 150,
+    "actualHours": 36,
+    "dueDate": "2026-08-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine Prospector Agent\n\n## 1. Definition and Essence\nDeepMine Prospector Agent is the scouting role of the N1Hub intelligence-mining stack. It searches for promising veins of value across user questions, open-web research space, existing capsules, unresolved graph gaps, and provider-accessible model reasoning paths before expensive mining work begins.\n\n## 2. Core Responsibilities\n- `deposit_discovery` finds topics, sources, and graph regions worth mining.\n- `source_mapping` identifies whether the best next dig should target LLMs, web research, user corpora, or existing capsules.\n- `branch_gap_analysis` looks for places where `Real` is thin and `Dream` needs more evidence or structure.\n- `value_estimation` scores potential mining targets by depth, cost, and expected graph impact.\n- `mining_brief_generation` packages prospecting output into bounded briefs for Miner and Foreman lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Prospector is the upstream discovery worker of DeepMine. It should reduce waste by deciding where the mine should open next, rather than letting every user query or background lane trigger expensive blind excavation.\n\n## 4. Philosophical Alignment\nProspector serves To Dig Deep by refusing shallow digging in random places and instead locating the richest seams before extraction begins.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine Prospector Agent is the scouting intelligence that decides where the N1Hub mine should dig next. It surveys user intent, graph gaps, web research directions, and model-accessible reasoning opportunities, then turns those signals into bounded mining briefs instead of allowing blind expensive excavation. The role matters because DeepMine becomes far more powerful when prospecting is separated from extraction. By explicitly modeling the scouting phase, the vault gains a disciplined way to decide which veins deserve compute, which belong in Dream, and which are not worth opening at all.",
+    "keywords": [
+      "deepmine",
+      "prospector-agent",
+      "source-discovery",
+      "graph-gaps",
+      "research-scouting",
+      "dream-branch",
+      "capsule-jobs",
+      "background-agent-runtime",
+      "n1hub",
+      "to-dig-deep"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-prospector-agent-source-scouting-veins-discovery-mapping"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "9f354812a17b2061ef07ccd6db0652f702e29562e297510933707cd27dfad7e96fd6b99d3722489e88333ea1fe04e4cd1e6098176fab38deb90fdeee7e0c5b96"
+}

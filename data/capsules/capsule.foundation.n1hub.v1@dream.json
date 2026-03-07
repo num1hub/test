@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-02-26T12:00:00Z",
+    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core",
+    "updated_at": "2026-03-06T18:43:16.780Z",
+    "source": {
+      "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
+      "type": "internal_derivation"
+    },
+    "name": "N1Hub Runtime",
+    "priority": "high",
+    "progress": 58,
+    "estimatedHours": 620,
+    "actualHours": 280,
+    "dueDate": "2026-09-20",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub.com: The Digital Continent for Sovereign Projects\n\n## 1. Mission and Philosophy\nN1Hub.com is the ultimate digital habitat designed to help individuals and teams systematically grow and turn potential into reality. Guided by the philosophy **\"To Dig Deep\"**, we reject superficial answers, mining the depths of information to extract true wisdom. N1Hub represents the monumental step **\"Between Zero and One\"** — the transition from entropic chaos to structured, immortal order. We empower users to become the best versions of themselves by building projects of any scale, from personal planners to complex business systems, within a unified, sovereign environment.\n\nWhere the Gold Master defines strategic doctrine, this capsule defines the runtime contract of how N1Hub operates in active use.\n\n## 2. Core Architecture: CapsuleOS\nEverything inside N1Hub exists as a **Capsule** — a cryptographically sealed, self-aware atom of knowledge. Governed by the strict **5-Element Law** and validated through **16 Quality Gates**, CapsuleOS guarantees provenance, immutability, and semantic integrity.\n\n## 3. The Extraction & Refining Pipeline\n- **DeepMine**: Our cognitive quarry. DeepMine interfaces with top LLMs (Anthropic, OpenAI, Gemini) and the internet to extract high-value raw data, acting as the industrial drill for our mining operations.\n- **A2C (Anything-to-Capsules)**: The refinery engine. It ingests raw data, normalizes, segments, extracts, synthesizes, and seals it into pristine capsules, transforming chaotic inputs into intellectual capital.\n\n## 4. The Autonomous Ecosystem\n- **N-Infinity**: A swarm of background AI agents (Weaver, Gardener, Parliament, Innovator) that continuously patrol the capsule graph. They discover hidden connections, resolve contradictions, and compound knowledge 24/7 without human intervention.\n- **Workspace**: The user's command center, featuring a Planner, Tracker, and an AI Personal Assistant that seamlessly interacts with the user's sovereign capsule graph.\n\n## 5. Projects & Monetization\nN1Hub is not just a tool; it is a canvas. Users can create diverse projects, such as **TileSims** — a digital twin application bridging the physical and digital worlds. Creators can invite collaborators, share their graphs, and monetize their architectural templates on the Capsule Marketplace, turning their knowledge into tradable, legally significant assets."
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Runtime in the Dream branch captures the future operating habitat where Workspace, DeepMine, A2C, N-Infinity, collaboration, and economic modules behave like one governed system instead of a set of adjacent surfaces. It imagines cleaner continuity between intelligence extraction, refinement, planning, execution, and monetization than the real branch can fully enforce today. The capsule matters because runtime quality is where architecture either becomes lived reality or stays theoretical. Dream therefore preserves N1Hub as a more unified sovereign runtime rather than only the practical shell already running now.",
+    "keywords": [
+      "n1hub-runtime",
+      "sovereign-projects",
+      "capsuleos",
+      "a2c",
+      "deepmine",
+      "n-infinity",
+      "workspace",
+      "marketplace",
+      "monetization",
+      "tilesims",
+      "execution-layer"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.access-models.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.between-zero-and-one.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-intellectual-capital.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-gold-master.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "7264ee3fcb541fb76a766f305613d5d4e60b0b4944b70cef7788fba9014e18ba25a3b08f9aa3cd24dbe9728bbbeeec62cd83df6e527e8c11a0afc1007e2fdc9a"
+}

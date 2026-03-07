@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.symphony-run-attempt.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T15:58:22Z",
+    "updated_at": "2026-03-06T18:41:12.201Z",
+    "name": "Symphony Run Attempt",
+    "semantic_hash": "symphony-run-attempt-issue-workspace-status-retry-lifecycle",
+    "source": {
+      "uri": "internal://lib/symphony/runner.ts",
+      "type": "repository_implementation"
+    },
+    "priority": "high",
+    "progress": 55,
+    "estimatedHours": 112,
+    "actualHours": 58,
+    "dueDate": "2026-06-28",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Run Attempt\n\n## 1. Definition and Essence\nSymphony Run Attempt defines one bounded execution attempt for one issue. It begins when the orchestrator dispatches work into a prepared workspace and ends as succeeded, failed, timed out, stalled, or cancelled by reconciliation.\n\n## 2. Core Attributes\n- `issue_id` and `issue_identifier` for tracker identity.\n- `attempt` number for retries and continuation context.\n- `workspace_path` and `started_at` for runtime grounding.\n- `status` and optional `error` for terminal classification.\n- `session_refs` to the live agent session created during the attempt.\n- `turn_count` and `duration` for runtime accounting.\n\n## 3. Role in Symphony\nRun Attempt is the unit Symphony schedules, retries, logs, and reasons about. It is broader than an agent session because one attempt owns workspace preparation, prompt rendering, session startup, cleanup hooks, and terminal outcome mapping.\n\n## 4. N1Hub Alignment\nFor N1Hub, this atom matters because it ties issue execution to repository truth: workspace preparation, validation, testing, and observed agent behavior are all part of one accountable attempt record.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Run Attempt defines the lifecycle unit that the orchestrator actually dispatches, monitors, and retries for a given issue. It binds issue identity, attempt number, workspace path, start time, terminal status, error classification, duration, and the live agent session opened during execution. The capsule matters because an agent session alone is too narrow: Symphony also owns workspace preparation, prompt rendering, hook execution, timeout handling, and reconciliation-driven cancellation. By naming Run Attempt explicitly, the graph gains a clean operational object for reasoning about retries, outcome quality, and the difference between one live session and one full attempt to move an issue forward.",
+    "keywords": [
+      "symphony",
+      "run-attempt",
+      "issue",
+      "workspace",
+      "retry",
+      "lifecycle",
+      "orchestrator",
+      "status"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "symphony-run-attempt-issue-workspace-status-retry-lifecycle"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "d510ab7516201f068f45d5ab32eedc55eefdc95d1f436b692466d4df3e0f5304ac092d7cd3f8b13cdb9e002c38c45b944a22b6e15fbb5356c801c615e6a5cfd2"
+}

@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.symphony-retry-entry.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T15:58:22Z",
+    "updated_at": "2026-03-06T18:41:12.193Z",
+    "name": "Symphony Retry Entry",
+    "semantic_hash": "symphony-retry-entry-backoff-claim-release-reschedule-orchestrator",
+    "source": {
+      "uri": "internal://lib/symphony/orchestrator.ts",
+      "type": "repository_implementation"
+    },
+    "priority": "high",
+    "progress": 49,
+    "estimatedHours": 84,
+    "actualHours": 32,
+    "dueDate": "2026-06-24",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Retry Entry\n\n## 1. Definition and Essence\nSymphony Retry Entry defines the scheduled retry state held by the orchestrator after a run attempt exits or is cancelled. It captures which issue remains claimed, which retry attempt is due next, when the timer should fire, and why the issue was requeued.\n\n## 2. Core Attributes\n- `issue_id` and human-readable `identifier`.\n- `attempt` number for exponential backoff accounting.\n- `due_at` timestamp and runtime timer handle.\n- `error` or continuation reason that justified requeueing.\n- `claim_state` indicating whether the issue remains reserved.\n- `release_rule` for when the claim should be dropped instead of retried.\n\n## 3. Role in Symphony\nRetry Entry is what keeps the orchestrator stateful without a database. It lets Symphony pause, back off, coalesce, and later redispatch work while preserving ownership semantics across transient failure or normal continuation gaps.\n\n## 4. N1Hub Alignment\nThis atom is important because issue execution in N1Hub is not one-shot. The system needs disciplined retry behavior so failures, stalls, or short continuation gaps do not collapse into duplicate work or silent abandonment.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Retry Entry defines the in-memory retry object that lets the orchestrator preserve control after an attempt ends without requiring a persistent database. It holds issue identity, retry number, due time, current claim state, and the continuation or error reason that justified rescheduling. The capsule matters because Symphony is intentionally tracker-driven and restart-light, which means retry semantics are one of the few places where runtime state must stay explicit and disciplined. By modeling Retry Entry separately from Run Attempt, the graph can describe backoff, release, and slot-pressure behavior without conflating queued retry state with actively running work.",
+    "keywords": [
+      "symphony",
+      "retry-entry",
+      "backoff",
+      "claim",
+      "release",
+      "orchestrator",
+      "reschedule",
+      "queue"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "symphony-retry-entry-backoff-claim-release-reschedule-orchestrator"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-run-attempt.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e01674453cf047ae3e8edd4299bb23a292a49c69e0fc0847cf3e977812426042aef7ed1c7e2c8f1db2aa4458fec9033a9f2b42e728c0f76ab6b1d2bdb9c30215"
+}

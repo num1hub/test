@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub-gold-master.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T00:00:00Z",
+    "semantic_hash": "n1hub-gold-master-vision-ecosystem-sovereign-core-hub",
+    "updated_at": "2026-03-06T18:43:16.749Z",
+    "source": {
+      "uri": "internal://capsule.person.egor-n1.v1",
+      "type": "founding_vision"
+    },
+    "name": "N1Hub Gold Master",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub: The Sovereign Digital Continent\n\n## 1. Vision & Mission\nN1Hub is not merely a platform; it is a sprawling digital continent engineered to counteract the decay of human knowledge. Our ultimate mission is to create a secure, intelligent digital habitat where every individual, team, and enterprise can transform chaotic, entropic ideas into structurally flawless, sovereign projects.\n\nThis Gold Master capsule is intentionally constitutional and visionary: it defines destination, non-negotiable principles, and strategic boundaries. Day-to-day operational behavior is specified in `capsule.foundation.n1hub.v1`.\n\nAt the very core of this continent lies the philosophical imperative **\"To Dig Deep\"**. We reject the superficiality of modern information consumption. We refuse to accept shallow, \"deep-sounding\" AI hallucinations. Instead, we mine the depths of raw data to extract, refine, and crystallize absolute wisdom. N1Hub facilitates the monumental journey **\"Between Zero and One\"**—the precise transition from chaotic nothingness (entropy) to structured, self-aware, and eternal digital life (negentropy).\n\n## 2. Core Architecture\nN1Hub operates on a rigorous, multi-layered technological stack:\n\n- **CapsuleOS (The Immutable Constitution)**: The foundation of all reality within N1Hub. Every entity—be it a task, a document, or a physical wall—is a \"capsule.\" Every capsule obeys the **5-Element Law** (`metadata`, `core_payload`, `neuro_concentrate`, `recursive_layer`, `integrity_sha3_512`). Before entering the active Cognitive Plane, a capsule must survive **16 Validation Gates (G01–G16)**, ensuring syntactic perfection, semantic parity, and cryptographic unforgeability.\n\n- **A2C (Anything-to-Capsules)**: The cognitive refinery. It ingests raw data from human input or DeepMine, and passes it through a 9-step industrial pipeline (Normalize, Segment, Extract, Synthesize, Hash, Validate, Emit) to produce pure, sealed capsules.\n\n- **N-Infinity (The Swarm)**: The self-evolving brain of the ecosystem. A swarm of autonomous background agents operating 24/7. **Weavers** discover hidden links; **Gardeners** prune decay; **Parliaments** arbitrate logical contradictions; and **Innovators** synthesize new hypotheses, generating intellectual compound interest.\n\n- **DeepMine**: The extraction layer. The heavy machinery that interfaces with top-tier LLMs (Anthropic, OpenAI, Gemini) and the internet, executing precise prompt-drills to supply A2C with high-value raw ore.\n\n- **Workspace**: The user's personalized command center. It unifies a Planner, Tracker, Dashboard, and an ambient AI Personal Assistant, allowing users to interact seamlessly with their complex capsule graphs without seeing the underlying code.\n\n- **Real/Dream Branching**: A Git-like mechanism for reality. Users can fork a project into a `Dream` state to simulate changes safely. A recursive diff algorithm calculates the delta between the `Real` baseline and the `Dream` state, instantly generating estimates and action plans.\n\n## 3. Project Lifecycle & Economy\nOn N1Hub, a project is not a folder; it is a **Capsule-Hub**. \nA user initiates a project, populates it with atomic capsules (tasks, notes, financial records), and invites collaborators assigning strict, role-based access. As the project evolves from `draft` to `active` and eventually to a sealed `sovereign` state, it gains immense value.\n\nThis value is liquid. A sovereign project can be minted as a **Template** and sold on the N1Hub Marketplace. Through the **N1 Coin** ecosystem, creators receive automated royalties via smart contracts whenever their intellectual capital is reused or extended.\n\nTo ensure perpetual sustainability without compromising the founder's vision, the economy is anchored by the **Sovereign Independent Autonomous Fund (SIAF)**—a treasury operating on a strict 51% (Creator) / 49% (Community) governance split.\n\n## 4. Open Source & Trust\nTrust is cryptographically guaranteed, but community adoption requires transparency. N1Hub employs an **Open Core** strategy:\n- **The Open Commons**: The CapsuleOS 5-Element specifications, the 16 Validation Gates, Zod schemas, and client SDKs are fully open-source. This allows global researchers to audit the physics of our universe.\n- **The Proprietary Engine**: The industrial mechanisms that drive monetization—such as A2C extraction prompts, N-Infinity swarm orchestration, and the Workspace UI—remain closed to secure the ecosystem's competitive moat.\n\nFurthermore, optional Blockchain integration provides Decentralized Identity (DID), verifiable credentials, and immutable tokenization for sovereign capsules.\n\n## 5. Future Outlook\nN1Hub begins as a personal vault and scales into a global knowledge commons. Its architecture inherently bridges the digital and physical worlds. Flagship implementations like **TileSims** demonstrate how physical objects (walls, pipes) become sovereign capsules, enabling millimeter-accurate digital twins and automated construction estimates.\n\nUltimately, N1Hub is positioned to become the default operating system for human and machine intelligence—a unified protocol where minds and agents collaborate seamlessly.\n\n## 6. Conclusion\nThe era of disposable files and fragmented data is over. N1Hub is the fortress of sovereign knowledge. We call upon the architects, the thinkers, and the builders who are starving for depth to join this movement. \n\nStop scratching the surface. **To Dig Deep. Between Zero and One.**"
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Gold Master in the Dream branch preserves the constitutional north star while extending it into the next planning horizon. It imagines doctrine that remains non-negotiable on depth, sovereignty, and trust, yet becomes clearer about branch intelligence, agent governance, productization, and economic scaling than the current articulation provides. The capsule matters because living systems need a future-facing doctrine, not just a founding proclamation frozen in reverence. Dream therefore keeps Gold Master as an active constitutional horizon for the ecosystem’s next stage, not only the preserved charter of its first one.",
+    "keywords": [
+      "n1hub-gold-master",
+      "vision-architecture",
+      "sovereign-knowledge",
+      "capsuleos",
+      "to-dig-deep",
+      "between-zero-and-one",
+      "deepmine",
+      "a2c",
+      "n-infinity",
+      "workspace",
+      "n1-coin",
+      "governance"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-gold-master-vision-ecosystem-sovereign-core-hub"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "extends"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.blockchain-opensource.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-projects.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.person.egor-n1.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "a86a2c7de1d6d8233ee75a06a240407a9715fbd0910bdc5de5322619ad99630bc3bbdcd50ba8ee3527f9325807b2f2e74a4178c20a1e64a7d49babac14cc5264"
+}

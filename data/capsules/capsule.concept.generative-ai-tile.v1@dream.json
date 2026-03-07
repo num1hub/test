@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.concept.generative-ai-tile.v1",
+    "version": "1.1.0",
+    "status": "draft",
+    "type": "concept",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T12:00:19Z",
+    "updated_at": "2026-03-06T18:43:15.624Z",
+    "semantic_hash": "generative-ai-tile-design-assistant-style-synthesis-variation",
+    "source": {
+      "uri": "internal://capsule.project.tilesims.v1",
+      "type": "internal_derivation"
+    },
+    "name": "Generative AI Tile",
+    "priority": "medium",
+    "progress": 12,
+    "estimatedHours": 220,
+    "actualHours": 28,
+    "dueDate": "2026-11-30",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Generative AI Tile Assistant Concept\n\n## 1. Purpose\nDefine an assistive AI layer that proposes tile design alternatives from style intent, room constraints, and catalog inventory.\n\n## 2. Functional Scope\nInterpret natural language prompts, generate multiple variants, and explain tradeoffs in cost and installation complexity.\n\n## 3. Safety\nRecommendations remain advisory and traceable with prompt and output provenance preserved.\n\n## 4. Integration\nThis concept integrates with scanning and layout capsules to provide an auditable end to end design assistant."
+  },
+  "neuro_concentrate": {
+    "summary": "Generative AI Tile in the Dream branch captures the future design-copilot layer of TileSims. It imagines more explainable alternative generation, better cost-aware style exploration, and tighter coupling between user intent, geometry constraints, and execution consequences before a design is accepted. The concept matters because generative design becomes shallow when it optimizes only aesthetics. Dream therefore preserves this capsule as a future design-intelligence concept where creativity stays accountable to buildability and traceable tradeoffs.",
+    "keywords": [
+      "concept",
+      "generative-ai",
+      "design-assistant",
+      "style-intent",
+      "variant-generation",
+      "explainability",
+      "provenance",
+      "tilesims",
+      "human-in-the-loop"
+    ],
+    "confidence_vector": {
+      "extraction": 0.89,
+      "synthesis": 0.91,
+      "linking": 0.89,
+      "provenance_coverage": 0.91,
+      "validation_score": 0.88,
+      "contradiction_pressure": 0.24
+    },
+    "semantic_hash": "generative-ai-tile-design-assistant-style-synthesis-variation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.concept.tile-layout-algorithm.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.concept.lidar-scanning.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "909fb6445797861653ca2abc838a890d658477ea6f7fd9024b1a5a9c4b219c331d2b25effd27605106ceec727f7128bf40e2ac8c021b3a9e8ce95b4c42cd8e92"
+}

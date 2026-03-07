@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.apsnytravel.v1",
+    "version": "1.1.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:00:10.536Z",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "ApsnyTravel",
+    "semantic_hash": "capsule-project-apsnytravel-v1-independent-travel-roadmap-sovereign",
+    "source": {
+      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
+      "sha256": "2a142c1bf28a8d45e759ffaf1f2e9da7a97997578c70bf508c6b971d93300354",
+      "type": "architect_prompt"
+    },
+    "priority": "medium",
+    "progress": 16,
+    "estimatedHours": 420,
+    "actualHours": 70,
+    "dueDate": "2026-09-01",
+    "tier": 4
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# ApsnyTravel\n\n## 1. Definition and Essence\nApsnyTravel is an independent project initiative with its own product trajectory and sovereign goals. It may reuse selected N1 capabilities but remains a root project without structural containment under N1 platform hubs.\n\n## 2. Core Attributes\n- `domain_scope` travel-oriented product and workflow boundaries\n- `feature_roadmap` independent delivery milestones\n- `integration_points` optional references to N1 modules\n- `ownership` project-specific stewardship and decision rights\n- `success_metrics` domain KPIs and user outcomes\n\n## 3. Lifecycle\nApsnyTravel evolves through independent roadmap iterations, selective integration with shared tooling, and autonomous governance over scope and prioritization.\n\n## 4. Integration\n- **Workspace/Planner:** optional support systems, not hierarchy parent.\n- **A2C:** optional data-to-capsule workflows for travel knowledge.\n- **Independent Project Set:** remains sovereign root node.\n- **Marketplace:** optional future template distribution channel.\n\n## 5. Philosophical Alignment\nApsnyTravel honors To Dig Deep by pursuing domain mastery while preserving sovereign independence from core platform hierarchy.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "ApsnyTravel is a sovereign root project for a travel-oriented product line with its own roadmap, ownership, and success metrics. It is kept outside the CapsuleOS execution tree on purpose: the vault treats it as an independent initiative that may reuse shared tooling without being subordinated to the core platform. This hub therefore represents domain autonomy first and integration second. It is the right place to accumulate itinerary logic, travel workflows, local knowledge, and future commercialization artifacts while preserving clean boundaries from the core N1Hub architecture.",
+    "keywords": [
+      "apsnytravel",
+      "travel-product",
+      "independent-project",
+      "roadmap",
+      "local-knowledge",
+      "workflows",
+      "commercialization",
+      "domain-autonomy",
+      "sovereign-root"
+    ],
+    "confidence_vector": {
+      "extraction": 0.93,
+      "synthesis": 0.95,
+      "linking": 0.95,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.12
+    },
+    "semantic_hash": "capsule-project-apsnytravel-v1-independent-travel-roadmap-sovereign"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "21334c61e96432f59cd0154f2ee82091f526412fd1077d7e0d743722d1d5e45d853dcf8ffe984139cae05adfb0aab05ca77fe369902aa8358072de26cf6d2f93"
+}

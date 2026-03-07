@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.project.v1",
+    "version": "1.4.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "project-hub-lifecycle-roles-monetization-blueprint-gold-master",
+    "updated_at": "2026-03-06T13:44:54.954Z",
+    "name": "Project Blueprint",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Project: The Sovereign Graph of Creation\n\n## 1. Definition\nIn the N1Hub ecosystem, a **Project** is not a static folder or a flat list of files; it is a **capsule-hub**—a dynamic, living organism constructed from atomic capsules (tasks, documents, discussions, people, finances) bound together by typed topological links. Governed by the CapsuleOS 5-Element Law, a project represents the crystallization of a creator's intent into a structured, cryptographically sealed, and evolving graph.\n\n## 2. Project Lifecycle\nA project traverses a definitive lifecycle through specific statuses:\n- **`draft`**: The inception phase. Capsules are hot, mutable, and freely edited without strict cryptographic sealing.\n- **`active`**: The execution phase. The graph expands as tasks are completed, links are forged, and N-Infinity agents weave new insights.\n- **`pause`**: Temporary suspension of active evolution.\n- **`frozen`**: A read-only state for historical preservation or review.\n- **`sovereign`**: The terminal, golden state. The project is fully realized, cryptographically sealed as an immutable artifact, and serves as an absolute source of truth.\n\n## 3. Roles and Participants\nProjects are inherently collaborative. Roles are defined by typed links (e.g., `member_of`) extending from person-capsules to the project-hub, carrying specific access rights:\n- **`owner`**: Absolute sovereign control over the graph.\n- **`contributor`**: Active builders authorized to inject new capsules.\n- **`investor`**: Stakeholders linked via transaction-capsules, possessing read and audit privileges.\n- **`advisor`**: Consultants providing strategic input and oversight.\n- **`reviewer`**: Entities responsible for arbitrating epistemic contradictions.\n\n## 4. Visibility and Access\nThe project-hub's metadata dictates its boundary:\n- **`private`**: Isolated to the owner and explicitly invited roles.\n- **`public_read`**: Open for global viewing and agent crawling.\n- **`public_contribute`**: Open for external pull requests and capsule injections.\n- **`public_apply`**: Open for tender submissions and contest entries.\n\n## 5. Monetization and Marketplace\nA project can achieve ultimate liquidity by being transformed into a tradable asset. An active or sovereign project can be sealed into a **Template** and listed on the N1Hub Marketplace. Subsequent instantiations (`fork` or `derived_from`) automatically generate royalties and track provenance back to the original author, creating a perpetual economic engine for intellectual capital.\n\n## 6. Real-World Instantiation\nBeyond abstract knowledge, a project can map physical reality. **TileSims** is a prime example: a project where the graph consists of physical capsules (walls, pipes, tiles) branching into `Real` and `Dream` states, proving the absolute versatility of the Project blueprint."
+  },
+  "neuro_concentrate": {
+    "summary": "Project Blueprint defines how a capsule hub becomes a governed delivery space rather than a folder-shaped container. It establishes lifecycle semantics, participant boundaries, visibility modes, branchability, and the path from internal execution toward template-grade reusable capital. The capsule matters because projects are one of the main units of reality users manipulate inside N1Hub, and weak project semantics would immediately blur work, ownership, and monetization. By making project structure explicit, the vault can treat initiatives, subprojects, and physical-world programs such as TileSims as first-class sovereign graphs with accountable lineage and operational discipline.",
+    "keywords": [
+      "project-blueprint",
+      "delivery-space",
+      "lifecycle",
+      "visibility",
+      "branchability",
+      "ownership",
+      "template-capital",
+      "subprojects",
+      "sovereign-graph"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "project-hub-lifecycle-roles-monetization-blueprint-gold-master"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.role.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.invitation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-template.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "e79f71ab264621faac46b367806743f19d6d7e6c80264787306b301dfc01927e327e860e3423240d131c79fe9f8550ce1931772e33b7f97359777563e9ffd4a7"
+}

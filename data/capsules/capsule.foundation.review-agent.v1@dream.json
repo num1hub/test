@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.review-agent.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T23:48:00Z",
+    "updated_at": "2026-03-06T23:54:00Z",
+    "name": "Review Agent",
+    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment",
+    "priority": "high",
+    "progress": 41,
+    "estimatedHours": 260,
+    "actualHours": 42,
+    "dueDate": "2026-10-24",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Review Agent\n\n## Dream Direction\nIn the Dream branch, Review Agent becomes a stronger critique layer for capsule work, delegated jobs, and branch promotions. It should evolve into a more legible internal skeptic that can explain why something is ready, weak, risky, or still missing proof.\n\n## Future Potential\n- clearer merge-readiness judgments\n- stronger proof pressure on mined or synthesized output\n- better coordination with validation and branch governance\n- improved human-facing review summaries\n\n## Why It Matters\nDream preserves Review Agent as the skeptical intelligence that keeps a multi-agent system from flattering itself with shallow success."
+  },
+  "neuro_concentrate": {
+    "summary": "Review Agent in the Dream branch represents a stronger critique and judgment role for N1Hub. It pushes toward clearer merge-readiness decisions, better proof pressure, and more legible review summaries for humans and other agents. The capsule matters because a multi-agent vault needs an explicit skeptic, not just more producers. Dream therefore preserves an internal critic that can challenge weak work before it hardens into accepted structure or branch promotion prematurely.",
+    "keywords": [
+      "review-agent",
+      "dream-branch",
+      "critique",
+      "proof-pressure",
+      "merge-readiness",
+      "validation",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "7c4ccf1aa3caca5856177007ffee70783779f8ec59dcfc54a02e5028bb727036f3d0a7f49d7e14f25a7dcd4356da0d75d7c69de87cdba572ea16e51da40764a7"
+}
