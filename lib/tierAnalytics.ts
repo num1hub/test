@@ -51,7 +51,7 @@ export function countCapsulesByTier(capsules: SovereignCapsule[]): TierCounts {
 }
 
 function getPartOfParents(capsule: SovereignCapsule): string[] {
-  return (capsule.recursive_layer.links ?? [])
+  return (capsule.recursive_layer?.links ?? [])
     .filter((link) => link.relation_type === 'part_of' && typeof link.target_id === 'string')
     .map((link) => link.target_id)
     .sort((left, right) => left.localeCompare(right));

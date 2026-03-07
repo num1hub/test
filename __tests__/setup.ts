@@ -57,6 +57,15 @@ export const handlers = [
       { metadata: { capsule_id: 'test-1', type: 'concept', status: 'sovereign' }, neuro_concentrate: { summary: 'Summary 1' } }
     ])
   }),
+  http.get('/api/branches', ({ request }) => {
+    if (!request.headers.get('Authorization')) return new HttpResponse(null, { status: 401 })
+    return HttpResponse.json({
+      branches: [
+        { name: 'real', label: 'Real', isDefault: true, capsuleCount: 1 },
+        { name: 'dream', label: 'Dream', isDefault: false, capsuleCount: 1 },
+      ],
+    })
+  }),
   http.get('/api/capsules/test-capsule-id', ({ request }) => {
     if (!request.headers.get('Authorization')) return new HttpResponse(null, { status: 401 })
     return HttpResponse.json({
