@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-graph-maintenance.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T22:05:00Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "Capsule Graph Maintenance",
+    "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime",
+    "priority": "high",
+    "progress": 26,
+    "estimatedHours": 260,
+    "actualHours": 60,
+    "dueDate": "2026-08-08",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance defines the continuous operating discipline required to keep the sovereign graph healthy over time. It includes link hygiene, contradiction management, archival pressure, synthesis opportunities, suggestion generation, and the bounded background jobs that make this maintenance real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and other graph-shape problems.\n- `novel_synthesis` uses high-confidence regions to propose worthwhile new structure.\n- `maintenance_jobs` expresses this work as bounded capsule jobs rather than ambient magic.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity agents actually do night after night. It unifies Weaver, Gardener, Parliament, Innovator, Suggestion Agent, Capsule Job, and Night Shift Autonomy into one maintenance picture.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub makes it explicit that preservation, repair, arbitration, and synthesis are first-class system work.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Graph Maintenance defines the operating discipline that keeps the sovereign graph healthy after capsules are created. It matters because a knowledge graph does not stay coherent through creation alone; it also needs ongoing link hygiene, contradiction handling, archival pressure, structural refactoring, and bounded synthesis. This hub gives N1Hub a clear place to model the maintenance work performed by N-Infinity roles and their capsule jobs, instead of leaving that labor implicit or mythologized.",
+    "keywords": [
+      "capsule-graph-maintenance",
+      "graph-hygiene",
+      "contradiction-management",
+      "synthesis",
+      "archival",
+      "n-infinity",
+      "capsule-jobs",
+      "night-shift",
+      "capsuleos",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.gardener.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.innovator.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "c4a553ab72f71ce91fe1cbb98d63ea9ff59cc1824b4c67110a91404c41018b6609227eadd396358b79c0d8140716e1c9b99beac844e42fa5de42070c4c77ec2d"
+}

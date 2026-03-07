@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.n-infinity.v1",
+    "version": "1.2.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:00:10.536Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "N-Infinity Project",
+    "semantic_hash": "capsule-project-infinity-v1-agents-automation-assistant-planner",
+    "source": {
+      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
+      "sha256": "9dd13c892f21860a59a467d95e572ccfa1cdbb6a2d520bec34405595acf0a719",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 41,
+    "estimatedHours": 980,
+    "actualHours": 340,
+    "dueDate": "2026-08-15",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N-Infinity Project\n\n## 1. Definition and Essence\nN-Infinity Project coordinates the autonomous agent swarm implementation, including role design, capsule-job orchestration, daemon deployment, and risk-aware assistant augmentation across planning, tracking, and capsule-graph surfaces.\n\n## 2. Core Attributes\n- `agent_catalog` implemented and planned specialized agents.\n- `capsule_job_model` how graph signals become bounded work units.\n- `orchestration_policy` delegation, retry, and conflict resolution rules.\n- `safety_controls` guardrails for autonomous action boundaries.\n- `durable_state` memory, cooldown, and resume strategy for long-lived lanes.\n- `deployment_model` daemon topology, night-shift gating, and future 24/7 expansion.\n\n## 3. Lifecycle\nThe project evolves through incremental agent launches, behavior evaluation, host operations hardening, and governance-tuned autonomy expansion.\n\n## 4. Integration\n- **CapsuleOS Project:** child subsystem under core architecture.\n- **Foundation N-Infinity:** implemented conceptual swarm model.\n- **Symphony:** execution lane for capsule jobs and background orchestration.\n- **Background Agent Runtime:** daemon, state, and shift substrate for autonomous work.\n- **Personal AI Assistant:** primary user-facing agent interface.\n- **Planner/Tracker:** risk and suggestion telemetry consumers.\n\n## 5. Philosophical Alignment\nN-Infinity execution supports To Dig Deep by operationalizing continuous assistance grounded in sovereign graph evidence.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Project coordinates the autonomous-agent layer that sits on top of the capsule graph. It organizes role design, orchestration policy, safety controls, and feedback loops for specialized agents such as Parliament, Weaver, Reminder, Risk Detector, Gardener, and Suggestion Agent. The project hub exists so autonomy can be expanded deliberately, with governance and measurable behavior, instead of leaking unpredictably into user-facing flows. It is the execution stream that turns graph-grounded assistance from a philosophical promise into a controlled operating capability for Workspace, Planner, Tracker, and the Assistant.",
+    "keywords": [
+      "n-infinity",
+      "agent-swarm",
+      "orchestration",
+      "autonomy",
+      "safety-controls",
+      "planner",
+      "tracker",
+      "assistant",
+      "governance",
+      "feedback-loops"
+    ],
+    "confidence_vector": {
+      "extraction": 0.93,
+      "synthesis": 0.95,
+      "linking": 0.95,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.12
+    },
+    "semantic_hash": "capsule-project-infinity-v1-agents-automation-assistant-planner"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2c731277632fa477eecf5b926ca6f1cfa05e640dda65eb292937aac4eccbc5b4fb203c4d83cfd02c83b6b88eb290a506ec72cda0b76ebe8860f08874e0c1a981"
+}

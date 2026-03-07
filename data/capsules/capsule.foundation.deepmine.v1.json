@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.deepmine.v1",
+    "version": "1.5.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-02-27T12:00:00Z",
+    "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry",
+    "updated_at": "2026-03-06T21:10:00Z",
+    "name": "DeepMine",
+    "priority": "high",
+    "progress": 54,
+    "estimatedHours": 320,
+    "actualHours": 160,
+    "dueDate": "2026-08-05",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# DeepMine: The Cognitive Quarry\n\n## 1. Essence\nWithin the N1Hub ecosystem, **DeepMine** operates as the primary extraction layer. It is the cognitive quarry: a highly orchestrated interfacing system that drills into external Large Language Models, parses the open internet, and digests user-uploaded corpora. Its sole purpose is to extract high-value raw intellectual material and feed it directly into the **A2C (Anything-to-Capsules)** refinery.\n\n## 2. The Extraction Mechanism\nDeepMine does not produce finished capsules; it produces raw ore. It executes complex, multi-stage prompts designed to bypass surface-level conversational noise and extract deep logical structures, coding patterns, and semantic truths. This mining stack is now modeled through explicit roles: Prospector scouts where to dig, Foreman governs routing and shift policy, Miner performs bounded excavation, and Vault Update later helps turn refined output into branch-aware graph change.\n\n## 3. Internal Optimization and Routing\nTo operate efficiently at industrial scale, DeepMine employs advanced cost and performance architecture:\n- **Cost-Aware Routing**: It dynamically evaluates task complexity and routes work across the providers available to the user, including OpenAI, Anthropic, Gemini, DeepSeek, Grok, OpenRouter, and subscription-backed bridge lanes.\n- **Caching**: Frequent queries and common semantic extractions are cached aggressively to prevent redundant API calls and reduce token expenditure.\n- **Load Balancing**: Requests are distributed to avoid rate limits and spread pressure across available provider paths.\n- **Wallet-Backed Provider Access**: DeepMine resolves enabled providers, preferred models, and authorization paths from AI Wallet so model access can be user-scoped, subscription-aware, and free of raw browser-side secrets.\n- **Background Lane Support**: The same runtime can serve the Personal AI Assistant, Symphony tools, and N-Infinity capsule jobs instead of fragmenting inference into separate hidden adapters.\n\n## 4. Sleep-Time Compute\nDeepMine embodies the \"To Dig Deep\" philosophy of resource maximization by leveraging sleep-time compute. Highly complex, asynchronous extraction tasks can be scheduled for off-peak hours, including N1Hub's current night-shift autonomy windows, so heavy reasoning and graph work do not block active user interaction.\n\n## 5. Architectural Integration\nDeepMine is fully asynchronous. The AI Wallet acts as the upstream credential and authorization plane for provider access, while DeepMine remains responsible for routing, extraction, and asynchronous execution. It supplies the reasoning plane for assistant surfaces and background-agent runtime alike, then hands refined outputs into A2C, Symphony tools, or future graph-native pipelines. In this form DeepMine is no longer only an abstract quarry; it is a role-based mining stack with explicit upstream scouting, governed extraction, and downstream vault integration discipline.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "DeepMine is the foundational extraction layer of the N1Hub ecosystem, acting as a cognitive quarry that interfaces with leading LLM providers, the open internet, and custom user corpora to extract high-value raw data. It serves as the primary supply line for the A2C refinery and now also as the reasoning plane behind assistant surfaces and background agent lanes. Engineered for industrial efficiency, DeepMine uses cost-aware routing, aggressive caching, load balancing, and AI Wallet-backed provider resolution across API and subscription-style model paths. It maximizes resource utilization through sleep-time compute, making it a natural engine for N1Hub's night-shift autonomy model as well as future always-on background execution.",
+    "keywords": [
+      "deepmine",
+      "extraction-layer",
+      "cognitive-quarry",
+      "provider-routing",
+      "sleep-time-compute",
+      "background-agents",
+      "ai-wallet",
+      "n-infinity",
+      "symphony",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-skills-registry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "5a63d6cf5efefa4afb64a027fa8cfa81ed0edd1cd4e5609712333673a1ce7e2987d3cbdf45da1f2ee80c06e451c21977c9b54fd93bd795e41f0a929356e27c21"
+}

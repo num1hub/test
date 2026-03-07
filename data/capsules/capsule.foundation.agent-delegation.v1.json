@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-delegation.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T22:05:00Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "Agent Delegation",
+    "semantic_hash": "agent-delegation-handoff-lanes-approvals-results-escalation-runtime",
+    "priority": "high",
+    "progress": 32,
+    "estimatedHours": 180,
+    "actualHours": 48,
+    "dueDate": "2026-07-26",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Delegation\n\n## 1. Definition and Essence\nAgent Delegation defines the explicit handoff contract by which one intelligence surface in N1Hub asks another lane to do bounded work. It describes how an assistant session, a suggestion flow, or an operator action turns into a task packet for DeepMine, Symphony, or N-Infinity, and how results or failures return back to the origin.\n\n## 2. Core Attributes\n- `requester` identifies the surface or agent issuing the handoff.\n- `target_lane` names the execution lane such as DeepMine, Symphony, or N-Infinity.\n- `task_packet` contains scope, desired outcome, and relevant capsule references.\n- `approval_boundary` defines whether the handoff is automatic, suggested, or operator-confirmed.\n- `result_summary` captures what came back and how it should be shown or persisted.\n- `escalation_path` defines what happens on ambiguity, failure, or safety conflict.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the bridge between user-facing assistant surfaces and background execution lanes. It prevents delegation from being hidden inside prompts or ad hoc tool calls by naming handoff structure explicitly.\n\n## 4. Architectural Value\nDelegation is where conversational intent becomes accountable work. By formalizing that bridge, N1Hub can reason about routing, approval, and failure without conflating them with either chat history or raw job execution.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Delegation defines the handoff contract between conversational AI surfaces and bounded execution lanes in N1Hub. It matters because a graph-grounded assistant, a DeepMine reasoning call, and a Symphony or N-Infinity job are not the same thing, yet they must pass work between one another safely. This capsule names the requester, target lane, task packet, approval boundary, result summary, and escalation path so delegation becomes a first-class architectural object instead of a hidden prompt trick.",
+    "keywords": [
+      "agent-delegation",
+      "handoff",
+      "assistant",
+      "symphony",
+      "n-infinity",
+      "deepmine",
+      "approval-boundary",
+      "routing",
+      "execution-lane",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-delegation-handoff-lanes-approvals-results-escalation-runtime"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-run-attempt.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-approval-sandbox-policy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "eb8734f6ba1ee9c857288a59f0f5f6a36f4ee2c6ed4ce06c4ef9e9c530a3682f4cba1410570decf709badebf5cc6af7903800a2cbe99470a253c04612e9aed9c"
+}

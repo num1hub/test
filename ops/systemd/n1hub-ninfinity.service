@@ -1,0 +1,23 @@
+[Unit]
+Description=N1Hub N-Infinity Night Shift
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=n1
+Group=n1
+WorkingDirectory=/home/n1/n1hub.com
+Environment=NODE_ENV=production
+EnvironmentFile=/home/n1/n1hub.com/ops/env/n1hub-agents.env
+ExecStart=/usr/bin/env npm run ninfinity -- --port 4311
+Restart=always
+RestartSec=10
+KillSignal=SIGINT
+TimeoutStopSec=60
+UMask=0077
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

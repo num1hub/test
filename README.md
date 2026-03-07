@@ -68,6 +68,90 @@ Use `Authorization: Bearer <token>` headers matching current app auth.
 - Background full-vault audit: `npm run audit:capsules`
 - CI workflow: `.github/workflows/validate-capsules.yml`
 
+## Symphony Automation
+
+N1Hub now includes a repo-owned Symphony workflow contract at `WORKFLOW.md`.
+
+Operational notes and trust posture: [`docs/symphony.md`](docs/symphony.md)
+
+Required environment:
+
+- `LINEAR_API_KEY`
+- `LINEAR_PROJECT_SLUG`
+
+Run the service from the repo root:
+
+```bash
+npm run symphony -- ./WORKFLOW.md
+```
+
+Optional local dashboard:
+
+```bash
+npm run symphony -- ./WORKFLOW.md --port 4310
+```
+
+The default N1Hub workflow provisions per-issue git worktree workspaces under `.symphony/workspaces/` and installs dependencies on first run inside each workspace.
+
+Production and background-service instructions: [`docs/agents-operations.md`](docs/agents-operations.md)
+
+## N-Infinity Night Shift
+
+N1Hub also ships a dedicated N-Infinity background entrypoint backed by Symphony:
+
+```bash
+npm run ninfinity
+```
+
+It uses `NINFINITY_WORKFLOW.md`, the local `capsule_graph` tracker mode, and a nightly execution
+window so capsule-oriented agents can work the vault autonomously during off-peak hours. Successful
+runs are recorded so the same agent does not immediately re-dispatch again in the same night window
+or during the cooldown period after success.
+
+## AI Runtime and N-Infinity
+
+N1Hub now includes a server-side AI provider runtime backed by the AI Wallet in Settings, plus a nightly N-Infinity capsule-agent workflow.
+
+- AI providers are configured in Settings and stored server-side in encrypted form.
+- Wallet sections are now split into `Subscriptions`, `API Providers`, and `Platform & Routing`.
+- ChatGPT and Claude can now be configured in two separate ways:
+  - `ChatGPT / Codex Subscription` and `Claude Subscription` for subscription-backed bridge/auth-key paths
+  - `OpenAI API` and `Anthropic API` for standard API-key access
+- `Gemini`, `DeepSeek`, and `Grok` are available as direct API-provider slots.
+- Manual provider-backed generation is available through `POST /api/ai/generate`.
+- An OpenClaw-inspired control plane is available at `/ai`, combining provider status, DeepMine console, and Symphony or N-Infinity lane telemetry.
+- Provider availability is exposed through `GET /api/ai/providers`.
+- Capsule-oriented N-Infinity agents run through Symphony using `NINFINITY_WORKFLOW.md`.
+
+Operational notes: [`docs/ninfinity.md`](docs/ninfinity.md)
+
+Host bring-up and `systemd` installation: [`docs/agents-operations.md`](docs/agents-operations.md)
+
+## OpenClaw-Inspired Agent Workspace
+
+N1Hub now carries a manual, selective fork of the most useful OpenClaw workspace patterns:
+
+- [`SOUL.md`](SOUL.md) for assistant identity and boundaries
+- [`TOOLS.md`](TOOLS.md) for local runtime and API notes
+- `skills/<name>/SKILL.md` for focused workspace-local agent skills
+- research and mapping notes in [`docs/openclaw-fork.md`](docs/openclaw-fork.md)
+
+This is intentionally additive. N1Hub keeps CapsuleOS, AI Wallet, DeepMine, Symphony, and
+N-Infinity as the real architecture, while using OpenClaw-style workspace files to make local agent
+behavior more stable and inspectable.
+
+Run the nightly N-Infinity service from the repo root:
+
+```bash
+npm run ninfinity
+```
+
+Optional local status surface:
+
+```bash
+npm run ninfinity -- --port 4311
+```
+
 ## Projects - Organize Your Sovereign Work
 
 The Projects tab provides a project-oriented projection of the capsule graph:

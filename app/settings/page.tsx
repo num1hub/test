@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import PasswordChangeForm from '@/components/PasswordChangeForm';
+import AiWalletForm from '@/components/AiWalletForm';
 import AppNav from '@/components/AppNav';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useToast } from '@/contexts/ToastContext';
@@ -158,6 +159,8 @@ export default function SettingsPage() {
             <PasswordChangeForm />
           </div>
         </div>
+
+        <AiWalletForm />
       </div>
     </div>
   );

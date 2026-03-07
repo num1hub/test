@@ -16,15 +16,20 @@ const CAPSULES_DIR = path.join(process.cwd(), 'data', 'capsules');
 const BRANCHES_DIR = path.join(process.cwd(), 'data', 'branches');
 
 const subtypeHubIds = new Set([
+  'capsule.core.compass.v1',
   'capsule.foundation.workspace.v1',
   'capsule.foundation.capsuleos.16-gates.v1',
   'capsule.foundation.a2c.v1',
+  'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.capsule-graph-maintenance.v1',
   'capsule.foundation.n-infinity.v1',
   'capsule.foundation.capsuleos.v1',
   'capsule.foundation.capsuleos-spec.v1',
   'capsule.foundation.security.v1',
   'capsule.foundation.n1hub.v1',
   'capsule.foundation.personal-ai-assistant.v1',
+  'capsule.foundation.key-agents.v1',
+  'capsule.foundation.symphony.v1',
   'capsule.foundation.tracker.v1',
   'capsule.foundation.integrations.v1',
   'capsule.foundation.marketplace.v1',
@@ -32,6 +37,7 @@ const subtypeHubIds = new Set([
   'capsule.foundation.planner.v1',
   'capsule.foundation.team.v1',
   'capsule.foundation.profile.v1',
+  'capsule.foundation.tilesims.v1',
 ]);
 
 const namePatch: Record<string, string> = {
@@ -94,7 +100,9 @@ const namePatch: Record<string, string> = {
   'capsule.person.egor-n1.v1': 'Egor N1',
 };
 
-const parentMap: Record<string, string> = {
+type ParentSpec = string | string[];
+
+const parentMap: Record<string, ParentSpec> = {
   'capsule.core.compass.v1': 'capsule.project.capsuleos.v1',
   'capsule.core.atom.v1': 'capsule.core.compass.v1',
   'capsule.core.constitution.v1': 'capsule.core.compass.v1',
@@ -135,6 +143,34 @@ const parentMap: Record<string, string> = {
 
   'capsule.foundation.workspace.v1': 'capsule.project.workspace.v1',
   'capsule.foundation.project.v1': 'capsule.foundation.workspace.v1',
+  'capsule.foundation.agent-soul.v1': [
+    'capsule.foundation.personal-ai-assistant.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.agent-skills-registry.v1': [
+    'capsule.foundation.personal-ai-assistant.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.ai-wallet.v1': [
+    'capsule.foundation.deepmine.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.ai-control-surface.v1': [
+    'capsule.foundation.background-agent-runtime.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.chat-to-capsules.v1': [
+    'capsule.foundation.personal-ai-assistant.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.key-agents.v1': [
+    'capsule.foundation.n1hub.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.agent-delegation.v1': [
+    'capsule.foundation.background-agent-runtime.v1',
+    'capsule.foundation.personal-ai-assistant.v1',
+  ],
   'capsule.foundation.goal.v1': 'capsule.foundation.planner.v1',
   'capsule.foundation.milestone.v1': 'capsule.foundation.planner.v1',
   'capsule.foundation.task.v1': 'capsule.foundation.planner.v1',
@@ -156,6 +192,89 @@ const parentMap: Record<string, string> = {
   'capsule.foundation.a2c.v1': 'capsule.project.a2c.v1',
   'capsule.foundation.deepmine.v1': 'capsule.project.deepmine.v1',
   'capsule.foundation.n-infinity.v1': 'capsule.project.n-infinity.v1',
+  'capsule.foundation.background-agent-runtime.v1': [
+    'capsule.project.n-infinity.v1',
+    'capsule.project.symphony.v1',
+  ],
+  'capsule.foundation.agent-daemon.v1': 'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.agent-memory-state.v1': 'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.capsule-job.v1': 'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.night-shift-autonomy.v1': 'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.deepmine-prospector-agent.v1': [
+    'capsule.foundation.deepmine.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.deepmine-miner-agent.v1': [
+    'capsule.foundation.deepmine.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.deepmine-foreman-agent.v1': [
+    'capsule.foundation.deepmine.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.vault-update-agent.v1': [
+    'capsule.foundation.a2c.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.daily-planner-agent.v1': [
+    'capsule.foundation.planner.v1',
+    'capsule.foundation.personal-ai-assistant.v1',
+  ],
+  'capsule.foundation.roadmap-planner-agent.v1': [
+    'capsule.foundation.planner.v1',
+    'capsule.foundation.personal-ai-assistant.v1',
+  ],
+  'capsule.foundation.capsule-librarian-agent.v1': [
+    'capsule.foundation.personal-ai-assistant.v1',
+    'capsule.foundation.workspace.v1',
+  ],
+  'capsule.foundation.branch-steward-agent.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.validation-gatekeeper-agent.v1': [
+    'capsule.foundation.a2c.v1',
+    'capsule.foundation.background-agent-runtime.v1',
+  ],
+  'capsule.foundation.review-agent.v1': [
+    'capsule.foundation.personal-ai-assistant.v1',
+    'capsule.foundation.capsule-graph-maintenance.v1',
+  ],
+  'capsule.foundation.capsule-graph-maintenance.v1': [
+    'capsule.foundation.background-agent-runtime.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.foundation.n-infinity.gardener.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.foundation.n-infinity.innovator.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.foundation.n-infinity.parliament.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.foundation.n-infinity.suggestion-agent.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.foundation.n-infinity.weaver.v1': [
+    'capsule.foundation.capsule-graph-maintenance.v1',
+    'capsule.foundation.n-infinity.v1',
+  ],
+  'capsule.project.symphony.v1': 'capsule.project.capsuleos.v1',
+  'capsule.foundation.symphony.v1': [
+    'capsule.foundation.workspace.v1',
+    'capsule.project.symphony.v1',
+  ],
+  'capsule.foundation.symphony-workflow.v1': 'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-agent-session.v1': 'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-run-attempt.v1': 'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-retry-entry.v1': 'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-approval-sandbox-policy.v1': 'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-observability.v1': 'capsule.foundation.symphony.v1',
 
   'capsule.foundation.tilesims.v1': 'capsule.project.tilesims.v1',
   'capsule.project.tilesimsv2.v1': 'capsule.project.tilesims.v1',
@@ -184,6 +303,7 @@ const dreamDraftIds = new Set([
   'capsule.project.deepmine.v1',
   'capsule.project.mining-company.v1',
   'capsule.project.n-infinity.v1',
+  'capsule.project.symphony.v1',
   'capsule.project.restart-challenge.v1',
   'capsule.project.tilesims.v1',
   'capsule.project.tilesimsv2.v1',
@@ -204,6 +324,18 @@ const dreamDraftIds = new Set([
   'capsule.foundation.deepmine.v1',
   'capsule.foundation.graph-3d-visualization.v1',
   'capsule.foundation.n-infinity.v1',
+  'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.agent-daemon.v1',
+  'capsule.foundation.agent-delegation.v1',
+  'capsule.foundation.agent-memory-state.v1',
+  'capsule.foundation.agent-skills-registry.v1',
+  'capsule.foundation.agent-soul.v1',
+  'capsule.foundation.ai-control-surface.v1',
+  'capsule.foundation.ai-wallet.v1',
+  'capsule.foundation.capsule-graph-maintenance.v1',
+  'capsule.foundation.capsule-job.v1',
+  'capsule.foundation.chat-to-capsules.v1',
+  'capsule.foundation.night-shift-autonomy.v1',
   'capsule.foundation.n-infinity.gardener.v1',
   'capsule.foundation.n-infinity.innovator.v1',
   'capsule.foundation.n-infinity.parliament.v1',
@@ -212,6 +344,24 @@ const dreamDraftIds = new Set([
   'capsule.foundation.n-infinity.suggestion-agent.v1',
   'capsule.foundation.n-infinity.weaver.v1',
   'capsule.foundation.personal-ai-assistant.v1',
+  'capsule.foundation.key-agents.v1',
+  'capsule.foundation.deepmine-prospector-agent.v1',
+  'capsule.foundation.deepmine-miner-agent.v1',
+  'capsule.foundation.deepmine-foreman-agent.v1',
+  'capsule.foundation.vault-update-agent.v1',
+  'capsule.foundation.daily-planner-agent.v1',
+  'capsule.foundation.roadmap-planner-agent.v1',
+  'capsule.foundation.capsule-librarian-agent.v1',
+  'capsule.foundation.branch-steward-agent.v1',
+  'capsule.foundation.validation-gatekeeper-agent.v1',
+  'capsule.foundation.review-agent.v1',
+  'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-agent-session.v1',
+  'capsule.foundation.symphony-approval-sandbox-policy.v1',
+  'capsule.foundation.symphony-observability.v1',
+  'capsule.foundation.symphony-retry-entry.v1',
+  'capsule.foundation.symphony-run-attempt.v1',
+  'capsule.foundation.symphony-workflow.v1',
   'capsule.ai.conversation.v1',
   'capsule.ai.prompt.v1',
   'capsule.ai.suggestion.v1',
@@ -249,6 +399,116 @@ type PlanningMetadataPatch = Partial<{
 type EditorialPatch = {
   summary?: string;
   keywords?: string[];
+};
+
+type SupplementalLink = {
+  target_id: string;
+  relation_type: string;
+};
+
+const supplementalLinks: Record<string, SupplementalLink[]> = {
+  'capsule.project.deepmine.v1': [
+    { target_id: 'capsule.foundation.ai-wallet.v1', relation_type: 'depends_on' },
+    { target_id: 'capsule.foundation.chat-to-capsules.v1', relation_type: 'supports' },
+    { target_id: 'capsule.foundation.agent-delegation.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'supports' },
+    { target_id: 'capsule.foundation.ai-control-surface.v1', relation_type: 'references' },
+  ],
+  'capsule.ai.prompt.v1': [
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-soul.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-skills-registry.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-workflow.v1', relation_type: 'references' },
+  ],
+  'capsule.ai.conversation.v1': [
+    { target_id: 'capsule.foundation.agent-soul.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-memory-state.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+  ],
+  'capsule.ai.suggestion.v1': [
+    { target_id: 'capsule.foundation.tracker.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-delegation.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.ai-control-surface.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.dashboard.v1': [
+    { target_id: 'capsule.foundation.ai-control-surface.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-observability.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.notification.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.analytics.v1': [
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-observability.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.capsule-job.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.notification.v1': [
+    { target_id: 'capsule.foundation.ai-control-surface.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-observability.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.metric.v1': [
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.capsule-job.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-run-attempt.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.archive.v1': [
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.capsule-graph-maintenance.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.capsule-job.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.roadmap.v1': [
+    { target_id: 'capsule.foundation.chat-to-capsules.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-delegation.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
+    { target_id: 'capsule.ai.suggestion.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.chat-to-capsules.v1': [
+    { target_id: 'capsule.ai.prompt.v1', relation_type: 'depends_on' },
+    { target_id: 'capsule.foundation.deepmine.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.ai-wallet.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.agent-soul.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.personal-ai-assistant.v1': [
+    { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.daily-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.roadmap-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.capsule-librarian-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-foreman-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.review-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.agent-delegation.v1': [
+    { target_id: 'capsule.foundation.capsule-job.v1', relation_type: 'depends_on' },
+    { target_id: 'capsule.foundation.agent-memory-state.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.symphony-run-attempt.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.deepmine.v1': [
+    { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-prospector-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-miner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-foreman-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.vault-update-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.a2c.v1': [
+    { target_id: 'capsule.foundation.vault-update-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.validation-gatekeeper-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.planner.v1': [
+    { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.daily-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.roadmap-planner-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.background-agent-runtime.v1': [
+    { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-prospector-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-miner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.deepmine-foreman-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.vault-update-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.validation-gatekeeper-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.review-agent.v1', relation_type: 'references' },
+  ],
 };
 
 const tier1Ids = new Set([
@@ -316,6 +576,9 @@ const tier2Ids = new Set([
   'capsule.foundation.capsuleos.type-physical-object.v1',
   'capsule.foundation.dashboard.v1',
   'capsule.foundation.deepmine.v1',
+  'capsule.foundation.background-agent-runtime.v1',
+  'capsule.foundation.key-agents.v1',
+  'capsule.foundation.capsule-graph-maintenance.v1',
   'capsule.foundation.hub-atomic.v1',
   'capsule.foundation.integrations.v1',
   'capsule.foundation.invitation.v1',
@@ -328,6 +591,8 @@ const tier2Ids = new Set([
   'capsule.foundation.profile.v1',
   'capsule.foundation.project.v1',
   'capsule.foundation.role.v1',
+  'capsule.foundation.symphony.v1',
+  'capsule.foundation.symphony-workflow.v1',
   'capsule.foundation.team.v1',
   'capsule.foundation.tracker.v1',
   'capsule.foundation.workspace.v1',
@@ -336,6 +601,7 @@ const tier2Ids = new Set([
   'capsule.project.deepmine.v1',
   'capsule.project.n-infinity.v1',
   'capsule.project.n1hub-v0.v1',
+  'capsule.project.symphony.v1',
   'capsule.project.workspace.v1',
 ]);
 
@@ -1158,6 +1424,13 @@ const metadataPatch: Record<string, PlanningMetadataPatch> = {
     actualHours: 340,
     dueDate: '2026-08-15',
   },
+  'capsule.project.symphony.v1': {
+    priority: 'high',
+    progress: 44,
+    estimatedHours: 420,
+    actualHours: 180,
+    dueDate: '2026-07-31',
+  },
   'capsule.project.tilesims.v1': {
     priority: 'medium',
     progress: 26,
@@ -1248,6 +1521,20 @@ const metadataPatch: Record<string, PlanningMetadataPatch> = {
     estimatedHours: 360,
     actualHours: 150,
     dueDate: '2026-08-28',
+  },
+  'capsule.foundation.background-agent-runtime.v1': {
+    priority: 'high',
+    progress: 34,
+    estimatedHours: 280,
+    actualHours: 96,
+    dueDate: '2026-08-20',
+  },
+  'capsule.foundation.capsule-graph-maintenance.v1': {
+    priority: 'high',
+    progress: 26,
+    estimatedHours: 260,
+    actualHours: 60,
+    dueDate: '2026-08-08',
   },
   'capsule.foundation.hybrid-database.v1': {
     priority: 'medium',
@@ -1354,12 +1641,103 @@ const metadataPatch: Record<string, PlanningMetadataPatch> = {
     actualHours: 72,
     dueDate: '2026-05-18',
   },
+  'capsule.foundation.agent-soul.v1': {
+    priority: 'high',
+    progress: 42,
+    estimatedHours: 120,
+    actualHours: 50,
+    dueDate: '2026-06-30',
+  },
+  'capsule.foundation.agent-skills-registry.v1': {
+    priority: 'high',
+    progress: 46,
+    estimatedHours: 160,
+    actualHours: 64,
+    dueDate: '2026-07-05',
+  },
+  'capsule.foundation.ai-wallet.v1': {
+    priority: 'high',
+    progress: 58,
+    estimatedHours: 180,
+    actualHours: 104,
+    dueDate: '2026-06-20',
+  },
+  'capsule.foundation.ai-control-surface.v1': {
+    priority: 'high',
+    progress: 37,
+    estimatedHours: 220,
+    actualHours: 80,
+    dueDate: '2026-07-20',
+  },
+  'capsule.foundation.chat-to-capsules.v1': {
+    priority: 'high',
+    progress: 28,
+    estimatedHours: 210,
+    actualHours: 54,
+    dueDate: '2026-08-01',
+  },
+  'capsule.foundation.agent-delegation.v1': {
+    priority: 'high',
+    progress: 32,
+    estimatedHours: 180,
+    actualHours: 48,
+    dueDate: '2026-07-26',
+  },
   'capsule.foundation.personal-ai-assistant.v1': {
     priority: 'high',
     progress: 39,
     estimatedHours: 320,
     actualHours: 110,
     dueDate: '2026-07-20',
+  },
+  'capsule.foundation.symphony.v1': {
+    priority: 'high',
+    progress: 46,
+    estimatedHours: 320,
+    actualHours: 128,
+    dueDate: '2026-07-15',
+  },
+  'capsule.foundation.symphony-workflow.v1': {
+    priority: 'high',
+    progress: 58,
+    estimatedHours: 140,
+    actualHours: 80,
+    dueDate: '2026-06-30',
+  },
+  'capsule.foundation.symphony-agent-session.v1': {
+    priority: 'high',
+    progress: 52,
+    estimatedHours: 96,
+    actualHours: 44,
+    dueDate: '2026-06-25',
+  },
+  'capsule.foundation.symphony-run-attempt.v1': {
+    priority: 'high',
+    progress: 55,
+    estimatedHours: 112,
+    actualHours: 58,
+    dueDate: '2026-06-28',
+  },
+  'capsule.foundation.symphony-retry-entry.v1': {
+    priority: 'high',
+    progress: 49,
+    estimatedHours: 84,
+    actualHours: 32,
+    dueDate: '2026-06-24',
+  },
+  'capsule.foundation.symphony-approval-sandbox-policy.v1': {
+    priority: 'high',
+    progress: 61,
+    estimatedHours: 76,
+    actualHours: 39,
+    dueDate: '2026-06-18',
+  },
+  'capsule.foundation.symphony-observability.v1': {
+    priority: 'high',
+    progress: 57,
+    estimatedHours: 88,
+    actualHours: 42,
+    dueDate: '2026-06-22',
   },
   'capsule.foundation.marketplace.v1': {
     priority: 'medium',
@@ -1718,6 +2096,11 @@ const dreamMetadataPatch: Record<string, PlanningMetadataPatch> = {
     estimatedHours: 1500,
     dueDate: '2026-11-30',
   },
+  'capsule.project.symphony.v1': {
+    progress: 31,
+    estimatedHours: 640,
+    dueDate: '2026-10-15',
+  },
   'capsule.project.tilesims.v1': {
     progress: 18,
     estimatedHours: 980,
@@ -1782,6 +2165,16 @@ const dreamMetadataPatch: Record<string, PlanningMetadataPatch> = {
     progress: 30,
     estimatedHours: 680,
     dueDate: '2026-11-10',
+  },
+  'capsule.foundation.background-agent-runtime.v1': {
+    progress: 18,
+    estimatedHours: 480,
+    dueDate: '2026-11-20',
+  },
+  'capsule.foundation.capsule-graph-maintenance.v1': {
+    progress: 14,
+    estimatedHours: 420,
+    dueDate: '2026-11-15',
   },
   'capsule.foundation.hybrid-database.v1': {
     progress: 34,
@@ -1858,10 +2251,55 @@ const dreamMetadataPatch: Record<string, PlanningMetadataPatch> = {
     estimatedHours: 180,
     dueDate: '2026-08-10',
   },
+  'capsule.foundation.agent-soul.v1': {
+    progress: 28,
+    estimatedHours: 190,
+    dueDate: '2026-08-25',
+  },
+  'capsule.foundation.agent-skills-registry.v1': {
+    progress: 31,
+    estimatedHours: 240,
+    dueDate: '2026-09-05',
+  },
+  'capsule.foundation.ai-wallet.v1': {
+    progress: 42,
+    estimatedHours: 260,
+    dueDate: '2026-08-25',
+  },
+  'capsule.foundation.ai-control-surface.v1': {
+    progress: 22,
+    estimatedHours: 360,
+    dueDate: '2026-10-10',
+  },
+  'capsule.foundation.chat-to-capsules.v1': {
+    progress: 16,
+    estimatedHours: 380,
+    dueDate: '2026-10-31',
+  },
+  'capsule.foundation.agent-delegation.v1': {
+    progress: 19,
+    estimatedHours: 260,
+    dueDate: '2026-09-20',
+  },
   'capsule.foundation.personal-ai-assistant.v1': {
     progress: 24,
     estimatedHours: 560,
     dueDate: '2026-10-31',
+  },
+  'capsule.foundation.symphony.v1': {
+    progress: 33,
+    estimatedHours: 520,
+    dueDate: '2026-09-25',
+  },
+  'capsule.foundation.symphony-workflow.v1': {
+    progress: 41,
+    estimatedHours: 220,
+    dueDate: '2026-09-10',
+  },
+  'capsule.foundation.symphony-observability.v1': {
+    progress: 38,
+    estimatedHours: 150,
+    dueDate: '2026-08-25',
   },
   'capsule.foundation.marketplace.v1': {
     progress: 21,
@@ -2121,6 +2559,10 @@ const dreamEditorialPatch: Record<string, EditorialPatch> = {
     summary:
       'N-Infinity Project in the Dream branch is the roadmap for a more capable and better-governed autonomous swarm. It imagines agents that not only react to planner and tracker signals, but coordinate continuously around risk, synthesis, reminders, contradiction handling, and graph curation without losing auditability. The branch matters because current agent design is meaningful but incomplete. Dream preserves the target state where N-Infinity becomes a real operational intelligence lattice rather than a partially implemented family of helpers.',
   },
+  'capsule.project.symphony.v1': {
+    summary:
+      'Symphony Project in the Dream branch represents the future repository-orchestration lane beyond the already working implementation. It imagines stronger policy loading, richer live reconciliation, better branch-aware workspaces, safer approval handling, and tighter handoff between issue intake, coding sessions, and capsule-aware status surfaces. The branch matters because the current project proves the service can run, but the longer-term target is a more durable automation substrate for N1Hub engineering. Dream therefore preserves Symphony as a deeper execution program rather than only the present repository runner.',
+  },
   'capsule.project.tilesims.v1': {
     summary:
       'TileSims in the Dream branch captures the product’s intended leap from concept-rich simulation line into a more coherent spatial operating system. It carries the future state where scanning, layout logic, physical-object capsules, and branch-based renovation planning converge into one graph-native workflow. The branch matters because TileSims already has lineage and technical substance, but its strongest commercial and operational form still lives ahead. Dream therefore acts as the container for that fuller spatial product ambition.',
@@ -2172,6 +2614,14 @@ const dreamEditorialPatch: Record<string, EditorialPatch> = {
   'capsule.foundation.n-infinity.v1': {
     summary:
       'N-Infinity in the Dream branch describes the future swarm kernel where graph-care, contradiction handling, suggestion, risk, and novelty generation coordinate with much tighter governance. It imagines agents that can collaborate continuously across branches, projects, and evidence layers without degrading auditability or flooding the graph with weak output. The capsule matters because autonomous depth is only valuable when it compounds trust instead of noise. Dream therefore preserves N-Infinity as a more mature intelligence lattice rather than only the current family of promising background agents.',
+  },
+  'capsule.foundation.background-agent-runtime.v1': {
+    summary:
+      'Background Agent Runtime in the Dream branch describes the fuller durable substrate beneath N1Hub autonomy. It pushes toward stronger resumability, cleaner lane isolation, better crash recovery, richer operator controls, and a more explicit bridge between conversational ingress, delegated tasks, and long-lived daemon work. The capsule matters because background agents only become trustworthy when the runtime beneath them is more disciplined than the models they call. Dream therefore preserves this hub as the future always-on harness for N-Infinity, Symphony, and other autonomous lanes rather than only the first night-shift runtime.',
+  },
+  'capsule.foundation.capsule-graph-maintenance.v1': {
+    summary:
+      'Capsule Graph Maintenance in the Dream branch captures a more autonomous and better-instrumented care model for the sovereign graph. It imagines stronger topology repair, contradiction routing, archival pressure, synthesis proposals, and bounded maintenance jobs that can run continuously without turning into invisible mutation. The capsule matters because long-lived graph quality depends on explicit maintenance doctrine, not just capsule creation. Dream therefore preserves this hub as the future maintenance lattice where N-Infinity roles become a disciplined stewardship system for graph health.',
   },
   'capsule.foundation.hybrid-database.v1': {
     summary:
@@ -2276,6 +2726,22 @@ const dreamEditorialPatch: Record<string, EditorialPatch> = {
   'capsule.foundation.personal-ai-assistant.v1': {
     summary:
       'Personal AI Assistant in the Dream branch represents the transition from useful helper to graph-grounded operating copilot. It imagines stronger context continuity, better task and plan synthesis, more disciplined recommendation loops, and deeper coordination with Tracker, Planner, and N-Infinity. The capsule matters because the assistant is one of the main surfaces where sovereign knowledge becomes lived action. Dream preserves the more capable assistant the ecosystem is building toward, where the assistant becomes an execution partner rather than a convenience layer.',
+  },
+  'capsule.foundation.symphony.v1': {
+    summary:
+      'Symphony in the Dream branch captures the future orchestration doctrine for repository-bound coding agents. It imagines a stronger contract between workflow policy, tracker-driven scheduling, workspace isolation, continuation turns, approval posture, and operator visibility than the current real branch can fully guarantee today. The capsule matters because orchestration quality determines whether agent execution becomes an asset or a liability. Dream therefore preserves Symphony as the more mature automation law for N1Hub engineering, not merely the initial service specification and implementation.',
+  },
+  'capsule.foundation.chat-to-capsules.v1': {
+    summary:
+      'Chat to Capsules in the Dream branch describes a richer conversational ingress where graph grounding, drafting, explainability, and delegation feel native rather than bolted on. It imagines cleaner memory continuity, better evidence display, stronger conversion from chat into structured capsule work, and more transparent handoff into DeepMine, Symphony, or N-Infinity. The capsule matters because user trust in AI depends on seeing how conversation maps to real graph action. Dream therefore preserves Chat to Capsules as a more capable graph-native dialogue surface instead of only the first grounded chat pattern.',
+  },
+  'capsule.foundation.agent-delegation.v1': {
+    summary:
+      'Agent Delegation in the Dream branch captures a more explicit and governable handoff fabric between conversational surfaces and execution lanes. It imagines clearer task-packet schemas, approval gradients, result contracts, and escalation behavior across DeepMine, Symphony, N-Infinity, and future agents without letting orchestration vanish into prompt folklore. The capsule matters because delegation is where user intent becomes accountable machine work. Dream therefore preserves this capsule as the future routing law for inter-agent handoff rather than only the current bridge concept.',
+  },
+  'capsule.foundation.ai-control-surface.v1': {
+    summary:
+      'AI Control Surface in the Dream branch represents the fuller operator plane for AI inside N1Hub. It imagines wallet readiness, lane health, live chat grounding, delegation traces, night-shift policy, daemon controls, and debugging surfaces converging into one trustworthy operational dashboard. The capsule matters because background autonomy becomes fragile when visibility lags behind capability. Dream therefore preserves AI Control Surface as the future trust console for N1Hub intelligence rather than only the first combined screen for wallet, chat, and runtime status.',
   },
   'capsule.foundation.marketplace.v1': {
     summary:
@@ -2527,6 +2993,70 @@ function syncPartOf(capsule: SovereignCapsule, parentIds: string[]): boolean {
   return true;
 }
 
+function syncSupplementalLinks(
+  capsule: SovereignCapsule,
+  desiredLinks: SupplementalLink[] | undefined,
+): boolean {
+  if (!desiredLinks || desiredLinks.length === 0) return false;
+
+  const links = Array.isArray(capsule.recursive_layer.links) ? capsule.recursive_layer.links : [];
+  const existingPairs = new Set(
+    links
+      .filter(
+        (link) =>
+          typeof link?.target_id === 'string' &&
+          typeof link?.relation_type === 'string' &&
+          link.target_id.length > 0 &&
+          link.relation_type.length > 0,
+      )
+      .map((link) => `${link.target_id}::${link.relation_type}`),
+  );
+
+  const additions = desiredLinks.filter(
+    (link) =>
+      typeof link.target_id === 'string' &&
+      link.target_id.length > 0 &&
+      typeof link.relation_type === 'string' &&
+      link.relation_type.length > 0 &&
+      !existingPairs.has(`${link.target_id}::${link.relation_type}`),
+  );
+
+  if (additions.length === 0) return false;
+
+  capsule.recursive_layer.links = [...links, ...additions];
+  return true;
+}
+
+function normalizeParentSpec(parentSpec: ParentSpec | undefined): string[] {
+  if (!parentSpec) return [];
+
+  const raw = Array.isArray(parentSpec) ? parentSpec : [parentSpec];
+  return [...new Set(raw.filter((value): value is string => typeof value === 'string' && value.length > 0))];
+}
+
+function buildResolvedParentMap(capsules: Map<string, SovereignCapsule>): Record<string, string[]> {
+  const resolved: Record<string, string[]> = {};
+
+  for (const capsule of capsules.values()) {
+    const existingParents = getPartOfLinks(capsule)
+      .map((link) => link.target_id)
+      .filter((targetId): targetId is string => typeof targetId === 'string' && targetId.length > 0);
+
+    if (existingParents.length > 0) {
+      resolved[capsule.metadata.capsule_id] = [...new Set(existingParents)];
+    }
+  }
+
+  for (const [capsuleId, parentSpec] of Object.entries(parentMap)) {
+    const configuredParents = normalizeParentSpec(parentSpec);
+    if (configuredParents.length > 0) {
+      resolved[capsuleId] = configuredParents;
+    }
+  }
+
+  return resolved;
+}
+
 function markUpdated(capsule: SovereignCapsule, nowIso: string): void {
   capsule.metadata.updated_at = nowIso;
   capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
@@ -2580,7 +3110,11 @@ function applyTierCuration(capsule: SovereignCapsule): boolean {
   return true;
 }
 
-function applyStructuralCuration(capsule: SovereignCapsule, branch: 'real' | 'dream'): boolean {
+function applyStructuralCuration(
+  capsule: SovereignCapsule,
+  branch: 'real' | 'dream',
+  resolvedParentMap: Record<string, string[]>,
+): boolean {
   const id = capsule.metadata.capsule_id;
   let changed = false;
 
@@ -2598,8 +3132,12 @@ function applyStructuralCuration(capsule: SovereignCapsule, branch: 'real' | 'dr
     changed = true;
   }
 
-  const parentId = parentMap[id];
-  if (parentId && syncPartOf(capsule, [parentId])) {
+  const parentIds = resolvedParentMap[id] ?? [];
+  if (parentIds.length > 0 && syncPartOf(capsule, parentIds)) {
+    changed = true;
+  }
+
+  if (syncSupplementalLinks(capsule, supplementalLinks[id])) {
     changed = true;
   }
 
@@ -2665,11 +3203,12 @@ async function backupVault(dryRun: boolean): Promise<string> {
 async function curateRealBranch(dryRun: boolean): Promise<{ realChanged: number; realOrphans: number }> {
   const nowIso = new Date().toISOString();
   const capsules = await loadRealCapsules();
+  const resolvedParentMap = buildResolvedParentMap(capsules);
   const existingIds = new Set(capsules.keys());
   let realChanged = 0;
 
   for (const [id, capsule] of capsules) {
-    const changed = applyStructuralCuration(capsule, 'real');
+    const changed = applyStructuralCuration(capsule, 'real', resolvedParentMap);
 
     if (!changed) continue;
 
@@ -2704,6 +3243,7 @@ async function curateDreamBranch(dryRun: boolean): Promise<{ dreamChanged: numbe
     });
   }
 
+  const resolvedParentMap = buildResolvedParentMap(await loadRealCapsules());
   const dreamGraph = dryRun ? await loadOverlayGraph('real') : await loadOverlayGraph('dream');
   const dreamIds = new Set(dreamGraph.map((capsule) => capsule.metadata.capsule_id));
   let dreamChanged = 0;
@@ -2727,7 +3267,7 @@ async function curateDreamBranch(dryRun: boolean): Promise<{ dreamChanged: numbe
     if (!sourceCapsule) continue;
 
     const capsule = JSON.parse(JSON.stringify(sourceCapsule)) as SovereignCapsule;
-    if (!applyStructuralCuration(capsule, 'dream')) continue;
+    if (!applyStructuralCuration(capsule, 'dream', resolvedParentMap)) continue;
 
     markUpdated(capsule, new Date().toISOString());
     await validateOrThrow(capsule, dreamIds, `dream:${id}`);

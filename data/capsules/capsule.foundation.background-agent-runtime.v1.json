@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.background-agent-runtime.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "Background Agent Runtime",
+    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
+    "source": {
+      "uri": "internal://docs/agents-operations.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 34,
+    "estimatedHours": 280,
+    "actualHours": 96,
+    "dueDate": "2026-08-20",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, and local skills into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now has a clearer agent map inside it: DeepMine Prospector, Miner, and Foreman govern mining jobs; Vault Update and Validation Gatekeeper govern acceptance paths; Branch Steward and Review govern graph discipline; and the broader Key Agents hub keeps those roles visible instead of hidden in daemon internals.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, and operator oversight. This capsule matters because 24/7 or night-shift autonomy is not created by a stronger model alone; it requires the surrounding runtime that keeps services alive, cooldowns bounded, failures observable, and delegated work accountable. In N1Hub it is the bridge that joins AI Wallet, DeepMine, Personal AI Assistant, Chat to Capsules, Symphony, and N-Infinity into one operational system.",
+    "keywords": [
+      "background-agent-runtime",
+      "daemon",
+      "durable-runtime",
+      "capsule-jobs",
+      "agent-delegation",
+      "chat-to-capsules",
+      "n-infinity",
+      "symphony",
+      "deepmine",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2043dc39f4d656cca905eafa606848de0b7178b1dd91e99e1b50aac4d91bb189b7ab652998fb8819d5efe11b3d7800c7c2b0c484eec9dc1cb266024f66cb3ef4"
+}

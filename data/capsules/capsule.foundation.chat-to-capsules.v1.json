@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.chat-to-capsules.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T22:05:00Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "Chat to Capsules",
+    "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
+    "priority": "high",
+    "progress": 28,
+    "estimatedHours": 210,
+    "actualHours": 54,
+    "dueDate": "2026-08-01",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined path by which a conversation can inspect capsules, summarize graph context, draft new capsules, refine existing ones, and delegate bounded actions into the deeper runtime.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_drafting` turns conversational intent into structured candidate capsules or edits.\n- `explainability` shows which capsules, prompts, or runtime paths informed the answer.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, or N-Infinity.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the missing user-level bridge between Personal AI Assistant, AI Conversation Session, A2C, and the background-agent runtime. It gives the system a clear model for how users talk to the graph without collapsing serious graph work into shallow chat UX.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, and delegable.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Chat to Capsules defines how N1Hub turns conversation into graph-grounded work. It matters because a sovereign capsule system cannot rely on ungrounded chat output if it wants reliable memory, traceability, and delegation. This capsule names the pattern where conversation sessions inspect capsules, draft structured graph changes, explain their evidence, and hand off bounded work to DeepMine, Symphony, or N-Infinity. It creates a clean bridge between user dialogue and accountable capsule operations.",
+    "keywords": [
+      "chat-to-capsules",
+      "conversation",
+      "capsule-grounding",
+      "assistant",
+      "delegation",
+      "a2c",
+      "graph-actions",
+      "auditability",
+      "workspace",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.ai.conversation.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.ai.prompt.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b8ecfb337ce50268cfabc3e6fcf687c7209eec88cd6a4ed495b1ec3d478873c589026e59969a86bd8cce3c4cff428d25ea0181452260e18b71ff83239d5b69ae"
+}

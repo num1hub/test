@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Activity, Database, Folder, Settings } from 'lucide-react';
+import { Activity, Bot, Database, Folder, Settings } from 'lucide-react';
 
 const NAV_ITEMS = [
   { href: '/vault', label: 'Vault', icon: Database },
   { href: '/projects', label: 'Projects', icon: Folder },
+  { href: '/ai', label: 'AI', icon: Bot },
   { href: '/activity', label: 'Activity', icon: Activity },
   { href: '/settings', label: 'Settings', icon: Settings },
 ] as const;

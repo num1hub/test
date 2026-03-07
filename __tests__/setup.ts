@@ -34,7 +34,9 @@ const localStorageMock = (() => {
     clear: vi.fn(() => { store = {} }),
   }
 })()
-Object.defineProperty(window, 'localStorage', { value: localStorageMock })
+if (typeof window !== 'undefined') {
+  Object.defineProperty(window, 'localStorage', { value: localStorageMock })
+}
 
 // 3. Mock ForceGraph (Canvas throws errors in JSDOM)
 vi.mock('react-force-graph-2d', () => ({
@@ -106,6 +108,8 @@ beforeAll(() => server.listen({ onUnhandledRequest: 'error' }))
 afterEach(() => {
   server.resetHandlers()
   vi.clearAllMocks()
-  window.localStorage.clear()
+  if (typeof window !== 'undefined') {
+    window.localStorage.clear()
+  }
 })
 afterAll(() => server.close())

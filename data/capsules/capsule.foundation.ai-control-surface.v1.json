@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.ai-control-surface.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T18:20:00Z",
+    "updated_at": "2026-03-06T18:41:10.981Z",
+    "name": "AI Control Surface",
+    "semantic_hash": "ai-control-surface-wallet-status-chat-ops-workspace",
+    "priority": "high",
+    "progress": 37,
+    "estimatedHours": 220,
+    "actualHours": 80,
+    "dueDate": "2026-07-20",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# AI Control Surface\n\n## 1. Definition and Essence\nAI Control Surface defines the operator-facing control plane for AI inside N1Hub Workspace. It brings together provider configuration, readiness checks, runtime status, daemon health, autonomy windows, chat surfaces, and delegation controls into one inspectable surface rather than scattering them across hidden scripts and background services.\n\n## 2. Core Responsibilities\n- `wallet_surface` exposes provider and subscription configuration through AI Wallet.\n- `runtime_visibility` shows provider availability, generation paths, session status, and lane health.\n- `chat_and_delegation_surface` makes Chat to Capsules and handoff behavior visible to operators and users.\n- `shift_and_lane_control` makes night-shift policy, refresh, and pause semantics visible instead of burying them in service files.\n- `status_and_debugging` gives operators a practical place to inspect AI behavior before trusting background autonomy.\n\n## 3. N1Hub Integration\nIn N1Hub this surface begins with the AI Wallet form, DeepMine console, Chat to Capsules, and Symphony or N-Infinity status endpoints, then grows toward a fuller assistant and orchestration dashboard. It is the practical bridge between wallet-backed credentials, daemonized background agents, autonomy windows, chat surfaces, and operator trust.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making AI operation visible, inspectable, and correctable instead of magical.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "AI Control Surface is the operator-facing control plane for AI inside N1Hub. It matters because provider keys, daemon health, agent status, autonomy windows, chat behavior, and delegation become unsafe when they are only accessible through hidden files or shell commands. This capsule formalizes the Workspace-facing layer that unifies AI Wallet configuration, Chat to Capsules, delegation visibility, DeepMine access, background-lane health, and Symphony or N-Infinity observability into one accountable operating surface.",
+    "keywords": [
+      "ai-control-surface",
+      "control-plane",
+      "chat-to-capsules",
+      "agent-delegation",
+      "background-runtime",
+      "wallet",
+      "deepmine",
+      "symphony",
+      "n-infinity",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "ai-control-surface-wallet-status-chat-ops-workspace"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-skills-registry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "3f1eed273e42243a501c1954c0870fd0d1d5f49eff9c18ce58de4bfabbad097366018477ddb4b6f07b8963bfd51cd1255be710187b1f8ae87e2a7a789ecaa708"
+}

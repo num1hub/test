@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.symphony-workflow.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-06T15:40:10Z",
+    "updated_at": "2026-03-06T15:58:22Z",
+    "name": "Symphony Workflow Contract",
+    "semantic_hash": "symphony-workflow-md-prompt-hooks-sandbox-policy-contract",
+    "source": {
+      "uri": "internal://WORKFLOW.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 58,
+    "estimatedHours": 140,
+    "actualHours": 80,
+    "dueDate": "2026-06-30",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Workflow Contract\n\n## 1. Definition and Essence\nThe Symphony workflow contract is the repository-owned policy surface that tells the orchestration runtime how to behave. In N1Hub this contract lives in `WORKFLOW.md`, where prompt instructions, tracker selection, polling cadence, workspace hooks, and Codex runtime settings are versioned with the code.\n\n## 2. Contract Surface\n- `tracker` defines Linear connectivity, project scope, and active or terminal states.\n- `polling` controls dispatch cadence.\n- `workspace` defines the root for issue workspaces.\n- `hooks` define trusted shell lifecycle behavior for create, run, and cleanup steps.\n- `agent` governs concurrency and retry backoff.\n- `codex` passes approval, sandbox, and timeout policy into app-server sessions.\n\n## 3. N1Hub-Specific Semantics\nFor N1Hub, the workflow contract also encodes git-worktree preparation, dependency bootstrap, validation guidance, and the rule that agents must dig through capsule reality rather than stopping at tracker prose.\n\n## 4. Role in the System\nThis contract is the bridge between generic Symphony runtime logic and N1Hub-specific execution policy. It makes operator intent auditable, reloadable, and repo-native, and it feeds the session, policy, and observability atoms that describe how work actually runs.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Workflow Contract captures how N1Hub externalizes automation policy into WORKFLOW.md instead of scattering it across ad hoc scripts or operator memory. The capsule defines the file as a versioned contract that combines tracker configuration, polling cadence, workspace hooks, Codex runtime settings, and the strict prompt template used for each issue attempt. Within N1Hub this matters because worktree preparation, dependency bootstrap, validation expectations, and To Dig Deep guidance all live in the same repo-owned artifact. It therefore becomes the bridge between abstract orchestration logic and the concrete behavior agents execute inside issue workspaces.",
+    "keywords": [
+      "symphony-workflow",
+      "workflow-md",
+      "prompt-template",
+      "hooks",
+      "sandbox-policy",
+      "codex",
+      "linear",
+      "worktrees",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 0.98,
+      "synthesis": 0.98,
+      "linking": 0.97,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.04
+    },
+    "semantic_hash": "symphony-workflow-md-prompt-hooks-sandbox-policy-contract"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-approval-sandbox-policy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.prompt.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "f4775db387902926884e71a51c0480ab6e4358cf84dcac0557695e56ddcb6b4b4a0bf1b47f11991b93742adc5310189ba0bc6d5cebccdcee4cb7fa63f7805af2"
+}

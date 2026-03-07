@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub.v1",
+    "version": "1.5.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-02-26T12:00:00Z",
+    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core",
+    "updated_at": "2026-03-06T21:10:00Z",
+    "source": {
+      "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
+      "type": "internal_derivation"
+    },
+    "name": "N1Hub Runtime",
+    "priority": "high",
+    "progress": 72,
+    "estimatedHours": 420,
+    "actualHours": 280,
+    "dueDate": "2026-07-20",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub.com: The Digital Continent for Sovereign Projects\n\n## 1. Mission and Philosophy\nN1Hub.com is the ultimate digital habitat designed to help individuals and teams systematically grow and turn potential into reality. Guided by the philosophy **\"To Dig Deep\"**, we reject superficial answers, mining the depths of information to extract true wisdom. N1Hub represents the monumental step **\"Between Zero and One\"** - the transition from entropic chaos to structured, immortal order. We empower users to become the best versions of themselves by building projects of any scale, from personal planners to complex business systems, within a unified, sovereign environment.\n\nWhere the Gold Master defines strategic doctrine, this capsule defines the runtime contract of how N1Hub operates in active use.\n\n## 2. Core Architecture: CapsuleOS\nEverything inside N1Hub exists as a **Capsule** - a cryptographically sealed, self-aware atom of knowledge. Governed by the strict **5-Element Law** and validated through **16 Quality Gates**, CapsuleOS guarantees provenance, immutability, and semantic integrity.\n\n## 3. The Extraction & Refining Pipeline\n- **DeepMine**: Our cognitive quarry. DeepMine interfaces with top LLMs and the internet to extract high-value raw data, acting as the industrial drill for our mining operations.\n- **A2C (Anything-to-Capsules)**: The refinery engine. It ingests raw data, normalizes, segments, extracts, synthesizes, and seals it into pristine capsules, transforming chaotic inputs into intellectual capital.\n\n## 4. The Autonomous Ecosystem\n- **N-Infinity**: A swarm of background AI agents (Weaver, Gardener, Parliament, Innovator) that patrol the capsule graph and compound knowledge over time.\n- **Background Agent Runtime**: The daemon, state, capsule-job, and night-shift substrate that allows those agents to run credibly in the background instead of existing only as a philosophical promise.\n- **Workspace**: The user's command center, featuring a Planner, Tracker, and an AI Personal Assistant that seamlessly interacts with the user's sovereign capsule graph.\n- **Symphony**: The orchestration service that reads tracker work or capsule jobs, opens isolated workspaces, runs Codex sessions, and keeps execution tied to repository-owned workflow policy.\n\n## 5. Projects & Monetization\nN1Hub is not just a tool; it is a canvas. Users can create diverse projects, such as **TileSims** - a digital twin application bridging the physical and digital worlds. Creators can invite collaborators, share their graphs, and monetize their architectural templates on the Capsule Marketplace, turning their knowledge into tradable, legally significant assets.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "This sovereign foundation capsule describes N1Hub as the operational runtime layer that executes the Gold Master vision in practice. It specifies how users and teams interact with CapsuleOS through DeepMine ingestion, A2C refinement, N-Infinity orchestration, Background Agent Runtime, and Workspace control surfaces to move ideas from entropy to structured, monetizable projects. Unlike the visionary blueprint, this capsule focuses on active system behavior, collaboration flows, and productized value creation across marketplaces and project hubs. It serves as the practical contract for how the ecosystem runs today while preserving lineage to founding doctrine.",
+    "keywords": [
+      "n1hub-runtime",
+      "sovereign-projects",
+      "capsuleos",
+      "a2c",
+      "deepmine",
+      "n-infinity",
+      "background-agents",
+      "workspace",
+      "marketplace",
+      "execution-layer"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.access-models.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.between-zero-and-one.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-intellectual-capital.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-gold-master.v1",
+        "relation_type": "derived_from"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "part_of"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "0d9b6e9aa69375c6dd160cbb4f0f4bf26225b4047d2277205cf01fffe53ef94cbf5671f0b2755348c2f7ea1eab27dbd1f0c2794fb3ab9a1c9100a991bdab8209"
+}

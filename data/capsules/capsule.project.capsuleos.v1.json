@@ -1,0 +1,80 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.capsuleos.v1",
+    "version": "1.2.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-05T19:00:10.536Z",
+    "updated_at": "2026-03-06T15:40:10Z",
+    "name": "CapsuleOS Project",
+    "semantic_hash": "capsule-project-capsuleos-v1-hub-architecture-governance-execution",
+    "source": {
+      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
+      "sha256": "92072efd9820901c98708545464f35fff1b5809e6f68871679c9f6d0bd087cd0",
+      "type": "architect_prompt"
+    },
+    "priority": "critical",
+    "progress": 78,
+    "estimatedHours": 2400,
+    "actualHours": 1820,
+    "dueDate": "2026-08-31",
+    "tier": 1
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS Project\n\n## 1. Definition and Essence\nCapsuleOS Project is the umbrella execution hub for the operating system of sovereign knowledge. It aligns architecture evolution, validator hardening, graph governance, and module integration efforts under one coordinated project lineage.\n\n## 2. Core Attributes\n- `scope` CapsuleOS architecture and governance implementation boundaries\n- `child_projects` subsystem hubs for A2C, N-Infinity, DeepMine, Workspace, Symphony\n- `milestone_map` macro delivery checkpoints and release targets\n- `ownership` principal maintainers and governance actors\n- `success_metrics` reliability, integrity, adoption, and performance targets\n\n## 3. Lifecycle\nThe project progresses through planning, implementation, validation, and iterative refinement cycles with clear milestones and cross-subsystem coordination.\n\n## 4. Integration\n- **Foundation CapsuleOS:** implemented by this project hub.\n- **A2C/N-Infinity/DeepMine/Workspace/Symphony Projects:** child subsystem execution streams.\n- **Planner/Tracker:** schedules and monitors delivery outcomes.\n- **N1Hub Projects Index:** catalog entry for ecosystem navigation.\n\n## 5. Philosophical Alignment\nThis hub applies To Dig Deep by turning foundational doctrine into sustained executable engineering practice.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS Project is the umbrella execution program for the sovereign-knowledge operating system. It coordinates validator hardening, schema and protocol evolution, graph governance, persistence, security, and the downstream subsystem projects that turn doctrine into running software. The hub exists so Workspace, A2C, DeepMine, and N-Infinity can evolve independently without losing architectural coherence or shared release discipline. It is therefore both the strategic portfolio root for core platform work and the operational place where CapsuleOS principles are translated into audited engineering decisions, milestones, and cross-module integration.",
+    "keywords": [
+      "capsuleos",
+      "platform-root",
+      "validator",
+      "governance",
+      "workspace",
+      "a2c",
+      "deepmine",
+      "n-infinity",
+      "architecture",
+      "release-discipline"
+    ],
+    "confidence_vector": {
+      "extraction": 0.93,
+      "synthesis": 0.95,
+      "linking": 0.95,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.12
+    },
+    "semantic_hash": "capsule-project-capsuleos-v1-hub-architecture-governance-execution"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "3aef3f2138dca035eb7a3d038d91278d32eb5af738db9d131dc7129322fe9e72acde4a4a7d5b20409fd6bd722d69a3fdc489021420882ae00f85944fa8f151b7"
+}
