@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-06T18:43:17.129Z",
+    "updated_at": "2026-03-07T10:22:14.340Z",
     "name": "Task",
     "semantic_hash": "task-actionable-unit-work-priority-status-gold-core",
     "priority": "high",
@@ -80,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f1907e957ffdc0daa33e17bc2111af21f73453d0ab1c6ae18fa371d45daf9613bd6cd141f2bef6091768fa10555e47b15c38ce54f78d4d915039c568ca2fd03e"
+  "integrity_sha3_512": "2ed1e3cabb34d6676fdc16644e2603b13b30ce4bdadb41b8cca3cb874a7627d41c5b126a37c29c6617c4d79eb945626dc0c03c69f3f1147111c199a5ea736786"
 }

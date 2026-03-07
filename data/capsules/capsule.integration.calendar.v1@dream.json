@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-06T18:43:17.282Z",
+    "updated_at": "2026-03-07T10:22:14.392Z",
     "name": "Calendar Integration",
     "semantic_hash": "capsule-integration-calendar-v1-google-ical-sync-events",
     "source": {
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d646d762a35b89584eebe65a123b8f9a8d9a797291b77cb88675b54d8204c272073f46b41628a9744208bf563eaebd034d7532a0196f949997a63a4db9c44dec"
+  "integrity_sha3_512": "cbca6c89e9a049bfebe72312d994f6a7f1a9c0fb3b8674df052049876f004ab5cf23337295a3442f8ed2d73d14585d55e25c703d90b02e1af7b98d1baa738671"
 }

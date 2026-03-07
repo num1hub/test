@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.background-agent-runtime.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-07T10:22:13.327Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
@@ -23,21 +23,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, and local skills into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now has a clearer agent map inside it: DeepMine Prospector, Miner, and Foreman govern mining jobs; Vault Update and Validation Gatekeeper govern acceptance paths; Branch Steward and Review govern graph discipline; and the broader Key Agents hub keeps those roles visible instead of hidden in daemon internals.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n"
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, and local skills into one operating path.\n- `lane_separation` keeps the human symbiosis lane distinct from unattended automation and batch execution.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now has a clearer economic shape as well: subscription-heavy interactive lanes serve the human-centered Personal AI Assistant loop, while programmable API and night or batch lanes carry the weight of unattended mining, orchestration, and graph maintenance.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, operator-visible control, and sustainable economics rather than to shallow prompt loops.\n"
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, and operator oversight. This capsule matters because 24/7 or night-shift autonomy is not created by a stronger model alone; it requires the surrounding runtime that keeps services alive, cooldowns bounded, failures observable, and delegated work accountable. In N1Hub it is the bridge that joins AI Wallet, DeepMine, Personal AI Assistant, Chat to Capsules, Symphony, and N-Infinity into one operational system.",
+    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, and operator oversight. This capsule matters because 24/7 or night-shift autonomy is not created by a stronger model alone; it requires the surrounding runtime that keeps services alive, cooldowns bounded, failures observable, and delegated work accountable. It now also makes lane separation explicit: the Personal AI Assistant serves the human symbiotic loop, while programmable API and off-peak lanes power unattended execution.",
     "keywords": [
       "background-agent-runtime",
       "daemon",
       "durable-runtime",
-      "capsule-jobs",
+      "hybrid-llm-access",
+      "night-batch-routing",
       "agent-delegation",
-      "chat-to-capsules",
-      "n-infinity",
       "symphony",
-      "deepmine",
-      "n1hub"
+      "deepmine"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,6 +56,10 @@
       {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.chat-to-capsules.v1",
@@ -82,6 +84,14 @@
       {
         "target_id": "capsule.foundation.ai-wallet.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.ai-control-surface.v1",
@@ -163,5 +173,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2043dc39f4d656cca905eafa606848de0b7178b1dd91e99e1b50aac4d91bb189b7ab652998fb8819d5efe11b3d7800c7c2b0c484eec9dc1cb266024f66cb3ef4"
+  "integrity_sha3_512": "4a9f190b3044849ae7e108b0a34561b25c958b3e31e0832a13c89ae906e04a84e8603a6f157310faf60998c8a3c66e5e233694ecf179b02c66400b8b3470a768"
 }

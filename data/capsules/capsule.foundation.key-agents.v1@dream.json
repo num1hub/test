@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.key-agents.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-06T23:54:00Z",
+    "updated_at": "2026-03-07T11:05:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about \"AI features.\"\n"
+    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n- a more explicit planning swarm where Planning Horizon Engine coordinates the path from Dream to day-level execution\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about \"AI features.\"\n"
   },
   "neuro_concentrate": {
-    "summary": "Key Agents in the Dream branch captures a more mature operating map for the N1Hub intelligence system. It aims toward clearer role boundaries, better orchestration between agent clusters, and more legible ownership of user-facing, mining, planning, maintenance, and review work. The capsule matters because the system is becoming a routed swarm rather than a single assistant surface. Dream therefore preserves the future command map of the agent ecosystem, not just a static list of roles.",
+    "summary": "Key Agents in the Dream branch captures a more mature operating map for the N1Hub intelligence system. It aims toward clearer role boundaries, better orchestration between agent clusters, and more legible ownership of user-facing, mining, planning, maintenance, and review work. The planning lane is especially clearer here: the future map should explicitly show how Planning Horizon Engine coordinates Roadmap Planner Agent and Daily Planner Agent. Dream therefore preserves the future command map of the agent ecosystem, not just a static list of roles.",
     "keywords": [
       "key-agents",
       "dream-branch",
@@ -32,6 +32,7 @@
       "deepmine",
       "n-infinity",
       "planning",
+      "planning-horizon-engine",
       "review",
       "n1hub"
     ],
@@ -81,6 +82,10 @@
       },
       {
         "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
         "relation_type": "references"
       },
       {
@@ -139,5 +144,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "ebe5134c786beb1fd304a247d84802377d1347d7a1cdd059084a63ae5d7857c6f5f39636a4a193d489a4a5796fcd7c93b4ce0a14b00b52a4dcda48e65960d1b8"
+  "integrity_sha3_512": "26fa883348ab8c34e56be21f66b991c039bb9e9d441ed257ef31d482d52ef972abf0f1e5622f57e3215ced44a9a4d2f10bf94a4bae4aaf5b86c202784dbc9338"
 }

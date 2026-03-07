@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.project.restart-challenge.v1",
     "version": "1.1.0",
-    "status": "active",
+    "status": "archived",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T18:49:00Z",
     "name": "Restart Challenge",
     "semantic_hash": "capsule-project-restart-challenge-v1-habits-execution-planning",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Restart Challenge\n\n## 1. Definition and Essence\nRestart Challenge is an independent initiative focused on disciplined reboot of execution habits, constraints, and measurable weekly output using capsule-native planning and reflection.\n\n## 2. Core Attributes\n- `challenge_scope` personal reboot objectives and boundaries\n- `phase_plan` staged milestones over challenge timeline\n- `accountability_metrics` consistency and output indicators\n- `reflection_loop` retrospective cadence and lesson capture\n- `success_criteria` objective completion thresholds\n\n## 3. Lifecycle\nThe challenge runs through finite phases with explicit checkpoints, periodic retrospectives, and archive of outcomes for future reuse.\n\n## 4. Integration\n- **Planner/Tracker:** core execution instrumentation.\n- **To Dig Deep:** philosophical north star for sustained effort.\n- **Workspace Project:** optional tooling support, not containment.\n- **Independent Project Set:** remains sovereign root initiative.\n\n## 5. Philosophical Alignment\nThe challenge interprets To Dig Deep as behavioral renewal through consistent, measurable forward movement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Restart Challenge is a sovereign execution-reboot initiative centered on habit recovery, measurable weekly output, and honest self-accountability. It remains a root project because its primary value is behavioral transformation rather than platform functionality. The hub is designed to accumulate phase plans, checkpoints, retrospective evidence, and challenge metrics in one place so progress can be reviewed as a coherent campaign. Within the vault it serves as the capsule-native container for rebuilding momentum through structured planning, tracking, and repeated recommitment.",
+    "summary": "Restart Challenge is archived for now as a paused execution-reboot initiative rather than an active campaign. It still preserves the structure for habit recovery, measurable weekly output, and honest self-accountability as a sovereign root project focused on behavioral transformation instead of platform functionality. The capsule matters because it retains the phase plans, checkpoints, retrospective evidence, and challenge metrics of this reboot line in one recoverable place. In archive mode it becomes preserved behavioral doctrine and lineage rather than a current execution surface.",
     "keywords": [
       "restart-challenge",
       "habit-reboot",
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "59e92371431c1667e7785c10dd8a6a66b2d940710de332f8b822815b5e73e898e2edc9f2515e5d2c47e45f613473837e8f391b730c060f0c46e792568d726363"
+  "integrity_sha3_512": "efaa99744a76ca29f108ffa49a6fcf0f0433ff1a9e9e574819f1d1f8f516fca025bdc8179a2c1eebb1516e19134336efdac6b45409695d8a9c9ce9cf52a2b32e"
 }

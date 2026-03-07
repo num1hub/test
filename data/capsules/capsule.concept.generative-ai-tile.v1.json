@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.concept.generative-ai-tile.v1",
     "version": "1.1.0",
-    "status": "active",
+    "status": "archived",
     "type": "concept",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "semantic_hash": "generative-ai-tile-design-assistant-style-synthesis-variation",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# Generative AI Tile Assistant Concept\n\n## 1. Purpose\nDefine an assistive AI layer that proposes tile design alternatives from style intent, room constraints, and catalog inventory.\n\n## 2. Functional Scope\nInterpret natural language prompts, generate multiple variants, and explain tradeoffs in cost and installation complexity.\n\n## 3. Safety\nRecommendations remain advisory and traceable with prompt and output provenance preserved.\n\n## 4. Integration\nThis concept integrates with scanning and layout capsules to provide an auditable end to end design assistant."
   },
   "neuro_concentrate": {
-    "summary": "This active concept capsule describes a generative AI assistant for TileSims that transforms style intent into explainable design alternatives. The assistant is scoped as advisory, requiring transparent scoring and clear tradeoff explanations across cost, visual complexity, and installation risk. It also enforces provenance capture for prompts, model outputs, and accepted revisions so decisions remain auditable over time. Integration targets include LiDAR acquisition and layout optimization capsules, creating a coherent pipeline from room capture to guided design choices and practical execution planning.",
+    "summary": "Generative AI Tile is archived along with the paused TileSims line instead of remaining an active assistant concept. It still describes a generative design layer that turns style intent into explainable alternatives while preserving tradeoff scoring and provenance for prompts, outputs, and accepted revisions. The concept matters because it captures how AI would fit into a future spatial-design workflow rather than acting as a vague feature wish. In archive mode it becomes preserved product intelligence for later revival.",
     "keywords": [
       "concept",
       "generative-ai",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5270ca38eb155b0b9634d40c44e2d6fe703b979cdaeceb4892a58d9d6b029d425f2334b8e0e783d7bf1786380245e8f848bf7850516b1bc1f6eeecae00899351"
+  "integrity_sha3_512": "d2b62caed70bcd3621155ef464967c7224f5828c378218168654476834730e75e6d5d439f0ad44892c878b51a0d393384ca96b7e6a0e0306be6231e5905c64c2"
 }

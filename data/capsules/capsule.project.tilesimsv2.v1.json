@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.project.tilesimsv2.v1",
     "version": "1.0.0",
-    "status": "active",
+    "status": "archived",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "name": "TileSims V2",
     "semantic_hash": "capsule-project-tilesimsv2-v1-tilesims-v2-simulation-generation",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# TileSims V2\n\n## 1. Definition and Essence\nTileSims V2 represents the next-generation execution hub for tile simulation and generation workflows, extending lessons from earlier TileSims efforts into an upgraded architecture and product direction.\n\n## 2. Core Attributes\n- `upgrade_scope` capabilities introduced beyond prior TileSims version\n- `migration_plan` transition path from current TileSims assets\n- `simulation_pipeline` core generation and optimization steps\n- `integration_surface` AI, layout algorithms, and scanning inputs\n- `release_milestones` staged rollout checkpoints\n\n## 3. Lifecycle\nTileSims V2 advances through prototyping, migration, validation, and release phases while preserving lineage to earlier simulation artifacts.\n\n## 4. Integration\n- **TileSims Existing Project:** lineage and migration reference.\n- **Lidar/Layout/Generative Concepts:** conceptual technical inputs.\n- **Planner/Tracker:** execution decomposition and monitoring.\n- **Independent Project Set:** root-level project unless explicitly nested.\n\n## 5. Philosophical Alignment\nTileSims V2 reflects To Dig Deep through iterative product refinement grounded in real technical feedback and measurable progress.\n"
   },
   "neuro_concentrate": {
-    "summary": "TileSims V2 is the forward execution hub for the next generation of the TileSims line. It captures migration planning, architecture upgrades, and release sequencing beyond the earlier TileSims concept surface while preserving explicit lineage to the existing project. The project remains inside the TileSims family rather than floating as an unrelated root because it represents a continuation and refinement, not a disconnected venture. In practice this hub is the place where next-version simulation workflows, product validation, and rollout milestones can converge into one accountable branch of work.",
+    "summary": "TileSims V2 is archived for now as a paused successor program inside the TileSims family. It still captures migration planning, architecture upgrades, and release sequencing beyond the earlier TileSims concept surface while preserving explicit lineage to the existing project. The capsule matters because the next-version thesis is still strategically useful even when not funded with active attention. In archive mode it preserves the forward execution arc as recoverable lineage rather than a current delivery commitment.",
     "keywords": [
       "tilesimsv2",
       "next-generation",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "cdf8457dfd13883e473f85fc80b3a1f6aa5475de3a4a4f373d828d8fd8e64a6a9d698ba2caffe4aaed25d6d953386dc9102f442960534be02150c9451c357ccd"
+  "integrity_sha3_512": "f8ea8875988844b12c2b3eb413d52fe8044d914bcc36538ff013b65225fda0ef13e1004d0c9262901b18fc6808fccffcdca67b8b42bf63a46e5d0bd82aa21717"
 }

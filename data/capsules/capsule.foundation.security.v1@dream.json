@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T18:43:16.988Z",
+    "updated_at": "2026-03-07T10:22:14.300Z",
     "name": "Security",
     "semantic_hash": "capsule-foundation-security-v1-access-control-cryptography-audit",
     "priority": "high",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "fc81e26c346eace6c7c4a6b65f9a05a03b989fe0e6bc8ce949b263a5bc8b262151167229f137b44d08d2ff1b5488f7cc56d873b6c6a3a67054dc91424444960f"
+  "integrity_sha3_512": "8019b9ce0007194bf8b15d79075915402080a3374c49b884c57152ac2ed303e336c3fe23e741cdae1efdb56d0b16e4103b5e0a9b2e8baf88651c31eb417b9ef8"
 }

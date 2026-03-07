@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:16.066Z",
+    "updated_at": "2026-03-07T10:22:13.947Z",
     "name": "Architect Override Protocol",
     "semantic_hash": "capsule-foundation-architect-override-v1-protocol-governance-sovsig",
     "priority": "medium",
@@ -67,5 +67,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1a0fdbd3d9a9e8159f3818d282e4925c7ba748190964a4a9dae1e74de63d8f63af5f3ada57231f73edc6c85225ad9802383787e7089c309a770c11560497f4e6"
+  "integrity_sha3_512": "19feca5feaf2f305bffc785aeaddb7ecbcde4a2dd34ce08f3c8fbf33aa3c97df200e71c4a607271625df671ef41a7968cd77755a2206ced36afe088812a20955"
 }

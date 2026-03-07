@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T18:43:15.565Z",
+    "updated_at": "2026-03-07T10:22:13.788Z",
     "name": "AI Prompt",
     "semantic_hash": "capsule-ai-prompt-v1-template-llm-assistant-operations",
     "source": {
@@ -85,5 +85,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6b9e5db057c749827dd0f18940f46a188c22053457ab4b37309bca13fff2c35d8d514735f82445aa0c7bbfe2863dd1eda94b306f0f01f1fd6d8f80f924df8d2b"
+  "integrity_sha3_512": "f81e34b93bec37eea10ce68aef5acf94b53952a3529cd925bbe1664ebf30ae78501e8191f63d3e2168f0cbeb75c93bc267c8bbea32dab659ab38bfbb37320685"
 }

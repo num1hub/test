@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:16.977Z",
+    "updated_at": "2026-03-07T10:22:14.294Z",
     "name": "Royalty Engine",
     "semantic_hash": "capsule-foundation-royalty-engine-v1-payout-lineage-tokenomics",
     "priority": "medium",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0827b52a4693e332147cf54b007756b7f8542f977b62ca016ddc419806439ec478c9bca9daf87f27bf720b2aae21576fa73bc42d5fbcad0868652cda47ffd4b0"
+  "integrity_sha3_512": "7d25a48ec0096cb639735d722eae594891b6887dcc82858b3d8079b1cb8597941a97f8e451de84f3de44f672c1fabda08fdf975c8443bf5216d2066c4b3a635a"
 }

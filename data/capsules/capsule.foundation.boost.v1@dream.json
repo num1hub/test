@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:16.187Z",
+    "updated_at": "2026-03-07T10:22:13.985Z",
     "name": "Boost",
     "semantic_hash": "capsule-foundation-boost-v1-acceleration-compute-throughput-priority",
     "priority": "medium",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "63e3ce6e5f9f96181fd04002af7f8034e9cce2469bf464410c5d8662be100fbce8c5de6f3c9337e62c017ec4c32ee6dd5f21a9d49b37b814b814eb756f9259ab"
+  "integrity_sha3_512": "f5a45c6d8e097f1112d152883216ad02b3bcc0782fa6758f6eaedbdbc5cc7cd3e46b0fcf2b47e0ef38cefcbb39ec52a2e6a6c12e60c5736a707c973baf45aea5"
 }

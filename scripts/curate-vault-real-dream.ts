@@ -76,10 +76,14 @@ const namePatch: Record<string, string> = {
   'capsule.foundation.capsuleos.versioning-protocol.v1': 'CapsuleOS Versioning Protocol',
   'capsule.foundation.a2c.v1': 'A2C Pipeline',
   'capsule.foundation.access-models.v1': 'Access Models',
+  'capsule.foundation.ai-economics-night-batch.v1': 'AI Economics: Night and Batch Routing',
   'capsule.foundation.n-infinity.v1': 'N-Infinity',
   'capsule.foundation.blockchain-opensource.v1': 'Blockchain Open Source',
   'capsule.foundation.deepmine.v1': 'DeepMine',
   'capsule.foundation.graph-3d-visualization.v1': '3D Graph Visualization',
+  'capsule.foundation.human-ai-symbiosis.v1': 'Human-AI Symbiosis',
+  'capsule.foundation.hybrid-llm-access.v1': 'Hybrid LLM Access',
+  'capsule.foundation.planning-horizon-engine.v1': 'Planning Horizon Engine',
   'capsule.foundation.tilesims.v1': 'TileSims Foundation',
   'capsule.core.compass.v1': 'Core Compass',
   'capsule.foundation.hub-atomic.v1': 'Hub / Atomic Topology',
@@ -155,6 +159,7 @@ const parentMap: Record<string, ParentSpec> = {
     'capsule.foundation.deepmine.v1',
     'capsule.foundation.workspace.v1',
   ],
+  'capsule.foundation.human-ai-symbiosis.v1': 'capsule.foundation.workspace.v1',
   'capsule.foundation.ai-control-surface.v1': [
     'capsule.foundation.background-agent-runtime.v1',
     'capsule.foundation.workspace.v1',
@@ -224,6 +229,10 @@ const parentMap: Record<string, ParentSpec> = {
     'capsule.foundation.planner.v1',
     'capsule.foundation.personal-ai-assistant.v1',
   ],
+  'capsule.foundation.planning-horizon-engine.v1': [
+    'capsule.foundation.planner.v1',
+    'capsule.foundation.key-agents.v1',
+  ],
   'capsule.foundation.capsule-librarian-agent.v1': [
     'capsule.foundation.personal-ai-assistant.v1',
     'capsule.foundation.workspace.v1',
@@ -286,6 +295,8 @@ const parentMap: Record<string, ParentSpec> = {
   'capsule.foundation.marketplace.v1': 'capsule.project.mining-company.v1',
   'capsule.foundation.n1-pass.v1': 'capsule.foundation.marketplace.v1',
   'capsule.foundation.access-models.v1': 'capsule.foundation.marketplace.v1',
+  'capsule.foundation.hybrid-llm-access.v1': 'capsule.foundation.access-models.v1',
+  'capsule.foundation.ai-economics-night-batch.v1': 'capsule.foundation.access-models.v1',
   'capsule.foundation.blockchain-opensource.v1': 'capsule.foundation.marketplace.v1',
   'capsule.foundation.boost.v1': 'capsule.foundation.marketplace.v1',
   'capsule.foundation.epistemic-ledger.v1': 'capsule.foundation.capsuleos.v1',
@@ -351,6 +362,7 @@ const dreamDraftIds = new Set([
   'capsule.foundation.vault-update-agent.v1',
   'capsule.foundation.daily-planner-agent.v1',
   'capsule.foundation.roadmap-planner-agent.v1',
+  'capsule.foundation.planning-horizon-engine.v1',
   'capsule.foundation.capsule-librarian-agent.v1',
   'capsule.foundation.branch-steward-agent.v1',
   'capsule.foundation.validation-gatekeeper-agent.v1',
@@ -377,6 +389,7 @@ const dreamDraftIds = new Set([
   'capsule.foundation.notification.v1',
   'capsule.foundation.reminder.v1',
   'capsule.foundation.access-models.v1',
+  'capsule.foundation.planning-horizon-engine.v1',
   'capsule.foundation.blockchain-opensource.v1',
   'capsule.foundation.boost.v1',
   'capsule.foundation.marketplace.v1',
@@ -457,11 +470,32 @@ const supplementalLinks: Record<string, SupplementalLink[]> = {
     { target_id: 'capsule.foundation.capsule-graph-maintenance.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.capsule-job.v1', relation_type: 'references' },
   ],
+  'capsule.foundation.access-models.v1': [
+    { target_id: 'capsule.foundation.hybrid-llm-access.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.ai-economics-night-batch.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.human-ai-symbiosis.v1', relation_type: 'references' },
+  ],
   'capsule.foundation.roadmap.v1': [
     { target_id: 'capsule.foundation.chat-to-capsules.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.agent-delegation.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'references' },
     { target_id: 'capsule.ai.suggestion.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.daily-planner-agent.v1': [
+    { target_id: 'capsule.foundation.planning-horizon-engine.v1', relation_type: 'depends_on' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.roadmap-planner-agent.v1': [
+    { target_id: 'capsule.foundation.planning-horizon-engine.v1', relation_type: 'supports' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
+  ],
+  'capsule.foundation.planning-horizon-engine.v1': [
+    { target_id: 'capsule.foundation.daily-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.roadmap-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.n-infinity.suggestion-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.n-infinity.reminder-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.n-infinity.risk-detector.v1', relation_type: 'references' },
   ],
   'capsule.foundation.chat-to-capsules.v1': [
     { target_id: 'capsule.ai.prompt.v1', relation_type: 'depends_on' },
@@ -470,6 +504,9 @@ const supplementalLinks: Record<string, SupplementalLink[]> = {
     { target_id: 'capsule.foundation.agent-soul.v1', relation_type: 'references' },
   ],
   'capsule.foundation.personal-ai-assistant.v1': [
+    { target_id: 'capsule.foundation.human-ai-symbiosis.v1', relation_type: 'depends_on' },
+    { target_id: 'capsule.foundation.hybrid-llm-access.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.planning-horizon-engine.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.daily-planner-agent.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.roadmap-planner-agent.v1', relation_type: 'references' },
@@ -498,6 +535,8 @@ const supplementalLinks: Record<string, SupplementalLink[]> = {
     { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.daily-planner-agent.v1', relation_type: 'references' },
     { target_id: 'capsule.foundation.roadmap-planner-agent.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.planning-horizon-engine.v1', relation_type: 'references' },
+    { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
   ],
   'capsule.foundation.background-agent-runtime.v1': [
     { target_id: 'capsule.foundation.key-agents.v1', relation_type: 'references' },
@@ -3283,10 +3322,13 @@ async function curateDreamBranch(dryRun: boolean): Promise<{ dreamChanged: numbe
       ? dreamGraph.find((capsule) => capsule.metadata.capsule_id === id) ?? null
       : await readOverlayCapsule(id, 'dream');
 
-    if (!sourceCapsule || sourceCapsule.metadata.status === 'draft') continue;
+    if (!sourceCapsule) continue;
+
+    const desiredStatus = sourceCapsule.metadata.status === 'archived' ? 'archived' : 'draft';
+    if (sourceCapsule.metadata.status === desiredStatus) continue;
 
     const capsule = JSON.parse(JSON.stringify(sourceCapsule)) as SovereignCapsule;
-    capsule.metadata.status = 'draft';
+    capsule.metadata.status = desiredStatus;
     markUpdated(capsule, new Date().toISOString());
     await validateOrThrow(capsule, dreamIds, `dream:${id}`);
 

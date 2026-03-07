@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:16.729Z",
+    "updated_at": "2026-03-07T10:22:14.212Z",
     "name": "N1 Pass",
     "semantic_hash": "capsule-foundation-n1-pass-v1-subscription-tiers-entitlements",
     "priority": "medium",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a53abbbc00e85533c0c0d58d202d44ad28815d5d0ded523275c0a49f0f1e011e9f7531ddc6abb4d29a423aea0bfa029a3573fcd0130f89b202019c3ece1bcb08"
+  "integrity_sha3_512": "734ab3c8f270af5b8ff4389213419e48f3fa754b854ae80f4be00ed0da2f5178540447bd0d228fdef5b5b09c5b92a7cbbcb64865d61ed407d591576d73f76763"
 }

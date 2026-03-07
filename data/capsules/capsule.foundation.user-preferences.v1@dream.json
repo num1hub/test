@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-06T18:43:17.247Z",
+    "updated_at": "2026-03-07T10:22:14.381Z",
     "name": "User Preferences",
     "semantic_hash": "capsule-foundation-user-preferences-v1-timezone-work-hours",
     "priority": "medium",
@@ -64,5 +64,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a9faee2327e75479d43a840c54d148d2028a980b712311f57b21c5e694aa0de561a2131972a514365f5ff9f45e2622078b0360bbcf252bdb301e9686fadc8773"
+  "integrity_sha3_512": "d582c86a308bd362a7de0799f9d1420a1c3b47e75f3480c25dcb774ef6cf5eb42937940b964d5782e3ae68b632784ac96742bfedb6bdb4e8fa6ad0f234cced21"
 }

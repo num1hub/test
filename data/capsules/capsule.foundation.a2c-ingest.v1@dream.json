@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:15.822Z",
+    "updated_at": "2026-03-07T10:22:13.854Z",
     "name": "A2C Stage: Ingest",
     "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline",
     "priority": "high",
@@ -64,5 +64,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e3c83558abe16a90679dcd4168976bce66afd7e479eb0883ad9e785c5b9604329c4c0bd5e5192c83e5946e36603ce94859030f35dca525be6d2a0e6b81cdf074"
+  "integrity_sha3_512": "32beb00e2ba13f35299165847f5e8874a4f832786b8744cd95f043abd01122181d135d014323f59b1428d72991209f31c935d2722058f606abd12713ae95d43f"
 }

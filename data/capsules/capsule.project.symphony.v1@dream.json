@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-06T18:43:17.521Z",
+    "updated_at": "2026-03-07T10:22:14.453Z",
     "name": "Symphony Project",
     "semantic_hash": "capsule-project-symphony-v1-agent-automation-runtime-integration",
     "source": {
@@ -110,5 +110,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6bc28176319d02b3c84adccea4af5902a983a0f47bd193c4a766ed4b5364cb804c4f19d38aab3c64b38548c542597f7926add9fa473220ad87c5827eb002aaa0"
+  "integrity_sha3_512": "c1e01db4eaf3e6cb748549211d00cddaf9fadc6ba46ba2d5f00a56183ad9f0b3e1be771c2011986968ac1f6642ba8fdfecf33ddeb1893861c3b7e0470ad49cc5"
 }

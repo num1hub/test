@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.concept.generative-ai-tile.v1",
     "version": "1.1.0",
-    "status": "draft",
+    "status": "archived",
     "type": "concept",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T18:43:15.624Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "semantic_hash": "generative-ai-tile-design-assistant-style-synthesis-variation",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# Generative AI Tile Assistant Concept\n\n## 1. Purpose\nDefine an assistive AI layer that proposes tile design alternatives from style intent, room constraints, and catalog inventory.\n\n## 2. Functional Scope\nInterpret natural language prompts, generate multiple variants, and explain tradeoffs in cost and installation complexity.\n\n## 3. Safety\nRecommendations remain advisory and traceable with prompt and output provenance preserved.\n\n## 4. Integration\nThis concept integrates with scanning and layout capsules to provide an auditable end to end design assistant."
   },
   "neuro_concentrate": {
-    "summary": "Generative AI Tile in the Dream branch captures the future design-copilot layer of TileSims. It imagines more explainable alternative generation, better cost-aware style exploration, and tighter coupling between user intent, geometry constraints, and execution consequences before a design is accepted. The concept matters because generative design becomes shallow when it optimizes only aesthetics. Dream therefore preserves this capsule as a future design-intelligence concept where creativity stays accountable to buildability and traceable tradeoffs.",
+    "summary": "Generative AI Tile in the Dream branch is archived alongside the rest of the TileSims line so its future design-copilot vision remains stored without active execution. It still imagines more explainable alternative generation, better cost-aware style exploration, and tighter coupling between user intent, geometry constraints, and execution consequences before a design is accepted. The concept matters because generative design becomes shallow when it optimizes only aesthetics. In archive mode Dream preserves this accountable creativity layer as future product leverage.",
     "keywords": [
       "concept",
       "generative-ai",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "909fb6445797861653ca2abc838a890d658477ea6f7fd9024b1a5a9c4b219c331d2b25effd27605106ceec727f7128bf40e2ac8c021b3a9e8ce95b4c42cd8e92"
+  "integrity_sha3_512": "bcb2eca69ed583e10e1beb74e4e3c160730e99736a50e4fe04c77e2f89fb8968c079efca92236629d89b4db5db4f3fe6329ee199cea136dd98570b494807dcc8"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-06T18:43:15.955Z",
+    "updated_at": "2026-03-07T10:22:13.901Z",
     "name": "Agent Delegation",
     "semantic_hash": "agent-delegation-handoff-lanes-approvals-results-escalation-runtime",
     "priority": "high",
@@ -107,5 +107,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1d3d392b6f5a500e518da7d0e3c195bd7eb6fd2ed11ee8caa994fbc9cb202c2075db35b6ca85354e2e36059a6d4dd4a86d546116c1d1843c49d2b14ba4b87d3b"
+  "integrity_sha3_512": "6795e177782250c5d6a4af864aab8c4daadcddbf5ff529297995df6bdfcbb70f459fd621398550dbfd615ae26b39d7fef1fd2445b528a4735a5b33c5951f1b75"
 }

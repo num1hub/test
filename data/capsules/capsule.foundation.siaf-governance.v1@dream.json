@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:17.010Z",
+    "updated_at": "2026-03-07T10:22:14.305Z",
     "name": "SIAF Governance",
     "semantic_hash": "capsule-foundation-siaf-governance-v1-fund-voting-allocation",
     "priority": "medium",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "348955e8855d8f797ebc355090f71e90f0ed870b48f48d6297ae6ed6ea0690e6e8ff30dda94067ee3b5c4b55b55061f20254b34433b7777fc46fc22410ab7cc0"
+  "integrity_sha3_512": "f6c8bc5e425132eb8d112eb74aacb3f8c427f957d49e28a7183eda8474df95822aa01114bc49147c458ec16dac4d367b806a75698dff0ae96fa8945d0eef0d6e"
 }

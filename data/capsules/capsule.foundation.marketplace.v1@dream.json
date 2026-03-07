@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:16.540Z",
+    "updated_at": "2026-03-07T10:22:14.138Z",
     "name": "Marketplace",
     "semantic_hash": "capsule-foundation-marketplace-v1-economy-templates-licensing-tokenomics",
     "priority": "medium",
@@ -67,5 +67,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d90bac43de62ffa276986c23075540a08806236186969fe0db71e372e7a5da2b13ca53e5f1f158b3b372df5113547de723522b8897a856f92ed67c82d65f33b5"
+  "integrity_sha3_512": "1705ecb70f86e02e9e6e39f27925545ce381eac0bcc5002df2e2b5e36e80fd5a8f7e370349b57e9eabe352c48ea08599d01455e4dd4837d438b95f73181e1f0c"
 }

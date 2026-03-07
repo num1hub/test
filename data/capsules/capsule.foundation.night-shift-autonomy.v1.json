@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.night-shift-autonomy.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-07T09:20:00Z",
     "name": "Night Shift Autonomy",
     "semantic_hash": "night-shift-autonomy-window-budget-cooldown-handoff-policy",
     "source": {
@@ -15,29 +15,27 @@
       "type": "repository_contract"
     },
     "priority": "high",
-    "progress": 47,
+    "progress": 54,
     "estimatedHours": 120,
-    "actualHours": 52,
+    "actualHours": 61,
     "dueDate": "2026-07-18",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It captures when heavy graph work should run, which timezone governs activation, how cooldowns and budgets are enforced, and how unfinished work is handed back to the next shift or to humans.\n\n## 2. Core Responsibilities\n- `execution_window` defines the scheduled hours when autonomous work is allowed to dispatch.\n- `budget_and_rate_discipline` keeps token spend and provider pressure bounded during unattended operation.\n- `cooldown_policy` prevents the same graph area from being hammered every poll.\n- `handoff_rules` determine what remains queued, summarized, or escalated at shift end.\n- `operator_expectation` makes it clear that always-on services and always-dispatching autonomy are not the same thing.\n\n## 3. N1Hub Integration\nIn N1Hub this capsule formalizes the current operational compromise: Symphony and N-Infinity can stay alive continuously, but capsule-graph jobs are allowed to dispatch primarily inside explicit night windows. This gives the platform a real autonomy lane without pretending that unrestricted 24-hour mutation is already mature enough.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by reserving deep, high-latency work for disciplined windows where the system can think hard without disrupting active daytime use.\n"
+    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It captures when heavy graph work should run, which timezone governs activation, how cooldowns and budgets are enforced, and how unfinished work is handed back to the next shift or to humans.\n\n## 2. Core Responsibilities\n- `execution_window` defines the scheduled hours when autonomous work is allowed to dispatch.\n- `budget_and_rate_discipline` keeps token spend and provider pressure bounded during unattended operation.\n- `economics_capture` pushes suitable mining, synthesis, and maintenance jobs into the cheapest reliable night or batch lanes.\n- `cooldown_policy` prevents the same graph area from being hammered every poll.\n- `handoff_rules` determine what remains queued, summarized, or escalated at shift end.\n- `operator_expectation` makes it clear that always-on services and always-dispatching autonomy are not the same thing.\n\n## 3. N1Hub Integration\nIn N1Hub this capsule formalizes the current operational compromise: Symphony and N-Infinity can stay alive continuously, but capsule-graph jobs are allowed to dispatch primarily inside explicit night windows. This gives the platform a real autonomy lane without pretending that unrestricted 24-hour mutation is already mature enough. It also protects the daytime human-plus-assistant symbiosis lane by pushing heavy programmable work toward cheaper unattended windows instead of letting it eat the same economics as live interactive use.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by reserving deep, high-latency work for disciplined windows where the system can think hard without disrupting active daytime use.\n"
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy defines the bounded scheduling policy for unattended background work in N1Hub. It matters because a service that runs continuously is not the same as one that should mutate the graph continuously. This capsule names the explicit night window, timezone, cooldown, budget, and handoff expectations that let Symphony and N-Infinity perform deep capsule work while reducing daytime risk. It is the architectural expression of the current N1Hub path from supervised nightly autonomy toward fuller 24/7 systems.",
+    "summary": "Night Shift Autonomy defines the bounded scheduling policy for unattended background work in N1Hub. It matters because a service that runs continuously is not the same as one that should mutate the graph continuously. This capsule names the explicit night window, timezone, cooldown, budget, and handoff expectations that let Symphony and N-Infinity perform deep capsule work while reducing daytime risk. It now also makes the economic reason for that design more explicit: preserve the human symbiosis lane for live interaction, and push heavy programmable work into cheaper unattended windows whenever provider pricing allows it.",
     "keywords": [
       "night-shift-autonomy",
       "night-window",
-      "scheduling",
-      "cooldown",
-      "budget-control",
-      "n-infinity",
-      "symphony",
-      "deepmine",
       "background-agents",
-      "n1hub"
+      "offpeak",
+      "ai-economics",
+      "deepmine",
+      "symphony",
+      "n-infinity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -72,6 +70,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.notification.v1",
         "relation_type": "references"
       },
@@ -87,5 +93,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0189765bb5360c4ffd3e308de5a29eedb8d5344da8fb6dca531083d5878975c8f87c1bf0e35630af9a98de3762c8e3f765f85411439a6d940d8e97eeac3413a9"
+  "integrity_sha3_512": "b4cfb5d856eb679a124e28c2c7c23467b3525c8f94928f918093d07408d9b42e533a92252f80084bfdfda2d14385d1dee2e6d68ea3db0fbf79961c94dbf856f1"
 }

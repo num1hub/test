@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-v0-access-license-sovereign-control-root",
-    "updated_at": "2026-03-06T18:43:15.416Z",
+    "updated_at": "2026-03-07T10:22:13.759Z",
     "source": {
       "uri": "internal://capsule.project.n1hub-v0.v1",
       "type": "internal_policy_record"
@@ -67,5 +67,5 @@
     ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1efda1babc61b290c7be86943432e39c526f0550a64adec2a844e71e1c8136a7ae355d1d150882833b3cb09beaafc266f42ab39f7a3a58a05b2587efd7437205"
+  "integrity_sha3_512": "8b791cdeed2aadcd10ee515d323e1059f1bb8f763df21a9b2e940044fee42c462bf23cc71e5db61f9ae9587ec6e2dab2e6905088823b1a8edf9f3541a23a64e7"
 }

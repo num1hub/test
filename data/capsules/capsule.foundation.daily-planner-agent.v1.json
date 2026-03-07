@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.daily-planner-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:28:00Z",
-    "updated_at": "2026-03-06T23:28:00Z",
+    "updated_at": "2026-03-07T11:05:00Z",
     "name": "Daily Planner Agent",
     "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution",
     "source": {
@@ -23,18 +23,22 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Daily Planner Agent\n\n## 1. Definition and Essence\nDaily Planner Agent is the near-horizon planning worker of N1Hub. It translates goals, tasks, calendar pressure, reminder signals, and current project reality into a practical plan for `today` and `tomorrow` without losing alignment with the broader roadmap.\n\n## 2. Core Responsibilities\n- `today_tomorrow_planning` shapes the immediate execution window into focused next actions.\n- `focus_selection` chooses what deserves attention now and what should explicitly wait.\n- `capacity_estimation` compares task load against realistic time and energy limits.\n- `deadline_alignment` respects tracker urgency, reminder pressure, and risk signals.\n- `handoff_to_user` returns a plan that the Personal AI Assistant can explain conversationally.\n\n## 3. N1Hub Role\nIn N1Hub, Daily Planner Agent is the pragmatic short-horizon planner. It prevents the assistant from giving vague motivational advice by grounding immediate planning in actual graph, task, and schedule state.\n\n## 4. Philosophical Alignment\nDaily Planner Agent serves To Dig Deep by turning long-term intent into disciplined present-tense action instead of leaving strategy disconnected from the day.\n"
+    "content": "# Daily Planner Agent\n\n## 1. Definition and Essence\nDaily Planner Agent is the near-horizon planning worker of N1Hub. It takes the broader planning field, including Dream-side intent, and compresses it through the constraints of Real into a practical plan for `today`, `tomorrow`, and the immediate week without losing alignment with the roadmap.\n\n## 2. Core Responsibilities\n- `dream_to_day_compression` distills the larger Dream branch into grounded present-tense action.\n- `today_tomorrow_week_planning` shapes the immediate execution window into focused next actions.\n- `focus_selection` chooses what deserves attention now and what should explicitly wait.\n- `capacity_estimation` compares task load against realistic time and energy limits.\n- `reality_filtering` checks current commitments, blockers, execution state, and branch discipline before promoting work into the day.\n- `deadline_alignment` respects tracker urgency, reminder pressure, and risk signals.\n- `handoff_to_user` returns a plan that the Personal AI Assistant can explain conversationally.\n\n## 3. N1Hub Role\nIn N1Hub, Daily Planner Agent is the pragmatic short-horizon distiller. It prevents the assistant from giving vague motivational advice by grounding immediate planning in actual graph, task, and schedule state while still carrying forward the larger shape of the Dream branch.\n\n## 4. Philosophical Alignment\nDaily Planner Agent serves To Dig Deep by turning long-term intent into disciplined present-tense action instead of leaving strategy disconnected from the day.\n"
   },
   "neuro_concentrate": {
-    "summary": "Daily Planner Agent is the short-horizon planning specialist of N1Hub. It builds actionable plans for today and tomorrow from goals, tasks, tracker urgency, reminder pressure, and realistic capacity instead of letting the assistant improvise vague schedule advice. The role matters because users live in days, not in abstract roadmaps. By making daily planning an explicit agent, the vault gets a dependable bridge between long-horizon structure and immediate execution discipline daily.",
+    "summary": "Daily Planner Agent is the short-horizon planning specialist of N1Hub. It builds actionable plans for today, tomorrow, and the immediate week from goals, tasks, tracker urgency, reminder pressure, realistic capacity, and the current state of Real. Its role is now more explicit: it is the point where the broader Dream branch is compressed into the lived execution window. This matters because users live in days, not in abstract roadmaps. By making daily planning an explicit agent, the vault gets a dependable bridge between long-horizon structure and immediate execution discipline.",
     "keywords": [
       "daily-planner-agent",
       "today-plan",
       "tomorrow-plan",
+      "week-plan",
       "planner",
       "tracker",
       "reminders",
       "risk-signals",
+      "dream-branch",
+      "real-branch",
+      "planning-horizon-engine",
       "personal-ai-assistant",
       "workspace",
       "n1hub"
@@ -92,6 +96,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.ai.conversation.v1",
         "relation_type": "references"
       },
@@ -107,5 +119,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d16d7f40431402085883c850eb02f102037854c79bb367146fca0ca7e0c7971202c516a34067bea70acd3ef0d06c7252b355f63b5f8b35c90b7a77ad0685e957"
+  "integrity_sha3_512": "e9c70a198927be0cbe2ca8ae37cb8b9d23a988e8fa8de2c1ed7a363fe8e231de7b484a54e56b32f6ff64eb6f9e989c91ffca7aae5537fdc51c2ed70322cf9fca"
 }

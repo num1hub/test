@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-06T18:43:16.007Z",
+    "updated_at": "2026-03-07T10:22:13.919Z",
     "name": "AI Control Surface",
     "semantic_hash": "ai-control-surface-wallet-status-chat-ops-workspace",
     "priority": "high",
@@ -107,5 +107,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6a1daa0a6102fefb10c608e68d0f9d1b3c948c0821f9baa68e961ce58bdfeccd81fc90b8483710263cfbdac904a009763f4f661bd69035018fc78cc7421bb516"
+  "integrity_sha3_512": "069561a243a08adb9794e9abc50e5e44d93fffeed22984dafb151a8290480dae98f7d4cf38d5787c9313b8b28998c6c38cf4faf8f63cfca32253e2381a275085"
 }

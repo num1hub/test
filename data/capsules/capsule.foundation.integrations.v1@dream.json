@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-06T18:43:16.510Z",
+    "updated_at": "2026-03-07T10:22:14.128Z",
     "name": "Integrations",
     "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security",
     "priority": "medium",
@@ -64,5 +64,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3b303a28991fa5938baae07426f32cb1c0d5227fd02936bf2ff3223d3bfda7ddabe26b383890f90c83fed5e740ee05a8b74069ccde0a5aafe209a83cedb735cb"
+  "integrity_sha3_512": "9c4b99ee78d2f8fa5e77f54c048ded84e9cfd02e213e9de4aef47192a68c2f3b155dfaad8578a50cfa89cde17dcb72d72de42f723418c78b8fda64f7ea7ef2d8"
 }

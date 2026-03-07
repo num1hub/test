@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:15.788Z",
+    "updated_at": "2026-03-07T10:22:13.845Z",
     "name": "A2C Stage: Extract",
     "semantic_hash": "capsule-foundation-a2c-extract-v1-stage-entities-evidence",
     "priority": "high",
@@ -64,5 +64,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "8da35cae814657af667cf6b77032980bfeb40f2a880e8f567a4d27dd96b4e6e762581a582ff5fd4d93fb700ee17efa89149dc0a9558bffbc89ac67cdad36fd75"
+  "integrity_sha3_512": "f24dcfeddfe057607bbc60849856c6d4e18de1dc11a487e7c54f119bcc0d5aa3b90d7f07c29457b3afd205c4b4eb24778d00728674051b6cf0955cdabd432326"
 }

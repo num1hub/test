@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-06T18:43:16.811Z",
+    "updated_at": "2026-03-07T10:22:14.242Z",
     "name": "Permission",
     "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write",
     "tier": 2
@@ -61,5 +61,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "51b3c2c1dea2770957d1da7acb1b5b589c72a9102198005d6d6feafbc7fde3dc60e04d06bb9fb16962a7f94119b07faa981fa5b7130ca5c7790d65f31397fcc1"
+  "integrity_sha3_512": "d40e82c4858ed201d573936e5d87a9eaa565e4c284b1e3e3663f01124dfd63cfce8451a56c6b847425275045e7b379ea20a33e167f977c20d3ab54e8027a64c2"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T18:43:16.124Z",
+    "updated_at": "2026-03-07T10:22:13.960Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
@@ -126,10 +126,42 @@
       {
         "target_id": "capsule.project.symphony.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f302618248d7feff22ce4fdce7543c4907387aff00f2146b08dabdc359e6d8f035c93532051cc6c0e5d3cf434321a98b5e92119f63288d843a958ce7e60a6c19"
+  "integrity_sha3_512": "a261966b77d0d6859d364983b840e561620e669d6f758be765da5aa95baca0d0e0f6bbbe4ffa03e5ad67fdea20134c9c16bb1f3d3b0ec89bb4a66560ecfbb7d5"
 }

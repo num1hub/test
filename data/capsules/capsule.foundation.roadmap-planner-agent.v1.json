@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.roadmap-planner-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:40:00Z",
-    "updated_at": "2026-03-06T23:40:00Z",
+    "updated_at": "2026-03-07T11:05:00Z",
     "name": "Roadmap Planner Agent",
     "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy",
     "source": {
@@ -23,18 +23,22 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Roadmap Planner Agent\n\n## 1. Definition and Essence\nRoadmap Planner Agent is the long-horizon planning specialist of N1Hub. It converts vision, project intent, milestones, risks, and branch-aware uncertainty into phased medium- and long-term roadmaps that remain useful under changing execution pressure.\n\n## 2. Core Responsibilities\n- `long_horizon_planning` shapes quarterly, annual, and multi-phase strategy into readable structures.\n- `phase_design` breaks large ambition into milestones, initiatives, and sequencing windows.\n- `branch_awareness` keeps exploratory Dream structures distinct from Real commitments and delivered reality.\n- `replanning_logic` reacts to risk, drift, and new evidence without destroying strategic coherence.\n- `assistant_handoff` gives Personal AI Assistant a clear strategic layer to explain and refine with the user.\n\n## 3. N1Hub Role\nIn N1Hub, Roadmap Planner Agent is the strategic planner that keeps the graph from collapsing into only short-term task lists. It maintains the medium- and long-range shape that Daily Planner Agent can later compress into immediate action.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent serves To Dig Deep by forcing strategy to descend into explicit phases, dependencies, and branch-aware commitment rather than remaining a vague vision statement.\n"
+    "content": "# Roadmap Planner Agent\n\n## 1. Definition and Essence\nRoadmap Planner Agent is the long-horizon planning specialist of N1Hub. It converts vision, project intent, milestones, risks, and branch-aware uncertainty into phased medium- and long-term roadmaps that remain useful under changing execution pressure.\n\n## 2. Core Responsibilities\n- `long_horizon_planning` shapes `30/60/90`, `365`, and `1000-day` strategy into readable structures.\n- `phase_design` breaks large ambition into milestones, initiatives, and sequencing windows.\n- `dream_structuring` preserves exploratory Dream architecture without confusing it with delivered commitment.\n- `branch_awareness` keeps exploratory Dream structures distinct from Real commitments and delivered reality.\n- `replanning_logic` reacts to risk, drift, and new evidence without destroying strategic coherence.\n- `compression_handoff` passes a coherent strategic field into Planning Horizon Engine so Daily Planner Agent can later compress it into immediate action.\n- `assistant_handoff` gives Personal AI Assistant a clear strategic layer to explain and refine with the user.\n\n## 3. N1Hub Role\nIn N1Hub, Roadmap Planner Agent is the strategic planner that keeps the graph from collapsing into only short-term task lists. It maintains the medium- and long-range shape that Daily Planner Agent can later compress into immediate action.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent serves To Dig Deep by forcing strategy to descend into explicit phases, dependencies, and branch-aware commitment rather than remaining a vague vision statement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Roadmap Planner Agent is the strategic planning worker that turns vision into phases, milestones, and adaptive long-horizon structure across N1Hub. It matters because a serious graph needs more than tasks for today; it needs a planning role that can hold medium- and long-term intent, distinguish Dream exploration from Real commitment, and absorb risk or drift without destroying coherence. By separating strategic planning from daily scheduling, the vault gains a cleaner ladder from ambition to execution.",
+    "summary": "Roadmap Planner Agent is the strategic planning worker that turns vision into phases, milestones, and adaptive long-horizon structure across N1Hub. It now carries a clearer horizon model as well: `30/60/90`, `365`, and `1000-day` planning should remain explicit instead of dissolving into vague ambition. This matters because a serious graph needs more than tasks for today; it needs a planning role that can hold medium- and long-term intent, distinguish Dream exploration from Real commitment, and hand a coherent strategic field down toward daily execution.",
     "keywords": [
       "roadmap-planner-agent",
       "strategy",
       "roadmap",
       "phases",
       "milestones",
+      "30-60-90",
+      "365-days",
+      "1000-days",
       "dream-branch",
       "real-branch",
+      "planning-horizon-engine",
       "planner",
       "personal-ai-assistant",
       "n1hub"
@@ -80,6 +84,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
         "relation_type": "references"
       },
@@ -99,5 +111,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e56b31f68aebfd83581f6afd0cf50f426e31ea837d5866829c5de500798ff4174b4c6e587c4a59ce291c888e5e9a59c0fe7ba344834537545ec0e2d38d6011c4"
+  "integrity_sha3_512": "493d4bf32c4b8d413fe40dbe5c7453f5cc0aa910f31f3cb0be0cbbe0aab3b8d07654479b8780f2d0fe9495326835641666431b7d6ede22201df754a8ba4428af"
 }

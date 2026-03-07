@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T18:43:17.161Z",
+    "updated_at": "2026-03-07T10:22:14.351Z",
     "name": "Testing",
     "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression",
     "priority": "high",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "85dac65238795b7b671db629d9675d38c0320676a2c489276dee2003b2019bc775547fb8936376d4668cf083e9342303cae5bba5c2bb64a341d950f8b2123532"
+  "integrity_sha3_512": "381173977573536ea33543b8447d7e27256a1d49cd7c7a1061f9255aa8f839dbe3099c11b1795ac442658084d82eb98c9647187e4188f0caa942b5a078728873"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.398Z",
+    "updated_at": "2026-03-07T10:22:14.426Z",
     "name": "From Zero to Megabytes",
     "semantic_hash": "capsule-project-from-zero-to-megabytes-v1-learning",
     "source": {
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f04beb4ea44a5e83ed55461f9fb29da60dc4902be06bded0ab877e6af9b8023bdeee70e68d4df65962149f03e4459f5631f969b26f736dad3ccca1fe54a44223"
+  "integrity_sha3_512": "72547548bfb8f2cf5962bf21d78603dc46ab05a916e5728467173ab59fbbdd45f5c8c524ba1f16f6fc1402bd18cfe15726297d716af5a2ba2c292c2e1c64ba91"
 }

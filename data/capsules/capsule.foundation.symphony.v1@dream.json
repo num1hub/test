@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-06T18:43:17.111Z",
+    "updated_at": "2026-03-07T10:22:14.336Z",
     "name": "Symphony",
     "semantic_hash": "symphony-service-orchestrator-linear-workspaces-agent-runtime-hub",
     "source": {
@@ -131,5 +131,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "758d454c2dd185b0aa6bf6b39fb8fa111896f2c60c527582ba80572576492067fd2af54aecc62da4a8c9ee8d4daf4cf6dd9d023f321681f709185e82b533bf21"
+  "integrity_sha3_512": "1655adefe35637dd28ca2b2dd4cd8dbad680e30a741fe5f1cd92010bc19b604856211e9fa66ba5c991365370ef2d79395426620ea9961b5efe471496d502767d"
 }

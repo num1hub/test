@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-06T18:43:16.571Z",
+    "updated_at": "2026-03-07T10:22:14.151Z",
     "name": "Milestone",
     "semantic_hash": "milestone-key-date-marker-roadmap-checkpoint-gold-core",
     "priority": "medium",
@@ -74,5 +74,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "21e98004268b641a32388b961291f34e2c485b3b14c69b98c8182d96e8c131bee588977ee49eb7052a3414739c745b5c318b5ee6084efd20d5bd8e470acd00d2"
+  "integrity_sha3_512": "bcf45182519366223a7f51ac4b4c2787f126aa369f10c7b2abb20ac23e34932e514014edebcebd5457d0042b0961c53553b52cf11fe24ecac767443f55d88796"
 }

@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry",
-    "updated_at": "2026-03-06T18:43:16.376Z",
+    "updated_at": "2026-03-07T10:22:14.071Z",
     "name": "DeepMine",
     "priority": "high",
     "progress": 37,
@@ -78,10 +78,30 @@
       {
         "target_id": "capsule.project.deepmine.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2ff2c3dbf0d12f6e3a219ae12695e4644d5a9be776410629611694adefb74a71cd239e2ff7dc418bafb8c9407203067aa81535732e2035b23ffacc917b7d8261"
+  "integrity_sha3_512": "a0ee88f5c68d3eb913d221cace38f978435660d797eb256a65ff8ed98cb81014f93d079ce973bb19deaa13c21f11ae7b1a5e65538554ed789cfb6cb87d0305f7"
 }

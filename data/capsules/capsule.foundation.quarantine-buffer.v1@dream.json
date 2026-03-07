@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:16.888Z",
+    "updated_at": "2026-03-07T10:22:14.269Z",
     "name": "Quarantine Buffer",
     "semantic_hash": "capsule-foundation-quarantine-buffer-v1-validation-failure-governance",
     "priority": "medium",
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "143f75fe3d6842505623f1caf84e62514129f72d87195cf0686817514ddc8a30cd856315166edab3e1dee6ca3c818198ac3ff1beda897b4af898444646d1ee83"
+  "integrity_sha3_512": "9a05178c38948ffea50008355043b532de69bf3b76ccb7fe2fdbaea08fd9609d1ad84b2894cf26ee9e2d70f4fbb094872f0390b8f676b5a4240a667400e2b813"
 }

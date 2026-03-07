@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-06T18:43:15.980Z",
+    "updated_at": "2026-03-07T10:22:13.906Z",
     "name": "Agent Skills Registry",
     "semantic_hash": "agent-skills-registry-tool-guidance-workspace-runtime-validator",
     "priority": "high",
@@ -83,5 +83,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "152827ac4a30e184cf152f098fa4ebfbbad159b73c377d8ca4a2597cb952f1738a5d269becbb5fb5262f89d202e571db7f325e976b2543fd28183eda0eb9dd56"
+  "integrity_sha3_512": "8f58eb46fb4350a44a9249bcd34b6cab9de598aaaf128dbcea4ce1c8878b059c2ef5d759c6a25163e47b57606db3cfdbc322e125368a7688293a724922c886c5"
 }

@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.personal-ai-assistant.v1",
-    "version": "1.7.0",
+    "version": "1.9.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-06T22:05:00Z",
+    "updated_at": "2026-03-07T10:22:13.327Z",
     "name": "Personal AI Assistant",
     "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core",
     "priority": "high",
@@ -19,21 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, and graph relationships, then provides timely suggestions, graph-grounded explanations, and conversational control over deeper execution lanes.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Graph-grounded `chat to capsules` behavior instead of generic free chat.\n- Context awareness based on active projects, tasks, user preferences, and capsule references.\n- Proactive planning support for daily and weekly scheduling through dedicated Daily Planner and Roadmap Planner lanes.\n- Vault literacy through Capsule Librarian Agent so conversation can navigate the repository instead of hallucinating its contents.\n- Task automation for capsule drafting, refinement, review, and follow-through.\n- Symphony awareness for explaining issue execution status, workflow policy, and next repository actions.\n- AI Wallet awareness for choosing user-enabled providers, model defaults, and subscription-backed execution paths.\n- Delegation awareness for handing bounded work to DeepMine, Symphony, or N-Infinity when conversation alone is insufficient.\n- Review and branch awareness so the assistant can route work through critique, validation, and Real/Dream discipline rather than speaking with unjustified certainty.\n\n## 3. Architecture\nThe Assistant uses Chat to Capsules as the user-facing grounding pattern, AI Conversation Session as the operational memory shell, DeepMine for model access and reasoning pipelines, N-Infinity as the background intelligence layer, and A2C for transforming conversational output into structured capsules. Agent Delegation defines how it hands real work to deeper execution lanes without collapsing orchestration policy into chat. In practice the Assistant is the main front door and router for the key agent cluster: it can lean on Capsule Librarian Agent for retrieval, on planning agents for temporal structure, on DeepMine Foreman for mining escalation, and on Review or Branch Steward roles when graph quality or branch placement is in question.\n\n## 4. Integration\nThe Assistant orchestrates with Planner for decomposition and scheduling, with Tracker for overdue detection and follow-through, with AI Wallet for provider readiness, with AI Control Surface for operator-visible status, with Symphony for repository execution awareness, and with Background Agent Runtime for longer-lived delegated work. It is therefore both the voice of the system and the user-facing routing layer across the wider agent topology.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine vague thoughts into precise, evidence-bound graph actions instead of shallow one-off answers.\n"
+    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, and graph relationships, then provides timely suggestions, graph-grounded explanations, and conversational control over deeper execution lanes. In N1Hub terms, it is the user's main symbiotic partner surface: the front door through which one human can steer a much larger intelligence system.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Graph-grounded `chat to capsules` behavior instead of generic free chat.\n- Context awareness based on active projects, tasks, user preferences, and capsule references.\n- Symbiotic continuity so the assistant behaves like a persistent daemon-partner instead of an occasional prompt box.\n- Multi-horizon planning support so the user can ask for `today`, `tomorrow`, `this week`, `30/60/90`, `365`, or `1000-day` views from one surface.\n- Planning compression through Planning Horizon Engine so the whole Dream field can be distilled through Real into one grounded plan for the day.\n- Vault literacy through Capsule Librarian Agent so conversation can navigate the repository instead of hallucinating its contents.\n- Task automation for capsule drafting, refinement, review, and follow-through.\n- Symphony awareness for explaining issue execution status, workflow policy, and next repository actions.\n- AI Wallet awareness for choosing user-enabled providers, model defaults, and subscription-backed execution paths.\n- Delegation awareness for handing bounded work to DeepMine, Symphony, or N-Infinity when conversation alone is insufficient.\n- Review and branch awareness so the assistant can route work through critique, validation, and Real/Dream discipline rather than speaking with unjustified certainty.\n\n## 3. Architecture\nThe Assistant uses Chat to Capsules as the user-facing grounding pattern, AI Conversation Session as the operational memory shell, DeepMine for model access and reasoning pipelines, N-Infinity as the background intelligence layer, and A2C for transforming conversational output into structured capsules. Agent Delegation defines how it hands real work to deeper execution lanes without collapsing orchestration policy into chat. In practice the Assistant is the main front door and router for the key agent cluster: it can lean on Capsule Librarian Agent for retrieval, on Planning Horizon Engine plus the planning agents for temporal structure, on DeepMine Foreman for mining escalation, and on Review or Branch Steward roles when graph quality or branch placement is in question.\n\n## 4. Integration\nThe Assistant orchestrates with Planner for decomposition and scheduling, with Planning Horizon Engine for horizon compression, with Tracker for overdue detection and follow-through, with AI Wallet for provider readiness, with AI Control Surface for operator-visible status, with Symphony for repository execution awareness, and with Background Agent Runtime for longer-lived delegated work. It is therefore both the voice of the system and the user-facing routing layer across the wider agent topology.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine vague thoughts into precise, evidence-bound graph actions instead of shallow one-off answers, while keeping the human at the center of the loop.\n"
   },
   "neuro_concentrate": {
-    "summary": "The Personal AI Assistant is the graph-grounded cognitive copilot for N1Hub Workspace. It offers natural language interaction, proactive suggestions, capsule-aware drafting, and explanation across the sovereign graph, but it now has a clearer operational shape: chat is grounded through Chat to Capsules, deeper work is routed through Agent Delegation, and long-lived execution can continue through Symphony or N-Infinity lanes. This matters because the assistant should not be modeled as a generic chatbot; it is the user-facing intelligence surface that turns conversation into accountable graph work while preserving sovereignty, traceability, and provider control through AI Wallet.",
+    "summary": "The Personal AI Assistant is the graph-grounded cognitive copilot for N1Hub Workspace. It offers natural language interaction, proactive suggestions, capsule-aware drafting, and explanation across the sovereign graph, but it now has an even clearer operational role: it is the user's primary symbiotic interface to the whole intelligence system and the main surface through which planning horizons are compressed. Chat is grounded through Chat to Capsules, deeper work is routed through Agent Delegation, and Planning Horizon Engine helps the assistant turn the full Dream branch plus the current Real branch into grounded views for today, tomorrow, the week, and beyond.",
     "keywords": [
-      "ai-assistant",
+      "personal-ai-assistant",
+      "human-ai-symbiosis",
+      "daemon-partner",
       "chat-to-capsules",
+      "planning-horizon-engine",
       "delegation",
-      "copilot",
-      "conversation",
       "deepmine",
       "symphony",
-      "n-infinity",
-      "workspace",
-      "n1hub"
+      "n-infinity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -50,6 +49,10 @@
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "depends_on"
       },
       {
         "target_id": "capsule.foundation.chat-to-capsules.v1",
@@ -72,12 +75,20 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.ai-wallet.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.agent-soul.v1",
@@ -187,5 +198,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5a679fc33985d85f6ba83960a08a9f871f2abb774886af06c1eb8fc8007a00d0b28c6b21de1149347b4a1c286a4da62507b54e8ab58e407f0e8d0abef3b075a3"
+  "integrity_sha3_512": "83fb1548693e73742f74e4cbe535aa97dd5dda22300150a1ec8da9534f9953a50729dfdd90362b5164dec43595064e0946d89487c4c8d089ad4234e154a58bc7"
 }

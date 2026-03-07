@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T18:43:16.087Z",
+    "updated_at": "2026-03-07T10:22:13.951Z",
     "name": "Archive",
     "semantic_hash": "capsule-foundation-archive-v1-retention-restoration-history-tracker",
     "priority": "low",
@@ -80,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5ca3f7032f32d9f8ad3005c426afa386ad7c173e867a3480727d51fd799155be213e4d3be2cfa6f757a3c8056828609a1d4a3f2e19a05266efd27784f3e66fd2"
+  "integrity_sha3_512": "dade287c3b0443f2427cec275c6ed4780ffb3af94f44d7a47c63dd633dc2a1fe8aec083aba41e0766d965ec4939247f455d43047ba14679b58eda20546e72732"
 }

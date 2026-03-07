@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.concept.lidar-scanning.v1",
     "version": "1.1.0",
-    "status": "active",
+    "status": "archived",
     "type": "concept",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "semantic_hash": "lidar-scanning-roomplan-geometry-capture-calibration-modeling-tilesims",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# LiDAR Scanning Concept for TileSims\n\n## 1. Goal\nDefine a scanning flow that captures room geometry quickly while preserving precision for tile planning and material estimates.\n\n## 2. Method\nUse RoomPlan output as baseline geometry, then apply user calibration points to reduce drift on critical surfaces.\n\n## 3. Output\nProduce a normalized model with surface segmentation and uncertainty metadata ready for downstream design algorithms.\n\n## 4. Open Question\nHow should scan uncertainty propagate into layout and cost recommendations?"
   },
   "neuro_concentrate": {
-    "summary": "This active concept capsule frames LiDAR scanning as the geometry acquisition layer for TileSims. It proposes rapid RoomPlan capture followed by calibration points on high impact surfaces to improve dimensional reliability. The concept requires normalized output that downstream layout systems can consume directly, including segmentation and uncertainty metadata. It also identifies a key unresolved problem: how measurement confidence should influence algorithmic layout quality and pricing guidance in a way that remains transparent and actionable for both professionals and homeowners.",
+    "summary": "LiDAR Scanning is archived with the paused TileSims line rather than remaining an active research front. It still frames the geometry acquisition layer for TileSims through rapid RoomPlan capture, calibration points on high-impact surfaces, and normalized output ready for downstream layout systems. The concept matters because trustworthy geometry remains foundational to any future reactivation of the spatial product. In archive mode it preserves the unresolved measurement and uncertainty questions as dormant technical capital.",
     "keywords": [
       "concept",
       "lidar",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a3c02804287758880915a30790f22f7a4554c783ea258971789a4453afec3b96acb61e7cae4c8a8f51651c69eb0b85b44b25d2c5e707f8fe866b82b806af2b64"
+  "integrity_sha3_512": "9942abfa32e0eff9ed17e8bb0df25c73dba711e7509ba74f6ce44e3a08955d24aacb0c3a0751215cc7a61d87ca94ee40d310d3428d388071dc2060ec06c3f80d"
 }

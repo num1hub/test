@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.366Z",
+    "updated_at": "2026-03-07T10:22:14.418Z",
     "name": "CapsuleOS Project",
     "semantic_hash": "capsule-project-capsuleos-v1-hub-architecture-governance-execution",
     "source": {
@@ -72,5 +72,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6dad656c562df4ea94ffe247a473affe9fcf7b878f5e35385d632dd15f47a8e0c8284b8cccf37a52b5ed55cde24c442569155f32f95c905703278cdbdac6d932"
+  "integrity_sha3_512": "fb00cfb80cb1f9380b4dfe5f3cfe9cfc2d9cb9a9b9aea62a417e08da394507603ae3312a1483820faa7738bdb18cd558d6af1c6986d2c52c21a84fdf48664f8f"
 }

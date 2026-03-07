@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-06T18:43:16.851Z",
+    "updated_at": "2026-03-07T10:22:14.260Z",
     "name": "Profile",
     "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys",
     "tier": 2
@@ -61,5 +61,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "ffc4a2d5cd7257f6ba8dcb36126bff415520dad4937bfd3d41afff37155f2cf348a31cab242978400ef72afc3fbfe1f67e78c614645287654c01b8c952234766"
+  "integrity_sha3_512": "f9fb4d4ea7570340a84b7e93a728ef9e83bb69c27f1e2aacaab6fdcce85b6b4db010e4c881f96032ff4534eaa7292c55ec42140079daf9fabdd3e76841c9b998"
 }

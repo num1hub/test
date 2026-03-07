@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.planner.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-06T18:43:16.838Z",
+    "updated_at": "2026-03-07T10:22:14.254Z",
     "name": "Planner",
     "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core",
     "priority": "high",
@@ -19,7 +19,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## 1. Definition and Essence\nThe Planner is the foundational module within the N1Hub Workspace responsible for structuring intent over time. It transforms abstract goals and long-term vision into actionable, time-bound tasks, milestones, and roadmaps. It is the bridge between ambition and daily execution. Built on the CapsuleOS graph, the Planner treats every plan item as a capsule linked to projects, dependencies, and supporting knowledge.\n\n## 2. Core Functions\n- Roadmap definition with phases, milestones, and key results.\n- Goal setting across quarterly and yearly horizons with hierarchical decomposition.\n- Task management with priority, due dates, estimated effort, and dependencies.\n- Daily and weekly plan generation based on load, deadlines, and preferences.\n- AI-assisted planning that uses A2C for natural language task extraction.\n\n## 3. Data Model\nPlanner-relevant metadata includes dueDate, priority, progress, status, estimatedHours, actualHours, recurrence, and completedAt. Tasks, goals, and milestones are represented as capsules and connected with part_of, depends_on, and references links.\n\n## 4. Integration\nThe Planner coordinates with Tracker for execution telemetry, with the Personal AI Assistant for decomposition and scheduling suggestions, with project capsules for scope boundaries, and with N-Infinity for background risk detection and re-planning.\n\n## 5. Philosophical Alignment\nPlanner operationalizes To Dig Deep by converting high-level intent into verifiable and sovereign units of execution that can be tracked, audited, and improved over time.\n\n## 6. Future Potential\nAutomatic re-planning, calendar synchronization, and team planning overlays can extend the Planner while preserving capsule-native sovereignty.\n\n## Canonical Planner Entities\nGoal, Milestone, Task, and Roadmap are now defined as dedicated sovereign foundation capsules and linked from this Planner capsule."
+    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## Dream Direction\nIn the Dream branch, Planner becomes a clearer multi-horizon operating system where the whole Dream branch is continuously distilled through the Real branch into grounded planning views for `today`, `tomorrow`, `7 days`, `30/60/90`, `365 days`, and `1000 days`.\n\n## Desired Future State\n- stronger horizon compression instead of disconnected roadmap and task views\n- explicit Dream-to-Real planning discipline rather than vague prioritization\n- better linkage between branch-aware strategy, capacity, reminders, and day-level execution\n- a clearer planning swarm where Daily Planner Agent and Roadmap Planner Agent operate through one shared Planning Horizon Engine\n\n## Why It Matters\nDream preserves the target state where users can see the whole future field without losing the practical question of what must happen today. Planning quality in N1Hub should mean that the entire Dream branch can inform the day without overwhelming it.\n"
   },
   "neuro_concentrate": {
     "summary": "Planner in the Dream branch pushes planning toward a more adaptive system. It imagines stronger decomposition, branch-aware scenario modeling, better effort forecasting, and tighter collaboration with the assistant and N-Infinity agents when priorities shift. The capsule matters because real planning already functions, but future planning should become more anticipatory and less manual. Dream preserves that target state as a concrete module direction rather than an implicit hope, making planning quality itself a roadmap item.",
@@ -31,6 +31,9 @@
       "deadlines",
       "milestones",
       "scheduling",
+      "real-branch",
+      "dream-branch",
+      "planning-horizon-engine",
       "workspace",
       "n1hub"
     ],
@@ -97,10 +100,30 @@
       {
         "target_id": "capsule.foundation.dashboard.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "593757e13ad4ee63ddb1e763637a8b155ae55bcf4df2866663472e34a5e52b2ec6c5dff953c244d1b64edeedbf390283a8204a86f57884956947abe30cf75522"
+  "integrity_sha3_512": "f44acc890a57f7dae3dec29efafa664c048b8645d90ebcd7387bf22c8d81bc6f70f1ea8553e5c2b4e6345c7f59f9968f5e3de4a468b17a7a3e35f9ac19194efa"
 }

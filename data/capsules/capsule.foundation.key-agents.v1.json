@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.key-agents.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-06T23:50:00Z",
+    "updated_at": "2026-03-07T11:05:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, and the review/governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction and routing\n- mining and extraction\n- planning across short and long horizons\n- graph maintenance and vault stewardship\n- review, validation, and branch discipline\n\n## 3. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future agent implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity.\n\n## 4. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about \"AI\" and instead naming the bounded roles that actually think, dig, plan, critique, and maintain the graph.\n"
+    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, and the review/governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- graph maintenance and vault stewardship\n- review, validation, and branch discipline\n\n## 3. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future agent implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the planning lane, this map is now clearer: Roadmap Planner Agent holds strategic shape, Daily Planner Agent holds the lived day, and Planning Horizon Engine coordinates the ladder between them.\n\n## 4. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about \"AI\" and instead naming the bounded roles that actually think, dig, plan, critique, and maintain the graph.\n"
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the Personal AI Assistant, DeepMine mining workers, planning agents, N-Infinity maintenance roles, and review or validation roles into one graph-visible cluster. The hub matters because the project is no longer powered by a single generic assistant; it is becoming a routed system of specialized intelligence surfaces. By naming the cluster, the vault makes ownership, delegation, and future implementation much easier to reason about.",
+    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the Personal AI Assistant, DeepMine mining workers, planning agents, N-Infinity maintenance roles, and review or validation roles into one graph-visible cluster. The planning line is now clearer inside that map as well: Roadmap Planner Agent, Daily Planner Agent, and Planning Horizon Engine together define how the system moves from the full Dream field to one grounded plan for today. By naming the cluster, the vault makes ownership, delegation, and future implementation much easier to reason about.",
     "keywords": [
       "key-agents",
       "agent-hub",
@@ -34,6 +34,7 @@
       "deepmine",
       "n-infinity",
       "planning-agents",
+      "planning-horizon-engine",
       "review-agent",
       "validation",
       "background-agents",
@@ -85,6 +86,10 @@
       },
       {
         "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
         "relation_type": "references"
       },
       {
@@ -143,5 +148,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b93eab90ade6b6f460f678068642aba5909d96b0fedbca01d4e1c53c8f85b4e03d6f2b1361f4e73be515a0b656f1fc935ef00ac18b1b569d0d157cd2632eb9d7"
+  "integrity_sha3_512": "2f9829d0839ce43df9bd381d6eaba24ca787c331fe37ff83d4b9cb714336751612197af02bc7dfe58741bffeee6de4aafd1c58c4420c7991764b3786bd40e096"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.434Z",
+    "updated_at": "2026-03-07T10:22:14.430Z",
     "name": "Mining Company",
     "semantic_hash": "capsule-project-mining-company-v1-organization-portfolio-capital",
     "source": {
@@ -72,5 +72,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "bf741020cd214f555aea59521fcbfe5feab2154404a1ff5969246e6335c0773c09b4605901557955637babd8d2c4e5f300035ae31cb1b3f31dfa52758b3b0e36"
+  "integrity_sha3_512": "bda7587f1081396a8eec8cdaa7f6a8f510e5ebff0450c6a2ebfea87ef368233d76bf6171bfaeeea9b8af4c92fce66409dae89cc1a7639d2ab5c37f1dca05104d"
 }

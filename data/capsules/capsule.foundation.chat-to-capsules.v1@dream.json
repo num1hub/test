@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-06T18:43:16.340Z",
+    "updated_at": "2026-03-07T10:22:14.039Z",
     "name": "Chat to Capsules",
     "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
     "priority": "high",
@@ -103,5 +103,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0fb1023bee1722898feed2d5cc0cd0787f1a2d9daad105d08e970c28a8a9360a81749099c3d0b82ecfbf4f668a93dc3d574822a802ed87fecdb495b15ed8dc7d"
+  "integrity_sha3_512": "96b6fb42c1d00df66f550cbf5134804ad1aa0b8c65de949a8f7c15ad5cb787e0193f9e9c2d2a1f3326e3ac126ac3d21f202b3420a8b0584a6782c6ec2ae03119"
 }

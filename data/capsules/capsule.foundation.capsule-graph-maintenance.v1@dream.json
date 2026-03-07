@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-06T18:43:16.211Z",
+    "updated_at": "2026-03-07T10:22:14.004Z",
     "name": "Capsule Graph Maintenance",
     "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime",
     "priority": "high",
@@ -107,5 +107,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "029a3e8fb4875f596faff89dbde418f84871c3c3f19c3236af9f4164d482c113f7377d642b66d254dbe3c68f02ff6d319b4003598c0164df312619a741649d0a"
+  "integrity_sha3_512": "e5ee14d080118900831453d028e364854c60f61bd18528efa4922ba2b2199a157596208519dc37442e149fa655d2898ffd9b1e1077ed5d122d9998fec101443c"
 }

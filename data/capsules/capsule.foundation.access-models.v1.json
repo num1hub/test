@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.access-models.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "access-models-freemium-subscription-payg-n1coin-tier-economics",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T10:22:13.327Z",
     "name": "Access Models",
     "priority": "medium",
     "progress": 45,
@@ -19,7 +19,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nThe N1Hub ecosystem is designed to democratize access to sovereign knowledge management while providing industrial-grade power for professionals. Our access models are transparent, flexible, and strictly aligned with the \"To Dig Deep\" ethos. Regardless of the chosen tier, every user benefits from the absolute cryptographic security and data sovereignty guaranteed by the CapsuleOS 5-Element Law.\n\n## 2. The Four Access Tiers\n\n### 2.1 Free (Online)\n- **Overview**: An accessible entry point hosted on N1Hub infrastructure.\n- **Capabilities**: Users can create a limited number of capsules and projects. A2C processing is available using shared, rate-limited, cost-efficient LLM models via DeepMine. Core Workspace features (Planner, Tracker) are active with capacity caps. N-Infinity agents operate at the lowest priority queue.\n\n### 2.2 Free Local (Self-Hosted)\n- **Overview**: The ultimate expression of digital sovereignty. Users deploy the open-source N1Hub core (CapsuleOS, basic A2C, SDKs) on their own hardware.\n- **Capabilities**: Infinite capsule creation and full control over compute. Users inject their own API keys to bypass N1Hub rate limits. The user is entirely responsible for infrastructure maintenance and LLM costs.\n\n### 2.3 N1 Pass (Subscription)\n- **Overview**: A premium monthly or annual subscription designed for power users, creators, and teams.\n- **Capabilities**: Unlocks unlimited capsule creation, expanded A2C throughput, and access to premium, high-reasoning LLMs. It grants priority scheduling for N-Infinity agents and unlocks advanced Workspace features like team collaboration and deep analytics. Subscribers receive a monthly stipend of N1 Coins and processing \"Boosts.\"\n\n### 2.4 Pay-As-You-Go (Boosts)\n- **Overview**: On-demand industrial power. Users can top up their accounts to purchase \"Boosts.\"\n- **Capabilities**: Boosts are consumed for computationally violent tasks—such as initiating highly parallel, multi-threaded A2C extractions across massive datasets, summoning dedicated LLM instances, or accelerating N-Infinity graph synthesis during peak workloads.\n\n## 3. N1 Coin Integration\nThe native **N1 Coin** acts as the decentralized financial lubricant across all tiers. Users can pay for N1 Pass subscriptions or Pay-As-You-Go Boosts using N1 Coins. Furthermore, coins earned through Marketplace royalties or systemic governance can be reinvested directly into compute power.\n\n## 4. Stack Integration\n- **DeepMine**: Routes requests dynamically; Free users hit cost-effective models, while N1 Pass and Boost users access elite reasoning models.\n- **A2C & N-Infinity**: Queuing systems (e.g., BullMQ) allocate threads and prioritize processing based strictly on the user's active tier and available Boost balance.\n- **Workspace**: The UI seamlessly displays current limits, active subscriptions, and allows one-click Boost activation without disrupting the user's cognitive flow."
+    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nThe N1Hub ecosystem is designed to democratize access to sovereign knowledge management while providing industrial-grade power for professionals. Our access models are transparent, flexible, and strictly aligned with the \"To Dig Deep\" ethos. Regardless of the chosen tier, every user benefits from the absolute cryptographic security and data sovereignty guaranteed by the CapsuleOS 5-Element Law.\n\n## 2. The Four Access Tiers\n\n### 2.1 Free (Online)\n- **Overview**: An accessible entry point hosted on N1Hub infrastructure.\n- **Capabilities**: Users can create a limited number of capsules and projects. A2C processing is available using shared, rate-limited, cost-efficient LLM models via DeepMine. Core Workspace features (Planner, Tracker) are active with capacity caps. N-Infinity agents operate at the lowest priority queue.\n\n### 2.2 Free Local (Self-Hosted)\n- **Overview**: The ultimate expression of digital sovereignty. Users deploy the open-source N1Hub core (CapsuleOS, basic A2C, SDKs) on their own hardware.\n- **Capabilities**: Infinite capsule creation and full control over compute. Users inject their own API keys to bypass N1Hub rate limits. The user is entirely responsible for infrastructure maintenance and LLM costs.\n\n### 2.3 N1 Pass (Subscription)\n- **Overview**: A premium monthly or annual subscription designed for power users, creators, and teams.\n- **Capabilities**: Unlocks unlimited capsule creation, expanded A2C throughput, and access to premium, high-reasoning LLMs. It grants priority scheduling for N-Infinity agents and unlocks advanced Workspace features like team collaboration and deep analytics. Subscribers receive a monthly stipend of N1 Coins and processing \"Boosts.\"\n\n### 2.4 Pay-As-You-Go (Boosts)\n- **Overview**: On-demand industrial power. Users can top up their accounts to purchase \"Boosts.\"\n- **Capabilities**: Boosts are consumed for computationally violent tasks—such as initiating highly parallel, multi-threaded A2C extractions across massive datasets, summoning dedicated LLM instances, or accelerating N-Infinity graph synthesis during peak workloads.\n\n## 3. Hybrid Intelligence Supply\nN1Hub should not rely on one provider mode. A mature access model includes:\n- at least one **subscription-backed seat** for persistent human-plus-assistant symbiosis\n- at least one **programmable API lane** for DeepMine, Symphony, N-Infinity, and unattended background work\n- explicit **night and batch routing** for workloads that become much cheaper outside prime interactive hours\n\nSubscription seats and APIs are not interchangeable. Subscription access is economically powerful for one active human-centered loop, while API access remains necessary for durable orchestration, concurrency, and machine-driven execution.\n\n## 4. N1 Coin Integration\nThe native **N1 Coin** acts as the decentralized financial lubricant across all tiers. Users can pay for N1 Pass subscriptions or Pay-As-You-Go Boosts using N1 Coins. Furthermore, coins earned through Marketplace royalties or systemic governance can be reinvested directly into compute power.\n\n## 5. Stack Integration\n- **AI Wallet**: stores both API credentials and subscription authorization lanes.\n- **Personal AI Assistant**: benefits from subscription-heavy interactive routing while keeping the human in the loop.\n- **DeepMine**: routes requests dynamically; lightweight extractions can use cost-efficient models, while night and batch lanes can exploit cheaper off-peak economics when available.\n- **A2C & N-Infinity**: queuing systems allocate threads and prioritize processing based on the user's active tier, available wallet lanes, and budget posture.\n- **Workspace**: the UI should expose current limits, active subscriptions, preferred providers, and burst-capacity controls without breaking cognitive flow."
   },
   "neuro_concentrate": {
     "summary": "Access Models describes how sovereignty, compute, and monetization are balanced across free, self-hosted, subscription, and burst-capacity tiers. It matters because pricing in N1Hub is not only a business concern; it directly shapes model access, queue priority, storage obligations, and the user’s path from experimentation to serious production. The capsule keeps those tradeoffs explicit so business rules do not leak invisibly into runtime behavior. By formalizing the tier model, the vault can reason coherently about fairness, capability boundaries, and how economic commitment maps to actual system privileges and throughput.",
@@ -71,6 +71,22 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
         "relation_type": "references"
       },
@@ -81,10 +97,14 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "275c0204fbe1f4ecf1406b62df80412d811e7a967185451ae5404bf2ef194e6f5797025b7a814d1b54a505081ff1314ace67e459486d405781bddf7cdfd94acd"
+  "integrity_sha3_512": "136cd432cb64cce3a022844658fbd6411c02505b43c5963dcc85940a033810ec2a697b8dfd6d985f5ffae3a67c663d8f4cbf80bac53485b3ccec2c8e837de0c7"
 }

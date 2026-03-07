@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-06T18:43:17.299Z",
+    "updated_at": "2026-03-07T10:22:14.399Z",
     "name": "Notification Integration",
     "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery",
     "source": {
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "abe74ed29a360993183ea879f4c7ab3b00defae36ed105b01b9441f8331861cae334f37015ed5783bef2377ceff1fafc4499837f3908e19bde7a57727005b3cf"
+  "integrity_sha3_512": "b79536df40aa686abe4332ed37dea71c81f44692f5c118088b08c57dfba7981b9b259eddb6eba08944580c37ac86df3b4f13a65362271f65f281e606f47c85e4"
 }

@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.project.n-infinity.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.454Z",
+    "updated_at": "2026-03-07T10:22:14.438Z",
     "name": "N-Infinity Project",
-    "semantic_hash": "capsule-project-infinity-v1-agents-automation-assistant-planner",
+    "semantic_hash": "capsule-project-infinity-iterations-autonomy-swarm-deployment-economics",
     "source": {
       "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
       "sha256": "9dd13c892f21860a59a467d95e572ccfa1cdbb6a2d520bec34405595acf0a719",
@@ -24,7 +24,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Project\n\n## 1. Definition and Essence\nN-Infinity Project coordinates the autonomous agent swarm implementation, including role design, orchestration protocols, and risk-aware assistant augmentation across planning and tracking surfaces.\n\n## 2. Core Attributes\n- `agent_catalog` implemented and planned specialized agents\n- `orchestration_policy` delegation and conflict resolution rules\n- `safety_controls` guardrails for autonomous action boundaries\n- `feedback_loops` quality signals from user and system outcomes\n- `deployment_model` runtime topology and scaling strategy\n\n## 3. Lifecycle\nThe project evolves through incremental agent launches, behavior evaluation, and governance-tuned autonomy expansion.\n\n## 4. Integration\n- **CapsuleOS Project:** child subsystem under core architecture.\n- **Foundation N-Infinity:** implemented conceptual swarm model.\n- **Personal AI Assistant:** primary user-facing agent interface.\n- **Planner/Tracker:** risk and suggestion telemetry consumers.\n\n## 5. Philosophical Alignment\nN-Infinity execution supports To Dig Deep by operationalizing continuous assistance grounded in sovereign graph evidence.\n"
+    "content": "# N-Infinity Project\n\n## 1. Definition and Essence\nN-Infinity Project coordinates the autonomous agent swarm implementation, including role design, orchestration protocols, and risk-aware assistant augmentation across planning and tracking surfaces.\n\n## 2. Dream Premise\nThe Dream branch pushes the founding idea of N-Infinity to its logical end. Human prompting remains precious and strategically decisive, but the real leap comes when the system can sustain thousands of bounded background iterations per day without collapsing into noise or runaway spend. The project therefore aims at a future where high-frequency iteration is not an accident of scale but a deliberately engineered property of the N1Hub stack.\n\n## 3. Core Attributes\n- `agent_catalog` implemented and planned specialized agents\n- `iteration_fabric` the runtime mesh that lets many small background iterations compound into one coherent swarm behavior\n- `orchestration_policy` delegation and conflict resolution rules\n- `safety_controls` guardrails for autonomous action boundaries\n- `feedback_loops` quality signals from user and system outcomes\n- `deployment_model` runtime topology and scaling strategy\n\n## 4. Lifecycle\nThe project evolves through incremental agent launches, behavior evaluation, and governance-tuned autonomy expansion. Dream stretches that lifecycle toward a denser and more persistent iteration fabric, where the swarm learns to convert finite human attention into near-continuous graph work.\n\n## 5. Integration\n- **CapsuleOS Project:** child subsystem under core architecture.\n- **Foundation N-Infinity:** implemented conceptual swarm model.\n- **Personal AI Assistant:** primary user-facing agent interface.\n- **Human-AI Symbiosis:** keeps the human at the center while swarm throughput scales behind the scenes.\n- **Planner/Tracker:** risk and suggestion telemetry consumers.\n\n## 6. Philosophical Alignment\nN-Infinity execution supports To Dig Deep by operationalizing continuous assistance grounded in sovereign graph evidence and by turning many bounded iterations into compound intelligence.\n"
   },
   "neuro_concentrate": {
     "summary": "N-Infinity Project in the Dream branch is the roadmap for a more capable and better-governed autonomous swarm. It imagines agents that not only react to planner and tracker signals, but coordinate continuously around risk, synthesis, reminders, contradiction handling, and graph curation without losing auditability. The branch matters because current agent design is meaningful but incomplete. Dream preserves the target state where N-Infinity becomes a real operational intelligence lattice rather than a partially implemented family of helpers.",
@@ -48,7 +48,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0.12
     },
-    "semantic_hash": "capsule-project-infinity-v1-agents-automation-assistant-planner"
+    "semantic_hash": "capsule-project-infinity-iterations-autonomy-swarm-deployment-economics"
   },
   "recursive_layer": {
     "links": [
@@ -65,6 +65,10 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "references"
       }
@@ -72,5 +76,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1c717ed58e66a4fe3586bf6a32565628821d9dc5a002db0441ed0b936af95056cd0905461bd6e245dbae60ce16c780a8171e830a742a80f1294da09c61024a11"
+  "integrity_sha3_512": "3f5f5c5cc7c9e90688254bfc02c022ff8a06cd2377795668f6d711f8d0f51ae433d9ef81ed666cf348bacc945a7cca830434af7bf4ead09b1a75358027f80de7"
 }

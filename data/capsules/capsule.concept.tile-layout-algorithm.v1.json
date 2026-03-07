@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.concept.tile-layout-algorithm.v1",
     "version": "1.1.0",
-    "status": "active",
+    "status": "archived",
     "type": "concept",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "semantic_hash": "tile-layout-algorithm-pattern-optimization-cuts-waste-estimation",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# Tile Layout Algorithm Concept\n\n## 1. Objective\nDesign an algorithmic strategy for tile patterns that balances aesthetics, installation complexity, and material efficiency.\n\n## 2. Strategies\nUse deterministic pattern generators, constraint aware boundary handling, and waste estimation with configurable margins.\n\n## 3. Evaluation\nEvery layout should emit metrics such as cut count, edge complexity, estimated waste, and labor intensity.\n\n## 4. Research\nExplore hybrid methods that combine deterministic templates with local optimization on irregular geometry."
   },
   "neuro_concentrate": {
-    "summary": "This active concept capsule defines the algorithmic design space for tile layout generation in TileSims. It combines deterministic pattern templates with geometry constraints and cost metrics to compare alternatives objectively. The concept requires each candidate layout to produce explainable measures including cut count, waste estimate, and expected labor complexity so users can evaluate tradeoffs. It also proposes hybrid approaches that preserve predictable template behavior while applying local optimization to difficult boundaries, where naive placement strategies typically degrade both material efficiency and visual quality.",
+    "summary": "Tile Layout Algorithm is archived together with the paused TileSims line rather than staying an active optimization track. It still defines the algorithmic design space for layout generation through deterministic pattern templates, geometry constraints, and cost metrics that compare alternatives objectively. The concept matters because layout quality is one of the strongest technical cores of the product line. In archive mode it preserves explainable optimization logic and open research questions as dormant but reusable technical capital.",
     "keywords": [
       "concept",
       "tile-layout",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c1d07380085ecc16521d86b88ab88c6ddc6374add031bd67d09cd49ec2175bb9beca2ae14e67acb9514ad68df949e5415dd44a93496962669944dc323fa693e0"
+  "integrity_sha3_512": "9cfac7a0533f8d795ec143807b2f9dc907351734f495f2b448abe0974e32211ecad54c075de21e0cd0e84566f717ea49aa2efee67a5c6ee7d28542bea44569aa"
 }

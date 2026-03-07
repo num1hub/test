@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:15.871Z",
+    "updated_at": "2026-03-07T10:22:13.868Z",
     "name": "A2C Stage: Segment",
     "semantic_hash": "capsule-foundation-a2c-segment-v1-stage-chunking-tokenization",
     "priority": "high",
@@ -63,5 +63,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "be3e73fee4b4553856f0fce0c2d0d7d232d76c14c2e15d3744ca240d571e1d26bfa57ff1fd9a9a8ef48de91df008188d1b61dc60164a001b42951127e6db3daa"
+  "integrity_sha3_512": "d0fde06d67e7f506bd0e8823fb133556d17debb782e68556cc047c96da3cd48a7e8a760eb4fe4b29e5f8efe92b04f8473dccad552b1473f8d4bd46c2d7f5193e"
 }

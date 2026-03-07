@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.hybrid-llm-access.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-07T09:20:00Z",
+    "name": "Hybrid LLM Access",
+    "semantic_hash": "hybrid-llm-access-subscription-api-wallet-routing-economics",
+    "priority": "high",
+    "progress": 30,
+    "estimatedHours": 120,
+    "actualHours": 24,
+    "dueDate": "2026-08-15",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Hybrid LLM Access\n\n## 1. Definition and Essence\nHybrid LLM Access defines the model-supply architecture for N1Hub. It combines subscription-backed authorization lanes with API-key lanes so the system can support both human-centered symbiosis and industrial automation.\n\n## 2. Core Policy\n- `minimum_one_subscription_lane` means the user should have at least one subscription-backed account or bridge lane for high-frequency interactive work with the Personal AI Assistant.\n- `minimum_one_api_lane` means the system should also have at least one programmable API provider for DeepMine, Symphony, N-Infinity, and other unattended jobs.\n- `wallet_governed_routing` means the AI Wallet stores both forms of access and exposes them through explicit provider state, model preferences, and bridge configuration.\n- `lane_separation` means subscription access is optimized for human-in-the-loop interaction, while API access is optimized for deterministic automation, batch execution, and agent orchestration.\n\n## 3. Why It Exists\nA subscription seat and a token-metered API are not the same product. Subscription-backed access can be economically powerful for one persistent user-assistant loop, especially when the assistant is used heavily throughout the day. API access remains essential for background jobs, queues, durable services, and concurrent agents. N1Hub should therefore use both rather than forcing the whole system into a single billing model.\n\n## 4. N1Hub Integration\n- **AI Wallet** stores the credentials, bridge endpoints, and provider readiness state.\n- **Personal AI Assistant** prefers subscription or interactive lanes when the user is actively in the loop.\n- **DeepMine** routes extraction across whichever lanes fit the task, cost policy, and authorization model.\n- **Background Agent Runtime** relies primarily on API-safe programmable lanes for durable unattended execution.\n- **Access Models** translates this hybrid supply strategy into product and economic policy.\n\n## 5. Philosophical Alignment\nHybrid LLM Access supports To Dig Deep by refusing shallow dependency on a single provider mode and instead building a disciplined, resilient intelligence supply plane."
+  },
+  "neuro_concentrate": {
+    "summary": "Hybrid LLM Access defines the intelligence supply model for N1Hub: at least one subscription-backed account for high-frequency human interaction, plus an API-backed provider pool for programmable automation, background agents, and durable execution. The capsule matters because subscription seats and token-metered APIs solve different problems. Subscription access often delivers a much stronger interactive economics curve for a human-plus-assistant symbiotic loop, while APIs remain the reliable foundation for batch jobs, orchestration, and multi-agent runtime control. N1Hub therefore treats wallet design, routing policy, and workload placement as one system instead of pretending all provider access is interchangeable.",
+    "keywords": [
+      "hybrid-llm-access",
+      "subscription",
+      "api",
+      "ai-wallet",
+      "routing-policy",
+      "background-agents",
+      "personal-ai-assistant",
+      "deepmine"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "hybrid-llm-access-subscription-api-wallet-routing-economics"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.access-models.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.api-gateway.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "68a1f612c0fa0fd26a3ab9d8c1ad3d124c543a8c5aaa47fd1b0ffa3283ce2c1756dbd22c78976cb5efc79fd21d574b127f4b29378cc5cbd6c264f0190883da68"
+}

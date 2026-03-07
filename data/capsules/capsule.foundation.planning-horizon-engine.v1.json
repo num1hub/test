@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.planning-horizon-engine.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-07T11:05:00Z",
+    "name": "Planning Horizon Engine",
+    "semantic_hash": "planning-horizon-engine-dream-real-compression-today-roadmap",
+    "priority": "high",
+    "progress": 26,
+    "estimatedHours": 180,
+    "actualHours": 32,
+    "dueDate": "2026-09-12",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Planning Horizon Engine\n\n## 1. Definition and Essence\nPlanning Horizon Engine is the coordinating intelligence layer that turns the full Dream branch and the current Real branch into one usable ladder of planning horizons. It does not replace Daily Planner Agent or Roadmap Planner Agent. It gives them a shared compression model so N1Hub can hold `1000-day` ambition and still emit one grounded plan for `today`.\n\n## 2. Core Responsibilities\n- `dream_ingestion` reads long-horizon desire, speculative structures, goals, and future intent from Dream.\n- `real_grounding` applies current facts, progress, blockers, resources, commitments, and branch discipline from Real.\n- `horizon_ladder_construction` builds aligned views for `today`, `tomorrow`, `7_days`, `30_60_90`, `365_days`, and `1000_days`.\n- `compression_to_day` distills the whole planning field into the most important actions for now.\n- `feedback_recirculation` sends execution reality back upward so every horizon learns from actual movement rather than drifting apart.\n- `explanation_surface` gives Personal AI Assistant a legible reason for why one item belongs in the day while another remains future structure.\n\n## 3. N1Hub Role\nIn N1Hub, Planning Horizon Engine is the missing bridge between strategy and the lived day. It lets the planning swarm see the full Dream, respect Real, and continuously transform both into concrete near-horizon action without losing the larger shape.\n\n## 4. Integration\n- **Planner:** owns the overall planning domain and uses this engine as its compression core.\n- **Daily Planner Agent:** consumes the compressed short horizon.\n- **Roadmap Planner Agent:** shapes medium- and long-range structure.\n- **Branch Steward Agent:** protects Real/Dream meaning during compression.\n- **N-Infinity Suggestion Agent, Reminder Agent, and Risk Detector:** add option pressure, nudges, and correction signals.\n- **Personal AI Assistant:** explains the resulting horizon ladder conversationally.\n\n## 5. Philosophical Alignment\nPlanning Horizon Engine serves To Dig Deep by refusing to treat planning as either pure fantasy or pure task churn. It keeps the whole future field visible while still forcing the system to answer the hardest question: what, exactly, should happen now?"
+  },
+  "neuro_concentrate": {
+    "summary": "Planning Horizon Engine is the coordinating planning atom that compresses the full Dream branch through the current Real branch into a coherent ladder of horizons from `today` to `1000 days`. It matters because roadmap structure and daily action are not enough on their own; N1Hub needs an explicit mechanism that translates speculative future shape into grounded near-term movement. By giving that compression logic its own identity, the vault gains a cleaner explanation of how long-range intent becomes one practical day plan without losing branch discipline.",
+    "keywords": [
+      "planning-horizon-engine",
+      "dream-branch",
+      "real-branch",
+      "today",
+      "tomorrow",
+      "30-60-90",
+      "365-days",
+      "1000-days",
+      "planner",
+      "personal-ai-assistant"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "planning-horizon-engine-dream-real-compression-today-roadmap"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "c988d8c938ddd3ae7694a9953258830243f9bc0bd5655f936cf9a4a7070bee3b0920c1ec1e303a2e85b1680be6b008d21fb6a9f12a56884c2524d893355ab6ef"
+}

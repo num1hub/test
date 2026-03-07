@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
     "semantic_hash": "sovereign-intellectual-capital-negentropy-value-creation-gold-core",
-    "updated_at": "2026-03-06T18:43:17.041Z",
+    "updated_at": "2026-03-07T10:22:14.313Z",
     "name": "Sovereign Intellectual Capital",
     "priority": "medium",
     "progress": 18,
@@ -82,5 +82,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f59e958e3701ab86e8279ab5fc954a242ef65425f53d671f76c0ba67bde617db26ec0df03bfbb39736095aef09b5460ea9b5981508edc42398bd58d04f43e74a"
+  "integrity_sha3_512": "7bd352860ca4bd8c2722eba808ab43b22edd3ee578ec0ff9c7fcb7150ba815847f8d5a6a9cd65ca26014bb84aaaa5ee6eb8498c8f1aff2f9fc182944046a51ec"
 }

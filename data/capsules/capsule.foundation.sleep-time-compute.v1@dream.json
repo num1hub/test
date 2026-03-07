@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T18:43:17.023Z",
+    "updated_at": "2026-03-07T10:22:14.309Z",
     "name": "Sleep-Time Compute",
     "semantic_hash": "capsule-foundation-sleep-time-compute-v1-off-peak",
     "priority": "medium",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c67c193072ad19806e8e8f995c79f7a4c40c778262cc2aa3bfadd8db51daa3ac33d9df87b7b76c4455f7f89a9bcfc28d6f660e3524d5ba9c0cfa81505f41e004"
+  "integrity_sha3_512": "da00ef650003839038e72e534e9b00cf7acb0b4921c3fcbd27a90d938e224fd2cedb142a98558ea726c7c1b1bd97b88e07c0fdf0b9b87f9ddfe126b595c596e1"
 }

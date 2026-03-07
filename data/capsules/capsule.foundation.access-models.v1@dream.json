@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "access-models-freemium-subscription-payg-n1coin-tier-economics",
-    "updated_at": "2026-03-06T18:43:15.927Z",
+    "updated_at": "2026-03-07T10:22:13.895Z",
     "name": "Access Models",
     "priority": "medium",
     "progress": 28,
@@ -81,10 +81,22 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "af0555ed51fd0ae04e6f8450a7c2cf9cdcb03761950f439299b990b1ef3fe6ceb4c777f40e2b498ff174b6f65107fc60eeebba1e7b1cab5b7853cbb7f1a69d9e"
+  "integrity_sha3_512": "cbc44aedd62dd6a3fc095635e4027162cfcbf2e4d2a2f557eada04abfa99cc1aed5669e208c9d78d74786e77292c5e9390daeba3392e5136fc68115811c8e995"
 }

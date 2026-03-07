@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T18:43:16.356Z",
+    "updated_at": "2026-03-07T10:22:14.062Z",
     "name": "Dashboard",
     "semantic_hash": "capsule-foundation-dashboard-v1-workspace-widgets-analytics-tracker",
     "priority": "medium",
@@ -80,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3b03d0a2fad15cf60be4364f5c632e528d7b72148c605532549a47ef9ec43df3913acb3fba1b7b20ffef591aca361838bdb86455c042b9b22455f93c630ef9ac"
+  "integrity_sha3_512": "a1de852a87a92b6971cc937f7b3709db71d5443743f6d43622c02027766dc58bbc5a0e8a265e5b17589e82d561b29b1ea879d1fd54945544ddfbdbf233061cb9"
 }

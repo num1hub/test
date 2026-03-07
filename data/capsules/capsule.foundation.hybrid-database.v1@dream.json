@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T18:43:16.496Z",
+    "updated_at": "2026-03-07T10:22:14.121Z",
     "name": "Hybrid Database",
     "semantic_hash": "capsule-foundation-hybrid-database-v1-postgresql-neo4j-synchronization",
     "priority": "medium",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d092c37eddefa350ad1b6c24bc4328843bcbae06799fc01d03a7dd2952c8a2657e28c0f544bf4b45d0592c7c4d023021494446fab7323bafcae223053c7dcd3a"
+  "integrity_sha3_512": "e1c408aa19f5b35ebe16000cb2280f13db3e6375e28da20019b85e57c8ef86b594317bc70c36722928141069763fa05606ea3f4b014567357021196023993673"
 }

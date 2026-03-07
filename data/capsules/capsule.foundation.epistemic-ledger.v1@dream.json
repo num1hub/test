@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T18:43:16.408Z",
+    "updated_at": "2026-03-07T10:22:14.076Z",
     "name": "Epistemic Ledger",
     "semantic_hash": "capsule-foundation-epistemic-ledger-v1-contradiction-audit-parliament",
     "tier": 1
@@ -62,5 +62,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "39943839389a68b66c16a00e065c37832fdb6fa7546a92f5e3bea46a6e8e6a1152ea99182f1cb358419b892b3753082dcb352676df46de5ae9840bf5925b0fe2"
+  "integrity_sha3_512": "faaabcb4b81256bdf0d56634af3aca67550961df4f6fba21e62040b1c4b3ce2501b73484f6585327d3762f638f47936b1de8b4bee361311969e468c6f6126adb"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.325Z",
+    "updated_at": "2026-03-07T10:22:14.409Z",
     "name": "A2C Pipeline Project",
     "semantic_hash": "capsule-project-a2c-v1-pipeline-ingest-validate-emit",
     "source": {
@@ -72,5 +72,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d9212a62e458f9ae3cda3628f3772e47cf9db147ed7f39e889d92967c30dc5324db2641dfeded8e3ac73223c3fea981491fe4477f4295904da0999c9b3ba92af"
+  "integrity_sha3_512": "80f8afc4753899acf97911c6d4194837d94371e0ae316552c72772cc015aec81fd188f3a2b2c80721df667b15812305a4fc73b8a2a3cfd69f2daa823dca4069e"
 }

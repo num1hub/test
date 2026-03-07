@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T18:43:16.041Z",
+    "updated_at": "2026-03-07T10:22:13.934Z",
     "name": "Analytics",
     "semantic_hash": "capsule-foundation-analytics-v1-reports-metrics-dashboard-tracker",
     "priority": "medium",
@@ -76,5 +76,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "599c716fed835ad2c4862bb62cd368df465e51b2543e94711073a82408453622b6c3076372768ca696c7c6859e8501c3f5312cdb588212b2e37fa817512daf05"
+  "integrity_sha3_512": "f094e3614af65bf18d6b4a003a53671194b0b9d2129617d81d1499254d8356eaf62e89a43b44b03bee32fc5b3407de7271f9cb350935d1001a8f266d3b768ef9"
 }

@@ -2,12 +2,12 @@
   "metadata": {
     "capsule_id": "capsule.project.apsnytravel.v1",
     "version": "1.1.0",
-    "status": "draft",
+    "status": "archived",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T18:43:17.352Z",
+    "updated_at": "2026-03-07T18:46:00Z",
     "name": "ApsnyTravel",
     "semantic_hash": "capsule-project-apsnytravel-v1-independent-travel-roadmap-sovereign",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# ApsnyTravel\n\n## 1. Definition and Essence\nApsnyTravel is an independent project initiative with its own product trajectory and sovereign goals. It may reuse selected N1 capabilities but remains a root project without structural containment under N1 platform hubs.\n\n## 2. Core Attributes\n- `domain_scope` travel-oriented product and workflow boundaries\n- `feature_roadmap` independent delivery milestones\n- `integration_points` optional references to N1 modules\n- `ownership` project-specific stewardship and decision rights\n- `success_metrics` domain KPIs and user outcomes\n\n## 3. Lifecycle\nApsnyTravel evolves through independent roadmap iterations, selective integration with shared tooling, and autonomous governance over scope and prioritization.\n\n## 4. Integration\n- **Workspace/Planner:** optional support systems, not hierarchy parent.\n- **A2C:** optional data-to-capsule workflows for travel knowledge.\n- **Independent Project Set:** remains sovereign root node.\n- **Marketplace:** optional future template distribution channel.\n\n## 5. Philosophical Alignment\nApsnyTravel honors To Dig Deep by pursuing domain mastery while preserving sovereign independence from core platform hierarchy.\n"
   },
   "neuro_concentrate": {
-    "summary": "ApsnyTravel in the Dream branch represents the target state of a travel intelligence product rather than its current conceptual shell. It imagines curated place knowledge, itinerary logic, execution workflows, and monetizable travel artifacts converging into a coherent domain system with clear autonomy from the main N1Hub platform. The branch matters because the initiative is directionally meaningful but still immature. Dream preserves the richer future product shape so it can evolve with explicit intent instead of vague optionality.",
+    "summary": "ApsnyTravel in the Dream branch is archived together with the live project line so its future travel-intelligence shape remains preserved without staying on the active roadmap. It still imagines curated place knowledge, itinerary logic, execution workflows, and monetizable travel artifacts converging into a coherent domain system with clear autonomy from the main N1Hub platform. The capsule matters because the initiative remains directionally meaningful even while paused. In archive mode Dream preserves the richer future product shape as recoverable intent instead of active planning.",
     "keywords": [
       "apsnytravel",
       "travel-product",
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0c705b5be50ca90f3149750e6f70d75a9f597086f90007cd14cf61bcfb5d2f5a7b850021ca806c61d36cb3cfcc5dd6e7dcc8a84c1ae938ef39d391eec6a6ac18"
+  "integrity_sha3_512": "55c97bb9383e03570566a6c8b1111058c4d48ed4ebfca8857e5d8cf578f0aaea7c31aafd7833b20e9a6279f72e2e9ef522a631c2770b159d2851de4b6667e217"
 }

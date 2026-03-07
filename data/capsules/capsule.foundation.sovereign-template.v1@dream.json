@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-06T18:43:17.057Z",
+    "updated_at": "2026-03-07T10:22:14.320Z",
     "name": "Sovereign Template",
     "semantic_hash": "capsule-foundation-sovereign-template-v1-forking-lineage-licensing",
     "priority": "medium",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "72ec5ed635eeee8048b30dfd4304e948e8c04233f05973417f91840b350ce8cc2e0cd226fc91060d72145d159c7e9a500246a4c235328b17fab729381586b690"
+  "integrity_sha3_512": "514cb18581488599eda9ffe3b5fa44e87858b48be7b3bdead6c4d7375c44b35dd6ed85eaa4912c3f5919324303a793e67d1e307952dfd790bbe8cef79866f21d"
 }

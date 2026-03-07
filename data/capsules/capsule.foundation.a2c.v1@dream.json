@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold",
-    "updated_at": "2026-03-06T18:43:15.914Z",
+    "updated_at": "2026-03-07T10:22:13.883Z",
     "name": "A2C Pipeline",
     "priority": "high",
     "progress": 45,
@@ -109,10 +109,18 @@
       {
         "target_id": "capsule.project.a2c.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3ac4114f638ad0c647da2b6cbf6056d0527947c1d68aa77b2ead5f7968ebd948eb7396a7a3c021ceff415c015f3aa0c2a31af951ce69169486c327387213cbd6"
+  "integrity_sha3_512": "b3a735aeb0328eab9e5819bcf2b3d24e8a076194153c921bf6d0cc05b33982c78d7aad359ac7291006e51c219000a55fa9f8c07dc204524aad528611992d4aee"
 }

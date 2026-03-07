@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
     "semantic_hash": "between-zero-and-one-entropy-to-negentropy-gold",
-    "updated_at": "2026-03-06T18:43:16.146Z",
+    "updated_at": "2026-03-07T10:22:13.965Z",
     "name": "Between Zero and One",
     "tier": 1
   },
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4590c2d6e8eb5302ed2ddbcb66fc55edb320ebe93e0c2ddbe97c8336b3eace44a71ce898b5f9f669ccea3e3a77d06230073391a5da9cc0884de4e90c2d495339"
+  "integrity_sha3_512": "488a091e8a888486f81f4dfa4491812e09ff4113f90b5fe669693905bcbf88ca491e6345c97a440a2b441073db576280f0a60846031f4f172231221a09dd6cb4"
 }

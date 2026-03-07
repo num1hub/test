@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-06T18:43:16.521Z",
+    "updated_at": "2026-03-07T10:22:14.133Z",
     "name": "Invitation",
     "semantic_hash": "capsule-foundation-invitation-v1-onboarding-team-project-access",
     "tier": 2
@@ -61,5 +61,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b2998bddcdb605b91589326551ddb4b8e342aca341aa97b098d911824585482aff5ec1e079186225ac23096e472c60c4a576f8b1e4065fcb924becc744eee630"
+  "integrity_sha3_512": "c3cc8fc88328209a9abf188202f34d66beff5d68c1baac120cf7324a5c247e7c393246f5335d4cc24c9a37847d5e08fdf1910d24780e28cf83e7bae202805970"
 }
