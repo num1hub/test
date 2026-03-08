@@ -19,17 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Goal: The Strategic Outcome\n\n## 1. Definition and Essence\nA Goal capsule represents a high-level, time-bound desired outcome, usually spanning weeks, months, or years. It answers what should be achieved and provides strategic direction rather than tactical action. Goals decompose into milestones and tasks and can represent either personal aspirations or project outcomes.\n\n## 2. Core Attributes\n- targetDate (optional ISO date)\n- progress (0-100)\n- status: not_started | in_progress | completed | abandoned\n- priority: low | medium | high (optional)\n- parentGoalId for sub-goals\n- keyResults for measurable outcomes\n\n## 3. Lifecycle\nGoals are created in the Planner, refined during execution, and archived when completed. They can be linked to projects through part_of or references depending on scope.\n\n## 4. Integration\nPlanner surfaces goals on roadmaps, AI Assistant proposes goals from conversations, and Tracker monitors progress against target dates.\n\n## 5. Philosophical Alignment\nGoals embody Between Zero and One by defining destination states that tactical work can systematically realize."
+    "content": "# Goal: The Strategic Outcome\n\n## 1. Definition and Essence\nA Goal capsule represents a high-level, time-bound desired outcome. It answers what should become true, why that future state matters, and whether the outcome currently lives as an active Real commitment or a still-forming Dream direction. Goals provide strategic direction rather than tactical motion, and they gain force only when they decompose into milestones, tasks, review checkpoints, and measurable evidence.\n\n## 2. Core Attributes\n- `target_date` optional ISO date\n- `progress` 0-100\n- `status` not_started, in_progress, completed, abandoned, paused\n- `priority` optional strategic weight\n- `parent_goal_id` for nested outcome structure\n- `key_results` measurable outcome criteria\n- `branch_posture` whether the goal lives as current commitment, Dream direction, or promotion candidate\n- `capacity_posture` whether the goal is realistically supportable in the current horizon\n- `evidence_threshold` what must exist before the goal can be treated as truly advancing\n\n## 3. Lifecycle\nGoals emerge from planning, conversation, strategic review, or Dream distillation; are clarified through key results and decomposition; are pressure-tested against current capacity and timeline; are tracked through milestones and tasks; and are either completed, redefined, abandoned, or archived. A goal should not remain vague inspiration inside the vault. It should become an accountable outcome object with explicit branch posture and follow-through semantics.\n\n## 4. N1Hub Role\nGoal is the top of the practical planning ladder. It sits above milestones and tasks but below doctrine and broad philosophy. In N1Hub the point of a goal is not motivational prose. The point is to give the second brain a destination that can survive decomposition, horizon compression, tracking, reminders, and review without becoming detached from reality.\n\n## 5. Integration\n- **Planner and Planning Horizon Engine:** place goals across `today`, `week`, `30/60/90`, `365`, and longer horizons.\n- **Milestone and Task:** provide the execution ladder beneath the goal.\n- **Tracker, Reminder, and Calendar:** show whether the goal is moving, drifting, or misaligned with time.\n- **Personal AI Assistant and Chat to Capsules:** help articulate or refine goals from human input.\n- **Branch Steward Agent:** protects the difference between Dream intent and Real commitment.\n\n## 6. Philosophical Alignment\nGoal supports To Dig Deep by turning aspiration into a structured destination that the rest of the system can actually work toward and review honestly.\n"
   },
   "neuro_concentrate": {
-    "summary": "A Goal capsule defines a strategic, time-bound outcome with measurable key results and explicit progress tracking. It is the highest-level planning target in the Planner graph, designed to decompose into milestones and tasks that convert ambition into execution. Goals provide direction for projects and personal initiatives, expose measurable success criteria, and support accountability through status transitions. Tracker monitors movement against target dates while the AI Assistant can propose, refine, and contextualize goals from conversations and project evidence across the sovereign workspace.",
+    "summary": "A Goal capsule defines a strategic, time-bound outcome with measurable key results, explicit branch posture, and accountable progress tracking. It is one of the highest-level practical planning objects in the graph, designed to decompose into milestones, tasks, reminders, and evidence-bearing reviews that convert ambition into execution. Goals matter because they keep the second brain oriented toward destinations instead of only juggling isolated work. Planner, Tracker, the assistant, and horizon planning all depend on goals to turn aspiration into accountable structure.",
     "keywords": [
       "goal",
       "objective",
       "key-result",
       "planning",
       "tracking",
-      "planner"
+      "planner",
+      "destination",
+      "outcome",
+      "branch-posture",
+      "horizon"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,6 +60,30 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
       },
@@ -71,5 +99,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "95f1e7ad7f34ede78c0145256266c1fd4597212029ae7d7d791eadb15bb12a11b622a2fddcd06e3421da9538950accff44b892cb79264705f4dbb1e5d84a933b"
+  "integrity_sha3_512": "85fbf7fd166076a988b6a3f29ac9f880c20741fd5f6846bb3510629cc56077d84936f67bd6ca9a18b697a8573ceaeccae6d2c1276b56b9576ddbd2fc18ac6d47"
 }

@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Boost\n\n## 1. Definition and Essence\nBoost defines optional acceleration packages such as priority queues, additional model budget, and higher throughput for critical workflows. It formalizes short-term performance amplification with explicit policy boundaries.\n\n## 2. Core Attributes\n- `boost_type` compute, queue priority, model budget, storage\n- `allocation_window` duration and consumption boundaries\n- `eligibility_rules` who can request and apply boosts\n- `usage_meter` measured consumption against purchased capacity\n- `throttle_policy` fallback behavior when allocation is exhausted\n\n## 3. Lifecycle\nBoosts are activated via subscription or purchase, consumed by eligible workloads, monitored in real time, and retired or renewed according to policy and utilization.\n\n## 4. Integration\n- **N1 Pass:** may grant baseline boost allowances.\n- **DeepMine and A2C:** key consumers of accelerated processing.\n- **Tokenomics:** links boost spend to ecosystem economy.\n- **Workspace:** provides visibility into active acceleration state.\n\n## 5. Philosophical Alignment\nBoost capsules support To Dig Deep by enabling strategic bursts of execution intensity when timing and momentum matter most.\n"
+    "content": "# Boost\n\n## 1. Definition and Essence\nBoost defines optional acceleration packages such as priority queues, additional model budget, hosted inference surges, and higher throughput for critical workflows. In N1Hub it is the explicit mechanism for saying: this task, agent lane, or human session should temporarily move faster than the default system rhythm.\n\n## 2. Core Attributes\n- `boost_type` compute, queue priority, model budget, storage, hosted inference, review bandwidth\n- `allocation_window` duration and consumption boundaries\n- `eligibility_rules` who can request and apply boosts\n- `usage_meter` measured consumption against purchased or granted capacity\n- `throttle_policy` fallback behavior when allocation is exhausted\n- `lane_scope` which user flows, agents, or background jobs are allowed to consume the boost\n\n## 3. Lifecycle\nBoosts are activated via subscription, purchase, or operator grant; consumed by eligible workloads; monitored in real time; and retired or renewed according to policy, utilization, and evidence of impact.\n\n## 4. Integration\n- **N1 Pass:** may grant baseline boost allowances.\n- **Hybrid LLM Access / AI Wallet:** decide which premium model lanes can actually absorb the boost.\n- **DeepMine, A2C, and Background Agent Runtime:** key consumers of accelerated processing.\n- **Workspace / Dashboard:** provide visibility into active acceleration state and its cost-to-impact ratio.\n\n## 5. Philosophical Alignment\nBoost supports To Dig Deep by enabling strategic bursts of execution intensity when timing and momentum matter most, while keeping urgency governed rather than chaotic.\n"
   },
   "neuro_concentrate": {
-    "summary": "Boost is the controlled acceleration mechanism for moments when ordinary queueing or budget limits are too slow. It formalizes short-term bursts of extra throughput, priority, or model budget so users can push critical A2C, DeepMine, or AI-assistant workloads without permanently distorting the system. The capsule matters because urgency exists, but unmanaged urgency becomes chaos. By treating acceleration as a policy-governed asset instead of an informal override, Boost lets the ecosystem increase execution intensity while keeping costs, fairness, and entitlement logic explicit.",
+    "summary": "Boost is the controlled acceleration mechanism for moments when ordinary queueing or budget limits are too slow. It formalizes short-term bursts of extra throughput, priority, hosted inference, or model budget so users and agents can push critical A2C, DeepMine, or stewardship workloads without permanently distorting the system. The capsule matters because urgency exists, but unmanaged urgency becomes chaos. By treating acceleration as a policy-governed asset instead of an informal override, Boost lets the ecosystem increase execution intensity while keeping costs, fairness, and entitlement logic explicit.",
     "keywords": [
       "boost",
       "acceleration",
@@ -32,7 +32,9 @@
       "a2c",
       "deepmine",
       "entitlements",
-      "fairness"
+      "fairness",
+      "hosted-inference",
+      "agent-lanes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -63,6 +65,14 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
       }
@@ -70,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "8781c4cb14749b1a1f165da90a162dcbf86d625fc76a9be25290ec4f1afc8bd48a7077d02feccb6d98cd4037d99b651240941b50dd46c0d90fd17d5fb476b026"
+  "integrity_sha3_512": "be2c8b5f9fa82cd93d94dca295e488ac311ff35c54ed27e7c092e0e064f4a1e5eaa2b9f2389daf8ee6fc4e3b7204acbb6f23e2699370c6519bf13394cd23e333"
 }

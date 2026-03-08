@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# API Gateway\n\n## 1. Definition and Essence\nAPI Gateway defines the governed ingress and egress boundary for external service interactions. It standardizes authentication, routing, throttling, observability, and policy enforcement for all integration traffic.\n\n## 2. Core Attributes\n- `route_catalog` mapped upstream and downstream endpoints\n- `auth_enforcement` token, key, and signature verification\n- `rate_control` throttling and tenant fairness policy\n- `observability` tracing, metrics, and error analytics\n- `policy_hooks` validation and compliance interceptors\n\n## 3. Lifecycle\nGateway policies are versioned, deployed, monitored, and tuned as traffic patterns and external dependencies evolve.\n\n## 4. Integration\n- **Integrations Layer:** primary transport and control boundary.\n- **Security:** authentication and abuse prevention coupling.\n- **Audit Log:** request/response governance evidence stream.\n- **Workspace Modules:** controlled access to external ecosystems.\n\n## 5. Philosophical Alignment\nGateway architecture honors To Dig Deep by extending outward connectivity with strict, transparent control over every boundary crossing.\n"
+    "content": "# API Gateway\n\n## 1. Definition and Essence\nAPI Gateway defines the governed ingress and egress boundary for external connectivity in N1Hub. It is the policy-bearing edge between the sovereign vault and outside services: model providers, hosted inference surfaces, webhook sources, notification channels, calendar systems, and future connectors. It standardizes authentication, routing, throttling, observability, and boundary enforcement so that the second brain can interact with the outside world without dissolving into opaque scripts.\n\n## 2. Core Attributes\n- `route_catalog` mapped upstream and downstream endpoints\n- `auth_enforcement` token, key, signature, and actor-bound access verification\n- `rate_and_budget_control` throttling, provider fairness, and defensive cost posture\n- `observability` tracing, metrics, error analytics, and artifact lineage around boundary crossings\n- `policy_hooks` validation, redaction, compliance, and review interceptors\n- `lane_awareness` distinction between interactive, background, hosted inference, and integration traffic\n\n## 3. Lifecycle\nGateway policies are versioned, deployed, monitored, and tuned as traffic patterns, providers, and trust boundaries evolve. In a mature N1Hub, this is where provider access stops being ad hoc and becomes operational law.\n\n## 4. N1Hub Role\nThe gateway is especially important once AI Wallet, hybrid access, and background agents exist. The system now has multiple ways to leave the vault: interactive assistant calls, background mining runs, hosted inference requests, notifications, and third-party integrations. API Gateway is the place where those exits become governable instead of folkloric.\n\n## 5. Integration\n- **Integrations:** supplies connector definitions and external event contracts.\n- **AI Wallet and Hybrid LLM Access:** define which provider lanes the gateway may route to.\n- **Agent Control Plane and Background Agent Runtime:** depend on the gateway for governed outbound execution.\n- **Security and Audit Log:** preserve trust, redaction, abuse prevention, and evidence.\n- **Workspace and AI Control Surface:** expose only human-legible summaries of the boundary, not raw secret behavior.\n\n## 6. Philosophical Alignment\nAPI Gateway supports To Dig Deep by making every boundary crossing explicit, governable, and reviewable instead of letting external power leak into the system invisibly.\n"
   },
   "neuro_concentrate": {
-    "summary": "API Gateway defines an integration boundary in the N1Hub graph so external service interactions remain governed, auditable, and consistent with sovereign data policy. It standardizes payload contracts, authentication expectations, delivery behavior, and failure handling semantics used by workspace modules and agents. By representing integration behavior as capsules, platform evolution stays explicit and testable rather than hard-coded in opaque connectors. This improves reliability, security, and maintainability while preserving user control over what information leaves or enters the vault.",
+    "summary": "API Gateway defines the governed edge between the sovereign vault and external systems. It matters because once AI Wallet, hosted inference, provider routing, and background agents exist, the platform has many ways to cross the boundary between inside and outside. This capsule turns those crossings into explicit law: authentication, routing, throttling, tracing, redaction, and review hooks become part of the architecture instead of hidden connector behavior. By doing so, N1Hub can use external power without losing legibility or control.",
     "keywords": [
       "api-gateway",
       "routing",
@@ -30,7 +30,10 @@
       "rate-limit",
       "integrations",
       "security",
-      "observability"
+      "observability",
+      "provider-routing",
+      "hosted-inference",
+      "boundary-law"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -53,6 +56,22 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.audit-log.v1",
         "relation_type": "references"
       },
@@ -64,5 +83,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "55b9b954216e1f41b4eca6bf96b6e368d824211b28d43e562ebca83bc91b8be35ee1d545937e982e67db5b8d243351f915969cafe836e0562a8524170bee1047"
+  "integrity_sha3_512": "4ecb22382fd41fef3d54bcd2950bea203ee49a14811b3bfbd11d36aaa582dc3114218c91ba8ee49133eef18a85336669cd19f65d3414df9e4edc968847a07743"
 }

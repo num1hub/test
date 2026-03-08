@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Activity, Bot, Database, Folder, Settings } from 'lucide-react';
@@ -14,10 +15,15 @@ const NAV_ITEMS = [
 
 export default function AppNav() {
   const pathname = usePathname();
-  const authenticated =
-    typeof window !== 'undefined' && Boolean(localStorage.getItem('n1hub_vault_token'));
+  const [authenticated, setAuthenticated] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  if (!authenticated) {
+  useEffect(() => {
+    setMounted(true);
+    setAuthenticated(Boolean(window.localStorage.getItem('n1hub_vault_token')));
+  }, []);
+
+  if (!mounted || !authenticated) {
     return null;
   }
 

@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Audit Log\n\n## 1. Definition and Essence\nAudit Log defines immutable event recording for capsule creation, mutation, validation, overrides, and governance actions. It standardizes event schema, retention policies, and integrity requirements for forensic traceability.\n\n## 2. Core Attributes\n- `event_id` immutable audit record identifier\n- `actor_ref` identity capsule responsible for action\n- `subject_ref` capsule or resource affected\n- `event_payload` normalized mutation metadata\n- `retention_policy` storage duration and archival tiering\n\n## 3. Lifecycle\nAudit events are emitted on protected operations, indexed for query, rotated by retention policy, and archived while preserving tamper-evident integrity.\n\n## 4. Integration\n- **Validator and A2C:** records gate outcomes and fixes.\n- **Architect Override and Parliament:** logs exceptional governance actions.\n- **Archive:** long-term retention and restoration coupling.\n- **Security:** incident response and compliance evidence source.\n\n## 5. Philosophical Alignment\nAudit logging realizes To Dig Deep by ensuring every important action can be reconstructed, challenged, and learned from.\n"
+    "content": "# Audit Log\n\n## 1. Definition and Essence\nAudit Log defines immutable event recording for capsule creation, mutation, validation, overrides, governance actions, and important agent operations. It standardizes event schema, retention policies, and integrity requirements for forensic traceability.\n\n## 2. Core Attributes\n- `event_id` immutable audit record identifier\n- `actor_ref` identity capsule responsible for action\n- `subject_ref` capsule, resource, or assignment affected\n- `event_payload` normalized mutation metadata\n- `retention_policy` storage duration and archival tiering\n- `causal_chain` references to preceding actions, approvals, or jobs that explain why the event happened\n\n## 3. Lifecycle\nAudit events are emitted on protected operations, indexed for query, rotated by retention policy, and archived while preserving tamper-evident integrity. The point is not merely storage; it is later reconstructability.\n\n## 4. Integration\n- **Validator, A2C, and Vault Update:** record gate outcomes and fixes.\n- **Architect Override, Parliament, and SIAF Governance:** log exceptional governance actions.\n- **Archive:** long-term retention and restoration coupling.\n- **Security / Background Agent Runtime / Symphony:** provide incident, swarm, and orchestration evidence.\n\n## 5. Philosophical Alignment\nAudit logging realizes To Dig Deep by ensuring every important action can be reconstructed, challenged, and learned from. It gives the second brain forensic memory, not just optimistic trust.\n"
   },
   "neuro_concentrate": {
-    "summary": "Audit Log is the forensic memory of the system. It defines how protected actions are recorded so capsule creation, mutation, validation failures, overrides, and governance decisions remain reconstructable after the fact. This capsule matters because sovereignty is not only about what exists now, but also about whether the path that produced it can be inspected and challenged. By standardizing event identity, actor attribution, subject references, and retention discipline, Audit Log turns trust from a promise into an evidentiary record usable by Security, Validator workflows, and long-term archive policy.",
+    "summary": "Audit Log is the forensic memory of the system. It defines how protected actions are recorded so capsule creation, mutation, validation failures, overrides, governance decisions, and important agent operations remain reconstructable after the fact. This capsule matters because sovereignty is not only about what exists now, but also about whether the path that produced it can be inspected and challenged. By standardizing event identity, actor attribution, subject references, causal chains, and retention discipline, Audit Log turns trust from a promise into an evidentiary record usable by Security, Validator workflows, swarm review, and long-term archive policy.",
     "keywords": [
       "audit-log",
       "forensics",
@@ -32,7 +32,10 @@
       "retention",
       "evidence",
       "security",
-      "archive-policy"
+      "archive-policy",
+      "agent-operations",
+      "causal-chain",
+      "forensic-memory"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -66,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e59c532528fa2f1c630d9df39e894079f09f873a0d496882bc534a080c0d9ee9c62323bf09fd767673a008b82c56b8ce7d5d5668f8b3775f82fbc4ead202ccd4"
+  "integrity_sha3_512": "07cec0800de2b5ae2b5489addd419e4bf298bb29b7633cf725bc33624b36fa1e88fdecef90ec525a27d06c2198c1168e8b517cf38bd8bdeba8de93d6411e9f50"
 }

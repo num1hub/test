@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import ChatGptAuthStatusCard from '@/components/ChatGptAuthStatusCard';
 
 export default function LoginPage() {
   const [password, setPassword] = useState('');
@@ -68,6 +69,16 @@ export default function LoginPage() {
           >
             {loading ? 'Verifying...' : 'Unlock Vault'}
           </button>
+        </div>
+
+        <div className="mt-6 border-t border-slate-800 pt-5">
+          <ChatGptAuthStatusCard
+            onAuthenticated={(token) => {
+              setError('');
+              localStorage.setItem('n1hub_vault_token', token);
+              router.push('/vault');
+            }}
+          />
         </div>
       </form>
     </main>

@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:46:00Z",
-    "updated_at": "2026-03-06T23:46:00Z",
+    "updated_at": "2026-03-08T22:40:00Z",
     "name": "Validation Gatekeeper Agent",
     "semantic_hash": "validation-gatekeeper-agent-gates-quality-quarantine-acceptance-review",
     "source": {
@@ -23,17 +23,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Validation Gatekeeper Agent\n\n## 1. Definition and Essence\nValidation Gatekeeper Agent is the acceptance-boundary worker of the N1Hub vault. It interprets gate results, classifies quality risk, blocks malformed or weak capsule changes from entering the graph, and routes failures toward remediation or quarantine rather than quiet compromise.\n\n## 2. Core Responsibilities\n- `gate_interpretation` reads validation evidence in a way other agents and operators can act on.\n- `accept_reject_decision` decides whether a candidate is ready, fixable, or unsafe.\n- `autofix_supervision` allows bounded repair without confusing repair with approval.\n- `quarantine_routing` ensures hard failures remain inspectable and recoverable.\n- `quality_feedback` sends explicit improvement signals back to mining, update, and review lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Validation Gatekeeper Agent keeps the vault honest after A2C refinement but before final acceptance. It is the difference between structured output and trusted sovereign knowledge.\n\n## 4. Philosophical Alignment\nValidation Gatekeeper Agent serves To Dig Deep by insisting that depth includes rigor, not just volume or novelty.\n"
+    "content": "# Validation Gatekeeper Agent\n\n## 1. Definition and Essence\nValidation Gatekeeper Agent is the acceptance-boundary worker of the N1Hub vault. It interprets gate results, classifies quality risk, blocks malformed or weak capsule changes from entering the graph, and routes failures toward remediation or quarantine rather than quiet compromise.\n\n## 2. Core Responsibilities\n- `gate_interpretation` reads validation evidence in a way other agents and operators can act on.\n- `accept_reject_decision` decides whether a candidate is ready, fixable, review-worthy, or unsafe.\n- `autofix_supervision` allows bounded repair without confusing repair with approval.\n- `quarantine_routing` ensures hard failures remain inspectable and recoverable.\n- `real_promotion_boundary` protects the step from Dream-side candidate structure into trusted Real.\n- `quality_feedback` sends explicit improvement signals back to mining, update, and review lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Validation Gatekeeper Agent keeps the vault honest after A2C refinement but before final acceptance. It is the difference between structured output and trusted sovereign knowledge, and it gives the system a clear answer to the question: has this candidate actually passed enough evidence and gate discipline to enter the accepted graph?\n\n## 4. Philosophical Alignment\nValidation Gatekeeper Agent serves To Dig Deep by insisting that depth includes rigor, not just volume or novelty.\n"
   },
   "neuro_concentrate": {
-    "summary": "Validation Gatekeeper Agent is the explicit quality-boundary role between candidate capsule output and trusted graph acceptance. It matters because a pipeline can produce sophisticated-looking structure that still should not enter the vault. The gatekeeper reads validation evidence, decides whether a candidate is acceptable, fixable, or unsafe, and routes failures into repair or quarantine without letting ambiguous material pass by default. This turns quality control into an accountable agent function instead of a silent side effect.",
+    "summary": "Validation Gatekeeper Agent is the explicit quality boundary between candidate capsule output and trusted graph acceptance. It matters because a pipeline can produce sophisticated-looking structure that still should not enter the vault. The gatekeeper interprets validation evidence, classifies whether a candidate is acceptable, fixable, review-worthy, or unsafe, and protects the boundary between Dream-side experimentation, review-ready work, and Real-side trust. This turns quality control and promotion discipline into accountable agent functions instead of silent side effects.",
     "keywords": [
       "validation-gatekeeper-agent",
       "quality-control",
       "a2c-validate",
       "quarantine",
+      "capsule-job",
       "capsule-gates",
-      "acceptance-boundary",
+      "real-promotion-boundary",
+      "promotion-discipline",
       "vault-update",
       "review",
       "n1hub",
@@ -88,6 +90,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
@@ -95,5 +105,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c44052efe3c720d639d95d906451e0d997a28165f62c85837aad4679026885ea19fcf25b5bfca8679b07bf68f801081f19c3e872052bf50452459d7d2233b2f7"
+  "integrity_sha3_512": "2122e67ac26bedcf980abd8341d593c8b12a352eceb71aa364e103f3cf3cac86868bfb413e557c69b2acaea4ee7ef47870255efa5c1b6eab49c3b5837084321c"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:40:00Z",
-    "updated_at": "2026-03-07T10:22:14.277Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Roadmap Planner Agent",
     "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Roadmap Planner Agent\n\n## Dream Direction\nIn the Dream branch, Roadmap Planner Agent becomes a more dynamic strategic planner capable of branch-aware sequencing, scenario comparison, and clearer adaptation under uncertainty without degrading roadmap readability.\n\n## Future Potential\n- stronger phase design across `30/60/90`, `365`, and `1000-day` horizons\n- roadmap variants for Dream exploration versus Real delivery\n- tighter linkage between risks, milestones, and replanning\n- better strategic briefs for Personal AI Assistant and operators\n- cleaner handoff into Planning Horizon Engine so the full Dream field can become a grounded day plan\n\n## Why It Matters\nDream preserves Roadmap Planner Agent as the long-horizon intelligence that stops the vault from becoming purely reactive."
   },
   "neuro_concentrate": {
-    "summary": "Roadmap Planner Agent in the Dream branch represents a more adaptive strategic planning role for N1Hub. It pushes toward branch-aware sequencing, scenario comparison, explicit `30/60/90`, `365`, and `1000-day` horizons, and better integration between roadmap structure and execution uncertainty. The capsule matters because future planning needs more than static timelines; it needs a strategic worker that can keep long-range coherence under pressure and still feed grounded daily execution. Dream therefore preserves planning as a living strategic capability instead of a frozen roadmap artifact.",
+    "summary": "Roadmap Planner Agent in the Dream branch represents a more adaptive strategic planning role for N1Hub. It pushes toward branch-aware sequencing, scenario comparison, explicit `30/60/90`, `365`, and `1000-day` horizons, and better integration between roadmap structure, review pressure, tracker evidence, and execution uncertainty. The capsule matters because future planning needs more than static timelines; it needs a strategic worker that can keep long-range coherence under pressure and still feed grounded daily execution. Dream therefore preserves planning as a living strategic capability instead of a frozen roadmap artifact.",
     "keywords": [
       "roadmap-planner-agent",
       "dream-branch",
@@ -34,6 +34,7 @@
       "365-days",
       "1000-days",
       "planning-horizon-engine",
+      "tracker-evidence",
       "n1hub"
     ],
     "confidence_vector": {
@@ -73,11 +74,19 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.daily-planner-agent.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
         "relation_type": "references"
       },
       {
@@ -97,10 +106,6 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "supports"
-      },
-      {
         "target_id": "capsule.foundation.branch-steward-agent.v1",
         "relation_type": "references"
       }
@@ -108,5 +113,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "98780b5a771500df4ba35c299c4dd61edb187f053530bc438526f8e52d8c028c480afa101b8d78bc4fd5a9b64082e1c83e402dd026434da9343226a897c7032f"
+  "integrity_sha3_512": "fbbf768fdfa1b1d76f5dc33e83f1b5d59f278bc9f7ecc9623c913dc7db887a328a60ddae62f9870aeed61ac05719d712c6c793fd027b17afc455249e759793b6"
 }

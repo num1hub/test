@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Metric\n\n## 1. Definition and Essence\nMetric defines a measurable indicator capsule used for planning diagnostics, tracker analytics, and dashboard reporting. It standardizes value semantics, period windows, aggregation methods, and threshold triggers so productivity signals remain comparable across projects.\n\n## 2. Core Attributes\n- `metric_name` canonical identifier for indicator definition\n- `value` numeric observation with unit metadata\n- `window` time period associated with measurement\n- `aggregation` sum, average, percentile, trend strategy\n- `thresholds` configured warning and critical bounds\n\n## 3. Lifecycle\nMetrics are generated from operational events, aggregated over configured windows, visualized in dashboards, and persisted for historical trend analysis and anomaly detection.\n\n## 4. Integration\n- **Tracker:** primary source for execution telemetry.\n- **Analytics:** aggregates metrics into reports and insights.\n- **Dashboard:** renders metric widgets and trend cards.\n- **Project Hubs:** consumes metrics for health assessment.\n\n## 5. Philosophical Alignment\nMetrics apply To Dig Deep by replacing vague impressions with measurable evidence that can guide disciplined improvement.\n"
+    "content": "# Metric\n\n## 1. Definition and Essence\nMetric defines a measurable indicator capsule used for planning diagnostics, tracker analytics, dashboard reporting, and swarm evaluation. It standardizes value semantics, period windows, aggregation methods, and threshold triggers so productivity, capsule quality, and agent behavior remain comparable across projects.\n\n## 2. Core Attributes\n- `metric_name` canonical identifier for indicator definition\n- `value` numeric observation with unit metadata\n- `window` time period associated with measurement\n- `aggregation` sum, average, percentile, trend strategy\n- `thresholds` configured warning and critical bounds\n- `subject_scope` what entity is being measured: user, project, capsule, agent lane, or portfolio slice\n\n## 3. Lifecycle\nMetrics are generated from operational events, aggregated over configured windows, visualized in dashboards, and persisted for historical trend analysis and anomaly detection. Good metrics stay tied to interpretation instead of floating around as decontextualized numbers.\n\n## 4. Integration\n- **Tracker:** primary source for execution telemetry.\n- **Analytics:** aggregates metrics into reports and insights.\n- **Dashboard:** renders metric widgets and trend cards.\n- **Background Agent Runtime / Symphony:** provide agent and orchestration signals.\n- **Project Hubs:** consume metrics for health assessment.\n\n## 5. Philosophical Alignment\nMetrics apply To Dig Deep by replacing vague impressions with measurable evidence that can guide disciplined improvement. They give the second brain a way to notice whether change actually improved the system.\n"
   },
   "neuro_concentrate": {
-    "summary": "Metric is the canonical measurable signal used to evaluate health, velocity, quality, and drift across the workspace. It matters because without explicit measurement units and aggregation windows, analytics collapses into opinion and dashboards become decorative. This capsule gives the ecosystem a durable place to define what is being measured, over which period, and against which thresholds or trends. In effect, Metric transforms scattered observations into a reusable evidence primitive that Tracker, Analytics, and project hubs can all depend on when making operational or governance decisions.",
+    "summary": "Metric is the canonical measurable signal used to evaluate health, velocity, quality, and drift across the workspace. It matters because without explicit measurement units and aggregation windows, analytics collapses into opinion and dashboards become decorative. This capsule gives the ecosystem a durable place to define what is being measured, over which period, and against which thresholds or trends, including capsule health and agent behavior. In effect, Metric transforms scattered observations into a reusable evidence primitive that Tracker, Analytics, swarm review, and project hubs can all depend on when making operational or governance decisions.",
     "keywords": [
       "metric",
       "analytics",
@@ -30,7 +30,10 @@
       "dashboard",
       "kpi",
       "measurement",
-      "trend"
+      "trend",
+      "capsule-health",
+      "agent-eval",
+      "evidence"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -76,5 +79,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "92adb003c11ca0912e5c1f388ac3f8edc4d8e07e9b718e6f531e8072f8b92424c893902bc9ac10c8374797cd6c2e60e3b2155e74483828838aad068f62cb8fd6"
+  "integrity_sha3_512": "34db30ae331ea8bf87f1d95c52467a6fb982a8a30732a357cffef7828c4ca24338de22f5a7e3cf8d70f5ec83baf981ba90ecef4818d0d621e19209b1417dd650"
 }

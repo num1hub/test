@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute defines off-peak execution policy for background workloads such as revalidation, analytics compaction, suggestion generation, mining sweeps, and graph maintenance. It optimizes cost, throughput, and user experience by shifting heavy tasks outside active interaction windows.\n\n## 2. Core Attributes\n- `offpeak_windows` schedule rules by timezone and user context\n- `workload_classes` jobs eligible for deferred execution\n- `budget_limits` API or token consumption boundaries\n- `discount_capture` provider-aware targeting of batch or off-peak price reductions when those lanes exist\n- `priority_exceptions` urgent tasks exempt from deferment\n- `scheduler_feedback` metrics for policy adjustment\n\n## 3. Lifecycle\nPolicies are configured from preferences and platform constraints, applied by scheduler services, and continuously tuned based on latency, cost, completion outcomes, and real provider pricing behavior. The daytime symbiotic lane and the off-peak industrial lane should remain distinct: subscription-backed interactive work stays close to the user, while heavier programmable mining and synthesis shift into cheaper unattended windows.\n\n## 4. Integration\n- **Planner/Tracker:** supplies deferred workload candidates.\n- **A2C and DeepMine:** major computational consumers.\n- **Night Shift Autonomy:** governs when unattended work is allowed to dispatch.\n- **Hybrid LLM Access and AI Economics:** define which provider lanes should be favored during off-peak windows.\n- **User Preferences:** provides local timezone and quiet windows.\n- **Analytics:** evaluates policy efficiency and tradeoffs.\n\n## 5. Philosophical Alignment\nSleep-Time Compute supports To Dig Deep by preserving daytime focus while still compounding progress through disciplined background execution.\n"
+    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute defines the off-peak compute discipline of N1Hub. It governs when heavy background work should move away from the human attention lane and into quieter, cheaper, more industrial execution windows. It exists to protect the daytime symbiosis loop while still compounding progress through DeepMine, A2C, graph maintenance, validation sweeps, and agent reassessment.\n\n## 2. Core Attributes\n- `offpeak_windows` maps quiet execution windows by timezone, profile, and operator policy.\n- `workload_classes` marks which jobs are safe to defer, batch, or re-check outside live interaction.\n- `budget_limits` bounds token, credit, and provider-lane spend during unattended work.\n- `discount_capture` explicitly hunts cheaper provider lanes, hosted inference windows, or batch pricing when available.\n- `human_protection_rules` prevents heavy background work from degrading the daytime co-pilot experience.\n- `scheduler_feedback` records throughput, latency, savings, and reassessment quality for later tuning.\n\n## 3. Lifecycle\nSleep-Time Compute starts from user rhythm and access posture, then becomes scheduler policy. The system reads profile identity, user preferences, wallet lanes, and current control-plane policy, selects eligible workloads, defers or batches them, then evaluates outcomes against cost and usefulness. The concept is not \"run everything at night\". The concept is \"move the right work to the right window so the second brain compounds progress without stealing the foreground from the person.\"\n\n## 4. N1Hub Role\nThis capsule is one of the hidden levers that makes N1Hub more than a notes app. It lets the human have a live assistant during the day while the heavier quarry, refinery, and vault-stewardship work shifts into quieter industrial windows. That distinction matters economically, cognitively, and architecturally.\n\n## 5. Integration\n- **User Preferences and Profile:** provide timezone, human rhythm, quiet expectations, and identity-bound defaults.\n- **Night Shift Autonomy:** defines when unattended dispatch is actually allowed.\n- **AI Wallet and Hybrid LLM Access:** determine which supply lanes are cheap, healthy, and safe enough to use off-peak.\n- **Background Agent Runtime and Agent Daemon:** convert policy into real wakeups, queues, and cooldowns.\n- **DeepMine, A2C, and Vault Stewardship Swarm:** consume most of the heavy off-peak work.\n- **Agent Control Plane:** keeps the scheduling and budget posture legible instead of magical.\n\n## 6. Philosophical Alignment\nSleep-Time Compute supports To Dig Deep by preserving the clarity of the waking human loop while still letting the system mine, refine, and improve the vault when attention is elsewhere.\n"
   },
   "neuro_concentrate": {
-    "summary": "Sleep-Time Compute defines the off-peak execution policy that lets the ecosystem compound work without stealing attention from active use. It governs which heavy workloads may be deferred, how cost and priority are balanced, and how quiet windows or timezone-aware rules influence scheduling. The capsule is strategically important because DeepMine, A2C, analytics, and suggestion generation can all become expensive or distracting if they compete directly with interactive flows. By encoding background execution as a first-class concept, the vault makes invisible progress accountable, tunable, and philosophically aligned with disciplined deep work.",
+    "summary": "Sleep-Time Compute defines the off-peak execution discipline that lets N1Hub compound work without stealing the foreground from the human. It governs which heavy workloads should shift into quiet windows, how provider economics and wallet lanes influence that shift, and how scheduler policy stays aligned with real human rhythm instead of generic cron logic. The capsule matters because DeepMine, A2C, validation, and vault stewardship become expensive and cognitively harmful when they compete with live co-pilot use. By turning sleep-time execution into explicit doctrine, the vault makes background progress legible, tunable, and supportive of the second-brain contract.",
     "keywords": [
       "sleep-time-compute",
       "off-peak",
@@ -32,7 +32,10 @@
       "cost-control",
       "deep-work",
       "a2c",
-      "deepmine"
+      "deepmine",
+      "night-autonomy",
+      "human-rhythm",
+      "second-brain"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -67,16 +70,36 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.hybrid-llm-access.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.ai-economics-night-batch.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d0c7d951a51adb682f3728a73b62e83a3ef7a967a35c001b605e1ec4f2d86384c40cf1885dd42a554280c974c7d6653fa403fca7823ad2fcfbb43797dd84b653"
+  "integrity_sha3_512": "abe5a5725b469f88bbd68f2b832ce72c36e1783110d6c34f4f5b32b67f7bed18406c694b4be7d0e4043383b5aaceb608edd4776166db43b967c6e087d6d57df3"
 }

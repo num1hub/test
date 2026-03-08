@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.human-ai-symbiosis.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-08T19:10:00Z",
     "name": "Human-AI Symbiosis",
     "semantic_hash": "human-ai-symbiosis-daemon-partner-collective-intelligence-routing",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Human-AI Symbiosis\n\n## 1. Definition and Essence\nHuman-AI Symbiosis defines the primary operational formula of N1Hub: `Я + ИИ = симбиоз`. The user remains the center of intention, judgment, and final responsibility, while the Personal AI Assistant acts as a persistent daemon-partner that remembers context, routes work, and keeps intelligence continuously available.\n\n## 2. Core Principles\n- `human_sovereignty` means the person remains the source of goals, values, and irreversible decisions.\n- `daemon_partnership` means AI should stay continuously available rather than appear only as an occasional chat tool.\n- `delegated_depth` means the assistant can hand work to deeper lanes such as DeepMine, Symphony, and N-Infinity without forcing the human to micromanage every subtask.\n- `collective_intelligence_amplification` means swarm agents are useful only insofar as they strengthen the human-centered loop instead of obscuring it.\n- `branch_discipline` means exploratory output can flow into Dream while evidence-bound truth must earn its place in Real.\n\n## 3. N1Hub Role\nIn N1Hub this capsule explains why the Personal AI Assistant is the main front door. The assistant is not just a chatbot, and the swarm is not the user interface. The assistant is the user's long-lived partner, while specialized agents and background daemons become the collective intelligence that the user can invoke through that partner.\n\n## 4. Operational Consequence\nThe correct architecture is therefore not \"one giant bot\" and not \"many detached automations\". It is one primary partner surface for the human, with routed access to specialized roles, memory, mining, execution, and night-shift autonomy behind it.\n\n## 5. Philosophical Alignment\nHuman-AI Symbiosis supports To Dig Deep by keeping depth in service of human agency rather than in service of autonomy for its own sake."
+    "content": "# Human-AI Symbiosis\n\n## 1. Definition and Essence\nHuman-AI Symbiosis defines the primary operational formula of N1Hub: `Я + ИИ = симбиоз`. The user remains the center of intention, judgment, and final responsibility, while the Personal AI Assistant acts as a persistent daemon-partner that remembers context, routes work, and keeps intelligence continuously available.\n\n## 2. Core Principles\n- `human_sovereignty` means the person remains the source of goals, values, and irreversible decisions.\n- `daemon_partnership` means AI should stay continuously available rather than appear only as an occasional chat tool.\n- `delegated_depth` means the assistant can hand work to deeper lanes such as DeepMine, Symphony, and N-Infinity without forcing the human to micromanage every subtask.\n- `wallet_governed_supply` means the assistant and swarm draw on a visible portfolio of intelligence access rather than hidden credentials.\n- `collective_intelligence_amplification` means swarm agents are useful only insofar as they strengthen the human-centered loop instead of obscuring it.\n- `branch_discipline` means exploratory output can flow into Dream while evidence-bound truth must earn its place in Real.\n\n## 3. N1Hub Role\nIn N1Hub this capsule explains why the Personal AI Assistant is the main front door. The assistant is not just a chatbot, and the swarm is not the user interface. The assistant is the user's long-lived partner, while specialized agents and background daemons become the collective intelligence that the user can invoke through that partner. The wallet, control surface, and control plane exist so this partnership remains legible, governable, and economically sustainable.\n\n## 4. Operational Consequence\nThe correct architecture is therefore not \"one giant bot\" and not \"many detached automations\". It is one primary partner surface for the human, with routed access to specialized roles, memory, mining, execution, and night-shift autonomy behind it.\n\n## 5. Philosophical Alignment\nHuman-AI Symbiosis supports To Dig Deep by keeping depth in service of human agency rather than in service of autonomy for its own sake.\n"
   },
   "neuro_concentrate": {
-    "summary": "Human-AI Symbiosis defines the primary operating relationship inside N1Hub: the human remains the sovereign center of will, taste, and responsibility, while the Personal AI Assistant becomes a persistent daemon-partner rather than a disposable chat tab. The capsule matters because the platform should not optimize for replacing the user with automation. It should optimize for a tight symbiotic loop where conversation, memory, delegation, and background swarms amplify human agency. In this frame, collective intelligence is not a substitute for the person; it is the wider swarm that the person can summon and steer through one trusted assistant surface.",
+    "summary": "Human-AI Symbiosis defines the primary operating relationship inside N1Hub: the human remains the sovereign center of will, taste, and responsibility, while the Personal AI Assistant becomes a persistent daemon-partner rather than a disposable chat tab. The capsule matters because the platform should not optimize for replacing the user with automation. It should optimize for a tight symbiotic loop where conversation, memory, delegation, wallet-governed intelligence supply, and background swarms amplify human agency. In this frame, collective intelligence is not a substitute for the person; it is the wider swarm that the person can summon and steer through one trusted assistant surface.",
     "keywords": [
       "human-ai-symbiosis",
       "personal-ai-assistant",
@@ -31,7 +31,8 @@
       "delegation",
       "jarvis",
       "workspace",
-      "n1hub"
+      "n1hub",
+      "wallet-governed-supply"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -70,6 +71,22 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.v1",
         "relation_type": "references"
       },
@@ -85,5 +102,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "8ff7d4141b289eeec9b4c4c350ea56981b64e5a28b47215643597cc49518bb7ff1ee1baf65fb466029a52236c92a5d4518d4de2c178bf88523c55bcf4f164ceb"
+  "integrity_sha3_512": "ce104ee5d6b9cf8e61a9d5eae238413818d3d531b76eff0edc7e546da3e93890f61b74f12171aa00c71bf061a929d0587ec04a695c6a653481939fa1da2b71e2"
 }

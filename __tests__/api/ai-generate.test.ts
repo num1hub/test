@@ -56,4 +56,25 @@ describe('app/api/ai/generate/route.ts', () => {
       text: 'Generated answer',
     });
   });
+
+  it('maps provider failures to a non-500 status', async () => {
+    const error = new Error('Gemini API is blocked for the current Google account or server location.');
+    (error as Error & { code: string }).code = 'provider_request_failed';
+    generateTextWithAiProviderMock.mockRejectedValue(error);
+
+    const request = new Request('http://localhost/api/ai/generate', {
+      method: 'POST',
+      body: JSON.stringify({ prompt: 'hello', provider: 'gemini' }),
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer n1-authorized-architect-token-777',
+      },
+    });
+
+    const response = await POST(request);
+    const payload = await response.json();
+
+    expect(response.status).toBe(424);
+    expect(payload.error).toMatch(/Gemini API is blocked/i);
+  });
 });

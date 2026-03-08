@@ -13,6 +13,28 @@ const requestSchema = z.object({
   maxTokens: z.number().int().positive().max(16_384).optional(),
 });
 
+function resolveAiErrorStatus(error: unknown): number {
+  if (!(error instanceof Error) || typeof (error as Error & { code?: unknown }).code !== 'string') {
+    return 500;
+  }
+
+  const code = (error as Error & { code: string }).code;
+  switch (code) {
+    case 'prompt_required':
+    case 'provider_endpoint_missing':
+    case 'provider_not_configured':
+      return 400;
+    case 'no_available_ai_provider':
+      return 503;
+    case 'provider_request_failed':
+      return 424;
+    case 'provider_response_error':
+      return 502;
+    default:
+      return 500;
+  }
+}
+
 export async function POST(request: Request) {
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -36,7 +58,7 @@ export async function POST(request: Request) {
     }
 
     const message = error instanceof Error ? error.message : 'AI generation failed';
-    return NextResponse.json({ error: message }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: resolveAiErrorStatus(error) });
   }
 }
 

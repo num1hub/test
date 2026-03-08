@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getPasswordHash, verifyPassword } from '@/lib/password';
 import { logActivity } from '@/lib/activity';
+import { getAuthToken } from '@/lib/apiSecurity';
 
 export async function POST(request: Request) {
   try {
@@ -14,7 +15,7 @@ export async function POST(request: Request) {
 
     if (isMatch) {
       await logActivity('login', { message: 'Architect authenticated successfully.' });
-      return NextResponse.json({ token: 'n1-authorized-architect-token-777' });
+      return NextResponse.json({ token: getAuthToken() });
     }
 
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

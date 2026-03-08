@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Royalty Engine\n\n## 1. Definition and Essence\nRoyalty Engine defines deterministic distribution of value to original creators and contributors when templates or derivative assets generate economic activity. It enforces payout rules, lineage attribution, and auditable settlement records.\n\n## 2. Core Attributes\n- `royalty_policy` percentage and split computation rules\n- `beneficiary_refs` identities eligible for payout\n- `lineage_evidence` ancestry links proving entitlement\n- `settlement_log` immutable payout transaction records\n- `dispute_path` challenge and arbitration process\n\n## 3. Lifecycle\nRoyalties are computed at settlement events, distributed according to policy, reconciled with payment records, and audited for fairness and policy conformance.\n\n## 4. Integration\n- **Marketplace:** source of monetization events.\n- **Sovereign Template:** lineage source for entitlement.\n- **N1 Coin Tokenomics:** payout currency and economic controls.\n- **SIAF Governance:** policy-level oversight for disputes.\n\n## 5. Philosophical Alignment\nRoyalty mechanics serve To Dig Deep by sustaining long-term creation incentives through transparent contribution economics.\n"
+    "content": "# Royalty Engine\n\n## 1. Definition and Essence\nRoyalty Engine defines deterministic distribution of value to original creators and contributors when derivative knowledge assets generate economic activity. It is not only a payout calculator; it is the mechanism that keeps lineage economically meaningful across templates, capsule packs, agent recipes, and other reusable artifacts.\n\n## 2. Core Attributes\n- `royalty_policy` percentage and split computation rules\n- `beneficiary_refs` identities or entities eligible for payout\n- `lineage_evidence` ancestry links and usage proofs establishing entitlement\n- `settlement_log` auditable payout transaction records and allocation traces\n- `dispute_path` challenge, arbitration, and rollback process\n- `evidence_threshold` minimum proof required before downstream distribution happens\n\n## 3. Lifecycle\nRoyalties are computed at settlement events, distributed according to policy, reconciled with payment records, reviewed against lineage evidence, and audited for fairness and policy conformance. Where evidence is weak, distribution pauses until governance or review resolves the ambiguity.\n\n## 4. Integration\n- **Marketplace:** source of monetization and exchange events.\n- **Sovereign Template:** lineage source for entitlement.\n- **N1 Coin Tokenomics / N1 Pass:** economic channels through which value may flow.\n- **SIAF Governance:** policy-level oversight for disputes and treasury consequences.\n\n## 5. Philosophical Alignment\nRoyalty mechanics serve To Dig Deep by sustaining long-term creation incentives through transparent contribution economics. They ensure reuse compounds trust and fairness instead of quietly severing value from origin.\n"
   },
   "neuro_concentrate": {
-    "summary": "Royalty Engine is the payout and attribution subsystem that keeps derivative value from breaking lineage. It defines how revenue is split across creators or upstream contributors when templates, assets, or marketplace listings generate economic activity. This capsule is strategically important because the ecosystem promises reusable sovereign artifacts, and reuse only remains fair if distribution rules stay transparent and computable. By binding payouts to ancestry evidence, settlement logs, and dispute policy, Royalty Engine turns long-tail contribution economics into a governed mechanism rather than an informal promise.",
+    "summary": "Royalty Engine is the payout and attribution subsystem that keeps derivative value from breaking lineage. It defines how revenue is split across creators or upstream contributors when templates, capsule packs, agent recipes, or marketplace listings generate economic activity. This capsule is strategically important because N1Hub promises reusable sovereign artifacts, and reuse only remains fair if distribution rules stay transparent, evidence-backed, and computable. By binding payouts to ancestry evidence, settlement logs, dispute policy, and review thresholds, Royalty Engine turns long-tail contribution economics into a governed mechanism rather than an informal promise.",
     "keywords": [
       "royalty-engine",
       "payouts",
@@ -32,7 +32,10 @@
       "creator-economics",
       "templates",
       "marketplace",
-      "dispute-policy"
+      "dispute-policy",
+      "capsule-derivatives",
+      "usage-proof",
+      "evidence-threshold"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -61,10 +64,14 @@
       {
         "target_id": "capsule.foundation.siaf-governance.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4105e89f6842d69ef2a6d0ae7f1c2953ef1d75ce73a443cec5620e0bf76174ccd31d80adcfc11c72c772a08345d48a5c35f036eee642b1ceacd8463e657e6e5d"
+  "integrity_sha3_512": "ebe4b67d62869e71253ba845aea03dbc406ce10603b1ca6d613e525fe6a5c0119d1d42478c325a7a72a773dfb1216e55974ae863b272759d5a00ee10e1e71e31"
 }

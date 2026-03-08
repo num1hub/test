@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-control-surface.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-07T10:22:13.919Z",
+    "updated_at": "2026-03-08T23:18:00Z",
     "name": "AI Control Surface",
     "semantic_hash": "ai-control-surface-wallet-status-chat-ops-workspace",
     "priority": "high",
@@ -19,16 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Control Surface\n\n## 1. Definition and Essence\nAI Control Surface defines the operator-facing control plane for AI inside N1Hub Workspace. It brings together provider configuration, readiness checks, runtime status, daemon health, autonomy windows, chat surfaces, and delegation controls into one inspectable surface rather than scattering them across hidden scripts and background services.\n\n## 2. Core Responsibilities\n- `wallet_surface` exposes provider and subscription configuration through AI Wallet.\n- `runtime_visibility` shows provider availability, generation paths, session status, and lane health.\n- `chat_and_delegation_surface` makes Chat to Capsules and handoff behavior visible to operators and users.\n- `shift_and_lane_control` makes night-shift policy, refresh, and pause semantics visible instead of burying them in service files.\n- `status_and_debugging` gives operators a practical place to inspect AI behavior before trusting background autonomy.\n\n## 3. N1Hub Integration\nIn N1Hub this surface begins with the AI Wallet form, DeepMine console, Chat to Capsules, and Symphony or N-Infinity status endpoints, then grows toward a fuller assistant and orchestration dashboard. It is the practical bridge between wallet-backed credentials, daemonized background agents, autonomy windows, chat surfaces, and operator trust.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making AI operation visible, inspectable, and correctable instead of magical.\n"
+    "content": "# AI Control Surface\n\n## 1. Dream Direction\nIn the Dream branch, AI Control Surface becomes a calm but deep operating console for human supervision of intelligence. It should not just show toggles and readiness badges. It should show which assignments are in flight, which Dream-side outputs are waiting for review, which lane is cooling down, what changed most recently, and what the human must decide next.\n\n## 2. Desired Future State\n- wallet readiness and provider health in one place\n- clear lane visibility for scout, foreman, reviewer, executor, Symphony, and future swarm lanes\n- assignment inboxes and review queues that can be used comfortably on mobile and desktop\n- live status for running, idle, degraded, cooling-down, and waiting-for-human states\n- projection of recent artifacts, plan outputs, and candidate Dream-to-Real promotions\n- a strong connection to Agent Control Plane so the surface reflects administrative truth rather than inventing a parallel reality\n\n## 3. Why It Matters\nDream preserves the idea that human trust in autonomous agents depends on a visible, legible, intervention-ready operating surface. Without it, swarm power would grow faster than governance.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making AI operation visible, inspectable, correctable, and calmly governable instead of magical.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Control Surface in the Dream branch represents the fuller operator plane for AI inside N1Hub. It imagines wallet readiness, lane health, live chat grounding, delegation traces, night-shift policy, daemon controls, and debugging surfaces converging into one trustworthy operational dashboard. The capsule matters because background autonomy becomes fragile when visibility lags behind capability. Dream therefore preserves AI Control Surface as the future trust console for N1Hub intelligence rather than only the first combined screen for wallet, chat, and runtime status.",
+    "summary": "AI Control Surface in the Dream branch represents the fuller operating console for AI inside N1Hub. It imagines wallet readiness, lane health, assignment inboxes, review queues, night-shift status, daemon controls, and recent artifact projection converging into one trustworthy dashboard. The capsule matters because background autonomy becomes fragile when visibility lags behind capability. Dream therefore preserves AI Control Surface as the future trust console for N1Hub intelligence rather than only the first combined screen for wallet, chat, and runtime status.",
     "keywords": [
       "ai-control-surface",
       "control-plane",
       "chat-to-capsules",
       "agent-delegation",
       "background-runtime",
+      "assignment-inbox",
+      "review-queue",
       "wallet",
       "deepmine",
       "symphony",
@@ -107,5 +109,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "069561a243a08adb9794e9abc50e5e44d93fffeed22984dafb151a8290480dae98f7d4cf38d5787c9313b8b28998c6c38cf4faf8f63cfca32253e2381a275085"
+  "integrity_sha3_512": "82a96e52fce51c1e7b8541ae816171e42765b3dfb4bdc9510f8a605724237713d41ed4393b22c01bcf24c7573cf7b172e7b5b0f4d8280e9f526345571276bb1c"
 }

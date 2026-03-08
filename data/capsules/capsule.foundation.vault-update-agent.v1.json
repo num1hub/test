@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.vault-update-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:26:00Z",
-    "updated_at": "2026-03-06T23:26:00Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Vault Update Agent",
     "semantic_hash": "vault-update-agent-branch-routing-capsule-integration-validation",
     "source": {
@@ -23,17 +23,17 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Update Agent\n\n## 1. Definition and Essence\nVault Update Agent is the branch-aware last-mile integrator of the N1Hub mining stack. It does not dig raw ore. It receives refined candidate output from A2C or delegated graph work, determines the correct branch target, prepares the capsule changeset, and hands the update through validation, quarantine, or emission paths without letting uncertain material silently contaminate `Real`.\n\n## 2. Core Responsibilities\n- `branch_routing` decides whether a change belongs in `Dream`, `Real`, or quarantine.\n- `duplicate_detection` checks whether the vault already contains the same structure or claim.\n- `changeset_preparation` packages new capsules or capsule edits for safe application.\n- `validation_handoff` routes candidate updates through gates before emission.\n- `change_summary` records what changed and why so assistant and operator surfaces can explain it.\n\n## 3. N1Hub Role\nIn N1Hub, Vault Update Agent is the discipline that turns mined and refined knowledge into safe graph mutation. It is the point where the system stops being a quarry and becomes a trustworthy repository.\n\n## 4. Philosophical Alignment\nVault Update Agent serves To Dig Deep by ensuring that what was excavated with depth is integrated with equal care instead of being dumped into the vault as unmanaged debris.\n"
+    "content": "# Vault Update Agent\n\n## 1. Definition and Essence\nVault Update Agent is the branch-aware last-mile integrator of the N1Hub knowledge pipeline. It does not dig raw ore. It receives refined candidate output from A2C, Chat to Capsules, planning/review lanes, or delegated graph work, determines the correct branch target, prepares the capsule changeset, and hands the update through validation, quarantine, review, or emission paths without letting uncertain material silently contaminate `Real`.\n\n## 2. Core Responsibilities\n- `branch_routing` decides whether a change belongs in `Dream`, `Real`, review, or quarantine.\n- `duplicate_detection` checks whether the vault already contains the same structure or claim.\n- `evidence_bundle_preparation` packages source context, rationale, branch intent, and candidate edits together.\n- `changeset_preparation` turns that bundle into safe capsule-level mutations.\n- `review_and_validation_handoff` routes candidate updates through critique and gates before emission.\n- `promotion_recording` captures what was promoted, what stayed in Dream, and what was rejected.\n- `change_summary` records what changed and why so assistant and operator surfaces can explain it.\n\n## 3. N1Hub Role\nIn N1Hub, Vault Update Agent is the discipline that turns mined, planned, or conversationally-derived knowledge into safe graph mutation. It is the point where the system stops being a quarry and becomes a trustworthy repository. It also forms the bridge between user-confirmed conversational edits, planner outputs, and deeper agent-generated capsule work.\n\n## 4. Philosophical Alignment\nVault Update Agent serves To Dig Deep by ensuring that what was excavated or planned with depth is integrated with equal care instead of being dumped into the vault as unmanaged debris.\n"
   },
   "neuro_concentrate": {
-    "summary": "Vault Update Agent is the branch-aware integrator that moves refined output into the N1Hub vault without collapsing uncertainty into false reality. It routes candidate changes toward Dream, Real, or quarantine, detects duplication, prepares capsule-level changesets, and preserves an audit-friendly explanation of what changed and why. The role matters because mining and refinement only become valuable when integration is disciplined. By giving vault mutation its own agent identity, the system protects Real from premature certainty while still allowing Dream to accumulate productive exploratory structure.",
+    "summary": "Vault Update Agent is the branch-aware integrator that moves refined output into the N1Hub vault without collapsing uncertainty into false reality. It routes candidate changes toward Dream, Real review, validation, or quarantine, detects duplication, assembles evidence bundles, and prepares capsule-level changesets with clear rationale and promotion records. The role matters because mining, planning, chat, and graph work only become valuable when integration is disciplined. By giving vault mutation its own agent identity, the system protects Real from premature certainty while still allowing Dream to accumulate productive exploratory structure.",
     "keywords": [
       "vault-update-agent",
-      "real-branch",
-      "dream-branch",
+      "branch-routing",
       "capsule-integration",
+      "evidence-bundle",
       "validation",
-      "a2c",
+      "dream-real-promotion",
       "quarantine",
       "changeset",
       "graph-mutation",
@@ -96,6 +96,26 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
@@ -103,5 +123,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "167204226c2d928878d38f6a100e4ccab60e20c36ce3bc2ec232d41398dd3a64f820f3caed29d2d5389159e94c44383e9deda4785209b665df711dc269c76886"
+  "integrity_sha3_512": "6789dae00b6770291024cd62a213fbe1dd09001d850e0e73709e144fac685f4750be79f83b380d3973845050c6a9fd9f164a6664b09e716bc312cc45bef721cb"
 }

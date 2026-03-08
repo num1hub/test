@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:28:00Z",
-    "updated_at": "2026-03-07T10:22:14.047Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Daily Planner Agent",
     "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Daily Planner Agent\n\n## Dream Direction\nIn the Dream branch, Daily Planner Agent becomes a more adaptive short-horizon planner that can read the whole Dream field, compress it through Real, and continuously reshape `today`, `tomorrow`, and the immediate week without losing strategic alignment.\n\n## Future Potential\n- more intelligent today/tomorrow reshaping\n- stronger coordination with reminders, risk detection, and branch discipline\n- better capacity estimates from historical behavior\n- clearer handoff between roadmap planning and daily execution through Planning Horizon Engine\n- more visible explanation of why one item became \"today\" while another remained future structure\n\n## Why It Matters\nDream preserves Daily Planner Agent as the discipline that makes strategy livable at the scale of real days."
   },
   "neuro_concentrate": {
-    "summary": "Daily Planner Agent in the Dream branch describes a more adaptive short-horizon planning layer for N1Hub. It aims toward stronger coordination with reminders, risk signals, real capacity patterns, and branch-aware horizon compression so the assistant can propose actionable daily structure instead of generic advice. The capsule matters because the value of planning is realized in days, not only in roadmaps. Dream therefore preserves a richer bridge between the whole Dream field and the lived execution window of today and tomorrow.",
+    "summary": "Daily Planner Agent in the Dream branch describes a more adaptive short-horizon planning layer for N1Hub. It aims toward stronger coordination with reminders, notifications, risk signals, roadmap review pressure, and branch-aware horizon compression so the assistant can propose actionable daily structure instead of generic advice. The capsule matters because the value of planning is realized in days, not only in roadmaps. Dream therefore preserves a richer bridge between the whole Dream field and the lived execution window of today and tomorrow.",
     "keywords": [
       "daily-planner-agent",
       "dream-branch",
@@ -33,6 +33,7 @@
       "capacity",
       "risk-signals",
       "planning-horizon-engine",
+      "notifications",
       "n1hub"
     ],
     "confidence_vector": {
@@ -72,6 +73,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.reminder.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.roadmap.v1",
         "relation_type": "references"
       },
@@ -92,6 +101,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.ai.conversation.v1",
         "relation_type": "references"
       },
@@ -104,10 +117,6 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "depends_on"
-      },
-      {
         "target_id": "capsule.foundation.branch-steward-agent.v1",
         "relation_type": "references"
       }
@@ -115,5 +124,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2ceddba2b683b61f5c8252ce45ce180ac41bda482b526928a7f782bd79be85c6c159d96f4ced35f033f572361963133c0b67a54f6ba864c22f19f40ccbd44002"
+  "integrity_sha3_512": "70a1b62af2fcf412cf18c23d63f4b6d73e4a2207152cd2eb0b5e4f9f74557e353fc3f2b9a11529c6f8b8563826c19f6ccf948c2785cdfebd93031448d5b8f057"
 }

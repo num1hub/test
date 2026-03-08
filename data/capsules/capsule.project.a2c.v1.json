@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Pipeline Project\n\n## 1. Definition and Essence\nA2C Pipeline Project governs execution of the ingestion-to-emission transformation stack, including stage reliability, performance optimization, and validation safety for converting arbitrary input into sovereign capsules.\n\n## 2. Core Attributes\n- `pipeline_scope` ingest through emit execution boundaries\n- `stage_backlog` prioritized stage-level implementation work\n- `quality_targets` throughput, latency, and validation pass metrics\n- `failure_modes` tracked pipeline risk categories and mitigations\n- `release_plan` staged rollout strategy for upgrades\n\n## 3. Lifecycle\nThis project iterates through stage enhancements, observability tuning, and policy hardening while preserving deterministic output quality under load.\n\n## 4. Integration\n- **CapsuleOS Project:** child stream under umbrella architecture.\n- **Foundation A2C:** implements conceptual pipeline model.\n- **Validator and Quarantine:** enforces trust boundaries.\n- **DeepMine:** model-routing dependency for extraction and synthesis.\n\n## 5. Philosophical Alignment\nA2C execution deepens To Dig Deep by transforming noisy reality into rigorous structured knowledge.\n"
+    "content": "# A2C Pipeline Project\n\n## 1. Definition and Essence\nA2C Pipeline Project governs the execution stack that turns raw input into validated capsule outputs. It owns ingest, normalization, extraction, synthesis, linkage, validation, branch routing, quarantine behavior, evidence bundles, and emission discipline for converting arbitrary source material into sovereign graph state.\n\n## 2. Delivery Scope\n- `pipeline_scope` ingest-through-emit execution boundaries.\n- `stage_backlog` prioritized stage-level implementation work.\n- `quality_targets` throughput, latency, branch-routing quality, and validation pass metrics.\n- `failure_modes` tracked pipeline risk categories, invalid states, and mitigations.\n- `release_plan` staged rollout strategy for upgrades.\n- `branch_routing` rules for Dream, Real, and quarantine destinations.\n- `evidence_bundle` the reviewable artifact set that justifies promotion.\n- `promotion_discipline` how candidate capsules become review-ready rather than merely well-formed.\n\n## 3. Lifecycle\nThe project iterates through stage enhancements, observability tuning, and policy hardening while preserving deterministic output quality under load. Over time it should produce not only valid capsules, but clean review bundles that make `Dream -> Real` promotion disciplined, inspectable, and scalable.\n\n## 4. Integration\n- **CapsuleOS Project:** child delivery stream under umbrella architecture.\n- **Foundation A2C:** conceptual pipeline model implemented in runtime form.\n- **DeepMine Project:** upstream quarry dependency for extraction and synthesis input.\n- **Vault Update Agent / Branch Steward / Validation Gatekeeper / Review Agent:** downstream review and promotion contour.\n- **Workspace / Chat to Capsules / Personal AI Assistant:** major ingress and consumption surfaces.\n- **N-Infinity / Symphony:** downstream execution lanes that consume branch-safe capsule jobs and evidence bundles.\n\n## 5. Philosophical Alignment\nA2C execution deepens To Dig Deep by transforming noisy reality into rigorous structured knowledge and by refusing to confuse raw output with promotion-worthy graph truth.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Pipeline Project governs the execution stack that converts raw inputs into validated sovereign capsules. It frames ingest, normalization, segmentation, extraction, synthesis, linking, hashing, validation, and emission as one coordinated delivery stream with measurable reliability, throughput, and quality targets. The project exists to turn the A2C doctrine into resilient runtime behavior, observability, and rollout discipline rather than leaving it as a conceptual pipeline only. It is therefore the practical bridge between DeepMine extraction, CapsuleOS validation law, and the vault surfaces that receive structured knowledge artifacts.",
+    "summary": "A2C Pipeline Project governs the execution stack that converts raw inputs into validated sovereign capsules and promotion-ready review bundles. It frames ingest, normalization, extraction, synthesis, linking, validation, branch routing, quarantine, evidence, and emission as one coordinated delivery stream with measurable reliability, throughput, and promotion quality targets. The project exists to turn A2C doctrine into resilient runtime behavior instead of leaving it as a conceptual pipeline only. It is therefore the practical bridge between DeepMine extraction, CapsuleOS validation law, review gates, and the vault surfaces that receive structured knowledge artifacts.",
     "keywords": [
       "a2c",
       "pipeline",
@@ -67,10 +67,38 @@
       {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "supports"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b861b49cdf112690f9ca768e79efe68aeca85a6cd5c53e8f64a531a4d621b1252964850f38753ebd4d1edbc6109811ff20e6a8e8ae86ce3d2592b97428e6336b"
+  "integrity_sha3_512": "6a10299cddaee3c74caa6bce261512715184e26d4a7d5c64282ee08216aae761d3bc3b155bbc04555e31eb0b5c375a9cf4d8c983b328ca7b44647b28edc0f409"
 }

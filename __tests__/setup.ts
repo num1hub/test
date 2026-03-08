@@ -51,6 +51,25 @@ export const handlers = [
     if (password === 'correct-pass') return HttpResponse.json({ token: 'mock-token' })
     return new HttpResponse(null, { status: 401 })
   }),
+  http.get('/api/auth/chatgpt', () =>
+    HttpResponse.json({
+      enabled: true,
+      available: false,
+      state: 'missing',
+      email: null,
+      plan_type: null,
+      subscription_active_until: null,
+      reason: 'No local ChatGPT-backed Codex session was found.',
+    }),
+  ),
+  http.post('/api/auth/chatgpt', () =>
+    new HttpResponse(
+      JSON.stringify({
+        error: 'Local ChatGPT authentication is unavailable.',
+      }),
+      { status: 401, headers: { 'Content-Type': 'application/json' } },
+    ),
+  ),
   http.get('/api/capsules', ({ request }) => {
     if (!request.headers.get('Authorization')) return new HttpResponse(null, { status: 401 })
     return HttpResponse.json([

@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace Project\n\n## 1. Definition and Essence\nWorkspace Project manages execution of user-facing habitat capabilities, including planner, tracker, dashboard, assistant experience, collaboration, and project organization surfaces.\n\n## 2. Core Attributes\n- `feature_scope` planner, tracker, dashboard, calendar, collaboration modules\n- `ux_backlog` prioritized interface and interaction improvements\n- `adoption_metrics` engagement and retention signals\n- `quality_targets` responsiveness, reliability, and clarity outcomes\n- `release_train` incremental rollout and feedback loops\n\n## 3. Lifecycle\nThe project advances through iterative design, implementation, user feedback cycles, and integration with foundational modules and agent capabilities.\n\n## 4. Integration\n- **CapsuleOS Project:** child subsystem under root architecture.\n- **Foundation Workspace:** implemented conceptual habitat model.\n- **Planner/Tracker/Assistant Modules:** primary product surface.\n- **Projects Tab:** hierarchy and work organization projection.\n\n## 5. Philosophical Alignment\nWorkspace execution realizes To Dig Deep by giving users practical daily instruments to transform vision into accountable action.\n"
+    "content": "# Workspace Project\n\n## 1. Dream Direction\nThe Dream branch pushes Workspace toward a truly seamless second-brain habitat: one place to ask, think, plan, upload, review, and delegate without context leaking into disconnected tools.\n\n## 2. Desired Future State\n- a unified multimodal composer for text, voice, files, and capsule-aware commands.\n- visible day, week, roadmap, and branch context in one calm operational surface.\n- assistant and swarm visibility that feels native instead of bolted on.\n- mobile-first and desktop-deep interaction that still respects the same graph truth.\n- stronger human override and approval patterns around mutations and delegation.\n\n## 3. Why It Matters\nDream preserves the idea that Workspace should become more than a productivity shell. It should feel like the place where a human genuinely lives with the second brain and where agent help becomes calm, legible, and habitual.\n"
   },
   "neuro_concentrate": {
-    "summary": "Workspace Project in the Dream branch describes the target user habitat, not just the current product surface. It imagines a more unified command layer where planning, tracking, dashboards, collaboration, profile context, and the assistant feel like one coherent operational instrument instead of adjacent modules. The branch matters because the existing workspace already works, but the desired state is far more adaptive, humane, and graph-native. Dream therefore carries the roadmap for turning the workspace into a fully integrated operating environment for deep execution.",
+    "summary": "Workspace Project in the Dream branch describes the target habitat rather than only the current product surface. It imagines a calmer and more unified command layer where planning, tracking, dashboards, profile context, chat-to-capsules, approvals, and swarm visibility feel like one coherent operational instrument instead of adjacent modules. The branch matters because the existing workspace already works, but the desired state is far more adaptive, humane, mobile-aware, and graph-native. Dream therefore carries the roadmap for turning Workspace into a place where a human truly lives with the second brain.",
     "keywords": [
       "workspace",
       "product-surface",
@@ -38,6 +38,7 @@
       "collaboration",
       "ux",
       "project-navigation",
+      "second-brain",
       "n1hub"
     ],
     "confidence_vector": {
@@ -67,10 +68,26 @@
       {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "eb76bf63484597164906d9d20928a797fe31069d0c9d7644cbd605d55860a519d284b2e06394a078fed621e32fb3012a6edc871625041f5515ff425ef3bf7b49"
+  "integrity_sha3_512": "5ed3a027705699b0b807a3f67f4bf3674127ce2f396ba58574fa88b2bf0d961748829c92a2e443fec581c58631d3a7ab4ca6327f81e3a33c9a6e166108cb9740"
 }

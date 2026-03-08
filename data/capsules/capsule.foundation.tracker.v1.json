@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker is the execution telemetry and accountability layer of N1Hub. It watches task, goal, project, and issue state, computes drift, highlights risk, and keeps real commitments visible over time.\n\n## 2. Core Functions\n- Deadline monitoring with configurable alert windows.\n- Progress tracking against estimated and actual effort.\n- Notification generation for overdue, blocked, and completed states.\n- Historical archiving and review trails.\n- Intake signals for Symphony issue work.\n- Priority and timing signals for capsule jobs and graph maintenance lanes.\n\n## 3. Data Model\nTracker consumes `dueDate`, `status`, `progress`, `estimatedHours`, `actualHours`, `completedAt`, and related recurrence or priority metadata. It compares temporal state against current time, generates notification capsules when trigger conditions are met, and can feed both repository issue orchestration and capsule-graph maintenance with evidence about what is stale, blocked, or at risk.\n\n## 4. Integration\nTracker closes the loop with Planner by feeding execution reality back into future scheduling. It provides actionable context to Personal AI Assistant, powers Workspace dashboards, supports N-Infinity risk and suggestion agents, and supplies signals that can become Symphony work or broader capsule graph maintenance jobs.\n\n## 5. Philosophical Alignment\nTracker enforces To Dig Deep through accountability. It guarantees that declared intent is measured against outcomes via an explicit `plan -> track -> orchestrate -> review` loop.\n"
+    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker is the execution telemetry and accountability layer of N1Hub. It watches goals, milestones, tasks, project state, issue state, and follow-through signals; computes drift and risk; and keeps real commitments visible over time. If Planner expresses intention, Tracker tells the truth about whether that intention is surviving contact with reality and whether the graph needs intervention.\n\n## 2. Core Functions\n- deadline and drift monitoring with configurable alert windows\n- progress tracking against estimated and actual effort\n- reminder and notification trigger generation for overdue, blocked, completed, or cooling commitments\n- historical review trails and temporal evidence for retrospectives\n- intake signals for Symphony issue work and capsule-vault maintenance\n- risk posture for N-Infinity, Reminder Agent, and assistant intervention\n- feedback loops into future planning, calendar pressure, and schedule revision\n- branch-aware follow-through logic so Dream intent is not confused with Real execution truth\n\n## 3. Data Model\nTracker consumes `dueDate`, `status`, `progress`, `estimatedHours`, `actualHours`, `completedAt`, recurrence, priority, and related metadata. It compares temporal state against current time, human rhythm, and planner expectations; generates reminders and notification-ready events; and can feed both repository issue orchestration and capsule-graph maintenance with evidence about what is stale, blocked, overloaded, or at risk. Its real value is not raw logging, but a usable evidence loop.\n\n## 4. N1Hub Role\nTracker is one of the organs that makes the second brain honest. Without it, the vault can accumulate beautiful plans that nobody can distinguish from real follow-through. With it, goals, milestones, tasks, and agent work become measurable, reviewable, and eligible for intervention, reassessment, or schedule compression.\n\n## 5. Integration\n- **Goal, Milestone, and Task:** provide the objects whose execution reality Tracker monitors.\n- **Planning Horizon Engine and Planner:** provide expectation, sequencing, and capacity context.\n- **Reminder, Notification, and Calendar:** turn telemetry into timing, prompts, and visible schedule pressure.\n- **Personal AI Assistant and AI Control Surface:** use tracker evidence to revise plans and explain reality.\n- **N-Infinity and Symphony:** consume tracker signals as risk, queue, and orchestration input.\n\n## 6. Philosophical Alignment\nTracker supports To Dig Deep by forcing intention to answer to evidence through an explicit `plan -> track -> remind -> review -> adjust` loop.\n"
   },
   "neuro_concentrate": {
-    "summary": "Tracker is the monitoring and accountability layer of N1Hub Workspace. It watches capsule metadata for deadlines, status transitions, progress drift, and execution risk, then generates reminders, alerts, and analytics that keep action aligned with plan. This capsule now also makes explicit that Tracker is not only for human planning surfaces: it can feed Symphony issue intake and broader capsule graph maintenance jobs with evidence about stale, blocked, or risky regions of the system. That gives N1Hub a tighter bridge from telemetry to orchestration.",
+    "summary": "Tracker is the monitoring and accountability layer of N1Hub Workspace. It watches goals, milestones, tasks, issue state, deadline drift, branch posture, and execution risk, then generates reminders, alerts, and analytics that keep action aligned with plan. This capsule matters because the second brain becomes unreliable if it can express intention but cannot measure follow-through. Tracker is therefore the bridge from planning to evidence, and from evidence to orchestration, intervention, schedule pressure, and review.",
     "keywords": [
       "tracker",
       "deadlines",
@@ -33,7 +33,11 @@
       "analytics",
       "workspace",
       "symphony",
-      "n1hub"
+      "n1hub",
+      "follow-through",
+      "evidence-loop",
+      "calendar-pressure",
+      "branch-aware"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,7 +60,27 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "references"
       },
       {
@@ -100,6 +124,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.metric.v1",
         "relation_type": "references"
       },
@@ -115,5 +143,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "209b9335f456cfdba374649259c6471057a26b591eefee28c9a869aee2be2b8a9fec5da8587bda757500643a9253d856cd26de0812723a95e27474f8ec319c76"
+  "integrity_sha3_512": "6e98ff747ae05bbde1948df633d6b2b00f80aceb81755e73390ca4c7d7875b98f14963cdb2b8c3408e60de8f20543bddbb9951465c90b5291cce627ace259471"
 }

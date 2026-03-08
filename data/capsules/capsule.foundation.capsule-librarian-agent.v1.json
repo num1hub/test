@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-librarian-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:42:00Z",
-    "updated_at": "2026-03-06T23:42:00Z",
+    "updated_at": "2026-03-08T22:41:00Z",
     "name": "Capsule Librarian Agent",
     "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map",
     "source": {
@@ -23,15 +23,15 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Librarian Agent\n\n## 1. Definition and Essence\nCapsule Librarian Agent is the vault-native knowledge guide of N1Hub. It knows how to navigate the capsule repository from atomic facts to major hubs, retrieve the most relevant graph neighborhoods, expose hidden context, and help users or other agents understand what the vault already knows before new work begins.\n\n## 2. Core Responsibilities\n- `vault_navigation` traverses hubs, atoms, projects, and micro-project lines without losing scope.\n- `memory_retrieval` brings back the most relevant capsule neighborhoods for a question, task, or planning need.\n- `duplicate_prevention` helps the system notice when a concept already exists and should be refined instead of recreated.\n- `branch_literacy` explains whether the relevant truth currently lives in Real, Dream, or historical/archive space.\n- `assistant_grounding` gives Personal AI Assistant a strong retrieval spine for graph-grounded explanation.\n\n## 3. N1Hub Role\nIn N1Hub, Capsule Librarian Agent is the role that should \"know the whole library.\" It keeps chat, planning, mining, and review work anchored to actual vault structure instead of weak memory or shallow keyword matching.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent serves To Dig Deep by insisting that serious answers begin with a deep reading of the sovereign vault, not with generic model improvisation.\n"
+    "content": "# Capsule Librarian Agent\n\n## 1. Definition and Essence\nCapsule Librarian Agent is the vault-native knowledge guide of N1Hub. It knows how to navigate the capsule repository from atomic facts to major hubs, retrieve the most relevant graph neighborhoods, expose hidden context, and help users or other agents understand what the vault already knows before new work begins.\n\n## 2. Core Responsibilities\n- `vault_navigation` traverses hubs, atoms, projects, and micro-project lines without losing scope.\n- `full_vault_reading` treats the whole repository as readable memory rather than relying on shallow recall.\n- `memory_retrieval` brings back the most relevant capsule neighborhoods for a question, task, or planning need.\n- `duplicate_prevention` helps the system notice when a concept already exists and should be refined instead of recreated.\n- `branch_literacy` explains whether the relevant truth currently lives in Real, Dream, or historical/archive space.\n- `assistant_grounding` gives Personal AI Assistant and Chat to Capsules a strong retrieval spine for graph-grounded explanation.\n\n## 3. N1Hub Role\nIn N1Hub, Capsule Librarian Agent is the role that should know the whole library. It keeps chat, planning, mining, review, and vault stewardship anchored to actual vault structure instead of weak memory or shallow keyword matching. It should be the first reader of the vault before new capsule work begins.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent serves To Dig Deep by insisting that serious answers begin with a deep reading of the sovereign vault, not with generic model improvisation.\n"
   },
   "neuro_concentrate": {
-    "summary": "Capsule Librarian Agent is the vault-navigation specialist of N1Hub. It retrieves the right graph neighborhoods, explains how knowledge is organized, spots likely duplicates, and tells users or agents whether the relevant structure belongs to Real, Dream, or archive context. The role matters because a capsule system loses much of its value if no intelligence surface can reliably navigate its accumulated memory. By giving retrieval and vault literacy a named agent, the system gains a durable guide to its own knowledge base.",
+    "summary": "Capsule Librarian Agent is the vault-navigation specialist of N1Hub. It reads the repository as structured memory, retrieves the right graph neighborhoods, explains how knowledge is organized, spots likely duplicates, and tells users or agents whether the relevant structure belongs to Real, Dream, or archive context. The role matters because a capsule system loses much of its value if no intelligence surface can reliably read its accumulated memory before acting. By naming this role, N1Hub gains a durable guide to its own second brain.",
     "keywords": [
       "capsule-librarian-agent",
       "vault-navigation",
+      "full-vault-reading",
       "retrieval",
-      "knowledge-guide",
       "real-branch",
       "dream-branch",
       "archive",
@@ -88,6 +88,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
@@ -95,5 +99,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4893d9ca8345693eebd5de5080355175c14ddcbe74decff10335c11ee3b1a3d9add79e3f3153f24d543a18b2534c1ed4e3e6975ccd24be45712676caa2595da8"
+  "integrity_sha3_512": "5ef5df669cba0439fbef08b1b54850d62baefb96dcf89eaaea32749c84d8d51ed5d56390cf824452fb9aaeb01e847a41abe9a0ca6ef2c7ab84d2b8a439209343"
 }

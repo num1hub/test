@@ -22,7 +22,7 @@
     "content": "# N1 Pass\n\n## 1. Definition and Essence\nN1 Pass defines subscription tiers and entitlement bundles for premium capabilities across compute, support, and marketplace privileges. It standardizes benefits, billing cadence, and policy-controlled access upgrades.\n\n## 2. Core Attributes\n- `tier_catalog` available subscription levels and pricing\n- `benefit_matrix` capabilities unlocked per tier\n- `billing_cycle` monthly, annual, or custom cadence\n- `entitlement_checks` runtime access validation hooks\n- `upgrade_path` tier migration and proration behavior\n\n## 3. Lifecycle\nPasses are purchased, activated, verified on capability checks, upgraded or downgraded over time, and archived with complete billing and entitlement history.\n\n## 4. Integration\n- **Marketplace:** unlocks premium listing and distribution features.\n- **Boost:** can bundle compute accelerators by tier.\n- **Tokenomics:** aligns subscription economics with ecosystem value.\n- **Workspace:** surfaces active entitlements to users.\n\n## 5. Philosophical Alignment\nN1 Pass supports To Dig Deep by funding high-quality infrastructure while preserving transparent, explicit access policies.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1 Pass in the Dream branch describes a more coherent subscription contract for the ecosystem. It pushes toward cleaner mapping between payment, entitlement, premium models, collaboration rights, and recurring compute allowances without scattering that logic across disconnected modules. The capsule matters because subscriptions become brittle when business rules are implicit. Dream therefore preserves N1 Pass as a future operating agreement where premium access is explicit, composable, and legible across the whole graph.",
+    "summary": "N1 Pass in the Dream branch describes a more coherent subscription contract for the ecosystem. It pushes toward cleaner mapping between payment, entitlement, premium models, collaboration rights, recurring compute allowances, hosted inference, and agent-lane priority without scattering that logic across disconnected modules. The capsule matters because subscriptions become brittle when business rules are implicit. Dream therefore preserves N1 Pass as a future operating agreement where premium access is explicit, composable, and legible across the whole graph.",
     "keywords": [
       "n1-pass",
       "subscription",
@@ -61,10 +61,22 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "734ab3c8f270af5b8ff4389213419e48f3fa754b854ae80f4be00ed0da2f5178540447bd0d228fdef5b5b09c5b92a7cbbcb64865d61ed407d591576d73f76763"
+  "integrity_sha3_512": "1687152784760417bb70eb4c8e73db5c9d12470dd7d2d40580fb7434563663cdb18ed08e5979b3eddecc2e84d62e5a514a7dc2dc3fabda18adb1e671f1b6e8de"
 }

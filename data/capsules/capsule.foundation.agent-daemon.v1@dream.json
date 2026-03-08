@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-daemon.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T18:41:12.077Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Agent Daemon",
     "semantic_hash": "agent-daemon-supervisor-health-restart-reload-shutdown-lifecycle",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Daemon\n\n## 1. Definition and Essence\nAgent Daemon defines the always-on service envelope for long-lived AI work inside N1Hub. It covers supervised process lifetime, startup and shutdown behavior, workflow reload, health checks, crash recovery, and host-level restart policy.\n\n## 2. Core Responsibilities\n- `supervised_process` keeps background services under `systemd`, PM2, or equivalent host control.\n- `health_and_restart` detects failure and re-establishes service without manual babysitting.\n- `config_reload` keeps workflow and provider changes from requiring ad hoc restarts when avoidable.\n- `bounded_shutdown` stops safely without corrupting workspaces, checkpoints, or job state.\n- `operator_visibility` makes daemon health legible through logs and status surfaces.\n\n## 3. N1Hub Integration\nIn N1Hub the daemon envelope is the host-facing shell around Symphony and N-Infinity. It is what allows `24/7/365` or nightly autonomy claims to mean a real supervised process instead of a shell left open in a terminal.\n\n## 4. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a disciplined runtime posture that can be inspected, restarted, and trusted.\n"
+    "content": "# Agent Daemon\n\n## 1. Dream Direction\nIn the Dream branch, Agent Daemon becomes the fully disciplined service shell for every serious background lane in N1Hub.\n\n## 2. Desired Future State\n- one clearly registered daemon family per lane instead of overlapping ghost processes\n- visible heartbeat, restart posture, drain state, and wake semantics in the control plane\n- safer lifecycle transitions between day co-pilot, night autonomy, degraded mode, and paused mode\n- cleaner host-level supervision for Symphony, N-Infinity, and vault stewardship lanes\n- explicit daemon binding to assignment classes, wallet lanes, and economic posture\n- wake and drain behavior that cooperates with async assignment instead of acting as a blind loop\n\n## 3. Why It Matters\nDream preserves the idea that autonomy should feel calm and trustworthy. That requires daemons that are visible, uniquely identifiable, recoverable, and governable as supply-bound fleet members, not just loops that happen to be alive.\n\n## 4. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a disciplined runtime posture that can be inspected, restarted, trusted, and economically governed.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Daemon defines the host-supervised process layer for long-lived AI services in N1Hub. It matters because background agents do not become durable merely by running a loop; they need explicit lifecycle rules for startup, restart, config reload, crash recovery, and safe shutdown. This capsule gives the graph a place to describe the systemd or equivalent supervision model that keeps Symphony and N-Infinity alive, debuggable, and restartable without corrupting workspaces or silent-failing in the background.",
+    "summary": "Agent Daemon in the Dream branch preserves the future service shell for serious background lanes in N1Hub. It imagines visible heartbeat, single-family discipline, deterministic family cleanup, drain and wake semantics, stronger host-level supervision, explicit wallet and assignment binding, and cleaner fleet registration for Symphony, N-Infinity, and vault stewardship daemons. The capsule matters because trustworthy autonomy requires more than a loop that stays alive; it requires processes that remain unique, inspectable, restartable, governable as fleet members, and calm enough for operators to trust over long unattended windows.",
     "keywords": [
       "agent-daemon",
       "systemd",
@@ -34,10 +34,14 @@
       "background-service",
       "restart-policy",
       "health-checks",
+      "heartbeat",
+      "single-family",
       "symphony",
       "n-infinity",
       "operations",
-      "n1hub"
+      "n1hub",
+      "wallet-governed-runtime",
+      "async-assignment"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -68,16 +72,28 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.symphony-observability.v1",
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.security.v1",
+        "target_id": "capsule.foundation.ai-wallet.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.notification.v1",
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "depends_on"
       },
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
@@ -87,5 +103,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f125c6f00534bb90d174c7cac875eb38492a2c84e9d76b5f95b69eb50772d06eb2778ba80b8b1a746956b5c5b7534d4bd771f4f1866b2a1cef53358e7671ed48"
+  "integrity_sha3_512": "c9a441f2a5c7fb500488f85abe4232e7103d9168913e02774bfaf7dbbd3d010f39e9d456448839ca4696fb16572a9051a525eeb25cc6f79a34a67c705fb53440"
 }

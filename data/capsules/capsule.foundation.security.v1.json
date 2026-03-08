@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T20:20:00Z",
     "name": "Security",
     "semantic_hash": "capsule-foundation-security-v1-access-control-cryptography-audit",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Security\n\n## 1. Definition and Essence\nSecurity defines identity, access control, cryptography, and operational safeguards required to protect sovereign capsule data and platform integrity. It codifies defensive posture, incident handling, and policy enforcement boundaries.\n\n## 2. Core Attributes\n- `threat_model` catalog of prioritized attack vectors\n- `control_set` authentication, authorization, encryption controls\n- `incident_protocol` detection, containment, remediation workflow\n- `secret_policy` key and credential management standards\n- `compliance_mapping` policy traceability to regulatory expectations\n\n## 3. Lifecycle\nSecurity policy is continuously assessed, updated with emerging threats, validated through tests, and enforced by runtime checks and governance review.\n\n## 4. Integration\n- **Permission/Role:** primary access-control policy substrate.\n- **Audit Log:** forensics and anomaly evidence stream.\n- **Hybrid Database:** data-at-rest and data-in-transit controls.\n- **API/Integrations:** boundary hardening for external surfaces.\n\n## 5. Philosophical Alignment\nSecurity supports To Dig Deep by preserving trust in the substrate where all sovereign knowledge is created, stored, and transformed.\n"
+    "content": "# Security\n\n## 1. Definition and Essence\nSecurity is the trust-boundary and control-governance hub of CapsuleOS. It defines identity, access control, secret handling, cryptographic posture, incident response, runtime safeguards, and branch-sensitive operational discipline required to protect sovereign capsule data and system integrity.\n\n## 2. Core Attributes\n- `threat_model` catalog of prioritized attack vectors across vault, runtime, provider, and integration surfaces\n- `control_set` authentication, authorization, least-privilege, and cryptographic controls\n- `secret_policy` lifecycle rules for API keys, subscription auth, tokens, and hosted inference credentials\n- `override_and_quarantine_policy` rules for exceptional authority, isolation, and recovery when trust is under pressure\n- `incident_protocol` detection, containment, remediation, communication, and closure workflow\n- `evidence_and_audit_policy` minimum logging, artifact retention, and review expectations for sensitive operations\n\n## 3. Lifecycle\nSecurity posture is revised as new lanes, providers, agent families, and interfaces appear. Controls are tested, monitored, reviewed after incidents, and tightened when the system discovers new failure patterns or new attack surfaces.\n\n## 4. Integration\n- **Permission/Role:** primary identity and access-control substrate.\n- **Architect Override Protocol:** exceptional authority must remain visible and time-bounded.\n- **Quarantine Buffer:** unsafe or uncertain artifacts are isolated instead of silently accepted.\n- **Testing:** defensive posture is challenged with repeatable evidence instead of assumed.\n- **AI Wallet / Hybrid Access:** model credentials and provider lanes must remain governed.\n- **Audit Log / Agent Control Plane:** sensitive actions require durable traceability.\n\n## 5. Philosophical Alignment\nSecurity serves To Dig Deep by protecting the conditions under which deep work remains trustworthy. It preserves the sovereign substrate where knowledge is created, tested, reviewed, promoted, or rejected without hidden corruption.\n"
   },
   "neuro_concentrate": {
-    "summary": "Security is the protective governance hub for identity, access control, cryptography, incident handling, and trust boundaries across the CapsuleOS stack. It exists as a hub rather than a single policy note because the vault needs one place where auditability, override discipline, and quarantine semantics converge. The capsule gives architectural weight to defensive posture, making security a navigable subsystem with child artifacts instead of scattered controls. In operational terms it is the trust anchor that keeps sovereign knowledge, privileged actions, and system integrity from drifting into implicit or undocumented behavior.",
+    "summary": "Security is the trust-governance hub for identity, secrets, provider access, cryptography, incident response, override discipline, and quarantine semantics across CapsuleOS. It matters because N1Hub now includes human operators, background swarms, subscription-backed access, hosted inference, and branch-sensitive promotion flows. The capsule gives architectural weight to defensive posture by making trust boundaries explicit and navigable instead of leaving them scattered across runtime code and operator habit. In practice it is the system's trust anchor for protecting sovereign knowledge, privileged actions, and safe movement between Dream, review, and Real.",
     "keywords": [
       "security",
       "trust-boundary",
@@ -61,10 +61,30 @@
       {
         "target_id": "capsule.foundation.hybrid-database.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.architect-override.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a7960b891a5d071ddcef423ea66da832825b063108e524e6e9dfd51847b1bdff3406fb9ccbc438508df05a7b57747f63d742fe080a7e56da6cb64f0fbae377d9"
+  "integrity_sha3_512": "a39cea3ff1cee611b79e8d9d98f27e115591c7f1cb492bd849a8cd3ecab641e8b0e368c0e5ea26ba138b0469a7a6cb485ba89697a1c26b2e27a24353b9e0c715"
 }

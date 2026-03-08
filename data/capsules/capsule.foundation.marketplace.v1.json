@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Marketplace\n\n## 1. Definition and Essence\nMarketplace defines the sovereign exchange layer where templates, capabilities, and project assets can be discovered, licensed, rated, and transacted. It formalizes participants, listing semantics, and settlement pathways tied to N1 economic primitives.\n\n## 2. Core Attributes\n- `listing_model` template and asset publication schema\n- `participant_roles` seller, buyer, curator, reviewer\n- `pricing_policy` fixed, tiered, subscription, royalty modes\n- `reputation_signals` ratings, reviews, dispute outcomes\n- `settlement_path` token and fiat-compatible payment channels\n\n## 3. Lifecycle\nListings are published from sovereign templates or projects, priced and licensed, transacted through settlement workflows, and continuously updated through reputation and governance feedback loops.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** native value and incentive substrate.\n- **Sovereign Template:** marketplace inventory source.\n- **Royalty Engine:** automated distribution after sales.\n- **Workspace/Projects:** publishing and consumption surfaces.\n\n## 5. Philosophical Alignment\nMarketplace advances To Dig Deep by rewarding durable knowledge artifacts and transparent value exchange around real contribution.\n"
+    "content": "# Marketplace\n\n## 1. Definition and Essence\nMarketplace defines the sovereign circulation layer where reusable knowledge assets can be discovered, licensed, subscribed to, and exchanged without losing lineage. In N1Hub this does not only mean storefront commerce; it means turning validated capsule packs, templates, agent recipes, premium access contracts, and project outputs into accountable economic flows.\n\n## 2. Core Attributes\n- `listing_model` schema for templates, capsule packs, services, and agent-ready assets\n- `participant_roles` seller, buyer, curator, reviewer, operator, distributor\n- `pricing_policy` fixed, tiered, subscription, royalty, and hybrid access modes\n- `reputation_signals` ratings, review outcomes, proof-of-use, dispute history\n- `settlement_path` token, subscription, hosted inference, and fiat-compatible channels\n- `lineage_surface` visible ancestry and entitlement evidence for every listed asset\n\n## 3. Lifecycle\nAssets are packaged from sovereign templates, projects, or validated capsule collections; reviewed for quality and rights; priced and licensed; exchanged through settlement workflows; and continuously re-scored through reputation, usage, and governance feedback loops.\n\n## 4. Integration\n- **Sovereign Intellectual Capital:** defines what kind of knowledge asset can become market-ready capital.\n- **Sovereign Template:** one of the main inventory sources.\n- **Royalty Engine:** distributes downstream value once assets circulate.\n- **N1 Pass / Hybrid LLM Access:** connects recurring access and premium compute to the exchange layer.\n- **Workspace / Projects:** publishing, acquisition, and operator surfaces.\n\n## 5. Philosophical Alignment\nMarketplace advances To Dig Deep by rewarding durable knowledge artifacts, not shallow noise. It is where second-brain outputs stop being private clutter and become traceable capital with explicit rights, provenance, and value exchange.\n"
   },
   "neuro_concentrate": {
-    "summary": "Marketplace is the economic exchange hub of the vault. It connects listing, licensing, pricing, reputation, settlement, and distribution so projects and templates can circulate as accountable assets instead of informal one-off transfers. The capsule matters because the economic layer in N1Hub is not an afterthought: it is where sovereign artifacts become discoverable, monetizable, and governable without losing provenance. By sitting above N1 Pass, royalties, templates, boosts, and tokenomics, Marketplace acts as the commercial operating surface for durable knowledge capital.",
+    "summary": "Marketplace is the circulation hub for sovereign intellectual capital inside N1Hub. It connects listings, rights, subscriptions, royalties, settlement, and reputation so templates, capsule packs, agent recipes, and premium access offers can move through the ecosystem as accountable assets instead of informal one-off transfers. The capsule matters because economic value in N1Hub is supposed to emerge from validated memory capital and reusable structure, not from disconnected monetization hacks. By binding commercialization to lineage, entitlements, and governance, Marketplace becomes the commercial operating surface for durable knowledge assets.",
     "keywords": [
       "marketplace",
       "economic-hub",
@@ -33,7 +33,10 @@
       "templates",
       "royalties",
       "tokenomics",
-      "knowledge-capital"
+      "knowledge-capital",
+      "capsule-packs",
+      "memory-capital",
+      "agent-recipes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -60,6 +63,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-intellectual-capital.v1",
+        "relation_type": "depends_on"
+      },
+      {
         "target_id": "capsule.project.mining-company.v1",
         "relation_type": "part_of"
       }
@@ -67,5 +78,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a5cd8e60ea4698d57dd061d3eca8d538e117e001ba633e53adcced43586e934dc990b68352d6a3860528ef8ffc4da16b5c3eb1c8020ec0d6a084d6cd6b6146d2"
+  "integrity_sha3_512": "3748e69fe46230544cecce6ff3df2d5cd997726ce0111f8d3d5a3d73dec643a1f45152461dc151c48595034c0e693dacedea34eafe3a4eed4f54350f1afe2bb7"
 }

@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Project\n\n## 1. Definition and Essence\nN-Infinity Project coordinates the autonomous agent swarm implementation, including role design, capsule-job orchestration, daemon deployment, and risk-aware assistant augmentation across planning, tracking, and capsule-graph surfaces.\n\n## 2. Founding Premise\nThe project begins from a scaling insight: a human may perform dozens of highly valuable LLM interactions in a day, but the system becomes categorically more powerful when it can safely execute thousands of bounded background iterations over the same period. N-Infinity Project therefore exists to turn that gap into architecture. It is the program that takes the idea of \"Number Infinity\" and converts it into real runtime lanes, policies, queues, budgets, and agent roles.\n\n## 3. Core Attributes\n- `agent_catalog` implemented and planned specialized agents.\n- `capsule_job_model` how graph signals become bounded work units.\n- `iteration_economics` how high-volume agent throughput is made computationally and financially sustainable.\n- `orchestration_policy` delegation, retry, and conflict resolution rules.\n- `safety_controls` guardrails for autonomous action boundaries.\n- `durable_state` memory, cooldown, and resume strategy for long-lived lanes.\n- `deployment_model` daemon topology, night-shift gating, and future 24/7 expansion.\n\n## 4. Lifecycle\nThe project evolves through incremental agent launches, behavior evaluation, host operations hardening, and governance-tuned autonomy expansion. In practice it grows by turning more of the swarm's intended iterations into explicit, inspectable, and economically rational background jobs instead of leaving them as aspiration.\n\n## 5. Integration\n- **CapsuleOS Project:** child subsystem under core architecture.\n- **Foundation N-Infinity:** implemented conceptual swarm model.\n- **Symphony:** execution lane for capsule jobs and background orchestration.\n- **Background Agent Runtime:** daemon, state, and shift substrate for autonomous work.\n- **Personal AI Assistant:** primary user-facing agent interface.\n- **Human-AI Symbiosis:** explains why the swarm exists behind one main partner surface rather than replacing the human loop.\n- **Planner/Tracker:** risk and suggestion telemetry consumers.\n\n## 6. Philosophical Alignment\nN-Infinity execution supports To Dig Deep by operationalizing continuous assistance grounded in sovereign graph evidence and by converting finite human prompting into compounding machine iteration.\n"
+    "content": "# N-Infinity Project\n\n## 1. Definition and Essence\nN-Infinity Project coordinates the autonomous swarm implementation, including role design, capsule-job orchestration, daemon deployment, assignment control, and risk-aware assistant augmentation across planning, tracking, mining, repository execution, and capsule-graph stewardship.\n\n## 2. Founding Premise\nThe project begins from a scaling insight: a human may perform dozens of highly valuable LLM interactions in a day, but the system becomes categorically more powerful when it can safely execute thousands of bounded background iterations over the same period. N-Infinity Project exists to turn that gap into architecture. It is the program that converts \"Number Infinity\" into real runtime lanes, policies, queues, budgets, and specialized agent roles.\n\n## 3. Core Scope\n- `agent_catalog` implemented and planned specialized agents.\n- `capsule_job_model` how graph signals become bounded work units.\n- `iteration_economics` how high-volume agent throughput is made computationally and financially sustainable.\n- `orchestration_policy` delegation, retry, assignment ownership, and conflict resolution rules.\n- `safety_controls` Dream-first boundaries and autonomy guardrails.\n- `durable_state` memory, cooldown, and resume strategy for long-lived lanes.\n- `deployment_model` daemon topology, day/night gating, and future 24/7 expansion.\n- `vault_stewardship` how the swarm continuously tends the capsule graph instead of only reacting to external prompts.\n\n## 4. Lifecycle\nThe project evolves through incremental agent launches, behavior evaluation, host operations hardening, and governance-tuned autonomy expansion. In practice it grows by turning more of the swarm's intended iterations into explicit, inspectable, economically rational background jobs and by tightening the loop between mining, planning, capsule maintenance, review, repository execution, and bounded promotion work.\n\n## 5. Integration\n- **CapsuleOS Project:** child subsystem under core architecture.\n- **Foundation N-Infinity:** implemented conceptual swarm model.\n- **Vault Stewardship Swarm:** capsule-first maintenance lane already expressing the pattern in practice.\n- **DeepMine / A2C:** quarry and refinery that feed swarm work with source pressure and branch-safe artifacts.\n- **Symphony:** execution lane for capsule jobs and background orchestration.\n- **Background Agent Runtime / Agent Control Plane:** daemon, assignment, and fleet substrate for autonomous work.\n- **Personal AI Assistant / Workspace:** primary human-facing partner and habitat surfaces.\n- **Human-AI Symbiosis:** keeps the human at the center while swarm throughput scales behind the scenes.\n\n## 6. Philosophical Alignment\nN-Infinity execution supports To Dig Deep by operationalizing continuous assistance grounded in sovereign graph evidence and by converting finite human prompting into compounding machine iteration.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Project coordinates the autonomous-agent layer that sits on top of the capsule graph. It organizes role design, orchestration policy, safety controls, and feedback loops for specialized agents such as Parliament, Weaver, Reminder, Risk Detector, Gardener, and Suggestion Agent. The project hub exists so autonomy can be expanded deliberately, with governance and measurable behavior, instead of leaking unpredictably into user-facing flows. It is the execution stream that turns graph-grounded assistance from a philosophical promise into a controlled operating capability for Workspace, Planner, Tracker, and the Assistant.",
+    "summary": "N-Infinity Project coordinates the autonomous-agent layer that sits on top of the capsule graph. It organizes role design, capsule-job policy, assignment control, safety boundaries, day/night runtime shaping, and feedback loops for specialized agents such as Parliament, Weaver, Reminder, Risk Detector, Gardener, and Suggestion Agent. The project hub exists so autonomy can be expanded deliberately, with governance and measurable behavior, instead of leaking unpredictably into user-facing flows. It is the execution stream that turns graph-grounded assistance from a philosophical promise into a controlled operating capability for planning, mining, vault stewardship, repository execution, and assistant-backed work.",
     "keywords": [
       "n-infinity",
       "agent-swarm",
@@ -87,10 +87,34 @@
       {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "94d095308635aef2dfaf79afc6aa8ecfd391b3d3508d836fbcc95dbb99f3c6b0a2f7c3e9f6cfbeedee4bcb91975f4225fa44a9ca21cb17223f0153df459ac9f7"
+  "integrity_sha3_512": "9d72f6069e2f8aeb7e783ef15699448765bb094c763d11f63b0c637f578d1654b4e2c54eb8de709c28604fefb5b5198daaa8fd5b4830d785d8f96ebb14cf072b"
 }

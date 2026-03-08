@@ -14,10 +14,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Profile\n\n## 1. Definition and Essence\nProfile defines the canonical identity envelope for a workspace actor, including stable identifiers, public metadata, and personalization anchors. It is the reference node for user-linked activity, ownership, and personalization across modules.\n\n## 2. Core Attributes\n- `user_id` sovereign principal identifier\n- `display_name` human-readable profile label\n- `public_keys` cryptographic identity materials\n- `avatar_and_theme` user-facing personalization settings\n- `contact_handles` optional communication channels\n\n## 3. Lifecycle\nProfiles are created during onboarding, updated as identity and preferences evolve, and archived or transferred under governance rules without breaking historical provenance links.\n\n## 4. Integration\n- **Workspace:** core identity surface for authenticated interaction.\n- **User Preferences:** derives behavioral defaults and constraints.\n- **Team and Role:** associates actors with collaborative structures.\n- **Audit/Activity:** anchors actor attribution for mutations.\n\n## 5. Philosophical Alignment\nProfile capsules align with To Dig Deep by grounding every action in accountable identity rather than anonymous mutation.\n"
+    "content": "# Profile\n\n## 1. Definition and Essence\nProfile defines the canonical identity envelope for a workspace actor inside N1Hub. It is more than an account row. It is the durable human anchor that connects authorship, AI wallet ownership, preferences, access posture, review responsibility, and assistant continuity across the second-brain system.\n\n## 2. Core Attributes\n- `user_id` sovereign principal identifier\n- `display_name` human-readable profile label\n- `identity_and_keys` durable authorship and trust anchors\n- `presence_and_theme` visual and communicative identity cues\n- `contact_handles` optional notification and handoff channels\n- `persona_boundary` stable distinction between the human principal and the agents acting on behalf of that principal\n\n## 3. Lifecycle\nProfiles begin at onboarding, then accumulate continuity: preferences, wallet posture, activity lineage, assignment ownership, and review history. They may evolve, be transferred, or be archived, but the system should preserve authorship and decision provenance even as surface identity details change.\n\n## 4. N1Hub Role\nProfile is one of the hidden supports of the second brain. Without it, the vault cannot reliably answer who owns a provider lane, whose morning review queue should receive a Dream result, who approved a mutation, or whose rhythm should govern an autonomy window. The human remains the sovereign center; the profile is the durable envelope that lets the system remember that fact.\n\n## 5. Integration\n- **Workspace:** main authenticated human surface.\n- **User Preferences:** derives behavioral defaults from the same person rather than from anonymous settings.\n- **AI Wallet and Access Models:** bind intelligence supply and entitlement to a real principal.\n- **Personal AI Assistant and Human-AI Symbiosis:** preserve one human-centered partner loop.\n- **Activity, Audit, and Agent Control Plane:** anchor authorship, assignment ownership, and accountability.\n\n## 6. Philosophical Alignment\nProfile supports To Dig Deep by grounding every action in accountable human identity rather than anonymous mutation or drifting agent folklore.\n"
   },
   "neuro_concentrate": {
-    "summary": "Profile is the durable identity envelope for a workspace actor. It matters because actions, authorship, preferences, and access decisions all become harder to trust when the system lacks a stable identity anchor. This capsule holds the continuity layer that lets the vault connect one person or principal across projects, teams, activity history, and personalization behavior without collapsing identity into transient session state. By modeling profiles explicitly, N1Hub preserves accountable authorship, portable user context, and a clean boundary between who someone is, what they can do, and how the workspace adapts around them.",
+    "summary": "Profile is the durable identity envelope for a human principal inside N1Hub. It matters because authorship, wallet ownership, preferences, access rights, review duties, and assistant continuity all become harder to trust when the system lacks a stable human anchor. This capsule holds the continuity layer that lets the vault connect one person across projects, teams, AI usage, background autonomy, and personalization without collapsing identity into transient session state. By modeling profile explicitly, N1Hub preserves accountable authorship and a clean boundary between the human, the agents acting on behalf of that human, and the system adapting around them.",
     "keywords": [
       "profile",
       "identity-envelope",
@@ -27,7 +27,10 @@
       "portable-context",
       "accountability",
       "principal",
-      "user-boundary"
+      "user-boundary",
+      "wallet-owner",
+      "review-owner",
+      "assistant-continuity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -50,6 +53,26 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.access-models.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.team.v1",
         "relation_type": "references"
       },
@@ -61,5 +84,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "352be79db3093e10db16d768cd3df313537f68a557f85d7c1078d630a58812c8e73bea6e7939d71866242edfa20be1fdac22bf96e6d4cd483056875ad6887741"
+  "integrity_sha3_512": "9f2c67401b7c12b773ad40a24e63f38fd373ff4528bc0a1dbd0bddf69ba341b5cee67cdfbef68a10fa3380bc8e2c7c4de0d023b71e92f6b26c882cd98dd52f03"
 }

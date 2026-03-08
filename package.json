@@ -15,6 +15,7 @@
     "validate:all": "tsx scripts/validate-cli.ts --dir data/capsules --strict --report",
     "symphony": "tsx scripts/symphony.ts",
     "ninfinity": "tsx scripts/ninfinity.ts",
+    "vault-steward": "tsx scripts/vault-steward.ts",
     "migrate:projects": "tsx scripts/migrate-projects.ts",
     "migrate:branches": "tsx scripts/migrate-branches.ts",
     "validate-staged": "node scripts/validate-staged-capsules.js",

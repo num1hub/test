@@ -27,7 +27,7 @@
     "content": "# From Zero to Megabytes\n\n## 1. Definition and Essence\nFrom Zero to Megabytes is an independent educational and execution initiative centered on compounding knowledge output from first principles into durable artifacts and measurable digital value.\n\n## 2. Core Attributes\n- `learning_tracks` thematic knowledge progression paths\n- `artifact_targets` tangible outputs expected per phase\n- `measurement_framework` throughput and quality indicators\n- `resource_map` tools, references, and time allocations\n- `publication_plan` cadence for sharing generated artifacts\n\n## 3. Lifecycle\nThe initiative moves through progressive learning and production phases, each ending in publishable outcomes and retrospective learning capture.\n\n## 4. Integration\n- **A2C and Workspace:** optional toolchain support for artifact creation.\n- **Planner:** phase decomposition and schedule management.\n- **Analytics:** progress evidence and growth reporting.\n- **Independent Project Set:** no hierarchical containment under N1 root.\n\n## 5. Philosophical Alignment\nThis project embodies the Zero-to-One arc by turning sparse initial capability into compounding digital production.\n"
   },
   "neuro_concentrate": {
-    "summary": "From Zero to Megabytes in the Dream branch is the future compounding engine for learning, publishing, and measurable creative throughput. It extends beyond today’s educational initiative toward a disciplined pipeline where study becomes repeated artifact production, publication, and evidence-backed capability growth. The branch matters because the project is less about a fixed product and more about an evolving production system for the self. Dream keeps that more ambitious transformation explicit and reviewable, making creative growth legible inside the graph.",
+    "summary": "From Zero to Megabytes in the Dream branch is the future compounding engine for learning, publishing, measurable creative throughput, and explicit memory accumulation. It extends beyond today's educational initiative toward a disciplined pipeline where study becomes repeated artifact production, publication, byte growth, and evidence-backed capability development. The branch matters because the project is less about a fixed product and more about an evolving production system for the self. Dream keeps that more ambitious transformation explicit and reviewable, making creative growth legible inside the graph.",
     "keywords": [
       "from-zero-to-megabytes",
       "learning",
@@ -37,6 +37,7 @@
       "publication",
       "retrospectives",
       "throughput",
+      "memory-capital",
       "independent-project"
     ],
     "confidence_vector": {
@@ -66,10 +67,14 @@
       {
         "target_id": "capsule.project.a2c.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "72547548bfb8f2cf5962bf21d78603dc46ab05a916e5728467173ab59fbbdd45f5c8c524ba1f16f6fc1402bd18cfe15726297d716af5a2ba2c292c2e1c64ba91"
+  "integrity_sha3_512": "ec88f75de21d621dabe4b202ec64b20389a0702c3229625599189ec07a2096f95e8b060a14aecba9b05d32de90d4e33de55525626e2b71b4bd557c67a7f47b20"
 }

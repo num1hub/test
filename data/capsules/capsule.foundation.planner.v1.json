@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.planner.v1",
-    "version": "1.3.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-08T23:18:00Z",
     "name": "Planner",
     "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core",
     "priority": "high",
@@ -19,20 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## 1. Definition and Essence\nThe Planner is the foundational module within the N1Hub Workspace responsible for structuring intent over time. It transforms abstract goals and long-term vision into actionable, time-bound tasks, milestones, and roadmaps. It is the bridge between ambition and daily execution. Built on the CapsuleOS graph, the Planner treats every plan item as a capsule linked to projects, dependencies, and supporting knowledge.\n\n## 2. Core Functions\n- Roadmap definition with phases, milestones, and key results.\n- Goal setting across `30/60/90`, yearly, and `1000-day` horizons with hierarchical decomposition.\n- Task management with priority, due dates, estimated effort, and dependencies.\n- Horizon ladder generation across `today`, `tomorrow`, `7 days`, `30/60/90`, `365 days`, and `1000 days`.\n- Dream distillation through Real so exploratory structure becomes grounded commitment instead of vague aspiration.\n- Daily and weekly plan generation based on load, deadlines, risks, and preferences.\n- AI-assisted planning that uses A2C for natural language task extraction.\n- Explicit agent lanes for short-horizon and long-horizon planning through Daily Planner Agent and Roadmap Planner Agent.\n- Coordination through Planning Horizon Engine so all planning horizons stay part of one branch-aware system instead of isolated schedule fragments.\n\n## 3. Data Model\nPlanner-relevant metadata includes dueDate, priority, progress, status, estimatedHours, actualHours, recurrence, completedAt, planning_horizon, and branch_context. Tasks, goals, and milestones are represented as capsules and connected with part_of, depends_on, and references links.\n\n## 4. Integration\nThe Planner coordinates with Tracker for execution telemetry, with the Personal AI Assistant for decomposition and scheduling suggestions, with project capsules for scope boundaries, with Branch Steward Agent for Real/Dream discipline, and with N-Infinity for background risk detection and re-planning. Planning Horizon Engine now makes the compression path explicit: Dream and Real are read together, the horizon ladder is constructed, and Daily Planner Agent receives the distilled near-term output while Roadmap Planner Agent maintains strategic shape.\n\n## 5. Philosophical Alignment\nPlanner operationalizes To Dig Deep by converting high-level intent into verifiable and sovereign units of execution that can be tracked, audited, and improved over time.\n\n## 6. Future Potential\nAutomatic re-planning, calendar synchronization, and team planning overlays can extend the Planner while preserving capsule-native sovereignty. A mature planner should eventually make the whole Dream branch legible at every horizon without collapsing possibility into false certainty.\n\n## Canonical Planner Entities\nGoal, Milestone, Task, and Roadmap are now defined as dedicated sovereign foundation capsules and linked from this Planner capsule."
+    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## 1. Definition and Essence\nThe Planner is the foundational module within the N1Hub Workspace responsible for structuring intent over time. It transforms abstract goals and long-term vision into actionable, time-bound tasks, milestones, and roadmaps. It is the bridge between ambition and daily execution. Built on the CapsuleOS graph, the Planner treats every plan item as a capsule linked to projects, dependencies, and supporting knowledge.\n\n## 2. Core Functions\n- roadmap definition with phases, milestones, and key results\n- goal setting across `30/60/90`, yearly, and `1000-day` horizons with hierarchical decomposition\n- task management with priority, due dates, estimated effort, and dependencies\n- horizon ladder generation across `today`, `tomorrow`, `7 days`, `30/60/90`, `365 days`, and `1000 days`\n- Dream distillation through Real so exploratory structure becomes grounded commitment instead of vague aspiration\n- daily and weekly plan generation based on load, deadlines, risks, and preferences\n- explainable plan artifacts that show why an item belongs now, later, or not yet\n- AI-assisted planning that uses A2C for natural language task extraction\n- explicit agent lanes for short-horizon and long-horizon planning through Daily Planner Agent and Roadmap Planner Agent\n- coordination through Planning Horizon Engine so all planning horizons stay part of one branch-aware system instead of isolated schedule fragments\n\n## 3. N1Hub Role\nThe Planner is where the second brain becomes executable. It should read the whole field of Dream and the constraints of Real, then compress them into the best possible plan for today, tomorrow, the week, and longer horizons. It therefore must work closely with Capsule Librarian Agent, Personal AI Assistant, Tracker, Branch Steward Agent, and any surface that shows plan state back to the user.\n\n## 4. Data Model\nPlanner-relevant metadata includes dueDate, priority, progress, status, estimatedHours, actualHours, recurrence, completedAt, planning_horizon, branch_context, and explanation_trace. Tasks, goals, and milestones are represented as capsules and connected with `part_of`, `depends_on`, and `references` links.\n\n## 5. Integration\nThe Planner coordinates with Tracker for execution telemetry, with Personal AI Assistant for decomposition and scheduling suggestions, with project capsules for scope boundaries, with Branch Steward Agent for Real/Dream discipline, and with N-Infinity for background risk detection and re-planning. Planning Horizon Engine makes the compression path explicit: Dream and Real are read together, the horizon ladder is constructed, Daily Planner Agent receives the distilled near-term output, and Roadmap Planner Agent maintains strategic shape. AI Control Surface and future control-plane views should be able to project planning artifacts without inventing a second planning truth.\n\n## 6. Philosophical Alignment\nPlanner operationalizes To Dig Deep by converting high-level intent into verifiable and sovereign units of execution that can be tracked, audited, explained, and improved over time.\n\n## 7. Future Potential\nAutomatic re-planning, calendar synchronization, and team planning overlays can extend the Planner while preserving capsule-native sovereignty. A mature planner should make the whole Dream branch legible at every horizon without collapsing possibility into false certainty.\n\n## Canonical Planner Entities\nGoal, Milestone, Task, and Roadmap are defined as dedicated sovereign foundation capsules and linked from this Planner capsule."
   },
   "neuro_concentrate": {
-    "summary": "The Planner is the strategic and tactical engine of the N1Hub Workspace. It captures goals, decomposes them into milestones and tasks, and schedules execution as linked capsules across the graph. It now carries a more explicit horizon ladder as well: the system is expected to relate `today`, `tomorrow`, `7 days`, `30/60/90`, `365 days`, and `1000 days` as one planning field instead of separate disconnected views. By combining Dream-side ambition with Real-side constraints through Planning Horizon Engine, the Planner turns abstract intent into accountable daily action without losing the larger shape of the future.",
+    "summary": "The Planner is the strategic and tactical engine of the N1Hub Workspace. It captures goals, decomposes them into milestones and tasks, and schedules execution as linked capsules across the graph. It carries an explicit horizon ladder from `today` through `1000 days`, but its real value is compression: it should read Dream-side ambition through Real-side constraints and turn that tension into accountable, explainable daily action. In N1Hub, the Planner is therefore not just a list-maker. It is the mechanism that makes the second brain executable.",
     "keywords": [
       "planner",
+      "dream-real-compression",
       "roadmap",
       "goals",
       "tasks",
-      "deadlines",
       "milestones",
-      "scheduling",
-      "real-branch",
-      "dream-branch",
+      "horizon-ladder",
+      "explainable-plans",
       "planning-horizon-engine",
       "workspace",
       "n1hub"
@@ -118,6 +117,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.key-agents.v1",
         "relation_type": "references"
       }
@@ -125,5 +128,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f4e63c182a6b30331bdb24bd0bb4c5f132eeaf0ed2d7597dc0ec7db7584d648e99d1738dde4517152b1ab947a6794e18b9bc1c120f588355a7742dce87ba5171"
+  "integrity_sha3_512": "f3b5ed718c68b27d531ae262fd50d11ec2e363db7b0f492c4afa8d8ddc8d5481b4983033b5c4bc8fdac05a5a61abb40fd2efa67fbf0b99a3437ac7e68eee20b9"
 }

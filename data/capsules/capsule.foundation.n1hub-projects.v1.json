@@ -19,15 +19,16 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: The Ultimate Project Platform\n\n## 1. Vision of the Digital Continent\nN1Hub.com is not merely a productivity tool or a note-taking app; it is a sprawling digital continent designed explicitly for the creation, development, and monetization of sovereign projects. It is a digital habitat where creators, builders, and visionaries arrive to transform chaotic ideas into perfectly structured, evolving entities. Driven by the philosophy \"To Dig Deep\" and the monumental leap \"Between Zero and One,\" N1Hub empowers anyone to build projects of any complexity, from personal task lists to enterprise-scale digital twins.\n\n## 2. The Hub/Atomic Paradigm in Action\nOn N1Hub, every project is a **capsule-hub**. It is a structural nexus that aggregates atomic capsules, tasks, documents, user profiles, financial ledgers, and physical objects, into a single, interconnected, and cryptographically sealed knowledge graph. This architecture ensures absolute data integrity and prevents the loss of context that plagues traditional folder-based systems.\n\n## 3. The Full Project Lifecycle\n- **Genesis**: Users can instantiate projects from scratch, utilize A2C to parse external blueprints, or leverage the AI Project Generator to structure abstract ideas instantly.\n- **Execution**: The integrated Workspace (featuring a Planner and Tracker) acts as the command center, while Symphony can convert live tracker issues into isolated coding sessions governed by repo-owned workflow policy.\n- **Collaboration**: Projects inherently support granular roles (Owner, Contributor, Investor). Team members collaborate within the same graph, communicating via interconnected discussion capsules.\n- **Monetization**: Mature projects can be sealed as Sovereign Templates and published to the N1Hub Marketplace. Creators earn royalties whenever their project architecture is forked or instantiated by others.\n\n## 4. Unparalleled Architectural Features\n- **Real/Dream Branching**: Creators can safely fork a project graph. The `Real` branch maintains the current reality, while the `Dream` branch allows for speculative design changes. A recursive diff algorithm automatically calculates the gap (e.g., generating cost estimates or resource requirements).\n- **Agentic Evolution**: N-Infinity background agents continuously patrol active projects, discovering hidden semantic links, pruning dead ends, and proposing novel structural improvements.\n- **DeepMine Supply**: Projects can pull raw intelligence directly from the world's most advanced LLMs, ensuring that the knowledge within N1Hub remains cutting-edge.\n- **Symphony Automation**: Issue-driven coding agents can read tracker work, create isolated workspaces, and execute repo-owned workflows while remaining tied to capsule validation and observability."
+    "content": "# N1Hub Projects\n\n## 1. Definition and Essence\nN1Hub Projects is the portfolio-topology capsule for the platform. It explains how the major project hubs relate to one another, which lines form the live core of the second brain, which remain strategic expansion lines, and which archived projects still matter as lineage.\n\n## 2. Portfolio Structure\n- `live_core` CapsuleOS, Workspace, DeepMine, A2C, N-Infinity, and Symphony as the main execution contour.\n- `strategic_halo` adjacent lines such as Mining Company and From Zero to Megabytes that shape future leverage and capital formation.\n- `archived_lines` paused projects preserved for lineage, retrieval, and possible later revival.\n- `branch_topology` how Real and Dream hold portfolio truth and future shape simultaneously.\n- `hub_atomic_logic` every project hub should gather atomic capsules without collapsing into shapeless generality.\n\n## 3. Lifecycle\nProjects begin as ideas or drafts, become governed project hubs, split into active core versus optional expansion lines, and may later harden into templates, archives, or institutional memory. The portfolio therefore behaves as a living graph rather than a static list of initiatives.\n\n## 4. Integration\n- **N1Hub / CapsuleOS:** platform root and knowledge law.\n- **Workspace / Planner / Tracker / Assistant:** daily operating contour for project reality.\n- **DeepMine / A2C:** quarry and refinery that feed project evolution.\n- **N-Infinity / Symphony:** swarm and repository execution lanes.\n- **Marketplace / Sovereign Templates:** later circulation layer for reusable project capital.\n\n## 5. Philosophical Alignment\nThis capsule applies To Dig Deep by treating the project portfolio itself as a governed knowledge structure whose active core, speculative edge, and archived memory all remain visible and intelligible.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1Hub Projects is the portfolio view of the ecosystem’s project model. It describes how sovereign projects are instantiated, executed, collaborated on, branched, and eventually monetized without collapsing into ordinary folders or disconnected tickets. The capsule matters because projects are one of the main user-facing units of reality in N1Hub, and their lifecycle needs a coherent blueprint separate from the lower-level runtime description. By capturing project creation, collaboration, branching, and template publication in one place, this capsule serves as the conceptual map for the platform’s project economy.",
+    "summary": "N1Hub Projects is the portfolio-topology view of the ecosystem. It describes how the major project hubs relate, which lines form the live operational core, which remain strategic expansion programs, and which archived projects still matter as memory and lineage. The capsule matters because projects are one of the main user-facing units of reality in N1Hub, and their portfolio needs to be understood as a living graph rather than a flat list. By capturing active core, strategic halo, archive memory, branching, execution, and later template circulation in one place, this capsule serves as the conceptual map for the platform's project economy and project memory.",
     "keywords": [
       "n1hub",
       "project-platform",
       "digital-habitat",
       "capsule-hub",
+      "portfolio-topology",
       "marketplace",
       "real-dream-branching",
       "n-infinity-agents",
@@ -80,10 +81,6 @@
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.project.v1",
-        "relation_type": "derived_from"
-      },
-      {
         "target_id": "capsule.foundation.planner.v1",
         "relation_type": "references"
       },
@@ -113,6 +110,10 @@
       },
       {
         "target_id": "capsule.project.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
         "relation_type": "references"
       },
       {
@@ -147,5 +148,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c4d0e1084d9b9da9b843e011153c038d024d09fa8c15ac3d3623f9d1bed04d47e01a90207959ba9b4ff7246a3ff576ea87b544ed9856996be1f9b89617ffd9f1"
+  "integrity_sha3_512": "63b93e0f669ca038de823f77f17962e96c980e7eb27f5dd02dc1e3028b0629c1c440c938aad84ce7a1c15314a304f48bccd3a099c80e0ca002222bb8240ff988"
 }

@@ -139,17 +139,44 @@ function toSummary(
   config?: AiWalletProviderConfig,
 ): AiWalletProviderSummary {
   const metadata = AI_WALLET_PROVIDER_METADATA[provider];
+  const envSummary =
+    !config
+      ? provider === 'gemini' && (process.env.GEMINI_API_KEY?.trim() || process.env.GOOGLE_API_KEY?.trim())
+        ? {
+            configured: true,
+            enabled: true,
+            preferredModel: 'gemini-2.5-flash',
+            endpoint: process.env.GEMINI_API_BASE_URL?.trim() || null,
+            secretHint: 'env:GEMINI_API_KEY',
+            updatedAt: null,
+            helperText: `${metadata.helperText} Currently resolved from server environment.`,
+          }
+        : provider === 'github_models' && (process.env.GITHUB_MODELS_TOKEN?.trim() || process.env.GITHUB_TOKEN?.trim())
+            ? {
+                configured: true,
+                enabled: true,
+                preferredModel: 'openai/gpt-4.1',
+                endpoint: process.env.GITHUB_MODELS_BASE_URL?.trim() || null,
+                secretHint: process.env.GITHUB_MODELS_TOKEN?.trim()
+                  ? 'env:GITHUB_MODELS_TOKEN'
+                  : 'env:GITHUB_TOKEN',
+                updatedAt: null,
+                helperText: `${metadata.helperText} Currently resolved from server environment.`,
+              }
+            : null
+      : null;
+
   return {
     provider,
     label: metadata.label,
     mode: metadata.mode,
-    configured: Boolean(config?.secret),
-    enabled: config?.enabled ?? false,
-    preferredModel: config?.preferredModel ?? null,
-    endpoint: config?.endpoint ?? null,
-    secretHint: config?.secret ? maskSecret(config.secret) : null,
-    updatedAt: config?.updatedAt ?? null,
-    helperText: metadata.helperText,
+    configured: envSummary?.configured ?? Boolean(config?.secret),
+    enabled: envSummary?.enabled ?? (config?.enabled ?? false),
+    preferredModel: envSummary?.preferredModel ?? (config?.preferredModel ?? null),
+    endpoint: envSummary?.endpoint ?? (config?.endpoint ?? null),
+    secretHint: envSummary?.secretHint ?? (config?.secret ? maskSecret(config.secret) : null),
+    updatedAt: envSummary?.updatedAt ?? (config?.updatedAt ?? null),
+    helperText: envSummary?.helperText ?? metadata.helperText,
   };
 }
 

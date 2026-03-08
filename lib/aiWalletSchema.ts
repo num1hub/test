@@ -8,6 +8,7 @@ export const AI_WALLET_PROVIDER_IDS = [
   'gemini',
   'deepseek',
   'grok',
+  'github_models',
   'openrouter',
   'n1_subscription',
 ] as const;
@@ -35,7 +36,7 @@ export const AI_WALLET_PROVIDER_SECTION_METADATA: Record<
   api_keys: {
     label: 'API Providers',
     description:
-      'Direct provider API keys for model families such as ChatGPT, Claude, Gemini, DeepSeek, and Grok.',
+      'Direct provider API keys for model families such as ChatGPT, Claude, Gemini, DeepSeek, Grok, and GitHub Models.',
   },
   platform: {
     label: 'Platform & Routing',
@@ -100,7 +101,8 @@ export const AI_WALLET_PROVIDER_METADATA: Record<
     section: 'api_keys',
     mode: 'api_key',
     placeholder: 'AIza...',
-    helperText: 'Connect Gemini-compatible model access with your own Google key.',
+    helperText:
+      'Connect Gemini with a Google AI Studio API key. N1Hub also supports server-side GEMINI_API_KEY fallback for trusted local bring-up.',
     endpointLabel: 'Base URL (optional)',
   },
   deepseek: {
@@ -119,6 +121,16 @@ export const AI_WALLET_PROVIDER_METADATA: Record<
     mode: 'api_key',
     placeholder: 'xai-...',
     helperText: 'Connect xAI Grok directly for reasoning and coding-oriented requests.',
+    endpointLabel: 'Base URL (optional)',
+  },
+  github_models: {
+    label: 'GitHub Models',
+    family: 'GitHub',
+    section: 'platform',
+    mode: 'api_key',
+    placeholder: 'github_pat_...',
+    helperText:
+      'Connect GitHub Models with a PAT that has the models scope. Preferred Model should be the exact model id, not a display label. You can also point the base URL at an organization-attributed inference path.',
     endpointLabel: 'Base URL (optional)',
   },
   openrouter: {
@@ -160,6 +172,7 @@ const aiWalletProvidersSchema = z.object({
   gemini: aiWalletProviderConfigSchema.optional(),
   deepseek: aiWalletProviderConfigSchema.optional(),
   grok: aiWalletProviderConfigSchema.optional(),
+  github_models: aiWalletProviderConfigSchema.optional(),
   openrouter: aiWalletProviderConfigSchema.optional(),
   n1_subscription: aiWalletProviderConfigSchema.optional(),
 });

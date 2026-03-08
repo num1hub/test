@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1 Pass\n\n## 1. Definition and Essence\nN1 Pass defines subscription tiers and entitlement bundles for premium capabilities across compute, support, and marketplace privileges. It standardizes benefits, billing cadence, and policy-controlled access upgrades.\n\n## 2. Core Attributes\n- `tier_catalog` available subscription levels and pricing\n- `benefit_matrix` capabilities unlocked per tier\n- `billing_cycle` monthly, annual, or custom cadence\n- `entitlement_checks` runtime access validation hooks\n- `upgrade_path` tier migration and proration behavior\n\n## 3. Lifecycle\nPasses are purchased, activated, verified on capability checks, upgraded or downgraded over time, and archived with complete billing and entitlement history.\n\n## 4. Integration\n- **Marketplace:** unlocks premium listing and distribution features.\n- **Boost:** can bundle compute accelerators by tier.\n- **Tokenomics:** aligns subscription economics with ecosystem value.\n- **Workspace:** surfaces active entitlements to users.\n\n## 5. Philosophical Alignment\nN1 Pass supports To Dig Deep by funding high-quality infrastructure while preserving transparent, explicit access policies.\n"
+    "content": "# N1 Pass\n\n## 1. Definition and Essence\nN1 Pass defines subscription tiers and entitlement bundles for premium capabilities across compute, support, hosted inference, background autonomy, and marketplace privileges. It standardizes benefits, billing cadence, and policy-controlled access upgrades so monetization stays legible inside the graph rather than hidden in scattered SaaS rules.\n\n## 2. Core Attributes\n- `tier_catalog` available subscription levels and pricing posture\n- `benefit_matrix` capabilities, limits, and support unlocks per tier\n- `billing_cycle` monthly, annual, or custom cadence\n- `entitlement_checks` runtime access validation hooks\n- `upgrade_path` tier migration, proration, and downgrade behavior\n- `compute_bundle` included hosted inference, night-batch allowance, or agent lane priority\n\n## 3. Lifecycle\nPasses are purchased, activated, verified on capability checks, upgraded or downgraded over time, and archived with complete billing, entitlement, and usage history. Entitlements should remain inspectable by both the user and the system.\n\n## 4. Integration\n- **Hybrid LLM Access / AI Wallet:** determines which premium model lanes or hosted inference pools are unlocked.\n- **Background Agent Runtime:** can use pass-based entitlements for queue priority, night autonomy, or premium orchestration.\n- **Marketplace:** unlocks premium listing and distribution privileges.\n- **Workspace:** surfaces active entitlements to users as part of the second-brain habitat.\n\n## 5. Philosophical Alignment\nN1 Pass supports To Dig Deep by funding high-quality infrastructure while preserving transparent, explicit access policies. It turns recurring economic commitment into an inspectable contract rather than a hidden billing side effect.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1 Pass is the subscription and entitlement capsule for premium access across the ecosystem. It formalizes how recurring payment maps to capability unlocks, billing cadence, queue priority, premium models, and bundled benefits such as boosts or marketplace privileges. The capsule matters because monetization is only sustainable if access rules remain explicit, auditable, and composable with the rest of the graph. In effect, N1 Pass is the contract that translates economic commitment into runtime permissions without hiding business logic outside the sovereign knowledge model.",
+    "summary": "N1 Pass is the subscription and entitlement capsule for premium access across the ecosystem. It formalizes how recurring payment maps to capability unlocks, billing cadence, queue priority, premium model lanes, background autonomy allowances, and bundled benefits such as boosts or marketplace privileges. The capsule matters because monetization is only sustainable if access rules remain explicit, auditable, and composable with the rest of the graph. In effect, N1 Pass is the contract that translates economic commitment into runtime permissions without hiding business logic outside the sovereign knowledge model.",
     "keywords": [
       "n1-pass",
       "subscription",
@@ -32,7 +32,10 @@
       "queue-priority",
       "boost-bundles",
       "marketplace-privileges",
-      "runtime-permissions"
+      "runtime-permissions",
+      "hosted-inference",
+      "night-batch",
+      "agent-lanes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -61,10 +64,22 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1112e5c0419220ca81c4b73139c8c2a910a6ebecf1ecb8b432ac8394928524bb99f40b10818f575e6ba1bda6281e035821f40d28e887bbdbe3b76903e9e86b12"
+  "integrity_sha3_512": "7174ad09aa718aa1591b369737bba5f24edb1f61149f9c2e15dd1cf06ea00d2ac596a2f49dc9b0ba35a5928fc3feb9b5a31873daf1993bff2b97eef4348eab2b"
 }

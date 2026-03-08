@@ -1,32 +1,33 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.status-active.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "status-active-execution-phase-validated-mutable-gold-master",
-    "updated_at": "2026-03-06T13:44:55.896Z",
+    "updated_at": "2026-03-08T21:08:00Z",
     "name": "CapsuleOS Status: Active",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Status: Active\n\n## 1. Definition\nIn the CapsuleOS lifecycle, the `active` status designates a capsule that has successfully traversed the A2C pipeline, cleared all 16 Validation Gates, and entered the core Cognitive Plane. It represents live, reliable, and executing knowledge within the N1Hub ecosystem.\n\n## 2. Operational Characteristics\n- **Validated Reliability**: Unlike `draft` capsules, an `active` capsule possesses a complete 6-dimensional confidence vector, verified canonical links, and a functional (though potentially updatable) cryptographic seal.\n- **Controlled Mutability**: `active` capsules are living entities; they can be modified. However, to preserve systemic negentropy, direct destructive editing is prohibited. Modifications trigger a strict versioning protocol: a new capsule is minted with the updated payload, and the original capsule transitions to the `legacy` status, preserving a perfect, immutable historical trail.\n\n## 3. Ecosystem Interaction\n- **Primary Agent Targets**: `active` capsules are the main focus of the N-Infinity swarm. Weavers actively seek to forge new connections with them, Parliaments monitor their `contradiction_pressure` as new data enters the graph, and Innovators use them as base material for compounding new hypotheses.\n- **Global Visibility**: Unless explicitly restricted by private visibility settings, `active` capsules are fully indexed, searchable, and accessible to the broader ecosystem, serving as reliable reference points for users and other projects.\n\n## 4. Use Cases\n- **Live Project Tasks**: Operations actively being executed by a team.\n- **Living Documentation**: Knowledge base articles that are reliable but subject to ongoing refinement as new information emerges.\n- **Real-time Digital Twins**: A physical object capsule in TileSims representing an environment that is currently under active renovation."
+    "content": "# Capsule Status: Active\n\n## 1. Definition\nIn the Dream branch, `active` is imagined less as a static label and more as a carefully governed runtime posture: the set of capsules that the system is willing to treat as present, trusted, and operational at a given moment.\n\n## 2. Future Direction\nDream clarifies that active should eventually become machine-actionable rather than only descriptive.\n- active capsules should advertise why they are trusted\n- active promotion should carry explicit evidence bundles\n- swarm maintenance should prioritize active capsules without collapsing into needless churn\n- active state should be explainable to both humans and agents as current working reality\n\n## 3. Branch Discipline\nDream preserves the distinction between `stored`, `candidate`, and `operative`. Not every important capsule should become active immediately. The future design assumes stronger review, quieter promotion, and more visible reasoning around why a capsule is allowed to shape planning, retrieval, or autonomous work.\n\n## 4. Why Dream Cares\nAs N1Hub grows into a second brain, `active` must mean more than merely \"not archived.\" It should mean: this capsule is currently trusted enough to participate in the live metabolism of the system."
   },
   "neuro_concentrate": {
-    "summary": "The 'active' status in CapsuleOS marks the primary execution phase of a capsule. Having successfully passed all 16 Validation Gates, an active capsule is recognized as verified, reliable, and fully integrated into the Cognitive Plane. While they remain mutable to accommodate evolving knowledge, any modifications are governed by strict versioning protocols that transition the previous state to 'legacy' to preserve historical integrity. Active capsules possess global visibility within their access constraints and serve as the primary targets for N-Infinity background agents, which continuously weave, monitor, and synthesize them to drive the compound growth of the N1Hub ecosystem.",
+    "summary": "In Dream, the `active` status becomes a more explicit runtime contract for trusted working reality rather than a loose descriptive label. It points toward a future where promotion into active state carries clearer evidence, explainable trust, visible review rationale, branch-aware activation rules, and stronger swarm discipline so that operational knowledge can stay live, searchable, and useful without becoming noisy, casually mutable, politically ambiguous, or operationally confusing to humans and agents.",
     "keywords": [
       "capsule-status",
       "active",
       "execution-phase",
-      "validated-knowledge",
+      "trusted-working-reality",
       "controlled-mutability",
+      "promotion-evidence",
       "versioning",
       "capsuleos",
-      "n-infinity-target",
+      "swarm-priority",
       "n1hub"
     ],
     "confidence_vector": {
@@ -61,5 +62,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "51852255f96de37edeb127e9e63a55b11e7c05a5f309dd8c0e59a951770783c65c948ac2eb5eb7dfaa43b6f4c44be23eb0dce13b7d43dd671a275716353ffc74"
+  "integrity_sha3_512": "b0f3323982fd563dbfd2eab36fecb58112f09a3f7ef7be163764b7b1632106167201ac35f29913358e42d1094e03305fa6f5013ed030f256156e136db67ac284"
 }

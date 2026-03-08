@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-economics-night-batch.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-08T19:12:00Z",
     "name": "AI Economics: Night and Batch Routing",
     "semantic_hash": "ai-economics-night-batch-subscription-api-offpeak-budget",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Dream Direction\nThe Dream branch turns current routing heuristics into a more explicit economic control system for the entire intelligence stack.\n\n## 2. Desired Future State\n- Subscription lanes are saturated for human-centered symbiosis.\n- API lanes are reserved for programmable and parallel work.\n- Night and batch discounts are harvested automatically wherever providers expose them.\n- Budget policy becomes visible enough for operators to understand the tradeoffs in real time.\n\n## 3. Why It Matters\nN1Hub can only sustain large swarms and deep mining if compute is treated as a governable economic substrate rather than a hidden background bill.\n\n## 4. Philosophical Alignment\nDream preserves the idea that depth must remain affordable if it is going to remain sovereign."
+    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Dream Direction\nThe Dream branch turns current routing heuristics into a more explicit economic control system for the entire intelligence stack.\n\n## 2. Desired Future State\n- Subscription lanes are saturated for human-centered symbiosis.\n- API and hosted-inference lanes are reserved for programmable and parallel work.\n- Night and batch discounts are harvested automatically wherever providers expose them.\n- Budget policy becomes visible enough for operators to understand the tradeoffs in real time.\n- Assignment routing and daemon wakeups respond to budget state rather than ignoring it.\n\n## 3. Why It Matters\nN1Hub can only sustain large swarms and deep mining if compute is treated as a governable economic substrate rather than a hidden background bill. Dream preserves a future where the control plane, wallet, and daemon layer all understand cost posture well enough to steer the swarm intelligently.\n\n## 4. Philosophical Alignment\nDream preserves the idea that depth must remain affordable if it is going to remain sovereign.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Economics: Night and Batch Routing in the Dream branch imagines a far more disciplined economic operating system for the N1Hub swarm. It pushes toward a future where subscription seats are saturated intelligently, API spend is routed with high precision, and off-peak windows are exploited systematically rather than opportunistically. The capsule matters because always-on intelligence becomes strategically powerful only when its economics compound instead of drifting upward unnoticed. Dream therefore preserves a more advanced cost-routing layer as a necessary precondition for mature 24/7 background autonomy.",
+    "summary": "AI Economics: Night and Batch Routing in the Dream branch imagines a far more disciplined economic operating system for the N1Hub swarm. It pushes toward a future where subscription seats are saturated intelligently, API and hosted-inference spend are routed with high precision, assignment and daemon wakeups respond to budget state, and off-peak windows are exploited systematically rather than opportunistically. The capsule matters because always-on intelligence becomes strategically powerful only when its economics compound instead of drifting upward unnoticed. Dream therefore preserves a more advanced cost-routing layer as a necessary precondition for mature 24/7 background autonomy.",
     "keywords": [
       "ai-economics",
       "night-batch-routing",
@@ -31,7 +31,9 @@
       "api",
       "sleep-time-compute",
       "night-shift-autonomy",
-      "deepmine"
+      "deepmine",
+      "budget-projection",
+      "control-plane"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -70,6 +72,10 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.access-models.v1",
         "relation_type": "part_of"
       },
@@ -81,5 +87,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "8eb4f90a4a8332d237cff4eaa921110a2c5e3230905016ade061b83a2a59329d0929e76b4028771db8792b888e8b3edf7f080182330242c1d92b5b9d4b486121"
+  "integrity_sha3_512": "2da211bde025afb62f301379da77c3a11dcdd9257196fe26b0c628a8ccf21fa965d9b96a90758e4f93420a11b1bd88d2b351074f15c8294756f8b7e9a926ab1e"
 }

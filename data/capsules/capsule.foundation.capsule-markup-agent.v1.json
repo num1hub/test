@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-markup-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T12:44:00Z",
+    "updated_at": "2026-03-07T12:44:00Z",
+    "name": "Capsule Markup Agent",
+    "semantic_hash": "capsule-markup-agent-metadata-neuro-legibility-annotation-quality",
+    "source": {
+      "uri": "n1hub://specs/vault-stewardship-cluster-2026-03-07",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 21,
+    "estimatedHours": 160,
+    "actualHours": 30,
+    "dueDate": "2026-09-16",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Markup Agent\n\n## 1. Definition and Essence\nCapsule Markup Agent is the annotation and legibility worker of the N1Hub vault. It improves metadata, summaries, keywords, capsule naming, and structural clarity so capsules are not merely valid JSON objects, but high-quality semantic artifacts that humans and agents can navigate with confidence.\n\n## 2. Core Responsibilities\n- `metadata_hardening` improves naming, tiering, priority, and other structural metadata when they are weak or inconsistent.\n- `neuro_concentrate_polish` strengthens summaries and keywords so capsules are easier to retrieve and reason about.\n- `taxonomy_consistency` watches type, subtype, and graph vocabulary discipline.\n- `schema_gap_repair` catches cases where a capsule is technically present but semantically under-marked.\n- `retrieval_quality_improvement` makes capsules easier for Librarian, Assistant, and background agents to use correctly.\n\n## 3. N1Hub Role\nIn N1Hub this agent keeps the vault readable. It is especially important because the system is expected to ingest large volumes of user thought, mined material, and agent-generated structure. Without markup work, the vault may remain valid while becoming harder and harder to navigate.\n\n## 4. Philosophical Alignment\nCapsule Markup Agent serves To Dig Deep by making depth legible. It refuses the false tradeoff where a vault can be rich in content but poor in semantic clarity."
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Markup Agent is the semantic annotation worker of the N1Hub vault. It improves metadata, summaries, keywords, naming, and taxonomy so capsules remain easy to retrieve and reason about for both humans and agents. The role matters because a vault can pass structural validation yet still be semantically weak, hard to navigate, and costly to use as memory. By making markup an explicit agent function, N1Hub turns legibility and retrieval quality into a continuous maintenance lane rather than an afterthought.",
+    "keywords": [
+      "capsule-markup-agent",
+      "metadata",
+      "neuro-concentrate",
+      "semantic-legibility",
+      "capsule-annotation",
+      "vault-stewardship",
+      "retrieval",
+      "capsuleos-schema",
+      "background-agents",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-markup-agent-metadata-neuro-legibility-annotation-quality"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos-schema.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "2a909c95be4a27746c96c1795083f654495f805b8cdcbc933501df143547d1a35bbbbe021a3a61c939862ced35fb619a355101f4a779f52819ffcce28a7df2a0"
+}

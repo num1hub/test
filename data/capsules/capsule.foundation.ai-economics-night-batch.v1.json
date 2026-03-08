@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-economics-night-batch.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-08T19:10:00Z",
     "name": "AI Economics: Night and Batch Routing",
     "semantic_hash": "ai-economics-night-batch-subscription-api-offpeak-budget",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Definition and Essence\nAI Economics: Night and Batch Routing defines the cost discipline for the N1Hub intelligence stack. It decides how subscription-backed access, standard APIs, and off-peak or batch pricing should be combined so the system can stay always-on without becoming economically irrational.\n\n## 2. Core Heuristics\n- `subscription_for_symbiosis` means the subscription seat should be saturated for high-frequency human-assistant interaction before expensive API usage is wasted on the same manual loop.\n- `api_for_programmable_automation` means Symphony, N-Infinity, DeepMine, and other unattended lanes should default to programmable API access.\n- `night_for_heavy_compute` means large mining, graph maintenance, synthesis, and revalidation jobs should preferentially move into off-peak windows.\n- `discount_capture` means the scheduler should actively target provider-specific batch or night discounts when available, with internal planning assumptions ranging from deep savings rather than flat daytime rates.\n- `heuristic_not_dogma` means a subscription may deliver an API-equivalent yield far above its sticker price for one user, but the exact multiple is a planning heuristic, not a permanent law of every provider.\n\n## 3. N1Hub Role\nIn N1Hub this capsule explains why always-on agents should not spend intelligence blindly. The Personal AI Assistant can lean on subscription-backed channels for rich daytime symbiosis, while DeepMine and the background runtime shift heavy or repetitive workloads into programmable night and batch lanes.\n\n## 4. Integration\n- **Sleep-Time Compute** defines the off-peak windows and eligible workload classes.\n- **Night Shift Autonomy** defines when unattended mutation is allowed to dispatch.\n- **AI Wallet** stores the credentials and bridge endpoints that make routing possible.\n- **Hybrid LLM Access** defines the supply-side model; this capsule defines the spending discipline applied to that supply.\n\n## 5. Philosophical Alignment\nAI Economics: Night and Batch Routing supports To Dig Deep by making depth financially sustainable instead of turning intelligence into uncontrolled burn."
+    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Definition and Essence\nAI Economics: Night and Batch Routing defines the cost discipline for the N1Hub intelligence stack. It decides how subscription-backed access, hosted inference, standard APIs, and off-peak or batch pricing should be combined so the system can stay always-on without becoming economically irrational.\n\n## 2. Core Heuristics\n- `subscription_for_symbiosis` means the subscription seat should be saturated for high-frequency human-assistant interaction before expensive API usage is wasted on the same manual loop.\n- `api_for_programmable_automation` means Symphony, N-Infinity, DeepMine, and other unattended lanes should default to programmable API or managed inference access.\n- `night_for_heavy_compute` means large mining, graph maintenance, synthesis, and revalidation jobs should preferentially move into off-peak windows.\n- `discount_capture` means the scheduler should actively target provider-specific batch or night discounts when available, with internal planning assumptions ranging from deep savings rather than flat daytime rates.\n- `budget_projection` means the control plane and operator surfaces should make lane burn, cooldown, and budget posture visible enough for human steering.\n- `heuristic_not_dogma` means a subscription may deliver an API-equivalent yield far above its sticker price for one user, but the exact multiple is a planning heuristic, not a permanent law of every provider.\n\n## 3. N1Hub Role\nIn N1Hub this capsule explains why always-on agents should not spend intelligence blindly. The Personal AI Assistant can lean on subscription-backed channels for rich daytime symbiosis, while DeepMine and the background runtime shift heavy or repetitive workloads into programmable night and batch lanes. Economic posture should therefore influence assignment routing, daemon wakeups, and which lanes are allowed to run unattended.\n\n## 4. Integration\n- **Sleep-Time Compute** defines the off-peak windows and eligible workload classes.\n- **Night Shift Autonomy** defines when unattended mutation is allowed to dispatch.\n- **AI Wallet** stores the credentials and bridge endpoints that make routing possible.\n- **Hybrid LLM Access** defines the supply-side model; this capsule defines the spending discipline applied to that supply.\n- **Agent Control Plane** projects budgets, lane burn, and policy state into governable operational truth.\n\n## 5. Philosophical Alignment\nAI Economics: Night and Batch Routing supports To Dig Deep by making depth financially sustainable instead of turning intelligence into uncontrolled burn.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Economics: Night and Batch Routing defines the operating discipline that decides when N1Hub should spend subscription throughput, when it should spend token-metered API, and when it should push heavy work into off-peak or batch windows. The capsule matters because cost control is not a finance afterthought; it directly shapes which agents can run continuously and which jobs are economically rational. N1Hub treats subscription value as an interactive seat to saturate, API as programmable industrial fuel, and night or batch windows as the place to harvest the largest available provider discounts without degrading daytime symbiosis.",
+    "summary": "AI Economics: Night and Batch Routing defines the operating discipline that decides when N1Hub should spend subscription throughput, when it should spend token-metered API or hosted inference, and when it should push heavy work into off-peak or batch windows. The capsule matters because cost control is not a finance afterthought; it directly shapes which agents can run continuously, which jobs are economically rational, and when autonomy should cool down. N1Hub treats subscription value as an interactive seat to saturate, programmable lanes as industrial fuel, and night or batch windows as the place to harvest the largest available provider discounts without degrading daytime symbiosis.",
     "keywords": [
       "ai-economics",
       "night-batch-routing",
@@ -31,7 +31,9 @@
       "api",
       "sleep-time-compute",
       "night-shift-autonomy",
-      "deepmine"
+      "deepmine",
+      "budget-projection",
+      "control-plane"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -70,6 +72,10 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.access-models.v1",
         "relation_type": "part_of"
       },
@@ -81,5 +87,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f61081546792dbca28d44e6cc01ea6bbee7869ab5c4d9070b9abbfeca5ce94cb791cb084cc79141ede20472014e19da861573273f72b76919ce69ee012984097"
+  "integrity_sha3_512": "286efe13d30f94aa3749df924524612116f47f558a847d6133e9a41450458319a7d6631563683ffd56c86cfea99878a89abd6492db94f5193edf8a119b8843cf"
 }

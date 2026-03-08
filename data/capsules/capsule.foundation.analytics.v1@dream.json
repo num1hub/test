@@ -22,7 +22,7 @@
     "content": "# Analytics\n\n## 1. Definition and Essence\nAnalytics defines the aggregation engine that transforms operational events and metric capsules into reports, trends, and diagnostics. It supports decision-making by converting raw telemetry into interpretable longitudinal insight across projects and modules.\n\n## 2. Core Attributes\n- `aggregation_jobs` configured metric rollup processes\n- `report_definitions` canonical report templates and filters\n- `trend_models` moving averages and anomaly detection profiles\n- `retention_policy` historical storage and archive boundaries\n- `consumers` dashboards, assistant prompts, and governance views\n\n## 3. Lifecycle\nAnalytics ingests tracker and planner signals, computes derived metrics, publishes report artifacts, and refreshes dashboard surfaces on schedule or event triggers.\n\n## 4. Integration\n- **Workspace:** provides shared analytical intelligence surface.\n- **Tracker and Metric capsules:** primary telemetry providers.\n- **Dashboard:** visualizes output in interactive widgets.\n- **Personal AI Assistant:** uses analytics for recommendations.\n\n## 5. Philosophical Alignment\nAnalytics furthers To Dig Deep by replacing intuition-only judgments with auditable patterns and evidence-backed retrospection.\n"
   },
   "neuro_concentrate": {
-    "summary": "Analytics in the Dream branch carries the target state for deeper evidence synthesis across execution, project health, and long-horizon learning. It points toward stronger trend modeling, better retrospective intelligence, and more meaningful rollups that can inform planning rather than only describe the past. The capsule matters because real analytics already aggregates signals, but future analytics should convert them into sharper judgment. Dream keeps that higher analytical ambition explicit and gives the branch an evidence architecture for wiser prioritization.",
+    "summary": "Analytics in the Dream branch carries the target state for deeper evidence synthesis across execution, project health, capsule stewardship, and long-horizon learning. It points toward stronger trend modeling, better retrospective intelligence, and more meaningful rollups that can inform planning rather than only describe the past. The capsule matters because real analytics already aggregates signals, but future analytics should convert them into sharper judgment. Dream keeps that higher analytical ambition explicit and gives the branch an evidence architecture for wiser prioritization.",
     "keywords": [
       "analytics",
       "reports",
@@ -76,5 +76,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f094e3614af65bf18d6b4a003a53671194b0b9d2129617d81d1499254d8356eaf62e89a43b44b03bee32fc5b3407de7271f9cb350935d1001a8f266d3b768ef9"
+  "integrity_sha3_512": "e6f35835ba05cb0438bc3133843584eadd051d7602c477512cc6f0b62182ed762d968f2258ac637bcff12f76381e749191f5479486b8c0619a8ee95aaa56a7ab"
 }

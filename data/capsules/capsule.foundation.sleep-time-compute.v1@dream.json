@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute defines off-peak execution policy for background workloads such as revalidation, analytics compaction, and suggestion generation. It optimizes cost, throughput, and user experience by shifting heavy tasks outside active interaction windows.\n\n## 2. Core Attributes\n- `offpeak_windows` schedule rules by timezone and user context\n- `workload_classes` jobs eligible for deferred execution\n- `budget_limits` API/token consumption boundaries\n- `priority_exceptions` urgent tasks exempt from deferment\n- `scheduler_feedback` metrics for policy adjustment\n\n## 3. Lifecycle\nPolicies are configured from preferences and platform constraints, applied by scheduler services, and continuously tuned based on latency, cost, and completion outcomes.\n\n## 4. Integration\n- **Planner/Tracker:** supplies deferred workload candidates.\n- **A2C and DeepMine:** major computational consumers.\n- **User Preferences:** provides local timezone and quiet windows.\n- **Analytics:** evaluates policy efficiency and tradeoffs.\n\n## 5. Philosophical Alignment\nSleep-Time Compute supports To Dig Deep by preserving daytime focus while still compounding progress through disciplined background execution.\n"
+    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute in Dream describes a more mature off-peak compute fabric for N1Hub. It imagines wallet-aware provider selection, richer off-peak classes, better respect for human rhythm, and stronger coordination between control-plane policy and quiet execution.\n\n## 2. Core Attributes\n- `offpeak_windows` derived from timezone, profile, and learned rhythm\n- `workload_classes` richer separation between planning, mining, validation, and refinement work\n- `budget_limits` per-lane and per-shift cost posture\n- `discount_capture` stronger use of batch, hosted inference, and off-peak lanes\n- `human_protection_rules` keep sleep and waking attention intact\n- `scheduler_feedback` measures savings, throughput, and next-day usefulness\n\n## 3. Dream Direction\nThe Dream branch keeps this capsule oriented toward a future where N1Hub does not merely delay jobs, but actively composes the right unattended workload mix for each night based on user rhythm, wallet state, and swarm backlog.\n\n## 4. Integration\n- **Profile and User Preferences:** shape personal rhythm and quiet expectations.\n- **AI Wallet and Hybrid LLM Access:** expose the provider lanes that off-peak routing can exploit.\n- **Background Agent Runtime and Agent Control Plane:** turn policy into live daemon behavior.\n- **DeepMine, A2C, and Vault Stewardship Swarm:** remain the main industrial consumers.\n\n## 5. Philosophical Alignment\nSleep-Time Compute in Dream preserves the idea that quiet progress should feel like compounding intelligence, not like invisible stress.\n"
   },
   "neuro_concentrate": {
-    "summary": "Sleep-Time Compute in the Dream branch describes a more strategic background execution fabric for the ecosystem. It imagines stronger off-peak scheduling policy, better cost shaping, richer workload classes, and more intelligent integration with planner, tracker, and user context than the current baseline provides. The capsule matters because invisible progress only stays valuable when it remains bounded and intentional. Dream therefore preserves Sleep-Time Compute as a future engine for quiet compounding work, not just deferred job execution.",
+    "summary": "Sleep-Time Compute in Dream describes a more mature background execution fabric for the ecosystem. It imagines stronger off-peak scheduling, wallet-aware routing, richer workload classes, and tighter coordination with human rhythm than the current baseline provides. The capsule matters because invisible progress only stays valuable when it remains bounded, economical, and supportive of the person. Dream therefore preserves Sleep-Time Compute as a future engine for quiet compounding work, not just deferred job execution.",
     "keywords": [
       "sleep-time-compute",
       "off-peak",
@@ -61,10 +61,26 @@
       {
         "target_id": "capsule.foundation.deepmine.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "da00ef650003839038e72e534e9b00cf7acb0b4921c3fcbd27a90d938e224fd2cedb142a98558ea726c7c1b1bd97b88e07c0fdf0b9b87f9ddfe126b595c596e1"
+  "integrity_sha3_512": "57462fda0e06f88f71f63dcaef93306244ec8cf526a6d1f81c76712d8e16052a02d8c26c169f8aea472ec84875d15ebb72309db5217b8fc2edd5645a72a9f599"
 }

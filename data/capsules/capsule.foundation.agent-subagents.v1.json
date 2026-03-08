@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-subagents.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T18:15:00Z",
+    "updated_at": "2026-03-08T23:58:00Z",
+    "name": "Agent Subagents",
+    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor",
+    "source": {
+      "uri": "https://docs.langchain.com/oss/javascript/deepagents/harness",
+      "type": "web_documentation"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 170,
+    "actualHours": 30,
+    "dueDate": "2026-08-21",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Subagents\n\n## 1. Definition and Essence\nAgent Subagents defines the pattern of spawning bounded specialist workers instead of forcing one giant agent to do every step of reasoning, planning, critique, and execution. A subagent owns a narrow task, receives a scoped context pack, returns a compact artifact, and then exits.\n\n## 2. Core Responsibilities\n- `triage_router` selects the right specialist lane for the current job.\n- `bounded_specialists` keep scout, foreman, reviewer, executor, librarian, or refactor work separate.\n- `structured_handoffs` pass context bundles, not vague conversational residue.\n- `artifact_return` requires each subagent to leave behind a plan, review note, job packet, or execution summary.\n- `assignment_handles` keep multi-step work attached to durable assignment identity instead of informal chain memory.\n- `budget_and_timeboxing` constrains runaway loops and prevents one worker from becoming the whole runtime.\n- `reviewer_veto` keeps a critical lane available before risky execution advances.\n- `lane_specialization` allows different providers, harnesses, or cost profiles to back different workers without confusing responsibility.\n\n## 3. N1Hub Role\nIn N1Hub this pattern is already visible inside Vault Stewardship Swarm and should expand across DeepMine, Symphony, and Personal AI Assistant. The assistant should triage. Scout should explore. Foreman should compress into a strategy. Reviewer should challenge it. Executor should perform one bounded step. This makes the swarm legible, debuggable, and easier to harden, especially when API lanes and ChatGPT/Codex lanes cooperate.\n\n## 4. Architectural Value\nSubagents lower prompt entropy, reduce role confusion, and make hybrid provider use more realistic because different workers can be assigned to different model lanes, harnesses, and budgets while still returning typed artifacts to the same controller.\n\n## 5. Operational Rule\nA subagent should end with a bounded artifact or a bounded refusal. If it leaves only vague momentum, it should probably be split again.\n\n## 6. Philosophical Alignment\nAgent Subagents supports To Dig Deep by preferring many bounded deep passes over one inflated shallow pseudo-genius."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Subagents defines the pattern of using many bounded specialist workers instead of one overloaded agent. It introduces triage routing, structured handoffs, compact artifact return, durable assignment handles, budgeted timeboxes, and reviewer veto before execution. For N1Hub this pattern explains how Vault Stewardship Swarm, DeepMine, Symphony, and Personal AI Assistant can cooperate without collapsing into a single opaque prompt loop. It also clarifies how different providers, skills, harnesses, and cost lanes can be assigned to different workers without turning the swarm into an unstructured crowd.",
+    "keywords": [
+      "agent-subagents",
+      "bounded-workers",
+      "triage-router",
+      "handoffs",
+      "reviewer-veto",
+      "scout",
+      "foreman",
+      "executor",
+      "vault-stewardship-swarm",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b5624fe53aed195820dd57aabb4400a77e49fdb5b2ef1fa34d865c523ea400618049d48f9d4e60e9b0ab8b570927b2456bbe84ef24e962febd03b06705b51e78"
+}

@@ -19,15 +19,16 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: The Ultimate Project Platform\n\n## 1. Vision of the Digital Continent\nN1Hub.com is not merely a productivity tool or a note-taking app; it is a sprawling digital continent designed explicitly for the creation, development, and monetization of sovereign projects. It is a digital habitat where creators, builders, and visionaries arrive to transform chaotic ideas into perfectly structured, evolving entities. Driven by the philosophy \"To Dig Deep\" and the monumental leap \"Between Zero and One,\" N1Hub empowers anyone to build projects of any complexity—from personal task lists to enterprise-scale digital twins.\n\n## 2. The Hub/Atomic Paradigm in Action\nOn N1Hub, every project is a **capsule-hub**. It is a structural nexus that aggregates atomic capsules—tasks, documents, user profiles, financial ledgers, and physical objects—into a single, interconnected, and cryptographically sealed knowledge graph. This architecture ensures absolute data integrity and prevents the loss of context that plagues traditional folder-based systems.\n\n## 3. The Full Project Lifecycle\n- **Genesis**: Users can instantiate projects from scratch, utilize A2C to parse external blueprints, or leverage the AI Project Generator to structure abstract ideas instantly.\n- **Execution**: The integrated Workspace (featuring a Planner and Tracker) acts as the command center, managing the transition of operational capsules from `draft` to `sovereign`.\n- **Collaboration**: Projects inherently support granular roles (Owner, Contributor, Investor). Team members collaborate within the same graph, communicating via interconnected discussion capsules.\n- **Monetization**: Mature projects can be sealed as Sovereign Templates and published to the N1Hub Marketplace. Creators earn royalties whenever their project architecture is forked or instantiated by others.\n\n## 4. Unparalleled Architectural Features\n- **Real/Dream Branching**: Creators can safely fork a project graph. The `Real` branch maintains the current reality, while the `Dream` branch allows for speculative design changes. A recursive diff algorithm automatically calculates the gap (e.g., generating cost estimates or resource requirements).\n- **Agentic Evolution**: N-Infinity background agents continuously patrol active projects, discovering hidden semantic links, pruning dead ends, and proposing novel structural improvements.\n- **DeepMine Supply**: Projects can pull raw intelligence directly from the world's most advanced LLMs, ensuring that the knowledge within N1Hub remains cutting-edge."
+    "content": "# N1Hub Projects\n\n## 1. Dream Direction\nThe Dream branch pushes the portfolio itself toward a cleaner and more intelligible fabric: a visible live core, a strategic halo, and a remembered archive instead of one flat soup of projects.\n\n## 2. Desired Future State\n- a portfolio map that clearly distinguishes current platform work, strategic expansion lines, and archived memory.\n- stronger linkage between project hubs and the capsule-production stack beneath them.\n- cleaner Real/Dream posture for every major initiative.\n- more explicit project-capital paths from active work into templates, marketplace circulation, and institutional memory.\n- better portfolio hygiene so the platform can grow without losing legibility.\n\n## 3. Why It Matters\nDream preserves the idea that projects are not merely records. They are one of the main structural ways N1Hub thinks, plans, executes, archives, and compounds value over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1Hub Projects in the Dream branch represents a more mature portfolio fabric for project creation, branching, collaboration, delivery, and template publication. It pushes toward cleaner transitions between project inception, project operations, microproject decomposition, and later commercialization without breaking lineage. The capsule matters because projects are one of the main units through which the ecosystem becomes useful to humans and teams. Dream therefore preserves a stronger project model where execution and capital formation stay connected from the beginning rather than stitched together later.",
+    "summary": "N1Hub Projects in the Dream branch represents a more mature portfolio fabric for project creation, branching, delivery, archive memory, and later circulation. It pushes toward a clearer live core, strategic halo, and remembered archive without breaking lineage. The branch matters because N1Hub is accumulating not only capsules, but whole project lines that need to remain intelligible as one evolving landscape. Dream therefore preserves a stronger project model where execution, portfolio topology, archive memory, and capital formation stay connected from the beginning rather than stitched together later.",
     "keywords": [
       "n1hub",
       "project-platform",
       "digital-habitat",
       "capsule-hub",
+      "portfolio-topology",
       "marketplace",
       "real-dream-branching",
       "n-infinity-agents",
@@ -80,10 +81,6 @@
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.project.v1",
-        "relation_type": "derived_from"
-      },
-      {
         "target_id": "capsule.foundation.planner.v1",
         "relation_type": "references"
       },
@@ -116,7 +113,11 @@
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.project.restart-challenge.v1",
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
         "relation_type": "references"
       },
       {
@@ -134,14 +135,10 @@
       {
         "target_id": "capsule.project.tilesimsv2.v1",
         "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n1hub.v1",
-        "relation_type": "part_of"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2be0bd0f4e6852019d0cc3801627a9c94f46be2eacb19291689a3883f30cb2b973d7c0274fc7737b801f31a8c807ad5c4b284fd5cef8a90423c3e07525effbee"
+  "integrity_sha3_512": "aeafb5d516be26758b42c0c35b261a19d32f6f336903551c8cd2fdf20ed3087e822226ef89d58dbd1b68d54fe54205c40f43178fde542bda13c676045b4229cc"
 }

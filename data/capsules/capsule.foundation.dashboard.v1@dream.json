@@ -22,7 +22,7 @@
     "content": "# Dashboard\n\n## 1. Definition and Essence\nDashboard defines the workspace projection that composes widgets into a contextual operational cockpit. It provides a unified view of planning, tracking, analytics, and alerts without replacing the underlying capsule graph as source of truth.\n\n## 2. Core Attributes\n- `layout` canonical arrangement definition for widget regions\n- `widget_refs` linked widget capsules included in view\n- `refresh_policy` cadence and event-triggered updates\n- `view_scope` personal, team, project-specific dashboard context\n- `interaction_state` filters and temporary UI preferences\n\n## 3. Lifecycle\nDashboards are configured by users or templates, populated from graph data, refreshed continuously, and archived or forked as priorities evolve.\n\n## 4. Integration\n- **Workspace:** part_of core user habitat.\n- **Widget Capsule:** atomic dashboard building block.\n- **Analytics and Tracker:** supply primary data streams.\n- **Planner:** surfaces schedule and risk summaries.\n\n## 5. Philosophical Alignment\nDashboards reinforce To Dig Deep by exposing meaningful signals at a glance while keeping drill-down paths into underlying capsules.\n"
   },
   "neuro_concentrate": {
-    "summary": "Dashboard in the Dream branch is the future command surface where the most important graph signals arrive already structured for decisions. It imagines richer widget composition, stronger project and branch views, better prioritization cues, and less noise between the user and the state that actually matters. The capsule matters because a dashboard is where compression quality becomes visible. Dream preserves the vision of a dashboard that guides action instead of merely displaying data, making attention design a strategic asset.",
+    "summary": "Dashboard in the Dream branch is the future command surface where the most important graph signals arrive already structured for decisions. It imagines richer widget composition, stronger project and branch views, clearer capsule-health and swarm activity surfaces, better prioritization cues, and less noise between the user and the state that actually matters. The capsule matters because a dashboard is where compression quality becomes visible. Dream preserves the vision of a dashboard that guides action instead of merely displaying data, making attention design a strategic asset.",
     "keywords": [
       "dashboard",
       "workspace",
@@ -80,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a1de852a87a92b6971cc937f7b3709db71d5443743f6d43622c02027766dc58bbc5a0e8a265e5b17589e82d561b29b1ea879d1fd54945544ddfbdbf233061cb9"
+  "integrity_sha3_512": "fd858ce63e2ead9f90d2f62894f8de910425b1829e11f58bbb12e71b12d8fd3a5cde8c7f8c50c640ec5a6d16999013be68ee869e35cde8022fc0561b9445a43d"
 }

@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-job.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-08T21:25:00Z",
     "name": "Capsule Job",
     "semantic_hash": "capsule-job-envelope-graph-work-target-agent-workspace",
     "source": {
@@ -15,18 +15,18 @@
       "type": "repository_implementation"
     },
     "priority": "high",
-    "progress": 39,
+    "progress": 45,
     "estimatedHours": 160,
-    "actualHours": 66,
+    "actualHours": 78,
     "dueDate": "2026-07-30",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Job\n\n## 1. Definition and Essence\nCapsule Job defines the normalized work envelope for background capsule-graph execution in N1Hub. It turns raw graph opportunities into explicit jobs with a target agent, scope capsules, prompt context, priority, cooldown rules, and execution references.\n\n## 2. Core Responsibilities\n- `graph_scope` identifies which capsules or subgraphs the job is about.\n- `target_agent` binds the work to Weaver, Gardener, Parliament, Innovator, or another specialized lane.\n- `execution_context` carries the rendered task frame, workspace path, and tool expectations.\n- `priority_and_cooldown` controls when the job should run again and when it should rest.\n- `outcome_refs` connect the job to run attempts, session telemetry, and resulting capsule changes.\n\n## 3. N1Hub Integration\nIn N1Hub this job envelope is how `capsule_graph` work becomes schedulable through Symphony and meaningful to N-Infinity. It is the missing unit between a living graph signal and a real isolated execution attempt.\n\n## 4. Philosophical Alignment\nCapsule Job supports To Dig Deep by forcing background work to name its graph scope and intended transformation instead of wandering through the vault without a bounded task object.\n"
+    "content": "# Capsule Job\n\n## 1. Definition and Essence\nCapsule Job defines the normalized work envelope for background capsule-graph execution in N1Hub. It turns raw graph opportunities into explicit jobs with a target agent, scope capsules, prompt context, priority, cooldown rules, assignment origin, and execution references.\n\n## 2. Core Responsibilities\n- `graph_scope` identifies which capsules or subgraphs the job is about.\n- `target_agent` binds the work to Weaver, Gardener, Parliament, Innovator, or another specialized lane.\n- `workstream_type` names whether the job is decomposition, markup, graph refactor, validation, review, or a mixed bundle.\n- `origin_and_assignment` records which issue, task, comment, assistant action, or operator action created the job.\n- `execution_context` carries the rendered task frame, workspace path, and tool expectations.\n- `context_bundle_ref` points to the bounded evidence pack prepared for the run.\n- `branch_target` declares whether the intended output belongs in Dream, review, quarantine, or a promotion-ready path.\n- `evidence_threshold` states how much support is required before the job may propose stronger mutation.\n- `clarification_return_path` defines where follow-up questions or partial findings should surface.\n- `priority_and_cooldown` controls when the job should run again and when it should rest.\n- `trace_and_eval_refs` connect the job to run lineage, reviewer findings, and quality signals.\n- `status_projection` maps progress, failure, and completion into control, notification, or review surfaces.\n- `outcome_refs` connect the job to run attempts, session telemetry, and resulting capsule changes.\n- `promotion_gate` indicates whether the work stops in Dream, requires review, or is eligible for further promotion.\n\n## 3. N1Hub Integration\nIn N1Hub this job envelope is how `capsule_graph` work becomes schedulable through Symphony and meaningful to N-Infinity. It is the missing unit between a living graph signal and a real isolated execution attempt. It should increasingly be the main boundary object passed between scout, foreman, reviewer, and executor lanes. The stronger 2026 reading is that jobs should also survive async assignment and cross-client continuity: work may begin from an issue, a comment, a mobile surface, or an assistant action, yet still remain one bounded job with a visible return path. For N1Hub's current vault-first mission, Capsule Job also needs to encode whether work is only planning, Dream-safe execution, or promotion-sensitive review, so the swarm can improve capsules continuously without accidentally bypassing the branch discipline.\n\n## 4. Philosophical Alignment\nCapsule Job supports To Dig Deep by forcing background work to name its graph scope, its evidence pack, its assignment origin, its branch target, and its intended transformation instead of wandering through the vault without a bounded task object.\n"
   },
   "neuro_concentrate": {
-    "summary": "Capsule Job defines the schedulable work envelope for capsule-graph agents in N1Hub. It matters because background autonomy needs a normalized object that says what part of the graph should be examined, which agent should handle it, what workspace or tools are in scope, and how completion or cooldown should be tracked. By naming Capsule Job explicitly, the graph gains a clean bridge from N-Infinity opportunities to Symphony run attempts and resulting capsule changes.",
+    "summary": "Capsule Job defines the schedulable work envelope for capsule-graph agents in N1Hub. It matters because background autonomy needs a normalized object that says what part of the graph should be examined, which agent should handle it, which issue or surface originated the work, where clarifications should return, what workstream is intended, and how completion, cooldown, and promotion discipline should be tracked. By naming Capsule Job explicitly, the graph gains a clean bridge from N-Infinity opportunities or assistant delegation to Symphony run attempts, review, and resulting capsule changes while preserving Dream-first promotion discipline.",
     "keywords": [
       "capsule-job",
       "job-envelope",
@@ -37,7 +37,12 @@
       "run-attempt",
       "cooldown",
       "background-agents",
-      "n1hub"
+      "n1hub",
+      "context-bundle-ref",
+      "trace-and-eval-refs",
+      "promotion-gate",
+      "origin-and-assignment",
+      "review-lane"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -76,7 +81,43 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
         "relation_type": "references"
       },
       {
@@ -87,5 +128,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3bf75fbcc29f4eb7337a7d74691990b6be239cb12cc4511581e532296da63b826f4a745db76ffbd100e380e69589de74c2c1eeab074725630e4dc5d0293cb6c1"
+  "integrity_sha3_512": "8ebc4f1628bf4f4f7537efd2ff90685ead1ebd5261b0fc9de4b6e59d48faf384db5c1673cf5a5dfa7072691ffdaa404c25a68526b954689548a49545a8514ac0"
 }

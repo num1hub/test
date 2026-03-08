@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Memory State\n\n## 1. Definition and Essence\nAgent Memory State defines the persistent continuity layer for long-lived AI work in N1Hub. It captures checkpoints, session summaries, run history, cooldown records, compacted context, and resumable execution state so an agent can recover after time, failure, or deliberate pause.\n\n## 2. Core Responsibilities\n- `checkpoint_state` stores resumable progress instead of relying on one giant prompt history.\n- `session_summaries` compresses long interaction traces into usable continuation context.\n- `run_history` records what happened, when, and with which outcome.\n- `cooldown_and_backoff_memory` prevents background work from thrashing after success or repeated failure.\n- `state_separation` keeps identity, credentials, skill docs, and execution memory as distinct concerns.\n\n## 3. N1Hub Integration\nIn N1Hub this state layer bridges chat continuity, DeepMine routing context, Symphony run attempts, N-Infinity capsule jobs, and status surfaces. It is the reason background intelligence can resume with memory instead of restarting from zero every night.\n\n## 4. Philosophical Alignment\nAgent Memory State supports To Dig Deep by preserving the learned trail of reasoning and execution rather than forcing agents to simulate continuity from fragments.\n"
+    "content": "# Agent Memory State\n\n## 1. Definition and Essence\nAgent Memory State defines the persistent continuity layer for long-lived AI work in N1Hub. It captures checkpoints, session summaries, run history, cooldown records, compacted context, and resumable execution state so an agent can recover after time, failure, or deliberate pause.\n\n## 2. Core Responsibilities\n- `checkpoint_state` stores resumable progress instead of relying on one giant prompt history.\n- `session_summaries` compresses long interaction traces into usable continuation context.\n- `run_history` records what happened, when, and with which outcome.\n- `cooldown_and_backoff_memory` prevents background work from thrashing after success or repeated failure.\n- `memory_stratification` separates working memory, long-term memory, branch state, and durable artifacts.\n- `vault_memory_boundary` keeps capsule memory, personal memory, and agent execution memory distinct.\n- `state_separation` keeps identity, credentials, skill docs, and execution memory as distinct concerns.\n\n## 3. N1Hub Integration\nIn N1Hub this state layer bridges chat continuity, DeepMine routing context, Symphony run attempts, N-Infinity capsule jobs, and status surfaces. It is the reason background intelligence can resume with memory instead of restarting from zero every night. Dream extends this by making memory explicitly cross-client and by refusing to confuse the swarm's execution memory with the vault's durable truth.\n\n## 4. Philosophical Alignment\nAgent Memory State supports To Dig Deep by preserving the learned trail of reasoning and execution rather than forcing agents to simulate continuity from fragments.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Memory State defines the persistent continuity layer for N1Hub agents. It matters because background autonomy fails when every restart erases context, cooldown, and prior outcomes. This capsule formalizes checkpoints, compacted summaries, run history, and resumable execution state as a first-class object distinct from identity, credentials, or prompt text. It gives Symphony, N-Infinity, DeepMine, and future chat surfaces a shared place to reason about how long-lived agent memory should exist without collapsing into raw transcript sprawl.",
+    "summary": "Agent Memory State defines the persistent continuity layer for N1Hub agents. It matters because background autonomy fails when every restart erases context, cooldown, prior outcomes, or the boundary between session memory and durable vault truth. This capsule formalizes checkpoints, compacted summaries, run history, and resumable execution state as a first-class object distinct from identity, credentials, prompt text, and canonical capsules. It gives Symphony, N-Infinity, DeepMine, and future chat surfaces a shared place to reason about how long-lived agent memory should exist without collapsing into raw transcript sprawl.",
     "keywords": [
       "agent-memory-state",
       "checkpoints",
@@ -72,6 +72,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "references"
       },
@@ -83,5 +91,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0af29bb7576db270cc9592cbdcb51aeec386559eafd95c892e5d67b1f81e80185d6ca7343c8a802a7fa0ade6093cb6edcc9c55e474bca665bcf4b0398caa26e3"
+  "integrity_sha3_512": "ffc30ef0cfe6cba2745454cfca0bf7a8514436c9bc3bbf9bd3571148cc15b1366f3287f97b8017faa906fe062571d69df79816c9864417192c452232a386a9b5"
 }

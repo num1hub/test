@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:10:00Z",
     "semantic_hash": "core-first-spark-genesis-activation-bootstrap-cognitive-plane",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,10 +18,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core First Spark: Genesis Activation\n\n## 1. Function\nFirst Spark marks the activation point where constitutional doctrine becomes an operational graph.\n\n## 2. Meaning\nIt records the controlled transition from static foundational capsules to live cognitive expansion.\n\n## 3. Constraints\nActivation never bypasses validation physics. It authorizes growth only within constitutional boundaries.\n\n## 4. Audit Role\nThis capsule remains a provenance checkpoint for reconstructing and verifying genesis state over time."
+    "content": "# Core First Spark: Genesis Activation\n\n## 1. Function\nFirst Spark marks the activation point where constitutional doctrine becomes an operational graph.\n\n## 2. Meaning\nIt records the controlled transition from static foundational capsules to live cognitive expansion, second-brain formation, and later agent-bearing runtime growth.\n\n## 3. Constraints\nActivation never bypasses validation physics. It authorizes growth only within constitutional boundaries and never treats bootstrap as an excuse for hidden mutation.\n\n## 4. Audit Role\nThis capsule remains a provenance checkpoint for reconstructing and verifying genesis state over time, including the lawful origin of later branches, agents, and background autonomy."
   },
   "neuro_concentrate": {
-    "summary": "First Spark records the controlled bootstrap moment when constitutional doctrine became an active graph rather than a static specification. It matters because genesis should be reconstructable: future maintainers need to know when the system first crossed from authored principles into live, governed execution. This capsule makes that transition explicit without pretending bootstrap exempted the platform from validation or audit discipline. As a provenance checkpoint, First Spark lets the vault explain how CapsuleOS activation began, which laws already applied at that moment, and why later growth can still trace itself back to an accountable origin event.",
+    "summary": "First Spark records the controlled bootstrap moment when constitutional doctrine became an active graph rather than a static specification. It matters because genesis should be reconstructable: future maintainers need to know when the system first crossed from authored principles into live, governed execution and the early conditions from which the second brain and agent ecosystem later grew. This capsule makes that transition explicit without pretending bootstrap exempted the platform from validation or audit discipline. As a provenance checkpoint, First Spark lets the vault explain how CapsuleOS activation began, which laws already applied at that moment, and why later growth can still trace itself back to an accountable origin event.",
     "keywords": [
       "core",
       "first-spark",
@@ -31,7 +31,8 @@
       "provenance-checkpoint",
       "auditability",
       "capsuleos",
-      "origin-event"
+      "origin-event",
+      "second-brain"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -62,6 +63,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.core.compass.v1",
         "relation_type": "part_of"
       }
@@ -69,5 +74,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b99c558b5495cab52415886e781c4a3f7175f969d31e20e836a770118c117c4f20a0b8a93edf875e10fb2dc899a391f784eae7b6a68d71b441871192430efb41"
+  "integrity_sha3_512": "6cb3f15aa36196c017e21103d80faef4fbeec2a902e62490e3ad4639688ccc3a064e2b332f141c87605d628273d08f9b51bbb67fa20a9783805b6d7e61b8236a"
 }

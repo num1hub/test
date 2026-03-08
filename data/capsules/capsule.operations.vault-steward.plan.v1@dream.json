@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.operations.vault-steward.plan.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "operations",
+    "subtype": "atomic",
+    "author": "Vault Steward Agent",
+    "created_at": "2026-03-08T21:06:56.221Z",
+    "updated_at": "2026-03-08T21:08:28.726Z",
+    "name": "Vault Steward Plan",
+    "semantic_hash": "vault-steward-plan-operations-capsule-maintenance-planning",
+    "source": {
+      "uri": "n1hub://agents/vault-steward",
+      "type": "background_agent"
+    },
+    "priority": "high",
+    "progress": 100,
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Vault Steward Plan\n\n- Generated at: 2026-03-08T21:08:28.726Z\n- Run ID: vault-steward-1773004016221\n- Provider: github_models\n- Model: openai/gpt-4.1\n- Mode: continuous\n\n## Core Thesis\nThe scout plan is already appropriately bounded. The only justified next maintenance focus is `capsule.foundation.vault-stewardship-swarm.v1`, and there is no case for broadening the queue beyond that review.\n\n## Planning Goals\n- Keep the scout's single decomposition review for `capsule.foundation.vault-stewardship-swarm.v1` as the next maintenance action.\n- Constrain that review to subordinate capsule boundaries, edge normalization, and a recorded decomposition plan without broad content churn.\n- Re-rank oversized hubs only after this review completes instead of expanding the queue preemptively.\n- Review auto-seeded fallback jobs to make sure the swarm continues moving even when provider planning falls back to target-only reasoning.\n- Advance one bounded decomposition review for `capsule.foundation.vault-stewardship-swarm.v1`.\n- Constrain the review to subordinate capsule boundaries, edge normalization, and recording a decomposition plan.\n- Re-rank other oversized hubs only after this review completes; do not expand the queue preemptively.\n\n## Focus Capsules\n- capsule.foundation.vault-stewardship-swarm.v1: Best remaining high-priority structural review target: dense sovereign hub, moderate progress, no prior decomposition review, and no active queue coverage. [high]\n\n## Today\n- Autonomous graph refactor pass for foundation.vault-stewardship-swarm: Follow up capsule.foundation.vault-stewardship-swarm.v1 because Best remaining high-priority structural review target: dense sovereign hub, moderate progress, no prior decomposition review, and no active queue coverage.\n\n## Next 7 Days\n- No week-horizon tasks yet.\n\n## Backlog / Later\n- No later-horizon tasks yet.\n\n## Observations\n- `capsule.foundation.vault-stewardship-swarm.v1` is the remaining sovereign foundation hub flagged by the scout for possible structural compression, with 43 total links and progress 39.\n- There are no queued or accepted jobs covering this capsule, so the maintenance need is not already handled in the active queue.\n- Recent decomposition reviews on comparable dense hubs reduce the value of adding parallel review jobs now and make duplication the main risk.\n- The vault is otherwise healthy: zero orphaned capsules and no stated anomalies that would justify Real-branch factual correction work.\n- The swarm auto-seeded 1 fallback executor job from current capsule targets because the cycle had no surviving proposed jobs.\n- The main next-cycle risk is duplicate or parallel review work on `capsule.foundation.vault-stewardship-swarm.v1`, which would add little value and create churn.\n- Broadening into general content edits or Real-branch factual correction would be unsupported by the current vault state.\n- Leaving this hub unreviewed for another cycle preserves the only scout-flagged sovereign foundation compression candidate unchanged.\n\n## Swarm Lanes\n- Scout [completed] github_models / openai/gpt-4.1: Provider scout completed via github_models and produced a structured capsule-maintenance plan.\n- Codex Foreman [completed] chatgpt_local_codex: No additional refinement is needed beyond the scout recommendation. Preserve the single bounded Dream-branch decomposition review for `capsule.foundation.vault-stewardship-swarm.v1` and avoid adding extra jobs at this stage.\n- Codex Reviewer [completed] chatgpt_local_codex: Scout scope remains correctly bounded. The next cycle should stay focused on a single decomposition review of `capsule.foundation.vault-stewardship-swarm.v1`, which is the only remaining high-priority structural target and is not covered by any active queue work. The rest of the vault appears healthy, with no orphaned capsules or anomalies justifying broader maintenance.\n- Executor [completed] github_models: Autonomously executed 1 Dream-side capsule executor job across graph_refactor workstream.\n\n## Queue Snapshot\n- Total queued jobs: 0\n- Current-run jobs: 1\n- Current-run executed jobs: 1"
+  },
+  "neuro_concentrate": {
+    "summary": "Vault Steward Plan is the current planning artifact produced by the autonomous capsule agent, translating vault analysis into goals, immediate tasks, and queue-backed capsule work.",
+    "keywords": [
+      "vault-steward",
+      "agent-swarm",
+      "planning",
+      "capsule-maintenance",
+      "capsule-graph",
+      "background-agent"
+    ],
+    "confidence_vector": {
+      "extraction": 0.86,
+      "synthesis": 0.9,
+      "linking": 0.84,
+      "provenance_coverage": 0.82,
+      "validation_score": 0.9,
+      "contradiction_pressure": 0.05
+    },
+    "semantic_hash": "vault-steward-plan-operations-capsule-maintenance-planning"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "9dc788c77af136deee2f7abef698c0903714224e418a4f3a45a60655e45df44f4434b1bc7ade4637ab0b994db510cf290fb3868dc5bb0039109495acb0477ec5"
+}

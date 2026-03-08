@@ -22,7 +22,7 @@
     "content": "# Boost\n\n## 1. Definition and Essence\nBoost defines optional acceleration packages such as priority queues, additional model budget, and higher throughput for critical workflows. It formalizes short-term performance amplification with explicit policy boundaries.\n\n## 2. Core Attributes\n- `boost_type` compute, queue priority, model budget, storage\n- `allocation_window` duration and consumption boundaries\n- `eligibility_rules` who can request and apply boosts\n- `usage_meter` measured consumption against purchased capacity\n- `throttle_policy` fallback behavior when allocation is exhausted\n\n## 3. Lifecycle\nBoosts are activated via subscription or purchase, consumed by eligible workloads, monitored in real time, and retired or renewed according to policy and utilization.\n\n## 4. Integration\n- **N1 Pass:** may grant baseline boost allowances.\n- **DeepMine and A2C:** key consumers of accelerated processing.\n- **Tokenomics:** links boost spend to ecosystem economy.\n- **Workspace:** provides visibility into active acceleration state.\n\n## 5. Philosophical Alignment\nBoost capsules support To Dig Deep by enabling strategic bursts of execution intensity when timing and momentum matter most.\n"
   },
   "neuro_concentrate": {
-    "summary": "Boost in the Dream branch represents a more deliberate acceleration asset than the current throughput override model. It imagines clearer burst semantics, better fairness under shared compute, stronger coupling to entitlement policy, and more visible cost-to-impact tradeoffs when users push urgent workloads. The capsule matters because unmanaged urgency becomes architecture debt. Dream therefore preserves Boost as a future execution amplifier that can increase speed without dissolving governance, pricing clarity, or queue discipline.",
+    "summary": "Boost in the Dream branch represents a more deliberate acceleration asset than the current throughput override model. It imagines clearer burst semantics, better fairness under shared compute, stronger coupling to entitlement policy, and more visible cost-to-impact tradeoffs when users or agents push urgent workloads. The capsule matters because unmanaged urgency becomes architecture debt. Dream therefore preserves Boost as a future execution amplifier that can increase speed without dissolving governance, pricing clarity, or queue discipline.",
     "keywords": [
       "boost",
       "acceleration",
@@ -63,6 +63,10 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
       }
@@ -70,5 +74,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f5a45c6d8e097f1112d152883216ad02b3bcc0782fa6758f6eaedbdbc5cc7cd3e46b0fcf2b47e0ef38cefcbb39ec52a2e6a6c12e60c5736a707c973baf45aea5"
+  "integrity_sha3_512": "db09637083ca99b2aa0d7afccc5c43ab7b5252d114ec3d8dac491cbf00e2cf3855abf9883e5dbb4f100f912702e72ffaeca4f078fdadde4561a0d2a363d3ac25"
 }

@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It captures when heavy graph work should run, which timezone governs activation, how cooldowns and budgets are enforced, and how unfinished work is handed back to the next shift or to humans.\n\n## 2. Core Responsibilities\n- `execution_window` defines the scheduled hours when autonomous work is allowed to dispatch.\n- `budget_and_rate_discipline` keeps token spend and provider pressure bounded during unattended operation.\n- `economics_capture` pushes suitable mining, synthesis, and maintenance jobs into the cheapest reliable night or batch lanes.\n- `cooldown_policy` prevents the same graph area from being hammered every poll.\n- `handoff_rules` determine what remains queued, summarized, or escalated at shift end.\n- `operator_expectation` makes it clear that always-on services and always-dispatching autonomy are not the same thing.\n\n## 3. N1Hub Integration\nIn N1Hub this capsule formalizes the current operational compromise: Symphony and N-Infinity can stay alive continuously, but capsule-graph jobs are allowed to dispatch primarily inside explicit night windows. This gives the platform a real autonomy lane without pretending that unrestricted 24-hour mutation is already mature enough. It also protects the daytime human-plus-assistant symbiosis lane by pushing heavy programmable work toward cheaper unattended windows instead of letting it eat the same economics as live interactive use.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by reserving deep, high-latency work for disciplined windows where the system can think hard without disrupting active daytime use.\n"
+    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It names when the swarm may work without the human actively steering it, what class of actions remain Dream-safe, how provider budgets and cooldowns are enforced, and how unfinished work is handed back to the next shift, to daylight co-pilot mode, or to explicit human review.\n\n## 2. Core Responsibilities\n- `execution_window` defines the hours when unattended work is allowed to dispatch.\n- `day_vs_night_mode_shape` distinguishes human-facing co-pilot behavior from background industrial behavior.\n- `budget_and_rate_discipline` keeps token, credit, and provider-lane pressure bounded while nobody is watching live.\n- `economics_capture` pushes mining, synthesis, planning, and vault maintenance into the cheapest reliable lanes available.\n- `cooldown_policy` prevents one graph region from being hammered repeatedly.\n- `handoff_rules` decide what is completed, what stays queued, what becomes a morning review item, and what must wake a human immediately.\n- `mutation_boundary` keeps unattended work Dream-first until stronger evidence or explicit promotion exists.\n\n## 3. N1Hub Integration\nThis capsule formalizes the current compromise that makes N1Hub operationally sane: the platform may stay alive all day, but fully autonomous graph work should be concentrated inside explicit windows. During the day the user gets a legible assistant and review surface. During the night the swarm can mine, refine, validate, and plan more aggressively, but still inside bounded mutation rules. That is the bridge between co-pilot and true autonomy.\n\n## 4. Governance Value\nNight Shift Autonomy is not only about time. It is also about trust. A system that mutates knowledge while the human sleeps needs stronger rules than a system that merely chats. This capsule therefore depends on preferences, control-plane policy, provider health, wallet posture, security expectations, and notification semantics.\n\n## 5. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by giving deep unattended work a disciplined lane instead of pretending that permanent mutation equals maturity.\n"
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy defines the bounded scheduling policy for unattended background work in N1Hub. It matters because a service that runs continuously is not the same as one that should mutate the graph continuously. This capsule names the explicit night window, timezone, cooldown, budget, and handoff expectations that let Symphony and N-Infinity perform deep capsule work while reducing daytime risk. It now also makes the economic reason for that design more explicit: preserve the human symbiosis lane for live interaction, and push heavy programmable work into cheaper unattended windows whenever provider pricing allows it.",
+    "summary": "Night Shift Autonomy defines the bounded scheduling and governance policy for unattended background work in N1Hub. It matters because a service that stays alive continuously is not the same as a system that should mutate the vault continuously. This capsule names the explicit night window, cooldowns, budget posture, mutation boundaries, and morning handoff rules that let the swarm perform deep capsule work without collapsing the human co-pilot lane. It also makes the trust model explicit: unattended autonomy should be economically disciplined, Dream-first, and legible when the human returns.",
     "keywords": [
       "night-shift-autonomy",
       "night-window",
@@ -35,7 +35,10 @@
       "ai-economics",
       "deepmine",
       "symphony",
-      "n-infinity"
+      "n-infinity",
+      "day-night-modes",
+      "handoff",
+      "dream-safe"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -78,6 +81,30 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.notification.v1",
         "relation_type": "references"
       },
@@ -93,5 +120,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b4cfb5d856eb679a124e28c2c7c23467b3525c8f94928f918093d07408d9b42e533a92252f80084bfdfda2d14385d1dee2e6d68ea3db0fbf79961c94dbf856f1"
+  "integrity_sha3_512": "3c6bc099f53205269c00d3c8222f0dd8012302a7dffd321548c80de28a0e3da3e003cd99ea7c67e68c52f1544014f497e32a9809fcf9276f4c929b58d3645f88"
 }

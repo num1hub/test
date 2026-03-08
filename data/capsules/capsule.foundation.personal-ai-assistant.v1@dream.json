@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-07T10:22:14.249Z",
+    "updated_at": "2026-03-08T14:49:45.181Z",
     "name": "Personal AI Assistant",
     "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core",
     "priority": "high",
@@ -19,22 +19,26 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, and graph relationships, then provides timely suggestions, automation, and conversational control over the ecosystem.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Context awareness based on active projects, tasks, and user preference capsules.\n- Proactive planning support for daily, weekly, and long-horizon scheduling.\n- Horizon-aware conversation so one surface can answer about `today`, `tomorrow`, `30/60/90`, `365`, and `1000-day` intent.\n- Task automation for capsule creation, status updates, and reminders.\n- Knowledge retrieval and graph-grounded summaries.\n- Learning from accept or reject feedback loops.\n\n## 3. Architecture\nThe Assistant uses N-Infinity as the background intelligence layer, DeepMine for model access and reasoning pipelines, A2C for transforming user instructions into structured capsules, and Planning Horizon Engine for compressing the whole Dream field through Real into grounded next actions. Interaction logs are stored as operations capsules to preserve continuity and auditability.\n\n## 4. Integration\nIt orchestrates with Planner for decomposition and scheduling, with Planning Horizon Engine for multi-horizon distillation, with Tracker for overdue detection and follow-through, with project capsules for scope context, and with CapsuleOS guarantees for sovereignty and traceability.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine ideas into precise actions, exposing hidden dependencies, and sustaining momentum from zero to one.\n\n## 6. Future Potential\nVoice mode, secure third-party automations, richer delegation workflows, and more transparent horizon compression can evolve this module without weakening data sovereignty."
+    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, graph relationships, and the wider agent fleet, then provides timely suggestions, automation, and conversational control over the ecosystem.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Multimodal ingress over text, files, and voice transcripts.\n- Context awareness based on active projects, tasks, user preference capsules, and bounded context packs.\n- Proactive planning support for daily, weekly, and long-horizon scheduling.\n- Horizon-aware conversation so one surface can answer about `today`, `tomorrow`, `30/60/90`, `365`, and `1000-day` intent.\n- Task automation for capsule creation, status updates, and reminders.\n- Knowledge retrieval and graph-grounded summaries.\n- Delegation into deeper runtime lanes with clear return paths and human override.\n- Learning from accept or reject feedback loops.\n\n## 3. Architecture\nThe Assistant uses N-Infinity as the background intelligence layer, DeepMine for model access and reasoning pipelines, A2C for transforming user instructions into structured capsules, and Planning Horizon Engine for compressing the whole Dream field through Real into grounded next actions. Interaction logs are stored as operations capsules to preserve continuity and auditability. As Dream matures, the assistant should increasingly act as a daytime co-pilot and routing layer over bounded subagents rather than as one monolithic answer engine.\n\n## 4. Integration\nIt orchestrates with Planner for decomposition and scheduling, with Planning Horizon Engine for multi-horizon distillation, with Tracker for overdue detection and follow-through, with project capsules for scope context, with Agent Delegation for bounded handoffs, and with CapsuleOS guarantees for sovereignty and traceability.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine ideas into precise actions, exposing hidden dependencies, and sustaining momentum from zero to one while keeping the human as final governor.\n\n## 6. Future Potential\nVoice mode, secure third-party automations, richer delegation workflows, stronger swarm supervision, and more transparent horizon compression can evolve this module without weakening data sovereignty.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772981298754\n- Job: Decomposition review for personal-ai-assistant hub\n- Workstream: decomposition\n- Note: Sharpened the summary around this capsule's current role as a hub-level conversational and orchestration layer. Clear split pressure exists for later atomic capsules around horizon-aware conversation and planning, instruction-to-action automation, graph-grounded retrieval and context handling, and operations-capsule continuity and audit trails; keep this hub focused on coordinating those concerns rather than owning each implementation in detail."
   },
   "neuro_concentrate": {
-    "summary": "Personal AI Assistant in the Dream branch represents the transition from useful helper to graph-grounded operating copilot. It imagines stronger context continuity, better task and plan synthesis, more disciplined recommendation loops, and deeper coordination with Tracker, Planner, and N-Infinity. The capsule matters because the assistant is one of the main surfaces where sovereign knowledge becomes lived action. Dream preserves the more capable assistant the ecosystem is building toward, where the assistant becomes an execution partner rather than a convenience layer.",
+    "summary": "Personal AI Assistant is the conversational and orchestration hub in Dream: a context-aware collaborator inside N1Hub Workspace that uses project and task graph context, multimodal ingress, horizon-aware planning, delegation contracts, feedback loops, and integrations with N-Infinity, DeepMine, A2C, Planner, and Tracker to turn user intent into grounded actions, summaries, automations, and bounded handoffs while preserving continuity, auditability, explicit human governance, strong branch awareness, and review-aware workflows through durable operations capsules.",
     "keywords": [
       "ai-assistant",
       "jarvis",
       "copilot",
       "conversational",
-      "proactive",
+      "multimodal-ingress",
       "planning-horizon-engine",
       "task-automation",
       "context-awareness",
       "workspace",
       "n1hub",
-      "deepmine"
+      "deepmine",
+      "agent-delegation",
+      "vault-steward",
+      "multi-horizon",
+      "human-governance"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -82,6 +86,10 @@
       },
       {
         "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
         "relation_type": "references"
       },
       {
@@ -155,10 +163,55 @@
       {
         "target_id": "capsule.foundation.review-agent.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-07T19:02:49.112Z",
+        "event": "autonomous_maintenance_applied",
+        "agent": "vault-steward-maintainer",
+        "run_id": "vault-steward-1772910115283",
+        "job_id": "vault-steward-job-4f651927613ef84d",
+        "rationale": "The capsule content highlights the assistant's evolving role as a context-aware copilot with multiple integrated capabilities and orchestration with other modules. Emphasizing modularity and decomposition aligns with the stated goal to reduce structural overload and improve maintainability."
+      },
+      {
+        "at": "2026-03-07T20:11:07.507Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772914248929",
+        "job_id": "vault-steward-job-a610596807ee80a7",
+        "rationale": "The capsule content emphasizes modularity, orchestration with ecosystem components, and evolving from helper to execution partner, justifying summary refinement and keyword additions. The high link density and broad scope indicate a need for future decomposition, which is flagged in the maintenance note."
+      },
+      {
+        "at": "2026-03-07T20:18:25.229Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772914682879",
+        "job_id": "vault-steward-job-6fd97d08e2dfe769",
+        "rationale": "The capsule content describes a complex, modular AI assistant with multiple integrations and layered capabilities. The summary was improved to better reflect modular design and orchestration roles, while keywords were added to enhance discovery and classification. The hub's high link density suggests a future need for decomposition to improve maintainability and navigation."
+      },
+      {
+        "at": "2026-03-07T20:19:40.200Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772914760605",
+        "job_id": "vault-steward-job-1d5f0c5333be27a9",
+        "rationale": "The capsule content describes a complex, modular AI assistant with deep ecosystem integration and multi-horizon planning, justifying emphasis on modular design and execution partnership. The high link density and broad scope indicate a need for decomposition review and graph refactor keywords to guide future maintenance."
+      },
+      {
+        "at": "2026-03-08T14:49:45.181Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772981298754",
+        "job_id": "vault-steward-job-e850b9a68d810189",
+        "rationale": "The capsule content already spans distinct concerns across capabilities, architecture, integrations, and log persistence: natural-language control, multi-horizon planning, task automation, knowledge retrieval, ecosystem orchestration, and operations-capsule continuity. Updating the summary and keywords makes those boundaries easier to route and decompose later without changing the doctrine already stated here."
+      }
+    ]
   },
-  "integrity_sha3_512": "9dd6b68fc636932309a3ca7308389bf109d279e10bae5d1e38cb2b6bb2d1229dafe0bc30fee58390c1d021d663342239e13b3e24386c4047d1f80573dac099b2"
+  "integrity_sha3_512": "54b387605c7c0c69532297e4401795a2b61ecb92fea334e7cde3427e95664ef2d819e52ff577fa03479eb52c8322813aca5265d93fe3f06ea6bdb05ef9b9653b"
 }

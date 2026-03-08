@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Notification\n\n## 1. Definition and Essence\nNotification defines the canonical delivery event for in-app, email, push, and external channels. It carries message content, priority, read state, and delivery metadata while remaining decoupled from domain-specific entities like tasks or milestones.\n\n## 2. Core Attributes\n- `channel` in_app, email, push, telegram, webhook\n- `priority` delivery urgency and escalation policy\n- `read_state` unread, seen, acknowledged status\n- `payload` user-facing title/body plus action links\n- `delivery_result` sent, failed, retried with trace metadata\n\n## 3. Lifecycle\nNotifications are emitted by tracker or assistant flows, routed by channel adapters, retried on failure, and eventually archived with read and acknowledgment telemetry for analytics.\n\n## 4. Integration\n- **Tracker:** emits schedule and progress alerts.\n- **Reminder:** provides notification trigger semantics.\n- **Personal AI Assistant:** pushes proactive recommendations.\n- **Integrations Layer:** maps delivery into external channels.\n\n## 5. Philosophical Alignment\nNotification capsules uphold To Dig Deep by making significant graph events visible at the right moment, preserving situational awareness without noise.\n"
+    "content": "# Notification\n\n## 1. Definition and Essence\nNotification in Dream preserves a higher-quality attention system for N1Hub. It imagines fewer but more meaningful signals, better return paths, stronger distinction between human prompts and machine operational alerts, and more adaptive escalation based on context and preference.\n\n## 2. Dream Direction\nThe future notification layer should not simply route messages. It should know what kind of event is occurring, how urgent it truly is, whether it belongs to day co-pilot or night autonomy, and whether the human needs immediate interruption or later review.\n\n## 3. Integration\n- **Reminder and Tracker:** remain the main source of disciplined time pressure.\n- **Personal AI Assistant and AI Control Surface:** make signals interpretable.\n- **Agent Control Plane and Background Agent Runtime:** supply operational and failure alerts.\n- **Integrations:** deliver across external channels.\n\n## 4. Philosophical Alignment\nNotification in Dream preserves the idea that the second brain should sharpen attention rather than fragment it.\n"
   },
   "neuro_concentrate": {
-    "summary": "Notification is the channel-agnostic delivery event that carries significant signals from the graph into user attention. It separates message payload, urgency, channel, and delivery result from the domain object that triggered the alert, allowing the system to route reminders, assistant nudges, and tracker warnings consistently. The capsule matters because reliable attention management depends on explicit delivery semantics, not just content generation. By modeling notifications as first-class operational artifacts, the vault can audit what was sent, through which channel, with what result, and whether that signal changed behavior.",
+    "summary": "Notification in Dream describes a more mature attention system for N1Hub. It imagines clearer separation between human prompts and machine operational alerts, better escalation rules, richer return paths, explicit attention classes, and less noise overall for users and operators. The capsule matters because the second brain only helps when it sharpens attention instead of fragmenting it. Dream therefore keeps notification quality as a first-class design problem rather than a generic delivery concern.",
     "keywords": [
       "notification",
       "delivery",
@@ -30,7 +30,9 @@
       "channels",
       "priority",
       "tracker",
-      "assistant"
+      "assistant",
+      "return-path",
+      "attention-class"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -65,6 +67,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.symphony-observability.v1",
         "relation_type": "references"
       },
@@ -88,5 +98,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d91739ea9dfb12d0b47d498b63175ecbae3bf1a7bdbdef3231801555620b974fe88816d9a7cb7e9708145370173b3d01c8619badee6ee673aacc848a6ac25ca2"
+  "integrity_sha3_512": "3100252c470261305e8538a9381ce1a68e0cf9aebc48a73d3222b04cd01bd42d4aa0219932865d99ec37382dfe0d2bafb586cfce13980e23373c137f9ee45d31"
 }

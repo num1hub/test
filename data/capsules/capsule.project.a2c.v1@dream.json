@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Pipeline Project\n\n## 1. Definition and Essence\nA2C Pipeline Project governs execution of the ingestion-to-emission transformation stack, including stage reliability, performance optimization, and validation safety for converting arbitrary input into sovereign capsules.\n\n## 2. Core Attributes\n- `pipeline_scope` ingest through emit execution boundaries\n- `stage_backlog` prioritized stage-level implementation work\n- `quality_targets` throughput, latency, and validation pass metrics\n- `failure_modes` tracked pipeline risk categories and mitigations\n- `release_plan` staged rollout strategy for upgrades\n\n## 3. Lifecycle\nThis project iterates through stage enhancements, observability tuning, and policy hardening while preserving deterministic output quality under load.\n\n## 4. Integration\n- **CapsuleOS Project:** child stream under umbrella architecture.\n- **Foundation A2C:** implements conceptual pipeline model.\n- **Validator and Quarantine:** enforces trust boundaries.\n- **DeepMine:** model-routing dependency for extraction and synthesis.\n\n## 5. Philosophical Alignment\nA2C execution deepens To Dig Deep by transforming noisy reality into rigorous structured knowledge.\n"
+    "content": "# A2C Pipeline Project\n\n## 1. Dream Direction\nThe Dream branch pushes A2C toward a fuller industrial refinement line: cleaner branch routing, stronger quarantine behavior, richer evidence bundles, and higher-confidence promotion from source material into graph truth.\n\n## 2. Desired Future State\n- branch routing that reliably separates `Dream`, `Real`, and `quarantine` outcomes.\n- higher-throughput ingest and synthesis without degrading capsule quality.\n- richer evidence bundles that make promotion review faster and safer.\n- stronger observability around where ambiguity entered the pipeline.\n- better human-in-the-loop control when uncertainty remains high.\n- cleaner packaging of refinement output for Workspace, Symphony, and swarm execution lanes.\n\n## 3. Why It Matters\nDream preserves the idea that A2C should mature into more than a transformation pipeline. It should become a disciplined refinement factory that converts raw potential into trustworthy graph state without smuggling uncertainty into Real.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Pipeline Project in the Dream branch captures the industrialized future of capsule production. It pushes beyond today’s implementation toward higher-throughput ingestion, stronger extraction discipline, better synthesis quality, richer observability, and more reliable human-in-the-loop control where uncertainty remains. The project matters because A2C is not merely a technical pipeline; it is the machine that determines how raw potential becomes sovereign graph state. Dream therefore treats A2C as a refinement factory still climbing toward greater scale, trust, and operational clarity.",
+    "summary": "A2C Pipeline Project in the Dream branch captures the industrialized future of capsule production. It pushes beyond today’s implementation toward cleaner branch routing, stronger evidence bundles, better synthesis quality, richer observability, more reliable human-in-the-loop control, and cleaner downstream packaging for execution lanes. The project matters because A2C is not merely a technical pipeline; it is the machine that determines how raw potential becomes sovereign graph state. Dream therefore treats A2C as a refinement factory still climbing toward greater scale, trust, and operational clarity.",
     "keywords": [
       "a2c",
       "pipeline",
@@ -67,10 +67,26 @@
       {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "80f8afc4753899acf97911c6d4194837d94371e0ae316552c72772cc015aec81fd188f3a2b2c80721df667b15812305a4fc73b8a2a3cfd69f2daa823dca4069e"
+  "integrity_sha3_512": "ad439946b1e769f0bc8b3b17f78726adce5efaff4952c747b7dd2395713ae20bb57717c5f3c6df67b2c651c045e192d22d07743325c7fc004e006fbb92201a20"
 }

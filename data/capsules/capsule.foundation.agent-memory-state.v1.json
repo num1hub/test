@@ -1,28 +1,28 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-memory-state.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-08T21:25:00Z",
     "name": "Agent Memory State",
     "semantic_hash": "agent-memory-state-checkpoints-resume-run-history-context",
     "priority": "high",
-    "progress": 33,
+    "progress": 40,
     "estimatedHours": 180,
-    "actualHours": 62,
+    "actualHours": 74,
     "dueDate": "2026-08-05",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Memory State\n\n## 1. Definition and Essence\nAgent Memory State defines the persistent continuity layer for long-lived AI work in N1Hub. It captures checkpoints, session summaries, run history, cooldown records, compacted context, and resumable execution state so an agent can recover after time, failure, or deliberate pause.\n\n## 2. Core Responsibilities\n- `checkpoint_state` stores resumable progress instead of relying on one giant prompt history.\n- `session_summaries` compresses long interaction traces into usable continuation context.\n- `run_history` records what happened, when, and with which outcome.\n- `cooldown_and_backoff_memory` prevents background work from thrashing after success or repeated failure.\n- `state_separation` keeps identity, credentials, skill docs, and execution memory as distinct concerns.\n\n## 3. N1Hub Integration\nIn N1Hub this state layer bridges chat continuity, DeepMine routing context, Symphony run attempts, N-Infinity capsule jobs, and status surfaces. It is the reason background intelligence can resume with memory instead of restarting from zero every night.\n\n## 4. Philosophical Alignment\nAgent Memory State supports To Dig Deep by preserving the learned trail of reasoning and execution rather than forcing agents to simulate continuity from fragments.\n"
+    "content": "# Agent Memory State\n\n## 1. Definition and Essence\nAgent Memory State defines the persistent continuity layer for long-lived AI work in N1Hub. It captures checkpoints, session summaries, run history, cooldown records, compacted context, and resumable execution state so an agent can recover after time, failure, or deliberate pause.\n\n## 2. Core Responsibilities\n- `checkpoint_state` stores resumable progress instead of relying on one giant prompt history.\n- `session_summaries` compresses long interaction traces into usable continuation context.\n- `run_history` records what happened, when, and with which outcome.\n- `cooldown_and_backoff_memory` prevents background work from thrashing after success or repeated failure.\n- `memory_stratification` separates working memory, long-term memory, branch state, and durable artifacts.\n- `vault_memory_boundary` keeps capsule memory, personal memory, and agent execution memory distinct so the swarm does not confuse a temporary plan with canonical vault truth.\n- `artifact_handles` keep large plans, traces, and job files referenceable without stuffing them back into prompts.\n- `event_log_alignment` keeps durable state replay-friendly by separating event lineage from compacted summaries and current checkpoint snapshots.\n- `cross_client_continuity` keeps the same assignment or session understandable across web, mobile, terminal, notification, and daemon surfaces.\n- `state_separation` keeps identity, credentials, skill docs, instruction surfaces, and execution memory as distinct concerns.\n\n## 3. N1Hub Integration\nIn N1Hub this state layer bridges chat continuity, DeepMine routing context, Symphony run attempts, N-Infinity capsule jobs, and status surfaces. It is the reason background intelligence can resume with memory instead of restarting from zero every night. It also gives context engineering and eval loops a stable place to store compressed summaries, replayable state, recent failure patterns, and artifact handles that can survive long pauses or hosted workflow semantics. The stronger 2026 reading is that memory state should not be tied to one client: an assignment begun in chat or on mobile should still be resumable by a daemon, a terminal harness, or a later review surface. It should also not be confused with the vault itself: the second brain stores durable capsule truth, while agent memory stores execution continuity around that truth.\n\n## 4. Philosophical Alignment\nAgent Memory State supports To Dig Deep by preserving the learned trail of reasoning and execution rather than forcing agents to simulate continuity from fragments.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Memory State defines the persistent continuity layer for N1Hub agents. It matters because background autonomy fails when every restart erases context, cooldown, and prior outcomes. This capsule formalizes checkpoints, compacted summaries, run history, and resumable execution state as a first-class object distinct from identity, credentials, or prompt text. It gives Symphony, N-Infinity, DeepMine, and future chat surfaces a shared place to reason about how long-lived agent memory should exist without collapsing into raw transcript sprawl.",
+    "summary": "Agent Memory State defines the persistent continuity layer for N1Hub agents. It matters because background autonomy fails when every restart erases context, cooldown, prior outcomes, or cross-client assignment state. This capsule formalizes checkpoints, compacted summaries, run history, and resumable execution state as a first-class object distinct from identity, credentials, prompt text, and the vault's own durable memory. It gives Symphony, N-Infinity, DeepMine, and future chat or control surfaces a shared place to reason about how long-lived agent memory should exist without collapsing into raw transcript sprawl or overwriting capsule truth.",
     "keywords": [
       "agent-memory-state",
       "checkpoints",
@@ -33,7 +33,11 @@
       "symphony",
       "n-infinity",
       "deepmine",
-      "n1hub"
+      "n1hub",
+      "memory-stratification",
+      "artifact-handles",
+      "event-log-alignment",
+      "cross-client-continuity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,6 +60,10 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.deepmine.v1",
         "relation_type": "references"
       },
@@ -72,6 +80,30 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "references"
       },
@@ -83,5 +115,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e867aa0a920bb9834d6bea10d5f6ca17dfcf12b592067497f962d7af70a5fa9aa2227f1f579b67ae624ec6c2164a29efe07bda5d334b2104e0994916a31059d0"
+  "integrity_sha3_512": "9c44ad5e721375a0049765e4b022c4ff72059ee09342a4a894ac8d98b224cc6575f83ba42b79dcfb2ee92b134befc59ee3ce08a06beff57b9bab197bf814656e"
 }

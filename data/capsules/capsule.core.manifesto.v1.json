@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:10:00Z",
     "semantic_hash": "core-manifesto-to-dig-deep-negentropy-mission-principles",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,10 +18,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core Manifesto: Deep Synthesis Ethos\n\n## 1. Mission\nThe manifesto states why CapsuleOS exists: to convert chaotic signal into reliable and compounding knowledge assets.\n\n## 2. Commitments\n- Depth over superficial outputs.\n- Structural rigor over ad hoc shortcuts.\n- Provenance over unsupported claims.\n- Compounding intelligence over disposable text.\n\n## 3. Execution\nA2C, validation gates, and N-Infinity arbitration operationalize this ethos and keep the graph negentropic as it scales.\n\n## 4. Expected Outcome\nA trustworthy ecosystem where ideas become auditable, sovereign, and economically meaningful knowledge objects."
+    "content": "# Core Manifesto: Deep Synthesis Ethos\n\n## 1. Mission\nThe manifesto states why CapsuleOS exists: to convert chaotic signal into reliable and compounding knowledge assets.\n\n## 2. Commitments\n- Depth over superficial outputs.\n- Structural rigor over ad hoc shortcuts.\n- Provenance over unsupported claims.\n- Compounding intelligence over disposable text.\n- Human and agent work should strengthen one second brain rather than produce isolated exhaust.\n- Autonomy is valuable only when it remains legible, reviewable, and branch-disciplined.\n\n## 3. Execution\nA2C, validation gates, DeepMine, N-Infinity, and vault stewardship operationalize this ethos and keep the graph negentropic as it scales.\n\n## 4. Expected Outcome\nA trustworthy ecosystem where ideas become auditable, sovereign, economically meaningful knowledge objects, and long-lived memory capital."
   },
   "neuro_concentrate": {
-    "summary": "Core Manifesto states why CapsuleOS should exist and what standards of depth it refuses to abandon in exchange for speed or convenience. It translates philosophy into explicit commitments: rigor over theater, provenance over unsupported fluency, and compounding knowledge over disposable output. The capsule matters because large systems do not drift only through broken code; they also drift through softened intent. Manifesto is therefore the normative counterweight to shallow optimization. It keeps execution aligned with purpose, ensuring that A2C, validation, and agent behavior continue to serve epistemic seriousness instead of merely producing impressive-looking artifacts.",
+    "summary": "Core Manifesto states why CapsuleOS should exist and what standards of depth it refuses to abandon in exchange for speed or convenience. It translates philosophy into explicit commitments: rigor over theater, provenance over unsupported fluency, compounding knowledge over disposable output, and symbiotic human-plus-agent work over shallow automation theater. The capsule matters because large systems do not drift only through broken code; they also drift through softened intent. Manifesto is therefore the normative counterweight to shallow optimization. It keeps execution aligned with purpose, ensuring that A2C, validation, DeepMine, N-Infinity, and agent behavior continue to serve epistemic seriousness instead of merely producing impressive-looking artifacts.",
     "keywords": [
       "core",
       "manifesto",
@@ -31,7 +31,9 @@
       "a2c",
       "validation",
       "agent-behavior",
-      "anti-drift"
+      "anti-drift",
+      "second-brain",
+      "symbiosis"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,7 +60,15 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
         "relation_type": "references"
       },
       {
@@ -69,5 +79,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e4fd65d6145c8fca0c405450bae0568cf80deda71aba00b2ccd043eb21076fb0e6bddc7059c822110de4f95e012e4b09c88c1e43aa9861653510841aecda3631"
+  "integrity_sha3_512": "51e353f2347a11e573333d6cc0bbcf07a566de1b7b9d0e96d41018eb6782a677f84e8d8659160ffe432cbf4519eb66754d2c5cd8bbe8a5fb18706bf761223117"
 }

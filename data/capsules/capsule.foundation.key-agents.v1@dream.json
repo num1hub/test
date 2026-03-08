@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-08T22:50:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n- a more explicit planning swarm where Planning Horizon Engine coordinates the path from Dream to day-level execution\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about \"AI features.\"\n"
+    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, vault stewardship, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n- a more explicit planning swarm where Planning Horizon Engine coordinates the path from Dream to day-level execution\n- a more explicit vault stewardship lane where the system reads the vault, generates jobs, and executes bounded Dream-safe work\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about AI features.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772981823476\n- Job: Decomposition review for key-agents hub\n- Workstream: decomposition\n- Note: Refined the summary to emphasize this capsule's hub scope and added decomposition-oriented keywords for user-facing versus background roles, graph-maintenance, and execution handoff. Future split pressure is concentrated around three cleaner boundaries: assistant-facing roles, background mining and graph-maintenance workers, and the planning coordination layer centered on the Planning Horizon Engine."
   },
   "neuro_concentrate": {
-    "summary": "Key Agents in the Dream branch captures a more mature operating map for the N1Hub intelligence system. It aims toward clearer role boundaries, better orchestration between agent clusters, and more legible ownership of user-facing, mining, planning, maintenance, and review work. The planning lane is especially clearer here: the future map should explicitly show how Planning Horizon Engine coordinates Roadmap Planner Agent and Daily Planner Agent. Dream therefore preserves the future command map of the agent ecosystem, not just a static list of roles.",
+    "summary": "Key Agents is the Dream-branch architectural hub for the N1Hub intelligence system, defining role boundaries and coordination across assistant, mining, planning, vault stewardship, maintenance, and review work. It preserves the future map of the agent system as a set of bounded lanes rather than vague AI features, while positioning the Planning Horizon Engine as the bridge from Dream-level planning to day-level execution and the vault stewardship lane as the bridge from reading the vault to bounded capsule work.",
     "keywords": [
       "key-agents",
       "dream-branch",
@@ -30,11 +30,10 @@
       "swarm-architecture",
       "personal-ai-assistant",
       "deepmine",
-      "n-infinity",
-      "planning",
+      "vault-stewardship",
       "planning-horizon-engine",
-      "review",
-      "n1hub"
+      "planning-lane",
+      "role-boundaries"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -142,7 +141,48 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-07T19:29:37.573Z",
+        "event": "autonomous_maintenance_applied",
+        "agent": "vault-steward-maintainer",
+        "run_id": "vault-steward-1772911699911",
+        "job_id": "vault-steward-job-d74a55a5278bc77e",
+        "rationale": "The capsule content stresses clearer role boundaries, better orchestration, and explicit planning coordination, justifying a summary that highlights modularity and agent ownership. The added keywords directly reflect these emphasized aspects, supporting the decomposition workstream."
+      },
+      {
+        "at": "2026-03-07T20:20:51.373Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772914832181",
+        "job_id": "vault-steward-job-4a074d820fc7931c",
+        "rationale": "The capsule content highlights improved role boundaries, orchestration, and explicit ownership in Dream, indicating a modular structure and planning coordination. The added keywords and refined summary align with these themes and signal the need for further decomposition to manage high link density."
+      },
+      {
+        "at": "2026-03-07T21:27:09.926Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772918751730",
+        "job_id": "vault-steward-job-ed8d05b39e0742cb",
+        "rationale": "The maintenance change is justified by the capsule's emphasis on modularity, orchestration, explicit planning swarm, and future decomposition needs. The added keywords and refined summary directly reflect the content and support operator navigation and classification."
+      },
+      {
+        "at": "2026-03-08T08:33:06.384Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772958727635",
+        "job_id": "vault-steward-job-afd8bdae723d3e1b",
+        "rationale": "The changes are grounded in the capsule's content, which emphasizes modularity, explicit coordination, and the need for clearer role boundaries and orchestration. The added keywords and refined summary directly reflect these themes and support future decomposition work as indicated in the capsule and maintenance notes."
+      },
+      {
+        "at": "2026-03-08T14:57:58.419Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1772981823476",
+        "job_id": "vault-steward-job-56290ea8a4770d3f",
+        "rationale": "The capsule content explicitly describes Key Agents as an operating map with stronger role boundaries, better implementation alignment, richer coordination across assistant, mining, planning, maintenance, and review workers, and a planning swarm that carries Dream into day-level execution. The maintenance change sharpens that existing hub role and records likely subordinate boundaries without introducing new doctrine."
+      }
+    ]
   },
-  "integrity_sha3_512": "26fa883348ab8c34e56be21f66b991c039bb9e9d441ed257ef31d482d52ef972abf0f1e5622f57e3215ced44a9a4d2f10bf94a4bae4aaf5b86c202784dbc9338"
+  "integrity_sha3_512": "d6141c98e81730e7fb6f28dd4c91f7246825e701a597664ccc8e3f9bbbaae5b2e524b26362d5b788b26fb00c89f516bc330c4dccbe281bf31bcbdf5511cf74fc"
 }

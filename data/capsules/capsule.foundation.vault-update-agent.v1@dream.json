@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:26:00Z",
-    "updated_at": "2026-03-06T23:54:00Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Vault Update Agent",
     "semantic_hash": "vault-update-agent-branch-routing-capsule-integration-validation",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Update Agent\n\n## Dream Direction\nIn the Dream branch, Vault Update Agent evolves into a stronger branch-aware integration layer that can compare candidate changes, detect duplication more intelligently, and stage promotion paths from Dream toward Real with clearer audit and explanation semantics.\n\n## Future Potential\n- smarter duplicate and overlap detection\n- cleaner changeset previews for operators and assistants\n- stronger branch-routing policy across exploratory and evidence-backed material\n- richer promotion workflows from Dream to Real\n\n## Why It Matters\nDream preserves Vault Update Agent as the discipline that turns refined output into trustworthy graph mutation rather than uncontrolled write activity."
+    "content": "# Vault Update Agent\n\n## Dream Direction\nIn the Dream branch, Vault Update Agent evolves into a stronger branch-aware integration layer that can compare candidate changes, detect duplication more intelligently, and stage promotion paths from Dream toward Real with clearer review, audit, and explanation semantics.\n\n## Future Potential\n- smarter duplicate and overlap detection\n- cleaner changeset previews for operators and assistants\n- stronger branch-routing policy across exploratory and evidence-backed material\n- richer promotion workflows from Dream to Real\n- tighter handoff between planning/review lanes and actual vault mutation\n\n## Why It Matters\nDream preserves Vault Update Agent as the discipline that turns refined output into trustworthy graph mutation rather than uncontrolled write activity."
   },
   "neuro_concentrate": {
-    "summary": "Vault Update Agent in the Dream branch represents a more mature integration layer for N1Hub. It aims toward smarter duplicate detection, clearer branch-routing policy, and better promotion workflows from exploratory Dream material toward validated Real structure. The capsule matters because safe graph mutation is a distinct capability, not a side effect of mining or synthesis. Dream therefore treats branch-aware write discipline as a first-class operating skill of the vault and of every serious update lane.",
+    "summary": "Vault Update Agent in the Dream branch represents a more mature integration layer for N1Hub. It aims toward smarter duplicate detection, clearer branch-routing policy, better promotion workflows from exploratory Dream material toward validated Real structure, and tighter coupling between review lanes and actual mutation. The capsule matters because safe graph mutation is a distinct capability, not a side effect of mining, planning, or synthesis. Dream therefore treats branch-aware write discipline as a first-class operating skill of the vault and of every serious update lane.",
     "keywords": [
       "vault-update-agent",
       "dream-branch",
@@ -90,6 +90,26 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
@@ -97,5 +117,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0f7103bca5029cd5764259ed1cde8b8754d3b1c2681322e412a08563588abc6e7a83a28e8b03833c9cfd54292a74c47ce95985afdad3bbfc7f1c76a7049b28d1"
+  "integrity_sha3_512": "c23ece27d1ea436188343a74167bf1c6fb5407debb7ca7165c4d160567c8592370234626c821bd427d45bfedf1d388e65c1db8264036097abdfbbef82db4ebc8"
 }

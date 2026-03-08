@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-08T21:05:00Z",
     "name": "AI Conversation Session",
     "semantic_hash": "capsule-ai-conversation-v1-session-assistant-context-operations",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Conversation Session\n\n## 1. Definition and Essence\nAI Conversation Session models a bounded interaction thread between user and assistant. It stores message chronology, grounding references, and intent transitions that support continuity, auditability, and follow-up action across workspace modules.\n\n## 2. Core Attributes\n- `session_id` stable conversation identifier.\n- `message_history` ordered turns with role and timestamp.\n- `context_refs` linked capsules grounding conversation state.\n- `intent_state` detected active user intent and confidence.\n- `delegation_state` whether work remained conversational, was suggested, or was handed off.\n- `resolution_state` open, resolved, delegated, archived.\n\n## 3. Lifecycle\nSessions begin from user input, accumulate state as dialogue evolves, ground themselves in capsule references, and may trigger downstream agent delegation when conversation alone is insufficient.\n\n## 4. Integration\n- **Personal AI Assistant:** primary conversational surface.\n- **Chat to Capsules:** defines the grounding pattern for how sessions interact with the graph.\n- **Agent Delegation:** defines how a session hands work to deeper execution lanes.\n- **Prompt Capsule:** supplies reusable system and task prompts.\n- **Suggestion Capsule:** stores candidate recommendations produced in session.\n- **A2C Pipeline:** optionally converts conversation output into capsules.\n\n## 5. Philosophical Alignment\nConversation sessions support To Dig Deep by preserving reasoning context over time, enabling refinement rather than one-off shallow answers.\n"
+    "content": "# AI Conversation Session\n\n## 1. Definition and Essence\nAI Conversation Session models a bounded interaction thread between user and assistant. It stores message chronology, grounding references, branch posture, and intent transitions that support continuity, auditability, and follow-up action across workspace modules.\n\n## 2. Core Attributes\n- `session_id` stable conversation identifier.\n- `message_history` ordered turns with role and timestamp.\n- `context_refs` linked capsules grounding conversation state.\n- `intent_state` detected active user intent and confidence.\n- `branch_posture` whether the session is reading `Real`, shaping `Dream`, or comparing both.\n- `delegation_state` whether work remained conversational, was suggested, or was handed off.\n- `resolution_state` open, resolved, delegated, archived.\n- `approval_state` whether proposed capsule mutations were merely suggested, approved, rejected, or deferred.\n\n## 3. Lifecycle\nSessions begin from user input, accumulate state as dialogue evolves, ground themselves in capsule references, and may trigger downstream agent delegation when conversation alone is insufficient. The session should preserve the difference between explanation, planning, suggestion, and mutation so that capsule changes are never confused with ordinary assistant talk.\n\n## 4. Integration\n- **Personal AI Assistant:** primary conversational surface.\n- **Chat to Capsules:** defines the grounding pattern for how sessions interact with the graph.\n- **Agent Delegation:** defines how a session hands work to deeper execution lanes.\n- **Prompt Capsule:** supplies reusable system and task prompts.\n- **Suggestion Capsule:** stores candidate recommendations produced in session.\n- **Agent Memory State:** separates session continuity from deeper long-term runtime state.\n- **A2C Pipeline:** optionally converts conversation output into capsules after approval.\n\n## 5. Philosophical Alignment\nConversation sessions support To Dig Deep by preserving reasoning context over time, enabling refinement rather than one-off shallow answers, and by keeping the path from dialogue to accountable capsule work explicit."
   },
   "neuro_concentrate": {
-    "summary": "AI Conversation Session models a bounded assistant dialogue with enough structure to preserve chronology, grounding references, and intent shifts across time. It is more than a chat transcript: the capsule records the continuity required for follow-up prompts, suggestions, delegated actions, and later audit review. This matters because N1Hub depends on persistent reasoning context rather than disconnected one-off completions. By treating a session as an explicit operational object, the vault can reconstruct why the assistant acted, what evidence it saw, and how a conversation eventually turned into accountable work.",
+    "summary": "AI Conversation Session models a bounded assistant dialogue with enough structure to preserve chronology, grounding references, branch posture, approval state, and intent shifts across time. It is more than a chat transcript: the capsule records the continuity required for follow-up prompts, suggestions, delegated actions, and later audit review while preserving the difference between explanation, planning, and actual mutation of the vault. This matters because N1Hub depends on persistent reasoning context rather than disconnected one-off completions. By treating a session as an explicit operational object, the vault can reconstruct why the assistant acted, what evidence it saw, and how a conversation eventually turned into accountable work.",
     "keywords": [
       "ai",
       "conversation",
@@ -38,6 +38,8 @@
       "context",
       "operations",
       "capsule-grounding",
+      "branch-aware",
+      "approval-gated",
       "n1hub"
     ],
     "confidence_vector": {
@@ -73,6 +75,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
         "relation_type": "references"
       },
@@ -87,10 +93,14 @@
       {
         "target_id": "capsule.foundation.a2c.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c993ce029839486c788d9a65017789eeb4ec6daffc3799c768e31ed01fc0711e6f7e511094844446db89ffcf6601616bdbba92d209ad25e7b70b30875ae26ef9"
+  "integrity_sha3_512": "508202c71bdbf15001f0abad4c1a86154e66605adfaaba7e972713a9aba6b994dfbb1f9c535ffd8a76a51461e9058381e09f62cedcef9068d5a69c94b1ad4d9b"
 }

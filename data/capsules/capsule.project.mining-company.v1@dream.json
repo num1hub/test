@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.430Z",
+    "updated_at": "2026-03-08T23:35:00Z",
     "name": "Mining Company",
     "semantic_hash": "capsule-project-mining-company-v1-organization-portfolio-capital",
     "source": {
@@ -24,7 +24,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Mining Company\n\n## 1. Definition and Essence\nMining Company frames To Dig Deep as an organizational initiative for sustained knowledge extraction, refinement, and compounding intellectual capital across multiple project streams.\n\n## 2. Core Attributes\n- `mission_scope` strategic extraction and compounding goals\n- `operating_model` team, process, and governance structure\n- `project_portfolio` constituent initiatives and priorities\n- `capital_policy` reinvestment and resource allocation rules\n- `impact_metrics` long-term value and resilience indicators\n\n## 3. Lifecycle\nThe initiative is maintained as an evolving strategic portfolio with periodic policy updates, project reprioritization, and capability expansion.\n\n## 4. Integration\n- **To Dig Deep:** direct philosophical implementation anchor.\n- **Sovereign Intellectual Capital:** long-term value framing.\n- **Marketplace/SIAF:** potential commercialization and governance channels.\n- **Workspace:** operational command interface for execution.\n\n## 5. Philosophical Alignment\nMining Company operationalizes To Dig Deep at organizational scale: extract signal, refine structure, compound value.\n"
+    "content": "# Mining Company\n\n## 1. Definition and Essence\nMining Company frames To Dig Deep as an organizational initiative for sustained knowledge extraction, refinement, synthesis, and compounding intellectual capital across multiple project streams.\n\n## 2. Core Attributes\n- `mission_scope` strategic extraction and compounding goals\n- `operating_model` team, process, and governance structure\n- `project_portfolio` constituent initiatives and priorities\n- `capital_policy` reinvestment and resource allocation rules\n- `impact_metrics` long-term value and resilience indicators\n- `production_chain` quarry, refinery, vault integration, swarm stewardship, and later capitalization\n\n## 3. Lifecycle\nThe initiative is maintained as an evolving strategic portfolio with periodic policy updates, project reprioritization, and capability expansion.\n\n## 4. Integration\n- **To Dig Deep:** direct philosophical implementation anchor.\n- **DeepMine:** quarry and extraction layer.\n- **A2C:** refinery and emission discipline.\n- **N-Infinity:** compounding swarm layer.\n- **Workspace:** operational command interface.\n\n## 5. Philosophical Alignment\nMining Company operationalizes To Dig Deep at organizational scale: find deposits, extract signal, refine structure, and compound value into durable institutional memory.\n"
   },
   "neuro_concentrate": {
     "summary": "Mining Company in the Dream branch represents the future institutional layer around intellectual extraction, asset formation, and value compounding. It imagines a tighter connection between knowledge mining, template economics, governance, royalties, and long-horizon capital policy than the current real branch can justify today. The branch matters because this initiative is inherently strategic and partially pre-operational. Dream therefore carries the more ambitious organizational thesis: turning To Dig Deep into a durable economic institution, not just a product philosophy.",
@@ -38,7 +38,11 @@
       "capital-policy",
       "asset-infrastructure",
       "to-dig-deep",
-      "institutional-growth"
+      "institutional-growth",
+      "deepmine",
+      "a2c",
+      "n-infinity",
+      "production-chain"
     ],
     "confidence_vector": {
       "extraction": 0.93,
@@ -67,10 +71,22 @@
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "bda7587f1081396a8eec8cdaa7f6a8f510e5ebff0450c6a2ebfea87ef368233d76bf6171bfaeeea9b8af4c92fce66409dae89cc1a7639d2ab5c37f1dca05104d"
+  "integrity_sha3_512": "de310e47bc473d9677e2aaa723196841154c7a49793d838ebe180782fb2b090c73c031e048a376c761fa14317fc39dee5a1740e768fcb16a4daddb6c94dbaf73"
 }

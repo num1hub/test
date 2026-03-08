@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nThe N1Hub ecosystem is designed to democratize access to sovereign knowledge management while providing industrial-grade power for professionals. Our access models are transparent, flexible, and strictly aligned with the \"To Dig Deep\" ethos. Regardless of the chosen tier, every user benefits from the absolute cryptographic security and data sovereignty guaranteed by the CapsuleOS 5-Element Law.\n\n## 2. The Four Access Tiers\n\n### 2.1 Free (Online)\n- **Overview**: An accessible entry point hosted on N1Hub infrastructure.\n- **Capabilities**: Users can create a limited number of capsules and projects. A2C processing is available using shared, rate-limited, cost-efficient LLM models via DeepMine. Core Workspace features (Planner, Tracker) are active with capacity caps. N-Infinity agents operate at the lowest priority queue.\n\n### 2.2 Free Local (Self-Hosted)\n- **Overview**: The ultimate expression of digital sovereignty. Users deploy the open-source N1Hub core (CapsuleOS, basic A2C, SDKs) on their own hardware.\n- **Capabilities**: Infinite capsule creation and full control over compute. Users inject their own API keys to bypass N1Hub rate limits. The user is entirely responsible for infrastructure maintenance and LLM costs.\n\n### 2.3 N1 Pass (Subscription)\n- **Overview**: A premium monthly or annual subscription designed for power users, creators, and teams.\n- **Capabilities**: Unlocks unlimited capsule creation, expanded A2C throughput, and access to premium, high-reasoning LLMs. It grants priority scheduling for N-Infinity agents and unlocks advanced Workspace features like team collaboration and deep analytics. Subscribers receive a monthly stipend of N1 Coins and processing \"Boosts.\"\n\n### 2.4 Pay-As-You-Go (Boosts)\n- **Overview**: On-demand industrial power. Users can top up their accounts to purchase \"Boosts.\"\n- **Capabilities**: Boosts are consumed for computationally violent tasks—such as initiating highly parallel, multi-threaded A2C extractions across massive datasets, summoning dedicated LLM instances, or accelerating N-Infinity graph synthesis during peak workloads.\n\n## 3. Hybrid Intelligence Supply\nN1Hub should not rely on one provider mode. A mature access model includes:\n- at least one **subscription-backed seat** for persistent human-plus-assistant symbiosis\n- at least one **programmable API lane** for DeepMine, Symphony, N-Infinity, and unattended background work\n- explicit **night and batch routing** for workloads that become much cheaper outside prime interactive hours\n\nSubscription seats and APIs are not interchangeable. Subscription access is economically powerful for one active human-centered loop, while API access remains necessary for durable orchestration, concurrency, and machine-driven execution.\n\n## 4. N1 Coin Integration\nThe native **N1 Coin** acts as the decentralized financial lubricant across all tiers. Users can pay for N1 Pass subscriptions or Pay-As-You-Go Boosts using N1 Coins. Furthermore, coins earned through Marketplace royalties or systemic governance can be reinvested directly into compute power.\n\n## 5. Stack Integration\n- **AI Wallet**: stores both API credentials and subscription authorization lanes.\n- **Personal AI Assistant**: benefits from subscription-heavy interactive routing while keeping the human in the loop.\n- **DeepMine**: routes requests dynamically; lightweight extractions can use cost-efficient models, while night and batch lanes can exploit cheaper off-peak economics when available.\n- **A2C & N-Infinity**: queuing systems allocate threads and prioritize processing based on the user's active tier, available wallet lanes, and budget posture.\n- **Workspace**: the UI should expose current limits, active subscriptions, preferred providers, and burst-capacity controls without breaking cognitive flow."
+    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nAccess Models defines how N1Hub's second-brain system becomes usable, sustainable, and economically legible. It is not only pricing doctrine. It is the contract that links human depth, provider access, storage rights, background autonomy, and burst compute into coherent operating tiers. The goal is to widen access without hiding the real cost of intelligence, memory, and autonomous work.\n\n## 2. The Four Access Tiers\n\n### 2.1 Free (Online)\n- **Overview**: An accessible hosted entry point for learning the vault model.\n- **Capabilities**: Limited capsule and project capacity, shared inference lanes, low-priority background jobs, and visible limits that teach the shape of the system without pretending free usage can sustain industrial autonomy.\n\n### 2.2 Free Local (Self-Hosted)\n- **Overview**: The sovereign path for people who want the architecture without hosted dependence.\n- **Capabilities**: Local deployment of CapsuleOS and core workspace patterns, user-supplied provider credentials, and full responsibility for infrastructure, privacy, and runtime economics.\n\n### 2.3 N1 Pass (Subscription)\n- **Overview**: The premium path for serious human-plus-assistant symbiosis.\n- **Capabilities**: Higher limits, stronger assistant experience, richer review surfaces, better autonomy controls, and priority around the user-facing loop rather than just raw token burn.\n\n### 2.4 Pay-As-You-Go (Boosts)\n- **Overview**: Burst capacity for computationally violent work.\n- **Capabilities**: Additional budget for DeepMine sweeps, A2C refinery spikes, validation waves, graph refactors, or swarm-intensive periods that exceed the steady tier envelope.\n\n## 3. Hybrid Intelligence Supply\nA mature access model assumes multiple supply lanes, not one universal plan:\n- at least one **interactive lane** for the persistent assistant relationship\n- at least one **programmable lane** for unattended jobs and orchestration\n- optional **hosted inference lanes** for managed provider surfaces\n- explicit **night and batch posture** for off-peak economics\n\nThis matters because subscription seats, hosted inference, and token-metered APIs solve different problems. Access policy should therefore shape how the system routes work rather than merely how the invoice is paid.\n\n## 4. Why This Matters to the Human\nN1Hub is not selling messages. It is selling a more capable memory and operating system. Access models must therefore answer a human question, not just a billing question: what kind of second-brain experience can this person actually sustain, and which levels of planning, mining, refinement, and autonomy become available at that level?\n\n## 5. Stack Integration\n- **AI Wallet and Hybrid LLM Access:** turn entitlement into real provider lanes.\n- **Human-AI Symbiosis:** explains why interactive assistant quality deserves its own lane.\n- **Night and Batch Economics:** pushes industrial work into economically sane windows.\n- **Background Agent Runtime and Agent Control Plane:** translate tier and budget posture into actual concurrency, cooldown, and assignment policy.\n- **Profile and User Preferences:** bind access posture to the human who is actually using the system.\n\n## 6. Philosophical Alignment\nAccess Models supports To Dig Deep by making power, cost, fairness, and sovereignty explicit instead of leaving the economics of intelligence hidden behind vague promises.\n"
   },
   "neuro_concentrate": {
-    "summary": "Access Models describes how sovereignty, compute, and monetization are balanced across free, self-hosted, subscription, and burst-capacity tiers. It matters because pricing in N1Hub is not only a business concern; it directly shapes model access, queue priority, storage obligations, and the user’s path from experimentation to serious production. The capsule keeps those tradeoffs explicit so business rules do not leak invisibly into runtime behavior. By formalizing the tier model, the vault can reason coherently about fairness, capability boundaries, and how economic commitment maps to actual system privileges and throughput.",
+    "summary": "Access Models describes how sovereignty, compute, autonomy, and monetization are balanced across hosted, self-hosted, subscription, and burst-capacity tiers. It matters because pricing in N1Hub is not just a business concern; it shapes which intelligence lanes exist, how much background work can run, how strong the assistant loop can be, and what kind of second-brain experience the user can actually sustain. This capsule keeps those tradeoffs explicit so entitlement, provider posture, and runtime behavior remain coherent instead of leaking invisible product policy into the system.",
     "keywords": [
       "access-models",
       "tiering",
@@ -32,7 +32,10 @@
       "queue-priority",
       "monetization",
       "fairness",
-      "capability-boundaries"
+      "capability-boundaries",
+      "second-brain",
+      "hybrid-access",
+      "autonomy"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -71,6 +74,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.ai-wallet.v1",
         "relation_type": "references"
       },
@@ -87,6 +98,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
         "relation_type": "references"
       },
@@ -97,14 +120,10 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-llm-access.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "136cd432cb64cce3a022844658fbd6411c02505b43c5963dcc85940a033810ec2a697b8dfd6d985f5ffae3a67c663d8f4cbf80bac53485b3ccec2c8e837de0c7"
+  "integrity_sha3_512": "56f5103aa22001a42b620cdb234694897f416c01112c2623eecbcb68664e32c027b0971e908df7ea67c52cde5d8f1462817b04055ba8161ad0c777fa3080e717"
 }

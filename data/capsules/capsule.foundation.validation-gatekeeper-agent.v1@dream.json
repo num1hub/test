@@ -22,13 +22,15 @@
     "content": "# Validation Gatekeeper Agent\n\n## Dream Direction\nIn the Dream branch, Validation Gatekeeper Agent becomes a richer acceptance and remediation authority that can reason about validation evidence more deeply, supervise safe autofix policy, and route edge cases more intelligently across review and quarantine.\n\n## Future Potential\n- better interpretation of gate failure classes\n- clearer safe-autofix boundaries\n- stronger coordination with review and branch stewardship\n- more actionable quality feedback for upstream agents\n\n## Why It Matters\nDream preserves Gatekeeper as the role that protects the vault from low-quality or ambiguous admission, even as agent throughput increases."
   },
   "neuro_concentrate": {
-    "summary": "Validation Gatekeeper Agent in the Dream branch represents a more advanced acceptance-boundary role for N1Hub. It aims toward better interpretation of validation evidence, more disciplined autofix supervision, and clearer routing of ambiguous cases into review or quarantine. The capsule matters because future agent throughput will only be trustworthy if acceptance remains rigorous. Dream therefore preserves gatekeeping as a visible authority inside the vault pipeline instead of silent pass or fail logic.",
+    "summary": "Validation Gatekeeper Agent in the Dream branch represents a more advanced acceptance-boundary role for N1Hub. It aims toward better interpretation of validation evidence, more disciplined autofix supervision, clearer routing of ambiguous cases into review or quarantine, and stronger control over capsule-job promotion. The capsule matters because future agent throughput will only be trustworthy if acceptance remains rigorous. Dream therefore preserves gatekeeping as a visible authority inside the vault pipeline instead of silent pass or fail logic.",
     "keywords": [
       "validation-gatekeeper-agent",
       "dream-branch",
       "quality-control",
       "gates",
       "quarantine",
+      "promotion",
+      "capsule-job",
       "review",
       "n1hub"
     ],
@@ -81,6 +83,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
@@ -88,5 +94,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e80492558f7ae27a109ea3dffe79dc35fe27825e790eb7d08932310b6f745e1267d661e4cb54d4c79a2379b3ce915ccb7900ede85b97fba642dfbadaebbb3ab1"
+  "integrity_sha3_512": "fff5c4daee1d5e0dc843e089758018f64f7214bf6d3227eb93f199732019d7734065613dd5f11fd1b2107f9a13724bf8bd2e7390aaaf21cb1313579fc432e58f"
 }

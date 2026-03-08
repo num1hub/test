@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.background-agent-runtime.v1",
-    "version": "1.2.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-07T10:22:13.327Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
@@ -15,18 +15,18 @@
       "type": "repository_contract"
     },
     "priority": "high",
-    "progress": 34,
-    "estimatedHours": 280,
-    "actualHours": 96,
+    "progress": 44,
+    "estimatedHours": 300,
+    "actualHours": 124,
     "dueDate": "2026-08-20",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, and local skills into one operating path.\n- `lane_separation` keeps the human symbiosis lane distinct from unattended automation and batch execution.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now has a clearer economic shape as well: subscription-heavy interactive lanes serve the human-centered Personal AI Assistant loop, while programmable API and night or batch lanes carry the weight of unattended mining, orchestration, and graph maintenance.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, operator-visible control, and sustainable economics rather than to shallow prompt loops.\n"
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, cool down, or wake early.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only runs, and Dream-safe execution runs.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `control_plane_governance` keeps fleet registry, policy rollout, searchable activity, and assignment visibility coherent as the swarm grows.\n- `async_assignment_and_session_continuity` allows work to begin from issues, comments, tasks, mobile clients, web clients, or daemons and continue with shared state instead of fragmenting into isolated runs.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `instruction_surfaces` ensures agents enter through durable repo-owned rules, docs indexes, and machine-readable resources before they begin deeper loops.\n- `context_engineering` assembles bounded context packs instead of dumping whole transcripts or the entire vault into one run.\n- `subagent_orchestration` allows scout, foreman, reviewer, and executor lanes to cooperate through explicit handoffs.\n- `harness_protocols` treats long-lived agent access as a host-controlled session protocol with events, approvals, and interrupts rather than as raw model plumbing.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, local skills, API providers, and subscription-backed lanes into one operating path.\n- `lane_separation` keeps the human symbiosis lane distinct from unattended automation and batch execution.\n- `vault_stewardship_support` gives capsule-facing agents a durable home for decomposition, markup, graph refactoring, validation, and safe update flow.\n- `traces_and_evals` records run lineage and quality signals so autonomy can be debugged and improved instead of merely observed.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now also has a clearer capsule-vault mission: during the day it can support a co-pilot mode where Personal AI Assistant proposes vault work with human confirmation, while at night it can power bounded Vault Stewardship Swarm jobs that keep the repository improving without asking the user to micromanage every update. The stronger 2026 reading is that this runtime must combine six things at once: durable instruction surfaces, context-engineered task packs, host-controlled harness protocols, agent control plane governance, async session continuity across clients and assignment surfaces, and explicit mode-shaping so the same system can be polite by day and autonomous by night without confusing those modes.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, context discipline, and operator-visible control rather than to shallow prompt loops.\n"
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, and operator oversight. This capsule matters because 24/7 or night-shift autonomy is not created by a stronger model alone; it requires the surrounding runtime that keeps services alive, cooldowns bounded, failures observable, and delegated work accountable. It now also makes lane separation explicit: the Personal AI Assistant serves the human symbiotic loop, while programmable API and off-peak lanes power unattended execution.",
+    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, honest idle and backoff behavior, degraded-lane recovery, and operator oversight. It now makes three stronger 2026 points explicit as well: the runtime needs a real control plane for fleet governance, it needs async assignment and cross-client continuity so work can move across web, terminal, mobile, and daemon surfaces without losing state, and it needs explicit mode-shaping so the same swarm can behave like a daytime co-pilot or a nighttime autonomous maintenance layer without mixing those responsibilities.",
     "keywords": [
       "background-agent-runtime",
       "daemon",
@@ -34,8 +34,15 @@
       "hybrid-llm-access",
       "night-batch-routing",
       "agent-delegation",
-      "symphony",
-      "deepmine"
+      "vault-stewardship-swarm",
+      "deepmine",
+      "agent-context-engineering",
+      "agent-subagents",
+      "agent-evals-and-traces",
+      "agent-instruction-surfaces",
+      "agent-harness-protocol",
+      "agent-control-plane",
+      "fallback-recovery"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -102,7 +109,31 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
         "relation_type": "references"
       },
       {
@@ -111,6 +142,10 @@
       },
       {
         "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
         "relation_type": "references"
       },
       {
@@ -139,6 +174,18 @@
       },
       {
         "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
         "relation_type": "references"
       },
       {
@@ -173,5 +220,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4a9f190b3044849ae7e108b0a34561b25c958b3e31e0832a13c89ae906e04a84e8603a6f157310faf60998c8a3c66e5e233694ecf179b02c66400b8b3470a768"
+  "integrity_sha3_512": "9caa031ae8a6d786735ac893c8d2efbef6e874fc17934b4f7b97a2f9891e094bc4bb433c6e91660e1d91fe82004211d18d0aa64d8db19d8cdefa5722a9af2ff0"
 }

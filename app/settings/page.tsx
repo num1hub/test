@@ -6,6 +6,7 @@ import Link from 'next/link';
 import PasswordChangeForm from '@/components/PasswordChangeForm';
 import AiWalletForm from '@/components/AiWalletForm';
 import AppNav from '@/components/AppNav';
+import ChatGptAuthStatusCard from '@/components/ChatGptAuthStatusCard';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useToast } from '@/contexts/ToastContext';
 import { logClientAction } from '@/lib/clientActivity';
@@ -159,6 +160,8 @@ export default function SettingsPage() {
             <PasswordChangeForm />
           </div>
         </div>
+
+        <ChatGptAuthStatusCard mode="compact" />
 
         <AiWalletForm />
       </div>

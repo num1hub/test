@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS Project\n\n## 1. Definition and Essence\nCapsuleOS Project is the umbrella execution hub for the operating system of sovereign knowledge. It aligns architecture evolution, validator hardening, graph governance, and module integration efforts under one coordinated project lineage.\n\n## 2. Core Attributes\n- `scope` CapsuleOS architecture and governance implementation boundaries\n- `child_projects` subsystem hubs for A2C, N-Infinity, DeepMine, Workspace, Symphony\n- `milestone_map` macro delivery checkpoints and release targets\n- `ownership` principal maintainers and governance actors\n- `success_metrics` reliability, integrity, adoption, and performance targets\n\n## 3. Lifecycle\nThe project progresses through planning, implementation, validation, and iterative refinement cycles with clear milestones and cross-subsystem coordination.\n\n## 4. Integration\n- **Foundation CapsuleOS:** implemented by this project hub.\n- **A2C/N-Infinity/DeepMine/Workspace/Symphony Projects:** child subsystem execution streams.\n- **Planner/Tracker:** schedules and monitors delivery outcomes.\n- **N1Hub Projects Index:** catalog entry for ecosystem navigation.\n\n## 5. Philosophical Alignment\nThis hub applies To Dig Deep by turning foundational doctrine into sustained executable engineering practice.\n"
+    "content": "# CapsuleOS Project\n\n## 1. Definition and Essence\nCapsuleOS Project is the umbrella execution program for the sovereign-knowledge operating system. It coordinates architecture law, validator hardening, branch governance, knowledge-production flow, agent runtime discipline, and cross-module integration under one accountable project lineage.\n\n## 2. Core Scope\n- `architecture_law` schema, protocol, integrity, and generation rules.\n- `branch_governance` Real, Dream, quarantine, promotion, and audit discipline.\n- `knowledge_production` the end-to-end contour linking quarry, refinery, review, and vault update.\n- `agent_runtime` control plane, background daemons, assignment handling, and observability.\n- `child_projects` Workspace, DeepMine, A2C, N-Infinity, and Symphony as coordinated execution streams.\n- `release_discipline` milestones, risk posture, and platform-wide quality targets.\n\n## 3. Lifecycle\nThe project progresses through planned platform evolution, implementation, validation, guarded promotion, and repeated architectural review so subsystem speed does not outrun platform coherence.\n\n## 4. Integration\n- **Foundation CapsuleOS:** doctrine and law surface implemented by this project.\n- **Workspace / DeepMine / A2C / N-Infinity / Symphony Projects:** primary child delivery streams.\n- **Security / Testing / Validation Gatekeeper:** guardrail contour for trusted evolution.\n- **N1Hub Projects Index:** portfolio map that exposes platform lineage to the rest of the vault.\n\n## 5. Philosophical Alignment\nCapsuleOS Project applies To Dig Deep by turning foundational memory law into living engineering practice and by keeping the whole second-brain platform coherent while every child project evolves.\n"
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Project is the umbrella execution program for the sovereign-knowledge operating system. It coordinates validator hardening, schema and protocol evolution, graph governance, persistence, security, and the downstream subsystem projects that turn doctrine into running software. The hub exists so Workspace, A2C, DeepMine, and N-Infinity can evolve independently without losing architectural coherence or shared release discipline. It is therefore both the strategic portfolio root for core platform work and the operational place where CapsuleOS principles are translated into audited engineering decisions, milestones, and cross-module integration.",
+    "summary": "CapsuleOS Project is the portfolio root of the second-brain platform. It keeps validator law, branch governance, knowledge production, security, testing, and agent runtime discipline aligned while Workspace, DeepMine, A2C, Symphony, and N-Infinity evolve as semi-independent delivery streams. The hub matters because N1Hub is no longer only a set of ideas or UI surfaces; it is a platform whose doctrine has to survive real implementation pressure. CapsuleOS Project is therefore the place where platform law is translated into milestones, cross-module contracts, and sustained architectural coherence.",
     "keywords": [
       "capsuleos",
       "platform-root",
@@ -36,6 +36,7 @@
       "workspace",
       "a2c",
       "deepmine",
+      "symphony",
       "n-infinity",
       "architecture",
       "release-discipline"
@@ -69,12 +70,40 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
         "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3aef3f2138dca035eb7a3d038d91278d32eb5af738db9d131dc7129322fe9e72acde4a4a7d5b20409fd6bd722d69a3fdc489021420882ae00f85944fa8f151b7"
+  "integrity_sha3_512": "1095fcfb736f07cb054c6f1151171ccf1f6ca3b5b3d645a8d04f9be2587c754cb5dcb5602eb7c24fea1b11ea73b6f09305be906467e1d9d4f4f33813d28ca2ec"
 }

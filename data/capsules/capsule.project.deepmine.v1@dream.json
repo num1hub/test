@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine Project\n\n## 1. Definition and Essence\nDeepMine Project delivers model routing, queue orchestration, caching, and provider abstraction for computational intelligence workloads across the ecosystem.\n\n## 2. Core Attributes\n- `provider_matrix` supported model vendors and capabilities\n- `routing_policy` model selection and fallback strategy\n- `queue_design` throughput and prioritization semantics\n- `cache_strategy` response reuse and invalidation behavior\n- `cost_controls` budget-aware execution constraints\n\n## 3. Lifecycle\nDeepMine progresses through provider integrations, latency/cost optimization, and reliability hardening for high-volume AI-assisted operations.\n\n## 4. Integration\n- **CapsuleOS Project:** core subsystem implementation stream.\n- **Foundation DeepMine:** conceptual dependency and scope.\n- **A2C and AI Assistant Projects:** major runtime consumers.\n- **Boost/N1 Pass:** optional acceleration and entitlement coupling.\n\n## 5. Philosophical Alignment\nDeepMine execution embraces To Dig Deep by making computational depth available as controlled infrastructure rather than opaque magic.\n"
+    "content": "# DeepMine Project\n\n## 1. Dream Direction\nThe Dream branch pushes DeepMine Project toward a fuller quarry fabric: richer provider diversity, stronger context-pack assembly, smarter ore-manifest generation, better assignment-aware routing, and more deliberate night-shift economics.\n\n## 2. Desired Future State\n- hybrid `api + subscription + hosted inference` lanes feeding one governed quarry.\n- context packs assembled intentionally instead of dumping raw vault mass into the model.\n- ore manifests that preserve evidence, extraction boundaries, and downstream refinement expectations.\n- routing logic that understands user-facing, background, swarm, and repository-assignment work as distinct economic lanes.\n- batch and night-shift execution that materially improves cost-to-signal performance.\n- quarry output that is easier for A2C, Workspace, and N-Infinity to consume without folklore.\n\n## 3. Why It Matters\nDream preserves the idea that DeepMine should become more than a connector bundle. It should mature into an industrial extraction fabric that supplies the rest of N1Hub with cleaner, deeper, more inspectable, and more economically rational raw material.\n"
   },
   "neuro_concentrate": {
-    "summary": "DeepMine Project in the Dream branch focuses on the aspirational extraction fabric: broader provider routing, more autonomous research sweeps, richer cache intelligence, and tighter cost-to-signal optimization across heavy intelligence workloads. The branch matters because current DeepMine infrastructure is only the first layer of what a true cognitive quarry could become. In Dream, the project evolves toward a disciplined mining engine that can supply the rest of the ecosystem with deeper, cleaner, and more strategically filtered raw material.",
+    "summary": "DeepMine Project in the Dream branch focuses on the future quarry fabric: broader provider diversity, stronger context-pack assembly, ore-manifest discipline, assignment-aware routing, and better cost-to-signal optimization across heavy intelligence workloads. The branch matters because current DeepMine infrastructure is only the first industrial layer of what a true cognitive quarry could become. In Dream, the project evolves toward a governed mining engine that supplies the rest of the ecosystem with deeper, cleaner, more inspectable, and more strategically filtered raw material.",
     "keywords": [
       "deepmine",
       "extraction",
@@ -87,10 +87,14 @@
       {
         "target_id": "capsule.project.workspace.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2ed04648d5dae30815a0403f7217d1d15ab4c292e626c76a288e27abcc4cb259a03a699af73020ece0075f1257a31fae0524c954369b3a3b777cecb679e49539"
+  "integrity_sha3_512": "7d5d493fbb4b252a359ef3a40ffb82b4af1e02bb958e4a019c92e72dcbf410081f0d6fb19f780c01565a526bcf9bbb42c110defd516922aa2acdc41eef80d6d8"
 }

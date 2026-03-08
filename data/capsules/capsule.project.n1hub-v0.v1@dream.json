@@ -36,6 +36,7 @@
       "capsuleos-core",
       "workspace-ui",
       "architectural-sandbox",
+      "reference-substrate",
       "egor-n1"
     ],
     "confidence_vector": {
@@ -69,10 +70,14 @@
       {
         "target_id": "capsule.project.workspace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "853aec7f8552348afd029eabd6802b5edb02614f1909e6e821f27991deca2b52ce3e17ac0057408c6e01fc75a1a78a9a2f6be0facac722d5bad8b64b0cf2d259"
+  "integrity_sha3_512": "09da3143e40521be579e4a462d9f6cb4772d3b9da23cbead280ee0ea774cf80c00ca2d78315c8a17aee22ee4f9f3107dc88dc922bbe87d748f6281788e61a8bd"
 }

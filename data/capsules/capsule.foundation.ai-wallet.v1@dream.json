@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-wallet.v1",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T16:40:00Z",
-    "updated_at": "2026-03-07T10:22:13.928Z",
+    "updated_at": "2026-03-08T19:12:00Z",
     "name": "AI Wallet",
     "semantic_hash": "capsule-foundation-aiwallet-v1-providerkeys-subscription-routing-modelaccess",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Wallet\n\n## 1. Definition and Essence\nAI Wallet defines the secure user-controlled credential layer for model access inside N1Hub. It stores provider API keys, authorization keys, endpoint overrides, and preferred model hints so that LLM-powered features and AI agents can operate without hard-coding external credentials into prompts, browser state, or ad hoc scripts.\n\n## 2. Core Responsibilities\n- `provider_credentials` encrypted server-side storage for OpenAI, Anthropic, Gemini, DeepSeek, Grok, OpenRouter, and future API connectors.\n- `subscription_authorization` dedicated authorization-key slots for ChatGPT or Codex Subscription, Claude Subscription, and N1-managed subscription bridges.\n- `provider_enablement` per-provider enabled or disabled state for routing safety.\n- `model_preferences` preferred model, bridge URL, and endpoint overrides per provider.\n- `agent_access_boundary` a stable handoff layer between user identity and runtime inference services, including background lanes.\n\n## 3. Runtime Contract\nThe AI Wallet does not execute inference by itself. It acts as the trust boundary that exposes only masked provider summaries to the client while preserving raw secrets on the server. DeepMine, the Personal AI Assistant, Symphony-driven agents, N-Infinity lanes, and future AI services can resolve available providers through this capsule's contract and route requests according to user ownership, subscription status, and safety policy.\n\n## 4. Integration\n- **Workspace:** presents the wallet in the personal cabinet as an operator-facing control surface.\n- **Personal AI Assistant:** reads enabled providers and model preferences before conversational or delegated work.\n- **DeepMine:** uses wallet-backed provider access as the model supply plane for extraction and routing.\n- **Background Agent Runtime:** uses the same wallet boundary for night-shift or always-on autonomy instead of separate hidden credentials.\n- **Profile and User Preferences:** separate identity and behavioral defaults from raw secrets while still allowing user-specific AI behavior.\n- **API Gateway and Integrations:** enforce authenticated, rate-limited server-side access to provider credentials.\n\n## 5. Philosophical Alignment\nAI Wallet supports To Dig Deep by letting users bring their own intelligence supply into a sovereign workspace without surrendering control of keys, provider choice, or execution boundaries.\n"
+    "content": "# AI Wallet\n\n## 1. Dream Direction\nThe Dream branch imagines AI Wallet becoming a true portfolio manager for intelligence access inside N1Hub.\n\n## 2. Desired Future State\n- API providers, hosted model lanes, and subscription lanes managed as one coherent portfolio\n- better provider health and readiness visibility before agents attempt long background work\n- clearer routing posture for day co-pilot, night autonomy, batch windows, and premium reasoning lanes\n- safer support for local ChatGPT or Codex access without exposing raw token plumbing in normal UI flows\n- stronger linkage between wallet state, control surfaces, control-plane budgets, and agent runtime policy\n- assignment-aware routing metadata so background work can pick the right lane without improvisation\n\n## 3. Why It Matters\nDream preserves the idea that model access should not feel like a loose drawer of keys. It should feel like a governed supply system for intelligence, with health, routing, ownership, safety posture, and budget posture visible enough for real autonomous work.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Wallet is the secure credential and authorization layer for AI access inside N1Hub. It matters because model-powered features become brittle and unsafe when provider keys live in browser state, scattered scripts, or prompt text. This capsule centralizes encrypted server-side storage for API providers such as OpenAI, Anthropic, Gemini, DeepSeek, Grok, and OpenRouter, while also covering subscription-style authorization paths such as ChatGPT or Codex Subscription, Claude Subscription, and N1-managed bridges. It gives DeepMine, the Personal AI Assistant, Symphony-driven agents, N-Infinity lanes, and future inference services a stable user-scoped contract for resolving which providers are available while preserving sovereignty over secrets and routing policy.",
+    "summary": "AI Wallet in the Dream branch preserves the idea that model access in N1Hub should be managed as a governed intelligence portfolio, not a loose drawer of keys. It imagines healthier provider readiness, clearer routing across API, hosted-model, and subscription lanes, stronger budget and assignment posture, and safer support for background autonomy and local ChatGPT or Codex access. The capsule matters because real agent systems need ownership, health, routing posture, and secrecy boundaries at the credential layer itself.",
     "keywords": [
       "ai-wallet",
       "provider-credentials",
@@ -33,7 +33,8 @@
       "model-routing",
       "deepmine",
       "background-agents",
-      "n1hub"
+      "n1hub",
+      "budget-posture"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -66,6 +67,22 @@
       {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.night-shift-autonomy.v1",
@@ -107,5 +124,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e11e22cb7fe829b7ad94f6f812ebfb74a42e8ac46e919f225a22891d9cd33bfcf9c010726b66434fc1a1fcd022c696318fe1e888c109572feeffe5fd5d4def61"
+  "integrity_sha3_512": "a7d6aa8f8096e83077fea67890c11e61d1e2a6cc29a04a52583d3ec301916a1d8344089a9c9f64ec168d1eff8eaee67f9c3c3f60ac2af5d9c8a8ef7b2b036f02"
 }

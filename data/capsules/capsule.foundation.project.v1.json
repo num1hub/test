@@ -17,7 +17,7 @@
     "content": "# Project: The Sovereign Graph of Creation\n\n## 1. Definition\nIn the N1Hub ecosystem, a **Project** is not a static folder or a flat list of files; it is a **capsule-hub**—a dynamic, living organism constructed from atomic capsules (tasks, documents, discussions, people, finances) bound together by typed topological links. Governed by the CapsuleOS 5-Element Law, a project represents the crystallization of a creator's intent into a structured, cryptographically sealed, and evolving graph.\n\n## 2. Project Lifecycle\nA project traverses a definitive lifecycle through specific statuses:\n- **`draft`**: The inception phase. Capsules are hot, mutable, and freely edited without strict cryptographic sealing.\n- **`active`**: The execution phase. The graph expands as tasks are completed, links are forged, and N-Infinity agents weave new insights.\n- **`pause`**: Temporary suspension of active evolution.\n- **`frozen`**: A read-only state for historical preservation or review.\n- **`sovereign`**: The terminal, golden state. The project is fully realized, cryptographically sealed as an immutable artifact, and serves as an absolute source of truth.\n\n## 3. Roles and Participants\nProjects are inherently collaborative. Roles are defined by typed links (e.g., `member_of`) extending from person-capsules to the project-hub, carrying specific access rights:\n- **`owner`**: Absolute sovereign control over the graph.\n- **`contributor`**: Active builders authorized to inject new capsules.\n- **`investor`**: Stakeholders linked via transaction-capsules, possessing read and audit privileges.\n- **`advisor`**: Consultants providing strategic input and oversight.\n- **`reviewer`**: Entities responsible for arbitrating epistemic contradictions.\n\n## 4. Visibility and Access\nThe project-hub's metadata dictates its boundary:\n- **`private`**: Isolated to the owner and explicitly invited roles.\n- **`public_read`**: Open for global viewing and agent crawling.\n- **`public_contribute`**: Open for external pull requests and capsule injections.\n- **`public_apply`**: Open for tender submissions and contest entries.\n\n## 5. Monetization and Marketplace\nA project can achieve ultimate liquidity by being transformed into a tradable asset. An active or sovereign project can be sealed into a **Template** and listed on the N1Hub Marketplace. Subsequent instantiations (`fork` or `derived_from`) automatically generate royalties and track provenance back to the original author, creating a perpetual economic engine for intellectual capital.\n\n## 6. Real-World Instantiation\nBeyond abstract knowledge, a project can map physical reality. **TileSims** is a prime example: a project where the graph consists of physical capsules (walls, pipes, tiles) branching into `Real` and `Dream` states, proving the absolute versatility of the Project blueprint."
   },
   "neuro_concentrate": {
-    "summary": "Project Blueprint defines how a capsule hub becomes a governed delivery space rather than a folder-shaped container. It establishes lifecycle semantics, participant boundaries, visibility modes, branchability, and the path from internal execution toward template-grade reusable capital. The capsule matters because projects are one of the main units of reality users manipulate inside N1Hub, and weak project semantics would immediately blur work, ownership, and monetization. By making project structure explicit, the vault can treat initiatives, subprojects, and physical-world programs such as TileSims as first-class sovereign graphs with accountable lineage and operational discipline.",
+    "summary": "Project Blueprint defines how a capsule hub becomes a governed delivery space rather than a folder-shaped container. It establishes lifecycle semantics, participant boundaries, visibility modes, branchability, planning loops, and the path from internal execution toward template-grade reusable capital. The capsule matters because projects are one of the main units of reality users manipulate inside N1Hub, and weak project semantics would immediately blur work, ownership, and monetization. By making project structure explicit, the vault can treat initiatives, subprojects, and physical-world programs such as TileSims as first-class sovereign graphs with accountable lineage, roadmap discipline, and operational follow-through.",
     "keywords": [
       "project-blueprint",
       "delivery-space",
@@ -27,7 +27,9 @@
       "ownership",
       "template-capital",
       "subprojects",
-      "sovereign-graph"
+      "sovereign-graph",
+      "roadmap-discipline",
+      "follow-through"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -74,7 +76,15 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
         "relation_type": "references"
       },
       {
@@ -109,5 +119,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e79f71ab264621faac46b367806743f19d6d7e6c80264787306b301dfc01927e327e860e3423240d131c79fe9f8550ce1931772e33b7f97359777563e9ffd4a7"
+  "integrity_sha3_512": "a65f1b0aa62e48c937e74f0e661ab892705ea01a73bd1a2b283df2143efb7362703fd1ed11bc216a7eeef05ba6a3d2deba5a0ee52f9d76bfbbbb5237fcbfd928"
 }

@@ -19,6 +19,7 @@ export interface AiTextGenerationRequest {
   model?: string;
   temperature?: number;
   maxTokens?: number;
+  jsonMode?: boolean;
 }
 
 export interface AiTextGenerationResult {
@@ -34,6 +35,35 @@ interface ResolvedProviderConfig {
   secret: string;
   endpoint: string;
   model: string;
+}
+
+function getEnvProviderConfig(provider: AiWalletProviderId): ResolvedProviderConfig | null {
+  switch (provider) {
+    case 'gemini': {
+      const secret = process.env.GEMINI_API_KEY?.trim() || process.env.GOOGLE_API_KEY?.trim() || '';
+      if (!secret) return null;
+
+      return {
+        provider,
+        secret,
+        endpoint: trimSlash(process.env.GEMINI_API_BASE_URL?.trim() || defaultEndpoint(provider)),
+        model: defaultModel(provider),
+      };
+    }
+    case 'github_models': {
+      const secret = process.env.GITHUB_MODELS_TOKEN?.trim() || process.env.GITHUB_TOKEN?.trim() || '';
+      if (!secret) return null;
+
+      return {
+        provider,
+        secret,
+        endpoint: trimSlash(process.env.GITHUB_MODELS_BASE_URL?.trim() || defaultEndpoint(provider)),
+        model: defaultModel(provider),
+      };
+    }
+    default:
+      return null;
+  }
 }
 
 function createAiError(code: string, message: string): Error & { code: string } {
@@ -68,6 +98,8 @@ function defaultEndpoint(provider: AiWalletProviderId): string {
       return 'https://generativelanguage.googleapis.com/v1beta';
     case 'deepseek':
       return 'https://api.deepseek.com';
+    case 'github_models':
+      return 'https://models.github.ai/inference';
     case 'grok':
       return 'https://api.x.ai/v1';
     case 'openrouter':
@@ -88,9 +120,11 @@ function defaultModel(provider: AiWalletProviderId): string {
     case 'anthropic':
       return 'claude-3-5-sonnet-latest';
     case 'gemini':
-      return 'gemini-2.0-flash';
+      return 'gemini-2.5-flash';
     case 'deepseek':
       return 'deepseek-chat';
+    case 'github_models':
+      return 'openai/gpt-4.1';
     case 'grok':
       return 'grok-4-fast-reasoning';
     case 'openrouter':
@@ -194,12 +228,37 @@ async function parseJsonResponse(response: Response): Promise<unknown> {
   }
 }
 
-async function ensureResponseOk(response: Response): Promise<unknown> {
+function mapProviderError(provider: AiWalletProviderId | undefined, status: number, payload: unknown): string | null {
+  const record = payload as Record<string, unknown> | null;
+  const errorRecord =
+    record && typeof record.error === 'object' && !Array.isArray(record.error)
+      ? (record.error as Record<string, unknown>)
+      : null;
+  const rawMessage =
+    typeof errorRecord?.message === 'string'
+      ? errorRecord.message
+      : typeof record?.message === 'string'
+        ? record.message
+        : '';
+
+  if (
+    provider === 'gemini' &&
+    status === 400 &&
+    /User location is not supported for the API use/i.test(rawMessage)
+  ) {
+    return 'Gemini API is blocked for the current Google account or server location. The key may be valid, but Google does not allow Gemini API use from this region/account.';
+  }
+
+  return null;
+}
+
+async function ensureResponseOk(response: Response, provider?: AiWalletProviderId): Promise<unknown> {
   const payload = await parseJsonResponse(response);
   if (!response.ok) {
+    const mappedMessage = mapProviderError(provider, response.status, payload);
     throw createAiError(
       'provider_request_failed',
-      `Provider returned status ${response.status}: ${JSON.stringify(payload).slice(0, 1000)}`,
+      mappedMessage ?? `Provider returned status ${response.status}: ${JSON.stringify(payload).slice(0, 1000)}`,
     );
   }
   return payload;
@@ -225,7 +284,7 @@ async function generateTextThroughBridge(
       max_tokens: withDefault(request.maxTokens, 1024),
     }),
   });
-  const payload = await ensureResponseOk(response);
+  const payload = await ensureResponseOk(response, resolved.provider);
   return {
     provider: resolved.provider,
     model: resolved.model,
@@ -260,6 +319,16 @@ async function resolveProviderConfig(
       secret: config.secret.trim(),
       endpoint,
       model: preferredModel?.trim() || config.preferredModel?.trim() || defaultModel(provider),
+    };
+  }
+
+  for (const provider of candidateProviders) {
+    const envConfig = getEnvProviderConfig(provider);
+    if (!envConfig) continue;
+
+    return {
+      ...envConfig,
+      model: preferredModel?.trim() || envConfig.model,
     };
   }
 
@@ -300,6 +369,7 @@ export async function generateTextWithAiProvider(
   const resolved = await resolveProviderConfig(request.provider, request.model);
   const temperature = request.temperature;
   const maxTokens = request.maxTokens;
+  const jsonMode = request.jsonMode === true;
 
   switch (resolved.provider) {
     case 'codex_subscription':
@@ -310,6 +380,7 @@ export async function generateTextWithAiProvider(
 
     case 'openai':
     case 'deepseek':
+    case 'github_models':
     case 'grok':
     case 'openrouter':
     {
@@ -325,6 +396,12 @@ export async function generateTextWithAiProvider(
                 'X-Title': 'N1Hub',
               }
             : {}),
+          ...(resolved.provider === 'github_models'
+            ? {
+                Accept: 'application/vnd.github+json',
+                'X-GitHub-Api-Version': '2022-11-28',
+              }
+            : {}),
         },
         body: JSON.stringify({
           model: resolved.model,
@@ -336,9 +413,10 @@ export async function generateTextWithAiProvider(
           ],
           ...(temperature !== undefined ? { temperature } : {}),
           ...(maxTokens !== undefined ? { max_tokens: maxTokens } : {}),
+          ...(jsonMode ? { response_format: { type: 'json_object' } } : {}),
         }),
       });
-      const payload = await ensureResponseOk(response);
+      const payload = await ensureResponseOk(response, resolved.provider);
       return {
         provider: resolved.provider,
         model: resolved.model,
@@ -365,7 +443,7 @@ export async function generateTextWithAiProvider(
           ...(temperature !== undefined ? { temperature } : {}),
         }),
       });
-      const payload = await ensureResponseOk(response);
+      const payload = await ensureResponseOk(response, resolved.provider);
       return {
         provider: resolved.provider,
         model: resolved.model,
@@ -376,13 +454,12 @@ export async function generateTextWithAiProvider(
     }
 
     case 'gemini': {
-      const endpoint = `${resolved.endpoint}/models/${encodeURIComponent(resolved.model)}:generateContent?key=${encodeURIComponent(
-        resolved.secret,
-      )}`;
+      const endpoint = `${resolved.endpoint}/models/${encodeURIComponent(resolved.model)}:generateContent`;
       const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'x-goog-api-key': resolved.secret,
         },
         body: JSON.stringify({
           ...(request.system?.trim()
@@ -408,7 +485,7 @@ export async function generateTextWithAiProvider(
             : {}),
         }),
       });
-      const payload = await ensureResponseOk(response);
+      const payload = await ensureResponseOk(response, resolved.provider);
       return {
         provider: resolved.provider,
         model: resolved.model,

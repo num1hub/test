@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:05:00Z",
     "name": "AI Prompt",
     "semantic_hash": "capsule-ai-prompt-v1-template-llm-assistant-operations",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable or instance-specific instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, and expected output schema so model interactions remain deterministic and auditable.\n\n## 2. Core Attributes\n- `prompt_type` system, user, planner, risk, summarization\n- `template` raw prompt text with placeholders\n- `constraints` schema and style boundaries\n- `model_profile` routing hints for selected engine\n- `evaluation_notes` quality outcomes from prior runs\n\n## 3. Lifecycle\nPrompts are authored, versioned, executed in runtime interactions, evaluated against outcome quality, and refined through feedback loops and governance review.\n\n## 4. Integration\n- **AI Conversation:** supplies context-aware message generation.\n- **Suggestion Module:** drives recommendation synthesis.\n- **DeepMine:** routes prompt execution to LLM providers.\n- **Validator/Audit:** preserves deterministic artifacts for review.\n\n## 5. Philosophical Alignment\nPrompt capsules align with To Dig Deep by making model instructions explicit, inspectable, and improvable rather than hidden magic.\n"
+    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable or instance-specific instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, context-pack expectations, and expected output schema so model interactions remain deterministic and auditable.\n\n## 2. Core Attributes\n- `prompt_type` system, user, planner, risk, summarization\n- `template` raw prompt text with placeholders\n- `constraints` schema and style boundaries\n- `model_profile` routing hints for selected engine\n- `context_requirements` what evidence, capsules, and artifacts must be present before execution\n- `evaluation_notes` quality outcomes from prior runs\n\n## 3. Lifecycle\nPrompts are authored, versioned, executed in runtime interactions, evaluated against outcome quality, and refined through feedback loops and governance review. Mature prompt capsules should stay legible enough that they can be compared, replayed, and critiqued as operational knowledge rather than disappearing into hidden application code.\n\n## 4. Integration\n- **AI Conversation:** supplies context-aware message generation.\n- **Suggestion Module:** drives recommendation synthesis.\n- **DeepMine:** routes prompt execution to LLM providers.\n- **Instruction Surfaces:** determine where reusable instruction law is sourced from.\n- **Context Engineering:** defines what capsule packs and runtime artifacts must accompany prompt execution.\n- **Evals and Traces:** preserve quality outcomes for later refinement.\n- **Validator/Audit:** preserves deterministic artifacts for review.\n\n## 5. Philosophical Alignment\nPrompt capsules align with To Dig Deep by making model instructions explicit, inspectable, improvable, and governable rather than hidden magic."
   },
   "neuro_concentrate": {
-    "summary": "AI Prompt captures the instruction artifact that shapes model behavior across conversations, agents, and background automation. It stores constraints, expected output style, and routing hints so prompt logic becomes inspectable and versionable instead of disappearing inside opaque runtime code. The capsule matters because prompt quality directly affects trust, determinism, and the ability to debug or improve assistant behavior over time. By representing prompts as first-class operational knowledge, the vault can compare variants, audit outcomes, and refine model interaction with the same rigor applied to any other sovereign artifact.",
+    "summary": "AI Prompt captures the instruction artifact that shapes model behavior across conversations, agents, and background automation. It stores constraints, expected output style, routing hints, and context requirements so prompt logic becomes inspectable and versionable instead of disappearing inside opaque runtime code. The capsule matters because prompt quality directly affects trust, determinism, cost, and the ability to debug or improve assistant behavior over time. By representing prompts as first-class operational knowledge, the vault can compare variants, attach evals and traces, and refine model interaction with the same rigor applied to any other sovereign artifact.",
     "keywords": [
       "ai",
       "prompt",
@@ -35,7 +35,10 @@
       "llm",
       "assistant",
       "operations",
-      "deepmine"
+      "deepmine",
+      "context-packs",
+      "instruction-surfaces",
+      "evals"
     ],
     "confidence_vector": {
       "extraction": 0.89,
@@ -74,16 +77,32 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.symphony-workflow.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.ai.suggestion.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d30c23ddd87ca802257f740b7949e39bcec7f0fe12680b497eae2341ec2b20b57e5120c06c6f36473e80909149396c64f5b8eb7d99402976379f57b1d73dd961"
+  "integrity_sha3_512": "d208fd3c2c353502bcb836b880143209f77a80e86224976bedd8fe7c78ae783acb3a7ff562656cf022af240ba5d4013dd4f09d094d093eea3c93dc1ab3f0a402"
 }

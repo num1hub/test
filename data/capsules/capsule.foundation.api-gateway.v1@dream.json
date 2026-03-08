@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# API Gateway\n\n## 1. Definition and Essence\nAPI Gateway defines the governed ingress and egress boundary for external service interactions. It standardizes authentication, routing, throttling, observability, and policy enforcement for all integration traffic.\n\n## 2. Core Attributes\n- `route_catalog` mapped upstream and downstream endpoints\n- `auth_enforcement` token, key, and signature verification\n- `rate_control` throttling and tenant fairness policy\n- `observability` tracing, metrics, and error analytics\n- `policy_hooks` validation and compliance interceptors\n\n## 3. Lifecycle\nGateway policies are versioned, deployed, monitored, and tuned as traffic patterns and external dependencies evolve.\n\n## 4. Integration\n- **Integrations Layer:** primary transport and control boundary.\n- **Security:** authentication and abuse prevention coupling.\n- **Audit Log:** request/response governance evidence stream.\n- **Workspace Modules:** controlled access to external ecosystems.\n\n## 5. Philosophical Alignment\nGateway architecture honors To Dig Deep by extending outward connectivity with strict, transparent control over every boundary crossing.\n"
+    "content": "# API Gateway\n\n## 1. Definition and Essence\nAPI Gateway in Dream describes a more mature governed edge for N1Hub. It preserves the future where provider traffic, hosted inference, connectors, webhook callbacks, and background agent egress all pass through a boundary that is lane-aware, redactable, auditable, and economically governed.\n\n## 2. Core Attributes\n- `route_catalog` for richer service families\n- `auth_and_actor_binding`\n- `rate_and_budget_control`\n- `observability_and_artifact_lineage`\n- `policy_hooks` for redaction, review, and compliance\n- `lane_awareness` across interactive, background, and hosted inference traffic\n\n## 3. Dream Direction\nThe future gateway should become one of the hardest sovereignty surfaces in the system: powerful enough to unlock many external services, strict enough that boundary crossings never disappear into scripts or intuition.\n\n## 4. Integration\n- **Integrations:** supplies connector families.\n- **AI Wallet and Hybrid LLM Access:** supply the provider side.\n- **Agent Control Plane and Background Agent Runtime:** govern machine use of the boundary.\n- **Security and Audit:** keep external power searchable and reviewable.\n\n## 5. Philosophical Alignment\nAPI Gateway in Dream preserves the idea that openness should deepen capability without weakening control.\n"
   },
   "neuro_concentrate": {
-    "summary": "API Gateway in the Dream branch describes a more policy-aware ingress and egress boundary for the platform. It pushes toward stricter service contracts, better secret handling, clearer rate governance, and stronger observability around what external systems are allowed to touch or retrieve. The capsule matters because integration surfaces become silent trust leaks when they stay under-modeled. Dream therefore preserves API Gateway as a future control boundary where external connectivity is powerful without becoming opaque.",
+    "summary": "API Gateway in Dream describes a more policy-aware ingress and egress boundary for the platform. It pushes toward stricter service contracts, actor-bound auth, lane-aware economics, and stronger observability around what external systems are allowed to touch or retrieve. The capsule matters because integration surfaces become silent trust leaks when they stay under-modeled. Dream therefore preserves API Gateway as a future control boundary where external connectivity is powerful without becoming opaque.",
     "keywords": [
       "api-gateway",
       "routing",
@@ -53,6 +53,18 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.audit-log.v1",
         "relation_type": "references"
       },
@@ -64,5 +76,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6dd145ac240b3191edf80086816034ee435f5ff46e202a114c9f48e856d7cece5421597ee871ba2233e84c02adfc6c37b4ed5ab0f40f83a994411a4c0064ec59"
+  "integrity_sha3_512": "c2d7ca49e5c5f0ac2d175c8f973f0df2dd09239cf8a8ab7a6b7838e165d61dc461d3b9aff037bdc7577ae33085aa5e715c0723de1975982e4e9a2ac75c5fa02d"
 }

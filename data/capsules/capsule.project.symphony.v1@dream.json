@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Project\n\n## 1. Definition and Essence\nSymphony Project is the concrete N1Hub engineering stream that delivers issue-driven coding-agent orchestration inside the live repository. It turns the Symphony foundation into an implemented service, CLI, workflow contract, and operating practice.\n\n## 2. Delivery Scope\n- `service_runtime` orchestrator, retries, reconciliation, and state snapshot logic.\n- `tracker_integration` Linear client behavior for candidate fetch, state refresh, and startup cleanup.\n- `workspace_lifecycle` per-issue workspace preparation, hooks, and cleanup.\n- `codex_protocol` app-server session startup, turn streaming, and error handling.\n- `operator_surfaces` docs, logs, and optional HTTP status endpoints.\n- `capsule_integration` vault representation of Symphony concepts, policy, and project lineage.\n- `runtime_atoms` explicit graph definitions for session, attempt, retry, policy, and observability.\n\n## 3. N1Hub Integration\nThis project belongs to CapsuleOS platform work, but it directly serves repository execution: it gives N1Hub a disciplined path from issue intake to isolated implementation sessions tied to real code, tests, and capsule contracts.\n\n## 4. Philosophical Alignment\nSymphony Project realizes To Dig Deep by building automation that is accountable to repository truth rather than to shallow ticket paraphrases.\n"
+    "content": "# Symphony Project\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Project maturing from a working repository runner into a deeper orchestration program for N1Hub engineering.\n\n## 2. Desired Future State\n- stronger workflow-law integration so `WORKFLOW.md`, instruction surfaces, and harness policy act as one coherent execution surface.\n- assignment-aware execution that can begin from issues, comments, control actions, or swarm assignments without losing attribution.\n- richer control-plane and status projection across terminal, web, mobile, and operator views.\n- clearer Dream-safe output discipline before anything hardens into repository truth.\n- better coordination between Symphony lanes and the broader swarm instead of one isolated coding daemon.\n- tighter coupling to capsule jobs, review bundles, and promotion evidence.\n\n## 3. Why It Matters\nDream preserves Symphony as a durable engineering substrate, not only the current implementation. It is the place where repository automation becomes more governable, more inspectable, and more tightly integrated with the rest of the N1Hub intelligence stack.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Project in the Dream branch represents the future repository-orchestration lane beyond the already working implementation. It imagines stronger policy loading, richer live reconciliation, better branch-aware workspaces, safer approval handling, and tighter handoff between issue intake, coding sessions, and capsule-aware status surfaces. The branch matters because the current project proves the service can run, but the longer-term target is a more durable automation substrate for N1Hub engineering. Dream therefore preserves Symphony as a deeper execution program rather than only the present repository runner.",
+    "summary": "Symphony Project in the Dream branch represents the future repository-orchestration lane beyond the already working implementation. It imagines stronger workflow-law integration, assignment-aware execution, richer live reconciliation, better branch-aware workspaces, safer approval handling, tighter handoff between issues and swarm assignments, and cleaner linkage to capsule jobs and promotion evidence. The branch matters because the current project proves the service can run, but the longer-term target is a more durable automation substrate for N1Hub engineering. Dream therefore preserves Symphony as a deeper execution program rather than only the present repository runner.",
     "keywords": [
       "symphony-project",
       "automation",
@@ -103,6 +103,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.n1hub-v0.v1",
         "relation_type": "references"
       }
@@ -110,5 +118,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c1e01db4eaf3e6cb748549211d00cddaf9fadc6ba46ba2d5f00a56183ad9f0b3e1be771c2011986968ac1f6642ba8fdfecf33ddeb1893861c3b7e0470ad49cc5"
+  "integrity_sha3_512": "3c6c9661dc8c6a688885ba3ff01e5083fc13985adc22c387c51d39fea42f3222817823d6ff00f61b1e98bb594a20e8839ecd32d2e84e4b9dc745341a7f6e4f0a"
 }

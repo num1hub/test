@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Notification\n\n## 1. Definition and Essence\nNotification defines the canonical delivery event for in-app, email, push, and external channels. It carries message content, priority, read state, and delivery metadata while remaining decoupled from domain-specific entities like tasks or milestones.\n\n## 2. Core Attributes\n- `channel` in_app, email, push, telegram, webhook\n- `priority` delivery urgency and escalation policy\n- `read_state` unread, seen, acknowledged status\n- `payload` user-facing title/body plus action links\n- `delivery_result` sent, failed, retried with trace metadata\n\n## 3. Lifecycle\nNotifications are emitted by tracker or assistant flows, routed by channel adapters, retried on failure, and eventually archived with read and acknowledgment telemetry for analytics.\n\n## 4. Integration\n- **Tracker:** emits schedule and progress alerts.\n- **Reminder:** provides notification trigger semantics.\n- **Personal AI Assistant:** pushes proactive recommendations.\n- **Integrations Layer:** maps delivery into external channels.\n\n## 5. Philosophical Alignment\nNotification capsules uphold To Dig Deep by making significant graph events visible at the right moment, preserving situational awareness without noise.\n"
+    "content": "# Notification\n\n## 1. Definition and Essence\nNotification defines the canonical delivery event that moves important graph signals into human attention. It is channel-agnostic and policy-aware: in-app, email, push, Telegram, or other routes can all carry the same underlying event while preserving urgency, delivery outcome, acknowledgment state, and return path. Notification is therefore not the message itself, but the governed transport wrapper around significance.\n\n## 2. Core Attributes\n- `channel` in_app, email, push, telegram, webhook, or future delivery lane\n- `priority` urgency and escalation posture\n- `read_state` unread, seen, acknowledged, or resolved state\n- `payload` user-facing title, body, action links, and contextual return path\n- `delivery_result` sent, failed, retried, or suppressed with trace metadata\n- `origin_class` whether the signal came from planner, tracker, assistant, swarm, or control plane\n- `attention_class` whether the event is human-facing, machine-operational, or hybrid\n- `return_contract` what acknowledgement, follow-up, or assignment handoff is expected back\n\n## 3. Lifecycle\nNotifications are emitted by planning, tracking, assistant, and runtime flows; filtered through preference and escalation rules; routed to delivery channels; retried or suppressed when needed; then archived as part of the activity and audit trail. The goal is not simply to send more alerts. The goal is to preserve the right attention at the right time and make the response path explicit.\n\n## 4. N1Hub Role\nNotification is one of the main bridges between the second brain and the living human. If this capsule is weak, the system becomes either silent and forgetful or noisy and adversarial. It therefore depends on user preferences, tracker evidence, reminder semantics, control-plane policy, and the distinction between day co-pilot and night autonomy.\n\n## 5. Integration\n- **Reminder and Tracker:** produce most time-bound and drift-bound signals.\n- **Personal AI Assistant and AI Control Surface:** present proactive suggestions and visible operational alerts.\n- **Agent Control Plane, Async Assignment, and Background Agent Runtime:** use notifications for failures, wakeups, handoffs, intervention requests, and assignment return paths.\n- **Integrations:** map delivery into external channels.\n\n## 6. Philosophical Alignment\nNotification supports To Dig Deep by making significant events visible without allowing the system to decay into noise.\n"
   },
   "neuro_concentrate": {
-    "summary": "Notification is the channel-agnostic delivery event that carries significant signals from the graph into user attention. It separates message payload, urgency, channel, and delivery result from the domain object that triggered the alert, allowing the system to route reminders, assistant nudges, and tracker warnings consistently. The capsule matters because reliable attention management depends on explicit delivery semantics, not just content generation. By modeling notifications as first-class operational artifacts, the vault can audit what was sent, through which channel, with what result, and whether that signal changed behavior.",
+    "summary": "Notification is the channel-agnostic delivery event that carries significant signals from the graph into human attention. It separates message payload, urgency, channel, delivery result, attention class, and return path from the domain object that triggered the alert, allowing the system to route reminders, assistant nudges, tracker warnings, and swarm handoffs consistently. The capsule matters because reliable attention management depends on explicit delivery semantics, not just content generation. By modeling notifications as first-class operational artifacts, N1Hub can keep the second brain visible without allowing it to become noisy or opaque.",
     "keywords": [
       "notification",
       "delivery",
@@ -30,7 +30,11 @@
       "channels",
       "priority",
       "tracker",
-      "assistant"
+      "assistant",
+      "attention",
+      "return-path",
+      "control-plane",
+      "attention-class"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -73,6 +77,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
       },
@@ -88,5 +104,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b79b9b7ec07bf5df90d7b51d498b13760770717227d2a491902055865a12211e08dd7776c802a714eff41b8fa1f917ea3cd588000ffab8ef0fadc74b25042b26"
+  "integrity_sha3_512": "38d4c811bbcfccc36394d65ac75c5d275c72180a2e05ca3ad73b5021b4ab8c9b69b2afd25042b58c83cb933b4ba553bc8e39006439c225a5eac43df74776e74f"
 }

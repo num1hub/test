@@ -22,7 +22,7 @@
     "content": "# SIAF Governance\n\n## 1. Definition and Essence\nSIAF Governance defines policy and voting mechanics for the sovereign intellectual asset fund, including proposal flow, allocation criteria, and accountability requirements for ecosystem capital deployment.\n\n## 2. Core Attributes\n- `proposal_model` structure for funding and policy proposals\n- `voting_rules` quorum, weighting, and decision thresholds\n- `allocation_policy` capital distribution and risk controls\n- `reporting_requirements` transparency obligations after allocation\n- `intervention_process` emergency governance pathways\n\n## 3. Lifecycle\nGovernance proposals are submitted, reviewed, voted, executed, and audited, with policy revisions encoded as capsule updates for transparent institutional memory.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** voting and treasury interaction substrate.\n- **Marketplace and Royalty Engine:** economic policy impact zones.\n- **Sovereign Intellectual Capital:** strategic asset stewardship.\n- **Parliament:** governance logic alignment for epistemic disputes.\n\n## 5. Philosophical Alignment\nSIAF governance applies To Dig Deep institutionally by coupling capital decisions with explicit rules, evidence, and accountability.\n"
   },
   "neuro_concentrate": {
-    "summary": "SIAF Governance in the Dream branch describes a more mature institutional layer for treasury and capital allocation. It imagines clearer proposal pathways, stronger intervention rules, better transparency artifacts, and a more robust relationship between funding decisions and long-horizon ecosystem strategy. The capsule matters because governance quality determines whether capital compounds wisdom or merely noise. Dream therefore preserves SIAF as a future decision system for economic stewardship, not just a symbolic fund wrapper.",
+    "summary": "SIAF Governance in the Dream branch describes a more mature institutional layer for treasury and capital allocation. It imagines clearer proposal pathways, stronger intervention rules, better transparency artifacts, and a more robust relationship between funding decisions, subscriptions, royalties, and long-horizon ecosystem strategy. The capsule matters because governance quality determines whether capital compounds wisdom or merely noise. Dream therefore preserves SIAF as a future decision system for economic stewardship, not just a symbolic fund wrapper.",
     "keywords": [
       "siaf-governance",
       "capital-allocation",
@@ -65,10 +65,18 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f6c8bc5e425132eb8d112eb74aacb3f8c427f957d49e28a7183eda8474df95822aa01114bc49147c458ec16dac4d367b806a75698dff0ae96fa8945d0eef0d6e"
+  "integrity_sha3_512": "80fcde6f9284b8639ce09e059956846b06a54904341a7b04ebce8a649c9649ec28d32d30d992653326ce50ec4014b5dacc0806b416cb33413089bdc1f1bf7b1e"
 }

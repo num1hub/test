@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.project.mining-company.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "active",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T23:35:00Z",
     "name": "Mining Company",
     "semantic_hash": "capsule-project-mining-company-v1-organization-portfolio-capital",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Mining Company\n\n## 1. Definition and Essence\nMining Company frames To Dig Deep as an organizational initiative for sustained knowledge extraction, refinement, and compounding intellectual capital across multiple project streams.\n\n## 2. Core Attributes\n- `mission_scope` strategic extraction and compounding goals\n- `operating_model` team, process, and governance structure\n- `project_portfolio` constituent initiatives and priorities\n- `capital_policy` reinvestment and resource allocation rules\n- `impact_metrics` long-term value and resilience indicators\n\n## 3. Lifecycle\nThe initiative is maintained as an evolving strategic portfolio with periodic policy updates, project reprioritization, and capability expansion.\n\n## 4. Integration\n- **To Dig Deep:** direct philosophical implementation anchor.\n- **Sovereign Intellectual Capital:** long-term value framing.\n- **Marketplace/SIAF:** potential commercialization and governance channels.\n- **Workspace:** operational command interface for execution.\n\n## 5. Philosophical Alignment\nMining Company operationalizes To Dig Deep at organizational scale: extract signal, refine structure, compound value.\n"
+    "content": "# Mining Company\n\n## 1. Definition and Essence\nMining Company frames To Dig Deep as an organizational initiative for sustained knowledge extraction, refinement, synthesis, and compounding intellectual capital across multiple project streams. It is not just a commercialization shell. It is the full-cycle institutional frame around the mine, the refinery, the vault, and the agents that keep knowledge production alive.\n\n## 2. Core Attributes\n- `mission_scope` strategic extraction and compounding goals\n- `operating_model` team, process, and governance structure\n- `project_portfolio` constituent initiatives and priorities\n- `capital_policy` reinvestment and resource allocation rules\n- `impact_metrics` long-term value and resilience indicators\n- `production_chain` the explicit line from prospecting and mining through refinement, graph integration, stewardship, and downstream synthesis\n\n## 3. Lifecycle\nThe initiative is maintained as an evolving strategic portfolio with periodic policy updates, project reprioritization, and capability expansion. In early form it clarifies how DeepMine, A2C, N-Infinity, and future laboratory or commercialization lanes belong to one institution rather than separate slogans.\n\n## 4. Integration\n- **To Dig Deep:** direct philosophical implementation anchor.\n- **DeepMine:** quarry and extraction layer.\n- **A2C:** refinery and emission discipline.\n- **N-Infinity:** compounding swarm and graph metabolism.\n- **Workspace:** operational command interface for execution.\n- **Sovereign Intellectual Capital / Marketplace / SIAF:** later monetization, governance, and capital channels.\n\n## 5. Philosophical Alignment\nMining Company operationalizes To Dig Deep at organizational scale: find deposits, extract signal, refine structure, compound value, and keep the whole production loop institutionally coherent.\n"
   },
   "neuro_concentrate": {
-    "summary": "Mining Company is the strategic portfolio hub that interprets To Dig Deep as an organization, not just a slogan. It groups the economic and intellectual-capital initiatives concerned with extracting signal, refining it into durable assets, and compounding value through governance, marketplace distribution, and long-term stewardship. The project is intentionally broader than a single product: it is the container for monetization logic, capital policy, and reusable asset infrastructure. In that sense it acts as the executive layer connecting Marketplace, sovereign templates, royalties, and institutional growth.",
+    "summary": "Mining Company is the strategic portfolio hub that treats To Dig Deep as a full-cycle institution rather than a slogan. It connects DeepMine as quarry, A2C as refinery, N-Infinity as compounding swarm, and later governance or marketplace layers into one production chain for intellectual capital. The capsule matters because it gives the broader N1Hub mining metaphor an organizational frame instead of leaving it as disconnected imagery. It turns the metaphor into an operating model with roles, stages, and strategic continuity.",
     "keywords": [
       "mining-company",
       "portfolio",
@@ -38,7 +38,11 @@
       "capital-policy",
       "asset-infrastructure",
       "to-dig-deep",
-      "institutional-growth"
+      "institutional-growth",
+      "deepmine",
+      "a2c",
+      "n-infinity",
+      "production-chain"
     ],
     "confidence_vector": {
       "extraction": 0.93,
@@ -67,10 +71,22 @@
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f1c70f22575bc8508caa5e1bad6b91a3e396cc603e7f5cb8912e79e9789d5cccb5d9c3c2c3e9141d2f97b8a9efd9bb98779c9de9a83ff5152e6575f8e0a9b3ab"
+  "integrity_sha3_512": "5e4a6e17273304fbb74f1a35faa258bcc33eb0ddbbe773d6c32e2dc68489280eca1c93598d11340c2d225e99e4ea910f05c93382618adb428368dc4904ead1cc"
 }

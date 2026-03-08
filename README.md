@@ -117,15 +117,23 @@ N1Hub now includes a server-side AI provider runtime backed by the AI Wallet in 
 - ChatGPT and Claude can now be configured in two separate ways:
   - `ChatGPT / Codex Subscription` and `Claude Subscription` for subscription-backed bridge/auth-key paths
   - `OpenAI API` and `Anthropic API` for standard API-key access
-- `Gemini`, `DeepSeek`, and `Grok` are available as direct API-provider slots.
+- `Gemini`, `GitHub Models`, `DeepSeek`, and `Grok` are available as direct API-provider slots.
+- Gemini can be configured either in the AI Wallet or via server-side `GEMINI_API_KEY` for trusted local bring-up.
+- GitHub Models can be configured either in the AI Wallet or via server-side `GITHUB_MODELS_TOKEN` or `GITHUB_TOKEN`.
 - Manual provider-backed generation is available through `POST /api/ai/generate`.
-- An OpenClaw-inspired control plane is available at `/ai`, combining provider status, DeepMine console, and Symphony or N-Infinity lane telemetry.
+- An OpenClaw-inspired control plane is available at `/ai`, combining provider status, DeepMine console, Symphony or N-Infinity lane telemetry, and a direct-provider `Vault Steward` autonomous agent.
 - Provider availability is exposed through `GET /api/ai/providers`.
 - Capsule-oriented N-Infinity agents run through Symphony using `NINFINITY_WORKFLOW.md`.
+- `Vault Steward` is the first autonomous agent that can work directly from an AI Wallet provider without requiring Codex login. It reads the current vault, proposes bounded maintenance jobs, persists a queue under `data/private/agents`, and updates Dream-side operational capsules about its latest run.
 
 Operational notes: [`docs/ninfinity.md`](docs/ninfinity.md)
 
 Host bring-up and `systemd` installation: [`docs/agents-operations.md`](docs/agents-operations.md)
+
+Gemini API key quickstart:
+
+- docs: <https://ai.google.dev/gemini-api/docs/quickstart>
+- keys: <https://aistudio.google.com/api-keys>
 
 ## OpenClaw-Inspired Agent Workspace
 
@@ -144,6 +152,12 @@ Run the nightly N-Infinity service from the repo root:
 
 ```bash
 npm run ninfinity
+```
+
+Run the direct-provider autonomous vault agent manually:
+
+```bash
+npm run vault-steward -- --once
 ```
 
 Optional local status surface:

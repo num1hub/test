@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-async-assignment.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T21:40:00Z",
+    "updated_at": "2026-03-08T20:38:00Z",
+    "name": "Agent Async Assignment",
+    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return",
+    "source": {
+      "uri": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/",
+      "type": "web_article"
+    },
+    "priority": "high",
+    "progress": 22,
+    "estimatedHours": 180,
+    "actualHours": 18,
+    "dueDate": "2026-09-18",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Async Assignment\n\n## 1. Definition and Essence\nAgent Async Assignment defines the pattern where work is assigned to an agent from an issue, comment, task surface, chat surface, or control panel and then continues independently until it produces a bounded artifact or asks for clarification. It treats assignment as a durable object, not as a transient chat turn.\n\n## 2. Core Responsibilities\n- `assignment_origin` records the issue, comment, task, pull request, assistant action, or operator command that created the work.\n- `assignment_handle` gives the work a stable identifier across clients, daemons, control-plane views, and review surfaces.\n- `durable_work_start` lets an agent begin work without requiring the assigning client to remain connected.\n- `clarification_return_path` ensures the agent can ask questions back in the originating surface instead of losing context.\n- `artifact_return` ties drafts, plans, pull requests, Dream-side capsule outputs, or review bundles back to the same assignment chain.\n- `approval_and_review_respect` preserves existing review and merge rules instead of bypassing them because work started asynchronously.\n- `status_projection` makes queued, running, failed, cancelled, blocked-on-human, cooling-down, and completed states visible in control and notification surfaces.\n- `owner_and_due_window` keeps asynchronous work accountable instead of ownerless.\n- `lane_selection` lets the runtime choose the right daemon, wallet lane, and budget posture for the assignment instead of treating all work as interchangeable.\n- `multi_surface_continuity` keeps assignment legible across web, mobile, terminal, assistant, and daemon lanes.\n\n## 3. N1Hub Role\nIn N1Hub this pattern matters for Symphony issue execution, Vault Stewardship Swarm jobs, and future assistant-triggered work that begins in one place but finishes in another. It is the clean bridge between conversational intent, background execution, wallet-governed lane routing, clarification loops, returned artifacts, and review or promotion surfaces.\n\n## 4. Architectural Value\nAsync assignment makes agent work schedulable, inspectable, interruptible, and explainable without forcing every serious task to live inside one synchronous UI session. It also gives the control plane a real object on which to project health, ownership, and economic policy.\n\n## 5. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by letting deeper work continue autonomously while still preserving clear origin, return path, ownership, routing posture, and review discipline."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Async Assignment defines the durable assignment pattern for N1Hub agents. It matters because important work often starts from an issue, comment, task, or assistant action and then continues outside the original client session. This capsule formalizes assignment origin, stable assignment handles, clarification return paths, artifact return, review boundaries, ownership, wallet-aware lane selection, visible status projection, and honest no-work or cooldown returns so asynchronous agent work remains legible instead of disappearing into a background process or fragmenting across disconnected clients, notifications, and daemon lanes.",
+    "keywords": [
+      "agent-async-assignment",
+      "assignment-origin",
+      "clarification-return-path",
+      "artifact-return",
+      "honest-no-work-return",
+      "assignment-handle",
+      "owner-window",
+      "status-projection",
+      "cross-client-continuity",
+      "jira-style-assignment",
+      "background-work",
+      "symphony",
+      "n1hub",
+      "lane-selection"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "57ba4e9b439211f66c37b3f066b6dc221c76d79c0e59877cf5941fe425473e8dddebe6b87d89683f92a257ffabcec7fb1ca005760fb1d0fc7f6029c595098d6b"
+}

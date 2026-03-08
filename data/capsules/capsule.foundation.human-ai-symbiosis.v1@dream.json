@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.human-ai-symbiosis.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-08T19:12:00Z",
     "name": "Human-AI Symbiosis",
     "semantic_hash": "human-ai-symbiosis-daemon-partner-collective-intelligence-routing",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Human-AI Symbiosis\n\n## 1. Dream Direction\nIn the Dream branch, Human-AI Symbiosis pushes toward a world where the user's assistant behaves like a true always-on cognitive exoskeleton: continuous, trustworthy, memory-rich, and deeply integrated with the rest of the N1Hub swarm.\n\n## 2. Desired Future State\n- The human remains the sovereign center.\n- The Personal AI Assistant becomes a nearly frictionless daemon-partner.\n- Collective intelligence becomes instantly callable without losing clarity about who is acting and why.\n- Real and Dream branch discipline stays visible so deeper automation never masquerades as unquestioned truth.\n\n## 3. Why It Matters\nThe future value of N1Hub depends not on having more agents than everyone else, but on making those agents feel like a coherent extension of one person's thinking and operating power.\n\n## 4. Philosophical Alignment\nDream preserves symbiosis as the right end state: the system grows more capable, but the human remains more present, not less."
+    "content": "# Human-AI Symbiosis\n\n## 1. Dream Direction\nIn the Dream branch, Human-AI Symbiosis pushes toward a world where the user's assistant behaves like a true always-on cognitive exoskeleton: continuous, trustworthy, memory-rich, and deeply integrated with the rest of the N1Hub swarm.\n\n## 2. Desired Future State\n- The human remains the sovereign center.\n- The Personal AI Assistant becomes a nearly frictionless daemon-partner.\n- Collective intelligence becomes instantly callable without losing clarity about who is acting and why.\n- The wallet, control surface, and control plane cooperate so intelligence supply stays visible instead of magical.\n- Real and Dream branch discipline stays visible so deeper automation never masquerades as unquestioned truth.\n\n## 3. Why It Matters\nThe future value of N1Hub depends not on having more agents than everyone else, but on making those agents feel like a coherent extension of one person's thinking and operating power. Dream preserves a future where agency and automation strengthen each other because supply, governance, and delegation remain legible.\n\n## 4. Philosophical Alignment\nDream preserves symbiosis as the right end state: the system grows more capable, but the human remains more present, not less.\n"
   },
   "neuro_concentrate": {
-    "summary": "Human-AI Symbiosis in the Dream branch imagines an even tighter bond between the person and a persistent AI partner, where memory, delegation, and background swarm work feel seamless without erasing human sovereignty. The capsule matters because the future risk is not lack of intelligence but loss of agency under excessive automation. Dream therefore preserves the idea that the assistant remains a devoted partner surface for one person, while collective intelligence, mining, and orchestration continue to expand behind that surface in a way the human can still understand, direct, and trust.",
+    "summary": "Human-AI Symbiosis in the Dream branch imagines an even tighter bond between the person and a persistent AI partner, where memory, delegation, wallet-governed supply, and background swarm work feel seamless without erasing human sovereignty. The capsule matters because the future risk is not lack of intelligence but loss of agency under excessive automation. Dream therefore preserves the idea that the assistant remains a devoted partner surface for one person, while collective intelligence, mining, and orchestration continue to expand behind that surface in a way the human can still understand, direct, trust, and economically govern.",
     "keywords": [
       "human-ai-symbiosis",
       "personal-ai-assistant",
@@ -31,7 +31,8 @@
       "delegation",
       "jarvis",
       "workspace",
-      "n1hub"
+      "n1hub",
+      "wallet-governed-supply"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -70,6 +71,22 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.v1",
         "relation_type": "references"
       },
@@ -85,5 +102,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "94e95481fd2cb684ed474407825c57e3f430e7c11fd7108c763210d2282917a8fef56fc26917afd148a73801acab053cf05fd03a9396e440ef9611d3c9461912"
+  "integrity_sha3_512": "19f6bf88452b92ef615e5ea28373e5a56a0566ba82be500f850847f299e0c70303f3970ee3514ca6b58486719c432bffd16d34668306c0a6f447922b3aac83bf"
 }

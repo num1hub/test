@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T20:20:00Z",
     "name": "Testing",
     "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Testing\n\n## 1. Definition and Essence\nTesting defines quality assurance strategy for capsule schema conformance, graph integrity, module behavior, and release safety. It codifies test layers, coverage goals, and regression controls across the ecosystem.\n\n## 2. Core Attributes\n- `test_layers` unit, integration, component, e2e, load\n- `coverage_targets` required baseline for critical modules\n- `fixture_strategy` canonical sample capsule catalog\n- `regression_policy` release-blocking failure criteria\n- `quality_metrics` reliability and defect escape indicators\n\n## 3. Lifecycle\nTesting standards are revised alongside architecture changes, enforced in CI, and validated continuously through automated and targeted manual checks.\n\n## 4. Integration\n- **Validator:** schema and gate conformance checks.\n- **A2C and Workspace:** behavior and integration test targets.\n- **Hybrid Database:** consistency and recovery validation.\n- **Security:** includes adversarial and access-control tests.\n\n## 5. Philosophical Alignment\nTesting expresses To Dig Deep by challenging assumptions with repeatable evidence before knowledge or code is trusted.\n"
+    "content": "# Testing\n\n## 1. Definition and Essence\nTesting is the evidence discipline of CapsuleOS. It defines how the platform challenges schema conformance, graph integrity, branch routing, runtime behavior, security posture, and promotion safety before knowledge or code is trusted.\n\n## 2. Core Attributes\n- `test_layers` unit, integration, component, end-to-end, adversarial, replay, and canary checks\n- `coverage_targets` minimum expectations for critical modules and trust-sensitive boundaries\n- `fixture_strategy` canonical capsule, branch, and assignment scenarios used as shared evidence\n- `regression_policy` release-blocking failure criteria and override thresholds\n- `quality_metrics` reliability, defect escape, branch contamination, and evidence integrity indicators\n- `replay_and_trace_policy` expectations for reproducing agent runs, promotions, and failure cases\n\n## 3. Lifecycle\nTesting standards evolve with architecture changes, new agent lanes, new provider surfaces, and new promotion paths. Checks are enforced in CI, replayed against production-like artifacts, and expanded after incidents, overrides, or quarantine events.\n\n## 4. Integration\n- **Validator / 16 Gates:** schema and gate conformance checks.\n- **Capsule Generation Protocol:** generation promises must be tested, not merely asserted.\n- **A2C / Workspace / Symphony:** runtime behavior and integration boundaries.\n- **Security / Architect Override / Quarantine:** adversarial, failure-path, and trust-boundary tests.\n- **Agent Evals and Traces:** evidence loop for agent behavior quality.\n\n## 5. Philosophical Alignment\nTesting serves To Dig Deep by insisting that depth includes repeatable evidence. It challenges assumptions before knowledge, code, or autonomous behavior is allowed to become trusted reality.\n"
   },
   "neuro_concentrate": {
-    "summary": "Testing is the evidence discipline of the platform. It defines how the vault checks schema conformance, graph integrity, runtime behavior, regressions, and release readiness across modules rather than relying on intuition or one-off manual confidence. The capsule is intentionally broad because trust in CapsuleOS requires coordinated quality signals across validator logic, APIs, storage, UI flows, and security boundaries. In practice it anchors the expectation that knowledge and code are challenged before they are trusted, making reliability a governed subsystem instead of a hopeful side effect.",
+    "summary": "Testing is the evidence discipline of the platform. It defines how CapsuleOS checks schema conformance, graph integrity, branch routing, runtime behavior, regressions, trace replay, and release readiness across modules instead of relying on intuition or one-off confidence. The capsule is intentionally broad because trust in N1Hub now spans validator logic, A2C, autonomous agents, assignment flows, UI, storage, and security boundaries. In practice it anchors the expectation that knowledge and code are challenged before they are trusted, making reliability a governed subsystem rather than a hopeful side effect.",
     "keywords": [
       "testing",
       "quality-assurance",
@@ -61,10 +61,26 @@
       {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d62e664bcd2c06f78aaabc7b6af8f75501730d1531bea231563ffc19c8808e147285ed9429048c72806653bc39e9bd90e5313af50b77d726ce079abd6420a627"
+  "integrity_sha3_512": "f2bdf355bbddc040f208c0b67888f55ee3bbf3a439746ee99d41e5f297dcd26e707b10f2c44663d8f21c6dc8f6bfcb0e7bc1ed62b83a9ef5e67ecd1af7ade101"
 }

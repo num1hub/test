@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.key-agents.v1",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-08T22:43:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "source": {
@@ -15,29 +15,28 @@
       "type": "architect_prompt"
     },
     "priority": "high",
-    "progress": 31,
-    "estimatedHours": 240,
-    "actualHours": 72,
+    "progress": 41,
+    "estimatedHours": 260,
+    "actualHours": 84,
     "dueDate": "2026-09-07",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, and the review/governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- graph maintenance and vault stewardship\n- review, validation, and branch discipline\n\n## 3. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future agent implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the planning lane, this map is now clearer: Roadmap Planner Agent holds strategic shape, Daily Planner Agent holds the lived day, and Planning Horizon Engine coordinates the ladder between them.\n\n## 4. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about \"AI\" and instead naming the bounded roles that actually think, dig, plan, critique, and maintain the graph.\n"
+    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, the vault-stewardship swarm, and the review or governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction, retrieval, and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- vault reading, capsule decomposition, markup, and graph refactoring\n- review, validation, branch discipline, and promotion safety\n\n## 3. Main Lanes\n- **User lane**: Personal AI Assistant, Chat to Capsules, and Capsule Librarian Agent.\n- **Mining lane**: DeepMine Prospector, Miner, and Foreman.\n- **Planning lane**: Roadmap Planner Agent, Planning Horizon Engine, and Daily Planner Agent.\n- **Vault stewardship lane**: Vault Stewardship Swarm, Capsule Decomposition Agent, Capsule Markup Agent, Capsule Graph Refactor Agent, and Vault Update Agent.\n- **Governance lane**: Branch Steward Agent, Validation Gatekeeper Agent, and Review Agent.\n- **Background swarm lane**: N-Infinity roles plus Background Agent Runtime.\n\n## 4. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the vault lane, it now explicitly shows that capsule improvement is a full-cycle system: read the vault, plan jobs, execute bounded Dream-safe work, review the result, and only then consider promotion.\n\n## 5. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about AI and instead naming the bounded roles that actually read, dig, plan, critique, refactor, validate, and maintain the graph.\n"
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the Personal AI Assistant, DeepMine mining workers, planning agents, N-Infinity maintenance roles, and review or validation roles into one graph-visible cluster. The planning line is now clearer inside that map as well: Roadmap Planner Agent, Daily Planner Agent, and Planning Horizon Engine together define how the system moves from the full Dream field to one grounded plan for today. By naming the cluster, the vault makes ownership, delegation, and future implementation much easier to reason about.",
+    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the user lane, mining lane, planning lane, vault stewardship lane, governance lane, and background swarm lane into one graph-visible system. This matters because the project's most important work is no longer generic AI usage, but disciplined capsule work performed by bounded roles. The hub now makes full-cycle vault stewardship legible: read the vault, generate jobs, execute Dream-safe improvements, review outcomes, and only then consider promotion into trusted reality.",
     "keywords": [
       "key-agents",
       "agent-hub",
-      "personal-ai-assistant",
-      "deepmine",
-      "n-infinity",
-      "planning-agents",
-      "planning-horizon-engine",
-      "review-agent",
+      "user-lane",
+      "mining-lane",
+      "planning-lane",
+      "vault-stewardship-lane",
+      "governance-lane",
+      "background-swarm",
       "validation",
-      "background-agents",
       "n1hub"
     ],
     "confidence_vector": {
@@ -65,6 +64,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
         "relation_type": "references"
       },
@@ -74,6 +77,22 @@
       },
       {
         "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
         "relation_type": "references"
       },
       {
@@ -148,5 +167,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2f9829d0839ce43df9bd381d6eaba24ca787c331fe37ff83d4b9cb714336751612197af02bc7dfe58741bffeee6de4aafd1c58c4420c7991764b3786bd40e096"
+  "integrity_sha3_512": "490e8446f55dbbab0212138838b2cc2028e468194329786eb4c24083dfc494d6dd53c2fe0d15489c271178a2e2ed0e75116a96d7be30a223ecb0712cb1d08ea6"
 }

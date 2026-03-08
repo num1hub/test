@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Calendar\n\n## 1. Definition and Essence\nCalendar defines the temporal projection of workspace activity, showing due dates, milestones, reminders, and events derived from capsules. It synchronizes planning intent with tracker telemetry to provide time-aware navigation and execution support.\n\n## 2. Core Attributes\n- `event_refs` linked capsules rendered as calendar events\n- `view_modes` day, week, month, agenda projections\n- `timezone_policy` normalization and display rules\n- `sync_profile` external calendar mapping configuration\n- `conflict_markers` overlaps and scheduling pressure indicators\n\n## 3. Lifecycle\nCalendar entries are materialized from capsule metadata, updated as schedules shift, synchronized to external systems when enabled, and archived with historical trace for retrospectives.\n\n## 4. Integration\n- **Workspace:** part_of shared temporal surface.\n- **Planner:** consumes roadmap and task due dates.\n- **Tracker:** adds reminders and overdue indicators.\n- **Integrations:** supports external calendar synchronization.\n\n## 5. Philosophical Alignment\nCalendar keeps To Dig Deep grounded in time, converting strategic intent into clear temporal commitments.\n"
+    "content": "# Calendar\n\n## 1. Definition and Essence\nCalendar defines the temporal surface of N1Hub. It projects goals, milestones, tasks, reminders, and planned work into lived time so that the second brain can be used as a daily operating environment rather than only as a graph of structured memory. It synchronizes planning intent, tracker telemetry, personal rhythm, and optional external calendar systems into one time-aware view.\n\n## 2. Core Attributes\n- `event_refs` linked capsules rendered as calendar events or agenda items\n- `view_modes` day, week, month, horizon, and agenda projections\n- `timezone_policy` normalization and display rules derived from user preferences\n- `sync_profile` external calendar mapping configuration and trust boundary\n- `conflict_markers` overlaps, overload, and schedule pressure indicators\n- `reviewable_time_blocks` explicit distinction between fixed commitments and provisional Dream scheduling\n\n## 3. Lifecycle\nCalendar entries are materialized from capsule state, adjusted as plans change, synchronized outward when approved, and retained historically so the system can compare intent against lived scheduling reality. The calendar should not become an isolated copy of tasks. It should remain the temporal projection of the graph.\n\n## 4. N1Hub Role\nCalendar is where planning becomes visible as actual days. It is also where the user can feel whether the vault is helping or overwhelming. That means Calendar depends not only on due dates but on human rhythm, review discipline, reminder policy, and the difference between fixed Real commitments and still-fluid Dream possibilities.\n\n## 5. Integration\n- **Planner, Goals, Milestones, and Tasks:** provide the structure that becomes time-bound.\n- **Tracker and Reminder:** feed drift, urgency, and upcoming trigger points.\n- **User Preferences and Profile:** define timezone, work windows, and temporal posture.\n- **Notification:** turns time pressure into human-visible prompts.\n- **Integrations:** optionally mirrors approved commitments into external calendar systems.\n\n## 6. Philosophical Alignment\nCalendar supports To Dig Deep by grounding strategy in lived time without reducing the system to a flat date picker.\n"
   },
   "neuro_concentrate": {
-    "summary": "Calendar is the temporal projection of the graph. It turns due dates, reminders, milestones, and scheduled commitments into a navigable time surface so execution can be understood not only structurally but chronologically. The capsule matters because work that is clearly modeled in the graph can still fail if it is weakly anchored in time. By combining planner intent, tracker signals, timezone rules, and optional external sync, Calendar keeps commitments visible at the moment they matter. It is the bridge between abstract planning structure and lived scheduling reality.",
+    "summary": "Calendar is the temporal projection of the graph and one of the main places where the second brain becomes livable. It turns goals, milestones, tasks, reminders, and scheduled commitments into a navigable time surface so execution can be understood not only structurally but chronologically. The capsule matters because work that is clearly modeled in the graph can still fail if it is weakly anchored in time, human rhythm, review discipline, and day-night operating posture. Calendar is therefore the bridge between abstract planning structure and lived scheduling reality.",
     "keywords": [
       "calendar",
       "schedule",
@@ -30,7 +30,12 @@
       "tracker",
       "events",
       "workspace",
-      "timeline"
+      "timeline",
+      "second-brain",
+      "time-surface",
+      "human-rhythm",
+      "day-night",
+      "follow-through"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -61,6 +66,38 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.reminder.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.integration.calendar.v1",
         "relation_type": "references"
       },
@@ -76,5 +113,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "49cb0e898604ba14db1f2547280b11efc2aa3e896f66766568a5fbb9294dcecfadf9fa637c225388c77d4ded758961afab3ed0bd9fedcb435d2251731b812b6c"
+  "integrity_sha3_512": "a7bc49c0271c7ef5b22f50cd5bf8cce9f90837457043c072ca7faeb0fe2f0a99a23e1b3fc0c4ee686b338f2f7a473aec7f17cf057ff2ac47505380d0666c33db"
 }

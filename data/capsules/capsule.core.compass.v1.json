@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:10:00Z",
     "semantic_hash": "core-compass-governance-direction-architecture-evolution-stability-priority",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,10 +18,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core Compass: Governance Direction Hub\n\n## 1. Purpose\nThe Core Compass is a governance hub that aligns architectural decisions with constitutional law and manifesto intent.\n\n## 2. Responsibilities\n- Prioritize tradeoffs when local optimization conflicts with systemic coherence.\n- Keep schema evolution aligned with canonical relation semantics.\n- Preserve interoperability and trust while the graph scales.\n\n## 3. Hub Behavior\nAs a hub, Compass aggregates strategic guidance capsules and provides directional context for long horizon decisions.\n\n## 4. Constraint\nDirection can evolve, but constitutional boundaries remain immutable."
+    "content": "# Core Compass: Governance Direction Hub\n\n## 1. Purpose\nThe Core Compass is a governance hub that aligns architectural decisions with constitutional law and manifesto intent.\n\n## 2. Responsibilities\n- Prioritize tradeoffs when local optimization conflicts with systemic coherence.\n- Keep schema evolution aligned with canonical relation semantics.\n- Preserve interoperability and trust while the graph scales.\n- Favor second-brain compounding, branch clarity, and accountable autonomy over shallow feature accumulation.\n- Help decide when work belongs in `Real`, when it must remain in `Dream`, and when a human should stay in the loop.\n\n## 3. Hub Behavior\nAs a hub, Compass aggregates strategic guidance capsules and provides directional context for long-horizon decisions across CapsuleOS, N1Hub, and the agent ecosystem.\n\n## 4. Constraint\nDirection can evolve, but constitutional boundaries remain immutable."
   },
   "neuro_concentrate": {
-    "summary": "Core Compass is the directional governance hub that helps the ecosystem choose execution paths without rewriting constitutional law. It matters because most architectural decisions are not about whether the rules exist, but about how to prioritize within them when scale, usability, and systemic coherence compete. Compass organizes that directional judgment. It keeps long-horizon planning aligned with the Constitution and Manifesto while still leaving room for iteration in schemas, runtime modules, and project sequencing. In practice, it is the guidance layer that prevents tactical wins from slowly steering the platform away from its intended operating logic.",
+    "summary": "Core Compass is the directional governance hub that helps the ecosystem choose execution paths without rewriting constitutional law. It matters because most architectural decisions are not about whether the rules exist, but about how to prioritize within them when scale, usability, second-brain coherence, human agency, and accountable autonomy compete. Compass organizes that directional judgment. It keeps long-horizon planning aligned with the Constitution and Manifesto while still leaving room for iteration in schemas, runtime modules, branch posture, and project sequencing. In practice, it is the guidance layer that prevents tactical wins from slowly steering the platform away from its intended operating logic.",
     "keywords": [
       "core",
       "compass",
@@ -31,7 +31,9 @@
       "constitution",
       "manifesto",
       "long-horizon",
-      "system-coherence"
+      "system-coherence",
+      "branch-direction",
+      "second-brain"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -62,6 +64,14 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.capsuleos.v1",
         "relation_type": "part_of"
       }
@@ -69,5 +79,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "54c0fffcca5ddf92703633ba2758a972218c55edc2a4f84ff49f053b5ae73af004df021de0bbe1f0e6000ac0a0cefcd597b102119305302b762b085aec65b60f"
+  "integrity_sha3_512": "6e9c850ac343b85a7dc84d5257abe4f1e48ec5465e79a1f9b11d7677ee1913e571920758b28a289d4103421c6a1a00fe63d095c7d451da0de802d05c7d19199a"
 }

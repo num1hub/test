@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace Project\n\n## 1. Definition and Essence\nWorkspace Project manages execution of user-facing habitat capabilities, including planner, tracker, dashboard, assistant experience, collaboration, project organization surfaces, and the Symphony-powered repository execution lane.\n\n## 2. Core Attributes\n- `feature_scope` planner, tracker, dashboard, calendar, collaboration modules, Symphony execution surface\n- `ux_backlog` prioritized interface and interaction improvements\n- `adoption_metrics` engagement and retention signals\n- `quality_targets` responsiveness, reliability, and clarity outcomes\n- `release_train` incremental rollout and feedback loops\n\n## 3. Lifecycle\nThe project advances through iterative design, implementation, user feedback cycles, and integration with foundational modules and agent capabilities.\n\n## 4. Integration\n- **CapsuleOS Project:** child subsystem under root architecture.\n- **Foundation Workspace:** implemented conceptual habitat model.\n- **Planner/Tracker/Assistant Modules:** primary product surface.\n- **Symphony Project:** repository execution lane connected to workspace reality.\n- **Projects Tab:** hierarchy and work organization projection.\n\n## 5. Philosophical Alignment\nWorkspace execution realizes To Dig Deep by giving users practical daily instruments to transform vision into accountable action.\n"
+    "content": "# Workspace Project\n\n## 1. Definition and Essence\nWorkspace Project delivers the lived habitat of N1Hub: the place where the second brain becomes daily practice through planning, tracking, chat-to-capsules, calendar rhythm, reminders, assistant guidance, and project navigation.\n\n## 2. Core Scope\n- `human_habitat` the primary surface where a person lives inside the capsule graph instead of scattered apps.\n- `interaction_modes` text, voice, files, multimodal sessions, and approval-aware capsule mutation.\n- `execution_loop` plan, track, review, remind, and adjust across day, week, and roadmap horizons.\n- `attention_surface` dashboard, notifications, and rhythm-aware visibility.\n- `workspace_governance` branch awareness, agent visibility, and safe human override.\n- `release_train` iterative UX refinement, usage feedback, and behavior hardening.\n\n## 3. Lifecycle\nThe project evolves through daily use, friction capture, branch-aware workflow refinement, and tighter integration with Planner, Tracker, Personal AI Assistant, and background swarm lanes.\n\n## 4. Integration\n- **CapsuleOS Project:** parent product and platform contour.\n- **Foundation Workspace:** conceptual habitat model implemented here.\n- **Personal AI Assistant / Chat to Capsules:** primary user ingress and co-pilot layer.\n- **Planner / Tracker / Calendar / Reminder:** operational loop for short- and long-horizon execution.\n- **AI Control Surface / Agent Control Plane:** visibility and governance for autonomous lanes.\n- **Symphony / DeepMine / N-Infinity:** repository execution, quarry, and swarm capabilities exposed through the habitat.\n\n## 5. Philosophical Alignment\nWorkspace realizes To Dig Deep by making the second brain livable every day, so structured memory and agentic help replace scattered notes, invisible context, and fragmented operational tools.\n"
   },
   "neuro_concentrate": {
-    "summary": "Workspace Project is the user-facing product stream of N1Hub: the place where planning, tracking, dashboards, collaboration, profiles, and project navigation become an operational habitat rather than abstract doctrine. It coordinates the practical surfaces through which a user turns capsules into daily work, visible progress, and team communication. By grouping these modules under one project hub, the vault distinguishes product-experience work from lower-level platform work while still keeping lineage to CapsuleOS. This makes feature prioritization, UX refinement, and integration with Planner, Tracker, and the Assistant explicit and governable.",
+    "summary": "Workspace Project is the user-facing habitat stream of N1Hub: the place where capsules stop being passive storage and become daily work, planning, conversation, rhythm, and visible progress. It coordinates the surfaces through which a human actually lives with the second brain, including chat-to-capsules, planner, tracker, calendar, reminders, assistant-led guidance, and safe exposure to deeper swarm and execution lanes. The hub matters because without it CapsuleOS remains doctrine rather than habit. Workspace is therefore the product contour where structured memory, human rhythm, and governed agent assistance become one operational environment.",
     "keywords": [
       "workspace",
       "product-surface",
@@ -38,6 +38,7 @@
       "collaboration",
       "ux",
       "project-navigation",
+      "second-brain",
       "n1hub"
     ],
     "confidence_vector": {
@@ -69,12 +70,44 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
         "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0096d1cf599f1b6bc27d16dc7af580a8a1c35ff5485ae766aa8de729733360e10cb4a4d13f2061ee0eadb267ae964a0958e1385a4986558f0d2e166c0472bf66"
+  "integrity_sha3_512": "cc74cf007f8283b24066d1440351bfb280f54c5a4f9c48eadb4561a8207e8f0d94d201709194d03bb81edf4c81df4277b0775646355b206b6c2327e9f3fd818b"
 }

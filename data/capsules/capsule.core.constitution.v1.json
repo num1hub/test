@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:10:00Z",
     "semantic_hash": "core-constitution-capsuleos-laws-control-plane-sovereign-foundation",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,10 +18,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core Constitution: CapsuleOS Foundational Law\n\n## 1. Purpose\nThis capsule codifies the constitutional layer of CapsuleOS: non-negotiable laws governing structure, trust, and provenance across N1Hub.\n\n## 2. Constitutional Clauses\n- Every capsule must follow the 5-Element structure exactly.\n- Canonical relation typing and resolvable links are mandatory.\n- Non-draft capsules must preserve deterministic integrity sealing.\n- Mutation of protected knowledge requires versioned lineage, never destructive overwrite.\n\n## 3. Enforcement\nValidation gates, schema constraints, and lifecycle rules enforce constitutional operation across the Control Plane and Cognitive Plane.\n\n## 4. Scope\nThis constitution anchors subordinate core capsules and serves as the legal reference for future extensions."
+    "content": "# Core Constitution: CapsuleOS Foundational Law\n\n## 1. Purpose\nThis capsule codifies the constitutional layer of CapsuleOS: non-negotiable laws governing structure, trust, provenance, and mutation discipline across N1Hub.\n\n## 2. Constitutional Clauses\n- Every capsule must follow the 5-Element structure exactly.\n- Canonical relation typing and resolvable links are mandatory.\n- Non-draft capsules must preserve deterministic integrity sealing.\n- Mutation of protected knowledge requires versioned lineage, never destructive overwrite.\n- `Real` and `Dream` must stay explicitly distinguishable so possibility is never misrepresented as fact.\n- Agent and human changes alike remain subject to the same validation, review, and quarantine laws.\n\n## 3. Enforcement\nValidation gates, schema constraints, lifecycle rules, branch governance, and security boundaries enforce constitutional operation across the Control Plane and Cognitive Plane.\n\n## 4. Scope\nThis constitution anchors subordinate core capsules and serves as the legal reference for future extensions, runtime autonomy, and second-brain growth."
   },
   "neuro_concentrate": {
-    "summary": "Core Constitution is the non-negotiable law surface of CapsuleOS. It defines which structural, provenance, link, and integrity rules are absolute, and it clarifies that system growth must happen through versioned lineage rather than destructive mutation. The capsule matters because every validator, branch merge, and governance decision ultimately depends on one stable constitutional reference. Without that reference, architecture turns into local preference and trust degrades over time. Constitution therefore anchors the legal boundary of the graph, giving downstream runtime modules freedom to evolve only inside clearly defended systemic constraints.",
+    "summary": "Core Constitution is the non-negotiable law surface of CapsuleOS. It defines which structural, provenance, branch, link, and integrity rules are absolute, and it clarifies that system growth must happen through versioned lineage rather than destructive mutation. The capsule matters because every validator, branch merge, human override, and agent action ultimately depends on one stable constitutional reference. Without that reference, architecture turns into local preference and trust degrades over time. Constitution therefore anchors the legal boundary of the graph, giving downstream runtime modules, swarms, and second-brain workflows freedom to evolve only inside clearly defended systemic constraints.",
     "keywords": [
       "core",
       "constitution",
@@ -31,6 +31,7 @@
       "validation",
       "trust-boundary",
       "integrity",
+      "branch-law",
       "capsuleos"
     ],
     "confidence_vector": {
@@ -62,16 +63,28 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.core.manifesto.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.core.compass.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d843f7b011c90007bec02cc691d9a18522a6e20771cda4c776acf366b93f2e2ace8dc6849f0492439cb7a8af062918a05d1d20168d689331288e6abb8a02e922"
+  "integrity_sha3_512": "622d56bdb1e01943bdca65b0e291c8f2368a2c8b47fc2bc24ed9068b1d0c1decbd9113f359f4e3b54c08483edb4e078115c542866ed7c82607f128ab92b7b752"
 }

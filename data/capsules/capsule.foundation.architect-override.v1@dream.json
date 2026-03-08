@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.947Z",
+    "updated_at": "2026-03-08T20:20:00Z",
     "name": "Architect Override Protocol",
     "semantic_hash": "capsule-foundation-architect-override-v1-protocol-governance-sovsig",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Architect Override Protocol\n\n## 1. Definition and Essence\nArchitect Override Protocol defines tightly scoped exceptional authority for resolving deadlocks or urgent critical failures when standard validation flows are insufficient. Overrides are never silent: they require signed rationale, timestamped evidence, and explicit audit retention.\n\n## 2. Core Attributes\n- `override_reason` structured justification for intervention\n- `sovsig_signature` cryptographic proof of authorized actor\n- `override_scope` capsules, gates, or operations affected\n- `expiry_policy` optional validity duration for temporary overrides\n- `audit_trace` immutable links to associated ledger entries\n\n## 3. Lifecycle\nAn override request is submitted with evidence, validated against role policy, signed, and recorded. Post-override review is mandatory, and unresolved exceptions must be converted back into canonical rules or remediated artifacts.\n\n## 4. Integration\n- **Metadata Layer:** stores architect_override object fields.\n- **16 Gates:** defines which failures can be bypassed and under what constraints.\n- **Epistemic Ledger:** records rationale, evidence, and closure outcomes.\n- **Parliament Governance:** provides collective review for contentious cases.\n\n## 5. Philosophical Alignment\nOverride authority still honors To Dig Deep by coupling exceptional power with maximal transparency, traceability, and post-hoc correction.\n"
   },
   "neuro_concentrate": {
-    "summary": "Architect Override Protocol in the Dream branch describes a more disciplined exceptional-control mechanism for the platform. It imagines clearer review loops, stronger rationale requirements, and better post-incident normalization when extraordinary authority must bypass ordinary rules under pressure. The capsule matters because emergency power can either save systems or quietly corrupt them. Dream therefore preserves Architect Override as a future governance artifact for controlled exception handling, not a hidden escape hatch.",
+    "summary": "Architect Override Protocol in the Dream branch describes a more disciplined exceptional-control mechanism for the platform. It imagines stronger evidence bundles, explicit expiry, tighter coupling to quarantine and validation, and better post-incident normalization when extraordinary authority must bypass ordinary flow under pressure. The capsule matters because emergency power can either save systems or quietly corrupt them. Dream therefore preserves Architect Override as a future governance artifact for controlled exception handling, not a hidden escape hatch.",
     "keywords": [
       "architect-override",
       "governance",
@@ -62,10 +62,22 @@
       {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "19feca5feaf2f305bffc785aeaddb7ecbcde4a2dd34ce08f3c8fbf33aa3c97df200e71c4a607271625df671ef41a7968cd77755a2206ced36afe088812a20955"
+  "integrity_sha3_512": "99e32306d22c5cc5b2bd79b5bedff6ee1fe6f23a15a7358a762b1415b7fe526936a088938a5c571078018305b8deae6293014785a9570888a46c712f32e22581"
 }

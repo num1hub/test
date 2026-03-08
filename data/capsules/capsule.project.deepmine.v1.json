@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine Project\n\n## 1. Definition and Essence\nDeepMine Project delivers model routing, queue orchestration, caching, and provider abstraction for computational intelligence workloads across the ecosystem.\n\n## 2. Core Attributes\n- `provider_matrix` supported model vendors and capabilities\n- `routing_policy` model selection and fallback strategy\n- `queue_design` throughput and prioritization semantics\n- `cache_strategy` response reuse and invalidation behavior\n- `cost_controls` budget-aware execution constraints\n\n## 3. Lifecycle\nDeepMine progresses through provider integrations, latency/cost optimization, and reliability hardening for high-volume AI-assisted operations.\n\n## 4. Integration\n- **CapsuleOS Project:** core subsystem implementation stream.\n- **Foundation DeepMine:** conceptual dependency and scope.\n- **A2C and AI Assistant Projects:** major runtime consumers.\n- **Boost/N1 Pass:** optional acceleration and entitlement coupling.\n\n## 5. Philosophical Alignment\nDeepMine execution embraces To Dig Deep by making computational depth available as controlled infrastructure rather than opaque magic.\n"
+    "content": "# DeepMine Project\n\n## 1. Definition and Essence\nDeepMine Project is the execution stream that turns the quarry metaphor into governed extraction infrastructure. It delivers provider portfolio management, routing policy, context-pack retrieval, ore-manifest generation, queue orchestration, and economically aware background compute for intelligence work across the whole N1Hub stack.\n\n## 2. Delivery Scope\n- `provider_portfolio` hosted inference, API, and subscription-backed intelligence lanes.\n- `routing_policy` model selection, fallback, assignment-aware lane choice, and failure posture.\n- `context_pack_retrieval` deliberate source assembly instead of raw vault dumping.\n- `ore_manifest_pipeline` packaging mined pressure, evidence, and extraction boundaries for downstream refinement.\n- `queue_design` throughput, prioritization, and mining-job scheduling semantics.\n- `cache_strategy` response reuse, invalidation, and artifact recycling behavior.\n- `cost_controls` budget-aware execution constraints, night windows, and batch economics.\n\n## 3. Lifecycle\nThe project progresses through connector integration, routing hardening, latency and cost optimization, and evidence-preserving mining reliability. Over time it should support daytime co-pilot use, night-shift quarry work, swarm-fed mining assignments, and safer extraction that remains legible to review rather than collapsing into provider folklore.\n\n## 4. Integration\n- **CapsuleOS Project:** parent delivery stream inside the platform.\n- **Foundation DeepMine:** conceptual quarry scope implemented here.\n- **A2C Pipeline Project:** primary downstream refinery consumer.\n- **Workspace / Personal AI Assistant / Chat to Capsules:** major human-facing consumption paths.\n- **N-Infinity / Vault Stewardship Swarm:** autonomous lanes that consume quarry output.\n- **AI Wallet / Hybrid LLM Access:** provider credentials and lane supply.\n- **Mining Company Project:** institutional full-cycle frame around quarry, refinery, and compounding graph value.\n\n## 5. Philosophical Alignment\nDeepMine execution embraces To Dig Deep by making computational depth available as governed infrastructure rather than opaque magic and by turning raw source pressure into inspectable ore for the rest of the system.\n"
   },
   "neuro_concentrate": {
-    "summary": "DeepMine Project delivers the extraction and routing infrastructure that supplies the rest of the ecosystem with high-value raw material. It covers provider abstraction, queue orchestration, caching, cost-aware model selection, and background compute policy for large-scale intelligence workloads. The hub separates this execution stream from the rest of CapsuleOS so latency, reliability, budget controls, and connector strategy can be managed as first-class concerns. In practice, DeepMine is the industrial quarry feeding A2C, the Personal AI Assistant, and future marketplace intelligence flows with sourced, ranked, and computable input.",
+    "summary": "DeepMine Project is the implementation stream for the industrial quarry behind N1Hub. It covers provider portfolio management, assignment-aware routing, context-pack retrieval, ore-manifest generation, queue orchestration, caching, and budget-aware background compute so mined source pressure becomes inspectable input for downstream refinement. The hub matters because DeepMine is not just a connector bundle; it is the supply layer that feeds A2C, the Personal AI Assistant, Workspace, and swarm lanes with sourced and economically rational raw material. In practice it is the place where the quarry becomes a repeatable operating lane instead of remaining a metaphor.",
     "keywords": [
       "deepmine",
       "extraction",
@@ -38,7 +38,10 @@
       "budget-control",
       "connectors",
       "background-compute",
-      "source-material"
+      "source-material",
+      "context-packs",
+      "ore-manifests",
+      "night-shift"
     ],
     "confidence_vector": {
       "extraction": 0.93,
@@ -81,16 +84,28 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
         "target_id": "capsule.project.a2c.v1",
         "relation_type": "supports"
       },
       {
         "target_id": "capsule.project.workspace.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "supports"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "fde82ece5405d090b227950e955f10abafb6f0ccd8c186a0fae7faa14eae4007aa1d2fa2feed8ffb78dc4c34ac2c848c602c85f91bd39c49f1ccf6f2e4d00e20"
+  "integrity_sha3_512": "ea3106cf8566c5fb4317aaa1033e89c35ff2490e7a3c85cfe1873d21ac5c1891261ffca26071433e7dac3bb2b7e1a94eb5d388f0a1a6ed83f038b21ee96db304"
 }

@@ -19,17 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Goal: The Strategic Outcome\n\n## 1. Definition and Essence\nA Goal capsule represents a high-level, time-bound desired outcome, usually spanning weeks, months, or years. It answers what should be achieved and provides strategic direction rather than tactical action. Goals decompose into milestones and tasks and can represent either personal aspirations or project outcomes.\n\n## 2. Core Attributes\n- targetDate (optional ISO date)\n- progress (0-100)\n- status: not_started | in_progress | completed | abandoned\n- priority: low | medium | high (optional)\n- parentGoalId for sub-goals\n- keyResults for measurable outcomes\n\n## 3. Lifecycle\nGoals are created in the Planner, refined during execution, and archived when completed. They can be linked to projects through part_of or references depending on scope.\n\n## 4. Integration\nPlanner surfaces goals on roadmaps, AI Assistant proposes goals from conversations, and Tracker monitors progress against target dates.\n\n## 5. Philosophical Alignment\nGoals embody Between Zero and One by defining destination states that tactical work can systematically realize."
+    "content": "# Goal: The Strategic Outcome\n\n## 1. Definition and Essence\nGoal in Dream preserves the higher bar for strategic intention inside N1Hub. It imagines goals as stronger branch-aware outcome objects with clearer key-result logic, better horizon placement, and tighter coupling to milestones, tasks, and execution evidence.\n\n## 2. Dream Direction\nThe future goal should not be motivational text. It should be a durable strategic anchor that shapes sequencing, tradeoffs, and review across the planning ladder.\n\n## 3. Integration\n- **Planning Horizon Engine and Planner:** place goals across short, medium, and long horizons.\n- **Milestone and Task:** provide the execution ladder beneath the goal.\n- **Tracker and Chat to Capsules:** provide evidence and human articulation.\n\n## 4. Philosophical Alignment\nGoal in Dream preserves the idea that ambition should become operational without becoming shallow.\n"
   },
   "neuro_concentrate": {
-    "summary": "Goal in the Dream branch represents the future quality bar for strategic intention inside the workspace. It imagines goals as richer, branch-aware outcome objects with stronger key-result logic, clearer dependency context, and tighter coupling to both planner decisions and tracker evidence. The capsule matters because shallow goals quickly decay into motivational text with little operational consequence. Dream therefore preserves the higher standard where goals act as durable strategic anchors that continuously shape project sequencing, accountability, and real execution tradeoffs.",
+    "summary": "Goal in the Dream branch represents the future quality bar for strategic intention inside the workspace. It imagines goals as richer, branch-aware outcome objects with stronger key-result logic, clearer capacity posture, better evidence thresholds, and tighter coupling to planning horizons, milestones, tasks, and tracker evidence. The capsule matters because shallow goals quickly decay into motivational text with little operational consequence. Dream therefore preserves the higher standard where goals act as durable strategic anchors that shape sequencing, accountability, and real execution tradeoffs.",
     "keywords": [
       "goal",
       "objective",
       "key-result",
       "planning",
       "tracking",
-      "planner"
+      "planner",
+      "horizon",
+      "evidence"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,6 +58,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
       },
@@ -71,5 +81,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0c3ed109f2bc1caf3cf45377a2f3fa05bd62a92bf59eb79b3db2cc32eb1a11b36af1cf62655cc786500f7ca585223da29a1734c73564b5cff205ff6cdee50707"
+  "integrity_sha3_512": "8a30ec27d0a3849c0373ed17ba4403447c8a033eaf283dff3466bdbc61710d3db31930808b5fee7c3935b9e45669fb5cfbc7499634db41de764335b08d02010f"
 }

@@ -1,38 +1,38 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-graph-maintenance.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-08T22:33:00Z",
     "name": "Capsule Graph Maintenance",
     "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime",
     "priority": "high",
-    "progress": 26,
-    "estimatedHours": 260,
-    "actualHours": 60,
+    "progress": 31,
+    "estimatedHours": 280,
+    "actualHours": 70,
     "dueDate": "2026-08-08",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance defines the continuous operating discipline required to keep the sovereign graph healthy over time. It includes link hygiene, contradiction management, archival pressure, synthesis opportunities, suggestion generation, and the bounded background jobs that make this maintenance real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and other graph-shape problems.\n- `novel_synthesis` uses high-confidence regions to propose worthwhile new structure.\n- `maintenance_jobs` expresses this work as bounded capsule jobs rather than ambient magic.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity agents actually do night after night. It unifies Weaver, Gardener, Parliament, Innovator, Suggestion Agent, Capsule Job, and Night Shift Autonomy into one maintenance picture.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub makes it explicit that preservation, repair, arbitration, and synthesis are first-class system work.\n"
+    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance is the continuous operating discipline that keeps the sovereign graph healthy after capsules are created. It covers link hygiene, contradiction management, structural refinement, synthesis opportunities, archival pressure, and the bounded jobs that make those activities real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review, validation, or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and broken neighborhoods.\n- `vault_stewardship` makes explicit that graph work and capsule work must reinforce one another.\n- `maintenance_jobs` expresses this work as bounded capsule jobs instead of ambient magic.\n- `promotion_safety` keeps graph repair aligned with branch discipline so improvements do not silently contaminate Real.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity and vault-facing workers do night after night. The graph should not merely accumulate capsules; it should become clearer, more navigable, and more trustworthy every day. That requires capsule-level decomposition and markup as much as high-level graph weaving and synthesis.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub therefore exists to name preservation, repair, arbitration, synthesis, and vault stewardship as first-class system work.\n"
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Maintenance defines the operating discipline that keeps the sovereign graph healthy after capsules are created. It matters because a knowledge graph does not stay coherent through creation alone; it also needs ongoing link hygiene, contradiction handling, archival pressure, structural refactoring, and bounded synthesis. This hub gives N1Hub a clear place to model the maintenance work performed by N-Infinity roles and their capsule jobs, instead of leaving that labor implicit or mythologized.",
+    "summary": "Capsule Graph Maintenance defines the operating discipline that keeps the sovereign graph healthy after capsules are created. It matters because a capsule graph does not remain trustworthy through ingestion alone; it needs continuous link hygiene, contradiction handling, structural refactoring, synthesis, and branch-safe repair. This hub now makes the coupling between graph work and capsule work explicit through vault stewardship, bounded capsule jobs, and promotion safety. In N1Hub, graph maintenance therefore is not cosmetic. It is the daily and nightly work that keeps the second brain coherent as it grows.",
     "keywords": [
       "capsule-graph-maintenance",
       "graph-hygiene",
-      "contradiction-management",
+      "vault-stewardship",
+      "bounded-capsule-jobs",
+      "graph-refactoring",
+      "promotion-safety",
       "synthesis",
       "archival",
       "n-infinity",
-      "capsule-jobs",
-      "night-shift",
-      "capsuleos",
       "n1hub"
     ],
     "confidence_vector": {
@@ -65,6 +65,22 @@
       },
       {
         "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
         "relation_type": "references"
       },
       {
@@ -107,5 +123,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c4a553ab72f71ce91fe1cbb98d63ea9ff59cc1824b4c67110a91404c41018b6609227eadd396358b79c0d8140716e1c9b99beac844e42fa5de42070c4c77ec2d"
+  "integrity_sha3_512": "2ae6945f93b9ef9bd72015bbe03352c7f24dd73b6b0337af1d67bf465c7a91a076b40e07d6087bdb249a12fbb0eb174549fba24e6744d7093cca49547709bbcd"
 }

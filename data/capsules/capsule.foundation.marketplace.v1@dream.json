@@ -22,7 +22,7 @@
     "content": "# Marketplace\n\n## 1. Definition and Essence\nMarketplace defines the sovereign exchange layer where templates, capabilities, and project assets can be discovered, licensed, rated, and transacted. It formalizes participants, listing semantics, and settlement pathways tied to N1 economic primitives.\n\n## 2. Core Attributes\n- `listing_model` template and asset publication schema\n- `participant_roles` seller, buyer, curator, reviewer\n- `pricing_policy` fixed, tiered, subscription, royalty modes\n- `reputation_signals` ratings, reviews, dispute outcomes\n- `settlement_path` token and fiat-compatible payment channels\n\n## 3. Lifecycle\nListings are published from sovereign templates or projects, priced and licensed, transacted through settlement workflows, and continuously updated through reputation and governance feedback loops.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** native value and incentive substrate.\n- **Sovereign Template:** marketplace inventory source.\n- **Royalty Engine:** automated distribution after sales.\n- **Workspace/Projects:** publishing and consumption surfaces.\n\n## 5. Philosophical Alignment\nMarketplace advances To Dig Deep by rewarding durable knowledge artifacts and transparent value exchange around real contribution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Marketplace in the Dream branch captures the target exchange layer where sovereign templates, royalties, pricing, licensing, reputation, and distribution all work as one coherent economic system. It matters because the current marketplace logic is strategically important but not yet fully realized. Dream therefore keeps the higher commercial architecture explicit: a place where reusable knowledge becomes liquid capital without losing lineage, governance, or creator fairness, and where commercialization behaves like a governed system rather than a loose listing page.",
+    "summary": "Marketplace in the Dream branch captures the target circulation layer where sovereign templates, capsule packs, agent recipes, royalties, subscriptions, pricing, licensing, reputation, and distribution all work as one coherent economic system. It matters because the current marketplace logic is strategically important but not yet fully realized. Dream therefore keeps the higher commercial architecture explicit: a place where reusable memory capital becomes liquid without losing lineage, governance, or creator fairness, and where commercialization behaves like a governed system rather than a loose listing page.",
     "keywords": [
       "marketplace",
       "economic-hub",
@@ -60,6 +60,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.mining-company.v1",
         "relation_type": "part_of"
       }
@@ -67,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1705ecb70f86e02e9e6e39f27925545ce381eac0bcc5002df2e2b5e36e80fd5a8f7e370349b57e9eabe352c48ea08599d01455e4dd4837d438b95f73181e1f0c"
+  "integrity_sha3_512": "a50a96eb45d4006f8a6f5b251c9f3b4ab9b14e254e068d74498c7e30a1ea1338adbd1a04f26d3bf633f787d3e0f17907a7e287fd56cea1d2bc32901fb0e106a0"
 }

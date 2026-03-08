@@ -6,6 +6,7 @@ import {
   listAiWalletProviderSummaries,
   upsertAiWalletProvider,
 } from '@/lib/aiWallet';
+import { AI_WALLET_PROVIDER_IDS } from '@/lib/aiWalletSchema';
 
 vi.mock('fs/promises', () => {
   const access = vi.fn();
@@ -30,7 +31,7 @@ describe('lib/aiWallet.ts', () => {
   it('returns an empty summary list with all providers when wallet is missing', async () => {
     const summaries = await listAiWalletProviderSummaries();
 
-    expect(summaries).toHaveLength(9);
+    expect(summaries).toHaveLength(AI_WALLET_PROVIDER_IDS.length);
     expect(summaries.every((item) => item.configured === false)).toBe(true);
   });
 

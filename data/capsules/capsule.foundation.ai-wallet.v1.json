@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-wallet.v1",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T16:40:00Z",
-    "updated_at": "2026-03-07T10:22:13.327Z",
+    "updated_at": "2026-03-08T19:10:00Z",
     "name": "AI Wallet",
     "semantic_hash": "capsule-foundation-aiwallet-v1-providerkeys-subscription-routing-modelaccess",
     "priority": "high",
@@ -19,19 +19,23 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Wallet\n\n## 1. Definition and Essence\nAI Wallet defines the secure user-controlled credential layer for model access inside N1Hub. It stores provider API keys, authorization keys, endpoint overrides, and preferred model hints so that LLM-powered features and AI agents can operate without hard-coding external credentials into prompts, browser state, or ad hoc scripts.\n\n## 2. Core Responsibilities\n- `provider_credentials` encrypted server-side storage for OpenAI, Anthropic, Gemini, DeepSeek, Grok, OpenRouter, and future API connectors.\n- `subscription_authorization` dedicated authorization-key slots for ChatGPT or Codex Subscription, Claude Subscription, and N1-managed subscription bridges.\n- `provider_enablement` per-provider enabled or disabled state for routing safety.\n- `model_preferences` preferred model, bridge URL, and endpoint overrides per provider.\n- `lane_labeling` explicit distinction between interactive subscription lanes, programmable API lanes, and optional night or batch lanes.\n- `agent_access_boundary` a stable handoff layer between user identity and runtime inference services, including background lanes.\n\n## 3. Runtime Contract\nThe AI Wallet does not execute inference by itself. It acts as the trust boundary that exposes only masked provider summaries to the client while preserving raw secrets on the server. DeepMine, the Personal AI Assistant, Symphony-driven agents, N-Infinity lanes, and future AI services can resolve available providers through this capsule's contract and route requests according to user ownership, subscription status, and safety policy.\n\n## 4. Hybrid Access Discipline\nN1Hub should treat the wallet as a portfolio of intelligence access, not as a bag of unrelated keys. The default target is at least one subscription-backed lane for rich human-assistant symbiosis and at least one programmable API lane for unattended automation. The wallet must therefore preserve enough routing metadata for the system to know which workloads are safe for subscription bridges, which require token-metered APIs, and which should be deferred into cheaper night or batch windows.\n\n## 5. Integration\n- **Workspace:** presents the wallet in the personal cabinet as an operator-facing control surface.\n- **Personal AI Assistant:** reads enabled providers and model preferences before conversational or delegated work.\n- **DeepMine:** uses wallet-backed provider access as the model supply plane for extraction and routing.\n- **Background Agent Runtime:** uses the same wallet boundary for night-shift or always-on autonomy instead of separate hidden credentials.\n- **Profile and User Preferences:** separate identity and behavioral defaults from raw secrets while still allowing user-specific AI behavior.\n- **API Gateway and Integrations:** enforce authenticated, rate-limited server-side access to provider credentials.\n\n## 6. Philosophical Alignment\nAI Wallet supports To Dig Deep by letting users bring their own intelligence supply into a sovereign workspace without surrendering control of keys, provider choice, or execution boundaries.\n"
+    "content": "# AI Wallet\n\n## 1. Definition and Essence\nAI Wallet defines the secure user-controlled credential layer for model access inside N1Hub. It stores provider API keys, authorization keys, endpoint overrides, hosted-model tokens, local-auth summaries, and preferred model hints so that LLM-powered features and AI agents can operate without hard-coding external credentials into prompts, browser state, or ad hoc scripts.\n\n## 2. Core Responsibilities\n- `provider_credentials` encrypted server-side storage for OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter, GitHub Models, and future API connectors.\n- `subscription_authorization` dedicated authorization-key or local-auth slots for ChatGPT or Codex access, Claude Subscription, and N1-managed subscription bridges.\n- `hosted_inference_lanes` preserves provider classes such as GitHub-hosted models or future managed inference surfaces without pretending they are the same as raw API keys.\n- `provider_enablement` per-provider enabled or disabled state for routing safety.\n- `model_preferences` preferred model, bridge URL, and endpoint overrides per provider.\n- `provider_health_and_testability` keeps readiness checks, region or access failures, masking discipline, and last-known status part of the contract instead of ad hoc UI behavior.\n- `lane_labeling` explicit distinction between interactive subscription lanes, programmable API lanes, hosted inference lanes, and optional night or batch lanes.\n- `agent_access_boundary` a stable handoff layer between user identity and runtime inference services, including background lanes.\n- `budget_posture_projection` exposes enough routing and availability metadata for the control plane to keep providers economically legible.\n\n## 3. Runtime Contract\nThe AI Wallet does not execute inference by itself. It acts as the trust boundary that exposes only masked provider summaries to the client while preserving raw secrets on the server. DeepMine, the Personal AI Assistant, Symphony-driven agents, N-Infinity lanes, and future AI services can resolve available providers through this capsule's contract and route requests according to user ownership, subscription status, lane policy, provider health, and safety posture.\n\n## 4. Hybrid Access Discipline\nN1Hub should treat the wallet as a portfolio of intelligence access, not as a bag of unrelated keys. The default target is at least one subscription-backed lane for rich human-assistant symbiosis and at least one programmable API lane for unattended automation. The wallet must therefore preserve enough routing metadata for the system to know which workloads are safe for subscription bridges, which require token-metered APIs, which can use GitHub-style hosted inference, and which should be deferred into cheaper night or batch windows.\n\n## 5. Integration\n- **Workspace:** presents the wallet in the personal cabinet as an operator-facing control surface.\n- **AI Control Surface:** uses wallet health, last test results, and provider tests as part of visible runtime readiness.\n- **Agent Control Plane:** reads wallet health, lane posture, and enabled-provider state when governing budgets, assignments, and autonomy windows.\n- **Personal AI Assistant:** reads enabled providers and model preferences before conversational or delegated work.\n- **DeepMine:** uses wallet-backed provider access as the model supply plane for extraction and routing.\n- **Background Agent Runtime and Agent Daemon:** use the same wallet boundary for night-shift or always-on autonomy instead of separate hidden credentials.\n- **Profile and User Preferences:** separate identity and behavioral defaults from raw secrets while still allowing user-specific AI behavior.\n- **API Gateway and Integrations:** enforce authenticated, rate-limited server-side access to provider credentials.\n\n## 6. Philosophical Alignment\nAI Wallet supports To Dig Deep by letting users bring their own intelligence supply into a sovereign workspace without surrendering control of keys, provider choice, routing posture, economic posture, or execution boundaries.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Wallet is the secure credential and authorization layer for AI access inside N1Hub. It matters because model-powered features become brittle and unsafe when provider keys live in browser state, scattered scripts, or prompt text. This capsule centralizes encrypted server-side storage for API providers such as OpenAI, Anthropic, Gemini, DeepSeek, Grok, and OpenRouter, while also covering subscription-style authorization paths such as ChatGPT or Codex Subscription, Claude Subscription, and N1-managed bridges. It now explicitly frames the wallet as a hybrid intelligence portfolio: at least one subscription-backed lane for rich human symbiosis, plus at least one API-backed lane for durable automation, night routing, and background agents.",
+    "summary": "AI Wallet is the secure credential and authorization layer for AI access inside N1Hub. It matters because model-powered features become brittle and unsafe when provider keys live in browser state, scattered scripts, or prompt text. This capsule centralizes encrypted server-side storage for API providers such as OpenAI, Anthropic, Gemini, DeepSeek, OpenRouter, and GitHub Models, while also covering ChatGPT or Codex access and Claude-style subscription lanes. It explicitly frames the wallet as a hybrid intelligence portfolio with provider health, hosted-model awareness, lane routing, budget posture, and night-safe automation discipline.",
     "keywords": [
       "ai-wallet",
       "provider-credentials",
       "subscription-auth",
       "hybrid-llm-access",
       "api-routing",
+      "provider-health",
       "background-agents",
+      "github-models",
       "deepmine",
-      "personal-ai-assistant"
+      "personal-ai-assistant",
+      "hosted-inference",
+      "budget-posture"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -64,6 +68,14 @@
       {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.hybrid-llm-access.v1",
@@ -117,5 +129,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "dac0b2ac46d263da1fb2870c1c08085d60b86b7f362daa520f89ec01c836f6bf7330528e1fc227e9b2608fde9acb6da1edfa8be7645ae82316dffe3e539f8956"
+  "integrity_sha3_512": "73682ddc36fb239f151ac3d4d02b55df081a3639af0e34880d190694fd0a522c44656c8c21681af55289c331dbeedf09f6d6dc91b5ac09cfa9c77e662de44e54"
 }

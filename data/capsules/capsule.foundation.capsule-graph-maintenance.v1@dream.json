@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-07T10:22:14.004Z",
+    "updated_at": "2026-03-07T19:42:25.348Z",
     "name": "Capsule Graph Maintenance",
     "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance defines the continuous operating discipline required to keep the sovereign graph healthy over time. It includes link hygiene, contradiction management, archival pressure, synthesis opportunities, suggestion generation, and the bounded background jobs that make this maintenance real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and other graph-shape problems.\n- `novel_synthesis` uses high-confidence regions to propose worthwhile new structure.\n- `maintenance_jobs` expresses this work as bounded capsule jobs rather than ambient magic.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity agents actually do night after night. It unifies Weaver, Gardener, Parliament, Innovator, Suggestion Agent, Capsule Job, and Night Shift Autonomy into one maintenance picture.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub makes it explicit that preservation, repair, arbitration, and synthesis are first-class system work.\n"
+    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance defines the continuous operating discipline required to keep the sovereign graph healthy over time. It includes link hygiene, contradiction management, archival pressure, synthesis opportunities, suggestion generation, and the bounded background jobs that make this maintenance real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and other graph-shape problems.\n- `novel_synthesis` uses high-confidence regions to propose worthwhile new structure.\n- `maintenance_jobs` expresses this work as bounded capsule jobs rather than ambient magic.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity agents actually do night after night. It unifies Weaver, Gardener, Parliament, Innovator, Suggestion Agent, Capsule Job, and Night Shift Autonomy into one maintenance picture.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub makes it explicit that preservation, repair, arbitration, and synthesis are first-class system work.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772912503221\n- Job: Decompose Capsule Graph Maintenance Hub\n- Note: Refined the summary to emphasize the disciplined and bounded nature of maintenance jobs and explicitly mention key responsibilities like topology hygiene and structural refinement. Added missing keywords reflecting core responsibilities and processes. The capsule still needs further decomposition to reduce complexity and improve modular progress tracking.\n"
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Maintenance in the Dream branch captures a more autonomous and better-instrumented care model for the sovereign graph. It imagines stronger topology repair, contradiction routing, archival pressure, synthesis proposals, and bounded maintenance jobs that can run continuously without turning into invisible mutation. The capsule matters because long-lived graph quality depends on explicit maintenance doctrine, not just capsule creation. Dream therefore preserves this hub as the future maintenance lattice where N-Infinity roles become a disciplined stewardship system for graph health.",
+    "summary": "Capsule Graph Maintenance in Dream defines a disciplined, autonomous care model for the sovereign graph, emphasizing explicit bounded maintenance jobs that ensure topology repair, contradiction routing, archival pressure, and synthesis proposals to sustain long-term graph health.",
     "keywords": [
       "capsule-graph-maintenance",
       "graph-hygiene",
@@ -33,7 +33,15 @@
       "capsule-jobs",
       "night-shift",
       "capsuleos",
-      "n1hub"
+      "n1hub",
+      "topology_hygiene",
+      "structural_refinement",
+      "suggestion-generation",
+      "bounded-jobs",
+      "sovereign-graph-health",
+      "vault-steward",
+      "autonomous-swarm",
+      "decomposition"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -105,7 +113,16 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-07T19:42:25.348Z",
+        "event": "autonomous_maintenance_applied",
+        "agent": "vault-steward-maintainer",
+        "run_id": "vault-steward-1772912503221",
+        "job_id": "vault-steward-job-ebb1651366321b10",
+        "rationale": "The capsule content highlights the importance of bounded maintenance jobs, explicit roles, and core responsibilities such as topology hygiene and structural refinement, which were underrepresented in the original summary and keywords. The update aligns the summary and keywords with the detailed content sections."
+      }
+    ]
   },
-  "integrity_sha3_512": "e5ee14d080118900831453d028e364854c60f61bd18528efa4922ba2b2199a157596208519dc37442e149fa655d2898ffd9b1e1077ed5d122d9998fec101443c"
+  "integrity_sha3_512": "bf226289bca8813bfc6097e880fb43a43c76857edc96c7687c5905a8a053dae6bdc3aeecef8fff2e20e2c937448fa8ffd08803582d621ed31d776341e2a92649"
 }

@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.v1",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
     "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity",
-    "updated_at": "2026-03-06T15:40:10Z",
+    "updated_at": "2026-03-08T22:25:00Z",
     "name": "CapsuleOS Foundation",
     "priority": "high",
     "progress": 69,
@@ -19,19 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS: The Sovereign Operating System for Knowledge\n\n## 1. Essence\nCapsuleOS is the immutable foundation of the N1Hub ecosystem. It replaces entropic files with cryptographically sealed, self-descriptive, and semantically aware **capsules**. Every piece of information — a task, a note, a physical object, a person — is a capsule governed by the **5-Element Law**. Capsules are linked into a dynamic knowledge graph, enabling machines and AI to understand, trust, and evolve knowledge without human intervention.\n\n## 2. The 5-Element Law\nEvery capsule must contain exactly five root keys:\n- **metadata**: Identity, version, status, authorship, timestamps, semantic hash, and optional source/override.\n- **core_payload**: The actual content (text, JSON, geometry, etc.) with a declared content type.\n- **neuro_concentrate**: AI-extracted essence: summary, keywords, and a 6‑dimensional confidence vector (extraction, synthesis, linking, provenance coverage, validation score, contradiction pressure).\n- **recursive_layer**: Typed links to other capsules (supports, contradicts, extends, depends_on, references, etc.), forming a traversable graph.\n- **integrity_sha3_512**: A cryptographic seal computed via RFC 8785 JCS canonicalization of the four preceding elements, guaranteeing immutability and provenance.\n\n## 3. The 16 Gates (Validation)\nBefore any capsule enters the Cognitive Plane, it must pass 16 deterministic gates:\n- G01: Exactly five root keys.\n- G02: All required subfields present.\n- G03: Correct enums and types.\n- G04: Provenance coverage ≥ 0.85; external sources require a source URI.\n- G05: Recognized content type.\n- G06: Proper JSON escaping; truncation note if truncated.\n- G07: Summary length (70–160 words).\n- G08: Keywords count (5–15).\n- G09: Semantic hash format (8 hyphen‑separated lowercase alphanumeric tokens).\n- G10: Semantic hash parity between metadata and neuro_concentrate.\n- G11: Canonical relation types.\n- G12: All target IDs resolve (batch exception for Genesis).\n- G13: Non‑draft capsules have at least one link.\n- G14: Cosmetic coherence trap (content >1000 tokens with contradiction_pressure = 0.0 is only allowed for sovereign foundation axioms).\n- G15: Exactly six confidence dimensions, each in [0,1].\n- G16: Cryptographic seal must match recomputed JCS+SHA3‑512 (fatal if mismatch).\n\n## 4. Hot / Cold Storage & Evolution\nCapsules can exist in different states:\n- **Hot (draft / active)**: Fast, mutable, no strict seal (integrity field optional). Used for daily work.\n- **Cold (sovereign / frozen)**: Immutable, fully sealed, cryptographically anchored. Used for final versions, axioms, and shareable assets.\n- **Quarantine**: Capsules with high contradiction pressure (>0.85) or failed validation are isolated for human or parliamentary review.\n- **Legacy**: Superseded versions, kept for history.\n\n## 5. Graph and Agents\nThe recursive_layer turns isolated capsules into a living graph. This graph is stored in a hybrid database (PostgreSQL for payload, Neo4j for edges) to enable fast traversal by N‑Infinity agents. CapsuleOS is the bedrock upon which A2C refines raw data and N‑Infinity evolves knowledge."
+    "content": "# CapsuleOS: The Sovereign Operating System for Knowledge\n\n## 1. Essence\nCapsuleOS is the operating law of the N1Hub vault. It turns scattered files, notes, ideas, and project fragments into structured **capsules** that can be read by humans, validated by machines, and improved by agents over time. In practice, CapsuleOS is what lets the vault behave like a disciplined second brain instead of a pile of documents.\n\n## 2. The 5-Element Law\nEvery capsule must contain exactly five root keys:\n- **metadata**: Identity, version, status, authorship, timestamps, semantic hash, and optional source or override.\n- **core_payload**: The actual content with an explicit content type.\n- **neuro_concentrate**: AI-readable essence: summary, keywords, and a 6-dimensional confidence vector.\n- **recursive_layer**: Typed links that place the capsule inside a living graph.\n- **integrity_sha3_512**: A cryptographic seal over the other four elements.\n\n## 3. The 16 Gates\nBefore a capsule can be trusted by the Cognitive Plane, it must pass deterministic gates for shape, typing, provenance, semantic hash parity, link resolution, confidence structure, and cryptographic integrity. These gates are not paperwork. They are the acceptance boundary between random structure and sovereign memory.\n\n## 4. Branches and Lifecycle\nCapsuleOS governs the full lifecycle of vault knowledge:\n- ingestion from conversation, files, the web, or mining lanes\n- refinement through DeepMine and A2C\n- safe landing in **Dream** for exploratory, draft, speculative, or future-facing material\n- validation, review, and branch discipline before promotion\n- promotion into **Real** only when the material is confirmed, legible, and trustworthy\n- quarantine or archive when quality, contradiction pressure, or historical status requires it\n\n## 5. Human and Agent Stewardship\nCapsuleOS is designed for symbiosis. During the day, Personal AI Assistant and Chat to Capsules help a human inspect, retrieve, draft, and approve capsule work. At night, Vault Stewardship Swarm, Branch Steward Agent, Validation Gatekeeper Agent, and other bounded workers can continue careful maintenance so the vault grows cleaner and stronger over time without collapsing branch discipline.\n\n## 6. Graph and Memory Value\nThe recursive layer turns isolated capsules into a navigable memory graph. That graph is the foundation for planning, retrieval, execution, review, and autonomous upkeep. CapsuleOS therefore is not only a schema. It is the law that makes N1Hub's second brain durable enough to survive scale, multiple agents, and long-term evolution."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS is the sovereign operating system for knowledge within N1Hub. It defines the 5‑Element Law, which structures all information into cryptographically sealed, self‑aware capsules. Capsules undergo 16 validation gates (G01–G16) to ensure syntactic, semantic, and cryptographic integrity. The system supports hot/cold storage, quarantine for suspicious capsules, and a recursive graph layer enabling autonomous agents to evolve knowledge. CapsuleOS provides the immutable foundation for A2C, N‑Infinity, and all projects built on N1Hub.",
+    "summary": "CapsuleOS is the operating law that turns N1Hub into a structured second brain. It defines the 5-Element Law, enforces the 16 validation gates, and governs the full lifecycle of capsule knowledge from ingestion and Dream drafting through review, promotion, quarantine, and archive. It also establishes how humans and bounded agents can safely steward the vault over time. CapsuleOS therefore is not just a schema for capsules; it is the sovereign memory discipline that makes graph-grounded planning, retrieval, and autonomous upkeep possible.",
     "keywords": [
       "capsuleos",
+      "second-brain",
       "5-element-law",
-      "sovereign-knowledge",
       "16-gates",
+      "dream-real-lifecycle",
       "cryptographic-seal",
       "knowledge-graph",
-      "hot-cold-storage",
-      "quarantine",
+      "vault-stewardship",
       "validation",
       "n1hub"
     ],
@@ -104,6 +104,26 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
       },
@@ -115,5 +135,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3a742cdfefed595b2cbcde962a1fff9e8e265b6bb1376b69de023cfc2b43d0c0606e86ba1687063887ba62db4ef15a1ecd3676b58ae08187b4ee41fba6011892"
+  "integrity_sha3_512": "cfe1c8b717261018deaa9fed0004517299745f02a1101d994109398bf02ce2f94b37479b51581fb12565cf9d6aeaaec436027c424283a4b48150c37f5488e646"
 }

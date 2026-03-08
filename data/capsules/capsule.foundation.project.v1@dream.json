@@ -17,7 +17,7 @@
     "content": "# Project: The Sovereign Graph of Creation\n\n## 1. Definition\nIn the N1Hub ecosystem, a **Project** is not a static folder or a flat list of files; it is a **capsule-hub**—a dynamic, living organism constructed from atomic capsules (tasks, documents, discussions, people, finances) bound together by typed topological links. Governed by the CapsuleOS 5-Element Law, a project represents the crystallization of a creator's intent into a structured, cryptographically sealed, and evolving graph.\n\n## 2. Project Lifecycle\nA project traverses a definitive lifecycle through specific statuses:\n- **`draft`**: The inception phase. Capsules are hot, mutable, and freely edited without strict cryptographic sealing.\n- **`active`**: The execution phase. The graph expands as tasks are completed, links are forged, and N-Infinity agents weave new insights.\n- **`pause`**: Temporary suspension of active evolution.\n- **`frozen`**: A read-only state for historical preservation or review.\n- **`sovereign`**: The terminal, golden state. The project is fully realized, cryptographically sealed as an immutable artifact, and serves as an absolute source of truth.\n\n## 3. Roles and Participants\nProjects are inherently collaborative. Roles are defined by typed links (e.g., `member_of`) extending from person-capsules to the project-hub, carrying specific access rights:\n- **`owner`**: Absolute sovereign control over the graph.\n- **`contributor`**: Active builders authorized to inject new capsules.\n- **`investor`**: Stakeholders linked via transaction-capsules, possessing read and audit privileges.\n- **`advisor`**: Consultants providing strategic input and oversight.\n- **`reviewer`**: Entities responsible for arbitrating epistemic contradictions.\n\n## 4. Visibility and Access\nThe project-hub's metadata dictates its boundary:\n- **`private`**: Isolated to the owner and explicitly invited roles.\n- **`public_read`**: Open for global viewing and agent crawling.\n- **`public_contribute`**: Open for external pull requests and capsule injections.\n- **`public_apply`**: Open for tender submissions and contest entries.\n\n## 5. Monetization and Marketplace\nA project can achieve ultimate liquidity by being transformed into a tradable asset. An active or sovereign project can be sealed into a **Template** and listed on the N1Hub Marketplace. Subsequent instantiations (`fork` or `derived_from`) automatically generate royalties and track provenance back to the original author, creating a perpetual economic engine for intellectual capital.\n\n## 6. Real-World Instantiation\nBeyond abstract knowledge, a project can map physical reality. **TileSims** is a prime example: a project where the graph consists of physical capsules (walls, pipes, tiles) branching into `Real` and `Dream` states, proving the absolute versatility of the Project blueprint."
   },
   "neuro_concentrate": {
-    "summary": "Project Blueprint in the Dream branch represents a more advanced delivery contract for sovereign work. It imagines clearer microproject decomposition, stronger branch-native execution, richer visibility and collaboration models, and a tighter path from project operations into reusable or monetizable capital than the current blueprint fully details. The capsule matters because projects are where architecture becomes lived execution. Dream therefore preserves the blueprint as a future operating grammar for project-native graph work, not merely the present container law.",
+    "summary": "Project Blueprint in the Dream branch represents a more advanced delivery contract for sovereign work. It imagines clearer microproject decomposition, stronger branch-native execution, richer visibility and collaboration models, integrated roadmap and tracker discipline, and a tighter path from project operations into reusable or monetizable capital than the current blueprint fully details. The capsule matters because projects are where architecture becomes lived execution. Dream therefore preserves the blueprint as a future operating grammar for project-native graph work, not merely the present container law.",
     "keywords": [
       "project-blueprint",
       "delivery-space",
@@ -27,7 +27,9 @@
       "ownership",
       "template-capital",
       "subprojects",
-      "sovereign-graph"
+      "sovereign-graph",
+      "roadmap-discipline",
+      "follow-through"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -74,7 +76,15 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
         "relation_type": "references"
       },
       {
@@ -109,5 +119,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "61bc6114b9754aaed97c4730a5eaf9ecdfbb3167de419d3b21647ad446c31bef8fb9fd5f821ece24506704ae84d6c8f687114df761ce821aeb4363b745fa5bca"
+  "integrity_sha3_512": "2731e710f989e36e22219901e4142a202b635198dd2d46420b2af8c1797100a81ea1758e6e5635143aee8a0d79ad7f7e91ebfcecb2094c4b9d129e65957c1be0"
 }

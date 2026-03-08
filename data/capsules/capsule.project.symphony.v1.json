@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Project\n\n## 1. Definition and Essence\nSymphony Project is the concrete N1Hub engineering stream that delivers issue-driven coding-agent orchestration inside the live repository. It turns the Symphony foundation into an implemented service, CLI, workflow contract, and operating practice.\n\n## 2. Delivery Scope\n- `service_runtime` orchestrator, retries, reconciliation, and state snapshot logic.\n- `tracker_integration` Linear client behavior for candidate fetch, state refresh, and startup cleanup.\n- `workspace_lifecycle` per-issue workspace preparation, hooks, and cleanup.\n- `codex_protocol` app-server session startup, turn streaming, and error handling.\n- `operator_surfaces` docs, logs, and optional HTTP status endpoints.\n- `capsule_integration` vault representation of Symphony concepts, policy, and project lineage.\n- `runtime_atoms` explicit graph definitions for session, attempt, retry, policy, and observability.\n\n## 3. N1Hub Integration\nThis project belongs to CapsuleOS platform work, but it directly serves repository execution: it gives N1Hub a disciplined path from issue intake to isolated implementation sessions tied to real code, tests, and capsule contracts.\n\n## 4. Philosophical Alignment\nSymphony Project realizes To Dig Deep by building automation that is accountable to repository truth rather than to shallow ticket paraphrases.\n"
+    "content": "# Symphony Project\n\n## 1. Definition and Essence\nSymphony Project is the concrete N1Hub engineering stream that delivers issue-driven and assignment-aware coding-agent orchestration inside the live repository. It turns the Symphony foundation into an implemented service, CLI, workflow law surface, runtime atoms, control-plane projection, and operating practice.\n\n## 2. Delivery Scope\n- `service_runtime` orchestrator, retries, reconciliation, and state snapshot logic.\n- `tracker_integration` candidate fetch, state refresh, startup cleanup, and assignment intake.\n- `workspace_lifecycle` per-issue or per-assignment workspace preparation, hooks, and cleanup.\n- `workflow_law_surface` `WORKFLOW.md`, instruction surfaces, and assignment-aware execution policy.\n- `codex_protocol` app-server session startup, turn streaming, and harness error handling.\n- `operator_surfaces` docs, logs, HTTP status, and control-plane projection.\n- `capsule_integration` vault representation of Symphony concepts, policy, jobs, and project lineage.\n- `runtime_atoms` explicit graph definitions for session, attempt, retry, workflow, policy, and observability.\n\n## 3. N1Hub Integration\nThis project belongs to CapsuleOS platform work, but it directly serves repository execution: it gives N1Hub a disciplined path from issue, comment, control action, or swarm assignment intake to isolated implementation sessions tied to real code, tests, review bundles, and capsule contracts.\n\n## 4. Philosophical Alignment\nSymphony Project realizes To Dig Deep by building automation that is accountable to repository truth rather than to shallow ticket paraphrases, and by keeping agent execution legible as workflow law, session, attempt, retry, and observability objects instead of folklore.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Project is the concrete N1Hub engineering stream responsible for bringing issue-driven agent orchestration into the live repository. It covers the service runtime, Linear integration, workspace lifecycle, Codex app-server protocol handling, retry and reconciliation behavior, status endpoints, repository documentation, and capsule-graph integration. Unlike the foundation capsule, this project capsule tracks delivery of the actual implementation and its adoption inside the N1Hub codebase, including the new runtime atoms for session, attempt, retry, policy, and observability. It matters because Symphony gives CapsuleOS and Workspace a disciplined automation lane: issues can become isolated, observable, policy-governed execution sessions rather than loose manual prompting.",
+    "summary": "Symphony Project is the concrete N1Hub engineering stream responsible for bringing issue-driven and assignment-aware agent orchestration into the live repository. It covers the service runtime, tracker and assignment intake, workspace lifecycle, workflow law surface, Codex app-server protocol handling, retry and reconciliation behavior, status endpoints, repository documentation, and capsule-graph integration. Unlike the foundation capsule, this project hub tracks delivery of the actual implementation and its adoption inside the codebase, including runtime atoms for session, attempt, retry, workflow, policy, and observability. It matters because Symphony gives CapsuleOS, Workspace, and N-Infinity a disciplined execution lane: repository work can become isolated, observable, policy-governed sessions rather than loose manual prompting.",
     "keywords": [
       "symphony-project",
       "automation",
@@ -103,6 +103,26 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "supports"
+      },
+      {
         "target_id": "capsule.project.n1hub-v0.v1",
         "relation_type": "references"
       }
@@ -110,5 +130,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "106aa11512546be26bf793ca8f63f7374fef0e9ef1e3756abda5f1ce64d4b5c1871da76bd2ce98d4d938d3111d786d61fe5c3f40871f659f84a78186af5ca8fd"
+  "integrity_sha3_512": "0360fbf2f79611d8e0caab527376a0c73793da602e2b5c5454be2a610209780aeddc5b4af4c16db32ea2c0387477368e23e7a8948e4deb30fd69b801931a2ab3"
 }

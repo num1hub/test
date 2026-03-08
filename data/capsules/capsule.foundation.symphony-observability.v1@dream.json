@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.symphony-observability.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-07T10:22:14.326Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Symphony Observability",
     "semantic_hash": "symphony-observability-logs-status-snapshot-telemetry-runtime-surface",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Observability\n\n## 1. Definition and Essence\nSymphony Observability defines how operators can see what the orchestrator is doing while multiple issue runs are active. It covers structured logs, runtime snapshots, token accounting, rate-limit telemetry, recent events, and optional human-readable or HTTP-exposed status surfaces.\n\n## 2. Core Attributes\n- `structured_logs` with issue and session context.\n- `runtime_snapshot` for running, retrying, token, and timing state.\n- `session_metrics` including token totals, turn counts, and duration.\n- `rate_limit_state` for the latest app-server limit payloads.\n- `status_surface` for terminal or HTTP views.\n- `error_visibility` so invalid workflow reloads and tracker failures remain operator-visible.\n\n## 3. Role in Symphony\nObservability is what makes the service operable as a daemon rather than a blind script. It is the place where retries, stalls, cancellations, and throughput become visible enough to debug and trust.\n\n## 4. N1Hub Alignment\nIn N1Hub, observability is especially important because the service is expected to act autonomously while still staying accountable to repository truth, safety rules, and operator oversight.\n"
+    "content": "# Symphony Observability\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Observability as a richer evidence layer for orchestration.\n\n## 2. Desired Future State\n- stronger assignment-aware status views instead of anonymous run lists.\n- clearer cost, rate-limit, and lane attribution for each session family.\n- activity filters that work across terminal, web, mobile, control-surface, and control-plane views.\n- easier projection of review requests, failures, degraded modes, and follow-up ownership into operator surfaces.\n\n## 3. Why It Matters\nDream preserves the idea that a trustworthy issue runner must be able to explain not only what it ran, but on whose behalf it ran, what it cost, which lane did the work, and what requires intervention next.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Observability defines the operator-facing evidence layer for the orchestration service. It covers structured logs, runtime snapshots, token and duration accounting, recent event summaries, rate-limit payloads, and optional status surfaces such as an HTTP dashboard. The capsule matters because a long-running issue runner cannot be trusted or debugged if its dispatch, retry, stall, and reconciliation behavior remain invisible. By giving observability its own atom, the graph can discuss how Symphony proves what it is doing, what failed, how expensive sessions were, and whether the daemon is healthy enough to keep running unattended.",
+    "summary": "Symphony Observability in the Dream branch preserves a richer evidence layer for orchestration. It imagines assignment-aware status views, clearer cost and lane attribution, cross-client activity filters, and stronger projection of review requests, failures, degraded modes, and fallback recoveries into operator surfaces. The capsule matters because a trustworthy issue runner must explain not only what it ran, but on whose behalf it ran, what it cost, which lane carried the work, whether the result needed recovery, and what needs intervention next.",
     "keywords": [
       "symphony",
       "observability",
@@ -70,6 +70,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
       }
@@ -77,5 +85,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4f426069a66e58aaafe9be6ea667acd4dbf90cbb364ad071551e8f17398ccf805dbb33ac7f6f79cdb2fa6a92eab68b3971f7a83a8e28a85098c153e5cc89694c"
+  "integrity_sha3_512": "0777216de9f7c46be718f678779ed266b8e375bdf4453d9c379612c48efb5fad1d222ab25fc8476997c00210c9aa6a9ce1f779175539bb7b18f771b4fa870bb4"
 }

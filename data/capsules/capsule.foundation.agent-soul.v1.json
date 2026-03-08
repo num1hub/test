@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-soul.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-08T23:35:00Z",
     "name": "Agent Soul",
     "semantic_hash": "agent-soul-persona-boundaries-truth-tone-memory-workspace",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Soul\n\n## 1. Definition and Essence\nAgent Soul defines the durable identity contract for N1Hub intelligence surfaces. It captures persona, tone, core truths, boundaries, and continuity rules in a repo-owned `SOUL.md` file rather than burying them inside one-off prompts.\n\n## 2. Core Responsibilities\n- `identity_contract` keeps the assistant and agent posture stable across sessions.\n- `behavioral_boundaries` specifies what must stay private, when to ask for permission, and which actions require extra care.\n- `continuity_rules` makes changes to identity and skill surfaces operator-visible.\n- `workspace_alignment` ensures the assistant remains accountable to repository, capsule, and runtime truth.\n\n## 3. N1Hub Integration\nIn N1Hub, Agent Soul belongs to the Personal AI Assistant, DeepMine-assisted reasoning, and future chat or delegation surfaces. It complements `AGENTS.md` and `TOOLS.md` by keeping identity separate from operating instructions and tool notes.\n\n## 4. Philosophical Alignment\nAgent Soul supports To Dig Deep by forcing the intelligence layer to descend into real graph and repository evidence rather than free-floating chat behavior.\n"
+    "content": "# Agent Soul\n\n## 1. Definition and Essence\nAgent Soul defines the durable identity contract for N1Hub intelligence surfaces. It captures persona, tone, core truths, moral posture, and continuity rules in a repo-owned `SOUL.md` file rather than burying them inside one-off prompts. In N1Hub this identity layer exists above individual agent lanes so the user experiences one trustworthy partner surface even while specialized agents operate underneath.\n\n## 2. Core Responsibilities\n- `identity_contract` keeps the assistant and agent posture stable across sessions, channels, and runtime lanes.\n- `behavioral_boundaries` specifies what must stay private, when to ask for permission, and which actions require extra care.\n- `continuity_rules` makes changes to identity and skill surfaces operator-visible.\n- `workspace_alignment` ensures the assistant remains accountable to repository, capsule, and runtime truth.\n- `instruction_surface_alignment` keeps identity distinct from broader project rules carried by `AGENTS.md`, workflow policy, docs indexes, or machine-readable resource surfaces.\n- `lane_hierarchy` ensures the Personal AI Assistant remains the user-facing face of the system while mining, swarm, and execution agents inherit principles without pretending to be the same persona.\n\n## 3. N1Hub Integration\nIn N1Hub, Agent Soul belongs first to the Personal AI Assistant and only secondarily to DeepMine, Symphony, N-Infinity, and future delegation lanes. It complements `AGENTS.md`, `TOOLS.md`, `WORKFLOW.md`, and future `llms-full` style resource surfaces by keeping identity separate from operating instructions, machine-readable docs, and tool notes. This makes it possible for the user to feel a single stable partner while specialized agents still execute their own bounded jobs.\n\n## 4. Full-Cycle Role\nAgent Soul matters across the full capsule-production lifecycle. It governs how the user is addressed during chat, how mining lanes interpret intention, how refinery lanes explain uncertainty, and how swarm agents remain aligned with truth, humility, and branch discipline. Without this layer, the system would degrade into disconnected personalities with no stable contract.\n\n## 5. Philosophical Alignment\nAgent Soul supports To Dig Deep by forcing the intelligence layer to descend into real graph and repository evidence rather than free-floating chat behavior.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Soul is the repo-owned identity contract for N1Hub intelligence surfaces. It matters because assistants and agents become unstable when persona, boundaries, and continuity rules are scattered across prompts and ad hoc settings. This capsule formalizes a `SOUL.md` pattern for N1Hub so tone, privacy boundaries, truth standards, and operator-notification rules remain durable and inspectable across the Personal AI Assistant, DeepMine-assisted workflows, and future chat surfaces. It also gives delegated and conversational intelligence a shared identity spine.",
+    "summary": "Agent Soul is the durable identity contract for N1Hub intelligence surfaces. It keeps the Personal AI Assistant recognizable and trustworthy while allowing DeepMine, Symphony, and N-Infinity lanes to inherit the same truth standards without collapsing into one undifferentiated persona. The capsule matters because a full-cycle system needs one stable ethical and conversational spine across chat, mining, planning, and swarm execution. It is the stable voice layer that makes multi-agent work still feel like one coherent partnership.",
     "keywords": [
       "agent-soul",
       "soul-md",
@@ -33,7 +33,11 @@
       "workspace",
       "n1hub",
       "deepmine",
-      "assistant"
+      "assistant",
+      "instruction-surface-alignment",
+      "lane-hierarchy",
+      "symbiotic-partner",
+      "identity-spine"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -64,6 +68,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-skills-registry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       },
@@ -79,5 +95,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4ad374fe1aefbdf5e3e6c98a51af29c53dfeeccca290e080032ee3b76f6f45f11c65a3a99f89a115108346d7d6ab542f5454714215cb0428d36d7e663476fef8"
+  "integrity_sha3_512": "5f28c7dee5eacace74409e540b19cb81baaa426779aaf97e84e6f913a062fc4c3feae892bf4103a8626a2926ddba4d3100b6a167d48beb04ff7949740b2d1044"
 }

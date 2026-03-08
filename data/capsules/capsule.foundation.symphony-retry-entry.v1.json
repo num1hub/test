@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Retry Entry\n\n## 1. Definition and Essence\nSymphony Retry Entry defines the scheduled retry state held by the orchestrator after a run attempt exits or is cancelled. It captures which issue remains claimed, which retry attempt is due next, when the timer should fire, and why the issue was requeued.\n\n## 2. Core Attributes\n- `issue_id` and human-readable `identifier`.\n- `attempt` number for exponential backoff accounting.\n- `due_at` timestamp and runtime timer handle.\n- `error` or continuation reason that justified requeueing.\n- `claim_state` indicating whether the issue remains reserved.\n- `release_rule` for when the claim should be dropped instead of retried.\n\n## 3. Role in Symphony\nRetry Entry is what keeps the orchestrator stateful without a database. It lets Symphony pause, back off, coalesce, and later redispatch work while preserving ownership semantics across transient failure or normal continuation gaps.\n\n## 4. N1Hub Alignment\nThis atom is important because issue execution in N1Hub is not one-shot. The system needs disciplined retry behavior so failures, stalls, or short continuation gaps do not collapse into duplicate work or silent abandonment.\n"
+    "content": "# Symphony Retry Entry\n\n## 1. Definition and Essence\nSymphony Retry Entry defines the scheduled retry state held by the orchestrator after a run attempt exits or is cancelled. It captures which issue remains claimed, which retry attempt is due next, when the timer should fire, why the issue was requeued, and whether the same lane should retry or degrade into another operating mode.\n\n## 2. Core Attributes\n- `issue_id` and human-readable `identifier`.\n- `attempt` number for exponential backoff accounting.\n- `due_at` timestamp and runtime timer handle.\n- `error` or continuation reason that justified requeueing.\n- `claim_state` indicating whether the issue remains reserved.\n- `release_rule` for when the claim should be dropped instead of retried.\n- `lane_state` for whether the retry stays on the same execution lane or enters degraded handling.\n- `assignment_return_path` for preserving where eventual results or failures should be surfaced.\n\n## 3. Role in Symphony\nRetry Entry is what keeps the orchestrator stateful without a database. It lets Symphony pause, back off, coalesce, and later redispatch work while preserving ownership semantics across transient failure or normal continuation gaps. It is also the place where quiet recovery discipline lives instead of being hidden in one-off error handlers.\n\n## 4. N1Hub Alignment\nThis atom is important because issue execution in N1Hub is not one-shot. The system needs disciplined retry behavior so failures, stalls, degraded lanes, or short continuation gaps do not collapse into duplicate work or silent abandonment.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Retry Entry defines the in-memory retry object that lets the orchestrator preserve control after an attempt ends without requiring a persistent database. It holds issue identity, retry number, due time, current claim state, and the continuation or error reason that justified rescheduling. The capsule matters because Symphony is intentionally tracker-driven and restart-light, which means retry semantics are one of the few places where runtime state must stay explicit and disciplined. By modeling Retry Entry separately from Run Attempt, the graph can describe backoff, release, and slot-pressure behavior without conflating queued retry state with actively running work.",
+    "summary": "Symphony Retry Entry defines the in-memory retry object that lets the orchestrator preserve control after an attempt ends without requiring a persistent database. It holds issue identity, retry number, due time, current claim state, the continuation or error reason that justified rescheduling, and the lane or return-path context needed for quiet recovery. The capsule matters because Symphony is intentionally tracker-driven and restart-light, which means retry semantics are one of the few places where runtime state must stay explicit and disciplined. By modeling Retry Entry separately from Run Attempt, the graph can describe backoff, degraded handling, release, and slot-pressure behavior without conflating queued retry state with actively running work.",
     "keywords": [
       "symphony",
       "retry-entry",
@@ -62,6 +62,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.notification.v1",
         "relation_type": "references"
       },
@@ -73,5 +81,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0b38a03776ddb82f0f73a75ef7f7d08c3c525a5872d5e174bf0e09a116144058cd6a797038fc2184f62a850c18a0786a23c92a7750d8f80291fb5bf9f4cc8835"
+  "integrity_sha3_512": "e111d2931cd5565b9f24ce69d5e31461e82690a989c370f02bc5238d48dbe3618969225c4f4dc9a4b10a3ea5cbfe6e905cb3034ae19618e4736636bb5209918e"
 }

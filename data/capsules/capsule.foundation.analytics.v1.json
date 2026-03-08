@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Analytics\n\n## 1. Definition and Essence\nAnalytics defines the aggregation engine that transforms operational events and metric capsules into reports, trends, and diagnostics. It supports decision-making by converting raw telemetry into interpretable longitudinal insight across projects and modules.\n\n## 2. Core Attributes\n- `aggregation_jobs` configured metric rollup processes\n- `report_definitions` canonical report templates and filters\n- `trend_models` moving averages and anomaly detection profiles\n- `retention_policy` historical storage and archive boundaries\n- `consumers` dashboards, assistant prompts, and governance views\n\n## 3. Lifecycle\nAnalytics ingests tracker and planner signals, computes derived metrics, publishes report artifacts, and refreshes dashboard surfaces on schedule or event triggers.\n\n## 4. Integration\n- **Workspace:** provides shared analytical intelligence surface.\n- **Tracker and Metric capsules:** primary telemetry providers.\n- **Dashboard:** visualizes output in interactive widgets.\n- **Personal AI Assistant:** uses analytics for recommendations.\n\n## 5. Philosophical Alignment\nAnalytics furthers To Dig Deep by replacing intuition-only judgments with auditable patterns and evidence-backed retrospection.\n"
+    "content": "# Analytics\n\n## 1. Definition and Essence\nAnalytics defines the aggregation engine that transforms operational events and metric capsules into reports, trends, diagnostics, and learning loops. It supports decision-making by converting raw telemetry into interpretable longitudinal insight across projects, agents, and capsule-maintenance work.\n\n## 2. Core Attributes\n- `aggregation_jobs` configured metric rollup processes\n- `report_definitions` canonical report templates and filters\n- `trend_models` moving averages, anomaly detection, and drift profiles\n- `retention_policy` historical storage and archive boundaries\n- `consumers` dashboards, assistant prompts, governance views, and swarm review loops\n- `evidence_bundles` repeatable analytical outputs that can inform planning, review, or promotion decisions\n\n## 3. Lifecycle\nAnalytics ingests tracker, planner, agent, and capsule-health signals; computes derived metrics; publishes report artifacts; and refreshes dashboard surfaces on schedule or event triggers. Over time it should help the system notice what patterns actually recur, not just what happened once.\n\n## 4. Integration\n- **Workspace:** provides the shared analytical intelligence surface.\n- **Tracker, Metric, and Capsule Job:** primary telemetry providers.\n- **Dashboard:** visualizes output in interactive widgets.\n- **Personal AI Assistant / Vault Stewardship Swarm:** use analytics for recommendations and prioritization.\n- **Archive / Audit Log:** preserve the long-range evidence trail behind reports.\n\n## 5. Philosophical Alignment\nAnalytics furthers To Dig Deep by replacing intuition-only judgments with auditable patterns and evidence-backed retrospection. It makes the second brain capable of learning from its own behavior over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "Analytics is the aggregation layer that converts events, metrics, and historical capsule data into interpretable trends. It matters because planning and tracking become shallow if they rely only on immediate intuition or isolated events rather than longitudinal evidence. This capsule gives the workspace a place where rollups, trend models, retention rules, and report definitions can be coordinated as one governed capability. In practical terms, Analytics is what turns raw telemetry from Tracker, Planner, and project flows into decision support, retrospective learning, and higher-quality dashboard surfaces.",
+    "summary": "Analytics is the aggregation layer that converts events, metrics, and historical capsule data into interpretable trends. It matters because planning, swarm work, and tracking become shallow if they rely only on immediate intuition or isolated events rather than longitudinal evidence. This capsule gives the workspace a place where rollups, trend models, retention rules, and report definitions can be coordinated as one governed capability. In practical terms, Analytics is what turns raw telemetry from Tracker, Planner, agent runs, and capsule maintenance into decision support, retrospective learning, and higher-quality dashboard surfaces.",
     "keywords": [
       "analytics",
       "reports",
@@ -30,7 +30,10 @@
       "dashboard",
       "tracker",
       "planner",
-      "insights"
+      "insights",
+      "swarm-learning",
+      "capsule-health",
+      "evidence-bundles"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -76,5 +79,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e79e73e56833d03fa6c57c5f3a82f6ac037e4ffc952374d39043667fd602b0355e9dbf1b6a4d004831de5bf6fa351438d9c58eeabe322279f86495963f5e96dc"
+  "integrity_sha3_512": "3e87459dc229bc9f35b0b08c47f1ac3f101c7db98fde523ac6f7190b36051a621861edc200dc215ec9f79a3b0e08443209c000fdea19444fb214b808ad4d70a4"
 }

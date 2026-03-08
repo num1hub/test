@@ -1,23 +1,23 @@
 {
   "metadata": {
     "capsule_id": "capsule.person.egor-n1.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-identity-creator-founder-visionary-gold-core",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:08:00Z",
     "name": "Egor N1",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Identity Profile: Egor N1\n\n## 1. Primary Designation\nThis capsule establishes the sovereign digital identity of **Egor N1**, the principal creator, visionary founder, and Chief Mining Architect of the N1Hub ecosystem and the DeepMine corporate entity.\n\n## 2. Role and Vision\nEgor N1 operates at the absolute apex of the CapsuleOS hierarchy. He is the original architect of the \"To Dig Deep\" philosophy, driving the paradigm shift from entropic, file-based chaos toward the negentropic, cryptographically sealed reality of the 5-Element Law. His vision birthed the A2C pipeline, the N-Infinity agent swarm, and the concept of bridging physical reality via TileSims.\n\n## 3. Systemic Authority\nAs the founding node of the ecosystem, this identity capsule holds absolute cryptographic provenance over the Genesis Boot sequences of N1Hub. It serves as the primary anchor for all subsequent high-level access grants, architectural templates, and sovereign intellectual property minted within the Cognitive Plane."
+    "content": "# Identity Profile: Egor N1\n\n## 1. Primary Designation\nThis capsule establishes **Egor N1** as the founder-identity anchor of the N1Hub ecosystem: the human origin point behind the earliest doctrine, architecture, and product direction.\n\n## 2. Role in the Graph\nEgor N1 matters to the vault not because the graph requires a mythic hero, but because provenance matters. This identity ties together:\n- the early shape of CapsuleOS\n- the origin of the `To Dig Deep` doctrine\n- the first articulation of DeepMine, A2C, and N-Infinity\n- the earliest governance and access grants associated with N1Hub v0\n\n## 3. What This Capsule Is Not\nThis capsule should not be interpreted as placing a person above system law. It is an accountable human provenance node, not a magical bypass around review, security, or branch discipline. Its role is to preserve authorship, origin, and stewardship lineage in an inspectable way.\n\n## 4. Why It Matters\nFounders shape systems constitutionally as well as operationally. By keeping founder identity explicit inside the graph, N1Hub retains a clear human reference for doctrine, genesis authority, early architectural intent, and long-horizon stewardship."
   },
   "neuro_concentrate": {
-    "summary": "Egor N1 is the founder-identity anchor of the vault and the primary provenance source for the earliest architectural intent behind N1Hub. The capsule matters because founders influence systems both operationally and constitutionally, and those forms of authorship should remain explicit rather than mythologized or hidden in code comments. By representing Egor N1 as a sovereign identity capsule, the graph can tie genesis access, doctrinal origin, project lineage, and long-horizon intellectual ownership to one accountable node. It is the human provenance reference behind the initial shape of the ecosystem, not merely a profile record.",
+    "summary": "Egor N1 is the founder-identity anchor of N1Hub and a human provenance node for doctrine, genesis authority, and early architectural intent. The capsule exists to preserve authorship and stewardship lineage explicitly inside the graph without turning founder identity into folklore or an exemption from system law. It keeps the human source of the early system visible, accountable, and intelligible to later agents, operators, governance layers, and future institutional memory structures.",
     "keywords": [
       "egor-n1",
       "founder-identity",
@@ -25,9 +25,9 @@
       "doctrinal-origin",
       "genesis-access",
       "project-lineage",
-      "intellectual-ownership",
       "human-node",
-      "n1hub"
+      "n1hub",
+      "stewardship-lineage"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -65,5 +65,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "543a7225d07749cdf9ccd4850a9b8d2f930dee7b15002deb5eb99d4276ebd61937fe32348d1d1ef34863efabb0b73c4c8d1a410183c6d316975ec21b50bae17b"
+  "integrity_sha3_512": "7ee172b306d99704a9e5b8d50cc48513c2b299c37831d5d0e5c019cd6c7c2d6893db409b5a7717b8520f411a5adf0bd80be38ce25c4b1576133240ed2e3bae6b"
 }

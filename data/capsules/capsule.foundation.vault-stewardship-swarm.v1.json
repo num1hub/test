@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.vault-stewardship-swarm.v1",
+    "version": "1.3.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T12:40:00Z",
+    "updated_at": "2026-03-08T20:38:00Z",
+    "name": "Vault Stewardship Swarm",
+    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance",
+    "source": {
+      "uri": "n1hub://specs/vault-stewardship-cluster-2026-03-07",
+      "type": "architect_prompt"
+    },
+    "priority": "critical",
+    "progress": 39,
+    "estimatedHours": 260,
+    "actualHours": 64,
+    "dueDate": "2026-09-12",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Vault Stewardship Swarm\n\n## 1. Definition and Essence\nVault Stewardship Swarm is the explicit agent cluster dedicated to the capsule vault itself. It does not primarily chase the outside world. It studies the vault, plans work against the vault, and performs bounded improvement on capsules and graph structure so the second brain becomes sharper over time.\n\n## 2. Full-Cycle Responsibilities\n- `capsule_inventory_reading` continuously surveys the vault instead of operating on shallow memory.\n- `research_and_pressure_detection` identifies weak summaries, bloated hubs, duplicate pressure, branch confusion, stale overlays, and graph-shape problems.\n- `planning_and_job_generation` turns observations into bounded capsule jobs rather than ambient promises.\n- `decomposition_and_atomization` keeps large capsules from silently mutating into pseudo-hubs.\n- `markup_and_semantic_clarity` improves metadata, summaries, keywords, and structural legibility.\n- `graph_refactoring` repairs weak links, misplaced `part_of` edges, and broken neighborhoods.\n- `branch_and_validation_handoff` routes work toward Dream, Real review, validation, or quarantine instead of uncontrolled mutation.\n- `trace_and_eval_loop` records why a target was chosen, what changed, and whether the work should be repeated.\n- `idle_and_reassess_discipline` allows the swarm to watch, cool down, and reassess instead of manufacturing fake work when the vault is temporarily in a healthy state.\n\n## 3. Swarm Shape\nThe swarm should operate as bounded workers, not a single vague loop:\n- `Scout` reads the vault and identifies pressure points.\n- `Foreman` compresses findings into a high-signal work plan.\n- `Reviewer` challenges weak proposals before execution.\n- `Executor` performs bounded Dream-safe capsule work.\nThis shape matters because the vault improves best when research, judgment, and mutation are separated. The control plane should know which lane produced a proposal, which lane approved it, and which lane actually touched the Dream-side artifact.\n\n## 4. Day and Night Modes\nDuring the day, the swarm should behave as a co-pilot through Personal AI Assistant and Chat to Capsules, proposing changes and asking for confirmation. At night, it should continue bounded maintenance through Background Agent Runtime and Night Shift Autonomy so the vault keeps improving while the human sleeps. When no new high-value work exists, the swarm should deliberately enter watch-and-reassess behavior instead of burning tokens for cosmetic activity.\n\n## 5. Why It Matters\nN1Hub is strongest when the vault is not a static archive of notes, but a living memory system. Vault Stewardship Swarm names the labor required for that outcome and makes capsule improvement first-class work.\n\n## 6. Operational Rule\nThis swarm should prefer a small number of high-signal Dream-safe jobs with clear evidence and review surfaces over a large number of shallow automatic edits. The goal is not activity volume. The goal is sustained vault quality.\n\n## 7. Philosophical Alignment\nVault Stewardship Swarm serves To Dig Deep by treating the vault itself as a mine, library, workshop, and laboratory that deserves continuous care instead of one-time ingestion."
+  },
+  "neuro_concentrate": {
+    "summary": "Vault Stewardship Swarm is the bounded agent cluster that continuously studies, plans, reviews, and improves the N1Hub vault itself. It reads the capsule inventory, detects pressure points, turns them into capsule jobs, and carries that work through decomposition, markup, graph refactoring, review, and branch-safe execution. Its day mode acts as a co-pilot for the human, its night mode performs careful autonomous maintenance, its idle mode deliberately watches rather than fabricates work, and its degraded mode can recover a weak scout cycle through foreman or reviewer salvage instead of pretending the run was clean. By making this labor explicit, N1Hub treats the vault as a living second brain that must be sharpened continuously instead of merely filled once.",
+    "keywords": [
+      "vault-stewardship-swarm",
+      "second-brain-maintenance",
+      "capsule-jobs",
+      "decomposition",
+      "markup",
+      "graph-refactoring",
+      "day-night-modes",
+      "context-packs",
+      "subagent-split",
+      "idle-reassess",
+      "cooldown-discipline",
+      "degraded-cycle-recovery",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "ed7fb049e623780914274866caee5b78aabdc5e6053d49328220996cd63e53833d04ccfd670ff16b080f0cd7aa542ed7c32f5e3b14f756d467d3ba83140105dd"
+}

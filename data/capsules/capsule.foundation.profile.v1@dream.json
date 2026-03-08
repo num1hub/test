@@ -14,10 +14,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Profile\n\n## 1. Definition and Essence\nProfile defines the canonical identity envelope for a workspace actor, including stable identifiers, public metadata, and personalization anchors. It is the reference node for user-linked activity, ownership, and personalization across modules.\n\n## 2. Core Attributes\n- `user_id` sovereign principal identifier\n- `display_name` human-readable profile label\n- `public_keys` cryptographic identity materials\n- `avatar_and_theme` user-facing personalization settings\n- `contact_handles` optional communication channels\n\n## 3. Lifecycle\nProfiles are created during onboarding, updated as identity and preferences evolve, and archived or transferred under governance rules without breaking historical provenance links.\n\n## 4. Integration\n- **Workspace:** core identity surface for authenticated interaction.\n- **User Preferences:** derives behavioral defaults and constraints.\n- **Team and Role:** associates actors with collaborative structures.\n- **Audit/Activity:** anchors actor attribution for mutations.\n\n## 5. Philosophical Alignment\nProfile capsules align with To Dig Deep by grounding every action in accountable identity rather than anonymous mutation.\n"
+    "content": "# Profile\n\n## 1. Definition and Essence\nProfile in Dream describes a richer human identity substrate for N1Hub. It preserves the future possibility that one person's profile can carry not just account metadata, but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Core Attributes\n- `user_id` stable sovereign principal\n- `identity_and_keys` stronger authorship and trust anchors\n- `presence_and_theme` human continuity cues across clients\n- `review_and_approval_role` future promotion and governance authority\n- `wallet_and_access_ownership` explicit link to model-supply posture\n\n## 3. Dream Direction\nProfile should eventually become the durable human envelope from which preferences, assistant relationship, access posture, and review authority all derive, without collapsing personhood into a session cookie or a chat thread.\n\n## 4. Integration\n- **User Preferences:** remain the behavioral expression of the same human principal.\n- **AI Wallet and Access Models:** tie intelligence supply to a real owner.\n- **Human-AI Symbiosis and Personal AI Assistant:** preserve the partner loop around that identity.\n- **Agent Control Plane:** uses profile as the accountable human return path.\n\n## 5. Philosophical Alignment\nProfile in Dream protects the idea that the second brain should deepen one person's continuity rather than erase it.\n"
   },
   "neuro_concentrate": {
-    "summary": "Profile in the Dream branch describes a richer identity-continuity layer for humans and long-lived principals. It imagines better reputation memory, clearer authorship context, stronger personalization discipline, and more useful linkage between collaboration history, assistant behavior, and sovereign presence across the ecosystem. The capsule matters because future workspaces will depend on identity quality as much as on data quality. Dream therefore preserves Profile as a more capable identity substrate rather than only the current durable actor envelope.",
+    "summary": "Profile in Dream describes a richer identity-continuity layer for humans and long-lived principals. It imagines clearer authorship, stronger review authority, wallet ownership, and better linkage between assistant continuity, background autonomy, and sovereign human presence across the ecosystem. The capsule matters because future second-brain systems will depend on identity quality as much as on data quality. Dream therefore preserves Profile as a more capable human substrate rather than only the current durable actor envelope.",
     "keywords": [
       "profile",
       "identity-envelope",
@@ -50,6 +50,18 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.team.v1",
         "relation_type": "references"
       },
@@ -61,5 +73,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f9fb4d4ea7570340a84b7e93a728ef9e83bb69c27f1e2aacaab6fdcce85b6b4db010e4c881f96032ff4534eaa7292c55ec42140079daf9fabdd3e76841c9b998"
+  "integrity_sha3_512": "38571302e87b584e32f7befbe5be6a0f6162433d5f6053b571560474b5ba9d41ac7a300e697a4a4e851ad6873381e2c2818af62513b067b0be4bbaea746c2be7"
 }

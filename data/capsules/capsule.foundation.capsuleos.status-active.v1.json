@@ -1,32 +1,33 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.status-active.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "status-active-execution-phase-validated-mutable-gold-master",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:08:00Z",
     "name": "CapsuleOS Status: Active",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Status: Active\n\n## 1. Definition\nIn the CapsuleOS lifecycle, the `active` status designates a capsule that has successfully traversed the A2C pipeline, cleared all 16 Validation Gates, and entered the core Cognitive Plane. It represents live, reliable, and executing knowledge within the N1Hub ecosystem.\n\n## 2. Operational Characteristics\n- **Validated Reliability**: Unlike `draft` capsules, an `active` capsule possesses a complete 6-dimensional confidence vector, verified canonical links, and a functional (though potentially updatable) cryptographic seal.\n- **Controlled Mutability**: `active` capsules are living entities; they can be modified. However, to preserve systemic negentropy, direct destructive editing is prohibited. Modifications trigger a strict versioning protocol: a new capsule is minted with the updated payload, and the original capsule transitions to the `legacy` status, preserving a perfect, immutable historical trail.\n\n## 3. Ecosystem Interaction\n- **Primary Agent Targets**: `active` capsules are the main focus of the N-Infinity swarm. Weavers actively seek to forge new connections with them, Parliaments monitor their `contradiction_pressure` as new data enters the graph, and Innovators use them as base material for compounding new hypotheses.\n- **Global Visibility**: Unless explicitly restricted by private visibility settings, `active` capsules are fully indexed, searchable, and accessible to the broader ecosystem, serving as reliable reference points for users and other projects.\n\n## 4. Use Cases\n- **Live Project Tasks**: Operations actively being executed by a team.\n- **Living Documentation**: Knowledge base articles that are reliable but subject to ongoing refinement as new information emerges.\n- **Real-time Digital Twins**: A physical object capsule in TileSims representing an environment that is currently under active renovation."
+    "content": "# Capsule Status: Active\n\n## 1. Definition\nIn CapsuleOS, the `active` status marks a capsule that is currently admitted into the live Cognitive Plane as trusted, operational knowledge. It is not merely stored in the vault; it is considered part of the system's working reality and may be relied on by users, agents, planners, and downstream workflows.\n\n## 2. What Active Means\n- **Validated Presence**: an active capsule has passed the required validation and link-integrity checks for live use.\n- **Operational Visibility**: it is eligible to be indexed, retrieved, planned against, and surfaced in daily work.\n- **Review-Bound Mutability**: active does not mean untouchable, but it does mean changes must follow governed versioning, review, and promotion rules rather than silent overwrite.\n- **Swarm Priority**: active capsules are the primary maintenance targets for bounded capsule stewardship, because they shape the current quality of the second brain.\n\n## 3. Relationship to Real and Dream\n`active` most often applies to capsules that are part of the `Real` branch of the system's working truth, but the status is about runtime posture rather than branch label alone. A capsule may be active because it is the currently trusted version in use; a future candidate may still live in `Dream` until review, validation, and promotion are complete.\n\n## 4. Governance Discipline\nActive capsules are living system objects. They can improve, but improvement must be traceable.\n- destructive mutation is disallowed\n- supersession must preserve lineage\n- review and validation remain mandatory before a new state becomes the trusted active state\n- swarm attention should strengthen active capsules, not churn them needlessly\n\n## 5. Why It Matters\nWithout an `active` status, the vault becomes a pile of undifferentiated records. With it, N1Hub can distinguish between stored knowledge and currently operative knowledge, allowing the second brain to behave like a real working system instead of a passive archive."
   },
   "neuro_concentrate": {
-    "summary": "The 'active' status in CapsuleOS marks the primary execution phase of a capsule. Having successfully passed all 16 Validation Gates, an active capsule is recognized as verified, reliable, and fully integrated into the Cognitive Plane. While they remain mutable to accommodate evolving knowledge, any modifications are governed by strict versioning protocols that transition the previous state to 'legacy' to preserve historical integrity. Active capsules possess global visibility within their access constraints and serve as the primary targets for N-Infinity background agents, which continuously weave, monitor, and synthesize them to drive the compound growth of the N1Hub ecosystem.",
+    "summary": "The `active` status marks a capsule as trusted, operational knowledge inside the live Cognitive Plane. Active capsules are visible, retrievable, and usable by humans and agents, but they remain governed by versioning, review, and promotion discipline rather than silent mutation. In practice, `active` is the status that turns a capsule from stored information into current working reality, keeps it available for planning and retrieval, and makes it a primary target for capsule stewardship.",
     "keywords": [
       "capsule-status",
       "active",
       "execution-phase",
-      "validated-knowledge",
+      "working-reality",
       "controlled-mutability",
+      "review-bound",
       "versioning",
       "capsuleos",
-      "n-infinity-target",
+      "capsule-stewardship",
       "n1hub"
     ],
     "confidence_vector": {
@@ -61,5 +62,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "45c1ef68b9d7ab2ed9f91f8206403d118d593f1be551a6bb21c61cf90330fd053adf30ea4dd145684b52e3c3cc28eebdc534fae0a8f8c8a9d04733c03ae3189f"
+  "integrity_sha3_512": "e9715bac37171dc58d546c33c4fd708a1f5c3355c00afedd4bde3ba76951b03b7a8ceefe59ec56f68dc7f3b207fb9120ac979ae9b884a2c8d61e4cb22ebd130e"
 }

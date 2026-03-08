@@ -19,16 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Definition and Essence\nA Milestone capsule marks a significant checkpoint in a timeline. Unlike ongoing goals, a milestone is a binary event: achieved or not achieved. Typical examples include prototype complete, beta launch, or funding closed.\n\n## 2. Core Attributes\n- date (scheduled ISO date)\n- status: pending | achieved | missed\n- projectId reference when applicable\n- description of strategic significance\n- completionCriteria for objective verification\n\n## 3. Lifecycle\nMilestones are defined during planning, tracked over time, and finalized as achieved or missed. They can depend on sets of tasks required for completion.\n\n## 4. Integration\nPlanner displays milestones across timeline views, Tracker emits reminders as dates approach, and project hubs use milestones as phase gates.\n\n## 5. Philosophical Alignment\nMilestones transform long journeys into discrete validated checkpoints that reinforce forward movement from concept to reality."
+    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Definition and Essence\nA Milestone capsule marks a significant checkpoint in time. Unlike an ongoing goal, a milestone is a decision boundary: achieved, missed, delayed, or still pending. It gives the system a concrete place to ask whether a phase gate has really been crossed and whether the surrounding branch posture, evidence, and schedule still justify confidence.\n\n## 2. Core Attributes\n- `date` scheduled ISO date\n- `status` pending, achieved, missed, delayed\n- `project_ref` reference when applicable\n- `strategic_significance` what changes if this checkpoint is reached\n- `completion_criteria` what must be true before it counts as crossed\n- `evidence_bundle` the tasks, artifacts, or review outcomes that justify achievement\n- `review_gate` whether explicit review is required before a milestone can be treated as crossed\n- `branch_effect` whether the milestone advances Dream planning, Real execution, or both\n\n## 3. Lifecycle\nMilestones are defined during planning, supported by tasks, watched by tracker and reminders, and ultimately resolved as achieved, missed, or rescheduled. A milestone should not be treated as decorative roadmap text. It is a binary checkpoint with evidence, review semantics, and schedule consequences.\n\n## 4. N1Hub Role\nMilestone is the hinge between strategic goals and atomic tasks. It gives the second brain a smaller set of high-signal checkpoints that can structure reviews, schedule pressure, and planning revisions. It is where roadmaps stop being broad stories and become verifiable gates.\n\n## 5. Integration\n- **Goal:** provides the destination the milestone helps realize.\n- **Task:** supplies the work needed to satisfy the checkpoint.\n- **Tracker, Reminder, Notification, and Calendar:** provide timing, alerts, escalation, and schedule visibility.\n- **Planner and Planning Horizon Engine:** use milestones as horizon anchors and phase gates.\n- **Validation and review layers:** confirm that a phase has really been crossed before the graph treats it as true.\n\n## 6. Philosophical Alignment\nMilestone supports To Dig Deep by turning long journeys into evidence-bearing checkpoints rather than vague feelings of motion.\n"
   },
   "neuro_concentrate": {
-    "summary": "A Milestone capsule represents a critical checkpoint in time with binary achievement semantics. It captures scheduled date, completion criteria, strategic significance, and execution status so teams can measure whether a phase gate has truly been crossed. Milestones structure roadmaps, improve timeline clarity, and provide concrete review points for projects and initiatives. The Planner uses them to model phase boundaries, while Tracker monitors upcoming and missed checkpoints to maintain execution discipline and timely intervention within the sovereign workspace.",
+    "summary": "A Milestone capsule represents a critical checkpoint in time with binary or near-binary achievement semantics. It captures scheduled date, completion criteria, strategic significance, review posture, and execution status so the system can measure whether a phase gate has truly been crossed. Milestones matter because they keep goals from remaining abstract and tasks from becoming disconnected activity. In N1Hub they create evidence-bearing checkpoints that structure roadmaps, reviews, escalation, and schedule pressure.",
     "keywords": [
       "milestone",
       "checkpoint",
       "timeline",
       "progress",
-      "roadmap"
+      "roadmap",
+      "phase-gate",
+      "evidence",
+      "review",
+      "schedule-pressure"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -51,11 +55,31 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.project.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.reminder.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
         "relation_type": "references"
       },
       {
@@ -74,5 +98,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1dc35acba53e83dde10da54daa27ed609a25a0664e07a109a61893606eb71363e9d0ee14c7d9920208c7d732f2979b3c33698772ff177d49170ff16c53af6353"
+  "integrity_sha3_512": "6e92804b6fffa57dfdfca6fc22ecc06c3cf95a2df54350102f4117ad0822ccd4ded417a1f19bc6bcad7ce79c3fe6f0c5d6f4f5f2ff56315be429d49a303a8006"
 }

@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-subagents.v1",
+    "version": "1.1.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T18:15:00Z",
+    "updated_at": "2026-03-08T23:58:00Z",
+    "name": "Agent Subagents",
+    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor",
+    "source": {
+      "uri": "https://docs.langchain.com/oss/javascript/deepagents/harness",
+      "type": "web_documentation"
+    },
+    "priority": "high",
+    "progress": 38,
+    "estimatedHours": 240,
+    "actualHours": 30,
+    "dueDate": "2026-10-22",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Subagents\n\n## Dream Direction\nIn the Dream branch, N1Hub subagents become the standard operating form of autonomous work rather than an optional optimization.\n\n## Desired Future State\n- every major swarm has a clear triage, strategy, critique, and execution split\n- handoffs carry typed artifacts and bounded context packs\n- workers can be mapped to different provider lanes, harnesses, and costs\n- assignment-aware worker chains replace loose conversational relay\n- reviewer lanes can veto or redirect risky execution before Dream or Real is touched\n- subagent outputs can be replayed and compared across runs\n\n## Why It Matters\nDream preserves the idea that swarm quality should come from composable specialist workers, not from one oversized prompt pretending to be a whole team."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Subagents in the Dream branch captures the future state where N1Hub treats bounded specialist workers as the default architecture for autonomous work. It emphasizes typed handoffs, assignment-aware chains, distinct strategy and review lanes, provider-aware specialization, and replayable artifacts so swarms can scale without role confusion or runaway prompt inflation. In that future, most serious tasks are decomposed into compact workers that can be compared, budgeted, improved, and governed independently.",
+    "keywords": [
+      "agent-subagents",
+      "dream-branch",
+      "specialist-workers",
+      "typed-handoffs",
+      "review-lane",
+      "provider-lanes",
+      "swarm-architecture",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "db2749495c932bcc996c25bf4da0ba150e06c25dc39d74d915a03f1da9d85413396099f6e831046276e78cac10116b2ff4a0f70e64bea1a0af8cc497ed978ef7"
+}

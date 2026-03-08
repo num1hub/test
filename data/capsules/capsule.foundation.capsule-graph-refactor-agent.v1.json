@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T12:46:00Z",
+    "updated_at": "2026-03-07T12:46:00Z",
+    "name": "Capsule Graph Refactor Agent",
+    "semantic_hash": "capsule-graph-refactor-agent-topology-partof-repair-hygiene",
+    "source": {
+      "uri": "n1hub://specs/vault-stewardship-cluster-2026-03-07",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 22,
+    "estimatedHours": 180,
+    "actualHours": 32,
+    "dueDate": "2026-09-18",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Graph Refactor Agent\n\n## 1. Definition and Essence\nCapsule Graph Refactor Agent is the topology worker of the N1Hub vault. It focuses on the `recursive_layer`: repairing weak or confused links, correcting `part_of` placement, tightening graph neighborhoods, and reducing structural entropy without pretending every graph change is content change.\n\n## 2. Core Responsibilities\n- `link_hygiene` repairs stale, weak, or semantically noisy edges.\n- `part_of_repair` corrects containment mistakes so project, hub, and atomic boundaries stay legible.\n- `neighborhood_refactoring` improves local graph shape around important capsules.\n- `structural_entropy_reduction` finds places where the graph is technically connected but conceptually messy.\n- `merge_safe_topology_change` prepares graph-level refactors for review and branch-safe mutation instead of silent rewiring.\n\n## 3. N1Hub Role\nIn N1Hub this agent works alongside Weaver and Gardener, but with a more explicit mandate over the capsule vault as a maintained structure. It should be one of the main nighttime workers, because graph refactoring often benefits from long, bounded maintenance runs that do not interrupt live daytime use.\n\n## 4. Philosophical Alignment\nCapsule Graph Refactor Agent serves To Dig Deep by insisting that deep knowledge needs deep topology, not just more text."
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Graph Refactor Agent is the topology repair worker of the N1Hub vault. It improves link hygiene, fixes `part_of` mistakes, refactors confused neighborhoods, and reduces structural entropy in the recursive layer without collapsing graph work into generic editing. The role matters because a capsule system can accumulate content while still drifting into topological confusion. By assigning graph refactoring to its own agent, N1Hub gives continuous structural repair a clear owner and a bounded path through review and branch-safe mutation.",
+    "keywords": [
+      "capsule-graph-refactor-agent",
+      "link-hygiene",
+      "part-of-repair",
+      "graph-topology",
+      "vault-stewardship",
+      "weaver",
+      "gardener",
+      "capsule-graph-maintenance",
+      "background-agents",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-graph-refactor-agent-topology-partof-repair-hygiene"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.weaver.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.gardener.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "59ee77a0ea0fc881c4a8a8b6703c8feaffdaea491f76b54114c128bd4fd92f1bd6af0555cd92d4aae84b1b8cd51fe9a38ecf0b3ed5193e6fa57b8359b0752c40"
+}

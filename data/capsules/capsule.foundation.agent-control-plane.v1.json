@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-control-plane.v1",
+    "version": "1.2.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T21:25:00Z",
+    "updated_at": "2026-03-08T20:38:00Z",
+    "name": "Agent Control Plane",
+    "semantic_hash": "agent-control-plane-roster-policy-activity-assignment-governance",
+    "source": {
+      "uri": "https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available",
+      "type": "web_article"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 220,
+    "actualHours": 24,
+    "dueDate": "2026-09-10",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Control Plane\n\n## 1. Definition and Essence\nAgent Control Plane defines the governance and fleet-management substrate for agents inside N1Hub. It is deeper than the user-facing AI Control Surface. The control plane registers agent definitions, applies policies, tracks assignments and budgets, exposes searchable session activity, and keeps autonomous work auditable across web, terminal, mobile, and daemon lanes.\n\n## 2. Core Responsibilities\n- `fleet_registry` tracks which agents exist, which lanes they belong to, and which repo-owned definitions or instruction surfaces govern them.\n- `policy_governance` applies enablement, capability scope, tool or MCP allowlists, approval defaults, and budget posture.\n- `session_and_activity_discovery` makes agent sessions searchable and filterable by agent, user, lane, project, repository, status, or recent task history.\n- `assignment_and_artifact_tracking` keeps issue, task, comment, and draft-output assignments visible as first-class work objects with ownership, origin, due window, and return path.\n- `live_status_projection` exposes in-progress, completed, failed, cancelled, idle-waiting, cooling-down, or timed-out states to downstream control and notification surfaces.\n- `audit_and_actor_lineage` records when an agent acted, on whose behalf it acted, and what artifacts or outcomes it produced.\n- `lane_budget_and_rate_posture` keeps API, subscription, background, and night-shift lanes governable instead of implicit.\n- `programmatic_management` exposes machine-manageable policy and definition paths so governance is not trapped only in UI switches.\n- `notification_and_escalation_hooks` projects failures, clarifications, and wakeups into visible operator channels.\n- `cross_client_continuity` keeps the same work legible across web, terminal, mobile, and background daemon surfaces.\n\n## 3. N1Hub Role\nIn N1Hub this control plane should sit beneath AI Control Surface and above individual daemon lanes such as Symphony and Vault Stewardship Swarm. It gives one human operator a way to supervise a growing agent fleet without relying on private shell memory. As the swarm matures, this becomes the place where canonical agent definitions, assignment discovery, policy rollout, auditability, live state filters, lane budgets, and cross-client continuity are managed intentionally.\n\n## 4. Architectural Value\nAgent Control Plane separates governance from conversation and from execution. That keeps Personal AI Assistant free to be the partner surface while the runtime still has a formal place to manage fleet policy, assignment truth, activity history, and administrative state. The control plane should be treated as the authoritative registry from which surfaces, daemons, and reports derive their picture of the fleet.\n\n## 5. Philosophical Alignment\nAgent Control Plane supports To Dig Deep by making autonomous work accountable, searchable, governable, and economically legible instead of leaving it as invisible background behavior."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Control Plane defines the governance layer for agent fleets in N1Hub. It covers agent definitions, policy rollout, assignment truth, lane budgets, searchable session activity, live status projection, degraded-mode visibility, audit lineage, and cross-client continuity. The capsule matters because always-on swarms become untrustworthy when they can only be managed through ad hoc shell commands or hidden local state. This atom gives N1Hub a precise place to describe fleet registry, administrative policy, assignment governance, and live operational truth as concerns distinct from chat and execution.",
+    "keywords": [
+      "agent-control-plane",
+      "fleet-registry",
+      "agent-governance",
+      "session-activity",
+      "assignment-tracking",
+      "lane-budgeting",
+      "degraded-mode",
+      "live-status-projection",
+      "audit-lineage",
+      "cross-client-continuity",
+      "ai-controls",
+      "agent-hq",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-control-plane-roster-policy-activity-assignment-governance"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "04b9241fa11e67f88154dc83ac86912ec61189148c1e22d1e169fbb9125824bddf29749fd206249fed061f870e1426c204e10668361f7fe08f2b5ae75203cbe0"
+}

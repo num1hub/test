@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-07T10:22:14.351Z",
+    "updated_at": "2026-03-08T20:20:00Z",
     "name": "Testing",
     "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Testing\n\n## 1. Definition and Essence\nTesting defines quality assurance strategy for capsule schema conformance, graph integrity, module behavior, and release safety. It codifies test layers, coverage goals, and regression controls across the ecosystem.\n\n## 2. Core Attributes\n- `test_layers` unit, integration, component, e2e, load\n- `coverage_targets` required baseline for critical modules\n- `fixture_strategy` canonical sample capsule catalog\n- `regression_policy` release-blocking failure criteria\n- `quality_metrics` reliability and defect escape indicators\n\n## 3. Lifecycle\nTesting standards are revised alongside architecture changes, enforced in CI, and validated continuously through automated and targeted manual checks.\n\n## 4. Integration\n- **Validator:** schema and gate conformance checks.\n- **A2C and Workspace:** behavior and integration test targets.\n- **Hybrid Database:** consistency and recovery validation.\n- **Security:** includes adversarial and access-control tests.\n\n## 5. Philosophical Alignment\nTesting expresses To Dig Deep by challenging assumptions with repeatable evidence before knowledge or code is trusted.\n"
   },
   "neuro_concentrate": {
-    "summary": "Testing in the Dream branch represents a more integrated quality discipline across the platform. It pushes toward broader contract checks, deeper graph invariants, stronger regression memory, and clearer alignment between runtime confidence and actual evidence. The capsule matters because systems become shallow when confidence outruns verification. Dream therefore preserves Testing as a future reliability fabric for the ecosystem, where quality is continuously measured across code, data, branches, and graph behavior.",
+    "summary": "Testing in the Dream branch represents a more integrated quality discipline across the platform. It pushes toward broader contract checks, deeper graph and branch invariants, stronger replay memory, and clearer alignment between autonomous runtime confidence and actual evidence. The capsule matters because systems become shallow when confidence outruns verification. Dream therefore preserves Testing as a future reliability fabric for the ecosystem, where quality is continuously measured across code, data, branches, promotions, and agent behavior.",
     "keywords": [
       "testing",
       "quality-assurance",
@@ -61,10 +61,26 @@
       {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "381173977573536ea33543b8447d7e27256a1d49cd7c7a1061f9255aa8f839dbe3099c11b1795ac442658084d82eb98c9647187e4188f0caa942b5a078728873"
+  "integrity_sha3_512": "f8c1dd16fae94cf08792b5b9825673f5e2689d2eaad300109ef7616804d65415922d1678a4315f3c557b2ceb39afec44db7c9dec3c4fa46fb5c3ed6d85643ff8"
 }

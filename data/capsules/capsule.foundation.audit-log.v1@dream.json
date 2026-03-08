@@ -22,7 +22,7 @@
     "content": "# Audit Log\n\n## 1. Definition and Essence\nAudit Log defines immutable event recording for capsule creation, mutation, validation, overrides, and governance actions. It standardizes event schema, retention policies, and integrity requirements for forensic traceability.\n\n## 2. Core Attributes\n- `event_id` immutable audit record identifier\n- `actor_ref` identity capsule responsible for action\n- `subject_ref` capsule or resource affected\n- `event_payload` normalized mutation metadata\n- `retention_policy` storage duration and archival tiering\n\n## 3. Lifecycle\nAudit events are emitted on protected operations, indexed for query, rotated by retention policy, and archived while preserving tamper-evident integrity.\n\n## 4. Integration\n- **Validator and A2C:** records gate outcomes and fixes.\n- **Architect Override and Parliament:** logs exceptional governance actions.\n- **Archive:** long-term retention and restoration coupling.\n- **Security:** incident response and compliance evidence source.\n\n## 5. Philosophical Alignment\nAudit logging realizes To Dig Deep by ensuring every important action can be reconstructed, challenged, and learned from.\n"
   },
   "neuro_concentrate": {
-    "summary": "Audit Log in the Dream branch represents a stronger evidentiary memory for the platform. It pushes toward richer event granularity, better causal reconstruction, cleaner actor lineage, and more useful long-horizon review of how graph state actually changed over time. The capsule matters because trust depends on reconstructability, not on declarations alone. Dream therefore preserves Audit Log as a future forensic substrate for the ecosystem, not just a record of notable mutations.",
+    "summary": "Audit Log in the Dream branch represents a stronger evidentiary memory for the platform. It pushes toward richer event granularity, better causal reconstruction, cleaner actor lineage, and more useful long-horizon review of how graph and agent state actually changed over time. The capsule matters because trust depends on reconstructability, not on declarations alone. Dream therefore preserves Audit Log as a future forensic substrate for the ecosystem, not just a record of notable mutations.",
     "keywords": [
       "audit-log",
       "forensics",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5a7d4311c55a7ef2fb2affb37deb5a2599ac7be7d82bdf9df14b090cf649dd72f38f3267faca191246dad86d5ab34f23f8112d525f48b7d30f246c2984a1d982"
+  "integrity_sha3_512": "a6702a857a6dab5721e7832eb05e2919d735753073b95789fae82a380cbed22bef69cd7d6c457b7a5965a93f2b6a11d3a4216b1dd6a89ad78b5858b4ca8ef162"
 }

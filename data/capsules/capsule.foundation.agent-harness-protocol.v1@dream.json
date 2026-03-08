@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-harness-protocol.v1",
+    "version": "1.1.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T20:10:00Z",
+    "updated_at": "2026-03-08T23:58:00Z",
+    "name": "Agent Harness Protocol",
+    "semantic_hash": "agent-harness-protocol-session-turn-events-bidirectional-tools",
+    "source": {
+      "uri": "https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions",
+      "type": "web_documentation"
+    },
+    "priority": "high",
+    "progress": 32,
+    "estimatedHours": 220,
+    "actualHours": 24,
+    "dueDate": "2026-10-30",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Harness Protocol\n\n## Dream Direction\nIn the Dream branch, N1Hub treats harness protocol as a portable runtime law shared across local Codex lanes, background swarms, and future hosted agent services.\n\n## Desired Future State\n- session, turn, approval, interrupt, and artifact semantics are portable across multiple agent backends\n- long-lived agents can pause, resume, replay, and expose status without bespoke glue for every surface\n- human approval and review checkpoints flow through the same protocol instead of ad hoc UI logic\n- swarm lanes can exchange typed artifacts and resume tokens rather than raw prompt text\n- assignment-aware starts and return paths work across web, terminal, mobile, and daemon surfaces\n- hosted and local agent services can coexist under one N1Hub controller without losing observability or safety\n\n## Why It Matters\nDream preserves the idea that agent orchestration should mature from wrapper scripts into stable protocol-driven runtime infrastructure."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Harness Protocol in the Dream branch captures the future where N1Hub treats app-server style protocols, durable hosted agents, and local harnesses as one class of runtime contract. It imagines portable semantics for sessions, turns, approvals, resume tokens, event streams, artifacts, and assignment-aware starts so different agent backends can coexist under one controller without losing observability or safety. In that future, local Codex lanes, background swarms, and hosted durable agents all plug into the same governing controller instead of needing separate orchestration logic.",
+    "keywords": [
+      "agent-harness-protocol",
+      "dream-branch",
+      "durable-agents",
+      "resume-tokens",
+      "event-streams",
+      "portable-runtime",
+      "hosted-agents",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-harness-protocol-session-turn-events-bidirectional-tools"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "b8079a3c4ab54b045713f14e016a5169f5588f06bbc48fad56267592dd980f63dc38c840f1c02b7ccc9e7a6a3a7d15d97e302cded9ce266295dc3e256d3c6233"
+}

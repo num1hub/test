@@ -22,7 +22,7 @@
     "content": "# Royalty Engine\n\n## 1. Definition and Essence\nRoyalty Engine defines deterministic distribution of value to original creators and contributors when templates or derivative assets generate economic activity. It enforces payout rules, lineage attribution, and auditable settlement records.\n\n## 2. Core Attributes\n- `royalty_policy` percentage and split computation rules\n- `beneficiary_refs` identities eligible for payout\n- `lineage_evidence` ancestry links proving entitlement\n- `settlement_log` immutable payout transaction records\n- `dispute_path` challenge and arbitration process\n\n## 3. Lifecycle\nRoyalties are computed at settlement events, distributed according to policy, reconciled with payment records, and audited for fairness and policy conformance.\n\n## 4. Integration\n- **Marketplace:** source of monetization events.\n- **Sovereign Template:** lineage source for entitlement.\n- **N1 Coin Tokenomics:** payout currency and economic controls.\n- **SIAF Governance:** policy-level oversight for disputes.\n\n## 5. Philosophical Alignment\nRoyalty mechanics serve To Dig Deep by sustaining long-term creation incentives through transparent contribution economics.\n"
   },
   "neuro_concentrate": {
-    "summary": "Royalty Engine in the Dream branch represents a more powerful attribution-and-settlement layer for reusable knowledge assets. It pushes toward cleaner downstream lineage accounting, richer dispute handling, and better coordination with marketplace, templates, and token economics when value moves through derivative work. The capsule matters because creator fairness breaks down quickly at scale if payout logic stays approximate. Dream therefore preserves Royalty Engine as a future trust mechanism for economic reuse, not just a payout calculator.",
+    "summary": "Royalty Engine in the Dream branch represents a more powerful attribution-and-settlement layer for reusable knowledge assets. It pushes toward cleaner downstream lineage accounting, richer dispute handling, stronger usage proof, and better coordination with marketplace, templates, passes, and token economics when value moves through derivative work. The capsule matters because creator fairness breaks down quickly at scale if payout logic stays approximate. Dream therefore preserves Royalty Engine as a future trust mechanism for economic reuse, not just a payout calculator.",
     "keywords": [
       "royalty-engine",
       "payouts",
@@ -61,10 +61,14 @@
       {
         "target_id": "capsule.foundation.siaf-governance.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "7d25a48ec0096cb639735d722eae594891b6887dcc82858b3d8079b1cb8597941a97f8e451de84f3de44f672c1fabda08fdf975c8443bf5216d2066c4b3a635a"
+  "integrity_sha3_512": "c6f9699f266398afd85cb1cccf6d7e5545f4b4f235c04938a591448c5357f95d3f2a6c6ef7015a3ac3eb7cdd67c32dc3e728d0f0af3210182c53d067640d2778"
 }

@@ -22,7 +22,7 @@
     "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed or inactive capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal or governance retention constraints\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores immutable historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context.\n\n## 4. Integration\n- **Workspace:** keeps active view clean while retaining memory.\n- **Tracker:** triggers archival transitions on completion windows.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves governance trace across lifecycle changes.\n\n## 5. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "Archive is the long-memory subsystem of the workspace. It decides how completed or inactive capsules move out of active attention without disappearing from institutional history. The capsule matters because deep systems need both focus and recall: active views should stay clean, but finished work must remain searchable, restorable, and auditable. By modeling archival rules explicitly, the vault preserves continuity across project lifecycles and lets Tracker, Analytics, and Audit Log reason over older material without cluttering live execution surfaces. Archive is therefore retention discipline, not mere cold storage.",
+    "summary": "Archive in the Dream branch preserves the vision of a deeper long-memory system for the workspace. It points toward more deliberate retention tiers, branch-aware restoration, and smarter historical retrieval so dormant knowledge can re-enter the active graph when context changes. The capsule matters because a second brain must not only remember more, but recover the right memory at the right time. Dream keeps Archive as a future retention discipline rather than mere cold storage.",
     "keywords": [
       "archive",
       "retention",
@@ -80,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "dade287c3b0443f2427cec275c6ed4780ffb3af94f44d7a47c63dd633dc2a1fe8aec083aba41e0766d965ec4939247f455d43047ba14679b58eda20546e72732"
+  "integrity_sha3_512": "a67b6fa8bc9efc20f88eb62c58ad28dac1e3b7d23d794bdc4d5ccdcde199e001647beeee07b619addb5a8b913c2748fab253e097f78a1de6cf7c400b10268361"
 }

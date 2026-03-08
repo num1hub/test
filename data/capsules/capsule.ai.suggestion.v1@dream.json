@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-07T10:22:13.801Z",
+    "updated_at": "2026-03-08T21:05:00Z",
     "name": "AI Suggestion",
     "semantic_hash": "capsule-ai-suggestion-v1-recommendation-planner-tracker-feedback",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Suggestion\n\n## 1. Definition and Essence\nAI Suggestion models a generated recommendation with explicit rationale, expected impact, and user feedback outcomes. It provides a structured bridge from model output to accountable decision-making in Planner and Tracker contexts.\n\n## 2. Core Attributes\n- `suggestion_text` actionable recommendation content\n- `rationale_refs` linked evidence and context capsules\n- `impact_estimate` predicted value and risk of adoption\n- `feedback` accepted, modified, rejected user outcome\n- `applied_changes` references to capsules updated if accepted\n\n## 3. Lifecycle\nSuggestions are generated from conversation or agent analysis, presented to the user, optionally accepted, and traced through implementation and retrospective quality scoring.\n\n## 4. Integration\n- **Personal AI Assistant:** presents and explains suggestions.\n- **Planner:** applies accepted plan and task changes.\n- **Tracker:** validates whether accepted suggestions improved outcomes.\n- **N-Infinity Suggestion Agent:** upstream producer of recommendations.\n\n## 5. Philosophical Alignment\nSuggestion capsules embody To Dig Deep by turning AI output into accountable hypotheses that can be tested, learned from, and improved.\n"
+    "content": "# AI Suggestion\n\n## 1. Definition and Essence\nAI Suggestion models a generated recommendation with explicit rationale, expected impact, branch posture, and user feedback outcomes. It provides a structured bridge from model output to accountable decision-making in Planner and Tracker contexts.\n\n## 2. Core Attributes\n- `suggestion_text` actionable recommendation content\n- `rationale_refs` linked evidence and context capsules\n- `impact_estimate` predicted value and risk of adoption\n- `branch_target` whether the suggestion belongs in `Dream`, is ready for `Real`, or requires comparison first\n- `feedback` accepted, modified, rejected user outcome\n- `applied_changes` references to capsules updated if accepted\n\n## 3. Lifecycle\nSuggestions are generated from conversation or agent analysis, presented to the user, optionally accepted, and traced through implementation and retrospective quality scoring. In Dream this object should become a better learning surface for the assistant, the planner, and the swarm, not just a recommendation log.\n\n## 4. Integration\n- **Personal AI Assistant:** presents and explains suggestions.\n- **Planner:** applies accepted plan and task changes.\n- **Tracker:** validates whether accepted suggestions improved outcomes.\n- **Review Agent:** checks whether a suggestion is ready to become a change request.\n- **N-Infinity Suggestion Agent:** upstream producer of recommendations.\n\n## 5. Philosophical Alignment\nSuggestion capsules embody To Dig Deep by turning AI output into accountable hypotheses that can be tested, learned from, and improved.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Suggestion in the Dream branch captures a more disciplined recommendation artifact than the current baseline. It imagines suggestions with clearer rationale, stronger expected-impact framing, better acceptance feedback, and tighter linkage to what actually changed after the advice was given. The capsule matters because recommendation systems improve only when they can learn from outcomes. Dream therefore preserves Suggestion as a future feedback-bearing action proposal rather than a polished but disposable assistant utterance floating outside the graph.",
+    "summary": "AI Suggestion in the Dream branch captures a more disciplined recommendation artifact than the current baseline. It imagines suggestions with clearer rationale, stronger expected-impact framing, branch-aware consequences, better acceptance feedback, and tighter linkage to what actually changed after the advice was given. The capsule matters because recommendation systems improve only when they can learn from outcomes. Dream therefore preserves Suggestion as a future feedback-bearing action proposal rather than a polished but disposable assistant utterance floating outside the graph or detached from later vault changes.",
     "keywords": [
       "ai",
       "suggestion",
@@ -30,7 +30,9 @@
       "planner",
       "tracker",
       "feedback",
-      "operations"
+      "operations",
+      "branch-target",
+      "feedback-loop"
     ],
     "confidence_vector": {
       "extraction": 0.89,
@@ -65,6 +67,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
         "relation_type": "references"
       },
@@ -75,10 +81,14 @@
       {
         "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5a5aba5f9c26721a5c713fe2e943b60ffbaf960d4d074fb6ce287b1cf7b3224cd3c71febc6c379041f255ecfffd1ebb8927d1722010fcae77382ae42eea39b36"
+  "integrity_sha3_512": "5204dd43fa76ec0a917d627c4940556f71cce6d0f72daae416d7220edf3e677d9b93ba9ab94d71937110c4d5d39cf8494f4230b4689d59688de363022a7adcb4"
 }

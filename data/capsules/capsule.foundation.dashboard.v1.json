@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Dashboard\n\n## 1. Definition and Essence\nDashboard defines the workspace projection that composes widgets into a contextual operational cockpit. It provides a unified view of planning, tracking, analytics, and alerts without replacing the underlying capsule graph as source of truth.\n\n## 2. Core Attributes\n- `layout` canonical arrangement definition for widget regions\n- `widget_refs` linked widget capsules included in view\n- `refresh_policy` cadence and event-triggered updates\n- `view_scope` personal, team, project-specific dashboard context\n- `interaction_state` filters and temporary UI preferences\n\n## 3. Lifecycle\nDashboards are configured by users or templates, populated from graph data, refreshed continuously, and archived or forked as priorities evolve.\n\n## 4. Integration\n- **Workspace:** part_of core user habitat.\n- **Widget Capsule:** atomic dashboard building block.\n- **Analytics and Tracker:** supply primary data streams.\n- **Planner:** surfaces schedule and risk summaries.\n\n## 5. Philosophical Alignment\nDashboards reinforce To Dig Deep by exposing meaningful signals at a glance while keeping drill-down paths into underlying capsules.\n"
+    "content": "# Dashboard\n\n## 1. Definition and Essence\nDashboard defines the workspace projection that composes widgets into a contextual operational cockpit. In N1Hub it is the attention surface of the second brain: the place where planning, tracking, capsule health, swarm activity, and alerts are compressed into something a human can act on without losing access to the deeper graph.\n\n## 2. Core Attributes\n- `layout` canonical arrangement definition for widget regions\n- `widget_refs` linked widget capsules included in view\n- `refresh_policy` cadence and event-triggered updates\n- `view_scope` personal, team, project-specific, or branch-specific dashboard context\n- `interaction_state` filters and temporary UI preferences\n- `attention_model` rules for what gets elevated, muted, grouped, or deferred\n\n## 3. Lifecycle\nDashboards are configured by users or templates, populated from graph data, refreshed continuously, and archived or forked as priorities evolve. Good dashboards should change with the work rather than freezing one static viewpoint forever.\n\n## 4. Integration\n- **Workspace:** part_of the core user habitat.\n- **Widget Capsule:** atomic dashboard building block.\n- **Analytics, Tracker, and Planner:** supply primary operational signals.\n- **AI Control Surface / Symphony Observability:** project swarm and orchestration health into the same human cockpit.\n- **Notifications:** route urgent deltas out when the user is away from the cockpit.\n\n## 5. Philosophical Alignment\nDashboards reinforce To Dig Deep by exposing meaningful signals at a glance while keeping drill-down paths into underlying capsules. A good dashboard does not replace depth; it guides attention into the right depth.\n"
   },
   "neuro_concentrate": {
-    "summary": "Dashboard is the operational cockpit of the workspace. It composes widgets, filters, and refresh rules into a single surface where a user can see deadlines, risks, progress, and analytical signals without losing access to the deeper capsule graph underneath. The hub matters because execution quality depends on seeing the right information at the right level of compression. By treating dashboards as explicit graph objects rather than ad hoc UI layouts, the vault can version, personalize, and audit the way attention is directed across projects, plans, and ongoing work.",
+    "summary": "Dashboard is the operational cockpit of the workspace and the attention surface of the second brain. It composes widgets, filters, and refresh rules into a single surface where a user can see deadlines, risks, progress, capsule health, and swarm signals without losing access to the deeper graph underneath. The hub matters because execution quality depends on seeing the right information at the right level of compression. By treating dashboards as explicit graph objects rather than ad hoc UI layouts, the vault can version, personalize, and audit the way attention is directed across projects, plans, and ongoing work.",
     "keywords": [
       "dashboard",
       "workspace",
@@ -30,7 +30,10 @@
       "analytics",
       "tracker",
       "planner",
-      "ui"
+      "ui",
+      "attention",
+      "capsule-health",
+      "swarm-activity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -80,5 +83,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "9ed131bebf1338fb64a57fbfb990c82bc68b6952679e8d7cf169e74ef2b64e67556bd0ef030be5f34fd5246834d6ae2ea271dcb1175051f511c571bce48d50ac"
+  "integrity_sha3_512": "1ab0443787ae4e6c5e4d1a1f89ca9e6eece25ebe923b40b6c0de8aaacf6f4382d84d5f5b6167788c25a79a004695d0eb376aed5bb7bc43ca71a5df19dd32b05f"
 }

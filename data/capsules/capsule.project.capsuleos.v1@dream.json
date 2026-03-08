@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS Project\n\n## 1. Definition and Essence\nCapsuleOS Project is the umbrella execution hub for the operating system of sovereign knowledge. It aligns architecture evolution, validator hardening, graph governance, and module integration efforts under one coordinated project lineage.\n\n## 2. Core Attributes\n- `scope` CapsuleOS architecture and governance implementation boundaries\n- `child_projects` subsystem hubs for A2C, N-Infinity, DeepMine, Workspace\n- `milestone_map` macro delivery checkpoints and release targets\n- `ownership` principal maintainers and governance actors\n- `success_metrics` reliability, integrity, adoption, and performance targets\n\n## 3. Lifecycle\nThe project progresses through planning, implementation, validation, and iterative refinement cycles with clear milestones and cross-subsystem coordination.\n\n## 4. Integration\n- **Foundation CapsuleOS:** implemented by this project hub.\n- **A2C/N-Infinity/DeepMine/Workspace Projects:** child subsystem execution streams.\n- **Planner/Tracker:** schedules and monitors delivery outcomes.\n- **N1Hub Projects Index:** catalog entry for ecosystem navigation.\n\n## 5. Philosophical Alignment\nThis hub applies To Dig Deep by turning foundational doctrine into sustained executable engineering practice.\n"
+    "content": "# CapsuleOS Project\n\n## 1. Dream Direction\nThe Dream branch pushes CapsuleOS toward a deeper control plane for sovereign knowledge: stronger branch intelligence, safer promotion mechanics, richer validator orchestration, cleaner artifact transport, and a calmer substrate for every downstream subsystem.\n\n## 2. Desired Future State\n- platform law that remains legible even as agents, projects, and branches scale.\n- stronger control-plane visibility across runtime, review, promotion, and archive decisions.\n- clearer contracts between quarry, refinery, workspace, swarm, and repository execution.\n- more deliberate governance for override, quarantine, evidence, and promotion.\n- a substrate that makes second-brain behavior calm instead of fragile.\n\n## 3. Why It Matters\nDream preserves CapsuleOS as more than the current implementation program. It is the place where the platform grows into a true operating system for structured memory, governed automation, and sovereign graph truth.\n"
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Project in the Dream branch represents the next platform horizon rather than only the current implementation stream. It concentrates on deeper graph governance, broader branch intelligence, stronger validator orchestration, safer automation, and a cleaner operating substrate for every downstream subsystem. The project remains active because the platform is already alive, but Dream reframes it as the architecture program for what CapsuleOS still needs to become. In this branch, the hub is less about preserving the present and more about shaping the future control plane of sovereign knowledge.",
+    "summary": "CapsuleOS Project in the Dream branch represents the next platform horizon rather than only the current implementation stream. It concentrates on deeper graph governance, broader branch intelligence, stronger validator orchestration, safer automation, and a cleaner operating substrate for every downstream subsystem. Dream reframes the hub as the architecture program for what CapsuleOS still needs to become: a real control plane for sovereign memory, governed agent work, and disciplined promotion across Workspace, DeepMine, A2C, Symphony, and N-Infinity.",
     "keywords": [
       "capsuleos",
       "platform-root",
@@ -36,6 +36,7 @@
       "workspace",
       "a2c",
       "deepmine",
+      "symphony",
       "n-infinity",
       "architecture",
       "release-discipline"
@@ -67,10 +68,30 @@
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "fb00cfb80cb1f9380b4dfe5f3cfe9cfc2d9cb9a9b9aea62a417e08da394507603ae3312a1483820faa7738bdb18cd558d6af1c6986d2c52c21a84fdf48664f8f"
+  "integrity_sha3_512": "dbae98abb2d1c7755ef62e612dca33ec1965d77dadc488c2cba2f09f68efed7701f8c0431ac640aba705c37d513a722fb1c4437ef9aae4803d37fcf70bdd9cc5"
 }

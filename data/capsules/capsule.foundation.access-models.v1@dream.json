@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nThe N1Hub ecosystem is designed to democratize access to sovereign knowledge management while providing industrial-grade power for professionals. Our access models are transparent, flexible, and strictly aligned with the \"To Dig Deep\" ethos. Regardless of the chosen tier, every user benefits from the absolute cryptographic security and data sovereignty guaranteed by the CapsuleOS 5-Element Law.\n\n## 2. The Four Access Tiers\n\n### 2.1 Free (Online)\n- **Overview**: An accessible entry point hosted on N1Hub infrastructure.\n- **Capabilities**: Users can create a limited number of capsules and projects. A2C processing is available using shared, rate-limited, cost-efficient LLM models via DeepMine. Core Workspace features (Planner, Tracker) are active with capacity caps. N-Infinity agents operate at the lowest priority queue.\n\n### 2.2 Free Local (Self-Hosted)\n- **Overview**: The ultimate expression of digital sovereignty. Users deploy the open-source N1Hub core (CapsuleOS, basic A2C, SDKs) on their own hardware.\n- **Capabilities**: Infinite capsule creation and full control over compute. Users inject their own API keys to bypass N1Hub rate limits. The user is entirely responsible for infrastructure maintenance and LLM costs.\n\n### 2.3 N1 Pass (Subscription)\n- **Overview**: A premium monthly or annual subscription designed for power users, creators, and teams.\n- **Capabilities**: Unlocks unlimited capsule creation, expanded A2C throughput, and access to premium, high-reasoning LLMs. It grants priority scheduling for N-Infinity agents and unlocks advanced Workspace features like team collaboration and deep analytics. Subscribers receive a monthly stipend of N1 Coins and processing \"Boosts.\"\n\n### 2.4 Pay-As-You-Go (Boosts)\n- **Overview**: On-demand industrial power. Users can top up their accounts to purchase \"Boosts.\"\n- **Capabilities**: Boosts are consumed for computationally violent tasks—such as initiating highly parallel, multi-threaded A2C extractions across massive datasets, summoning dedicated LLM instances, or accelerating N-Infinity graph synthesis during peak workloads.\n\n## 3. N1 Coin Integration\nThe native **N1 Coin** acts as the decentralized financial lubricant across all tiers. Users can pay for N1 Pass subscriptions or Pay-As-You-Go Boosts using N1 Coins. Furthermore, coins earned through Marketplace royalties or systemic governance can be reinvested directly into compute power.\n\n## 4. Stack Integration\n- **DeepMine**: Routes requests dynamically; Free users hit cost-effective models, while N1 Pass and Boost users access elite reasoning models.\n- **A2C & N-Infinity**: Queuing systems (e.g., BullMQ) allocate threads and prioritize processing based strictly on the user's active tier and available Boost balance.\n- **Workspace**: The UI seamlessly displays current limits, active subscriptions, and allows one-click Boost activation without disrupting the user's cognitive flow."
+    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nAccess Models in Dream describes a more mature contract between intelligence supply, human depth, and economic legibility. It keeps alive the possibility that N1Hub can offer a humane second-brain experience across multiple tiers without pretending all users need the same compute, autonomy, or provider posture.\n\n## 2. Dream Direction\nThe long-term target is not merely more plans. The long-term target is clearer mapping between:\n- interactive assistant quality\n- background autonomy rights\n- hosted versus self-supplied provider lanes\n- vault scale and retention expectations\n- industrial bursts of mining, refinement, and validation work\n\n## 3. Strategic Shape\nDream preserves a four-tier logic but makes the future emphasis clearer:\n- entry tiers should teach the architecture honestly\n- self-hosted paths should maximize sovereignty\n- subscription should maximize symbiotic quality, not just raw quota\n- burst lanes should be explicitly industrial rather than hidden upsells\n\n## 4. Integration\n- **AI Wallet and Hybrid LLM Access:** translate tier policy into real supply posture.\n- **Human-AI Symbiosis:** clarifies why interactive quality deserves special weight.\n- **Background Agent Runtime and Agent Control Plane:** turn tier policy into assignment and autonomy constraints.\n- **Sleep-Time Compute and Night Economics:** make industrial work economically sane.\n\n## 5. Philosophical Alignment\nAccess Models in Dream preserves the idea that economic design should deepen the second brain instead of distorting it.\n"
   },
   "neuro_concentrate": {
-    "summary": "Access Models in the Dream branch describes a more mature capability-and-economics lattice for the platform. It pushes beyond current tiering toward cleaner self-hosted boundaries, sharper premium entitlements, better compute fairness, and a more intelligible path from experimentation to serious production use. The capsule matters because business rules quietly shape product reality. Dream therefore preserves Access Models as the future contract where pricing, sovereignty, and operating power align without leaking confusing incentives into the user experience.",
+    "summary": "Access Models in Dream describes a more mature capability-and-economics lattice for the platform. It pushes beyond current tiering toward clearer mapping between human-assistant quality, provider supply, autonomy rights, vault scale, and industrial compute posture. The capsule matters because business rules quietly shape product reality, runtime behavior, and the practical depth of the second brain. Dream therefore preserves Access Models as the future contract where pricing, sovereignty, access posture, and second-brain depth align without leaking confusing incentives into the user experience.",
     "keywords": [
       "access-models",
       "tiering",
@@ -71,6 +71,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n1-coin-tokenomics.v1",
         "relation_type": "references"
       },
@@ -93,10 +97,18 @@
       {
         "target_id": "capsule.foundation.human-ai-symbiosis.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "cbc44aedd62dd6a3fc095635e4027162cfcbf2e4d2a2f557eada04abfa99cc1aed5669e208c9d78d74786e77292c5e9390daeba3392e5136fc68115811c8e995"
+  "integrity_sha3_512": "1a0c74f6b6a239509713fe20163d31bde49b6edad21f659af27ed694c7455a9f9b996a6ace913f03760edea35ffc3aeecf6219c952d60b3597776e66b608273c"
 }

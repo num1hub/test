@@ -27,7 +27,7 @@
     "content": "# Project: N1Hub v0 Personal Release\n\n## 1. Project Overview\nThis capsule represents the **Genesis Boot** of the N1Hub ecosystem—designated as the `v0` Personal Release. It is a highly specialized, private deployment explicitly tailored for the sole access and operational control of the founder, Egor N1.\n\n## 2. Core Capabilities (v0)\nWhile this release precedes public or beta availability, it contains the fully functional, axiomatic core of the ecosystem:\n- **CapsuleOS Storage Layer**: Complete implementation of the 5-Element Law, cryptographic hashing (SHA3-512), and PostgreSQL/Neo4j database schemas.\n- **Basic Workspace**: A foundational user interface enabling the manual drafting, sealing, and viewing of sovereign capsules.\n- **Graph Navigation**: Preliminary capability to traverse the `recursive_layer` links and view the nascent topology of the Cognitive Plane.\n\n## 3. Strategic Purpose\nThe v0 release is not a commercial product; it is the ultimate sandbox. It allows the Chief Architect to securely instantiate the first set of foundational capsules (like this one), test the integrity of the 16 Validation Gates, and prepare the bedrock architecture before the A2C pipeline and N-Infinity swarm are fully activated."
   },
   "neuro_concentrate": {
-    "summary": "This sovereign hub-capsule formally defines the N1Hub v0 Personal Release—the genesis deployment of the N1Hub ecosystem. Tailored exclusively for the founder, Egor N1, this private alpha release contains the axiomatic core of CapsuleOS, including the strict 5-Element Law storage layer, cryptographic sealing mechanisms, and a foundational Workspace UI for capsule management. Serving as the ultimate architectural sandbox, the v0 release enables the secure minting of the ecosystem's first sovereign artifacts and the rigorous testing of topological linkages prior to the introduction of advanced AI pipelines and agent swarms.",
+    "summary": "This sovereign hub-capsule formally defines the N1Hub v0 Personal Release: the genesis deployment of the N1Hub ecosystem. Tailored exclusively for the founder, Egor N1, this private alpha release contains the axiomatic core of CapsuleOS, including the strict 5-Element Law storage layer, cryptographic sealing mechanisms, and a foundational Workspace UI for capsule management. Serving as the original architectural sandbox, the v0 release enabled the secure minting of the ecosystem's first sovereign artifacts and the rigorous testing of topological linkages before advanced AI pipelines and agent swarms were activated. It now also matters as a preserved reference substrate against which later platform layers can be understood and compared.",
     "keywords": [
       "n1hub-v0",
       "personal-release",
@@ -36,6 +36,7 @@
       "capsuleos-core",
       "workspace-ui",
       "architectural-sandbox",
+      "reference-substrate",
       "egor-n1"
     ],
     "confidence_vector": {
@@ -67,6 +68,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.project.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.workspace.v1",
         "relation_type": "part_of"
       }
@@ -74,5 +79,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "7bdd9fcc5887e700ef5f504ed1f54ad3cadc0ceae861ab026780841ab0ea32332844fb0b3cc3100e64057c257f749f19463886e4a21d25b1dc5cbee72beceed0"
+  "integrity_sha3_512": "e85b8d3666d05ed1d36c964006805a800db6f915b1c5371499f9ca4e7dcb44afb1c425d90e8e0ecdcd4dda2b5335b0e0a2e92ce086d665206c85f60b02b75b16"
 }

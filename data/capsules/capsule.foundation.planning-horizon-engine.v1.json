@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.planning-horizon-engine.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T11:05:00Z",
-    "updated_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-08T23:18:00Z",
     "name": "Planning Horizon Engine",
     "semantic_hash": "planning-horizon-engine-dream-real-compression-today-roadmap",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planning Horizon Engine\n\n## 1. Definition and Essence\nPlanning Horizon Engine is the coordinating intelligence layer that turns the full Dream branch and the current Real branch into one usable ladder of planning horizons. It does not replace Daily Planner Agent or Roadmap Planner Agent. It gives them a shared compression model so N1Hub can hold `1000-day` ambition and still emit one grounded plan for `today`.\n\n## 2. Core Responsibilities\n- `dream_ingestion` reads long-horizon desire, speculative structures, goals, and future intent from Dream.\n- `real_grounding` applies current facts, progress, blockers, resources, commitments, and branch discipline from Real.\n- `horizon_ladder_construction` builds aligned views for `today`, `tomorrow`, `7_days`, `30_60_90`, `365_days`, and `1000_days`.\n- `compression_to_day` distills the whole planning field into the most important actions for now.\n- `feedback_recirculation` sends execution reality back upward so every horizon learns from actual movement rather than drifting apart.\n- `explanation_surface` gives Personal AI Assistant a legible reason for why one item belongs in the day while another remains future structure.\n\n## 3. N1Hub Role\nIn N1Hub, Planning Horizon Engine is the missing bridge between strategy and the lived day. It lets the planning swarm see the full Dream, respect Real, and continuously transform both into concrete near-horizon action without losing the larger shape.\n\n## 4. Integration\n- **Planner:** owns the overall planning domain and uses this engine as its compression core.\n- **Daily Planner Agent:** consumes the compressed short horizon.\n- **Roadmap Planner Agent:** shapes medium- and long-range structure.\n- **Branch Steward Agent:** protects Real/Dream meaning during compression.\n- **N-Infinity Suggestion Agent, Reminder Agent, and Risk Detector:** add option pressure, nudges, and correction signals.\n- **Personal AI Assistant:** explains the resulting horizon ladder conversationally.\n\n## 5. Philosophical Alignment\nPlanning Horizon Engine serves To Dig Deep by refusing to treat planning as either pure fantasy or pure task churn. It keeps the whole future field visible while still forcing the system to answer the hardest question: what, exactly, should happen now?"
+    "content": "# Planning Horizon Engine\n\n## 1. Definition and Essence\nPlanning Horizon Engine is the coordinating intelligence layer that turns the full Dream branch and the current Real branch into one usable ladder of planning horizons. It does not replace Daily Planner Agent or Roadmap Planner Agent. It gives them a shared compression model so N1Hub can hold `1000-day` ambition and still emit one grounded plan for `today`.\n\n## 2. Core Responsibilities\n- `dream_ingestion` reads long-horizon desire, speculative structures, goals, and future intent from Dream.\n- `real_grounding` applies current facts, progress, blockers, resources, commitments, and branch discipline from Real.\n- `horizon_ladder_construction` builds aligned views for `today`, `tomorrow`, `7_days`, `30_60_90`, `365_days`, and `1000_days`.\n- `compression_to_day` distills the whole planning field into the most important actions for now.\n- `feedback_recirculation` sends execution reality back upward so every horizon learns from actual movement rather than drifting apart.\n- `explanation_surface` gives Personal AI Assistant a legible reason for why one item belongs in the day while another remains future structure.\n- `evidence_and_capacity_filtering` prevents aspirational Dream pressure from flooding the day when resources, focus, or proof are insufficient.\n- `plan_artifact_projection` emits explainable planning outputs that a human, assistant, and downstream agents can all inspect.\n\n## 3. N1Hub Role\nIn N1Hub, Planning Horizon Engine is the missing bridge between strategy and the lived day. It lets the planning swarm see the full Dream, respect Real, and continuously transform both into concrete near-horizon action without losing the larger shape. It should also make it explicit why something stayed in a farther horizon instead of leaking into today.\n\n## 4. Integration\n- **Planner:** owns the overall planning domain and uses this engine as its compression core.\n- **Daily Planner Agent:** consumes the compressed short horizon.\n- **Roadmap Planner Agent:** shapes medium- and long-range structure.\n- **Branch Steward Agent:** protects Real/Dream meaning during compression.\n- **N-Infinity Suggestion Agent, Reminder Agent, and Risk Detector:** add option pressure, nudges, and correction signals.\n- **Personal AI Assistant:** explains the resulting horizon ladder conversationally.\n- **AI Control Surface:** can later project the resulting plan artifacts, next-review points, and horizon explanations into operator-facing surfaces.\n\n## 5. Philosophical Alignment\nPlanning Horizon Engine serves To Dig Deep by refusing to treat planning as either pure fantasy or pure task churn. It keeps the whole future field visible while still forcing the system to answer the hardest question: what, exactly, should happen now?"
   },
   "neuro_concentrate": {
-    "summary": "Planning Horizon Engine is the coordinating planning atom that compresses the full Dream branch through the current Real branch into a coherent ladder of horizons from `today` to `1000 days`. It matters because roadmap structure and daily action are not enough on their own; N1Hub needs an explicit mechanism that translates speculative future shape into grounded near-term movement. By giving that compression logic its own identity, the vault gains a cleaner explanation of how long-range intent becomes one practical day plan without losing branch discipline.",
+    "summary": "Planning Horizon Engine is the coordinating planning atom that compresses the full Dream branch through the current Real branch into a coherent ladder of horizons from `today` to `1000 days`. It matters because roadmap structure and daily action are not enough on their own; N1Hub needs an explicit mechanism that translates speculative future shape into grounded near-term movement, filtered by evidence and capacity. By giving that compression logic its own identity, the vault gains a cleaner explanation of how long-range intent becomes one practical day plan without losing branch discipline.",
     "keywords": [
       "planning-horizon-engine",
       "dream-branch",
@@ -32,6 +32,8 @@
       "30-60-90",
       "365-days",
       "1000-days",
+      "capacity-filter",
+      "plan-artifacts",
       "planner",
       "personal-ai-assistant"
     ],
@@ -107,5 +109,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c988d8c938ddd3ae7694a9953258830243f9bc0bd5655f936cf9a4a7070bee3b0920c1ec1e303a2e85b1680be6b008d21fb6a9f12a56884c2524d893355ab6ef"
+  "integrity_sha3_512": "cd378d2d319faa6dc5a606803211cd78a35d0993c8710f30f325035a9ad537f2223dfb37995664f89c0fb681b15cb215fe0f3ba70656e6c2eb8fb5ff554e2c2a"
 }

@@ -1,10 +1,12 @@
-const AUTH_TOKEN = process.env.N1HUB_AUTH_TOKEN ?? 'n1-authorized-architect-token-777';
-
 const rateLimitBuckets = new Map<string, { count: number; windowStart: number }>();
 
 export function isAuthorized(request: Request): boolean {
   const authHeader = request.headers.get('authorization');
-  return authHeader === `Bearer ${AUTH_TOKEN}`;
+  return authHeader === `Bearer ${getAuthToken()}`;
+}
+
+export function getAuthToken(): string {
+  return process.env.N1HUB_AUTH_TOKEN ?? 'n1-authorized-architect-token-777';
 }
 
 export function resolveRole(request: Request): 'owner' | 'editor' | 'viewer' {

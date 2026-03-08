@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T23:35:00Z",
     "name": "A2C Pipeline",
     "priority": "high",
     "progress": 63,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Essence\nA2C is the industrial-grade pipeline of the N1Hub ecosystem, acting as the \"Demon of Structure.\" It transforms chaotic, entropic raw data—files, texts, LiDAR scans, voice notes, and LLM outputs—into pure, cryptographically sealed, and semantically linked capsules governed by the CapsuleOS 5-Element Law.\n\n## 2. The 9-Step Pipeline\nA2C operates through a deterministic, high-rigor factory floor:\n1. **Ingest**: Receives raw material from users or DeepMine.\n2. **Normalize**: Cleanses noise, formatting artifacts, and irrelevant boilerplate.\n3. **Segment**: Fractures the payload into atomic, digestible chunks.\n4. **Extract (Paranoid Mode)**: Employs targeted AI to ruthlessly isolate factual kernels and core logic, discarding unverified claims.\n5. **Synthesize (Shadow Integration)**: Resolves contradictions and fuses complementary insights into a cohesive whole.\n6. **Link**: Automatically generates typed topological edges (e.g., `supports`, `extends`) to existing capsules in the graph.\n7. **Hash**: Applies RFC 8785 JSON Canonicalization and computes the provisional SHA3-512 seal.\n8. **Validate**: Forces the candidate through the 16 Quality Gates.\n9. **Emit & Seal**: Commits the finalized, sovereign capsule into the CapsuleOS Cognitive Plane or diverts it to the Quarantine Buffer if validation fails.\n\n## 3. Synergy\nA2C relies on **DeepMine** to supply high-grade raw ore from top LLMs. Once A2C mints a capsule, it is deposited into **CapsuleOS**, where **N-Infinity** background agents continuously weave, garden, and evolve the newly structured knowledge. The refinery is now complemented by explicit quality and integration roles: Validation Gatekeeper interprets acceptance risk, while Vault Update Agent helps route refined changes into Dream, Real, or quarantine with branch discipline. A2C is the definitive bridge \"Between Zero and One\"—the mechanism that materializes the \"To Dig Deep\" philosophy."
+    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Essence\nA2C is the industrial-grade pipeline of the N1Hub ecosystem, acting as the \"Demon of Structure.\" It transforms chaotic, entropic raw data—files, texts, LiDAR scans, voice notes, and LLM outputs—into pure, cryptographically sealed, and semantically linked capsules governed by the CapsuleOS 5-Element Law.\n\n## 2. The 9-Step Pipeline\nA2C operates through a deterministic, high-rigor factory floor:\n1. **Ingest**: Receives raw material from users or DeepMine.\n2. **Normalize**: Cleanses noise, formatting artifacts, and irrelevant boilerplate.\n3. **Segment**: Fractures the payload into atomic, digestible chunks.\n4. **Extract (Paranoid Mode)**: Employs targeted AI to ruthlessly isolate factual kernels and core logic, discarding unverified claims.\n5. **Synthesize (Shadow Integration)**: Resolves contradictions and fuses complementary insights into a cohesive whole.\n6. **Link**: Automatically generates typed topological edges (e.g., `supports`, `extends`) to existing capsules in the graph.\n7. **Hash**: Applies RFC 8785 JSON Canonicalization and computes the provisional SHA3-512 seal.\n8. **Validate**: Forces the candidate through the 16 Quality Gates.\n9. **Emit & Seal**: Commits the finalized, sovereign capsule into the CapsuleOS Cognitive Plane or diverts it to the Quarantine Buffer if validation fails.\n\n## 3. Refinery Discipline\nA2C is where raw ore becomes structured candidate knowledge. It therefore carries stricter branch discipline than the mine itself. Refinery output should produce reviewable candidate capsules, typed graph changes, and evidence-aware emission bundles so Vault Update, Branch Steward, and Validation Gatekeeper can decide whether the result belongs in Dream, Real, or quarantine.\n\n## 4. Synergy\nA2C relies on **DeepMine** to supply high-grade raw ore from top LLMs. Once A2C mints a capsule, it is deposited into **CapsuleOS**, where **N-Infinity** background agents continuously weave, garden, and evolve the newly structured knowledge. The refinery is now complemented by explicit quality and integration roles: Validation Gatekeeper interprets acceptance risk, while Vault Update Agent helps route refined changes into Dream, Real, or quarantine with branch discipline. A2C is the definitive bridge \"Between Zero and One\"—the mechanism that materializes the \"To Dig Deep\" philosophy.\n\n## 5. Institutional Meaning\nWithin the broader Mining Company frame, A2C is the refinery floor. DeepMine may discover and haul ore, but A2C decides whether that material can survive normalization, extraction, linking, hashing, and gate validation strongly enough to become part of the sovereign graph.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C (Anything-to-Capsules) is the core refinement engine of the N1Hub ecosystem, colloquially known as the Demon of Structure. It is an industrial-grade, 9-step processing pipeline designed to ingest chaotic raw data—such as documents, LLM outputs from DeepMine, and physical scans—and transmute it into pristine, cryptographically sealed capsules. By executing a rigorous sequence of normalization, paranoid-mode extraction, synthesis, and strict validation against the 16 Quality Gates, A2C ensures that only coherent, verified intellectual capital enters the CapsuleOS graph. It embodies the 'To Dig Deep' philosophy by rejecting surface-level noise and extracting fundamental truths, serving as the critical bridge that converts entropic information into sovereign knowledge assets ready for N-Infinity's evolutionary agents.",
+    "summary": "A2C is the refinement engine of the N1Hub ecosystem and the refinery floor of the capsule factory. It receives raw ore from DeepMine, converts it into structured capsule candidates, and prepares branch-aware emission bundles that can survive validation and routing into Dream, Real, or quarantine. The capsule matters because trustworthy graph growth depends less on raw extraction volume than on disciplined refinement. It is the quality barrier that prevents raw signal from becoming polished confusion inside the vault.",
     "keywords": [
       "a2c",
       "anything-to-capsules",
@@ -32,7 +32,10 @@
       "ai-extraction",
       "capsuleos",
       "deepmine",
-      "demon-of-structure"
+      "demon-of-structure",
+      "branch-discipline",
+      "refinery-floor",
+      "candidate-emission"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -111,6 +114,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.project.a2c.v1",
         "relation_type": "references"
       },
@@ -122,5 +133,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "a7881a798ce69888caaecd313d177bde78d4837e12518a13bbe411bf37a75240244370ac9cba434bd14e74871f54de4ec8d45b3b272de72d244e3f503d3bcfc1"
+  "integrity_sha3_512": "9b4eb32d80dd5d6f20b914def7c9f68f304f01aad4a82872fca0fba5e6869890080b4129773bce199b9db45583de80ac531da215088012faa83c1d2395ea8115"
 }

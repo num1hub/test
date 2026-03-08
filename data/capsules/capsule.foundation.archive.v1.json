@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed or inactive capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal or governance retention constraints\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores immutable historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context.\n\n## 4. Integration\n- **Workspace:** keeps active view clean while retaining memory.\n- **Tracker:** triggers archival transitions on completion windows.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves governance trace across lifecycle changes.\n\n## 5. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time.\n"
+    "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed, cooled-down, or historically important capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project and branch lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal, governance, or provenance retention constraints\n- `branch_memory_role` whether archived material remains part of Real heritage, Dream history, or both\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context. Archive should reduce clutter without severing lineage.\n\n## 4. Integration\n- **Workspace:** keeps the active view clean while retaining deep memory.\n- **Tracker / Branch Steward:** trigger archival transitions and restoration decisions.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves the forensic trace across lifecycle changes.\n- **Capsule Librarian:** helps humans and agents recover dormant knowledge when it becomes relevant again.\n\n## 5. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time. It is disciplined long memory, not forgotten storage.\n"
   },
   "neuro_concentrate": {
-    "summary": "Archive is the long-memory subsystem of the workspace. It decides how completed or inactive capsules move out of active attention without disappearing from institutional history. The capsule matters because deep systems need both focus and recall: active views should stay clean, but finished work must remain searchable, restorable, and auditable. By modeling archival rules explicitly, the vault preserves continuity across project lifecycles and lets Tracker, Analytics, and Audit Log reason over older material without cluttering live execution surfaces. Archive is therefore retention discipline, not mere cold storage.",
+    "summary": "Archive is the long-memory subsystem of the workspace. It decides how completed or inactive capsules move out of active attention without disappearing from institutional history. The capsule matters because deep systems need both focus and recall: active views should stay clean, but finished work must remain searchable, restorable, and auditable across Real and Dream history. By modeling archival rules explicitly, the vault preserves continuity across project lifecycles and lets Tracker, Analytics, and Audit Log reason over older material without cluttering live execution surfaces. Archive is therefore retention discipline, not mere cold storage.",
     "keywords": [
       "archive",
       "retention",
@@ -30,7 +30,10 @@
       "history",
       "tracker",
       "analytics",
-      "workspace"
+      "workspace",
+      "long-memory",
+      "branch-history",
+      "lineage"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -80,5 +83,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1353290179f08ced1cfe80e39aff082653fc00c926a48e3e8e4aa825e9af01f119ffc9032f40f94f4b9049ce83ada90ef0ae580339028f09485a202e569aa407"
+  "integrity_sha3_512": "6a68177616459085afa1ffee1833330b6cdecf64c3e52cf032e982da94f8a35264933a2806e58c0c674cceeb38bb1e02edd3b29c8d5227c61acbefc96b916ac7"
 }

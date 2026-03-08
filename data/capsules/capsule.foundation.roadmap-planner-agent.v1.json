@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:40:00Z",
-    "updated_at": "2026-03-07T11:05:00Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Roadmap Planner Agent",
     "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Roadmap Planner Agent\n\n## 1. Definition and Essence\nRoadmap Planner Agent is the long-horizon planning specialist of N1Hub. It converts vision, project intent, milestones, risks, and branch-aware uncertainty into phased medium- and long-term roadmaps that remain useful under changing execution pressure.\n\n## 2. Core Responsibilities\n- `long_horizon_planning` shapes `30/60/90`, `365`, and `1000-day` strategy into readable structures.\n- `phase_design` breaks large ambition into milestones, initiatives, and sequencing windows.\n- `dream_structuring` preserves exploratory Dream architecture without confusing it with delivered commitment.\n- `branch_awareness` keeps exploratory Dream structures distinct from Real commitments and delivered reality.\n- `replanning_logic` reacts to risk, drift, and new evidence without destroying strategic coherence.\n- `compression_handoff` passes a coherent strategic field into Planning Horizon Engine so Daily Planner Agent can later compress it into immediate action.\n- `assistant_handoff` gives Personal AI Assistant a clear strategic layer to explain and refine with the user.\n\n## 3. N1Hub Role\nIn N1Hub, Roadmap Planner Agent is the strategic planner that keeps the graph from collapsing into only short-term task lists. It maintains the medium- and long-range shape that Daily Planner Agent can later compress into immediate action.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent serves To Dig Deep by forcing strategy to descend into explicit phases, dependencies, and branch-aware commitment rather than remaining a vague vision statement.\n"
+    "content": "# Roadmap Planner Agent\n\n## 1. Definition and Essence\nRoadmap Planner Agent is the long-horizon planning specialist of N1Hub. It converts vision, project intent, milestones, risks, and branch-aware uncertainty into phased medium- and long-term roadmaps that remain useful under changing execution pressure.\n\n## 2. Core Responsibilities\n- `long_horizon_planning` shapes `30/60/90`, `365`, and `1000-day` strategy into readable structures.\n- `phase_design` breaks large ambition into milestones, initiatives, dependencies, and sequencing windows.\n- `dream_structuring` preserves exploratory Dream architecture without confusing it with delivered commitment.\n- `branch_awareness` keeps exploratory Dream structures distinct from Real commitments and delivered reality.\n- `replanning_logic` reacts to risk, drift, and new evidence without destroying strategic coherence.\n- `review_ready_strategy` marks where a roadmap deserves scrutiny, evidence refresh, or deliberate pruning.\n- `compression_handoff` passes a coherent strategic field into Planning Horizon Engine so Daily Planner Agent can later compress it into immediate action.\n- `assistant_handoff` gives Personal AI Assistant a clear strategic layer to explain and refine with the user.\n\n## 3. N1Hub Role\nIn N1Hub, Roadmap Planner Agent is the strategic planner that keeps the graph from collapsing into only short-term task lists. It maintains the medium- and long-range shape that Daily Planner Agent can later compress into immediate action while keeping strategic options reviewable and branch-literate.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent serves To Dig Deep by forcing strategy to descend into explicit phases, dependencies, and branch-aware commitment rather than remaining a vague vision statement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Roadmap Planner Agent is the strategic planning worker that turns vision into phases, milestones, and adaptive long-horizon structure across N1Hub. It now carries a clearer horizon model as well: `30/60/90`, `365`, and `1000-day` planning should remain explicit instead of dissolving into vague ambition. This matters because a serious graph needs more than tasks for today; it needs a planning role that can hold medium- and long-term intent, distinguish Dream exploration from Real commitment, and hand a coherent strategic field down toward daily execution.",
+    "summary": "Roadmap Planner Agent is the strategic planning worker that turns vision into phases, milestones, roadmap structure, and adaptive long-horizon sequencing across N1Hub. The role matters because a serious graph needs more than tasks for today; it needs a planning lane that can hold medium- and long-term intent, distinguish Dream exploration from Real commitment, and keep strategy reviewable under pressure. It now more clearly owns review-ready strategy, branch-aware sequencing, and the handoff from long-horizon structure into daily execution compression.",
     "keywords": [
       "roadmap-planner-agent",
       "strategy",
@@ -80,12 +80,20 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.daily-planner-agent.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.planning-horizon-engine.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.branch-steward-agent.v1",
@@ -111,5 +119,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "493d4bf32c4b8d413fe40dbe5c7453f5cc0aa910f31f3cb0be0cbbe0aab3b8d07654479b8780f2d0fe9495326835641666431b7d6ede22201df754a8ba4428af"
+  "integrity_sha3_512": "7881db322626de3cfd3a2887c41045e2d381968691ce5b24015bf84db6402c1b800de1f5fb299f1fe5dc04a912e063a8e224a7bf5de75af3adcbfeea45a0b64c"
 }

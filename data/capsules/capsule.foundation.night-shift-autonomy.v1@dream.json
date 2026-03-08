@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It captures when heavy graph work should run, which timezone governs activation, how cooldowns and budgets are enforced, and how unfinished work is handed back to the next shift or to humans.\n\n## 2. Core Responsibilities\n- `execution_window` defines the scheduled hours when autonomous work is allowed to dispatch.\n- `budget_and_rate_discipline` keeps token spend and provider pressure bounded during unattended operation.\n- `cooldown_policy` prevents the same graph area from being hammered every poll.\n- `handoff_rules` determine what remains queued, summarized, or escalated at shift end.\n- `operator_expectation` makes it clear that always-on services and always-dispatching autonomy are not the same thing.\n\n## 3. N1Hub Integration\nIn N1Hub this capsule formalizes the current operational compromise: Symphony and N-Infinity can stay alive continuously, but capsule-graph jobs are allowed to dispatch primarily inside explicit night windows. This gives the platform a real autonomy lane without pretending that unrestricted 24-hour mutation is already mature enough.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by reserving deep, high-latency work for disciplined windows where the system can think hard without disrupting active daytime use.\n"
+    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy in Dream describes a more mature unattended operating mode for N1Hub. It imagines stronger shift shaping, richer morning handoffs, better mutation boundaries, and tighter integration with wallet lanes, user consent, and control-plane oversight.\n\n## 2. Core Responsibilities\n- `execution_window` keeps autonomy explicit and reviewable\n- `day_vs_night_mode_shape` cleanly separates co-pilot behavior from deep unattended work\n- `budget_and_rate_discipline` bounds industrial work when humans are offline\n- `cooldown_policy` prevents obsessive graph hammering\n- `handoff_rules` create a clear morning return path for review, promotion, or pause\n- `mutation_boundary` keeps unattended work Dream-first until evidence becomes stronger\n\n## 3. Dream Direction\nDream preserves this capsule as the route from today's bounded night runs toward a future where the system can sustain trustworthy 24/7 operations without losing human sovereignty or clarity.\n\n## 4. Integration\n- **Sleep-Time Compute:** provides the economic and scheduler substrate.\n- **User Preferences and Profile:** encode human rhythm and autonomy tolerance.\n- **AI Wallet and Hybrid LLM Access:** determine which night lanes are real.\n- **Agent Daemon and Agent Control Plane:** govern live shift behavior.\n\n## 5. Philosophical Alignment\nNight Shift Autonomy in Dream protects the idea that deeper autonomy should arrive through better discipline, not through careless removal of boundaries.\n"
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy defines the bounded scheduling policy for unattended background work in N1Hub. It matters because a service that runs continuously is not the same as one that should mutate the graph continuously. This capsule names the explicit night window, timezone, cooldown, budget, and handoff expectations that let Symphony and N-Infinity perform deep capsule work while reducing daytime risk. It is the architectural expression of the current N1Hub path from supervised nightly autonomy toward fuller 24/7 systems.",
+    "summary": "Night Shift Autonomy in Dream describes the path from supervised nightly runs toward more mature unattended operation. It matters because a system that works while the human sleeps needs stronger boundaries, clearer morning handoffs, better wallet- and preference-aware governance, and more explicit mutation discipline than today's baseline. Dream preserves this capsule as the design space where deeper autonomy becomes more trustworthy, more legible to the returning human, and more economically sane rather than merely more aggressive.",
     "keywords": [
       "night-shift-autonomy",
       "night-window",
@@ -68,6 +68,30 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "references"
       },
@@ -87,5 +111,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d7b8ef4a1dd36b3f831a043de5b6cb13fc5123a659182c119bab71f9818e5ffa00104ce5c04de2a1ed55fbe2d40c2c7049ab354d439768cf4b9e98e42d9448c2"
+  "integrity_sha3_512": "a9ac6651018d306bac28f134c4f537abef6440b958782e9e99e7a4a4f6975b734a9c69cbff0462fbb476d703b1a4c8c8a3528b04bb198c08bcd2248e1bf55fc0"
 }

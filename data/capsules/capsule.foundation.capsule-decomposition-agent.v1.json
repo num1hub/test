@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsule-decomposition-agent.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-07T12:42:00Z",
+    "updated_at": "2026-03-07T12:42:00Z",
+    "name": "Capsule Decomposition Agent",
+    "semantic_hash": "capsule-decomposition-agent-atomization-split-hub-boundaries-discipline",
+    "source": {
+      "uri": "n1hub://specs/vault-stewardship-cluster-2026-03-07",
+      "type": "architect_prompt"
+    },
+    "priority": "high",
+    "progress": 19,
+    "estimatedHours": 170,
+    "actualHours": 26,
+    "dueDate": "2026-09-14",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Capsule Decomposition Agent\n\n## 1. Definition and Essence\nCapsule Decomposition Agent is the atomization worker of the N1Hub vault. It identifies when one capsule is trying to carry too many meanings, lifecycles, or structural roles at once, then prepares disciplined split proposals so the vault stays readable and capsules remain properly atomic or properly hub-like.\n\n## 2. Core Responsibilities\n- `atom_boundary_detection` finds places where one capsule hides several distinct units of meaning.\n- `split_proposal_generation` prepares safer atom and hub decompositions before the vault hardens around ambiguity.\n- `hub_atomic_discipline` protects the subtype boundary so atoms do not silently become pseudo-hubs.\n- `lineage_preservation` keeps provenance, links, and branch meaning coherent after structural splits.\n- `operator_explanation` explains why decomposition improves the vault rather than just increasing capsule count.\n\n## 3. N1Hub Role\nIn N1Hub this agent is one of the core workers for improving the vault itself. It should operate both on newly proposed capsule changes and on old capsules that have grown bloated over time. Its output should move into review, validation, and safe update paths rather than forcing direct mutation.\n\n## 4. Philosophical Alignment\nCapsule Decomposition Agent serves To Dig Deep by insisting that deep structure requires clear atoms and bounded hubs instead of oversized note-blobs disguised as capsules."
+  },
+  "neuro_concentrate": {
+    "summary": "Capsule Decomposition Agent is the atomization worker of the N1Hub vault. It detects when a capsule contains too many distinct meanings or structural roles, proposes disciplined splits, and protects the boundary between atomic and hub forms. The role matters because a capsule system degrades when one object quietly accumulates several lifecycles and becomes impossible to reason about cleanly. By naming decomposition as its own agent function, N1Hub makes structural clarity a continuous maintenance practice instead of a one-time authoring preference.",
+    "keywords": [
+      "capsule-decomposition-agent",
+      "atomization",
+      "hub-atomic",
+      "capsule-splitting",
+      "vault-stewardship",
+      "review",
+      "branch-discipline",
+      "capsuleos",
+      "background-agents",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsule-decomposition-agent-atomization-split-hub-boundaries-discipline"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "acd1106740714a54b1e6af7f7e38f2568b2c9de9fcbea09e86651e6c77a5c4baee9c3fab9f6b10f0830e14fdbd80c910a053269cf0f9a58061461c187cf5cf58"
+}

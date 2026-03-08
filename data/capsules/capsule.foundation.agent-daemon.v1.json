@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-daemon.v1",
-    "version": "1.0.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T21:10:00Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Agent Daemon",
     "semantic_hash": "agent-daemon-supervisor-health-restart-reload-shutdown-lifecycle",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Daemon\n\n## 1. Definition and Essence\nAgent Daemon defines the always-on service envelope for long-lived AI work inside N1Hub. It covers supervised process lifetime, startup and shutdown behavior, workflow reload, health checks, crash recovery, and host-level restart policy.\n\n## 2. Core Responsibilities\n- `supervised_process` keeps background services under `systemd`, PM2, or equivalent host control.\n- `health_and_restart` detects failure and re-establishes service without manual babysitting.\n- `config_reload` keeps workflow and provider changes from requiring ad hoc restarts when avoidable.\n- `bounded_shutdown` stops safely without corrupting workspaces, checkpoints, or job state.\n- `operator_visibility` makes daemon health legible through logs and status surfaces.\n\n## 3. N1Hub Integration\nIn N1Hub the daemon envelope is the host-facing shell around Symphony and N-Infinity. It is what allows `24/7/365` or nightly autonomy claims to mean a real supervised process instead of a shell left open in a terminal.\n\n## 4. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a disciplined runtime posture that can be inspected, restarted, and trusted.\n"
+    "content": "# Agent Daemon\n\n## 1. Definition and Essence\nAgent Daemon defines the always-on service envelope for long-lived AI work inside N1Hub. It covers supervised process lifetime, startup and shutdown behavior, workflow reload, health checks, crash recovery, host-level restart policy, and the registration hooks that let a deeper control plane see what the daemon is doing. It is the host-side shell that turns assignment objects, wallet-governed provider lanes, and swarm policies into durable runtime behavior.\n\n## 2. Core Responsibilities\n- `supervised_process` keeps background services under `systemd`, PM2, or equivalent host control.\n- `health_and_restart` detects failure and re-establishes service without manual babysitting.\n- `config_reload` keeps workflow, wallet, and provider changes from requiring ad hoc restarts when avoidable.\n- `fleet_registration` exposes daemon identity, lane role, heartbeat, and health to control surfaces instead of leaving each process opaque.\n- `single_family_discipline` prevents duplicate daemon families from silently overlapping, racing, or burning duplicate budget.\n- `assignment_receivers` lets daemons wake for asynchronous work discovered through issues, tasks, notifications, chat surfaces, or control-plane actions.\n- `lane_binding` keeps each daemon explicitly attached to a budget posture, provider lane, and autonomy window instead of drifting across supply modes.\n- `notification_projection` surfaces failures, pauses, resumes, wakeups, and degraded mode into operator-visible channels.\n- `bounded_shutdown` stops safely without corrupting workspaces, checkpoints, or job state.\n- `operator_visibility` makes daemon health legible through logs, status surfaces, and control-plane views.\n\n## 3. N1Hub Integration\nIn N1Hub the daemon envelope is the host-facing shell around Symphony, N-Infinity, and Vault Stewardship Swarm. It is what allows `24/7/365` or nightly autonomy claims to mean a real supervised process instead of a shell left open in a terminal. As the swarm grows, the daemon should not only stay alive; it should also present itself as a manageable fleet member that can be paused, resumed, awakened, drained, or rerouted according to wallet state, assignment load, and economic policy.\n\n## 4. Operational Rule\nA daemon is healthy only when it is supervised, uniquely identifiable, visible to the control plane, assignment-aware, and capable of stopping without leaving ghost work behind. Staying alive is necessary, but it is not enough.\n\n## 5. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a disciplined runtime posture that can be inspected, restarted, trusted, and economically governed.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Daemon defines the host-supervised process layer for long-lived AI services in N1Hub. It matters because background agents do not become durable merely by running a loop; they need explicit lifecycle rules for startup, restart, config reload, crash recovery, and safe shutdown. This capsule gives the graph a place to describe the systemd or equivalent supervision model that keeps Symphony and N-Infinity alive, debuggable, and restartable without corrupting workspaces or silent-failing in the background.",
+    "summary": "Agent Daemon defines the host-supervised process layer for long-lived AI services in N1Hub. It matters because background agents do not become durable merely by running a loop; they need explicit lifecycle rules for startup, restart, config reload, crash recovery, safe shutdown, heartbeat visibility, duplicate-process control, family cleanup, and lane binding to assignment and wallet policy. This capsule describes the supervised runtime model that keeps Symphony, N-Infinity, Vault Stewardship Swarm, and future daemon lanes alive, debuggable, restartable, uniquely identifiable, assignment-aware, and visible to a wider control plane instead of silent-failing in the background.",
     "keywords": [
       "agent-daemon",
       "systemd",
@@ -34,10 +34,15 @@
       "background-service",
       "restart-policy",
       "health-checks",
+      "heartbeat",
+      "single-family",
+      "family-cleanup",
       "symphony",
       "n-infinity",
-      "operations",
-      "n1hub"
+      "n1hub",
+      "fleet-registration",
+      "async-assignment",
+      "wallet-governed-runtime"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -68,6 +73,30 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.symphony-observability.v1",
         "relation_type": "depends_on"
       },
@@ -87,5 +116,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0b418c59f3ee4dc964ee0be4be89362eee35a32ae19a3206cae00b501000e6ca12ac07c17227be32c746426242747c0ec32e2346ec44f116d5a5436efd18f699"
+  "integrity_sha3_512": "670b62e9cd34d2ba32e76dc326b45619e556bac1272b974005ebfbc7e71108b007206c0570cd8e8e2d16e9b2e8e906e5134ee76b6447ab9b30bbbc2dfc549844"
 }

@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-instruction-surfaces.v1",
+    "version": "1.1.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T20:05:00Z",
+    "updated_at": "2026-03-08T23:58:00Z",
+    "name": "Agent Instruction Surfaces",
+    "semantic_hash": "agent-instruction-surfaces-agents-claude-llms-repodocs-n1hub",
+    "source": {
+      "uri": "https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals",
+      "type": "web_article"
+    },
+    "priority": "high",
+    "progress": 24,
+    "estimatedHours": 140,
+    "actualHours": 18,
+    "dueDate": "2026-08-28",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Instruction Surfaces\n\n## 1. Definition and Essence\nAgent Instruction Surfaces defines the repo-owned, passive knowledge surfaces that agents can reliably consume before or alongside active tool use. In 2026 this pattern became clearer: broad project knowledge often lands better through stable instruction files, compressed documentation indexes, and machine-readable markdown resources than through late skill retrieval alone.\n\n## 2. Core Responsibilities\n- `repo_rules_surface` exposes stable project instructions through files such as `AGENTS.md`, `CLAUDE.md`, `SOUL.md`, `TOOLS.md`, and `WORKFLOW.md`.\n- `docs_index_surface` provides compact, high-signal indexes that orient an agent before it starts exploring the whole repository.\n- `machine_readable_docs` keeps markdown and `llms-full.txt` style resources available for large-context tools and fetch-based agents.\n- `instruction_hierarchy` separates identity, operating rules, tool notes, workflow policy, doctrine summaries, and skill-specific guidance instead of collapsing them into one prompt.\n- `control_plane_visibility` keeps instruction surfaces legible to both interactive assistants and deeper control-plane lanes so policy stays shared across clients.\n- `passive_context_bias` acknowledges that passive, always-present project knowledge can outperform skills for framework-wide or repository-wide understanding.\n- `versioned_truth` keeps instruction surfaces reviewable in git diff flow rather than hidden in UI toggles or one-off prompts.\n\n## 3. N1Hub Role\nIn N1Hub this pattern binds together `AGENTS.md`, `SOUL.md`, `TOOLS.md`, `WORKFLOW.md`, vault doctrine, and future machine-readable documentation exports. It gives Personal AI Assistant, Vault Stewardship Swarm, Symphony, and future repository agents a stable local law surface before they start fetching tools, building context packs, or delegating work.\n\n## 4. Architectural Value\nInstruction surfaces reduce prompt drift, improve framework literacy, and make repository-local truth easier for agents to discover. They do not replace skills. They provide the persistent project map that tells an agent what world it is entering before a skill or tool call ever fires, and they make context engineering cheaper because high-signal doctrine can be referenced instead of regenerated.\n\n## 5. Operational Rule\nIf a rule or worldview matters repeatedly, it should live in an instruction surface before it lives in agent habit. Agents should inherit doctrine from versioned files, not from lucky prompt residue.\n\n## 6. Philosophical Alignment\nAgent Instruction Surfaces supports To Dig Deep by putting durable repository truth where agents can actually read it instead of leaving key knowledge in chat history, private folklore, or scattered external docs."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Instruction Surfaces defines the passive, repo-owned knowledge surfaces that teach an agent what project it is inside before deeper workflow logic begins. It covers files like `AGENTS.md`, `CLAUDE.md`, `SOUL.md`, `TOOLS.md`, `WORKFLOW.md`, compact documentation indexes, and machine-readable resources such as `llms-full.txt`. For N1Hub this matters because 2026 agent practice shifted toward stable instruction surfaces for broad framework and repository understanding, while reserving skills and live context packs for narrower procedural workflows and runtime-specific decisions.",
+    "keywords": [
+      "agent-instruction-surfaces",
+      "agents-md",
+      "claude-md",
+      "soul-md",
+      "tools-md",
+      "workflow-md",
+      "llms-full",
+      "machine-readable-docs",
+      "repo-rules",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-instruction-surfaces-agents-claude-llms-repodocs-n1hub"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-skills-registry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-workflow.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.to-dig-deep.v1",
+        "relation_type": "implements"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "128ce926472f255e190c3e25fdd1591522b4470e1ccecc9d89824b25af28bf7fab0cf95e2f36a1cc1f7c7404a716a4bcccecef429b33a2a18994a434a5e521b4"
+}

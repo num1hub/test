@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations defines the general architecture for external service connectivity, including credential boundaries, webhook contracts, inbound/outbound event mapping, and resilience policy for third-party dependencies.\n\n## 2. Core Attributes\n- `integration_catalog` supported connector definitions\n- `auth_model` credential handling and rotation policy\n- `event_contracts` inbound/outbound payload schema standards\n- `retry_policy` failure handling and backoff controls\n- `governance_flags` consent and data-sharing constraints\n\n## 3. Lifecycle\nIntegration definitions are added through governed review, deployed with explicit policy contracts, monitored for reliability, and retired with migration plans when deprecated.\n\n## 4. Integration\n- **Workspace:** host surface for user-configured connectors.\n- **API Gateway:** secure boundary for external traffic.\n- **Calendar/Notification Integrations:** specialized connector capsules.\n- **Security:** enforces secrets and policy controls.\n\n## 5. Philosophical Alignment\nIntegrations support To Dig Deep by extending capability without surrendering sovereignty or observability.\n"
+    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations in Dream describes a richer governed connector fabric around N1Hub. It preserves the future where model providers, hosted inference surfaces, repositories, calendars, notifications, and other external systems become first-class, policy-aware parts of the operating environment rather than ad hoc bolt-ons.\n\n## 2. Core Attributes\n- `integration_catalog` with clearer trust classes\n- `credential_and_secret_model`\n- `event_contracts`\n- `retry_and_recovery_policy`\n- `governance_flags`\n- `agent_operability` that distinguishes co-pilot-safe from autonomy-safe connectors\n\n## 3. Dream Direction\nThe long-term target is not connector sprawl. The target is a deliberately governed ecosystem where outside systems can enrich the second brain without silently deforming it.\n\n## 4. Integration\n- **API Gateway:** remains the transport boundary.\n- **AI Wallet and Hybrid LLM Access:** cover model-supply connectors.\n- **Agent Control Plane and Agent Daemon:** decide how background work may use connectors.\n- **Workspace and AI Control Surface:** keep connector reality visible to the human.\n\n## 5. Philosophical Alignment\nIntegrations in Dream preserves the idea that interoperability should expand intelligence without weakening sovereignty.\n"
   },
   "neuro_concentrate": {
-    "summary": "Integrations in the Dream branch captures a more deliberate connector fabric for the ecosystem. It imagines external services joining the graph through clearer capability boundaries, better health monitoring, and stronger alignment with sovereign data policy than the real branch currently enforces. The capsule matters because useful ecosystems eventually depend on connectors, but connectors also widen the attack and complexity surface. Dream therefore preserves Integrations as a future architecture layer for governed interoperability, not accidental plugin sprawl.",
+    "summary": "Integrations in Dream captures a more deliberate connector fabric for the ecosystem. It imagines external services joining the graph through clearer capability boundaries, better health monitoring, stronger agent-operability rules, and tighter alignment with sovereign data policy than the real branch currently enforces. The capsule matters because useful ecosystems eventually depend on connectors, but connectors also widen the attack and complexity surface. Dream therefore preserves Integrations as a future architecture layer for governed interoperability, not accidental plugin sprawl.",
     "keywords": [
       "integrations",
       "connectors",
@@ -53,6 +53,18 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.integration.calendar.v1",
         "relation_type": "references"
       },
@@ -64,5 +76,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "9c4b99ee78d2f8fa5e77f54c048ded84e9cfd02e213e9de4aef47192a68c2f3b155dfaad8578a50cfa89cde17dcb72d72de42f723418c78b8fda64f7ea7ef2d8"
+  "integrity_sha3_512": "9cf280d3c71c6d9ada48d3a173f74b1a95282e4520ee8a9995254019919ff62c517a8378c483fae25f91a04b2a12b551d19bcde76c1dbd1b229e18b68229e145"
 }

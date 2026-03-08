@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-async-assignment.v1",
+    "version": "1.1.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-08T21:40:00Z",
+    "updated_at": "2026-03-08T20:38:00Z",
+    "name": "Agent Async Assignment",
+    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return",
+    "source": {
+      "uri": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/",
+      "type": "web_article"
+    },
+    "priority": "high",
+    "progress": 16,
+    "estimatedHours": 220,
+    "actualHours": 18,
+    "dueDate": "2026-10-18",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Async Assignment\n\n## 1. Dream Direction\nThe Dream branch imagines asynchronous assignment as a native interaction style across N1Hub. Work should be assignable from issues, comments, mobile controls, assistant prompts, and operator surfaces, then continue autonomously until it produces a draft artifact, a capsule update batch, or a clarification request.\n\n## 2. Future Responsibilities\n- stable assignment handles that survive client switches and daemon restarts\n- issue and comment triggered assignments across repository and capsule surfaces\n- cross-client continuation without losing history or ownership\n- status and notification projection into mobile and operator dashboards\n- assignment-aware review and merge pipelines\n- bounded artifact return into Dream-side batches, pull requests, plans, and review surfaces\n- explicit routing of assignments into the right daemon family and wallet lane\n- assignment lineage that stays visible in the control plane from request to artifact return\n\n## 3. N1Hub Vision\nAs the swarm grows, users should not need to stay inside one synchronous chat to get real work done. Assignment becomes its own object, and the system becomes capable of receiving work anywhere, routing it into the right lane, running it in the background, and returning results or questions in the right place.\n\n## 4. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by allowing deep work to continue independently while still preserving origin, accountability, ownership, routing posture, and review."
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Async Assignment in the Dream branch represents a future where N1Hub treats agent work as a durable assignment object rather than a transient chat action. It imagines issue-triggered, comment-triggered, mobile-triggered, and assistant-triggered work continuing autonomously with stable assignment handles, clear clarification loops, artifact return, review-aware status projection, honest no-work returns, and explicit daemon or wallet lane routing. The capsule matters because deeper autonomy requires assignment continuity, explicit return paths, visible ownership, stable assignment identity across clients, and cleaner handoff discipline between humans, assistants, and background lanes.",
+    "keywords": [
+      "agent-async-assignment",
+      "assignment-origin",
+      "clarification-return-path",
+      "artifact-return",
+      "status-projection",
+      "cross-client-continuity",
+      "background-work",
+      "symphony",
+      "n1hub",
+      "lane-selection"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "8f5fbe3344b313492129f52a78a6f1707c8e6f876e425a8a167d4dcb14f0103ba645c0eb3e5eda28b7b654767237059e940812ff03d05f768e5077216ca7a460"
+}

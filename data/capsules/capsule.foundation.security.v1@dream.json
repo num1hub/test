@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-07T10:22:14.300Z",
+    "updated_at": "2026-03-08T20:20:00Z",
     "name": "Security",
     "semantic_hash": "capsule-foundation-security-v1-access-control-cryptography-audit",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Security\n\n## 1. Definition and Essence\nSecurity defines identity, access control, cryptography, and operational safeguards required to protect sovereign capsule data and platform integrity. It codifies defensive posture, incident handling, and policy enforcement boundaries.\n\n## 2. Core Attributes\n- `threat_model` catalog of prioritized attack vectors\n- `control_set` authentication, authorization, encryption controls\n- `incident_protocol` detection, containment, remediation workflow\n- `secret_policy` key and credential management standards\n- `compliance_mapping` policy traceability to regulatory expectations\n\n## 3. Lifecycle\nSecurity policy is continuously assessed, updated with emerging threats, validated through tests, and enforced by runtime checks and governance review.\n\n## 4. Integration\n- **Permission/Role:** primary access-control policy substrate.\n- **Audit Log:** forensics and anomaly evidence stream.\n- **Hybrid Database:** data-at-rest and data-in-transit controls.\n- **API/Integrations:** boundary hardening for external surfaces.\n\n## 5. Philosophical Alignment\nSecurity supports To Dig Deep by preserving trust in the substrate where all sovereign knowledge is created, stored, and transformed.\n"
   },
   "neuro_concentrate": {
-    "summary": "Security in the Dream branch captures the future trust operating system of the platform. It imagines a tighter synthesis of identity, access, incident response, cryptographic guarantees, audit evidence, and exception handling than the current runtime can fully enforce today. The capsule matters because large systems become fragile where trust assumptions remain implicit. Dream therefore preserves Security as a future command layer for defensive coherence, where protection becomes a first-class architectural capability rather than a set of scattered controls.",
+    "summary": "Security in the Dream branch captures the future trust operating system of the platform. It imagines tighter synthesis between identity, provider secrets, hosted inference posture, override discipline, quarantine semantics, audit evidence, and branch-sensitive promotion safety than the current runtime can fully enforce today. The capsule matters because large systems become fragile where trust assumptions remain implicit and where autonomous lanes outgrow ad hoc controls. Dream therefore preserves Security as a future command layer for defensive coherence, where protection becomes a first-class architectural capability rather than scattered controls.",
     "keywords": [
       "security",
       "trust-boundary",
@@ -61,10 +61,30 @@
       {
         "target_id": "capsule.foundation.hybrid-database.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.architect-override.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "8019b9ce0007194bf8b15d79075915402080a3374c49b884c57152ac2ed303e336c3fe23e741cdae1efdb56d0b16e4103b5e0a9b2e8baf88651c31eb417b9ef8"
+  "integrity_sha3_512": "a761b980f02f45bacd48e6369f7dad3a017d002bcb98efba5112eaed78da0c114afed384c52f626c93d3966b3f28b7adf3eccf9c3405bf7f832776414a24b7a4"
 }

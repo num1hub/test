@@ -27,7 +27,7 @@
     "content": "# From Zero to Megabytes\n\n## 1. Definition and Essence\nFrom Zero to Megabytes is an independent educational and execution initiative centered on compounding knowledge output from first principles into durable artifacts and measurable digital value.\n\n## 2. Core Attributes\n- `learning_tracks` thematic knowledge progression paths\n- `artifact_targets` tangible outputs expected per phase\n- `measurement_framework` throughput and quality indicators\n- `resource_map` tools, references, and time allocations\n- `publication_plan` cadence for sharing generated artifacts\n\n## 3. Lifecycle\nThe initiative moves through progressive learning and production phases, each ending in publishable outcomes and retrospective learning capture.\n\n## 4. Integration\n- **A2C and Workspace:** optional toolchain support for artifact creation.\n- **Planner:** phase decomposition and schedule management.\n- **Analytics:** progress evidence and growth reporting.\n- **Independent Project Set:** no hierarchical containment under N1 root.\n\n## 5. Philosophical Alignment\nThis project embodies the Zero-to-One arc by turning sparse initial capability into compounding digital production.\n"
   },
   "neuro_concentrate": {
-    "summary": "From Zero to Megabytes is a sovereign learning-and-production initiative focused on turning first-principles study into durable digital artifacts and measurable output. The project is structurally independent because its main job is compounding capability, publication, and evidence of growth rather than delivering a subsystem of CapsuleOS. As a root hub it can collect phases, artifacts, retrospectives, and throughput metrics without being diluted by platform concerns. It therefore captures a disciplined path from sparse initial skill to compounding creative and technical production.",
+    "summary": "From Zero to Megabytes is a sovereign learning-and-production initiative focused on turning first-principles study into durable digital artifacts, accumulated memory capital, and measurable output. The project is structurally independent because its main job is compounding capability, publication, and evidence of growth rather than delivering a subsystem of CapsuleOS. As a root hub it can collect phases, artifacts, retrospectives, and throughput metrics without being diluted by platform concerns. It therefore captures a disciplined path from sparse initial skill to compounding creative and technical production, with byte growth itself treated as a visible signal of second-brain construction.",
     "keywords": [
       "from-zero-to-megabytes",
       "learning",
@@ -37,6 +37,7 @@
       "publication",
       "retrospectives",
       "throughput",
+      "memory-capital",
       "independent-project"
     ],
     "confidence_vector": {
@@ -66,10 +67,14 @@
       {
         "target_id": "capsule.project.a2c.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "536e7cb41e31739805f75867971d0d662630081653897b061f419bfd0ba683fd8a0714ee4ae5fcbf03e269e0ba1ece5cb48785491ced7ccc9c3f9fcb4999ee24"
+  "integrity_sha3_512": "fe3e2a38c958adb4162388ed2dcb58dd12d5ece574b3c48527075746c9d66f50c7f1fec10ad705b35c92d12edeb54b7e759c9dc764d5f4e5e6a0a37b341db1f7"
 }

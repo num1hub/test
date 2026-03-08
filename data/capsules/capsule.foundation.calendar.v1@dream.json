@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Calendar\n\n## 1. Definition and Essence\nCalendar defines the temporal projection of workspace activity, showing due dates, milestones, reminders, and events derived from capsules. It synchronizes planning intent with tracker telemetry to provide time-aware navigation and execution support.\n\n## 2. Core Attributes\n- `event_refs` linked capsules rendered as calendar events\n- `view_modes` day, week, month, agenda projections\n- `timezone_policy` normalization and display rules\n- `sync_profile` external calendar mapping configuration\n- `conflict_markers` overlaps and scheduling pressure indicators\n\n## 3. Lifecycle\nCalendar entries are materialized from capsule metadata, updated as schedules shift, synchronized to external systems when enabled, and archived with historical trace for retrospectives.\n\n## 4. Integration\n- **Workspace:** part_of shared temporal surface.\n- **Planner:** consumes roadmap and task due dates.\n- **Tracker:** adds reminders and overdue indicators.\n- **Integrations:** supports external calendar synchronization.\n\n## 5. Philosophical Alignment\nCalendar keeps To Dig Deep grounded in time, converting strategic intent into clear temporal commitments.\n"
+    "content": "# Calendar\n\n## 1. Definition and Essence\nCalendar in Dream treats time as a smarter operational surface for the second brain. It preserves the future where goals, milestones, tasks, reminders, and external commitments are not only displayed on dates, but composed into a branch-aware and rhythm-aware temporal control layer.\n\n## 2. Dream Direction\nCalendar should eventually distinguish between fixed commitments, provisional Dream plans, review blocks, focus windows, and industrial night work. It should become a place where the user can understand not only what is scheduled, but what kind of scheduling truth each item represents.\n\n## 3. Integration\n- **Goal, Milestone, Task, Tracker, Reminder, Notification:** provide the underlying time-bearing signals.\n- **Profile and User Preferences:** shape timezone, rhythm, and conflict posture.\n- **Integrations:** carry approved commitments outward when useful.\n\n## 4. Philosophical Alignment\nCalendar in Dream preserves the idea that time should become an intelligent part of the second brain, not merely a passive grid.\n"
   },
   "neuro_concentrate": {
-    "summary": "Calendar in the Dream branch treats time as a smarter operational surface. It moves beyond displaying dates toward branch-aware scheduling, better conflict handling, richer temporal overlays, and a cleaner merge between personal rhythm and project commitments. The capsule matters because execution often fails in time before it fails in logic. Dream preserves the future calendar as a more intelligent temporal control layer rather than a passive view of dates, turning scheduling into an active planning instrument.",
+    "summary": "Calendar in the Dream branch treats time as a smarter operational surface. It moves beyond displaying dates toward branch-aware scheduling, better conflict handling, richer temporal overlays, stronger day-night mode awareness, and a cleaner merge between human rhythm and project commitments. The capsule matters because execution often fails in time before it fails in logic. Dream preserves the future calendar as a more intelligent temporal control layer rather than a passive view of dates, turning scheduling into an active planning instrument for the second brain.",
     "keywords": [
       "calendar",
       "schedule",
@@ -30,7 +30,9 @@
       "tracker",
       "events",
       "workspace",
-      "timeline"
+      "timeline",
+      "day-night",
+      "follow-through"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -61,6 +63,38 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.reminder.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.integration.calendar.v1",
         "relation_type": "references"
       },
@@ -76,5 +110,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "9bfdb6105ee356cd1aafcd3edd800f2febf3efea63a72bbfddd1809f4748c0254b7cb296105e20b8b9c40504dcd730f00c7f1b6033b3997c16651be8e88b4d03"
+  "integrity_sha3_512": "0d3c6d78f73a4f360f04eda0a40cd53ef49291f053fee6b4171a27f430873ae1a56ed1febdeee9b7bcf2053e6d0ca4840e2e57c9cd6e86859e5db4621f21a50d"
 }

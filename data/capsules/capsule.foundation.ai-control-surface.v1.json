@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.ai-control-surface.v1",
-    "version": "1.2.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-08T23:18:00Z",
     "name": "AI Control Surface",
     "semantic_hash": "ai-control-surface-wallet-status-chat-ops-workspace",
     "priority": "high",
@@ -19,20 +19,24 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Control Surface\n\n## 1. Definition and Essence\nAI Control Surface defines the operator-facing control plane for AI inside N1Hub Workspace. It brings together provider configuration, readiness checks, runtime status, daemon health, autonomy windows, chat surfaces, and delegation controls into one inspectable surface rather than scattering them across hidden scripts and background services.\n\n## 2. Core Responsibilities\n- `wallet_surface` exposes provider and subscription configuration through AI Wallet.\n- `runtime_visibility` shows provider availability, generation paths, session status, and lane health.\n- `chat_and_delegation_surface` makes Chat to Capsules and handoff behavior visible to operators and users.\n- `shift_and_lane_control` makes night-shift policy, refresh, and pause semantics visible instead of burying them in service files.\n- `status_and_debugging` gives operators a practical place to inspect AI behavior before trusting background autonomy.\n\n## 3. N1Hub Integration\nIn N1Hub this surface begins with the AI Wallet form, DeepMine console, Chat to Capsules, and Symphony or N-Infinity status endpoints, then grows toward a fuller assistant and orchestration dashboard. It is the practical bridge between wallet-backed credentials, daemonized background agents, autonomy windows, chat surfaces, and operator trust.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making AI operation visible, inspectable, and correctable instead of magical.\n"
+    "content": "# AI Control Surface\n\n## 1. Definition and Essence\nAI Control Surface defines the human-facing operating surface for AI inside N1Hub Workspace. It is the place where one person can see provider readiness, active lanes, session health, queued assignments, background autonomy, recent artifacts, and current follow-up work without opening hidden files or memorizing shell commands. It is not the canonical administrative truth for the fleet. It is the inspectable, mobile-friendly, intervention-ready window onto that truth.\n\n## 2. Core Responsibilities\n- `wallet_surface` exposes provider and subscription configuration through AI Wallet.\n- `runtime_visibility` shows provider availability, generation paths, session status, and lane health.\n- `fleet_and_policy_surface` reveals which agents are enabled, what instruction packs govern them, and which lanes are healthy, paused, cooling down, or degraded.\n- `chat_and_delegation_surface` makes Chat to Capsules, assignment origin, and handoff behavior visible to operators and users.\n- `shift_and_lane_control` makes day co-pilot, night autonomy, refresh, pause, and reassess semantics visible instead of burying them in runtime files.\n- `activity_and_assignment_surface` shows session activity, queued work, recent artifacts, asynchronous assignment state, and status-filtered views across the swarm.\n- `live_update_surface` projects progress, completion, failure, idle-waiting, and next-wakeup states into human-visible views, including mobile-friendly notification paths when available.\n- `review_and_promotion_surface` shows which Dream-side results are ready for human review, validation, or promotion toward Real.\n- `status_and_debugging` gives operators a practical place to inspect AI behavior before trusting background autonomy.\n\n## 3. N1Hub Integration\nIn N1Hub this surface begins with the AI Wallet form, DeepMine console, Chat to Capsules, and Symphony or N-Infinity status endpoints, then grows toward a fuller assistant and orchestration dashboard. It is the practical bridge between wallet-backed credentials, daemonized background agents, autonomy windows, chat surfaces, assignment visibility, and operator trust. As the runtime matures, AI Control Surface should increasingly sit on top of Agent Control Plane: the control surface remains the human-facing dashboard, while the control plane underneath keeps agent registry, policy rollout, searchable session activity, assignment governance, lane budgets, and live state filters coherent.\n\n## 4. Design Rule\nAI Control Surface should remain simple enough for daily use on mobile and desktop, but deep enough that a human can answer four operational questions at a glance: what is running, why it is running, what it last changed, and what needs intervention next.\n\n## 5. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making AI operation visible, inspectable, correctable, and governable instead of magical.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Control Surface is the operator-facing control plane for AI inside N1Hub. It matters because provider keys, daemon health, agent status, autonomy windows, chat behavior, and delegation become unsafe when they are only accessible through hidden files or shell commands. This capsule formalizes the Workspace-facing layer that unifies AI Wallet configuration, Chat to Capsules, delegation visibility, DeepMine access, background-lane health, and Symphony or N-Infinity observability into one accountable operating surface.",
+    "summary": "AI Control Surface is the human-facing operating dashboard for AI inside N1Hub. It matters because provider keys, daemon health, session activity, queued assignments, Dream-side results, and lane status become unsafe when they are only accessible through hidden files or shell commands. This capsule defines the inspectable surface that unifies AI Wallet configuration, Chat to Capsules, background-lane health, assignment visibility, next-wakeup state, and review-ready outputs while relying on Agent Control Plane for deeper administrative truth.",
     "keywords": [
       "ai-control-surface",
       "control-plane",
+      "agent-control-plane",
+      "live-status",
+      "assignment-visibility",
+      "review-surface",
+      "mobile-ops",
       "chat-to-capsules",
       "agent-delegation",
       "background-runtime",
       "wallet",
       "deepmine",
       "symphony",
-      "n-infinity",
       "n1hub"
     ],
     "confidence_vector": {
@@ -58,6 +62,10 @@
       {
         "target_id": "capsule.foundation.chat-to-capsules.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "depends_on"
       },
       {
         "target_id": "capsule.foundation.agent-delegation.v1",
@@ -107,5 +115,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3f1eed273e42243a501c1954c0870fd0d1d5f49eff9c18ce58de4bfabbad097366018477ddb4b6f07b8963bfd51cd1255be710187b1f8ae87e2a7a789ecaa708"
+  "integrity_sha3_512": "dab93311f5be3163184a3008c614bb4120371d09bf184bdf8728e7206aefc573e46b4ed3ef81850abe99ebc436f298c507651b8e289c3979ad4597ebb09598a2"
 }

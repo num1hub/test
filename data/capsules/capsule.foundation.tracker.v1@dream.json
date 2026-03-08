@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nThe Tracker is the foundational module that monitors execution against plans. It observes task, goal, and project states, computes progress metrics, and emits reminders and alerts to keep commitments visible.\n\n## 2. Core Functions\n- Deadline monitoring with configurable alert windows.\n- Progress tracking against estimated and actual effort.\n- Notification generation for overdue, blocked, and completed states.\n- Optional time logging through metadata updates.\n- Statistical reporting for velocity, throughput, and completion trends.\n- Historical archiving of completed work with traceability.\n\n## 3. Data Model\nTracker consumes dueDate, status, progress, estimatedHours, actualHours, completedAt, and recurrence metadata fields. It compares temporal state against current time and generates notification operations capsules when trigger conditions are met.\n\n## 4. Integration\nTracker closes the loop with Planner by feeding execution reality back into future scheduling. It provides actionable context to the Personal AI Assistant, powers workspace dashboard telemetry, and can be supported by N-Infinity agents that detect at-risk items.\n\n## 5. Philosophical Alignment\nTracker enforces To Dig Deep through accountability. It guarantees that declared intent is measured against outcomes via an explicit plan -> track -> review loop.\n\n## 6. Future Potential\nPredictive risk analytics, calendar integration, and broader team overlays can extend Tracker while keeping capsule-native sovereignty intact."
+    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker in Dream represents predictive execution intelligence rather than only monitoring. It imagines a system that not only records what happened, but can see drift earlier, notice overloaded schedules sooner, and surface the right intervention path before goals and tasks degrade silently.\n\n## 2. Dream Direction\nThe future tracker should become the truth engine beneath planning and autonomy: a place where goals, milestones, tasks, reminders, notifications, and agent work are measured against actual movement instead of treated as equal statements.\n\n## 3. Integration\n- **Goal, Milestone, Task:** remain the main execution objects Tracker watches.\n- **Reminder, Notification, and Calendar:** turn telemetry into lived follow-through.\n- **Planner and Personal AI Assistant:** use tracker evidence to re-shape plans.\n- **N-Infinity and Symphony:** use drift and risk as orchestration signals.\n\n## 4. Philosophical Alignment\nTracker in Dream preserves the idea that a second brain should become better at telling the truth about execution, not just better at storing intentions.\n"
   },
   "neuro_concentrate": {
-    "summary": "Tracker in the Dream branch represents predictive execution intelligence rather than only monitoring. It aims toward earlier risk detection, sharper effort drift analysis, more adaptive reminder strategy, and better closed-loop learning from what plans repeatedly fail or succeed in practice. The capsule matters because accountability grows stronger when the system can forecast friction before work breaks down. Dream therefore holds the higher bar for Tracker: not just recording progress, but protecting it through earlier intervention.",
+    "summary": "Tracker in the Dream branch represents predictive execution intelligence rather than only monitoring. It aims toward earlier risk detection, sharper effort drift analysis, more adaptive reminder and notification strategy, better calendar pressure handling, and stronger closed-loop learning from what goals, milestones, and tasks repeatedly fail or succeed in practice. The capsule matters because accountability grows stronger when the system can forecast friction before work breaks down. Dream therefore holds the higher bar for Tracker: not just recording progress, but protecting it through earlier intervention.",
     "keywords": [
       "tracker",
       "deadlines",
@@ -32,7 +32,9 @@
       "monitoring",
       "analytics",
       "activity-log",
-      "workspace"
+      "workspace",
+      "calendar-pressure",
+      "predictive"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,6 +58,18 @@
       },
       {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
         "relation_type": "references"
       },
       {
@@ -83,6 +97,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.metric.v1",
         "relation_type": "references"
       },
@@ -98,5 +116,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "45c1628ae7a7c9324cf62f9282933d746bcbc3804c8afcc7b1a331ba15907ef49bbf449b8af790908848bf5c029e75d917f79ea269b1ee06357ed74805d56b16"
+  "integrity_sha3_512": "fe50eaa5e2cd803e218ab5b050f2b46a17d819acf4464be81c0832f87aa6c443a1ba538435b460534bfe5aea84c82893a9f580935176a569415e998ced95425a"
 }

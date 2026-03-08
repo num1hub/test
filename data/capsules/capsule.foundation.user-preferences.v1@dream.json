@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# User Preferences\n\n## 1. Definition and Essence\nUser Preferences defines configurable behavioral settings that shape planning, reminders, assistant behavior, and interface defaults. It centralizes timezone, working-hour, language, and notification policies in a reusable capsule.\n\n## 2. Core Attributes\n- `timezone` canonical IANA timezone string\n- `work_hours` preferred planning and focus windows\n- `language_and_locale` interface and NLP defaults\n- `notification_policy` channel priorities and quiet hours\n- `assistant_style` guidance for interaction tone and proactivity\n\n## 3. Lifecycle\nPreference capsules are initialized with defaults, tuned over time, and consumed by runtime modules during scheduling, notification dispatch, and assistant orchestration.\n\n## 4. Integration\n- **Personal AI Assistant:** adapts suggestions and interaction style.\n- **Planner and Tracker:** applies timezone and quiet-hour constraints.\n- **Calendar:** normalizes temporal presentation and scheduling.\n- **Notification:** enforces delivery channel and urgency preferences.\n\n## 5. Philosophical Alignment\nPreference capsules support To Dig Deep by aligning execution systems to human rhythms, reducing friction without sacrificing rigor.\n"
+    "content": "# User Preferences\n\n## 1. Definition and Essence\nUser Preferences in Dream describes a more complete human-rhythm contract for the second brain. It preserves the future where planning, notifications, autonomy, and assistant behavior adapt to the person with more nuance than today's baseline settings allow.\n\n## 2. Core Attributes\n- `timezone` and `work_windows`\n- `quiet_and_sleep_policy`\n- `assistant_style`\n- `autonomy_preference`\n- `review_thresholds`\n- `notification_and_escalation_rules`\n\n## 3. Dream Direction\nThe long-term target is not a larger settings page. The target is a behavioral contract that lets the platform decide when to speak, when to stay quiet, when to wake the human, and when to let the swarm continue safely.\n\n## 4. Integration\n- **Profile:** binds preferences to one durable person.\n- **Planner, Sleep-Time Compute, and Night Shift Autonomy:** use preferences as operating law.\n- **AI Control Surface and Agent Control Plane:** reflect those rules back into visible intervention posture.\n\n## 5. Philosophical Alignment\nUser Preferences in Dream preserves the idea that deep systems should learn how to serve the human rhythm, not force the human to adapt to machine convenience.\n"
   },
   "neuro_concentrate": {
-    "summary": "User Preferences is the capsule that adapts the workspace to human rhythm without sacrificing rigor. It centralizes timezone, work-hour boundaries, notification policy, locale, and assistant style so scheduling, reminders, and AI behavior can respond to a coherent personal contract instead of scattered settings. The capsule matters because execution systems become noisy and brittle when they ignore the conditions under which a user actually works. By treating preferences as structured knowledge, the vault can make planning and notification behavior more humane while still keeping those adaptations explicit, reviewable, and portable across modules.",
+    "summary": "User Preferences in Dream describes a richer behavioral contract for the second brain. It imagines better handling of sleep, quiet posture, assistant style, autonomy tolerance, and review thresholds so the platform can behave like a tuned partner instead of a noisy automation stack. The capsule matters because human rhythm is one of the hardest things to retrofit after systems become powerful. Dream therefore keeps this adaptation layer explicit and central.",
     "keywords": [
       "user-preferences",
       "timezone",
@@ -57,6 +57,22 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.profile.v1",
         "relation_type": "part_of"
       }
@@ -64,5 +80,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d582c86a308bd362a7de0799f9d1420a1c3b47e75f3480c25dcb774ef6cf5eb42937940b964d5782e3ae68b632784ac96742bfedb6bdb4e8fa6ad0f234cced21"
+  "integrity_sha3_512": "03ccebf247a6088435fcb87b876bae54a1db760a7b89ca42a87ca000a309f1d1702b5ab3974e27581a060723d7d0d979b553b439f42541fa8f3fa8a7c6fa4e93"
 }

@@ -1,18 +1,18 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.symphony-agent-session.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-06T15:58:22Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Symphony Agent Session",
     "semantic_hash": "symphony-agent-session-thread-turn-runtime-codex-workspace",
     "source": {
-      "uri": "internal://lib/symphony/agentClient.ts",
-      "type": "repository_implementation"
+      "uri": "https://openai.com/index/unlocking-the-codex-harness/",
+      "type": "web_article"
     },
     "priority": "high",
     "progress": 52,
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Agent Session\n\n## 1. Definition and Essence\nSymphony Agent Session defines the live coding-agent runtime context opened for one issue inside one workspace. It tracks the active app-server process, thread and turn identifiers, current cwd, last observed event, token counters, and the continuity needed to issue additional turns on the same live thread.\n\n## 2. Core Attributes\n- `session_id` composed from thread and turn identifiers.\n- `thread_id` and current `turn_id` for app-server continuity.\n- `workspace_path` validated execution cwd.\n- `last_event`, `last_message`, and `last_event_at` for reconciliation.\n- `token_totals` and `turn_count` for runtime accounting.\n- `app_server_pid` and termination reason for cleanup and debugging.\n\n## 3. Role in Symphony\nAgent Session is the runtime bridge between workflow policy and actual Codex execution. It lets Symphony reuse a live thread across continuation turns, detect stalls, and surface operator-visible telemetry without confusing one attempt with another.\n\n## 4. N1Hub Alignment\nIn N1Hub, the session exists to keep coding-agent execution anchored to the real issue workspace, the real repository, and the real capsule-aware validation path.\n"
+    "content": "# Symphony Agent Session\n\n## 1. Definition and Essence\nSymphony Agent Session defines the live coding-agent runtime context opened for one issue inside one workspace. It tracks the active app-server process, thread and turn identifiers, current cwd, last observed event, token counters, assignment origin, and the continuity needed to issue additional turns on the same live thread.\n\n## 2. Core Attributes\n- `session_id` composed from thread and turn identifiers.\n- `thread_id` and current `turn_id` for app-server continuity.\n- `workspace_path` validated execution cwd.\n- `assignment_origin` ties the session back to the issue, job, comment, or control action that started it.\n- `assignment_handle` lets the same session remain discoverable from another client or control surface.\n- `last_event`, `last_message`, and `last_event_at` for reconciliation.\n- `token_totals` and `turn_count` for runtime accounting.\n- `app_server_pid` and termination reason for cleanup and debugging.\n- `protocol_state` records where the client currently is in the harness exchange: initialize, thread start, turn start, streaming, approval, or shutdown.\n- `event_stream_position` keeps the session understandable as an evented runtime rather than a single prompt call.\n- `artifact_projection` keeps outputs, review requests, and follow-up signals attached to the same live session.\n- `surface_projection` keeps the same live session inspectable across terminal, web, mobile, and operator-control surfaces.\n\n## 3. Role in Symphony\nAgent Session is the runtime bridge between workflow policy and actual Codex execution. It lets Symphony reuse a live thread across continuation turns, detect stalls, and surface operator-visible telemetry without confusing one attempt with another. In 2026 agent practice this also means understanding the session as a harness-protocol object: a client-driven, event-aware, bidirectional loop rather than a thin wrapper around one request. It also means the session should remain discoverable when work started asynchronously from an issue assignment or another client surface.\n\n## 4. N1Hub Alignment\nIn N1Hub, the session exists to keep coding-agent execution anchored to the real issue workspace, the real repository, and the real capsule-aware validation path. It is also the place where local ChatGPT/Codex access becomes a host-controlled lane inside the broader swarm instead of raw token plumbing. As control-plane patterns mature, the same session should be legible in operator views without breaking its thread and turn continuity, and its outputs should remain attributable to the assignment that created them.\n\n## 5. Operational Rule\nA session is not just a prompt stream. It is a live assignment-bearing object with continuity, telemetry, artifacts, and discoverability requirements. Losing that continuity means losing accountability.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Agent Session defines the live execution envelope for one coding-agent conversation inside one issue workspace. It captures the app-server process, thread and turn identifiers, validated cwd, last observed event, token totals, and the continuity required for multi-turn execution on a single live thread. The capsule matters because Symphony does not merely fire one prompt and exit; it must monitor ongoing activity, detect stalls, preserve operator-visible telemetry, and distinguish a durable session from the broader run attempt that owns it. This atom gives the graph a precise place to describe how Codex runtime state actually exists while work is in flight.",
+    "summary": "Symphony Agent Session defines the live execution envelope for one coding-agent conversation inside one issue workspace. It captures the app-server process, thread and turn identifiers, validated cwd, assignment origin, assignment handle, last observed event, token totals, degraded-session state, and the continuity required for multi-turn execution on a single live thread. The capsule matters because Symphony does not merely fire one prompt and exit; it must monitor ongoing activity, preserve artifacts and operator-visible telemetry, and distinguish a durable session from the broader run attempt that owns it, even when the work began asynchronously from another client surface.",
     "keywords": [
       "symphony",
       "agent-session",
@@ -35,7 +35,14 @@
       "codex",
       "workspace",
       "telemetry",
-      "runtime"
+      "runtime",
+      "harness-protocol",
+      "event-stream",
+      "assignment-origin",
+      "assignment-handle",
+      "degraded-session",
+      "artifact-projection",
+      "surface-projection"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -66,6 +73,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.ai.prompt.v1",
         "relation_type": "references"
       },
@@ -81,5 +100,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "ba3d3e4632eba1bd2bb7ccbd9c13e146b5ff76fbc34cd113bdf90d164ad788b93434814bbc9e590842b46b18cfe23a8b4f0aa7e547bf6046fc8166e6d9cd02fe"
+  "integrity_sha3_512": "ffb1bd80a8ab0d0363a8482a84d371fd67640eac2661e80280ce62a3e7248202101d718928d470d2e993c2faa8ef55c316316992b98adcb41b1f003a698bc36e"
 }

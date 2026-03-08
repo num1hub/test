@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations defines the general architecture for external service connectivity, including credential boundaries, webhook contracts, inbound/outbound event mapping, and resilience policy for third-party dependencies.\n\n## 2. Core Attributes\n- `integration_catalog` supported connector definitions\n- `auth_model` credential handling and rotation policy\n- `event_contracts` inbound/outbound payload schema standards\n- `retry_policy` failure handling and backoff controls\n- `governance_flags` consent and data-sharing constraints\n\n## 3. Lifecycle\nIntegration definitions are added through governed review, deployed with explicit policy contracts, monitored for reliability, and retired with migration plans when deprecated.\n\n## 4. Integration\n- **Workspace:** host surface for user-configured connectors.\n- **API Gateway:** secure boundary for external traffic.\n- **Calendar/Notification Integrations:** specialized connector capsules.\n- **Security:** enforces secrets and policy controls.\n\n## 5. Philosophical Alignment\nIntegrations support To Dig Deep by extending capability without surrendering sovereignty or observability.\n"
+    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations defines the governed connector architecture that lets N1Hub speak to the outside world without forgetting who it is. It covers credential boundaries, inbound and outbound event contracts, webhook and API semantics, consent posture, reliability policy, and the distinction between human-facing connectors and machine-facing provider lanes.\n\n## 2. Core Attributes\n- `integration_catalog` supported connector definitions and trust posture\n- `credential_and_secret_model` where auth originates, who owns it, and how it rotates\n- `event_contracts` inbound, outbound, and callback payload standards\n- `retry_and_recovery_policy` failure handling, backoff, and degradation behavior\n- `governance_flags` consent, review, and data-sharing constraints\n- `agent_operability` whether a connector is safe for co-pilot use, night autonomy, or only supervised workflows\n\n## 3. Lifecycle\nIntegrations are proposed, reviewed, connected, monitored, and eventually retired. Mature connector work should pass through AI Wallet, API Gateway, control-plane policy, and workspace visibility instead of being smuggled into the product as hidden scripts or magical buttons.\n\n## 4. N1Hub Role\nThis hub matters because the second brain does not live in isolation. Calendar, notifications, model providers, hosted inference, issue trackers, repositories, and future external systems all create pressure to connect outward. Integrations is the architectural place where that outward reach stays governable, searchable, and compatible with sovereign memory.\n\n## 5. Integration\n- **API Gateway:** carries the actual boundary traffic.\n- **AI Wallet and Hybrid LLM Access:** cover model-supply and hosted inference connectors.\n- **Agent Control Plane and Agent Daemon:** decide which connectors background lanes may use.\n- **Workspace and AI Control Surface:** expose configuration and health without collapsing governance into UI alone.\n- **Calendar and Notification connector capsules:** remain specialized children under this hub.\n\n## 6. Philosophical Alignment\nIntegrations supports To Dig Deep by extending capability without surrendering sovereignty, observability, or disciplined memory boundaries.\n"
   },
   "neuro_concentrate": {
-    "summary": "Integrations defines an integration boundary in the N1Hub graph so external service interactions remain governed, auditable, and consistent with sovereign data policy. It standardizes payload contracts, authentication expectations, delivery behavior, and failure handling semantics used by workspace modules and agents. By representing integration behavior as capsules, platform evolution stays explicit and testable rather than hard-coded in opaque connectors. This improves reliability, security, and maintainability while preserving user control over what information leaves or enters the vault.",
+    "summary": "Integrations defines the governed connector fabric around N1Hub. It matters because calendars, notifications, model providers, hosted inference surfaces, and future external systems all widen the boundary of the vault. This capsule keeps that widening explicit by naming connector definitions, secret posture, event contracts, retry policy, consent, and which connectors are safe for human-facing use versus background autonomy. By representing integrations as a hub rather than as hidden glue code, the vault preserves sovereignty while still being able to reach outward.",
     "keywords": [
       "integrations",
       "connectors",
@@ -30,7 +30,10 @@
       "api",
       "security",
       "workspace",
-      "architecture"
+      "architecture",
+      "connectivity",
+      "hosted-inference",
+      "governance"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -53,6 +56,22 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.ai-wallet.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.integration.calendar.v1",
         "relation_type": "references"
       },
@@ -64,5 +83,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "eedf2aaddb25f17fdd820f3b8f2909c4df0885cfaa50a2ae597524116ebc61953c3206ad7799bbd8208b5295050d47d1d4a00faca64239c3531a328a97186cde"
+  "integrity_sha3_512": "fb68d7e6703681f4b829988e783bcb68f37c314f528b7db517f5e945a9e817695ca9af8e889056351048bf7413b15a68ea1aaf7de5e8b445c3b00a6c90b4a8b0"
 }

@@ -19,17 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Reminder\n\n## 1. Definition and Essence\nReminder defines the canonical time-bound prompt entity used by Tracker and Planner to nudge execution. It represents when, why, and how a user or agent should be notified about upcoming or overdue work without duplicating full task state.\n\n## 2. Core Attributes\n- `trigger_at` exact timestamp for reminder emission\n- `recurrence` optional repetition rule and stop conditions\n- `binding_target_id` task, milestone, or goal capsule binding\n- `urgency` low, medium, high, critical delivery urgency\n- `state` pending, sent, snoozed, dismissed lifecycle marker\n\n## 3. Lifecycle\nReminders are created from planning artifacts or agent policies, scheduled by tracker services, dispatched through notification channels, and archived after dismissal or completion of bound work.\n\n## 4. Integration\n- **Tracker:** core scheduling and dispatch orchestration.\n- **Planner:** creates reminders from due-date intent.\n- **Notification:** channel-agnostic delivery payload.\n- **N-Infinity Reminder Agent:** autonomous reminder generation and escalation.\n\n## 5. Philosophical Alignment\nReminder capsules keep To Dig Deep commitments alive in daily reality by transforming deadlines into timely accountable prompts.\n"
+    "content": "# Reminder\n\n## 1. Definition and Essence\nReminder in Dream preserves a stronger follow-through system for N1Hub. It imagines reminders that are not only timed pings, but context-aware commitment threads that understand urgency, recurrence, escalation, and the difference between supporting the user and harassing the user.\n\n## 2. Dream Direction\nThe future reminder layer should know when to resurface work, when to escalate it, when to stay silent, and how to fit the user's actual rhythm rather than blindly replaying deadlines.\n\n## 3. Integration\n- **Goal, Milestone, and Task:** supply the commitments reminders protect.\n- **Tracker and Notification:** provide timing evidence and delivery.\n- **Calendar and User Preferences:** supply temporal context.\n- **N-Infinity Reminder Agent:** extends reminder logic into bounded autonomous follow-through.\n\n## 4. Philosophical Alignment\nReminder in Dream preserves the idea that commitments should stay alive without turning the system into ambient pressure.\n"
   },
   "neuro_concentrate": {
-    "summary": "Reminder is the time-bound commitment nudge that keeps planned work connected to real action. It links tasks, milestones, or goals to a future trigger point and carries the urgency and recurrence semantics needed for Tracker and Notification flows to act predictably. The capsule matters because deadlines and intentions often fail not from bad planning, but from weak follow-through at the moment of execution. By modeling reminders explicitly, the vault gives both humans and agents a durable mechanism for protecting commitments from drift, forgetfulness, and passive schedule decay.",
+    "summary": "Reminder in Dream describes a stronger follow-through system for N1Hub. It imagines reminders that are not merely timed pings, but context-aware commitment threads with better escalation, quiet-window sensitivity, clearer return paths, and tighter coordination with tracker, notification, and calendar layers. The capsule matters because intentions often fail not from weak planning, but from weak re-surfacing at the right moment. Dream therefore keeps reminder quality as a first-class design problem in the second brain.",
     "keywords": [
       "reminder",
       "tracker",
       "planner",
       "deadline",
       "notification",
-      "schedule"
+      "schedule",
+      "quiet-window",
+      "return-path"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -56,6 +58,22 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
         "relation_type": "supports"
       }
@@ -63,5 +81,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "ef620cbd2b74adfafcea757be87aa3cfaf646a225b1b3cdc3be2172fe4e4331ad1724e4b6be47716177697c29812497e75fe48c85ce7f989f143f7d6936d1626"
+  "integrity_sha3_512": "675c950446719b0d3e0f1b947c20897050a1d7dd96869272f7ea0b285a52f3a7f806756fff8827a5448753ae02e55843b3664bbe4f37d26a44b71c1acbebef46"
 }

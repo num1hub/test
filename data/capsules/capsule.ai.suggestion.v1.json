@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T21:05:00Z",
     "name": "AI Suggestion",
     "semantic_hash": "capsule-ai-suggestion-v1-recommendation-planner-tracker-feedback",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Suggestion\n\n## 1. Definition and Essence\nAI Suggestion models a generated recommendation with explicit rationale, expected impact, and user feedback outcomes. It provides a structured bridge from model output to accountable decision-making in Planner and Tracker contexts.\n\n## 2. Core Attributes\n- `suggestion_text` actionable recommendation content\n- `rationale_refs` linked evidence and context capsules\n- `impact_estimate` predicted value and risk of adoption\n- `feedback` accepted, modified, rejected user outcome\n- `applied_changes` references to capsules updated if accepted\n\n## 3. Lifecycle\nSuggestions are generated from conversation or agent analysis, presented to the user, optionally accepted, and traced through implementation and retrospective quality scoring.\n\n## 4. Integration\n- **Personal AI Assistant:** presents and explains suggestions.\n- **Planner:** applies accepted plan and task changes.\n- **Tracker:** validates whether accepted suggestions improved outcomes.\n- **N-Infinity Suggestion Agent:** upstream producer of recommendations.\n\n## 5. Philosophical Alignment\nSuggestion capsules embody To Dig Deep by turning AI output into accountable hypotheses that can be tested, learned from, and improved.\n"
+    "content": "# AI Suggestion\n\n## 1. Definition and Essence\nAI Suggestion models a generated recommendation with explicit rationale, expected impact, branch posture, and user feedback outcomes. It provides a structured bridge from model output to accountable decision-making in Planner and Tracker contexts.\n\n## 2. Core Attributes\n- `suggestion_text` actionable recommendation content\n- `rationale_refs` linked evidence and context capsules\n- `impact_estimate` predicted value and risk of adoption\n- `branch_target` whether the suggestion affects `Dream`, `Real`, or a comparison workflow\n- `feedback` accepted, modified, rejected user outcome\n- `applied_changes` references to capsules updated if accepted\n\n## 3. Lifecycle\nSuggestions are generated from conversation or agent analysis, presented to the user, optionally accepted, and traced through implementation and retrospective quality scoring. Mature suggestion objects should preserve not only persuasion but outcome evidence, so the system can learn which kinds of recommendations actually improved the vault or the user's work.\n\n## 4. Integration\n- **Personal AI Assistant:** presents and explains suggestions.\n- **Planner:** applies accepted plan and task changes.\n- **Tracker:** validates whether accepted suggestions improved outcomes.\n- **Review Agent:** checks whether a suggestion is ready to become a real change request.\n- **N-Infinity Suggestion Agent:** upstream producer of recommendations.\n\n## 5. Philosophical Alignment\nSuggestion capsules embody To Dig Deep by turning AI output into accountable hypotheses that can be tested, learned from, improved, or rejected with memory."
   },
   "neuro_concentrate": {
-    "summary": "AI Suggestion models a recommendation as a reviewable object with rationale, expected impact, and observable outcome rather than as disposable assistant chatter. It gives the workspace a clean bridge between model output and human decision-making by preserving why a suggestion was made, whether it was accepted, and what changed after adoption. That structure matters because useful guidance must be testable, not merely persuasive. By storing suggestions as capsules, N1Hub can learn from rejected advice, measure recommendation quality, and tie optimization back to evidence instead of intuition.",
+    "summary": "AI Suggestion models a recommendation as a reviewable object with rationale, expected impact, branch target, and observable outcome rather than as disposable assistant chatter. It gives the workspace a clean bridge between model output and human decision-making by preserving why a suggestion was made, whether it was accepted, and what changed after adoption. That structure matters because useful guidance must be testable, not merely persuasive. By storing suggestions as capsules, N1Hub can learn from rejected advice, measure recommendation quality, and tie optimization back to evidence instead of intuition while keeping Dream and Real consequences explicit.",
     "keywords": [
       "ai",
       "suggestion",
@@ -30,7 +30,9 @@
       "planner",
       "tracker",
       "feedback",
-      "operations"
+      "operations",
+      "branch-target",
+      "reviewable"
     ],
     "confidence_vector": {
       "extraction": 0.89,
@@ -65,6 +67,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
         "relation_type": "references"
       },
@@ -75,10 +81,14 @@
       {
         "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "6a375faad89f69bb1cb8587abbcd2564140690a6d69bad813f3b74b15e8849cef8062485a6cc90fa1a5ea3c4903a97b2c878deabe630c579245dfef2f53c5738"
+  "integrity_sha3_512": "751e03e1b3e81673c7d4b25c644d6c834598311c0d661625ef42074052f2b9691a990eee32cf86057989ee1245d61791fe54094e47b53d73e337ddb2f289f26f"
 }

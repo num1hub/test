@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.chat-to-capsules.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-08T22:35:00Z",
     "name": "Chat to Capsules",
     "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
     "priority": "high",
@@ -19,18 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined path by which a conversation can inspect capsules, summarize graph context, draft new capsules, refine existing ones, and delegate bounded actions into the deeper runtime.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_drafting` turns conversational intent into structured candidate capsules or edits.\n- `explainability` shows which capsules, prompts, or runtime paths informed the answer.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, or N-Infinity.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the missing user-level bridge between Personal AI Assistant, AI Conversation Session, A2C, and the background-agent runtime. It gives the system a clear model for how users talk to the graph without collapsing serious graph work into shallow chat UX.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, and delegable.\n"
+    "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined ingress by which a conversation can inspect capsules, retrieve graph context, draft new capsules, refine existing ones, and delegate bounded actions into deeper runtime lanes.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_retrieval` uses vault-native context before proposing new structure.\n- `capsule_drafting` turns conversational intent into candidate capsules or edits.\n- `working_memory_alignment` keeps the active session usable without confusing session memory, long-term memory, and durable vault state.\n- `multimodal_ingest` accepts text, file content, and voice-transcribed intent as one ingress surface.\n- `confirmation_before_mutation` asks the user before meaningful vault updates are emitted.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, N-Infinity, or vault stewardship lanes.\n- `planning_entry` lets the conversation produce plans, tasks, or maintenance backlogs for later execution instead of forcing mutation in the same turn.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the bridge between Personal AI Assistant and the vault. A person should be able to write, speak, or upload material; receive graph-grounded understanding; and then approve capsule work that routes into Dream, review, validation, or longer-running agent execution. This keeps the interface simple while preserving disciplined capsule operations underneath. The key pattern is that chat should help the user think, compare current capsule reality against new input, notice what is worth preserving, and then either propose direct capsule changes or open bounded follow-up tasks for deeper agent lanes.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, branch-aware, delegable, and explicit about when it is answering, when it is planning, and when it is asking for mutation approval.\n"
   },
   "neuro_concentrate": {
-    "summary": "Chat to Capsules defines how N1Hub turns conversation into graph-grounded work. It matters because a sovereign capsule system cannot rely on ungrounded chat output if it wants reliable memory, traceability, and delegation. This capsule names the pattern where conversation sessions inspect capsules, draft structured graph changes, explain their evidence, and hand off bounded work to DeepMine, Symphony, or N-Infinity. It creates a clean bridge between user dialogue and accountable capsule operations.",
+    "summary": "Chat to Capsules defines how N1Hub turns conversation into graph-grounded capsule work. It matters because a sovereign memory system cannot rely on ungrounded chat output if it wants reliable retrieval, traceability, and safe mutation. This capsule names the pattern where a user can write, speak, or upload material, receive vault-aware understanding, and then explicitly confirm capsule drafting, routing, delegation, or planning. It therefore acts as the disciplined conversational ingress between Personal AI Assistant and the deeper lanes of mining, review, validation, and execution while keeping session memory and vault memory from collapsing into one blob.",
     "keywords": [
       "chat-to-capsules",
       "conversation",
       "capsule-grounding",
+      "confirmation-before-mutation",
       "assistant",
       "delegation",
-      "a2c",
-      "graph-actions",
+      "vault-retrieval",
       "auditability",
       "workspace",
       "n1hub"
@@ -88,6 +88,30 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       },
@@ -103,5 +127,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b8ecfb337ce50268cfabc3e6fcf687c7209eec88cd6a4ed495b1ec3d478873c589026e59969a86bd8cce3c4cff428d25ea0181452260e18b71ff83239d5b69ae"
+  "integrity_sha3_512": "6a17881089b9067589b549f29df30c5593afdd1619c9b5e961b5ab6b64af15a8f33014e18430d6db6cec2b9acc4f748b984ddbe9ce8903e2356dcc159bf68022"
 }

@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.symphony-agent-session.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-06T18:41:12.175Z",
+    "updated_at": "2026-03-08T20:38:00Z",
     "name": "Symphony Agent Session",
     "semantic_hash": "symphony-agent-session-thread-turn-runtime-codex-workspace",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Agent Session\n\n## 1. Definition and Essence\nSymphony Agent Session defines the live coding-agent runtime context opened for one issue inside one workspace. It tracks the active app-server process, thread and turn identifiers, current cwd, last observed event, token counters, and the continuity needed to issue additional turns on the same live thread.\n\n## 2. Core Attributes\n- `session_id` composed from thread and turn identifiers.\n- `thread_id` and current `turn_id` for app-server continuity.\n- `workspace_path` validated execution cwd.\n- `last_event`, `last_message`, and `last_event_at` for reconciliation.\n- `token_totals` and `turn_count` for runtime accounting.\n- `app_server_pid` and termination reason for cleanup and debugging.\n\n## 3. Role in Symphony\nAgent Session is the runtime bridge between workflow policy and actual Codex execution. It lets Symphony reuse a live thread across continuation turns, detect stalls, and surface operator-visible telemetry without confusing one attempt with another.\n\n## 4. N1Hub Alignment\nIn N1Hub, the session exists to keep coding-agent execution anchored to the real issue workspace, the real repository, and the real capsule-aware validation path.\n"
+    "content": "# Symphony Agent Session\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Agent Session as a richer live runtime object that remains visible across terminal, web, mobile, and control-plane views while work is still in flight.\n\n## 2. Desired Future State\n- assignment handles that preserve where a session came from and where its outputs should return\n- richer event and artifact projection instead of only token counters and last message\n- better continuity for async coding work started from issues, comments, or other agent surfaces\n- stronger linkage between session telemetry, review requests, and downstream control surfaces\n\n## 3. Why It Matters\nDream preserves the idea that a live coding session should remain accountable and discoverable while it is running, not only after the attempt ends. That is the difference between a durable coding lane and a black-box prompt call.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Agent Session defines the live execution envelope for one coding-agent conversation inside one issue workspace. It captures the app-server process, thread and turn identifiers, validated cwd, last observed event, token totals, and the continuity required for multi-turn execution on a single live thread. The capsule matters because Symphony does not merely fire one prompt and exit; it must monitor ongoing activity, detect stalls, preserve operator-visible telemetry, and distinguish a durable session from the broader run attempt that owns it. This atom gives the graph a precise place to describe how Codex runtime state actually exists while work is in flight.",
+    "summary": "Symphony Agent Session in the Dream branch preserves a richer live execution envelope for one coding-agent conversation inside one issue workspace. It imagines assignment handles, cross-surface continuity, stronger artifact projection, explicit degraded-session state, clearer session discoverability, and a cleaner link between live coding work and the control surfaces that supervise it. The capsule matters because Symphony should evolve from tracking a live thread to managing a durable, accountable, searchable session object whose running state, review signals, degraded-path recoveries, and outputs remain visible while work is still in flight.",
     "keywords": [
       "symphony",
       "agent-session",
@@ -35,7 +35,10 @@
       "codex",
       "workspace",
       "telemetry",
-      "runtime"
+      "runtime",
+      "assignment-handle",
+      "artifact-projection",
+      "cross-surface"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -66,6 +69,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "depends_on"
+      },
+      {
         "target_id": "capsule.ai.prompt.v1",
         "relation_type": "references"
       },
@@ -81,5 +92,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1cc2a91cbcd73f3435e445be3fd9279aa491ca8f2eabf0cd14cef8c95098c2cde5f754ac5faaace47ce5ecb95844920a1946eb7a9d70e39fcf8b70111aa21faa"
+  "integrity_sha3_512": "18aa6e25f33d9312f086e8d3a663169347399fbbb323322bab2e9cf213215a922ea663bab32979bac75d35669636d5cd3ceba95fb59e1bdc28018e898a858f5c"
 }

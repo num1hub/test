@@ -14,10 +14,13 @@ For a complete operator setup, keep these pieces in mind:
 
 1. The web app
    - Needed for the Settings UI and protected API routes such as `/api/ai/generate`.
+   - Also hosts the `/ai` control plane and the `Vault Steward` agent controls.
 2. Symphony
    - Linear-driven issue runner from `WORKFLOW.md`.
 3. N-Infinity
    - Capsule-graph runner from `NINFINITY_WORKFLOW.md`.
+4. Vault Steward
+   - Direct-provider autonomous capsule-maintenance agent that does not depend on Codex login.
 
 For N-Infinity night shift specifically, the recommended model is:
 
@@ -57,6 +60,7 @@ The current supported provider slots are:
 - OpenAI
 - Anthropic
 - Gemini
+- GitHub Models
 - DeepSeek
 - Grok
 - OpenRouter
@@ -68,6 +72,35 @@ Bring-up flow:
 2. Sign in to the local operator session.
 3. Open Settings and configure the AI Wallet provider.
 4. Use the built-in `Test` button in the AI Wallet form.
+
+Gemini note:
+
+- create the key in Google AI Studio: `https://aistudio.google.com/api-keys`
+- the official quickstart assumes `GEMINI_API_KEY`
+- N1Hub supports Gemini in two ways:
+  - save the key in the `Gemini` AI Wallet slot
+  - or set `GEMINI_API_KEY` on the server for trusted local or host-level bring-up
+- current default model in N1Hub is `gemini-2.5-flash`
+- N1Hub now uses the official `x-goog-api-key` request header for Gemini REST calls
+
+Official references:
+
+- `https://ai.google.dev/gemini-api/docs/quickstart`
+- `https://aistudio.google.com/api-keys`
+
+GitHub Models note:
+
+- N1Hub uses the GitHub Models inference endpoint as an OpenAI-compatible chat-completions lane
+- save a PAT in the `GitHub Models` AI Wallet slot
+- or set `GITHUB_MODELS_TOKEN` or `GITHUB_TOKEN` on the server for trusted local or host-level bring-up
+- optional base URL override: `GITHUB_MODELS_BASE_URL`
+- current default model in N1Hub is `openai/gpt-4.1`
+- if you want usage attributed to an organization, override the base URL to the org-scoped inference root
+
+Official references:
+
+- `https://docs.github.com/en/github-models/prototyping-with-ai-models`
+- `https://docs.github.com/en/github-models/use-github-models/prototyping-with-ai-models#free-prototyping-with-ai-models`
 
 Why this matters:
 
@@ -129,6 +162,14 @@ curl -s http://127.0.0.1:3000/api/ai/generate \
   -d '{"provider":"openai","prompt":"Reply with READY."}'
 ```
 
+```bash
+curl -s http://127.0.0.1:3000/api/ai/generate \
+  -X POST \
+  -H "Authorization: Bearer $N1HUB_AUTH_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"provider":"gemini","prompt":"Reply with READY."}'
+```
+
 ## Background Agent Bring-Up
 
 ### N-Infinity
@@ -146,6 +187,45 @@ Default local status endpoint:
 
 - `http://127.0.0.1:4311/`
 - `http://127.0.0.1:4311/api/v1/state`
+
+### Vault Steward
+
+`Vault Steward` is the first agent lane intended to work after you insert a normal AI Wallet API key
+and flip an agent on. It does not require `codex app-server`. Instead it:
+
+- reads the real capsule vault directly
+- scores likely maintenance targets
+- calls the selected AI Wallet provider
+- writes a persistent maintenance queue under `data/private/agents`
+- updates Dream-side operational capsules with the latest run summary
+
+Bring-up path:
+
+1. Configure at least one enabled provider in AI Wallet.
+2. Open `/ai`.
+3. In the `Vault Steward` section, choose `Auto-select enabled provider` or a specific provider.
+4. Save the agent settings and leave `Enable autonomous Vault Steward` on.
+5. Use `Run Once Now` for a smoke test, then `Start` for the background loop.
+
+Optional manual CLI run:
+
+```bash
+npm run vault-steward -- --once
+```
+
+Operational artifacts:
+
+- config: `data/private/agents/vault-steward.config.json`
+- runtime state: `data/private/agents/vault-steward.runtime.json`
+- latest run: `data/private/agents/vault-steward.latest.json`
+- queue: `data/private/agents/vault-steward.queue.json`
+- log: `data/private/agents/vault-steward.log`
+
+Important posture:
+
+- `Vault Steward` is intentionally Dream-first.
+- It generates maintenance jobs and operational capsules rather than blindly mutating `Real`.
+- This gives N1Hub one real autonomous lane from ordinary API keys while keeping unsafe auto-edits out of the canonical branch.
 
 ### Symphony
 

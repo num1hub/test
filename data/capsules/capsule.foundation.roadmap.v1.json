@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-08T20:35:00Z",
     "name": "Roadmap",
     "semantic_hash": "roadmap-timeline-phases-milestones-strategic-planning-gold-core",
     "priority": "high",
@@ -19,16 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Roadmap: The Strategic Timeline\n\n## 1. Definition and Essence\nA Roadmap capsule aggregates goals, milestones, and tasks into a coherent temporal sequence. It provides a strategic view of planned work over months or years and acts as a guide rather than a rigid schedule.\n\n## 2. Core Attributes\n- phases with names, dates, and linked entities\n- preferred timelineView: gantt | timeline | list\n- projectId association when scoped to a project\n\n## 3. Lifecycle\nRoadmaps are created during strategic planning and updated as phases complete, priorities shift, or constraints change. They can be forked to evaluate alternative trajectories.\n\n## 4. Integration\nPlanner uses roadmaps as the primary strategic interface, project capsules bind scope, and AI Assistant can propose adjustments from execution feedback.\n\n## 5. Philosophical Alignment\nRoadmaps visualize the journey from Zero to One and keep long-horizon intent intelligible during day-to-day execution."
+    "content": "# Roadmap\n\n## 1. Definition and Essence\nA Roadmap capsule is the strategic timeline of a project, initiative, or domain. It aggregates goals, milestones, tasks, sequencing assumptions, and branch posture into a coherent long-horizon structure. In N1Hub a roadmap is not merely a timeline picture; it is the explicit planning object that connects Dream ambition, Real constraints, and review-driven delivery.\n\n## 2. Core Attributes\n- `phases` with names, horizons, dependencies, and linked entities\n- `timeline_view` preference such as gantt, timeline, or list\n- `project_scope` association when the roadmap belongs to a specific project or portfolio line\n- `horizon_bands` such as `30/60/90`, `365`, and `1000-day`\n- `branch_posture` showing which phases are exploratory, committed, review-ready, or delivered\n- `review_anchors` where roadmap reality must be reassessed against evidence and execution pressure\n- `capacity_and_risk_notes` describing the assumptions that could invalidate sequencing\n\n## 3. Lifecycle\nRoadmaps are created during strategic planning, revised as phases complete, and re-shaped when evidence, risk, capacity, or branch truth changes. Alternative trajectories may exist in Dream before a clearer path is promoted toward stronger commitment. A roadmap should evolve under tracker pressure and review rather than remain decorative or frozen.\n\n## 4. Integration\n- **Planner / Planning Horizon Engine:** use roadmap as the strategic field for horizon compression.\n- **Roadmap Planner Agent:** shapes and re-sequences phases under uncertainty.\n- **Daily Planner Agent:** compresses relevant segments into `today`, `tomorrow`, and near-horizon action.\n- **Review Agent:** checks whether the roadmap still deserves trust or needs replanning.\n- **Tracker / Goal / Milestone / Task:** provide evidence, structure, and execution anchors.\n- **Personal AI Assistant:** explains tradeoffs and keeps roadmap meaning legible to the user.\n\n## 5. Philosophical Alignment\nRoadmaps serve To Dig Deep by making long-horizon intent explicit, reviewable, and compressible without confusing aspiration with already-delivered reality.\n"
   },
   "neuro_concentrate": {
-    "summary": "A Roadmap capsule provides a high-level temporal model of goals, milestones, and tasks, usually scoped to a project or major initiative. It organizes work into phases with explicit sequencing and supports multiple visualization modes such as gantt, timeline, and list. Roadmaps are strategic coordination artifacts that evolve with execution reality rather than static schedules. Planner uses them for direction and prioritization, while AI and Tracker signals can trigger revisions that keep long-horizon intent aligned with near-term constraints and measurable outcomes.",
+    "summary": "A Roadmap capsule provides the strategic temporal model of goals, milestones, tasks, sequencing assumptions, and horizon bands for a project or initiative. It organizes work into phases with explicit branch posture, review anchors, and capacity/risk notes while supporting multiple timeline views. The capsule matters because N1Hub needs a durable object that can hold long-horizon intent without collapsing into either vague vision or brittle scheduling theater. Planner, horizon compression, review, and assistant lanes use roadmap structure to keep Dream ambition aligned with Real constraints and measurable execution evidence.",
     "keywords": [
       "roadmap",
       "timeline",
       "phases",
       "milestones",
-      "strategic-planning"
+      "strategic-planning",
+      "horizon",
+      "branch-posture"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -59,6 +61,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.chat-to-capsules.v1",
         "relation_type": "references"
       },
@@ -68,6 +82,18 @@
       },
       {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
         "relation_type": "references"
       },
       {
@@ -86,5 +112,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "99b5161f0a286e79cdb969954500aef66f459fb69f7d36859a85e7dbaa94d9f134bae478b362d43bab155b769ce7dbb5d1ead3bab0d548fb73826c7afb89867c"
+  "integrity_sha3_512": "85a71f49fa8024fd9172d057d5911d550274f1e9f923ea64f1e2b7c74a6f1d448e9a3c7c077b0cf9dac60b57f01fce5f2f8ed7fe78670fb1c8ad097d30d8540d"
 }

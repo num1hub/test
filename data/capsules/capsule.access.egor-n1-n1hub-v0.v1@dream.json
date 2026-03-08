@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.access.egor-n1-n1hub-v0.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "operations",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-v0-access-license-sovereign-control-root",
-    "updated_at": "2026-03-07T10:22:13.759Z",
+    "updated_at": "2026-03-08T21:08:00Z",
     "source": {
       "uri": "internal://capsule.project.n1hub-v0.v1",
       "type": "internal_policy_record"
@@ -21,16 +21,17 @@
     "content": "# Sovereign Access License: N1Hub v0\n\n## 1. Grant of Authority\nThis cryptographic capsule serves as the absolute, immutable access token granting **Egor N1** exclusive, private, and unrestricted operational authority over the `N1Hub v0 Personal Release`.\n\n## 2. Permissions and Scope\n- **Role Designation**: `owner` / `system_architect`\n- **Write Access**: Unlimited authority to mint, supersede, and quarantine capsules across the entire v0 database schema.\n- **Bypass Authority**: Explicit clearance to utilize the `architect_override` mechanism, allowing the manual sealing of foundation axioms without adhering to strict cosmetic token limits (Gate 14 exception).\n- **Expiration**: Perpetual. This genesis license possesses no time-bound restrictions.\n\n## 3. Cryptographic Enactment\nBy the existence of this sealed capsule within the Cognitive Plane, the underlying Node.js backend and JWT authentication microservices are instructed to unconditionally recognize `capsule.person.egor-n1.v1` as the root administrator of the `capsule.project.n1hub-v0.v1` hub."
   },
   "neuro_concentrate": {
-    "summary": "Egor N1 Access in the Dream branch reframes founder authority from pure genesis bootstrap into a more explicit architect-control contract for future environments. It imagines clearer delegation boundaries, stronger emergency-power rationale, and better lineage between exceptional founder access and the governed systems that should eventually inherit or constrain it. The capsule matters because origin authority becomes dangerous when it remains informal while the platform matures. Dream therefore preserves this access grant as a future-aware governance artifact, not merely a permanent root credential sealed in history.",
+    "summary": "In Dream, Egor N1 Access becomes a prototype for future authority design rather than a frozen founder privilege. It points toward visible delegation, bounded override power, clearer emergency-power rationale, reviewable succession paths, and cleaner lineage from bootstrap control to governed institutional stewardship, so that origin authority can evolve into a mature governance pattern instead of remaining an opaque personal exception.",
     "keywords": [
       "access-license",
       "rbac",
-      "root-authority",
+      "bootstrap-authority",
       "n1hub-v0",
       "identity-binding",
       "governance",
       "auditability",
       "architect-override",
+      "delegation",
       "operations"
     ],
     "confidence_vector": {
