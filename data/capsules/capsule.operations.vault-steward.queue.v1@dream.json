@@ -6,8 +6,8 @@
     "type": "operations",
     "subtype": "atomic",
     "author": "Vault Steward Agent",
-    "created_at": "2026-03-08T21:08:28.727Z",
-    "updated_at": "2026-03-08T21:08:28.727Z",
+    "created_at": "2026-03-08T21:38:49.865Z",
+    "updated_at": "2026-03-08T21:38:49.865Z",
     "name": "Vault Steward Queue",
     "semantic_hash": "vault-steward-queue-operations-maintenance-jobs-queue",
     "source": {
@@ -63,5 +63,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0a50127428112e9d6e34c3475002f8d85f948fea1fc25139dae5836d42354e338a1a1df3ab7a6b3b7cf4199b54b05cfe1459d8b19fe045d3cf506ab65fff3338"
+  "integrity_sha3_512": "39fbc97e5bdd6154bdf916290dbd9dc957c351c2a30e3e49957c4956aeb6b7fa1ec0db325652efb6344ed8f90635dee8d401e5396b57bc1e26441446692acc00"
 }
