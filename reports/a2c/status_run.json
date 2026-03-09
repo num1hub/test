@@ -1,0 +1,23 @@
+{
+  "status": "ok",
+  "layout_root": "data/private/a2c",
+  "timestamp": "2026-03-09T08:41:30.686Z",
+  "runtime_mode": "n1hub_repo",
+  "daemon_lock_exists": false,
+  "cron_lock_exists": false,
+  "queue_event_count": 0,
+  "autonomous_run_count": 0,
+  "intake": {
+    "dropzone_files": 0,
+    "quarantine_items": 0,
+    "workspace_items": 9,
+    "failed_retention_items": 1
+  },
+  "index": {
+    "present": true,
+    "nodes": 187,
+    "edges": 1846,
+    "density": 0.053073,
+    "generated_at": "2026-03-09T07:25:41.164Z"
+  }
+}

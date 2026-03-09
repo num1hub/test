@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import StatsCards from '@/components/StatsCards';
@@ -28,7 +28,7 @@ import type { SovereignCapsule } from '@/types/capsule';
 
 const CapsuleGraph = dynamic(() => import('@/components/CapsuleGraph'), { ssr: false });
 
-export default function VaultDashboard() {
+function VaultDashboardContent() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -217,7 +217,11 @@ export default function VaultDashboard() {
           >
             <CapsuleGraph
               capsules={processedCapsules}
-              onNodeClick={(id) => router.push(`/vault/capsule/${id}`)}
+              getNodeHref={(id) =>
+                `/vault/capsule/${encodeURIComponent(id)}${
+                  branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`
+                }`
+              }
               isFullscreen={graphFullscreen}
               onToggleFullscreen={() => setGraphFullscreen(!graphFullscreen)}
             />
@@ -227,5 +231,21 @@ export default function VaultDashboard() {
 
       <ImportModal isOpen={isImportOpen} onClose={() => setIsImportOpen(false)} />
     </div>
+  );
+}
+
+function VaultDashboardFallback() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-400">
+      Initializing Cognitive Plane...
+    </div>
+  );
+}
+
+export default function VaultDashboard() {
+  return (
+    <Suspense fallback={<VaultDashboardFallback />}>
+      <VaultDashboardContent />
+    </Suspense>
   );
 }

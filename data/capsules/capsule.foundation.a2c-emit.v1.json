@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-emit.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "name": "A2C Stage: Emit",
     "semantic_hash": "capsule-foundation-a2c-emit-v1-stage-publish-persistence",
     "priority": "medium",
@@ -19,17 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Emit\n\n## 1. Definition and Essence\nThe Emit stage finalizes validated capsules and commits them to target stores, queues, and downstream workflows. It is the terminal stage that transforms candidate knowledge into durable sovereign graph state.\n\n## 2. Core Attributes\n- `emit_target` storage destination descriptor\n- `commit_id` or persistence transaction reference\n- `emit_policy` controlling retries and exactly-once semantics\n- `post_emit_hooks` for indexing, analytics, and notifications\n- `emit_audit_record` immutable trail of publication event\n\n## 3. Lifecycle\nEmit receives fully validated capsules, persists them atomically, triggers dependent workflows, and logs publication outcomes. Failed emits are retried with idempotency controls to avoid duplicate graph writes.\n\n## 4. Integration\n- **Validate Stage:** accepts only pass-state capsules.\n- **Capsule Vault:** writes sovereign artifacts to storage.\n- **Activity/Audit Log:** records publication events.\n- **Workspace Modules:** enables immediate downstream consumption.\n\n## 5. Philosophical Alignment\nEmission completes To Dig Deep by turning verified insight into shared sovereign state, where knowledge becomes usable and accountable.\n"
+    "content": "# A2C Stage: Emit\n\n## 1. Definition and Essence\nEmit is the publication discipline that turns a validated candidate into durable repo-native state. In N1Hub this is not just a file write. It includes persistence into `data/capsules`, queue cleanup, manifest updates, and index handoff so the rest of the runtime can immediately reason over the result.\n\n## 2. Runtime Responsibilities\n- Write accepted capsules to the live vault path used by the application.\n- Preserve run manifest and queue-ledger context so publication can be reconstructed after the fact.\n- Keep failed queue items recoverable through quarantine and exhausted retry items visible through failed-retention lanes instead of deleting them.\n- Trigger index rebuild semantics so the graph reflects new reality after publication.\n- Distinguish accepted publication from rejected or deferred artifacts rather than mixing them in one storage surface.\n\n## 3. Repo-Native Routing\nThe current runtime maps accepted capsules into `data/capsules`, pipeline state into `data/private/a2c/ingest_pipeline`, task manifests into `data/private/a2c/tasks`, and operational telemetry into `reports/a2c`. Emit is the stage that makes those boundaries coherent.\n\n## 4. Integration\n- **A2C Validate:** is the only safe upstream source.\n- **Quarantine Buffer:** receives unsafe or disputed artifacts.\n- **Background Agent Runtime:** supplies durable run identity and scheduler context.\n- **Index Rebuild:** turns publication into graph-visible state.\n\n## 5. Philosophical Alignment\nEmit serves To Dig Deep by making acceptance accountable. Knowledge is not real because it was generated; it is real because it was validated, published cleanly, and made legible to the rest of the system.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Emit is the commit boundary where accepted candidates become durable system state. It writes validated capsules to target storage, preserves commit identifiers, and hands successful artifacts to downstream indexing, activity, or UI workflows without confusing them with rejected material. The stage matters because a valid candidate is still not reality until persistence and publication are controlled. By isolating emission from the rest of the pipeline, Emit provides idempotent write discipline, clearer rollback boundaries, and an accountable transition from validation success to live graph presence.",
+    "summary": "A2C Stage: Emit is the repo-native publication boundary where a validated candidate becomes durable system state rather than remaining a promising internal object. The current runtime writes accepted capsules into the live vault, preserves run manifests and queue-ledger traces, keeps failed items visible through quarantine or failed-retention lanes, and hands publication off to index rebuild logic so the graph reflects new reality. This matters because acceptance without disciplined persistence is not trustworthy state. Emit therefore separates published knowledge from staged, failed, or recoverable artifacts and makes the transition into live graph presence operationally legible.",
     "keywords": [
       "a2c",
       "emit",
-      "publish",
-      "persistence",
-      "vault",
-      "pipeline"
+      "data-capsules",
+      "run-manifest",
+      "failed-retention",
+      "index-handoff",
+      "idempotent-write",
+      "queue-cleanup",
+      "reports-a2c",
+      "publication"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,10 +62,31 @@
       {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "rebuild_runtime_index",
+        "intent": "Refresh the repo-native graph index after successful publication.",
+        "command": "npm run a2c:index",
+        "hitl_required": false
+      },
+      {
+        "name": "inspect_publication_status",
+        "intent": "Inspect vault, queue, and daemon health after emit or recovery work.",
+        "command": "npm run a2c:status",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "84a1a4c89ee2e6827c40bb601327ae8f22d5fe387c8c3db7b179055c283fd5a4b716deb6550739e2481e6db7cc7a3bc7c8f2d04f2b4cbb308943efbcbb405b4a"
+  "integrity_sha3_512": "93c05c3009d0a988e454b963d2b09e2153b7622d54207dcae4e9f068b2b2048fa3266aa6720fa27a24d6eb7a81ae60a2ce8689fb29a3995e65e94d449dbc1c2b"
 }

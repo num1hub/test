@@ -1,0 +1,94 @@
+{
+  "anchorCount": 67,
+  "edgeCount": 357,
+  "brokenLinkCount": 0,
+  "zeroInboundCount": 0,
+  "weakComponentCount": 1,
+  "reciprocalEdgeRatio": 0.723,
+  "stronglyConnectedComponentCount": 1,
+  "largestStronglyConnectedComponentSize": 67,
+  "topOutDegree": [
+    {
+      "id": "doc:n1hub.readme",
+      "out": 18
+    },
+    {
+      "id": "doc:governance.anchors-spec",
+      "out": 16
+    },
+    {
+      "id": "doc:n1hub.agents",
+      "out": 16
+    },
+    {
+      "id": "doc:n1hub.codex",
+      "out": 16
+    },
+    {
+      "id": "doc:workflow.issue-worker",
+      "out": 11
+    },
+    {
+      "id": "doc:n1hub.soul",
+      "out": 10
+    },
+    {
+      "id": "doc:n1hub.tools",
+      "out": 10
+    },
+    {
+      "id": "doc:workflow.ninfinity-night-shift",
+      "out": 10
+    },
+    {
+      "id": "interface:anchors.package-api",
+      "out": 10
+    },
+    {
+      "id": "doc:n1hub.low-blast-radius-architecture",
+      "out": 8
+    }
+  ],
+  "topInDegree": [
+    {
+      "id": "doc:n1hub.readme",
+      "in": 22
+    },
+    {
+      "id": "doc:governance.anchors-spec",
+      "in": 20
+    },
+    {
+      "id": "doc:n1hub.codex",
+      "in": 14
+    },
+    {
+      "id": "doc:n1hub.agents",
+      "in": 12
+    },
+    {
+      "id": "doc:n1hub.tools",
+      "in": 11
+    },
+    {
+      "id": "interface:anchors.package-api",
+      "in": 11
+    },
+    {
+      "id": "doc:validator.reference",
+      "in": 10
+    },
+    {
+      "id": "doc:governance.terminology",
+      "in": 9
+    },
+    {
+      "id": "doc:n1hub.low-blast-radius-architecture",
+      "in": 9
+    },
+    {
+      "id": "doc:n1hub.soul",
+      "in": 9
+    }
+  ]
+}

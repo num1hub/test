@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.symphony-observability.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "Symphony Observability",
     "semantic_hash": "symphony-observability-logs-status-snapshot-telemetry-runtime-surface",
     "source": {
-      "uri": "internal://lib/symphony/httpServer.ts",
+      "uri": "internal://lib/ai/controlSurface.ts",
       "type": "repository_implementation"
     },
     "priority": "high",
@@ -23,22 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Observability\n\n## 1. Definition and Essence\nSymphony Observability defines how operators can see what the orchestrator is doing while multiple issue runs are active. It covers structured logs, runtime snapshots, token accounting, rate-limit telemetry, recent events, assignment visibility, and optional human-readable or HTTP-exposed status surfaces.\n\n## 2. Core Attributes\n- `structured_logs` with issue and session context.\n- `runtime_snapshot` for running, retrying, token, and timing state.\n- `session_metrics` including token totals, turn counts, and duration.\n- `assignment_projection` so a human can tell which issue, request, or async assignment produced the current activity.\n- `rate_limit_state` for the latest app-server limit payloads.\n- `status_surface` for terminal or HTTP views.\n- `error_visibility` so invalid workflow reloads and tracker failures remain operator-visible.\n- `cost_and_lane_visibility` so operators can tell which lane burned budget and why.\n\n## 3. Role in Symphony\nObservability is what makes the service operable as a daemon rather than a blind script. It is the place where retries, stalls, cancellations, throughput, and workload identity become visible enough to debug and trust.\n\n## 4. N1Hub Alignment\nIn N1Hub, observability is especially important because the service is expected to act autonomously while still staying accountable to repository truth, safety rules, operator oversight, and the user-facing control surface. It should therefore feed not only logs and dashboards, but also mobile-friendly state projection and review-aware activity views.\n"
+    "content": "# Symphony Observability\n\n## 1. Definition and Essence\nSymphony Observability defines how operators can see what the orchestration service is doing while multiple issue runs or background jobs are active. It covers structured logs, runtime snapshots, token accounting, rate-limit telemetry, recent events, assignment visibility, and human-readable status surfaces.\n\n## 2. Core Attributes\n- `structured_logs` with issue and session context.\n- `runtime_snapshot` for running, retrying, token, and timing state.\n- `session_metrics` including token totals, turn counts, and duration.\n- `assignment_projection` so a human can tell which issue, request, or async assignment produced the current activity.\n- `status_surface` for HTTP, dashboard, or terminal views.\n- `pipeline_step_projection` that emits stage-by-stage status lines instead of forcing operators to infer progress from raw logs.\n- `vector_charts` that display 6D confidence and health signals in a compact human-readable form.\n- `error_visibility` so invalid workflow reloads, tracker failures, and degraded-lane fallbacks remain operator-visible.\n\n## 3. Human-Readable Operator Surfaces\nThe A2C runtime includes a small but important terminal observability layer: pipeline step emission, verdict banners, and confidence-vector charts with rich-terminal support when available and plain stderr fallback when not. That matters because not every operator surface is a dashboard; many real interventions still begin in a terminal session.\n\n## 4. N1Hub Alignment\nObservability is what makes the service operable as a daemon rather than a blind script. It should bridge structured telemetry, terminal status, and user-facing control surfaces so autonomous work can be trusted, debugged, and interrupted before it drifts too far.\n"
   },
   "neuro_concentrate": {
-    "summary": "Symphony Observability defines the operator-facing evidence layer for the orchestration service. It covers structured logs, runtime snapshots, token and duration accounting, recent event summaries, assignment visibility, rate-limit payloads, degraded and fallback visibility, and optional status surfaces such as an HTTP dashboard. The capsule matters because a long-running issue runner cannot be trusted or debugged if its dispatch, retry, stall, reconciliation, cost behavior, or degraded-lane recoveries remain invisible. By giving observability its own atom, the graph can discuss how Symphony proves what it is doing, what failed, what it cost, whether it only survived by fallback, and whether the daemon is healthy enough to keep running unattended.",
+    "summary": "Symphony Observability defines the operator-facing evidence layer for orchestration, and it now includes a clearer human-readable terminal surface inspired by the A2C neuro-terminal helpers. Structured logs and snapshots remain essential, but stage-by-stage status lines, verdict banners, and compact 6D vector charts also matter because many real interventions still begin in a shell or daemon log stream rather than on a polished dashboard. This makes observability more useful during live runs: operators can see what is running, which stage it is in, how healthy its confidence profile looks, and whether the runtime is degrading or completing cleanly.",
     "keywords": [
-      "symphony",
-      "observability",
-      "logs",
-      "status",
-      "snapshot",
-      "telemetry",
-      "runtime",
-      "assignment-visibility",
-      "fallback-visibility",
-      "cost-visibility",
-      "dashboard"
+      "symphony-observability",
+      "terminal-status",
+      "vector-charts",
+      "pipeline-steps",
+      "verdict-banners",
+      "structured-logs",
+      "runtime-snapshot",
+      "operator-surface",
+      "daemon-telemetry",
+      "stderr-fallback"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -83,10 +82,18 @@
       {
         "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "4b7a6fc9afa12391ce60ba317efdd261d899f0fe710fbe184abe96c44afbefaa9e89ae8223ced499e2c248e7d74d0ac73501d370efe371aea2a173c49f358991"
+  "integrity_sha3_512": "8408cffd5ef5f650f68854dde477b860d66602da88adc5eeb5b83b0d32c02a2d0e2d0558f2c3cc42d804fa8f04cae30646a7d5c5ea4e5e23e0b07253fab03dc2"
 }

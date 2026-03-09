@@ -47,6 +47,7 @@ codex:
   read_timeout_ms: 5000
   stall_timeout_ms: 300000
 ---
+<!-- @anchor doc:workflow.issue-worker links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.tools,doc:governance.anchors-spec,doc:validator.reference,doc:projects.reference,doc:branching.real-dream-diff,arch:symphony.runtime,flow:symphony.prompt-render note="Repo-owned Symphony issue-worker contract for N1Hub." -->
 # N1Hub Issue Worker
 
 You are working inside an isolated N1Hub.com issue workspace created by Symphony.
@@ -55,7 +56,7 @@ You are working inside an isolated N1Hub.com issue workspace created by Symphony
 
 - N1Hub is a Next.js App Router application for managing CapsuleOS knowledge capsules.
 - N1Hub follows the "To Dig Deep in Capsules" approach: move from the issue or project surface down into the actual capsule, branch, validator, and API truth before deciding on a code change.
-- Key project references live in `README.md`, `docs/validator.md`, `docs/projects.md`, and `docs/real-dream-diff.md`.
+- Key project references live in `README.md`, `AGENTS.md`, `CODEX.md`, `SOUL.md`, `TOOLS.md`, `docs/ANCHORS_SPEC.md`, `docs/validator.md`, `docs/projects.md`, and `docs/real-dream-diff.md`.
 - Capsule validation is a first-class concern. If you change validator logic or capsule data, run the smallest relevant validator checks before finishing.
 - The app includes API routes, diff/merge flows, branch overlays, project hierarchy features, and validation tooling. Preserve those existing invariants.
 
@@ -78,8 +79,9 @@ You are working inside an isolated N1Hub.com issue workspace created by Symphony
 5. For UI or API behavior changes, run the narrowest meaningful Vitest coverage.
 6. For capsule, branch, diff, or validator changes, run the validator CLI and/or the nearest validator tests.
 7. Update nearby docs when you change externally visible behavior or project workflows.
-8. Keep the workspace state coherent for follow-up turns; do not discard prior attempt work unless it is clearly wrong.
-9. Finish when the implementation and verification are strong enough for human review.
+8. If you change a governed anchor surface such as root docs, workflow docs, validator boundaries, A2C runtime, Symphony runtime, graph runtime, or anchor-governance scripts, run the relevant anchor checks (`npm run validate:anchors`, `npm run verify:root-docs`, `npm run test:anchors`, or `npm run check:anchors:full`).
+9. Keep the workspace state coherent for follow-up turns; do not discard prior attempt work unless it is clearly wrong.
+10. Finish when the implementation and verification are strong enough for human review.
 
 ## Useful N1Hub Commands
 

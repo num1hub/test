@@ -1,3 +1,4 @@
+// @anchor arch:graph.runtime links=doc:projects.reference,doc:branching.real-dream-diff,doc:n1hub.readme note="Capsule graph runtime surface shared by project and vault graph views."
 import type { CapsuleType, SovereignCapsule } from '@/types/capsule';
 
 export type CapsuleGraphNodeData = {
@@ -16,6 +17,7 @@ export type CapsuleGraphLinkData = {
   target: string;
   name: string;
   color: string;
+  weight: number;
 };
 
 export type CapsuleGraphData = {
@@ -71,6 +73,23 @@ function getNodeColor(type?: CapsuleType): string {
   return TYPE_COLORS[type] ?? DEFAULT_NODE_COLOR;
 }
 
+function normalizeRelationType(value: string | undefined): string {
+  const trimmed = value?.trim();
+  if (!trimmed) return 'link';
+  return trimmed;
+}
+
+function getAggregatedLinkKey(sourceId: string, targetId: string, relationType: string): string {
+  return `${sourceId}::${targetId}::${relationType}`;
+}
+
+type LinkFrequencyBucket = {
+  sourceId: string;
+  targetId: string;
+  relationType: string;
+  count: number;
+};
+
 export function extractGraphEndpointId(endpoint: unknown): string | null {
   if (typeof endpoint === 'string' || typeof endpoint === 'number') {
     return String(endpoint);
@@ -99,12 +118,34 @@ export function buildCapsuleGraphData(
   capsules: SovereignCapsule[],
 ): CapsuleGraphData {
   const linkCounts = new Map<string, number>();
+  const aggregatedLinks = new Map<string, LinkFrequencyBucket>();
+  const validNodeIds = new Set(capsules.map((capsule) => capsule.metadata.capsule_id));
 
   capsules.forEach((capsule) => {
     (capsule.recursive_layer?.links ?? []).forEach((link) => {
       const sourceId = capsule.metadata.capsule_id;
+      const targetId = link.target_id;
+      const relationType = normalizeRelationType(link.relation_type);
+
+      if (sourceId === targetId) return;
+      if (!validNodeIds.has(targetId)) return;
+
+      const key = getAggregatedLinkKey(sourceId, targetId, relationType);
+      const existingBucket = aggregatedLinks.get(key);
+
+      if (existingBucket) {
+        existingBucket.count += 1;
+      } else {
+        aggregatedLinks.set(key, {
+          sourceId,
+          targetId,
+          relationType,
+          count: 1,
+        });
+      }
+
       linkCounts.set(sourceId, (linkCounts.get(sourceId) ?? 0) + 1);
-      linkCounts.set(link.target_id, (linkCounts.get(link.target_id) ?? 0) + 1);
+      linkCounts.set(targetId, (linkCounts.get(targetId) ?? 0) + 1);
     });
   });
 
@@ -129,27 +170,27 @@ export function buildCapsuleGraphData(
     };
   });
 
-  const validNodeIds = new Set(nodes.map((node) => node.id));
-
-  const links: CapsuleGraphLinkData[] = capsules.flatMap((capsule) =>
-    (capsule.recursive_layer?.links ?? [])
-      .filter((link) => validNodeIds.has(link.target_id))
-      .map((link) => ({
-        source: capsule.metadata.capsule_id,
-        target: link.target_id,
-        name: link.relation_type || 'link',
-        color: DEFAULT_LINK_COLOR,
-      })),
-  );
+  const links: CapsuleGraphLinkData[] = Array.from(aggregatedLinks.values())
+    .filter((link) => validNodeIds.has(link.sourceId) && validNodeIds.has(link.targetId))
+    .map((link) => ({
+      source: link.sourceId,
+      target: link.targetId,
+      name: link.relationType,
+      color: DEFAULT_LINK_COLOR,
+      weight: link.count,
+    }));
 
   return { nodes, links };
 }
 
 export function buildCapsuleGraphTooltip(node: CapsuleGraphNodeData): string {
+  const showIdentifier = node.name !== node.fullName;
+
   return `
     <div style="background: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 8px; max-width: 300px; color: #e2e8f0; font-family: ui-sans-serif, system-ui, sans-serif; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);">
       <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: ${escapeHtml(node.originalColor)}; margin-bottom: 4px;">${escapeHtml(node.type)}</div>
-      <strong style="display: block; margin-bottom: 8px; font-size: 14px; word-break: break-all;">${escapeHtml(node.fullName)}</strong>
+      <strong style="display: block; margin-bottom: 4px; font-size: 14px; word-break: break-word;">${escapeHtml(node.name)}</strong>
+      ${showIdentifier ? `<div style="margin-bottom: 8px; font-size: 11px; color: #64748b; word-break: break-all;">${escapeHtml(node.fullName)}</div>` : ''}
       <p style="font-size: 12px; color: #94a3b8; line-height: 1.4; margin: 0;">${escapeHtml(node.summary)}</p>
     </div>
   `;

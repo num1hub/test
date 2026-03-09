@@ -1,242 +1,110 @@
 import fs from 'fs';
-import fsp from 'fs/promises';
-import path from 'path';
-import { execFileSync, spawn } from 'child_process';
+import { spawn } from 'child_process';
 import { z } from 'zod';
 import { logActivity } from '@/lib/activity';
 import { getLocalCodexAvailability, runLocalCodexStructuredTask } from '@/lib/agents/localCodex';
-import {
-  generateTextWithAiProvider,
-  getResolvedAiProviderCatalog,
-  type AiProviderCatalogEntry,
-} from '@/lib/ai/providerRuntime';
-import { type AiWalletProviderId, aiWalletProviderIdSchema } from '@/lib/aiWalletSchema';
+import { generateTextWithAiProvider, getResolvedAiProviderCatalog } from '@/lib/ai/providerRuntime';
+import { type AiWalletProviderId } from '@/lib/aiWalletSchema';
 import { readCapsulesFromDisk } from '@/lib/capsuleVault';
-import { dataPath } from '@/lib/dataPath';
 import { readBranchManifest, readOverlayCapsule, writeOverlayCapsule } from '@/lib/diff/branch-manager';
-import { computeIntegrityHash, stableHash } from '@/lib/validator/utils';
+import { stableHash } from '@/lib/validator/utils';
 import type { SovereignCapsule } from '@/types/capsule';
+import {
+  CODEX_FOREMAN_MAX_QUEUE_CONTEXT,
+  CODEX_FOREMAN_MAX_SCOUT_ACTIONS,
+  CODEX_FOREMAN_MAX_SCOUT_JOBS,
+  CODEX_FOREMAN_MAX_SCOUT_OBSERVATIONS,
+  CODEX_FOREMAN_MAX_SCOUT_TARGETS,
+  TSX_CLI_PATH,
+  VAULT_STEWARD_LOG_PATH,
+  VAULT_STEWARD_SCRIPT_PATH,
+} from './vaultSteward/constants';
+import {
+  aiOutputSchema,
+  codexReviewerOutputSchema,
+  codexSupervisorOutputSchema,
+  executorOutputSchema,
+  vaultStewardConfigSchema,
+  vaultStewardLaneReportSchema,
+  vaultStewardRuntimeSchema,
+  vaultStewardRunSchema,
+  vaultStewardSwarmSchema,
+  vaultStewardTargetSchema,
+  vaultStewardUpdateSchema,
+  vaultStewardWorkstreamSchema,
+  VaultStewardConfig,
+  VaultStewardJob,
+  VaultStewardQueue,
+  VaultStewardRun,
+  VaultStewardRuntime,
+  VaultStewardUpdateInput,
+} from './vaultSteward/schemas';
+import {
+  applyQueueCooldownToSummary,
+  buildFallbackJobsFromTargets,
+  computeAdaptiveDaemonDelay,
+  filterNewJobsAgainstQueue,
+  filterPlanAgainstQueueCooldown,
+  getCapsuleQueueHistory,
+  isVaultStewardProcessCommand,
+  rankSwarmApiProviders,
+  selectExecutorJobsForRun,
+  shouldCooldownCapsule,
+  shouldBypassCodexForemanCadenceHold,
+  shouldRunCodexForeman,
+  summarizeVaultSignals,
+  type VaultSignalSummary,
+  type VaultStewardScoutResult,
+  mergeJobs,
+} from './vaultSteward/queue-planning';
+import { applyExecutorUpdate, buildLatestRunCapsule, buildPlanCapsule, buildQueueCapsule } from './vaultSteward/maintenance-artifacts';
+import { buildVaultStewardSwarmState, getCodexForemanCadenceHold, getCodexForemanCooldown } from './vaultSteward/swarm-state';
+import * as vaultStewardPrompting from './vaultSteward/prompting';
+import {
+  DEFAULT_VAULT_STEWARD_RUNTIME,
+  readVaultStewardConfig,
+  readVaultStewardLatestRun,
+  readVaultStewardQueue,
+  readVaultStewardRuntime,
+  writeVaultStewardConfig,
+  writeVaultStewardLatestRun,
+  writeVaultStewardQueue,
+  writeVaultStewardRuntime,
+  normalizeVaultStewardRuntime,
+  terminateVaultStewardProcesses,
+  sleep,
+} from './vaultSteward/runtime-store';
 
-const AGENTS_DIR = dataPath('private', 'agents');
-const VAULT_STEWARD_CONFIG_PATH = path.join(AGENTS_DIR, 'vault-steward.config.json');
-const VAULT_STEWARD_RUNTIME_PATH = path.join(AGENTS_DIR, 'vault-steward.runtime.json');
-const VAULT_STEWARD_HISTORY_PATH = path.join(AGENTS_DIR, 'vault-steward.history.jsonl');
-const VAULT_STEWARD_QUEUE_PATH = path.join(AGENTS_DIR, 'vault-steward.queue.json');
-const VAULT_STEWARD_LATEST_PATH = path.join(AGENTS_DIR, 'vault-steward.latest.json');
-const VAULT_STEWARD_LOG_PATH = path.join(AGENTS_DIR, 'vault-steward.log');
-const VAULT_STEWARD_SCRIPT_PATH = path.join(process.cwd(), 'scripts', 'vault-steward.ts');
-const TSX_CLI_PATH = path.join(process.cwd(), 'node_modules', 'tsx', 'dist', 'cli.mjs');
-
-type VaultStewardProcessEntry = {
-  pid: number;
-  ppid: number | null;
-  pgid: number | null;
-  command: string;
+export {
+  applyQueueCooldownToSummary,
+  buildFallbackJobsFromTargets,
+  computeAdaptiveDaemonDelay,
+  filterNewJobsAgainstQueue,
+  filterPlanAgainstQueueCooldown,
+  getCapsuleQueueHistory,
+  isVaultStewardProcessCommand,
+  rankSwarmApiProviders,
+  selectExecutorJobsForRun,
+  shouldCooldownCapsule,
+  shouldBypassCodexForemanCadenceHold,
+  shouldRunCodexForeman,
+  summarizeVaultSignals,
+  mergeJobs,
 };
 
-const vaultStewardModeSchema = z.enum(['continuous', 'nightly']);
-const vaultStewardWorkstreamSchema = z.enum(['decomposition', 'markup', 'graph_refactor', 'mixed']);
-const vaultStewardPrioritySchema = z.enum(['high', 'medium', 'low']);
-const MAX_AUTONOMOUS_EXECUTOR_JOBS_PER_RUN = 2;
-const CODEX_FOREMAN_TIMEOUT_COOLDOWN_MS = 30 * 60 * 1000;
-const CODEX_FOREMAN_MIN_INTERVAL_MS = 20 * 60 * 1000;
-const CAPSULE_RECENT_ACTIVITY_WINDOW_MS = 12 * 60 * 60 * 1000;
-const CAPSULE_RECENT_ACTIVITY_MAX_COMPLETED = 2;
-const CODEX_FOREMAN_MAX_SCOUT_OBSERVATIONS = 5;
-const CODEX_FOREMAN_MAX_SCOUT_ACTIONS = 5;
-const CODEX_FOREMAN_MAX_SCOUT_TARGETS = 4;
-const CODEX_FOREMAN_MAX_SCOUT_JOBS = 4;
-const CODEX_FOREMAN_MAX_QUEUE_CONTEXT = 4;
-const SWARM_API_PROVIDER_EXCLUSIONS = new Set<AiWalletProviderId>([
-  'codex_subscription',
-  'claude_subscription',
-  'n1_subscription',
-]);
+const DEFAULT_RUNTIME = DEFAULT_VAULT_STEWARD_RUNTIME;
+const USE_LEGACY_VAULT_STEWARD_PROMPTS = process.env.N1HUB_VAULT_STEWARD_LEGACY_PROMPTS === '1';
 
-const vaultStewardConfigSchema = z.object({
-  version: z.literal(1),
-  enabled: z.boolean(),
-  provider: aiWalletProviderIdSchema.nullable(),
-  model: z.string().trim().max(160).nullable(),
-  mode: vaultStewardModeSchema,
-  interval_minutes: z.number().int().min(1).max(1440),
-  night_start_hour: z.number().int().min(0).max(23),
-  night_end_hour: z.number().int().min(0).max(23),
-  timezone: z.string().trim().max(120).nullable(),
-  max_targets_per_run: z.number().int().min(1).max(12),
-  updated_at: z.string().datetime(),
-});
+const readConfig = readVaultStewardConfig;
+const readRuntime = readVaultStewardRuntime;
+const readQueue = readVaultStewardQueue;
+const readLatestRun = readVaultStewardLatestRun;
+const writeConfig = writeVaultStewardConfig;
+const writeRuntime = writeVaultStewardRuntime;
+const writeQueue = writeVaultStewardQueue;
+const writeLatestRun = writeVaultStewardLatestRun;
 
-const vaultStewardRuntimeSchema = z.object({
-  version: z.literal(1),
-  pid: z.number().int().positive().nullable(),
-  status: z.enum(['stopped', 'starting', 'running']),
-  started_at: z.string().datetime().nullable(),
-  last_heartbeat_at: z.string().datetime().nullable(),
-  last_run_at: z.string().datetime().nullable(),
-  last_exit_at: z.string().datetime().nullable(),
-  latest_run_id: z.string().trim().nullable(),
-  loop_count: z.number().int().min(0),
-  idle_streak: z.number().int().min(0).default(0),
-  next_scheduled_at: z.string().datetime().nullable().default(null),
-  last_error: z.string().trim().nullable(),
-  updated_at: z.string().datetime(),
-});
-
-const vaultStewardTargetSchema = z.object({
-  capsule_id: z.string().trim().min(1),
-  reason: z.string().trim().min(1),
-  priority: vaultStewardPrioritySchema.default('medium'),
-});
-
-const vaultStewardDraftJobSchema = z.object({
-  label: z.string().trim().min(1),
-  goal: z.string().trim().min(1),
-  workstream: vaultStewardWorkstreamSchema.default('mixed'),
-  capsule_ids: z.array(z.string().trim().min(1)).min(1).max(12),
-  suggested_branch: z.enum(['dream', 'real']).default('dream'),
-  needs_human_confirmation: z.boolean().default(true),
-});
-
-const vaultStewardJobSchema = z.object({
-  id: z.string().trim().min(1),
-  label: z.string().trim().min(1),
-  goal: z.string().trim().min(1),
-  workstream: vaultStewardWorkstreamSchema,
-  capsule_ids: z.array(z.string().trim().min(1)).min(1).max(12),
-  suggested_branch: z.enum(['dream', 'real']).default('dream'),
-  needs_human_confirmation: z.boolean().default(true),
-  created_at: z.string().datetime(),
-  source_run_id: z.string().trim().min(1),
-  status: z.enum(['queued', 'accepted', 'completed', 'dismissed']).default('queued'),
-});
-
-const vaultStewardLaneReportSchema = z.object({
-  id: z.enum(['scout', 'foreman', 'reviewer', 'maintainer']),
-  label: z.string().trim().min(1),
-  engine: z.enum(['provider', 'local_codex']),
-  status: z.enum(['completed', 'failed', 'skipped']),
-  provider: z.string().trim().nullable(),
-  model: z.string().trim().nullable(),
-  summary: z.string().trim().min(1),
-  error: z.string().trim().nullable().default(null),
-});
-
-const vaultStewardLaneStateSchema = z.object({
-  id: z.enum(['scout', 'foreman', 'reviewer', 'maintainer']),
-  label: z.string().trim().min(1),
-  engine: z.enum(['provider', 'local_codex']),
-  state: z.enum(['ready', 'cooldown', 'unavailable']),
-  available: z.boolean(),
-  provider: z.string().trim().nullable(),
-  model: z.string().trim().nullable(),
-  plan_type: z.string().trim().nullable().default(null),
-  detail: z.string().trim().min(1),
-  cooldown_until: z.string().datetime().nullable().default(null),
-});
-
-const vaultStewardSwarmSchema = z.object({
-  mode: z.enum(['unavailable', 'provider_only', 'hybrid_ready', 'hybrid_active']),
-  summary: z.string().trim().min(1),
-  ready_provider_count: z.number().int().min(0),
-  default_provider: z.string().trim().nullable(),
-  codex_available: z.boolean(),
-  codex_plan_type: z.string().trim().nullable().default(null),
-  lanes: z.array(vaultStewardLaneStateSchema).max(4),
-});
-
-const vaultStewardRunSchema = z.object({
-  run_id: z.string().trim().min(1),
-  started_at: z.string().datetime(),
-  completed_at: z.string().datetime(),
-  status: z.enum(['completed', 'failed', 'skipped']),
-  reason: z.string().trim().min(1),
-  provider: aiWalletProviderIdSchema.nullable(),
-  model: z.string().trim().nullable(),
-  overview: z.string().trim().min(1),
-  workstream: vaultStewardWorkstreamSchema,
-  observations: z.array(z.string().trim().min(1)).max(12),
-  suggested_actions: z.array(z.string().trim().min(1)).max(12),
-  targets: z.array(vaultStewardTargetSchema).max(12),
-  proposed_jobs: z.array(vaultStewardJobSchema).max(12),
-  executed_jobs: z.array(vaultStewardJobSchema).max(12).default([]),
-  lane_reports: z.array(vaultStewardLaneReportSchema).max(5).default([]),
-  raw_text: z.string().nullable(),
-  graph_snapshot: z.object({
-    total_capsules: z.number().int().min(0),
-    orphaned_capsules: z.number().int().min(0),
-    by_type: z.record(z.string(), z.number().int().min(0)),
-  }),
-});
-
-const vaultStewardQueueSchema = z.object({
-  version: z.literal(1),
-  updated_at: z.string().datetime(),
-  jobs: z.array(vaultStewardJobSchema),
-});
-
-const vaultStewardUpdateSchema = z.object({
-  enabled: z.boolean().optional(),
-  provider: aiWalletProviderIdSchema.or(z.literal('auto')).nullable().optional(),
-  model: z.string().trim().max(160).optional(),
-  mode: vaultStewardModeSchema.optional(),
-  interval_minutes: z.number().int().min(1).max(1440).optional(),
-  night_start_hour: z.number().int().min(0).max(23).optional(),
-  night_end_hour: z.number().int().min(0).max(23).optional(),
-  timezone: z.string().trim().max(120).nullable().optional(),
-  max_targets_per_run: z.number().int().min(1).max(12).optional(),
-});
-
-const aiOutputSchema = z.object({
-  overview: z.string().trim().min(1),
-  workstream: vaultStewardWorkstreamSchema.default('mixed'),
-  observations: z.array(z.string().trim().min(1)).max(12).default([]),
-    suggested_actions: z.array(z.string().trim().min(1)).max(12).default([]),
-    targets: z.array(vaultStewardTargetSchema).max(12).default([]),
-    proposed_jobs: z.array(vaultStewardDraftJobSchema).max(12).default([]),
-  });
-
-const codexSupervisorOutputSchema = z.object({
-  overview: z.string().trim().min(1),
-  workstream: vaultStewardWorkstreamSchema.default('mixed'),
-  observations: z.array(z.string().trim().min(1)).max(12).default([]),
-  suggested_actions: z.array(z.string().trim().min(1)).max(12).default([]),
-  targets: z.array(vaultStewardTargetSchema).max(12).default([]),
-  proposed_jobs: z.array(vaultStewardDraftJobSchema).max(12).default([]),
-  supervisor_summary: z.string().trim().min(1),
-});
-
-const codexReviewerOutputSchema = z.object({
-  review_summary: z.string().trim().min(1),
-  operator_focus: z.array(z.string().trim().min(1)).max(8).default([]),
-  risk_flags: z.array(z.string().trim().min(1)).max(8).default([]),
-  cancel_job_ids: z.array(z.string().trim().min(1)).max(12).default([]),
-});
-
-const executorOutputSchema = z.object({
-  updates: z
-    .array(
-      z.object({
-        capsule_id: z.string().trim().min(1),
-        updated_summary: z.string().trim().min(1),
-        added_keywords: z
-          .array(z.string().trim().min(1))
-          .default([])
-          .transform((values) => values.slice(0, 8)),
-        maintenance_note: z.string().trim().min(1),
-        rationale: z.string().trim().min(1),
-      }),
-    )
-    .max(12)
-    .default([]),
-});
-
-export type VaultStewardConfig = z.infer<typeof vaultStewardConfigSchema>;
-export type VaultStewardRuntime = z.infer<typeof vaultStewardRuntimeSchema>;
-export type VaultStewardRun = z.infer<typeof vaultStewardRunSchema>;
-export type VaultStewardJob = z.infer<typeof vaultStewardJobSchema>;
-export type VaultStewardQueue = z.infer<typeof vaultStewardQueueSchema>;
-export type VaultStewardUpdateInput = z.infer<typeof vaultStewardUpdateSchema>;
+export type { VaultStewardConfig, VaultStewardJob, VaultStewardQueue, VaultStewardRun, VaultStewardRuntime, VaultStewardUpdateInput };
 
 export interface VaultStewardState {
   config: VaultStewardConfig;
@@ -246,124 +114,9 @@ export interface VaultStewardState {
   swarm: z.infer<typeof vaultStewardSwarmSchema>;
 }
 
-interface CapsuleSignal {
-  capsule_id: string;
-  name: string;
-  type: string;
-  subtype: string;
-  status: string;
-  outbound_links: number;
-  inbound_links: number;
-  summary_length: number;
-  keyword_count: number;
-  progress: number | null;
-  reasons: string[];
-}
-
-interface VaultSignalSummary {
-  total_capsules: number;
-  orphaned_capsules: number;
-  by_type: Record<string, number>;
-  inventory: Array<{
-    capsule_id: string;
-    type: string;
-    subtype: string;
-    status: string;
-    progress: number | null;
-    outbound_links: number;
-    inbound_links: number;
-    summary_length: number;
-    keyword_count: number;
-  }>;
-  candidates: CapsuleSignal[];
-}
-
-interface CapsuleQueueHistory {
-  queuedOrAccepted: number;
-  recentCompleted: number;
-  completedWorkstreams: Set<string>;
-  lastCompletedAtMs: number | null;
-}
-
-type AiOutput = z.infer<typeof aiOutputSchema>;
-
-interface VaultStewardScoutResult {
-  normalized: AiOutput;
-  provider: AiWalletProviderId | null;
-  model: string | null;
-  rawText: string | null;
-  reason: string;
-  lane: z.infer<typeof vaultStewardLaneReportSchema>;
-}
-
-const DEFAULT_CONFIG = (): VaultStewardConfig => ({
-  version: 1,
-  enabled: false,
-  provider: null,
-  model: null,
-  mode: 'nightly',
-  interval_minutes: 30,
-  night_start_hour: 1,
-  night_end_hour: 6,
-  timezone: null,
-  max_targets_per_run: 6,
-  updated_at: new Date(0).toISOString(),
-});
-
-const DEFAULT_RUNTIME = (): VaultStewardRuntime => ({
-  version: 1,
-  pid: null,
-  status: 'stopped',
-  started_at: null,
-  last_heartbeat_at: null,
-  last_run_at: null,
-  last_exit_at: null,
-  latest_run_id: null,
-  loop_count: 0,
-  idle_streak: 0,
-  next_scheduled_at: null,
-  last_error: null,
-  updated_at: new Date(0).toISOString(),
-});
-
-const DEFAULT_QUEUE = (): VaultStewardQueue => ({
-  version: 1,
-  updated_at: new Date(0).toISOString(),
-  jobs: [],
-});
 
 function nowIso(): string {
   return new Date().toISOString();
-}
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-function isSwarmApiProvider(provider: AiWalletProviderId): boolean {
-  return !SWARM_API_PROVIDER_EXCLUSIONS.has(provider);
-}
-
-export function rankSwarmApiProviders(
-  catalog: Array<Pick<AiProviderCatalogEntry, 'provider' | 'available' | 'selectedByDefault'>>,
-  preferredProvider?: AiWalletProviderId | null,
-): AiWalletProviderId[] {
-  const readyProviders = catalog
-    .filter((entry) => entry.available && isSwarmApiProvider(entry.provider))
-    .map((entry) => entry.provider);
-  const selectedDefault = catalog.find(
-    (entry) => entry.available && entry.selectedByDefault && isSwarmApiProvider(entry.provider),
-  )?.provider;
-  const primary =
-    (preferredProvider && readyProviders.includes(preferredProvider) ? preferredProvider : null) ??
-    selectedDefault ??
-    readyProviders[0] ??
-    null;
-
-  return uniqueBy(
-    [primary, ...readyProviders].filter((provider): provider is AiWalletProviderId => Boolean(provider)),
-    (provider) => provider,
-  );
 }
 
 async function getSwarmApiProviderOrder(
@@ -371,37 +124,6 @@ async function getSwarmApiProviderOrder(
 ): Promise<AiWalletProviderId[]> {
   const catalog = await getResolvedAiProviderCatalog();
   return rankSwarmApiProviders(catalog, preferredProvider);
-}
-
-function isIdleMonitoringRun(run: VaultStewardRun): boolean {
-  return (
-    run.status === 'completed' &&
-    run.targets.length === 0 &&
-    run.proposed_jobs.length === 0 &&
-    run.executed_jobs.length === 0
-  );
-}
-
-export function computeAdaptiveDaemonDelay(
-  config: VaultStewardConfig,
-  run: VaultStewardRun,
-  previousIdleStreak: number,
-): { delayMs: number; idleStreak: number } {
-  const baseDelayMs = Math.max(config.interval_minutes, 1) * 60 * 1000;
-  if (!isIdleMonitoringRun(run)) {
-    return {
-      delayMs: baseDelayMs,
-      idleStreak: 0,
-    };
-  }
-
-  const idleStreak = previousIdleStreak + 1;
-  const multiplier = Math.min(idleStreak + 1, 4);
-  const maxDelayMs = Math.max(baseDelayMs, 2 * 60 * 60 * 1000);
-  return {
-    delayMs: Math.min(baseDelayMs * multiplier, maxDelayMs),
-    idleStreak,
-  };
 }
 
 function extractRecord(value: unknown): Record<string, unknown> | null {
@@ -432,212 +154,6 @@ function getBudgetRetryMaxTokens(message: string, requested: number): number | n
   return bounded > 0 ? bounded : null;
 }
 
-async function ensureAgentsDir(): Promise<void> {
-  await fsp.mkdir(AGENTS_DIR, { recursive: true });
-}
-
-async function readJsonFile<T>(filePath: string, schema: z.ZodType<T>, fallback: T): Promise<T> {
-  try {
-    const raw = JSON.parse(await fsp.readFile(filePath, 'utf-8')) as unknown;
-    return schema.parse(raw);
-  } catch (error: unknown) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return fallback;
-    }
-    return fallback;
-  }
-}
-
-async function writeJsonFile(filePath: string, value: unknown): Promise<void> {
-  await ensureAgentsDir();
-  const directory = path.dirname(filePath);
-  const tempPath = path.join(
-    directory,
-    `.${path.basename(filePath)}.${process.pid}.${Date.now()}.tmp`,
-  );
-  await fsp.writeFile(tempPath, JSON.stringify(value, null, 2), 'utf-8');
-  await fsp.rename(tempPath, filePath);
-}
-
-function isProcessAlive(pid: number | null): boolean {
-  if (!pid) return false;
-  try {
-    process.kill(pid, 0);
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-export function isVaultStewardProcessCommand(command: string): boolean {
-  return (
-    command.includes('scripts/vault-steward.ts') ||
-    command.includes(VAULT_STEWARD_SCRIPT_PATH) ||
-    command.includes(TSX_CLI_PATH) ||
-    command.includes('tsx/dist/cli.mjs') ||
-    command.includes('tsx/dist/loader.mjs') ||
-    command.includes('timeout 12h npm run vault-steward') ||
-    command.includes('npm run vault-steward')
-  );
-}
-
-function listVaultStewardProcesses(): VaultStewardProcessEntry[] {
-  try {
-    const raw = execFileSync('ps', ['-ww', '-eo', 'pid=,ppid=,pgid=,args='], {
-      encoding: 'utf-8',
-      stdio: ['ignore', 'pipe', 'ignore'],
-    });
-    return uniqueBy(
-      raw
-        .split('\n')
-        .map((line) => line.trim())
-        .filter(Boolean)
-        .flatMap((line) => {
-          const match = line.match(/^(\d+)\s+(\d+)\s+(\d+)\s+(.*)$/);
-          if (!match) return [];
-          const [, pidText, ppidText, pgidText, command] = match;
-          const pid = Number(pidText);
-          const ppid = Number(ppidText);
-          const pgid = Number(pgidText);
-          if (!Number.isInteger(pid) || pid <= 0) return [];
-          if (pid === process.pid) return [];
-          return isVaultStewardProcessCommand(command)
-            ? [
-                {
-                  pid,
-                  ppid: Number.isInteger(ppid) && ppid > 0 ? ppid : null,
-                  pgid: Number.isInteger(pgid) && pgid > 0 ? pgid : null,
-                  command,
-                },
-              ]
-            : [];
-        }),
-      (entry) => String(entry.pid),
-    );
-  } catch {
-    return [];
-  }
-}
-
-function listVaultStewardProcessIds(): number[] {
-  return listVaultStewardProcesses().map((entry) => entry.pid);
-}
-
-async function terminateVaultStewardProcesses(excludePids: number[] = []): Promise<void> {
-  const entries = listVaultStewardProcesses();
-  const excluded = new Set(excludePids.filter((pid) => Number.isInteger(pid) && pid > 0));
-  const excludedPgids = new Set(
-    entries
-      .filter((entry) => excluded.has(entry.pid) && entry.pgid)
-      .map((entry) => entry.pgid as number),
-  );
-  const targetEntries = entries.filter((entry) => !excluded.has(entry.pid) && !excludedPgids.has(entry.pgid ?? -1));
-  const targetPgids = uniqueBy(
-    targetEntries
-      .map((entry) => entry.pgid)
-      .filter((pgid): pgid is number => typeof pgid === 'number' && Number.isInteger(pgid) && pgid > 0),
-    (pgid) => String(pgid),
-  );
-  const targetPids = uniqueBy(
-    targetEntries.map((entry) => entry.pid),
-    (pid) => String(pid),
-  );
-
-  for (const pgid of targetPgids) {
-    try {
-      process.kill(-pgid, 'SIGTERM');
-    } catch {
-      // noop
-    }
-  }
-
-  for (const pid of targetPids) {
-    try {
-      process.kill(pid, 'SIGTERM');
-    } catch {
-      // noop
-    }
-  }
-
-  if (targetPids.length === 0) return;
-
-  await sleep(250);
-
-  for (const pid of targetPids) {
-    if (!isProcessAlive(pid)) continue;
-    const entry = targetEntries.find((candidate) => candidate.pid === pid);
-    if (entry?.pgid) {
-      try {
-        process.kill(-entry.pgid, 'SIGKILL');
-      } catch {
-        // noop
-      }
-    }
-    try {
-      process.kill(pid, 'SIGKILL');
-    } catch {
-      // noop
-    }
-  }
-}
-
-function normalizeRuntime(runtime: VaultStewardRuntime): VaultStewardRuntime {
-  const alive = isProcessAlive(runtime.pid);
-  if (alive) {
-    if (runtime.status === 'running' || runtime.status === 'starting') return runtime;
-    return {
-      ...runtime,
-      status: 'running',
-      updated_at: nowIso(),
-    };
-  }
-
-  if (runtime.status === 'stopped' && runtime.pid === null) return runtime;
-
-  return {
-    ...runtime,
-    pid: null,
-    status: 'stopped',
-    last_exit_at: runtime.last_exit_at ?? nowIso(),
-    updated_at: nowIso(),
-  };
-}
-
-async function readConfig(): Promise<VaultStewardConfig> {
-  return readJsonFile(VAULT_STEWARD_CONFIG_PATH, vaultStewardConfigSchema, DEFAULT_CONFIG());
-}
-
-async function writeConfig(config: VaultStewardConfig): Promise<void> {
-  await writeJsonFile(VAULT_STEWARD_CONFIG_PATH, config);
-}
-
-async function readRuntime(): Promise<VaultStewardRuntime> {
-  return normalizeRuntime(
-    await readJsonFile(VAULT_STEWARD_RUNTIME_PATH, vaultStewardRuntimeSchema, DEFAULT_RUNTIME()),
-  );
-}
-
-async function writeRuntime(runtime: VaultStewardRuntime): Promise<void> {
-  await writeJsonFile(VAULT_STEWARD_RUNTIME_PATH, runtime);
-}
-
-async function readQueue(): Promise<VaultStewardQueue> {
-  return readJsonFile(VAULT_STEWARD_QUEUE_PATH, vaultStewardQueueSchema, DEFAULT_QUEUE());
-}
-
-async function writeQueue(queue: VaultStewardQueue): Promise<void> {
-  await writeJsonFile(VAULT_STEWARD_QUEUE_PATH, queue);
-}
-
-async function readLatestRun(): Promise<VaultStewardRun | null> {
-  return readJsonFile(VAULT_STEWARD_LATEST_PATH, vaultStewardRunSchema.nullable(), null);
-}
-
-async function writeLatestRun(run: VaultStewardRun): Promise<void> {
-  await writeJsonFile(VAULT_STEWARD_LATEST_PATH, run);
-  await ensureAgentsDir();
-  await fsp.appendFile(VAULT_STEWARD_HISTORY_PATH, `${JSON.stringify(run)}\n`, 'utf-8');
-}
 
 function uniqueBy<T>(values: T[], getKey: (value: T) => string): T[] {
   const seen = new Set<string>();
@@ -649,242 +165,6 @@ function uniqueBy<T>(values: T[], getKey: (value: T) => string): T[] {
     result.push(value);
   }
   return result;
-}
-
-function getCapsuleQueueHistory(
-  queue: VaultStewardQueue,
-  nowMs = Date.now(),
-): Map<string, CapsuleQueueHistory> {
-  const byCapsule = new Map<string, CapsuleQueueHistory>();
-
-  const ensureHistory = (capsuleId: string): CapsuleQueueHistory => {
-    const existing = byCapsule.get(capsuleId);
-    if (existing) return existing;
-    const next: CapsuleQueueHistory = {
-      queuedOrAccepted: 0,
-      recentCompleted: 0,
-      completedWorkstreams: new Set<string>(),
-      lastCompletedAtMs: null,
-    };
-    byCapsule.set(capsuleId, next);
-    return next;
-  };
-
-  for (const job of queue.jobs) {
-    const createdAtMs = Number.isFinite(Date.parse(job.created_at)) ? Date.parse(job.created_at) : null;
-    for (const capsuleId of job.capsule_ids) {
-      const history = ensureHistory(capsuleId);
-      if (job.status === 'queued' || job.status === 'accepted') {
-        history.queuedOrAccepted += 1;
-      }
-      if (job.status === 'completed') {
-        history.completedWorkstreams.add(job.workstream);
-        if (createdAtMs !== null && nowMs - createdAtMs <= CAPSULE_RECENT_ACTIVITY_WINDOW_MS) {
-          history.recentCompleted += 1;
-        }
-        if (createdAtMs !== null) {
-          history.lastCompletedAtMs = Math.max(history.lastCompletedAtMs ?? 0, createdAtMs);
-        }
-      }
-    }
-  }
-
-  return byCapsule;
-}
-
-function shouldCooldownCapsule(
-  history: CapsuleQueueHistory | undefined,
-  nowMs = Date.now(),
-): boolean {
-  if (!history) return false;
-  if (history.queuedOrAccepted > 0) return true;
-  if (
-    history.recentCompleted >= CAPSULE_RECENT_ACTIVITY_MAX_COMPLETED &&
-    history.lastCompletedAtMs !== null &&
-    nowMs - history.lastCompletedAtMs <= CAPSULE_RECENT_ACTIVITY_WINDOW_MS
-  ) {
-    return true;
-  }
-  return false;
-}
-
-function getJobIdentityKey(job: Pick<VaultStewardJob, 'workstream' | 'suggested_branch' | 'capsule_ids'>): string {
-  return stableHash({
-    workstream: job.workstream,
-    suggested_branch: job.suggested_branch,
-    capsule_ids: [...job.capsule_ids].sort(),
-  });
-}
-
-function mergeDuplicateJob(existing: VaultStewardJob, incoming: VaultStewardJob): VaultStewardJob {
-  if (existing.status === 'completed' || incoming.status === 'completed') {
-    if (existing.status === 'completed' && incoming.status !== 'completed') {
-      return isRecentCompletedJob(existing) ? existing : incoming;
-    }
-    if (incoming.status === 'completed' && existing.status !== 'completed') {
-      return isRecentCompletedJob(incoming) ? incoming : existing;
-    }
-
-    const latestCompleted = existing.created_at >= incoming.created_at ? existing : incoming;
-    return {
-      ...latestCompleted,
-      status: 'completed',
-    };
-  }
-
-  if (existing.status === 'accepted' || incoming.status === 'accepted') {
-    const accepted = existing.status === 'accepted' ? existing : incoming;
-    const latest = existing.created_at >= incoming.created_at ? existing : incoming;
-    return {
-      ...latest,
-      id: accepted.id,
-      created_at: accepted.created_at,
-      source_run_id: accepted.source_run_id,
-      status: 'accepted',
-    };
-  }
-
-  if (existing.status === 'dismissed' && incoming.status !== 'dismissed') {
-    return incoming;
-  }
-
-  if (incoming.status === 'dismissed' && existing.status !== 'dismissed') {
-    return existing;
-  }
-
-  return existing.created_at >= incoming.created_at ? existing : incoming;
-}
-
-function isRecentCompletedJob(job: VaultStewardJob, nowMs = Date.now()): boolean {
-  if (job.status !== 'completed') return false;
-  const createdAtMs = Number.isFinite(Date.parse(job.created_at)) ? Date.parse(job.created_at) : null;
-  if (createdAtMs === null) return false;
-  return nowMs - createdAtMs <= CAPSULE_RECENT_ACTIVITY_WINDOW_MS;
-}
-
-export function summarizeVaultSignals(capsules: SovereignCapsule[], maxTargets = 6): VaultSignalSummary {
-  const byType: Record<string, number> = {};
-  const inboundCounts = new Map<string, number>();
-  const candidates: CapsuleSignal[] = [];
-
-  for (const capsule of capsules) {
-    const type = capsule.metadata.type ?? 'unknown';
-    byType[type] = (byType[type] ?? 0) + 1;
-    inboundCounts.set(capsule.metadata.capsule_id, inboundCounts.get(capsule.metadata.capsule_id) ?? 0);
-  }
-
-  for (const capsule of capsules) {
-    for (const link of capsule.recursive_layer.links ?? []) {
-      if (typeof link.target_id !== 'string') continue;
-      inboundCounts.set(link.target_id, (inboundCounts.get(link.target_id) ?? 0) + 1);
-    }
-  }
-
-  const inventory = capsules.map((capsule) => {
-    const outboundLinks = Array.isArray(capsule.recursive_layer.links) ? capsule.recursive_layer.links.length : 0;
-    const inboundLinks = inboundCounts.get(capsule.metadata.capsule_id) ?? 0;
-    const summary = toStringValue(capsule.neuro_concentrate.summary).trim();
-    const keywordCount = Array.isArray(capsule.neuro_concentrate.keywords)
-      ? capsule.neuro_concentrate.keywords.filter((entry) => typeof entry === 'string' && entry.trim()).length
-      : 0;
-    return {
-      capsule_id: capsule.metadata.capsule_id,
-      type: capsule.metadata.type ?? 'unknown',
-      subtype: capsule.metadata.subtype ?? 'atomic',
-      status: capsule.metadata.status ?? 'unknown',
-      progress: toNumberValue(capsule.metadata.progress),
-      outbound_links: outboundLinks,
-      inbound_links: inboundLinks,
-      summary_length: summary.length,
-      keyword_count: keywordCount,
-    };
-  });
-
-  for (const capsule of capsules) {
-    const outboundLinks = Array.isArray(capsule.recursive_layer.links) ? capsule.recursive_layer.links.length : 0;
-    const inboundLinks = inboundCounts.get(capsule.metadata.capsule_id) ?? 0;
-    const summary = toStringValue(capsule.neuro_concentrate.summary).trim();
-    const keywordCount = Array.isArray(capsule.neuro_concentrate.keywords)
-      ? capsule.neuro_concentrate.keywords.filter((entry) => typeof entry === 'string' && entry.trim()).length
-      : 0;
-    const reasons: string[] = [];
-
-    if ((capsule.metadata.subtype ?? 'atomic') === 'hub' && outboundLinks >= 10) {
-      reasons.push('hub with high link density may need decomposition review');
-    }
-    if (summary.length < 220) {
-      reasons.push('summary is short enough to justify markup or enrichment');
-    }
-    if (keywordCount < 5) {
-      reasons.push('keyword coverage is thin');
-    }
-    if (outboundLinks + inboundLinks <= 1) {
-      reasons.push('capsule looks weakly connected in the current graph');
-    }
-    const progress = toNumberValue(capsule.metadata.progress);
-    if (progress !== null && progress < 50 && capsule.metadata.status !== 'archived') {
-      reasons.push('progress suggests unfinished structure that may need maintenance');
-    }
-
-    if (reasons.length === 0) continue;
-
-    candidates.push({
-      capsule_id: capsule.metadata.capsule_id,
-      name: capsule.metadata.name ?? capsule.metadata.capsule_id,
-      type: capsule.metadata.type ?? 'unknown',
-      subtype: capsule.metadata.subtype ?? 'atomic',
-      status: capsule.metadata.status ?? 'unknown',
-      outbound_links: outboundLinks,
-      inbound_links: inboundLinks,
-      summary_length: summary.length,
-      keyword_count: keywordCount,
-      progress,
-      reasons,
-    });
-  }
-
-  const selectedCandidates = uniqueBy(
-    [
-      ...candidates.filter((entry) => entry.reasons.some((reason) => reason.includes('decomposition'))).sort((a, b) => b.outbound_links - a.outbound_links),
-      ...candidates.filter((entry) => entry.reasons.some((reason) => reason.includes('weakly connected'))).sort((a, b) => (a.outbound_links + a.inbound_links) - (b.outbound_links + b.inbound_links)),
-      ...candidates.filter((entry) => entry.reasons.some((reason) => reason.includes('summary') || reason.includes('keyword'))).sort((a, b) => a.summary_length - b.summary_length),
-    ],
-    (entry) => entry.capsule_id,
-  ).slice(0, maxTargets);
-
-  const orphaned = [...inboundCounts.entries()].filter(([capsuleId, count]) => {
-    const capsule = capsules.find((entry) => entry.metadata.capsule_id === capsuleId);
-    const outbound = capsule?.recursive_layer.links?.length ?? 0;
-    return count + outbound === 0;
-  }).length;
-
-  return {
-    total_capsules: capsules.length,
-    orphaned_capsules: orphaned,
-    by_type: byType,
-    inventory,
-    candidates: selectedCandidates,
-  };
-}
-
-export function applyQueueCooldownToSummary(
-  summary: VaultSignalSummary,
-  queue: VaultStewardQueue,
-  nowMs = Date.now(),
-): VaultSignalSummary {
-  const queueHistory = getCapsuleQueueHistory(queue, nowMs);
-  const filteredCandidates = summary.candidates.filter(
-    (candidate) => !shouldCooldownCapsule(queueHistory.get(candidate.capsule_id), nowMs),
-  );
-
-  if (filteredCandidates.length === 0) {
-    return summary;
-  }
-
-  return {
-    ...summary,
-    candidates: filteredCandidates,
-  };
 }
 
 function getDateParts(date: Date, timeZone: string | null): { year: string; month: string; day: string; hour: number } {
@@ -917,36 +197,11 @@ function isWithinWindow(config: VaultStewardConfig, now = new Date()): boolean {
 }
 
 function extractFirstJsonObject(raw: string): unknown {
-  const fencedMatch = raw.match(/```json\s*([\s\S]*?)```/i) ?? raw.match(/```\s*([\s\S]*?)```/i);
-  const candidate = fencedMatch?.[1]?.trim() || raw.trim();
-  try {
-    return JSON.parse(candidate) as unknown;
-  } catch {
-    const firstBrace = candidate.indexOf('{');
-    const lastBrace = candidate.lastIndexOf('}');
-    if (firstBrace >= 0 && lastBrace > firstBrace) {
-      return JSON.parse(candidate.slice(firstBrace, lastBrace + 1)) as unknown;
-    }
-    throw new Error('No valid JSON object found in model output');
-  }
+  return vaultStewardPrompting.extractFirstJsonObject(raw);
 }
 
-function buildFallbackAnalysis(summary: VaultSignalSummary): AiOutput {
-  return aiOutputSchema.parse({
-    overview:
-      'Vault Steward could not parse a structured JSON response, so it fell back to the highest-signal capsule maintenance targets extracted from the current graph.',
-    workstream: 'mixed' as const,
-    observations: summary.candidates.flatMap((candidate) => candidate.reasons.slice(0, 1)).slice(0, 6),
-    suggested_actions: summary.candidates
-      .slice(0, 4)
-      .map((candidate) => `Review ${candidate.capsule_id} for ${candidate.reasons[0] ?? 'maintenance'}.`),
-    targets: summary.candidates.slice(0, 4).map((candidate) => ({
-      capsule_id: candidate.capsule_id,
-      reason: candidate.reasons[0] ?? 'graph maintenance candidate',
-      priority: candidate.outbound_links >= 10 ? 'high' : 'medium',
-    })),
-    proposed_jobs: [],
-  });
+function buildFallbackAnalysis(summary: VaultSignalSummary): z.infer<typeof aiOutputSchema> {
+  return vaultStewardPrompting.buildFallbackAnalysis(summary);
 }
 
 function buildPrompt(
@@ -954,6 +209,9 @@ function buildPrompt(
   queue: VaultStewardQueue,
   options?: { compact?: boolean },
 ): { system: string; prompt: string } {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildPrompt(summary, queue, options);
+  }
   const compact = options?.compact ?? false;
   const queuedJobs = queue.jobs.filter((job) => job.status === 'queued' || job.status === 'accepted');
   const completedJobs = queue.jobs.filter((job) => job.status === 'completed');
@@ -1084,6 +342,9 @@ function buildPrompt(
 }
 
 function buildScoutRepairPrompt(rawText: string): string {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildScoutRepairPrompt(rawText);
+  }
   return [
     'The previous provider response for Vault Steward did not match the required strict JSON shape.',
     'Repair it into strict JSON only while preserving the original maintenance intent as closely as possible.',
@@ -1128,6 +389,9 @@ function buildCodexSupervisorPrompt(
   scout: VaultStewardScoutResult,
   queue: VaultStewardQueue,
 ): string {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildCodexSupervisorPrompt(summary, scout, queue);
+  }
   const compactObservations = scout.normalized.observations.slice(0, CODEX_FOREMAN_MAX_SCOUT_OBSERVATIONS);
   const compactActions = scout.normalized.suggested_actions.slice(0, CODEX_FOREMAN_MAX_SCOUT_ACTIONS);
   const compactTargets = scout.normalized.targets.slice(0, CODEX_FOREMAN_MAX_SCOUT_TARGETS);
@@ -1215,6 +479,9 @@ function buildCodexSupervisorPrompt(
 }
 
 function buildCodexSupervisorJsonSchema(): Record<string, unknown> {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildCodexSupervisorJsonSchema();
+  }
   return {
     type: 'object',
     additionalProperties: false,
@@ -1286,6 +553,9 @@ function buildCodexReviewerPrompt(input: {
   proposedJobs: VaultStewardJob[];
   executedJobs: VaultStewardJob[];
 }): string {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildCodexReviewerPrompt(input);
+  }
   const targetLines =
     input.targets.length > 0
       ? input.targets
@@ -1345,6 +615,9 @@ function buildCodexReviewerPrompt(input: {
 }
 
 function buildCodexReviewerJsonSchema(): Record<string, unknown> {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildCodexReviewerJsonSchema();
+  }
   return {
     type: 'object',
     additionalProperties: false,
@@ -1451,6 +724,9 @@ async function runCodexReviewer(input: {
 function getExecutorWorkstreamGuidance(
   workstream: z.infer<typeof vaultStewardWorkstreamSchema>,
 ): { laneTitle: string; guidance: string[] } {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.getExecutorWorkstreamGuidance(workstream);
+  }
   switch (workstream) {
     case 'decomposition':
       return {
@@ -1493,6 +769,9 @@ function getExecutorWorkstreamGuidance(
 }
 
 function buildExecutorPrompt(job: VaultStewardJob, capsules: SovereignCapsule[]): { system: string; prompt: string } {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildExecutorPrompt(job, capsules);
+  }
   const workstream = getExecutorWorkstreamGuidance(job.workstream);
   const system = [
     `You are the ${workstream.laneTitle} lane for the N1Hub Vault Steward swarm.`,
@@ -1547,6 +826,9 @@ function buildExecutorPrompt(job: VaultStewardJob, capsules: SovereignCapsule[])
 }
 
 function buildExecutorJsonSchema(): Record<string, unknown> {
+  if (!USE_LEGACY_VAULT_STEWARD_PROMPTS) {
+    return vaultStewardPrompting.buildExecutorJsonSchema();
+  }
   return {
     type: 'object',
     additionalProperties: false,
@@ -1580,822 +862,6 @@ function buildExecutorJsonSchema(): Record<string, unknown> {
       },
     },
   };
-}
-
-function withAutonomousMaintenanceSection(
-  content: string,
-  note: string,
-  runId: string,
-  jobLabel: string,
-  workstream: z.infer<typeof vaultStewardWorkstreamSchema>,
-): string {
-  const trimmed = content.trimEnd();
-  const section = [
-    '## Autonomous Vault Swarm Notes',
-    '',
-    `- Run: ${runId}`,
-    `- Job: ${jobLabel}`,
-    `- Workstream: ${workstream}`,
-    `- Note: ${note}`,
-  ].join('\n');
-
-  if (trimmed.includes('## Autonomous Vault Swarm Notes')) {
-    return trimmed.replace(
-      /## Autonomous Vault Swarm Notes[\s\S]*$/m,
-      section,
-    );
-  }
-
-  return `${trimmed}\n\n${section}\n`;
-}
-
-function applyExecutorUpdate(
-  capsule: SovereignCapsule,
-  update: z.infer<typeof executorOutputSchema>['updates'][number],
-  runId: string,
-  job: VaultStewardJob,
-): SovereignCapsule {
-  const existingKeywords = Array.isArray(capsule.neuro_concentrate.keywords)
-    ? capsule.neuro_concentrate.keywords.filter((entry): entry is string => typeof entry === 'string' && entry.trim().length > 0)
-    : [];
-  const mergedKeywords = uniqueBy(
-    [
-      ...existingKeywords,
-      ...update.added_keywords,
-      'vault-steward',
-      'autonomous-swarm',
-      job.workstream,
-    ].map((entry) => entry.trim()).filter(Boolean),
-    (entry) => entry.toLowerCase(),
-  ).slice(0, 24);
-
-  const epistemicLedger = Array.isArray(capsule.recursive_layer.epistemic_ledger)
-    ? [...capsule.recursive_layer.epistemic_ledger]
-    : [];
-
-  epistemicLedger.push({
-    at: nowIso(),
-    event: 'autonomous_executor_update_applied',
-    agent: 'vault-steward-executor',
-    run_id: runId,
-    job_id: job.id,
-    rationale: update.rationale,
-  });
-
-  const next: SovereignCapsule = {
-    ...capsule,
-    metadata: {
-      ...capsule.metadata,
-      updated_at: nowIso(),
-    },
-    core_payload: {
-      ...capsule.core_payload,
-      content: withAutonomousMaintenanceSection(
-        toStringValue(capsule.core_payload.content),
-        update.maintenance_note,
-        runId,
-        job.label,
-        job.workstream,
-      ),
-    },
-    neuro_concentrate: {
-      ...capsule.neuro_concentrate,
-      summary: update.updated_summary,
-      keywords: mergedKeywords,
-    },
-    recursive_layer: {
-      ...capsule.recursive_layer,
-      epistemic_ledger: epistemicLedger,
-    },
-    integrity_sha3_512: '',
-  };
-
-  next.integrity_sha3_512 = computeIntegrityHash(next);
-  return next;
-}
-
-function getExecutorWorkstreamRank(
-  workstream: z.infer<typeof vaultStewardWorkstreamSchema>,
-): number {
-  switch (workstream) {
-    case 'graph_refactor':
-      return 0;
-    case 'markup':
-      return 1;
-    case 'decomposition':
-      return 2;
-    case 'mixed':
-    default:
-      return 3;
-  }
-}
-
-function compareJobsForExecution(left: VaultStewardJob, right: VaultStewardJob): number {
-  const createdAtDelta = left.created_at.localeCompare(right.created_at);
-  if (createdAtDelta !== 0) return createdAtDelta;
-
-  const workstreamDelta =
-    getExecutorWorkstreamRank(left.workstream) - getExecutorWorkstreamRank(right.workstream);
-  if (workstreamDelta !== 0) return workstreamDelta;
-
-  return left.id.localeCompare(right.id);
-}
-
-export function selectExecutorJobsForRun(
-  queue: VaultStewardQueue,
-  maxJobs = MAX_AUTONOMOUS_EXECUTOR_JOBS_PER_RUN,
-): VaultStewardJob[] {
-  const queuedJobs = queue.jobs
-    .filter((job) => job.status === 'queued' && job.suggested_branch === 'dream')
-    .sort(compareJobsForExecution);
-
-  if (queuedJobs.length <= maxJobs) return queuedJobs;
-
-  const selected: VaultStewardJob[] = [];
-  const usedIds = new Set<string>();
-  const workstreamOrder: Array<z.infer<typeof vaultStewardWorkstreamSchema>> = [
-    'graph_refactor',
-    'markup',
-    'decomposition',
-    'mixed',
-  ];
-
-  for (const workstream of workstreamOrder) {
-    const candidate = queuedJobs.find((job) => job.workstream === workstream && !usedIds.has(job.id));
-    if (!candidate) continue;
-    selected.push(candidate);
-    usedIds.add(candidate.id);
-    if (selected.length >= maxJobs) return selected;
-  }
-
-  for (const job of queuedJobs) {
-    if (usedIds.has(job.id)) continue;
-    selected.push(job);
-    usedIds.add(job.id);
-    if (selected.length >= maxJobs) break;
-  }
-
-  return selected;
-}
-
-function inferWorkstreamFromTargetReason(reason: string): z.infer<typeof vaultStewardWorkstreamSchema> {
-  const normalized = reason.toLowerCase();
-  if (
-    normalized.includes('decomposition') ||
-    normalized.includes('link density') ||
-    normalized.includes('boundar')
-  ) {
-    return 'decomposition';
-  }
-  if (
-    normalized.includes('summary') ||
-    normalized.includes('keyword') ||
-    normalized.includes('markup') ||
-    normalized.includes('clarity')
-  ) {
-    return 'markup';
-  }
-  if (
-    normalized.includes('graph') ||
-    normalized.includes('weakly connected') ||
-    normalized.includes('lineage') ||
-    normalized.includes('refactor')
-  ) {
-    return 'graph_refactor';
-  }
-  return 'mixed';
-}
-
-function buildFallbackWorkstreamOrder(
-  target: z.infer<typeof vaultStewardTargetSchema>,
-  defaultWorkstream: z.infer<typeof vaultStewardWorkstreamSchema>,
-): Array<z.infer<typeof vaultStewardWorkstreamSchema>> {
-  const inferred = inferWorkstreamFromTargetReason(target.reason);
-  const order: Array<z.infer<typeof vaultStewardWorkstreamSchema>> =
-    inferred === 'decomposition'
-      ? ['graph_refactor', 'markup', 'decomposition', defaultWorkstream, 'mixed']
-      : inferred === 'markup'
-        ? ['markup', 'graph_refactor', 'decomposition', defaultWorkstream, 'mixed']
-        : inferred === 'graph_refactor'
-          ? ['graph_refactor', 'markup', 'decomposition', defaultWorkstream, 'mixed']
-          : [defaultWorkstream, 'markup', 'graph_refactor', 'decomposition', 'mixed'];
-
-  return uniqueBy(order, (entry) => entry);
-}
-
-function getCompletedWorkstreamsByCapsule(queue: VaultStewardQueue): Map<string, Set<string>> {
-  const map = new Map<string, Set<string>>();
-
-  for (const job of queue.jobs) {
-    if (job.status !== 'completed') continue;
-    for (const capsuleId of job.capsule_ids) {
-      const existing = map.get(capsuleId) ?? new Set<string>();
-      existing.add(job.workstream);
-      map.set(capsuleId, existing);
-    }
-  }
-
-  return map;
-}
-
-export function buildFallbackJobsFromTargets(
-  targets: z.infer<typeof vaultStewardTargetSchema>[],
-  runId: string,
-  queue: VaultStewardQueue,
-  defaultWorkstream: z.infer<typeof vaultStewardWorkstreamSchema>,
-  maxJobs = MAX_AUTONOMOUS_EXECUTOR_JOBS_PER_RUN,
-): VaultStewardJob[] {
-  const createdAt = nowIso();
-  const completedByCapsule = getCompletedWorkstreamsByCapsule(queue);
-  const seeded: VaultStewardJob[] = [];
-  const pendingIdentityKeys = new Set(
-    queue.jobs
-      .filter((job) => job.status === 'queued' || job.status === 'accepted' || job.status === 'completed')
-      .map((job) => getJobIdentityKey(job)),
-  );
-
-  for (const target of targets) {
-    const completed = completedByCapsule.get(target.capsule_id) ?? new Set<string>();
-    const workstream = buildFallbackWorkstreamOrder(target, defaultWorkstream).find(
-      (candidate) => !completed.has(candidate),
-    );
-    if (!workstream) continue;
-
-    const capsuleSlug = target.capsule_id.replace(/^capsule\./, '').replace(/\.v\d+$/, '');
-    const nextJob: VaultStewardJob = {
-      id: `vault-steward-job-${stableHash({
-        runId,
-        capsule_id: target.capsule_id,
-        reason: target.reason,
-        workstream,
-      }).slice(0, 16)}`,
-      label: `Autonomous ${workstream.replace(/_/g, ' ')} pass for ${capsuleSlug}`,
-      goal: `Follow up ${target.capsule_id} because ${target.reason}`,
-      workstream,
-      capsule_ids: [target.capsule_id],
-      suggested_branch: 'dream',
-      needs_human_confirmation: false,
-      created_at: createdAt,
-      source_run_id: runId,
-      status: 'queued',
-    };
-
-    const identityKey = getJobIdentityKey(nextJob);
-    if (pendingIdentityKeys.has(identityKey)) continue;
-
-    seeded.push(nextJob);
-    pendingIdentityKeys.add(identityKey);
-    if (seeded.length >= maxJobs) break;
-  }
-
-  return seeded;
-}
-
-export function mergeJobs(existing: VaultStewardJob[], incoming: VaultStewardJob[]): VaultStewardJob[] {
-  const byKey = new Map<string, VaultStewardJob>();
-  for (const job of existing) {
-    const key = getJobIdentityKey(job);
-    byKey.set(key, job);
-  }
-
-  for (const job of incoming) {
-    const key = getJobIdentityKey(job);
-    const existingJob = byKey.get(key);
-    byKey.set(key, existingJob ? mergeDuplicateJob(existingJob, job) : job);
-  }
-
-  return [...byKey.values()].sort((left, right) => right.created_at.localeCompare(left.created_at));
-}
-
-function getLatestLaneReport(
-  run: VaultStewardRun | null,
-  id: z.infer<typeof vaultStewardLaneReportSchema>['id'],
-): z.infer<typeof vaultStewardLaneReportSchema> | null {
-  return run?.lane_reports.find((lane) => lane.id === id) ?? null;
-}
-
-function getCodexForemanCooldown(
-  latestRun: VaultStewardRun | null,
-): { active: boolean; cooldownUntil: string | null; error: string | null } {
-  const previousForemanFailure = getLatestLaneReport(latestRun, 'foreman');
-  if (
-    previousForemanFailure?.status === 'failed' &&
-    previousForemanFailure.error?.toLowerCase().includes('timed out') &&
-    latestRun?.completed_at
-  ) {
-    const cooldownUntilMs =
-      new Date(latestRun.completed_at).getTime() + CODEX_FOREMAN_TIMEOUT_COOLDOWN_MS;
-    return {
-      active: Date.now() < cooldownUntilMs,
-      cooldownUntil: new Date(cooldownUntilMs).toISOString(),
-      error: previousForemanFailure.error,
-    };
-  }
-
-  return {
-    active: false,
-    cooldownUntil: null,
-    error: null,
-  };
-}
-
-function getCodexForemanCadenceHold(
-  latestRun: VaultStewardRun | null,
-): { active: boolean; holdUntil: string | null } {
-  const previousForeman = getLatestLaneReport(latestRun, 'foreman');
-  if (previousForeman?.status === 'completed' && latestRun?.completed_at) {
-    const holdUntilMs = new Date(latestRun.completed_at).getTime() + CODEX_FOREMAN_MIN_INTERVAL_MS;
-    return {
-      active: Date.now() < holdUntilMs,
-      holdUntil: new Date(holdUntilMs).toISOString(),
-    };
-  }
-
-  return {
-    active: false,
-    holdUntil: null,
-  };
-}
-
-export function shouldRunCodexForeman(
-  scout: VaultStewardScoutResult,
-  queue: VaultStewardQueue,
-): { run: boolean; summary?: string; error?: string } {
-  const activeJobs = queue.jobs.filter((job) => job.status === 'queued' || job.status === 'accepted').length;
-  const hasConcreteScoutPlan =
-    scout.normalized.proposed_jobs.length > 0 || scout.normalized.targets.length > 0;
-
-  if (scout.reason === 'used_fallback_analysis') {
-    if (activeJobs === 0 && hasConcreteScoutPlan) {
-      return {
-        run: true,
-        summary:
-          'Codex foreman lane entered recovery mode because the provider scout fell back to heuristic analysis but still surfaced concrete maintenance pressure.',
-      };
-    }
-    return {
-      run: false,
-      summary:
-        'Codex foreman lane skipped because the provider scout fell back to heuristic analysis; reviewer lane will supervise the lower-confidence cycle instead.',
-      error: 'Scout used fallback analysis',
-    };
-  }
-
-  if (!hasConcreteScoutPlan && activeJobs === 0) {
-    return {
-      run: false,
-      summary:
-        'Codex foreman lane skipped because the scout did not surface concrete jobs or targets that justify a strategic tightening pass.',
-      error: 'No concrete scout plan',
-    };
-  }
-
-  return { run: true };
-}
-
-export function shouldBypassCodexForemanCadenceHold(
-  scout: VaultStewardScoutResult,
-  queue: VaultStewardQueue,
-): boolean {
-  const readiness = shouldRunCodexForeman(scout, queue);
-  return scout.reason === 'used_fallback_analysis' && readiness.run;
-}
-
-async function buildVaultStewardSwarmState(
-  config: VaultStewardConfig,
-  latestRun: VaultStewardRun | null,
-): Promise<z.infer<typeof vaultStewardSwarmSchema>> {
-  const [providerCatalog, codexAvailability] = await Promise.all([
-    getResolvedAiProviderCatalog(),
-    getLocalCodexAvailability(),
-  ]);
-
-  const readyProviders = providerCatalog.filter((provider) => provider.available);
-  const activeProvider =
-    (config.provider
-      ? readyProviders.find((provider) => provider.provider === config.provider)?.provider
-      : null) ??
-    readyProviders.find((provider) => provider.selectedByDefault)?.provider ??
-    readyProviders[0]?.provider ??
-    null;
-  const cooldown = getCodexForemanCooldown(latestRun);
-  const cadenceHold = getCodexForemanCadenceHold(latestRun);
-  const recentLocalCodexSuccess =
-    latestRun?.lane_reports.some(
-      (lane) => lane.engine === 'local_codex' && lane.status === 'completed',
-    ) ?? false;
-
-  const providerLane = vaultStewardLaneStateSchema.parse({
-    id: 'scout',
-    label: 'Scout',
-    engine: 'provider',
-    state: readyProviders.length > 0 ? 'ready' : 'unavailable',
-    available: readyProviders.length > 0,
-    provider: activeProvider,
-    model: config.model ?? readyProviders.find((provider) => provider.provider === activeProvider)?.defaultModel ?? null,
-    plan_type: null,
-    detail:
-      readyProviders.length > 0
-        ? `API lane is ready with ${readyProviders.length} configured provider${readyProviders.length === 1 ? '' : 's'}.`
-        : 'No wallet-backed API provider is ready for swarm work.',
-    cooldown_until: null,
-  });
-
-  const foremanLane = vaultStewardLaneStateSchema.parse({
-    id: 'foreman',
-    label: 'Codex Foreman',
-    engine: 'local_codex',
-    state:
-      cooldown.active || cadenceHold.active
-        ? 'cooldown'
-        : codexAvailability.available
-          ? 'ready'
-          : 'unavailable',
-    available: codexAvailability.available && !cooldown.active && !cadenceHold.active,
-    provider: 'chatgpt_local_codex',
-    model: null,
-    plan_type: codexAvailability.planType,
-    detail: cooldown.active
-      ? 'Subscription-backed foreman lane is cooling down after a recent timeout.'
-      : cadenceHold.active
-        ? 'Subscription-backed foreman lane is holding cadence because a recent strategic pass already completed.'
-        : codexAvailability.available
-        ? 'Subscription-backed foreman lane is ready for strategic supervisory passes.'
-        : codexAvailability.reason ?? 'Codex foreman lane is unavailable.',
-    cooldown_until: cooldown.cooldownUntil ?? cadenceHold.holdUntil,
-  });
-
-  const reviewerLane = vaultStewardLaneStateSchema.parse({
-    id: 'reviewer',
-    label: 'Codex Reviewer',
-    engine: 'local_codex',
-    state: codexAvailability.available ? 'ready' : 'unavailable',
-    available: codexAvailability.available,
-    provider: 'chatgpt_local_codex',
-    model: null,
-    plan_type: codexAvailability.planType,
-    detail: codexAvailability.available
-      ? 'Subscription-backed reviewer lane is ready for compact quality-control passes on swarm output.'
-      : codexAvailability.reason ?? 'Codex reviewer lane is unavailable.',
-    cooldown_until: null,
-  });
-
-  const maintainerLane = vaultStewardLaneStateSchema.parse({
-    id: 'maintainer',
-    label: 'Executor',
-    engine: 'provider',
-    state: readyProviders.length > 0 ? 'ready' : 'unavailable',
-    available: readyProviders.length > 0,
-    provider: activeProvider,
-    model: config.model ?? readyProviders.find((provider) => provider.provider === activeProvider)?.defaultModel ?? null,
-    plan_type: null,
-    detail:
-      readyProviders.length > 0
-        ? 'API-backed executor lane can execute bounded Dream-side capsule work across decomposition, markup, and graph refactor streams.'
-        : 'Executor lane is blocked until an API provider is configured.',
-    cooldown_until: null,
-  });
-
-  const mode =
-    readyProviders.length === 0
-      ? 'unavailable'
-      : codexAvailability.available
-        ? recentLocalCodexSuccess
-          ? 'hybrid_active'
-          : 'hybrid_ready'
-        : 'provider_only';
-
-  const summary =
-    mode === 'unavailable'
-      ? 'The swarm is offline because no API provider is currently ready.'
-      : mode === 'provider_only'
-        ? 'The swarm can work through API lanes only. ChatGPT/Codex subscription help is currently unavailable.'
-        : mode === 'hybrid_active'
-          ? 'The swarm is operating in hybrid mode with both API lanes and ChatGPT/Codex subscription lanes participating.'
-          : 'The swarm is ready for hybrid mode: API lanes are online and ChatGPT/Codex subscription lanes are available.';
-
-  return vaultStewardSwarmSchema.parse({
-    mode,
-    summary,
-    ready_provider_count: readyProviders.length,
-    default_provider: activeProvider,
-    codex_available: codexAvailability.available,
-    codex_plan_type: codexAvailability.planType,
-    lanes: [providerLane, foremanLane, reviewerLane, maintainerLane],
-  });
-}
-
-function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig): SovereignCapsule {
-  const content = [
-    '# Vault Steward Latest Run',
-    '',
-    `- Run ID: ${run.run_id}`,
-    `- Status: ${run.status}`,
-    `- Reason: ${run.reason}`,
-    `- Provider: ${run.provider ?? 'auto'}`,
-    `- Model: ${run.model ?? 'default'}`,
-    `- Completed at: ${run.completed_at}`,
-    '',
-    '## Overview',
-    run.overview,
-    '',
-    '## Observations',
-    ...(run.observations.length > 0 ? run.observations.map((entry) => `- ${entry}`) : ['- none']),
-    '',
-    '## Suggested Actions',
-    ...(run.suggested_actions.length > 0 ? run.suggested_actions.map((entry) => `- ${entry}`) : ['- none']),
-    '',
-    '## Swarm Lanes',
-    ...(run.lane_reports.length > 0
-      ? run.lane_reports.map((lane) =>
-          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${lane.summary}${lane.error ? ` (error: ${lane.error})` : ''}`,
-        )
-      : ['- provider-only']),
-    '',
-    '## Proposed Jobs',
-    ...(run.proposed_jobs.length > 0
-      ? run.proposed_jobs.map((job) => `- ${job.label}: ${job.goal} [${job.workstream}]`)
-      : ['- none']),
-    '',
-    '## Executed Jobs',
-    ...(run.executed_jobs.length > 0
-      ? run.executed_jobs.map((job) => `- ${job.label}: completed autonomously on Dream`)
-      : ['- none']),
-    '',
-    '## Graph Snapshot',
-    `- Total capsules: ${run.graph_snapshot.total_capsules}`,
-    `- Orphaned capsules: ${run.graph_snapshot.orphaned_capsules}`,
-    `- Type distribution: ${Object.entries(run.graph_snapshot.by_type)
-      .map(([type, count]) => `${type}:${count}`)
-      .join(', ')}`,
-    '',
-    `## Runtime Policy`,
-    `- Mode: ${config.mode}`,
-    `- Interval minutes: ${config.interval_minutes}`,
-    `- Night window: ${config.night_start_hour}:00-${config.night_end_hour}:00`,
-  ].join('\n');
-
-  const capsule: SovereignCapsule = {
-    metadata: {
-      capsule_id: 'capsule.operations.vault-steward.latest.v1',
-      version: '1.0.0',
-      status: 'active',
-      type: 'operations',
-      subtype: 'atomic',
-      author: 'Vault Steward Agent',
-      created_at: run.started_at,
-      updated_at: run.completed_at,
-      name: 'Vault Steward Latest Run',
-      semantic_hash: 'vault-steward-latest-run-operations-maintenance-latest-run',
-      source: {
-        uri: 'n1hub://agents/vault-steward',
-        type: 'background_agent',
-      },
-      priority: 'high',
-      progress: run.status === 'completed' ? 100 : run.status === 'skipped' ? 50 : 0,
-      tier: 3,
-    },
-    core_payload: {
-      content_type: 'markdown',
-      content,
-    },
-    neuro_concentrate: {
-      summary: run.overview,
-      keywords: [
-        'vault-steward',
-        'agent-swarm',
-        'codex-foreman',
-        'background-agent',
-        'capsule-maintenance',
-        'dream-branch',
-        'operations',
-        run.workstream,
-      ],
-      confidence_vector: {
-        extraction: 0.88,
-        synthesis: 0.9,
-        linking: 0.86,
-        provenance_coverage: 0.82,
-        validation_score: 0.9,
-        contradiction_pressure: 0.08,
-      },
-      semantic_hash: 'vault-steward-latest-run-operations-maintenance-latest-run',
-    },
-    recursive_layer: {
-      links: [
-        { target_id: 'capsule.foundation.vault-stewardship-swarm.v1', relation_type: 'part_of' },
-        { target_id: 'capsule.foundation.background-agent-runtime.v1', relation_type: 'part_of' },
-        { target_id: 'capsule.foundation.capsule-graph-maintenance.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.personal-ai-assistant.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.chat-to-capsules.v1', relation_type: 'references' },
-      ],
-      actions: [],
-      epistemic_ledger: [],
-    },
-    integrity_sha3_512: '',
-  };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
-  return capsule;
-}
-
-function buildQueueCapsule(queue: VaultStewardQueue): SovereignCapsule {
-  const content = [
-    '# Vault Steward Queue',
-    '',
-    `Queued jobs: ${queue.jobs.filter((job) => job.status === 'queued').length}`,
-    '',
-    ...queue.jobs.slice(0, 12).map((job) =>
-      [
-        `## ${job.label}`,
-        '',
-        `- Status: ${job.status}`,
-        `- Workstream: ${job.workstream}`,
-        `- Branch: ${job.suggested_branch}`,
-        `- Human confirmation: ${job.needs_human_confirmation ? 'yes' : 'no'}`,
-        `- Capsules: ${job.capsule_ids.join(', ')}`,
-        '',
-        job.goal,
-      ].join('\n'),
-    ),
-  ].join('\n');
-
-  const capsule: SovereignCapsule = {
-    metadata: {
-      capsule_id: 'capsule.operations.vault-steward.queue.v1',
-      version: '1.0.0',
-      status: 'active',
-      type: 'operations',
-      subtype: 'atomic',
-      author: 'Vault Steward Agent',
-      created_at: queue.updated_at,
-      updated_at: queue.updated_at,
-      name: 'Vault Steward Queue',
-      semantic_hash: 'vault-steward-queue-operations-maintenance-jobs-queue',
-      source: {
-        uri: 'n1hub://agents/vault-steward',
-        type: 'background_agent',
-      },
-      priority: 'high',
-      progress: Math.max(0, 100 - queue.jobs.filter((job) => job.status === 'queued').length),
-      tier: 3,
-    },
-    core_payload: {
-      content_type: 'markdown',
-      content,
-    },
-    neuro_concentrate: {
-      summary:
-        'Vault Steward Queue is the current list of queued capsule-maintenance jobs proposed by the autonomous vault agent for Dream-first review and follow-through.',
-      keywords: [
-        'vault-steward',
-        'maintenance-queue',
-        'operations',
-        'background-agent',
-        'dream-branch',
-      ],
-      confidence_vector: {
-        extraction: 0.86,
-        synthesis: 0.88,
-        linking: 0.83,
-        provenance_coverage: 0.8,
-        validation_score: 0.89,
-        contradiction_pressure: 0.05,
-      },
-      semantic_hash: 'vault-steward-queue-operations-maintenance-jobs-queue',
-    },
-    recursive_layer: {
-      links: [
-        { target_id: 'capsule.foundation.vault-stewardship-swarm.v1', relation_type: 'part_of' },
-        { target_id: 'capsule.foundation.capsule-graph-maintenance.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.branch-steward-agent.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.validation-gatekeeper-agent.v1', relation_type: 'references' },
-      ],
-      actions: [],
-      epistemic_ledger: [],
-    },
-    integrity_sha3_512: '',
-  };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
-  return capsule;
-}
-
-function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config: VaultStewardConfig): SovereignCapsule {
-  const currentRunJobs = run.proposed_jobs.slice(0, 4);
-  const queuedJobs = queue.jobs.filter((job) => job.status === 'queued');
-  const todayJobs = currentRunJobs.slice(0, 3);
-  const weekJobs = queuedJobs.slice(todayJobs.length, todayJobs.length + 5);
-  const laterJobs = queuedJobs.slice(todayJobs.length + weekJobs.length, todayJobs.length + weekJobs.length + 6);
-
-  const content = [
-    '# Vault Steward Plan',
-    '',
-    `- Generated at: ${run.completed_at}`,
-    `- Run ID: ${run.run_id}`,
-    `- Provider: ${run.provider ?? 'auto'}`,
-    `- Model: ${run.model ?? 'default'}`,
-    `- Mode: ${config.mode}`,
-    '',
-    '## Core Thesis',
-    run.overview,
-    '',
-    '## Planning Goals',
-    ...(run.suggested_actions.length > 0 ? run.suggested_actions.map((entry) => `- ${entry}`) : ['- No planning goals were produced in this cycle.']),
-    '',
-    '## Focus Capsules',
-    ...(run.targets.length > 0
-      ? run.targets.map((target) => `- ${target.capsule_id}: ${target.reason} [${target.priority}]`)
-      : ['- No capsule targets were selected in this cycle.']),
-    '',
-    '## Today',
-    ...(todayJobs.length > 0
-      ? todayJobs.map((job) => `- ${job.label}: ${job.goal}`)
-      : ['- No immediate tasks were proposed in this cycle.']),
-    '',
-    '## Next 7 Days',
-    ...(weekJobs.length > 0 ? weekJobs.map((job) => `- ${job.label}: ${job.goal}`) : ['- No week-horizon tasks yet.']),
-    '',
-    '## Backlog / Later',
-    ...(laterJobs.length > 0 ? laterJobs.map((job) => `- ${job.label}: ${job.goal}`) : ['- No later-horizon tasks yet.']),
-    '',
-    '## Observations',
-    ...(run.observations.length > 0 ? run.observations.map((entry) => `- ${entry}`) : ['- none']),
-    '',
-    '## Swarm Lanes',
-    ...(run.lane_reports.length > 0
-      ? run.lane_reports.map((lane) =>
-          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${lane.summary}`,
-        )
-      : ['- provider-only']),
-    '',
-    '## Queue Snapshot',
-    `- Total queued jobs: ${queuedJobs.length}`,
-    `- Current-run jobs: ${run.proposed_jobs.length}`,
-    `- Current-run executed jobs: ${run.executed_jobs.length}`,
-  ].join('\n');
-
-  const capsule: SovereignCapsule = {
-    metadata: {
-      capsule_id: 'capsule.operations.vault-steward.plan.v1',
-      version: '1.0.0',
-      status: 'active',
-      type: 'operations',
-      subtype: 'atomic',
-      author: 'Vault Steward Agent',
-      created_at: run.started_at,
-      updated_at: run.completed_at,
-      name: 'Vault Steward Plan',
-      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning',
-      source: {
-        uri: 'n1hub://agents/vault-steward',
-        type: 'background_agent',
-      },
-      priority: 'high',
-      progress: 100,
-      tier: 3,
-    },
-    core_payload: {
-      content_type: 'markdown',
-      content,
-    },
-    neuro_concentrate: {
-      summary:
-        'Vault Steward Plan is the current planning artifact produced by the autonomous capsule agent, translating vault analysis into goals, immediate tasks, and queue-backed capsule work.',
-      keywords: [
-        'vault-steward',
-        'agent-swarm',
-        'planning',
-        'capsule-maintenance',
-        'capsule-graph',
-        'background-agent',
-      ],
-      confidence_vector: {
-        extraction: 0.86,
-        synthesis: 0.9,
-        linking: 0.84,
-        provenance_coverage: 0.82,
-        validation_score: 0.9,
-        contradiction_pressure: 0.05,
-      },
-      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning',
-    },
-    recursive_layer: {
-      links: [
-        { target_id: 'capsule.foundation.vault-stewardship-swarm.v1', relation_type: 'part_of' },
-        { target_id: 'capsule.foundation.capsule-graph-maintenance.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.planner.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.planning-horizon-engine.v1', relation_type: 'references' },
-        { target_id: 'capsule.foundation.personal-ai-assistant.v1', relation_type: 'references' },
-      ],
-      actions: [],
-      epistemic_ledger: [],
-    },
-    integrity_sha3_512: '',
-  };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
-  return capsule;
 }
 
 async function writeDreamOperationalCapsules(run: VaultStewardRun, queue: VaultStewardQueue, config: VaultStewardConfig) {
@@ -2874,71 +1340,7 @@ async function runCodexForeman(
   }
 }
 
-export function filterNewJobsAgainstQueue(
-  jobs: VaultStewardJob[],
-  queue: VaultStewardQueue,
-): { jobs: VaultStewardJob[]; skipped: VaultStewardJob[] } {
-  const skipped: VaultStewardJob[] = [];
-  const accepted: VaultStewardJob[] = [];
-  const queueByIdentity = new Map<string, VaultStewardJob>();
-
-  for (const job of queue.jobs) {
-    queueByIdentity.set(getJobIdentityKey(job), job);
-  }
-
-  for (const job of jobs) {
-    const existing = queueByIdentity.get(getJobIdentityKey(job));
-    if (!existing) {
-      accepted.push(job);
-      continue;
-    }
-    if (existing.status === 'queued' || existing.status === 'accepted') {
-      skipped.push(job);
-      continue;
-    }
-    if (existing.status === 'completed' && isRecentCompletedJob(existing)) {
-      skipped.push(job);
-      continue;
-    }
-    accepted.push(job);
-  }
-
-  return { jobs: accepted, skipped };
-}
-
-function filterPlanAgainstQueueCooldown(
-  normalized: AiOutput,
-  queue: VaultStewardQueue,
-): { normalized: AiOutput; suppressedCapsuleIds: string[] } {
-  const queueHistory = getCapsuleQueueHistory(queue);
-  const suppressedCapsuleIds = uniqueBy(
-    normalized.targets
-      .map((target) => target.capsule_id)
-      .filter((capsuleId) => shouldCooldownCapsule(queueHistory.get(capsuleId))),
-    (entry) => entry,
-  );
-  if (suppressedCapsuleIds.length === 0) {
-    return { normalized, suppressedCapsuleIds: [] };
-  }
-
-  const suppressedSet = new Set(suppressedCapsuleIds);
-  return {
-    normalized: aiOutputSchema.parse({
-      ...normalized,
-      observations: [
-        ...normalized.observations,
-        `Suppressed ${suppressedCapsuleIds.length} cooled-down capsule target${suppressedCapsuleIds.length === 1 ? '' : 's'} because equivalent maintenance work is already in-flight or fully covered recently.`,
-      ],
-      targets: normalized.targets.filter((target) => !suppressedSet.has(target.capsule_id)),
-      proposed_jobs: normalized.proposed_jobs.filter(
-        (job) => !job.capsule_ids.every((capsuleId) => suppressedSet.has(capsuleId)),
-      ),
-    }),
-    suppressedCapsuleIds,
-  };
-}
-
-async function executeQueuedMaintenanceJobs(
+	async function executeQueuedMaintenanceJobs(
   config: VaultStewardConfig,
   queue: VaultStewardQueue,
   runId: string,
@@ -3124,7 +1526,13 @@ async function buildRunFromAi(config: VaultStewardConfig, summary: VaultSignalSu
     executedJobs: [],
   });
   const reviewerCancelledIds =
-    reviewer.available ? new Set(reviewer.output.cancel_job_ids.filter((id) => filteredJobs.jobs.some((job) => job.id === id))) : new Set<string>();
+    reviewer.available
+      ? new Set(
+          reviewer.output.cancel_job_ids.filter((id: string) =>
+            filteredJobs.jobs.some((job) => job.id === id),
+          ),
+        )
+      : new Set<string>();
   const reviewerCancelledJobs = filteredJobs.jobs.filter((job) => reviewerCancelledIds.has(job.id));
   const reviewerApprovedJobs = filteredJobs.jobs.filter((job) => !reviewerCancelledIds.has(job.id));
   const hasActiveQueue =
@@ -3383,15 +1791,14 @@ export async function updateVaultStewardConfig(input: VaultStewardUpdateInput): 
 
 export async function startVaultSteward(): Promise<VaultStewardRuntime> {
   const runtime = await readRuntime();
-  const runtimeAlive = runtime.status !== 'stopped' && isProcessAlive(runtime.pid);
+  const runtimeAlive = runtime.status !== 'stopped' && runtime.pid != null;
   await terminateVaultStewardProcesses(runtimeAlive && runtime.pid ? [runtime.pid] : []);
-  if (runtime.status !== 'stopped' && isProcessAlive(runtime.pid)) {
+  if (runtime.status !== 'stopped' && runtime.pid != null) {
     return runtime;
   }
 
-  await ensureAgentsDir();
   if (!fs.existsSync(TSX_CLI_PATH)) {
-    const failedRuntime = vaultStewardRuntimeSchema.parse({
+    const failedRuntime = normalizeVaultStewardRuntime({
       ...DEFAULT_RUNTIME(),
       last_error: 'tsx runtime not found; install dependencies before starting Vault Steward',
       updated_at: nowIso(),
@@ -3432,7 +1839,7 @@ export async function startVaultSteward(): Promise<VaultStewardRuntime> {
 
 export async function stopVaultSteward(): Promise<VaultStewardRuntime> {
   const runtime = await readRuntime();
-  if (runtime.pid && isProcessAlive(runtime.pid)) {
+  if (runtime.status !== 'stopped' && runtime.pid) {
     try {
       process.kill(-runtime.pid, 'SIGTERM');
     } catch {

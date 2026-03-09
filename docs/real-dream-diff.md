@@ -1,3 +1,4 @@
+<!-- @anchor doc:branching.real-dream-diff links=doc:n1hub.readme,doc:projects.reference,arch:graph.runtime note="Reference for real/dream overlay branching and diff behavior in N1Hub." -->
 # Real Dream Diff
 
 ## Overview

@@ -179,15 +179,14 @@ export function useProjectDetailState(projectId: string, branch: BranchName = 'r
     }
   };
 
-  const handleGraphNodeClick = (capsuleId: string) => {
+  const getGraphNodeHref = useCallback((capsuleId: string) => {
     const branchSuffix = branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`;
     if (capsules.some((capsule) => capsule.metadata.capsule_id === capsuleId && isProject(capsule))) {
-      router.push(`/projects/${encodeURIComponent(capsuleId)}${branchSuffix}`);
-      return;
+      return `/projects/${encodeURIComponent(capsuleId)}${branchSuffix}`;
     }
 
-    router.push(`/vault/capsule/${encodeURIComponent(capsuleId)}${branchSuffix}`);
-  };
+    return `/vault/capsule/${encodeURIComponent(capsuleId)}${branchSuffix}`;
+  }, [branch, capsules]);
 
   return {
     project,
@@ -209,7 +208,7 @@ export function useProjectDetailState(projectId: string, branch: BranchName = 'r
     setGraphFullscreen,
     deleting,
     handleDelete,
-    handleGraphNodeClick,
+    getGraphNodeHref,
     refetchCapsules,
   };
 }

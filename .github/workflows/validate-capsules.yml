@@ -28,6 +28,9 @@ jobs:
       - name: Validate all capsules
         run: npm run validate -- --dir data/capsules --strict --report
 
+      - name: Run anchor governance gate
+        run: npm run check:anchors:full
+
       - name: Upload validation reports
         if: always()
         uses: actions/upload-artifact@v4

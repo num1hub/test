@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.sleep-time-compute.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-07T10:22:13.327Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "name": "Sleep-Time Compute",
     "semantic_hash": "capsule-foundation-sleep-time-compute-v1-off-peak",
     "priority": "medium",
@@ -19,22 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute defines the off-peak compute discipline of N1Hub. It governs when heavy background work should move away from the human attention lane and into quieter, cheaper, more industrial execution windows. It exists to protect the daytime symbiosis loop while still compounding progress through DeepMine, A2C, graph maintenance, validation sweeps, and agent reassessment.\n\n## 2. Core Attributes\n- `offpeak_windows` maps quiet execution windows by timezone, profile, and operator policy.\n- `workload_classes` marks which jobs are safe to defer, batch, or re-check outside live interaction.\n- `budget_limits` bounds token, credit, and provider-lane spend during unattended work.\n- `discount_capture` explicitly hunts cheaper provider lanes, hosted inference windows, or batch pricing when available.\n- `human_protection_rules` prevents heavy background work from degrading the daytime co-pilot experience.\n- `scheduler_feedback` records throughput, latency, savings, and reassessment quality for later tuning.\n\n## 3. Lifecycle\nSleep-Time Compute starts from user rhythm and access posture, then becomes scheduler policy. The system reads profile identity, user preferences, wallet lanes, and current control-plane policy, selects eligible workloads, defers or batches them, then evaluates outcomes against cost and usefulness. The concept is not \"run everything at night\". The concept is \"move the right work to the right window so the second brain compounds progress without stealing the foreground from the person.\"\n\n## 4. N1Hub Role\nThis capsule is one of the hidden levers that makes N1Hub more than a notes app. It lets the human have a live assistant during the day while the heavier quarry, refinery, and vault-stewardship work shifts into quieter industrial windows. That distinction matters economically, cognitively, and architecturally.\n\n## 5. Integration\n- **User Preferences and Profile:** provide timezone, human rhythm, quiet expectations, and identity-bound defaults.\n- **Night Shift Autonomy:** defines when unattended dispatch is actually allowed.\n- **AI Wallet and Hybrid LLM Access:** determine which supply lanes are cheap, healthy, and safe enough to use off-peak.\n- **Background Agent Runtime and Agent Daemon:** convert policy into real wakeups, queues, and cooldowns.\n- **DeepMine, A2C, and Vault Stewardship Swarm:** consume most of the heavy off-peak work.\n- **Agent Control Plane:** keeps the scheduling and budget posture legible instead of magical.\n\n## 6. Philosophical Alignment\nSleep-Time Compute supports To Dig Deep by preserving the clarity of the waking human loop while still letting the system mine, refine, and improve the vault when attention is elsewhere.\n"
+    "content": "# Sleep-Time Compute\n\n## 1. Definition and Essence\nSleep-Time Compute defines the off-peak compute discipline of N1Hub. It governs when heavy background work should move away from the human attention lane and into quieter, cheaper, more industrial execution windows. It exists to protect the daytime symbiosis loop while still compounding progress through DeepMine, A2C, graph maintenance, validation sweeps, and agent reassessment.\n\n## 2. Core Attributes\n- `offpeak_windows` maps quiet execution windows by timezone, profile, and operator policy.\n- `workload_classes` marks which jobs are safe to defer, batch, or re-check outside live interaction.\n- `budget_limits` bounds token, credit, and provider-lane spend during unattended work.\n- `discount_capture` explicitly hunts cheaper provider lanes, hosted inference windows, or batch pricing when available.\n- `human_protection_rules` prevents heavy background work from degrading the daytime co-pilot experience.\n- `scheduler_feedback` records throughput, latency, savings, and reassessment quality for later tuning.\n\n## 3. Lifecycle\nSleep-Time Compute starts from user rhythm and access posture, then becomes scheduler policy. The system reads profile identity, user preferences, wallet lanes, and current control-plane policy, selects eligible workloads, defers or batches them, then evaluates outcomes against cost and usefulness. The concept is not \"run everything at night\". The concept is \"move the right work to the right window so the second brain compounds progress without stealing the foreground from the person.\"\n\n## 4. N1Hub Role\nThis capsule is one of the hidden levers that makes N1Hub more than a notes app. It lets the human have a live assistant during the day while the heavier quarry, refinery, and vault-stewardship work shifts into quieter industrial windows. That distinction matters economically, cognitively, and architecturally.\n\n## 5. Integration\n- **User Preferences and Profile:** provide timezone, human rhythm, quiet expectations, and identity-bound defaults.\n- **Night Shift Autonomy:** defines when unattended dispatch is actually allowed.\n- **AI Wallet and Hybrid LLM Access:** determine which supply lanes are cheap, healthy, and safe enough to use off-peak.\n- **Background Agent Runtime and Agent Daemon:** convert policy into real wakeups, queues, and cooldowns.\n- **DeepMine, A2C, and Vault Stewardship Swarm:** consume most of the heavy off-peak work.\n- **Agent Control Plane:** keeps the scheduling and budget posture legible instead of magical.\n\n## 6. Philosophical Alignment\nSleep-Time Compute supports To Dig Deep by preserving the clarity of the waking human loop while still letting the system mine, refine, and improve the vault when attention is elsewhere.\n\n## 7. Day/Night Cognition Metaphor\n\nSleep-time execution should be framed as a disciplined day/night cycle rather than as anonymous batch compute.\n- Day favors human-guided structuring, clarification, and intent alignment.\n- Night favors semantic consolidation, pattern recognition, error pruning, and hidden-link discovery.\n\nThat framing is useful because it changes the expected outputs. Off-peak work should return morning insight reports, clearer follow-up prompts, and graph improvements that feel like overnight thinking rather than like unexplained automation.\n"
   },
   "neuro_concentrate": {
-    "summary": "Sleep-Time Compute defines the off-peak execution discipline that lets N1Hub compound work without stealing the foreground from the human. It governs which heavy workloads should shift into quiet windows, how provider economics and wallet lanes influence that shift, and how scheduler policy stays aligned with real human rhythm instead of generic cron logic. The capsule matters because DeepMine, A2C, validation, and vault stewardship become expensive and cognitively harmful when they compete with live co-pilot use. By turning sleep-time execution into explicit doctrine, the vault makes background progress legible, tunable, and supportive of the second-brain contract.",
+    "summary": "Sleep-Time Compute defines the off-peak discipline that lets N1Hub deepen work while the human is elsewhere, and it now carries a clearer day-versus-night cognitive metaphor. Daytime should favor collaborative structuring and live symbiosis, while night windows favor consolidation, pattern discovery, error pruning, and background graph growth. This matters because off-peak execution should feel like a trustworthy continuation of thought, not like an opaque batch system doing unknown work in the dark. By pairing scheduler policy with morning insight outputs, cost discipline, and explicit workload classes, Sleep-Time Compute turns overnight progress into something the human can understand and steer.",
     "keywords": [
       "sleep-time-compute",
+      "day-night-cycle",
+      "morning-insight",
       "off-peak",
       "background-execution",
-      "scheduling",
+      "subconscious-ai",
+      "pattern-discovery",
       "quiet-windows",
       "cost-control",
-      "deep-work",
-      "a2c",
-      "deepmine",
-      "night-autonomy",
-      "human-rhythm",
       "second-brain"
     ],
     "confidence_vector": {
@@ -101,5 +99,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "abe5a5725b469f88bbd68f2b832ce72c36e1783110d6c34f4f5b32b67f7bed18406c694b4be7d0e4043383b5aaceb608edd4776166db43b967c6e087d6d57df3"
+  "integrity_sha3_512": "e9fe849e654274dae76939703231c97f184b242c6f42b81136e39abed684fe03cd88abad8d9679d3fd572868f9159c923dc0c5c97ac78292ca7f242908ecbe8c"
 }

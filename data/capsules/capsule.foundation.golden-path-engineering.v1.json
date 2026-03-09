@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.golden-path-engineering.v1",
+    "version": "1.0.1",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-09T11:30:00Z",
+    "updated_at": "2026-03-09T12:28:00Z",
+    "name": "Golden Path Engineering",
+    "semantic_hash": "golden-path-engineering-small-steps-file-limits-scaffolds",
+    "source": {
+      "uri": "internal://docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 26,
+    "estimatedHours": 170,
+    "actualHours": 30,
+    "dueDate": "2026-08-15",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Golden Path Engineering\n\n## 1. Definition and Essence\nGolden Path Engineering defines the preferred rails for adding or changing major N1Hub functionality. It is the practical side of low-blast-radius architecture: how new work should enter the repository so boundaries, contracts, docs, tests, and runtime ownership stay coherent.\n\n## 2. Core Rules\n- new domains should expose one public entry surface,\n- docs, tests, and contracts should arrive with the runtime instead of later promises,\n- high-signal files should stay below the soft 400 line and hard 600 line guardrails unless there is a justified exception,\n- refactors should happen in small reversible steps,\n- validation, anchors, and targeted runtime checks should run before mutation is called complete.\n\n## 3. N1Hub Golden Path\nA first-class N1Hub domain usually needs public types, a public index or route surface, domain-owned storage expectations, tests for boundary behavior, and docs that explain how other surfaces are allowed to depend on it. The exact layout can vary, but the boundary story should be obvious from the tree.\n\n## 4. Deployment Pattern\nHigh-trust changes should land in this order:\n\n1. public entry and contract first,\n2. contract-backed migration and tests,\n3. implementation with bounded small steps.\n\n## 5. Why It Matters\nWithout a golden path, the repository accumulates one-off local optimizations and private conventions. With a golden path, contributors and agents can make progress without re-inventing architecture every time."
+  },
+  "neuro_concentrate": {
+    "summary": "Golden Path Engineering describes the preferred rails for shipping new capability inside N1Hub. It takes the low-blast-radius doctrine and turns it into a repeatable delivery pattern: one public entry surface, boundary docs and tests that ship with the runtime, file-size guardrails for high-signal code, and small-step refactors instead of giant rewrites. The capsule matters because N1Hub mixes product code, validator law, agent runtimes, workflow automation, and a large capsule corpus. Without a common path for adding or restructuring domains, each subsystem teaches agents different habits. Golden path rules reduce that variance and make future change easier to review, automate, and recover.",
+    "keywords": [
+      "golden-path",
+      "engineering",
+      "small-steps",
+      "file-size",
+      "scaffolding",
+      "delivery-rails",
+      "n1hub",
+      "guardrails"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "golden-path-engineering-small-steps-file-limits-scaffolds"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.low-blast-radius-architecture.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.agent-activation-readiness.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-friendly-engineering.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "12c49c13c7568391bcae06f46ee9566610fa5c6f92847c2dcf7256bc2739dd6950cd6c527ed9e17216abb2ab7328421da02a0a58e32f5c1743efc4fd599d04af"
+}

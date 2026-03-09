@@ -1,7 +1,10 @@
+<!-- @anchor doc:validator.reference links=doc:n1hub.readme,doc:n1hub.low-blast-radius-architecture,arch:api.validate.route,interface:validator.public-api,arch:validator.engine,script:validator.cli,script:validator.openapi note="Technical reference for the N1Hub capsule validator." -->
 # Capsule Validator
 
 ## Purpose
 The Capsule Validator is the integrity guardrail for N1Hub and CapsuleOS. It enforces the 5-Element Law and the 16 Validation Gates across API routes, UI editing flows, import/A2C ingest paths, CLI usage, CI, and scheduled audits.
+
+In the N1Hub low-blast-radius architecture, validator sovereignty means capsule-shaped data should become trusted only through validator-owned schemas, helpers, routes, and checks instead of cross-domain guesswork.
 
 ## Architecture
 The core engine lives in `lib/validator/` and is shared by all integration surfaces.

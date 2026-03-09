@@ -17,17 +17,19 @@
     "content": "# Capsule Type: Foundation\n\n## 1. Definition\nIn Dream, the `foundation` type points toward a clearer constitutional layer for the entire second brain: machine-readable law surfaces, cleaner branch semantics, and more explicit graph physics for humans and agents alike.\n\n## 2. Future Direction\nDream treats foundation capsules as the place where the vault should continue to harden its invariants.\n- more laws should become explicit instead of remaining folklore\n- agent behavior should terminate in inspectable foundation references\n- promotion, quarantine, and review should cite foundation capsules as first-class legal anchors\n- foundation changes should remain rare, deliberate, and lineage-preserving\n\n## 3. Why Dream Needs This\nAs the system grows, informal rules become a liability. Dream therefore pushes the foundation layer toward greater clarity, lower ambiguity, and stronger interoperability between human governance, swarm behavior, and runtime enforcement."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, the `foundation` type becomes a clearer constitutional layer for the second brain: explicit law surfaces, stronger graph physics, and lower dependence on unwritten operator memory. It points toward a future where runtime behavior, review, promotion, quarantine, and agent handoffs all terminate in more precise foundation capsules, making the system calmer, more legible, and less dependent on hidden operator folklore.",
+    "summary": "In the Dream branch, `foundation` type discipline should become an explicit constitutional layer for every architectural certainty that must outlive model defaults. It defines what counts as system law, where review and promotion hooks attach, and which invariants remain stable across agent or UI updates. This posture pushes operational behavior toward auditable interpretation instead of folklore. As Dream work experiments with richer governance and automation, it should keep foundation capsules as the narrow, explicit control surface for branch-safe behavior, quarantine rules, and escalation pathways. The outcome is a less volatile memory core where future contributors can trust what is already law, what is optional, and what still needs governance review.",
     "keywords": [
       "capsule-type",
       "foundation",
       "constitutional-layer",
-      "systemic-law",
+      "system-law",
       "graph-physics",
-      "capsuleos",
-      "n1hub",
-      "law-surface",
-      "runtime-governance"
+      "branch-governance",
+      "promotion-rules",
+      "review-hook",
+      "quarantine-policy",
+      "runtime-governance",
+      "n1hub"
     ],
     "confidence_vector": {
       "extraction": 1,

@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.agent-activation-readiness.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-09T01:10:38.622Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
+    "name": "Agent Activation Readiness",
+    "semantic_hash": "agent-activation-readiness-preload-bootstrap-fingerprint-mutation-gate",
+    "source": {
+      "uri": "internal://scripts/a2c/activate.ts",
+      "type": "repository_implementation"
+    },
+    "priority": "high",
+    "progress": 34,
+    "estimatedHours": 90,
+    "actualHours": 22,
+    "dueDate": "2026-07-01",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Agent Activation Readiness\n\n## 1. Definition and Essence\nAgent Activation Readiness defines the gate that determines whether an A2C-capable agent is actually prepared to mutate the repository. It is not a vague reminder to \"load the docs.\" It is a deterministic bootstrap procedure that checks whether the required identity, contract, cognition, and execution surfaces are present and coherent before deeper work begins.\n\n## 2. Activation Layers\n- **Layer 1: identity** through skill identity files and agent descriptors.\n- **Layer 2: contracts** through governance, migration, and handoff protocols.\n- **Layer 3: cognition** through reasoning, investigation, and selective-synthesis rules.\n- **Layer 4: execution** through prompt pack, redesign, and audit protocols.\n\n## 3. Readiness Gate\nBootstrap verifies:\n- required files exist and are non-empty,\n- each file clears minimum word budgets,\n- layer totals clear minimum depth thresholds,\n- the prompt pack contains the full prompt family,\n- key structural markers exist in the skill doctrine,\n- mandatory preload paths are present and in the correct order,\n- an activation fingerprint can be computed from the loaded corpus.\n\nThe output is a machine-readable verdict: `READY` or `BLOCKED`, with blockers listed verbatim.\n\n## 4. Why This Matters\nStrong mutation should not begin from partially loaded doctrine. Activation readiness turns \"did the agent really load the skill?\" into an auditable precondition instead of a superstition.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Agent Activation Readiness defines the deterministic bootstrap gate that decides whether an A2C-capable agent is allowed to mutate the repository at all. It checks that identity, contract, cognition, and execution surfaces are present, non-empty, deep enough, ordered correctly, and complete enough to compute a stable activation fingerprint. The runtime then emits a machine-readable READY or BLOCKED verdict with blockers instead of assuming the skill was mentally loaded. This matters because strong mutation should not start from half-read doctrine or missing prompt law. Activation therefore becomes an auditable precondition, not a hopeful ritual performed in private model memory.",
+    "keywords": [
+      "activation-readiness",
+      "bootstrap-gate",
+      "preload-layers",
+      "ready-blocked",
+      "prompt-pack",
+      "fingerprint",
+      "mutation-permission",
+      "instruction-surfaces",
+      "a2c",
+      "preflight"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "agent-activation-readiness-preload-bootstrap-fingerprint-mutation-gate"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [
+      {
+        "name": "run_activation_bootstrap",
+        "intent": "Validate that the A2C skill surface is fully loaded before any non-trivial mutation begins.",
+        "command": "npm run a2c:activate",
+        "hitl_required": false
+      }
+    ],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "f311e5e76d3d14d14bb8bb64267744606f90e6fe0615f3ae8750ad37cb7b2eec0330b12dd54e1260fc37dd94b63a7d2fcfbef4d5a739077885204494b36709bb"
+}

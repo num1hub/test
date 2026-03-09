@@ -1,19 +1,18 @@
 {
   "metadata": {
     "capsule_id": "capsule.ai.prompt.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "active",
     "type": "operations",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-08T21:05:00Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "AI Prompt",
     "semantic_hash": "capsule-ai-prompt-v1-template-llm-assistant-operations",
     "source": {
-      "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
-      "sha256": "508a98e3bdfee6cd99191d122ea79a2bb7024c569f84af73184a56e0c92924d5",
-      "type": "architect_prompt"
+      "uri": "internal://docs/a2c/protocols/prompt-pack.md",
+      "type": "repository_contract"
     },
     "priority": "medium",
     "progress": 52,
@@ -24,21 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable or instance-specific instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, context-pack expectations, and expected output schema so model interactions remain deterministic and auditable.\n\n## 2. Core Attributes\n- `prompt_type` system, user, planner, risk, summarization\n- `template` raw prompt text with placeholders\n- `constraints` schema and style boundaries\n- `model_profile` routing hints for selected engine\n- `context_requirements` what evidence, capsules, and artifacts must be present before execution\n- `evaluation_notes` quality outcomes from prior runs\n\n## 3. Lifecycle\nPrompts are authored, versioned, executed in runtime interactions, evaluated against outcome quality, and refined through feedback loops and governance review. Mature prompt capsules should stay legible enough that they can be compared, replayed, and critiqued as operational knowledge rather than disappearing into hidden application code.\n\n## 4. Integration\n- **AI Conversation:** supplies context-aware message generation.\n- **Suggestion Module:** drives recommendation synthesis.\n- **DeepMine:** routes prompt execution to LLM providers.\n- **Instruction Surfaces:** determine where reusable instruction law is sourced from.\n- **Context Engineering:** defines what capsule packs and runtime artifacts must accompany prompt execution.\n- **Evals and Traces:** preserve quality outcomes for later refinement.\n- **Validator/Audit:** preserves deterministic artifacts for review.\n\n## 5. Philosophical Alignment\nPrompt capsules align with To Dig Deep by making model instructions explicit, inspectable, improvable, and governable rather than hidden magic."
+    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable and compiled instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, context-pack expectations, and expected output schema so model interactions remain deterministic, replayable, and auditable.\n\n## 2. Prompt Asset Types\n- `template_prompts` such as activation, full integration, update-existing, dedup/conflict, decomposition, audit-only, index-only, insufficient-context, selective-synthesis, and deep-investigation prompts.\n- `compiled_prompts` produced at runtime when a base template is fused with modality rules, semantic lenses, anti-sycophancy directives, epistemic frontier context, and vault-backed few-shot examples.\n- `redesign_prompts` used when a prompt family repeatedly fails quality gates and needs a governed redesign loop instead of random tweaking.\n- `evaluation_notes` that connect prompt variants to traces, failure classes, or quality outcomes.\n\n## 3. Runtime Composition\nIn the current A2C stack a good prompt is layered, not flat:\n1. base template,\n2. modality-aware rules,\n3. semantic-lens directives,\n4. skeptical anti-sycophancy posture,\n5. frontier and void context,\n6. few-shot examples from trusted live capsules,\n7. explicit output contract.\n\nThat compiled shape lets one prompt family stay stable while still adapting to the actual source and graph state.\n\n## 4. Integration\n- **A2C Normalize:** compiles prompt directives from source signals.\n- **A2C Synthesize:** uses the prompt pack and Prompt Singularity stack for governed assembly.\n- **Agent Evals and Traces:** preserves which prompt layers produced useful or weak results.\n- **Instruction Surfaces:** keep prompt law in repo-native files instead of hidden application code.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Prompt captures the instruction artifact that shapes model behavior across conversations, agents, and background automation. It stores constraints, expected output style, routing hints, and context requirements so prompt logic becomes inspectable and versionable instead of disappearing inside opaque runtime code. The capsule matters because prompt quality directly affects trust, determinism, cost, and the ability to debug or improve assistant behavior over time. By representing prompts as first-class operational knowledge, the vault can compare variants, attach evals and traces, and refine model interaction with the same rigor applied to any other sovereign artifact.",
+    "summary": "AI Prompt captures the instruction artifacts that shape model behavior across conversations, agents, and background automation, and the current A2C stack now distinguishes clearly between template prompts and compiled prompts. Base prompt-pack templates such as activation, full integration, conflict handling, decomposition, and deep investigation are fused at runtime with modality rules, semantic lenses, anti-sycophancy directives, epistemic frontier context, few-shot examples, and output contracts. This matters because prompt quality is not only about wording; it is about layered prompt composition that can be replayed, compared, redesigned, and tied back to actual traces instead of disappearing into opaque runtime code.",
     "keywords": [
-      "ai",
-      "prompt",
-      "template",
-      "llm",
-      "assistant",
-      "operations",
-      "deepmine",
-      "context-packs",
-      "instruction-surfaces",
-      "evals"
+      "ai-prompt",
+      "prompt-pack",
+      "compiled-prompts",
+      "template-prompts",
+      "prompt-compiler",
+      "prompt-redesign",
+      "frontier-context",
+      "few-shot-examples",
+      "output-contracts",
+      "traceable-instructions"
     ],
     "confidence_vector": {
       "extraction": 0.89,
@@ -99,10 +98,18 @@
       {
         "target_id": "capsule.foundation.agent-harness-protocol.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-normalize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-synthesize.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d208fd3c2c353502bcb836b880143209f77a80e86224976bedd8fe7c78ae783acb3a7ff562656cf022af240ba5d4013dd4f09d094d093eea3c93dc1ab3f0a402"
+  "integrity_sha3_512": "88b8b671ef6971cc19d7fbb496d60ab73619a312720bebb135ad26f6bb47a32e40f5d9403caffa2770a2707b5330a9f7e1798bcf4fb52bc1b5dd4ff607bebeab"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-09T00:13:04.582Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only cycles, and Dream-safe execution cycles.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, local skills, and subscription-backed lanes into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. In Dream the runtime should become mode-aware enough that the same system can behave like a polite co-pilot by day and a bounded autonomous vault-maintenance layer by night without confusing those duties.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772981298754\n- Job: Decomposition review for background-agent-runtime hub\n- Workstream: decomposition\n- Note: Tightened the summary around the capsule's actual hub boundary: the durable runtime layer, not model behavior. Added routing keywords from the existing integration and state sections. Split pressure remains high; the cleanest future decomposition is along the named responsibility seams: daemon lifecycle and scheduling, durable state, capsule job execution, conversation and delegation bridge, provider and tool handoff, and operator oversight."
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only cycles, and Dream-safe execution cycles.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, local skills, and subscription-backed lanes into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. In Dream the runtime should become mode-aware enough that the same system can behave like a polite co-pilot by day and a bounded autonomous vault-maintenance layer by night without confusing those duties.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773015063934\n- Job: Decomposition review for unfinished foundation hubs\n- Workstream: decomposition\n- Note: Tightened the boundary around runtime responsibilities and integration points rather than model behavior. Split pressure remains high along the named responsibility seams; the minimum viable future splits are lifecycle and scheduling, durable state plus capsule-job execution, and the delegation/provider/operator interface layer."
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the hub-level operational harness in the Dream branch that keeps LLM-backed agents running durably inside N1Hub through supervised daemon lifecycle, dispatch and scheduling, explicit mode-shaping, durable state, normalized capsule job execution, conversation-to-delegation bridging, provider and tool handoff, honest idle and backoff behavior, degraded-lane recovery, and operator-visible oversight. It defines the runtime layer around always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls rather than the models themselves.",
+    "summary": "Background Agent Runtime is the Dream-branch hub for the durable operating layer around long-lived LLM-backed work in N1Hub: supervised daemon lifecycle, dispatch and mode-aware scheduling, durable state, normalized capsule-job execution, chat-to-delegation bridging, provider and tool handoff, and operator-visible oversight. It defines how Symphony, N-Infinity, capsule_graph jobs, worktree-isolated execution, and nightly autonomy windows run inside one accountable runtime without redefining model behavior.",
     "keywords": [
       "background-agent-runtime",
       "daemon",
@@ -42,7 +42,15 @@
       "degraded-recovery",
       "durable-state",
       "provider-and-tool-handoff",
-      "operator-oversight"
+      "operator-oversight",
+      "daemon-lifecycle",
+      "dispatch-and-scheduling",
+      "conversation-and-delegation-bridge",
+      "worktree-isolation",
+      "nightly-autonomy-windows",
+      "vault-steward",
+      "autonomous-swarm",
+      "decomposition"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -210,8 +218,16 @@
         "run_id": "vault-steward-1772981298754",
         "job_id": "vault-steward-job-b612e7a8ca3b52d6",
         "rationale": "The content explicitly defines this capsule as the surrounding runtime that keeps agents alive, schedules work, preserves checkpoints and run history, normalizes job envelopes, bridges chat and delegation, hands off to AI Wallet, DeepMine, Symphony, and local skills, and exposes operator control. The note is justified because the capsule already enumerates distinct responsibility blocks that form natural future atomic split boundaries."
+      },
+      {
+        "at": "2026-03-09T00:13:04.582Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1773015063934",
+        "job_id": "vault-steward-job-9bad6a9311d08afe",
+        "rationale": "The capsule already lists these responsibilities separately in Core Responsibilities and N1Hub Integration, so clarifying them in the summary and keywords improves routing and decomposition readiness without changing doctrine."
       }
     ]
   },
-  "integrity_sha3_512": "5130845e94d694437666a04ab48ae240a9520b814e9f27f36245399cba8a9b08aace293c6b0239dadc67fd08795a3bb3630a291362c2a795f267a376970eb3dd"
+  "integrity_sha3_512": "bfc8527923cf3469620eb6300ea4adedef59d03773599971def479cbfb9ea9a00ff4fd61fc20965915b418d6175ac8323b6c3f98c36d40f46c6ccd2301f805a7"
 }

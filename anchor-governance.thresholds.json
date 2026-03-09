@@ -1,0 +1,10 @@
+{
+  "maxBrokenLinks": 0,
+  "maxWeakComponents": 1,
+  "maxZeroInboundAnchors": 0,
+  "minCoveragePercent": 100,
+  "minAppEntrypointCoveragePct": 1,
+  "minSpineHeaderCoveragePct": 100,
+  "minReciprocalEdgeRatio": 0.6,
+  "minPassingScore": 95
+}

@@ -1,26 +1,142 @@
+<!-- @anchor arch:repo.entrypoint links=doc:n1hub.readme,arch:governance.anchor-spec,doc:validator.reference,doc:a2c.reference,doc:symphony.reference,doc:projects.reference,doc:branching.real-dream-diff note="Repository entrypoint and top-level runtime map for N1Hub." -->
+<!-- @anchor doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,doc:openclaw.fork-notes,script:extract.anchors,script:validate.anchors,script:verify.root-docs,script:file.guardrails.audit note="Repository overview, instruction stack map, and primary command surface for N1Hub." -->
 # N1Hub Vault
 
-N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with branch workflows (real/dream), version history, import/export, and activity auditing.
+N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with validator-governed storage, branch overlays, AI-assisted ingestion, workflow automation, and autonomous maintenance lanes.
 
-## Universal Branching
+## Read Order
 
-N1Hub now supports sparse overlay branches on top of `real`:
+Read the repo in this order:
 
-- real capsules stay at `data/capsules/<id>.json`
-- non-real branches materialize as `data/capsules/<id>@<branch>.json`
-- branch tombstones live at `data/capsules/<id>@<branch>.tombstone.json`
-- branch manifests live at `data/branches/<branch>.manifest.json`
-- Dream keeps legacy `.dream.json` read compatibility until migration
-- structured diff and merge APIs are available at `POST /api/diff` and `POST /api/diff/apply`
+1. `README.md`
+   This file explains what the repository is, where the main runtime domains live, and which command surfaces matter.
+2. `AGENTS.md`
+   Repo law for humans and AI agents: boundaries, prohibitions, verification, and close-out requirements.
+3. `CODEX.md`
+   Execution protocol: how to implement, verify, and report work without widening blast radius.
+4. `SOUL.md`
+   Identity and behavioral spine for user-facing intelligence.
+5. `MEMORY.md`
+   Durable working memory for stable operator preferences, active architectural priorities, and other cross-session continuity.
+6. `TOOLS.md`
+   Local runtime and environment notes.
+7. `WORKFLOW.md`
+   Repo-owned Symphony workflow contract.
+8. `NINFINITY_WORKFLOW.md`
+   Night-shift workflow contract for capsule-oriented automation.
+9. `docs/ANCHORS_SPEC.md`
+10. `docs/TERMINOLOGY.md`
+11. `docs/ANCHOR_NAMING_GRAMMAR.md`
+12. `docs/ANCHOR_GOVERNANCE_PATTERNS.md`
+13. `docs/ANCHOR_RISK_REGISTER.md`
+14. `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`
 
-Architecture and API details: [`docs/real-dream-diff.md`](docs/real-dream-diff.md)
+## Root Surface Roles
 
-### Branch migration
+The main instruction surfaces are complementary, not interchangeable:
 
-```bash
-npm run migrate:branches -- --dry-run
-npm run migrate:branches
-```
+- `README.md`
+  Repository map, runtime overview, command discovery, and current cluster priorities.
+- `AGENTS.md`
+  Repo law for humans and AI agents: boundaries, prohibitions, and mandatory evidence.
+- `SOUL.md`
+  Identity, trust posture, and behavioral spine for the intelligence layer that speaks to operators.
+- `MEMORY.md`
+  Durable cross-session memory for stable repo truths, operator preferences, and active priorities.
+- `CODEX.md`
+  Execution charter: how to make changes without widening blast radius.
+
+If these surfaces drift into contradiction, treat that as an operational bug.
+
+## AI-Friendly Operating Law
+
+N1Hub is being shaped around low-blast-radius, AI-friendly engineering. The point is not cosmetic neatness. The point is to keep every change bounded, legible, and recoverable even when the actor has partial context.
+
+The current law is:
+
+- build real runtime capsules instead of relying on soft folder conventions
+- give each major domain one public entry surface
+- keep contracts file-backed and reviewable
+- treat storage as domain-owned namespaces
+- forbid casual private cross-domain imports
+- keep high-signal code readable enough to fit in working context
+- use tests as machine-readable boundary documentation
+- refactor in small reversible steps instead of giant rewrites
+
+Architecture doctrine: [`docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`](docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md)
+
+Golden-path rule: when a safe public command, workflow file, or domain entry surface already exists, use it instead of inventing ad hoc execution paths.
+
+## Runtime Map
+
+The main N1Hub runtime domains and their public surfaces are:
+
+- `validator`
+  - code: `lib/validator`
+  - routes: `app/api/validate/*`
+  - scripts: `scripts/validate-cli.ts`, `scripts/generate-validate-openapi.ts`
+  - role: validator-owned capsule law and promotion gate
+- `a2c`
+  - code: `lib/a2c`
+  - scripts: `scripts/a2c/*`
+  - role: Anything-to-Capsules runtime, ingest, recon, synthesis, and emission
+- `symphony`
+  - code: `lib/symphony`
+  - scripts: `scripts/symphony.ts`
+  - docs: `WORKFLOW.md`
+  - role: issue and workflow orchestration runtime
+- `agent runtime / vault stewardship`
+  - code: `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*`
+  - public entry: `@/lib/agents/vaultSteward`
+  - scripts: `scripts/vault-steward.ts`
+  - role: bounded autonomous vault maintenance and queue discipline
+- `graph`
+  - code: `lib/graph`
+  - role: graph projection and runtime navigation
+- `branching / diff`
+  - code: `lib/diff`
+  - routes: `POST /api/diff`, `POST /api/diff/apply`
+  - docs: [`docs/real-dream-diff.md`](docs/real-dream-diff.md)
+- `projects`
+  - docs: [`docs/projects.md`](docs/projects.md)
+  - role: project-oriented projection of capsule graph state
+
+Owned storage is also part of the architecture:
+
+- `data/capsules` belongs to validator and vault discipline
+- `data/private/a2c` and `reports/a2c` belong to A2C
+- `.symphony` belongs to Symphony runtime
+- `data/private/agents` belongs to agent-runtime orchestration
+- `data/branches` belongs to branch overlay state
+
+## Current Cluster Priorities
+
+N1Hub is not trying to refactor everything at once. Architectural work is sequenced by clusters.
+
+1. `#1 Vault Steward Runtime`
+   - active cluster
+   - goal: keep prompt construction, queue planning, schemas, and runtime orchestration from collapsing into one god-file
+   - public rule: external callers must use `@/lib/agents/vaultSteward`
+2. `#2 Validator/API boundary package`
+   - target: `app/api/validate`, `lib/validator`, `scripts/validate-cli.ts`, `scripts/generate-validate-openapi.ts`
+   - goal: keep validator-owned contracts explicit and stable
+3. `#3 Symphony orchestration contracts`
+   - target: `lib/symphony`, `WORKFLOW.md`, `scripts/symphony.ts`
+   - goal: separate workflow law, prompt rendering, tracker logic, and runtime execution
+
+Cluster rule: one cluster at a time, verified end-to-end, then the next.
+
+## Living Governance Surfaces
+
+N1Hub treats its root instruction surfaces as living, but not free-form:
+
+- `README.md` should track actual runtime domains, public entrypoints, command surfaces, and current cluster status.
+- `AGENTS.md` should track active repo law and only change when that law is real, explicit, and enforceable.
+- `SOUL.md` should describe operator-facing identity and trust posture, not hide execution rules that belong elsewhere.
+- `MEMORY.md` should carry durable continuity, not transient conversation residue or secret material.
+- `CODEX.md` should describe the execution protocol that is actually expected in the repo.
+
+External articles, chats, and best-practice lists are inputs, not law. Adapt them to N1Hub reality before promoting them into these files.
 
 ## Development
 
@@ -31,28 +147,80 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Testing
+## Core Verification
+
+Baseline runtime verification:
 
 ```bash
 npm test -- --run
-npm run test:e2e
+npm run typecheck
+npm run validate -- --dir data/capsules --strict --report
 ```
+
+Architecture and file-size audit:
+
+```bash
+npm run audit:file-guardrails
+npm run check:file-guardrails:hard
+```
+
+## Anchor Governance
+
+N1Hub carries repo-native anchor governance over root docs, governance docs, app root, validator boundaries, A2C runtime, Symphony runtime, graph runtime, and governance scripts.
+
+Primary commands:
+
+```bash
+npm run extract:anchors
+npm run validate:anchors
+npm run verify:root-docs
+npm run test:anchors
+npm run typecheck
+npm run anchors:coverage
+npm run anchors:kpis
+npm run anchors:intelligence
+npm run anchors:scorecard
+npm run anchors:assert-scorecard
+npm run anchors:lint-usage
+npm run terminology:lint
+npm run anchors:snapshot
+npm run check:anchors
+npm run check:anchors:full
+```
+
+Generated anchor artifacts:
+
+- `docs/anchors.index.json`
+- `docs/ANCHOR_MAP.md`
+- `docs/ANCHOR_GRAPH.mermaid`
+- `.anchors-coverage.json`
+- `.anchors-intelligence.json`
+- `.anchors-scorecard.json`
+- `.anchors-history.jsonl`
+
+Governance references:
+
+- [`docs/ANCHORS_SPEC.md`](docs/ANCHORS_SPEC.md)
+- [`docs/TERMINOLOGY.md`](docs/TERMINOLOGY.md)
+- [`docs/ANCHOR_NAMING_GRAMMAR.md`](docs/ANCHOR_NAMING_GRAMMAR.md)
+- [`docs/ANCHOR_GOVERNANCE_PATTERNS.md`](docs/ANCHOR_GOVERNANCE_PATTERNS.md)
+- [`docs/ANCHOR_RISK_REGISTER.md`](docs/ANCHOR_RISK_REGISTER.md)
 
 ## Capsule Validation
 
-The Capsule Validator is fully integrated into backend routes, editor workflows, imports, A2C ingest, CLI, audits, and CI.
+The Capsule Validator is integrated into backend routes, editor flows, imports, A2C ingest, CLI, audits, and CI.
 
-- Technical reference: [`docs/validator.md`](docs/validator.md)
-- OpenAPI spec: [`docs/openapi/validate.openapi.json`](docs/openapi/validate.openapi.json)
+- reference: [`docs/validator.md`](docs/validator.md)
+- OpenAPI: [`docs/openapi/validate.openapi.json`](docs/openapi/validate.openapi.json)
 
-### CLI quick start
+CLI quick start:
 
 ```bash
 npm run validate -- --dir data/capsules --strict --report
 npm run validate -- data/capsules/capsule.foundation.capsuleos.v1.json --fix
 ```
 
-### API quick start
+API surfaces:
 
 - `POST /api/validate`
 - `POST /api/validate/batch`
@@ -62,117 +230,114 @@ npm run validate -- data/capsules/capsule.foundation.capsuleos.v1.json --fix
 
 Use `Authorization: Bearer <token>` headers matching current app auth.
 
-## Automation
+## A2C Runtime
 
-- Pre-commit staged-capsule validation: `npm run validate-staged`
-- Background full-vault audit: `npm run audit:capsules`
-- CI workflow: `.github/workflows/validate-capsules.yml`
+The canonical Anything-to-Capsules runtime is the TypeScript stack under `lib/a2c`, exposed through `scripts/a2c/*`.
 
-## Symphony Automation
+The runtime works against the native N1Hub layout instead of reconstructing a separate CapsuleOS root:
 
-N1Hub now includes a repo-owned Symphony workflow contract at `WORKFLOW.md`.
+- vault capsules: `data/capsules`
+- A2C index: `data/private/a2c/index.json`
+- A2C tasks and queue state: `data/private/a2c`
+- A2C reports and daemon state: `reports/a2c`
 
-Operational notes and trust posture: [`docs/symphony.md`](docs/symphony.md)
+Quick start:
 
-Required environment:
+```bash
+npm run a2c:activate
+npm run a2c:recon
+npm run a2c:index
+npm run a2c:status
+npm run a2c:watch:once
+```
 
-- `LINEAR_API_KEY`
-- `LINEAR_PROJECT_SLUG`
+Operational reference: [`docs/a2c.md`](docs/a2c.md)
 
-Run the service from the repo root:
+## Symphony and N-Infinity
+
+Symphony is the repo-owned orchestration layer.
+
+- workflow contract: `WORKFLOW.md`
+- operational reference: [`docs/symphony.md`](docs/symphony.md)
+- main command:
 
 ```bash
 npm run symphony -- ./WORKFLOW.md
 ```
 
-Optional local dashboard:
+Optional dashboard:
 
 ```bash
 npm run symphony -- ./WORKFLOW.md --port 4310
 ```
 
-The default N1Hub workflow provisions per-issue git worktree workspaces under `.symphony/workspaces/` and installs dependencies on first run inside each workspace.
-
-Production and background-service instructions: [`docs/agents-operations.md`](docs/agents-operations.md)
-
-## N-Infinity Night Shift
-
-N1Hub also ships a dedicated N-Infinity background entrypoint backed by Symphony:
+N-Infinity is the night-shift automation entrypoint backed by Symphony:
 
 ```bash
 npm run ninfinity
 ```
 
-It uses `NINFINITY_WORKFLOW.md`, the local `capsule_graph` tracker mode, and a nightly execution
-window so capsule-oriented agents can work the vault autonomously during off-peak hours. Successful
-runs are recorded so the same agent does not immediately re-dispatch again in the same night window
-or during the cooldown period after success.
+It uses `NINFINITY_WORKFLOW.md`, local `capsule_graph` tracker mode, and cooldown-aware nightly execution.
 
-## AI Runtime and N-Infinity
+Operational reference: [`docs/ninfinity.md`](docs/ninfinity.md)
 
-N1Hub now includes a server-side AI provider runtime backed by the AI Wallet in Settings, plus a nightly N-Infinity capsule-agent workflow.
+## Vault Steward
 
-- AI providers are configured in Settings and stored server-side in encrypted form.
-- Wallet sections are now split into `Subscriptions`, `API Providers`, and `Platform & Routing`.
-- ChatGPT and Claude can now be configured in two separate ways:
-  - `ChatGPT / Codex Subscription` and `Claude Subscription` for subscription-backed bridge/auth-key paths
-  - `OpenAI API` and `Anthropic API` for standard API-key access
-- `Gemini`, `GitHub Models`, `DeepSeek`, and `Grok` are available as direct API-provider slots.
-- Gemini can be configured either in the AI Wallet or via server-side `GEMINI_API_KEY` for trusted local bring-up.
-- GitHub Models can be configured either in the AI Wallet or via server-side `GITHUB_MODELS_TOKEN` or `GITHUB_TOKEN`.
-- Manual provider-backed generation is available through `POST /api/ai/generate`.
-- An OpenClaw-inspired control plane is available at `/ai`, combining provider status, DeepMine console, Symphony or N-Infinity lane telemetry, and a direct-provider `Vault Steward` autonomous agent.
-- Provider availability is exposed through `GET /api/ai/providers`.
-- Capsule-oriented N-Infinity agents run through Symphony using `NINFINITY_WORKFLOW.md`.
-- `Vault Steward` is the first autonomous agent that can work directly from an AI Wallet provider without requiring Codex login. It reads the current vault, proposes bounded maintenance jobs, persists a queue under `data/private/agents`, and updates Dream-side operational capsules about its latest run.
+Vault Steward is the first direct-provider autonomous agent that can work from AI Wallet providers without requiring local Codex login.
 
-Operational notes: [`docs/ninfinity.md`](docs/ninfinity.md)
+It:
 
-Host bring-up and `systemd` installation: [`docs/agents-operations.md`](docs/agents-operations.md)
+- reads the current vault
+- proposes bounded maintenance jobs
+- persists queue and runtime state under `data/private/agents`
+- updates Dream-side operational capsules with latest run state
 
-Gemini API key quickstart:
-
-- docs: <https://ai.google.dev/gemini-api/docs/quickstart>
-- keys: <https://aistudio.google.com/api-keys>
-
-## OpenClaw-Inspired Agent Workspace
-
-N1Hub now carries a manual, selective fork of the most useful OpenClaw workspace patterns:
-
-- [`SOUL.md`](SOUL.md) for assistant identity and boundaries
-- [`TOOLS.md`](TOOLS.md) for local runtime and API notes
-- `skills/<name>/SKILL.md` for focused workspace-local agent skills
-- research and mapping notes in [`docs/openclaw-fork.md`](docs/openclaw-fork.md)
-
-This is intentionally additive. N1Hub keeps CapsuleOS, AI Wallet, DeepMine, Symphony, and
-N-Infinity as the real architecture, while using OpenClaw-style workspace files to make local agent
-behavior more stable and inspectable.
-
-Run the nightly N-Infinity service from the repo root:
-
-```bash
-npm run ninfinity
-```
-
-Run the direct-provider autonomous vault agent manually:
+Manual one-shot run:
 
 ```bash
 npm run vault-steward -- --once
 ```
 
-Optional local status surface:
+## Universal Branching
+
+N1Hub supports sparse overlay branches on top of `real`:
+
+- real capsules: `data/capsules/<id>.json`
+- non-real overlays: `data/capsules/<id>@<branch>.json`
+- branch tombstones: `data/capsules/<id>@<branch>.tombstone.json`
+- branch manifests: `data/branches/<branch>.manifest.json`
+- Dream keeps `.dream.json` read compatibility until migration
+
+Migration:
 
 ```bash
-npm run ninfinity -- --port 4311
+npm run migrate:branches -- --dry-run
+npm run migrate:branches
 ```
 
-## Projects - Organize Your Sovereign Work
+Details: [`docs/real-dream-diff.md`](docs/real-dream-diff.md)
 
-The Projects tab provides a project-oriented projection of the capsule graph:
+## Projects
 
-- project capsules are explicit (`metadata.type: "project"`, `subtype: "hub"`)
-- hierarchy is modeled with `part_of` links (child -> parent)
-- cycle prevention is enforced in both UI and API
-- create/edit/link/re-parent flows use the same capsule APIs and validator pipeline
+The Projects tab is the project-oriented projection of the capsule graph.
 
-Read the full guide in [`docs/projects.md`](docs/projects.md).
+- project capsules are explicit: `metadata.type: "project"`, `subtype: "hub"`
+- hierarchy uses `part_of` links
+- cycle prevention is enforced in UI and API
+- create, edit, link, and re-parent flows reuse the same capsule APIs and validator pipeline
+
+Guide: [`docs/projects.md`](docs/projects.md)
+
+## OpenClaw-Inspired Workspace
+
+N1Hub includes a selective fork of the most useful OpenClaw workspace patterns:
+
+- [`AGENTS.md`](AGENTS.md) for repo law
+- [`CODEX.md`](CODEX.md) for execution protocol
+- [`SOUL.md`](SOUL.md) for assistant identity and boundaries
+- [`MEMORY.md`](MEMORY.md) for durable working memory
+- [`TOOLS.md`](TOOLS.md) for local runtime and API notes
+- `skills/<name>/SKILL.md` for focused workspace-local agent skills
+- [`docs/openclaw-fork.md`](docs/openclaw-fork.md) for mapping notes
+
+This layer is additive. N1Hub keeps CapsuleOS, AI Wallet, DeepMine, A2C, Symphony, and N-Infinity as the real architecture while using workspace files to make local agent behavior more stable and inspectable.

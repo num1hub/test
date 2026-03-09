@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-hash.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "name": "A2C Stage: Hash",
     "semantic_hash": "capsule-foundation-a2c-hash-v1-stage-semantic-integrity",
     "priority": "medium",
@@ -19,17 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Hash\n\n## 1. Definition and Essence\nThe Hash stage computes semantic and integrity seals for capsule candidates using canonical serialization and cryptographic hashing. It guarantees deterministic identity signals before validation and persistence.\n\n## 2. Core Attributes\n- `semantic_hash` generation inputs and tokenization profile\n- `integrity_sha3_512` computed from canonical 5-element payload subset\n- `hash_profile` indicating algorithm and canonicalization version\n- `hash_mismatch_flags` for parity and integrity inconsistencies\n- `seal_timestamp` for audit traceability\n\n## 3. Lifecycle\nHash receives linked candidate capsules, computes semantic and integrity digests, syncs parity fields, and emits sealed candidates to validation. Any digest mismatch becomes a hard pre-storage failure.\n\n## 4. Integration\n- **Link Stage:** receives graph-complete capsule drafts.\n- **Validate Stage:** supplies cryptographically sealed candidates for gate checks.\n- **CapsuleOS Semantic Hash:** aligns 8-token semantic digest format.\n- **Capsule Validator G16:** enforces integrity seal parity.\n\n## 5. Philosophical Alignment\nHashing supports To Dig Deep by making meaning and integrity explicit, preventing invisible drift between what a capsule claims and what it actually contains.\n"
+    "content": "# A2C Stage: Hash\n\n## 1. Definition and Essence\nHash is the identity and seal discipline of the A2C runtime. The live system does not treat sealing as a decorative checksum. The repo-native A2C stack and the application validator recompute integrity from the same four-root geometry: metadata, core_payload, neuro_concentrate, and recursive_layer.\n\n## 2. Runtime Responsibilities\n- Keep semantic-hash parity between metadata and neuro_concentrate.\n- Recompute `integrity_sha3_512` after payload sanitation or any graph / neuro mutation via the shared canonical JSON geometry.\n- Surface integrity mismatch as a hard failure rather than an informational warning.\n- Preserve deterministic identity across merge, salvage, transient synthesis, Parliament resolution, and decay workflows.\n- Make seal generation inspectable enough that later validators can explain both expected and actual hash state.\n\n## 3. Cross-Stack Reality\nThe repo-native A2C runtime recomputes seals during staging, repair, synthesis, and recovery flows. The application validator uses `computeIntegrityHash` as the live admission check for N1Hub. That shared geometry is what keeps repo-native A2C work aligned with the current application truth.\n\n## 4. Integration\n- **A2C Link:** must finish topology before hashing.\n- **A2C Validate:** treats any mismatch or malformed digest as immediate failure.\n- **CapsuleOS Semantic Hash:** governs compact semantic identity.\n- **Core Constitution:** gives sealing its non-negotiable legal force.\n\n## 5. Philosophical Alignment\nHash serves To Dig Deep by making identity reproducible. It prevents a capsule from claiming one thing while physically storing another.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Hash computes the semantic and cryptographic seals that turn a capsule candidate into a deterministic identity-bearing artifact. It synchronizes canonical serialization, semantic hash generation, and integrity hashing before validation proceeds. This stage matters because meaning and integrity both need explicit, reproducible signatures; without them, downstream systems cannot reliably compare, trust, or version artifacts. By making sealing a separate step, Hash exposes mismatches early and prevents silent drift between what a capsule claims to represent and what its payload actually contains.",
+    "summary": "A2C Stage: Hash is the shared identity discipline that keeps repo-native A2C aligned with the current N1Hub validator. The runtime recomputes seals after sanitation, salvage, synthesis, Parliament output, and decay, while the application validator rechecks the same four-root canonical geometry before a capsule is trusted. This matters because integrity cannot be a best-effort checksum: it is the exact line between a stable artifact and silent drift. Hash therefore protects both semantic parity and cryptographic parity, ensuring that what a capsule claims to be, what the runtime wrote, and what the application validates are all the same object.",
     "keywords": [
       "a2c",
       "hash",
-      "semantic-hash",
-      "integrity",
-      "sha3",
-      "canonical-json"
+      "sha3-512",
+      "canonical-json",
+      "semantic-hash-parity",
+      "refresh-payload-integrity",
+      "g16",
+      "seal",
+      "validator",
+      "capsule-identity"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,10 +62,26 @@
       {
         "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.core.constitution.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "recompute_integrity_seal",
+        "intent": "Refresh semantic and cryptographic identity after candidate mutation or recovery.",
+        "hitl_required": false
+      },
+      {
+        "name": "validate_live_seal",
+        "intent": "Confirm that the stored SHA3-512 seal matches the application validator computation.",
+        "command": "npm run validate -- data/capsules/<capsule-file>.json --ids-file <ids-file>",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "de0ccce30d03b4687a7b71c319a1aae698599584ada7520a938b8a4c8a19bfd6ce070ee525ccdfffd4f791ce37404c25f4776e1d6212618fe565e9c8d6255b54"
+  "integrity_sha3_512": "fbb2f9946a70a41a134a73a0021f1dfddaa01c2ff6e3cd270c22cbf8943e99676fa079972ed00ff6b11215aac2c10cea6999cf93f264f2c67d41577f2cf1c4e5"
 }

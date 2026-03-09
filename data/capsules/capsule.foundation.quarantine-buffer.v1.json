@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.quarantine-buffer.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-08T20:20:00Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "name": "Quarantine Buffer",
     "semantic_hash": "capsule-foundation-quarantine-buffer-v1-validation-failure-governance",
     "priority": "medium",
@@ -19,17 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Quarantine Buffer\n\n## 1. Definition and Essence\nQuarantine Buffer is the controlled isolation boundary for capsule artifacts that fail critical validation, governance, provenance, or trust checks. It preserves the artifact, its diagnostics, its branch context, and its remediation path without letting contamination quietly leak into the accepted graph.\n\n## 2. Core Attributes\n- `quarantine_reason` normalized failure class such as malformed structure, weak evidence, branch confusion, unsafe override, or trust violation\n- `captured_artifact` immutable snapshot of the rejected payload or mutation bundle\n- `diagnostic_bundle` validator output, reviewer notes, and runtime evidence explaining the rejection\n- `remediation_status` workflow state for repair, arbitration, retest, or archival\n- `release_policy` explicit conditions required for re-entry into Dream review or Real promotion\n- `arbiter_notes` parliamentary, architect, or gatekeeper decisions attached to the case\n\n## 3. Lifecycle\nArtifacts enter quarantine on hard gate failure or trust-sensitive uncertainty. They are then inspected, repaired, or arbitrated. Successful cases return to the pipeline through controlled validation; failed or dangerous cases remain archived with full audit and causal trace.\n\n## 4. Integration\n- **A2C Validate / Validation Gatekeeper:** primary entry path for rejected or unsafe candidates.\n- **Branch Steward Agent:** helps distinguish branch confusion from genuine corruption.\n- **Vault Update Agent:** ensures failed promotion attempts remain recoverable instead of silently disappearing.\n- **Architect Override Protocol:** exceptional interventions must still leave quarantine-visible evidence.\n- **Audit Log / Epistemic Ledger:** capture why the artifact was isolated and how it was resolved.\n\n## 5. Philosophical Alignment\nQuarantine advances To Dig Deep by refusing silent failure. Every rejected claim remains inspectable, repairable, governable, and accountable before it is trusted again.\n"
+    "content": "# Quarantine Buffer\n\n## 1. Definition and Essence\nQuarantine Buffer is the controlled isolation boundary for repo-native A2C work. The runtime already distinguishes several failure surfaces here: queue staging quarantine, validator quarantine, and exhausted retry retention. Treating them as one blob would erase important operational meaning.\n\n## 2. Runtime Layers\n- **Pipeline quarantine:** staged source artifacts enter the ingest pipeline through `buffer_quarantine` with SHA-keyed filenames and `.meta.json` sidecars carrying original path, staged time, source hash, and attempt count.\n- **Validation quarantine:** candidates that fail hard trust checks remain isolated with forensic diagnostics instead of leaking into the live vault.\n- **Failed retention:** queue items that exhaust retry policy are retained in a visible failure lane rather than disappearing.\n\n## 3. Runtime Responsibilities\n- Preserve the artifact that failed.\n- Preserve why it failed through black-box diagnostics and ledger references.\n- Preserve how many times the system tried to recover it.\n- Allow salvage, override, or human review to release the item through controlled re-entry rather than ad hoc copying.\n\n## 4. Why This Matters\nQuarantine is not deletion. It is a governed waiting room where unstable or broken knowledge remains inspectable, recoverable, and historically visible.\n\n## 5. Philosophical Alignment\nQuarantine Buffer serves To Dig Deep by refusing silent failure. It keeps broken state accountable until the system either repairs it or archives it with evidence intact.\n"
   },
   "neuro_concentrate": {
-    "summary": "Quarantine Buffer is the isolation boundary for artifacts that fail critical validation, governance, or trust checks. It preserves rejected payloads, diagnostics, branch context, remediation attempts, and release conditions without letting contaminated state quietly enter the accepted graph. The capsule matters because failure should remain inspectable and recoverable, not disappear into logs or silent deletion. By turning rejection into a governed holding pattern, Quarantine Buffer protects the integrity of active knowledge while still giving agents and operators a structured path to repair, arbitrate, retest, or archive problematic artifacts.",
+    "summary": "Quarantine Buffer is the isolation system that separates staged uncertainty from trusted publication without throwing evidence away. In the repo-native runtime it includes pipeline quarantine with sidecar metadata and attempt counts, validator quarantine with forensic diagnostics, and failed-retention lanes for items that exhaust retry policy. This matters because failures do not all mean the same thing: some inputs are merely waiting for salvage, some need governance review, and some should remain historically visible as exhausted attempts. Quarantine Buffer therefore protects the live graph while preserving raw artifacts, recovery context, and release conditions instead of reducing every failure to silent deletion or one opaque error flag.",
     "keywords": [
-      "quarantine",
-      "buffer",
-      "validation-failure",
-      "governance",
-      "capsuleos",
-      "audit"
+      "quarantine-buffer",
+      "buffer-quarantine",
+      "failed-retention",
+      "retry-lifecycle",
+      "meta-json",
+      "attempt-count",
+      "salvage-run",
+      "architect-override",
+      "isolation-boundary",
+      "queue-ledger"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -82,10 +86,25 @@
       {
         "target_id": "capsule.foundation.architect-override.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.epistemic-ledger.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "inspect_quarantine_status",
+        "intent": "Inspect staged, quarantined, and exhausted items before deciding on salvage or archive.",
+        "command": "npm run a2c:status",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "16a1cf3600709635b6eb5baceb5ca807cb377fbe65f9ce577eaf08eba2df5c2440b011ee152ed4ea07b29c1a05c956b3a0184cfa694dfe9ecb6e274a4c65379a"
+  "integrity_sha3_512": "0ea8698c46cb386f1a694e5b4bb29299d1e06581d1cd265c8ce29060367ed1dafceda801bca5c0ba07d86b6a3142bccded1e12a301a48d2c2d354f1677ea29a5"
 }

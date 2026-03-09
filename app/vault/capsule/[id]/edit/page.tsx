@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useEffect, useState } from 'react';
+import { Suspense, use, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { useCapsuleStore } from '@/store/capsuleStore';
@@ -18,7 +18,7 @@ const REQUIRED_KEYS = [
   'integrity_sha3_512',
 ] as const;
 
-export default function EditCapsulePage({ params }: { params: Promise<{ id: string }> }) {
+function EditCapsulePageContent({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params);
   const id = resolvedParams.id;
   const router = useRouter();
@@ -303,5 +303,21 @@ export default function EditCapsulePage({ params }: { params: Promise<{ id: stri
         </div>
       </div>
     </div>
+  );
+}
+
+function EditCapsulePageFallback() {
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-slate-950 text-slate-400">
+      Loading editor...
+    </div>
+  );
+}
+
+export default function EditCapsulePage(props: { params: Promise<{ id: string }> }) {
+  return (
+    <Suspense fallback={<EditCapsulePageFallback />}>
+      <EditCapsulePageContent {...props} />
+    </Suspense>
   );
 }

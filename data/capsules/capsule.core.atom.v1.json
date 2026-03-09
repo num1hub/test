@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.core.atom.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-08T21:10:00Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "semantic_hash": "core-atom-first-capsule-primitive-knowledge-structure-identity",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,21 +18,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core Atom: Primitive Capsule Archetype\n\n## 1. Definition\nThe Core Atom is the irreducible archetype of a capsule. It preserves identity, payload, semantic concentration, graph context, and integrity seal in one coherent unit.\n\n## 2. Structural Rule\nAtom semantics inherit the 5-Element law and cannot be divided further without losing core meaning. Atomic boundaries are what let humans and agents update the vault precisely instead of smearing many concepts into one unstable object.\n\n## 3. Topological Role\nAtomic capsules are execution and evidence units of the graph, while hubs aggregate and organize them.\n\n## 4. Governance\nBy enforcing atom-level provenance, CapsuleOS avoids ambiguous compression, sustains reliable machine reasoning, and gives swarms bounded surfaces for safe work."
+    "content": "# Core Atom: Primitive Capsule Archetype\n\n## 1. Definition\nThe Core Atom is the irreducible archetype of a capsule. It preserves identity, payload, semantic concentration, graph context, and integrity seal in one coherent unit.\n\n## 2. Structural Rule\nAtom semantics inherit the 5-Element law and cannot be divided further without losing core meaning. Atomic boundaries are what let humans and agents update the vault precisely instead of smearing many concepts into one unstable object.\n\n## 3. Topological Role\nAtomic capsules are execution and evidence units of the graph, while hubs aggregate and organize them.\n\n## 4. Governance\nBy enforcing atom-level provenance, CapsuleOS avoids ambiguous compression, sustains reliable machine reasoning, and gives swarms bounded surfaces for safe work.\n\n## 5. Digital Neuron Reading\n\nThe atom can also be read as a digital neuron:\n- metadata behaves like the identity-bearing soma,\n- core payload holds the ground-truth nucleus,\n- neuro-concentrate acts as the outbound axon,\n- recursive links behave like dendritic topology,\n- the integrity seal acts as the protective membrane.\n\nThis framing is useful because it emphasizes that a capsule is not merely a file wrapper. It is a cryptographically sealed, vector-quantified unit of negentropy whose structure is part of its meaning.\n"
   },
   "neuro_concentrate": {
-    "summary": "Core Atom defines the irreducible unit of meaning in CapsuleOS: one capsule with one coherent payload, one identity frame, one neuro-concentrate, one recursive context, and one integrity seal. The capsule matters because graph quality collapses when evidence, action, and aggregation blur into shapeless containers. By protecting atom semantics, the system preserves provenance granularity, precise version lineage, and machine-readable boundaries for later hubs to compose without erasing detail. Atom is therefore the minimum sovereign building block from which tasks, concepts, identities, physical objects, and larger project structures can be assembled responsibly, and it is the unit that makes bounded swarm work and safe capsule maintenance possible.",
+    "summary": "Core Atom defines the irreducible capsule unit, but its best ontological reading is sharper than a generic building block. A capsule is a cryptographically sealed, vector-quantified unit of negentropy: one bounded cognitive object whose identity, payload, semantic concentration, graph context, and integrity membrane remain coherent together. This matters because graph quality collapses when evidence and meaning blur into shapeless containers. Atom therefore protects both the engineering boundary of safe updates and the epistemic boundary of durable thought. It is the smallest unit that can keep truth, lineage, topology, and machine readability intact while still participating in a larger living graph.",
     "keywords": [
       "core",
       "atom",
-      "irreducible-unit",
+      "unit-of-negentropy",
+      "digital-neuron",
       "capsule-boundary",
       "provenance",
       "lineage",
-      "payload",
       "integrity",
       "graph-building-block",
-      "bounded-maintenance"
+      "machine-readable"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "749b8589f9642ec3f160f8db99ad55f2b2b8a09ce1f2c6ad3707d4e1370ffe844afab8047bc7f5b947c9573b1251e8ea0cc93fb9f270a540273a01fa8f7eef2d"
+  "integrity_sha3_512": "8965b08bfd1c79b7455197d0d261ac81d1f54741e5b741f2f50d021e903cebce684b9bc60d1d3af47716d4cd2c9161368cdeada05f7dba55a1020645d8eab638"
 }

@@ -1,0 +1,1102 @@
+{
+  "version": 1,
+  "generated_at": "2026-03-09T14:53:53.276Z",
+  "root": ".",
+  "anchor_count": 67,
+  "anchors": [
+    {
+      "id": "arch:a2c.runtime",
+      "category": "arch",
+      "name": "a2c.runtime",
+      "file": "lib/a2c/index.ts",
+      "line": 1,
+      "links": [
+        "flow:a2c.workspace-recon",
+        "arch:symphony.runtime",
+        "doc:a2c.reference"
+      ],
+      "state": "active",
+      "note": "Repo-native Anything-to-Capsules runtime index and canonical graph loader for N1Hub."
+    },
+    {
+      "id": "arch:api.validate.route",
+      "category": "arch",
+      "name": "api.validate.route",
+      "file": "app/api/validate/route.ts",
+      "line": 1,
+      "links": [
+        "arch:validator.engine",
+        "interface:validator.public-api",
+        "doc:validator.reference"
+      ],
+      "state": "active",
+      "note": "Primary validator API boundary shared by app workflows and external callers."
+    },
+    {
+      "id": "arch:app.root-layout",
+      "category": "arch",
+      "name": "app.root-layout",
+      "file": "app/layout.tsx",
+      "line": 1,
+      "links": [
+        "interface:app.landing-entry",
+        "arch:api.validate.route",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "App Router root layout and top-level application shell for N1Hub."
+    },
+    {
+      "id": "arch:governance.anchor-spec",
+      "category": "arch",
+      "name": "governance.anchor-spec",
+      "file": "docs/ANCHORS_SPEC.md",
+      "line": 1,
+      "links": [
+        "doc:governance.anchors-spec",
+        "arch:app.root-layout",
+        "script:validate.anchors"
+      ],
+      "state": "active",
+      "note": "Normative anchor-governance contract adapted to N1Hub architecture and instruction surfaces."
+    },
+    {
+      "id": "arch:graph.runtime",
+      "category": "arch",
+      "name": "graph.runtime",
+      "file": "lib/graph/capsuleGraph.ts",
+      "line": 1,
+      "links": [
+        "doc:projects.reference",
+        "doc:branching.real-dream-diff",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "Capsule graph runtime surface shared by project and vault graph views."
+    },
+    {
+      "id": "arch:repo.entrypoint",
+      "category": "arch",
+      "name": "repo.entrypoint",
+      "file": "README.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "arch:governance.anchor-spec",
+        "doc:validator.reference",
+        "doc:a2c.reference",
+        "doc:symphony.reference",
+        "doc:projects.reference",
+        "doc:branching.real-dream-diff"
+      ],
+      "state": "active",
+      "note": "Repository entrypoint and top-level runtime map for N1Hub."
+    },
+    {
+      "id": "arch:symphony.runtime",
+      "category": "arch",
+      "name": "symphony.runtime",
+      "file": "lib/symphony/index.ts",
+      "line": 1,
+      "links": [
+        "flow:symphony.prompt-render",
+        "arch:graph.runtime",
+        "doc:symphony.reference"
+      ],
+      "state": "active",
+      "note": "Public Symphony runtime barrel and orchestration surface for N1Hub."
+    },
+    {
+      "id": "arch:validator.engine",
+      "category": "arch",
+      "name": "validator.engine",
+      "file": "lib/validator/core.ts",
+      "line": 1,
+      "links": [
+        "arch:a2c.runtime",
+        "interface:validator.public-api",
+        "doc:validator.reference",
+        "script:validator.cli"
+      ],
+      "state": "active",
+      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
+    },
+    {
+      "id": "doc:a2c.reference",
+      "category": "doc",
+      "name": "a2c.reference",
+      "file": "docs/a2c.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.tools",
+        "doc:n1hub.low-blast-radius-architecture",
+        "arch:a2c.runtime",
+        "flow:a2c.workspace-recon"
+      ],
+      "state": "active",
+      "note": "Technical reference for the repo-native A2C runtime."
+    },
+    {
+      "id": "doc:branching.real-dream-diff",
+      "category": "doc",
+      "name": "branching.real-dream-diff",
+      "file": "docs/real-dream-diff.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:projects.reference",
+        "arch:graph.runtime"
+      ],
+      "state": "active",
+      "note": "Reference for real/dream overlay branching and diff behavior in N1Hub."
+    },
+    {
+      "id": "doc:governance.anchors-spec",
+      "category": "doc",
+      "name": "governance.anchors-spec",
+      "file": "docs/ANCHORS_SPEC.md",
+      "line": 2,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "doc:governance.terminology",
+        "doc:governance.naming-grammar",
+        "doc:governance.patterns",
+        "doc:governance.risk-register",
+        "script:anchors.scorecard",
+        "script:anchors.lint-usage",
+        "script:anchors.terminology-lint",
+        "script:anchors.snapshot"
+      ],
+      "state": "active",
+      "note": "Normative specification for N1Hub anchor extraction, validation, scoring, and governance."
+    },
+    {
+      "id": "doc:governance.naming-grammar",
+      "category": "doc",
+      "name": "governance.naming-grammar",
+      "file": "docs/ANCHOR_NAMING_GRAMMAR.md",
+      "line": 1,
+      "links": [
+        "doc:governance.anchors-spec",
+        "doc:governance.patterns",
+        "doc:governance.risk-register",
+        "doc:governance.terminology"
+      ],
+      "state": "active",
+      "note": "Anchor naming grammar and category intent for N1Hub."
+    },
+    {
+      "id": "doc:governance.patterns",
+      "category": "doc",
+      "name": "governance.patterns",
+      "file": "docs/ANCHOR_GOVERNANCE_PATTERNS.md",
+      "line": 1,
+      "links": [
+        "doc:governance.anchors-spec",
+        "doc:governance.naming-grammar",
+        "doc:governance.risk-register",
+        "doc:n1hub.readme",
+        "script:extract.anchors",
+        "script:validate.anchors"
+      ],
+      "state": "active",
+      "note": "Operational patterns that keep N1Hub anchor governance deliberate and maintainable."
+    },
+    {
+      "id": "doc:governance.risk-register",
+      "category": "doc",
+      "name": "governance.risk-register",
+      "file": "docs/ANCHOR_RISK_REGISTER.md",
+      "line": 1,
+      "links": [
+        "doc:governance.anchors-spec",
+        "doc:governance.naming-grammar",
+        "doc:governance.patterns",
+        "script:anchors.scorecard"
+      ],
+      "state": "active",
+      "note": "Current anchor-governance risk register for N1Hub."
+    },
+    {
+      "id": "doc:governance.terminology",
+      "category": "doc",
+      "name": "governance.terminology",
+      "file": "docs/TERMINOLOGY.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.codex",
+        "doc:governance.anchors-spec",
+        "doc:governance.naming-grammar",
+        "script:anchors.terminology-lint"
+      ],
+      "state": "active",
+      "note": "Canonical anchor-governance terminology contract for N1Hub."
+    },
+    {
+      "id": "doc:n1hub.agents",
+      "category": "doc",
+      "name": "n1hub.agents",
+      "file": "AGENTS.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "doc:governance.anchors-spec",
+        "doc:governance.terminology",
+        "doc:governance.naming-grammar",
+        "doc:governance.patterns",
+        "doc:governance.risk-register",
+        "doc:n1hub.low-blast-radius-architecture",
+        "arch:repo.entrypoint",
+        "script:validate.anchors",
+        "script:file.guardrails.audit"
+      ],
+      "state": "active",
+      "note": "Contributor and agent law for N1Hub with anchor governance and low-blast-radius engineering enforced as repo-native discipline."
+    },
+    {
+      "id": "doc:n1hub.codex",
+      "category": "doc",
+      "name": "n1hub.codex",
+      "file": "CODEX.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "doc:governance.anchors-spec",
+        "doc:governance.terminology",
+        "doc:governance.naming-grammar",
+        "doc:governance.patterns",
+        "doc:governance.risk-register",
+        "doc:n1hub.low-blast-radius-architecture",
+        "interface:validator.public-api",
+        "script:verify.root-docs",
+        "script:file.guardrails.audit"
+      ],
+      "state": "active",
+      "note": "Execution charter for deterministic implementation and verification inside N1Hub."
+    },
+    {
+      "id": "doc:n1hub.low-blast-radius-architecture",
+      "category": "doc",
+      "name": "n1hub.low-blast-radius-architecture",
+      "file": "docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:validator.reference",
+        "doc:a2c.reference",
+        "doc:symphony.reference",
+        "flow:a2c.workspace-recon",
+        "script:file.guardrails.audit"
+      ],
+      "state": "active",
+      "note": "Low-blast-radius architecture doctrine for AI-assisted engineering inside N1Hub."
+    },
+    {
+      "id": "doc:n1hub.memory",
+      "category": "doc",
+      "name": "n1hub.memory",
+      "file": "MEMORY.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.tools",
+        "doc:openclaw.fork-notes",
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:governance.anchors-spec"
+      ],
+      "state": "active",
+      "note": "Durable memory surface for operator preferences, repo truths, and active architectural continuity in N1Hub."
+    },
+    {
+      "id": "doc:n1hub.readme",
+      "category": "doc",
+      "name": "n1hub.readme",
+      "file": "README.md",
+      "line": 2,
+      "links": [
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "doc:governance.anchors-spec",
+        "doc:governance.terminology",
+        "doc:governance.naming-grammar",
+        "doc:governance.patterns",
+        "doc:governance.risk-register",
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:openclaw.fork-notes",
+        "script:extract.anchors",
+        "script:validate.anchors",
+        "script:verify.root-docs",
+        "script:file.guardrails.audit"
+      ],
+      "state": "active",
+      "note": "Repository overview, instruction stack map, and primary command surface for N1Hub."
+    },
+    {
+      "id": "doc:n1hub.soul",
+      "category": "doc",
+      "name": "n1hub.soul",
+      "file": "SOUL.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:governance.anchors-spec",
+        "doc:symphony.reference",
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift"
+      ],
+      "state": "active",
+      "note": "Assistant identity, trust posture, and operator-facing behavior contract for N1Hub."
+    },
+    {
+      "id": "doc:n1hub.tools",
+      "category": "doc",
+      "name": "n1hub.tools",
+      "file": "TOOLS.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:governance.anchors-spec",
+        "doc:validator.reference",
+        "doc:a2c.reference",
+        "doc:symphony.reference",
+        "script:validator.cli"
+      ],
+      "state": "active",
+      "note": "Stable tool and runtime notes for N1Hub operators and agents."
+    },
+    {
+      "id": "doc:openclaw.fork-notes",
+      "category": "doc",
+      "name": "openclaw.fork-notes",
+      "file": "docs/openclaw-fork.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools"
+      ],
+      "state": "active",
+      "note": "Selective OpenClaw pattern adoption notes for N1Hub."
+    },
+    {
+      "id": "doc:projects.reference",
+      "category": "doc",
+      "name": "projects.reference",
+      "file": "docs/projects.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "arch:graph.runtime",
+        "doc:branching.real-dream-diff"
+      ],
+      "state": "active",
+      "note": "Reference for project capsules and project graph behavior in N1Hub."
+    },
+    {
+      "id": "doc:symphony.reference",
+      "category": "doc",
+      "name": "symphony.reference",
+      "file": "docs/symphony.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "arch:symphony.runtime",
+        "flow:symphony.prompt-render"
+      ],
+      "state": "active",
+      "note": "Technical and operational reference for Symphony in N1Hub."
+    },
+    {
+      "id": "doc:validator.reference",
+      "category": "doc",
+      "name": "validator.reference",
+      "file": "docs/validator.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.low-blast-radius-architecture",
+        "arch:api.validate.route",
+        "interface:validator.public-api",
+        "arch:validator.engine",
+        "script:validator.cli",
+        "script:validator.openapi"
+      ],
+      "state": "active",
+      "note": "Technical reference for the N1Hub capsule validator."
+    },
+    {
+      "id": "doc:workflow.issue-worker",
+      "category": "doc",
+      "name": "workflow.issue-worker",
+      "file": "WORKFLOW.md",
+      "line": 50,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.tools",
+        "doc:governance.anchors-spec",
+        "doc:validator.reference",
+        "doc:projects.reference",
+        "doc:branching.real-dream-diff",
+        "arch:symphony.runtime",
+        "flow:symphony.prompt-render"
+      ],
+      "state": "active",
+      "note": "Repo-owned Symphony issue-worker contract for N1Hub."
+    },
+    {
+      "id": "doc:workflow.ninfinity-night-shift",
+      "category": "doc",
+      "name": "workflow.ninfinity-night-shift",
+      "file": "NINFINITY_WORKFLOW.md",
+      "line": 58,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.tools",
+        "doc:governance.anchors-spec",
+        "doc:validator.reference",
+        "arch:symphony.runtime",
+        "arch:graph.runtime",
+        "flow:symphony.prompt-render"
+      ],
+      "state": "active",
+      "note": "Repo-owned N-Infinity night-shift workflow contract for N1Hub."
+    },
+    {
+      "id": "flow:a2c.workspace-recon",
+      "category": "flow",
+      "name": "a2c.workspace-recon",
+      "file": "lib/a2c/recon.ts",
+      "line": 1,
+      "links": [
+        "arch:a2c.runtime",
+        "doc:a2c.reference",
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:governance.patterns"
+      ],
+      "state": "active",
+      "note": "Workspace recon flow that inspects repo shape, governance scripts, and runtime readiness."
+    },
+    {
+      "id": "flow:symphony.prompt-render",
+      "category": "flow",
+      "name": "symphony.prompt-render",
+      "file": "lib/symphony/prompt.ts",
+      "line": 1,
+      "links": [
+        "arch:symphony.runtime",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift"
+      ],
+      "state": "active",
+      "note": "Prompt rendering flow for Symphony issue and N-Infinity worker sessions."
+    },
+    {
+      "id": "interface:anchors.core-api",
+      "category": "interface",
+      "name": "anchors.core-api",
+      "file": "lib/anchors/core.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "interface:anchors.metrics-api",
+        "interface:anchors.intelligence-api",
+        "invariant:anchors.root-docs-policy",
+        "script:extract.anchors",
+        "test:anchors.core-contract"
+      ],
+      "state": "active",
+      "note": "Deterministic extraction, rendering, and validation core for N1Hub anchor governance."
+    },
+    {
+      "id": "interface:anchors.intelligence-api",
+      "category": "interface",
+      "name": "anchors.intelligence-api",
+      "file": "lib/anchors/intelligence.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "interface:anchors.core-api",
+        "interface:anchors.scorecard-api",
+        "script:anchors.intelligence",
+        "test:anchors.intelligence-contract"
+      ],
+      "state": "active",
+      "note": "Graph topology analysis API for the N1Hub anchor graph."
+    },
+    {
+      "id": "interface:anchors.metrics-api",
+      "category": "interface",
+      "name": "anchors.metrics-api",
+      "file": "lib/anchors/metrics.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "interface:anchors.core-api",
+        "interface:anchors.intelligence-api",
+        "interface:anchors.scorecard-api",
+        "test:anchors.metrics-contract"
+      ],
+      "state": "active",
+      "note": "Coverage and KPI reporting interfaces for scoped N1Hub anchor governance."
+    },
+    {
+      "id": "interface:anchors.package-api",
+      "category": "interface",
+      "name": "anchors.package-api",
+      "file": "lib/anchors/index.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.core-api",
+        "interface:anchors.policy-config",
+        "interface:anchors.metrics-api",
+        "interface:anchors.intelligence-api",
+        "interface:anchors.scorecard-api",
+        "invariant:anchors.root-docs-policy",
+        "interface:anchors.usage-lint",
+        "interface:anchors.terminology-lint",
+        "interface:anchors.snapshot-history",
+        "interface:anchors.scorecard-assertion"
+      ],
+      "state": "active",
+      "note": "Public exports for the N1Hub anchor governance toolkit."
+    },
+    {
+      "id": "interface:anchors.policy-config",
+      "category": "interface",
+      "name": "anchors.policy-config",
+      "file": "lib/anchors/config.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "invariant:anchors.root-docs-policy",
+        "doc:governance.anchors-spec",
+        "doc:governance.terminology",
+        "test:anchors.root-docs-contract"
+      ],
+      "state": "active",
+      "note": "N1Hub anchor governance policy, scope, and architecture spine configuration."
+    },
+    {
+      "id": "interface:anchors.scorecard-api",
+      "category": "interface",
+      "name": "anchors.scorecard-api",
+      "file": "lib/anchors/scorecard.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "interface:anchors.metrics-api",
+        "doc:governance.anchors-spec",
+        "script:anchors.scorecard",
+        "test:anchors.scorecard-contract",
+        "script:anchors.assert-scorecard"
+      ],
+      "state": "active",
+      "note": "Governance threshold evaluation contract for N1Hub anchor policy."
+    },
+    {
+      "id": "interface:anchors.scorecard-assertion",
+      "category": "interface",
+      "name": "anchors.scorecard-assertion",
+      "file": "lib/anchors/assert-scorecard.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "interface:anchors.scorecard-api",
+        "script:anchors.assert-scorecard",
+        "test:anchors.assert-scorecard-contract"
+      ],
+      "state": "active",
+      "note": "Typed scorecard assertion contract for N1Hub CLI and CI."
+    },
+    {
+      "id": "interface:anchors.snapshot-history",
+      "category": "interface",
+      "name": "anchors.snapshot-history",
+      "file": "lib/anchors/snapshot.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "script:anchors.snapshot",
+        "interface:anchors.scorecard-api",
+        "test:anchors.snapshot-contract"
+      ],
+      "state": "active",
+      "note": "Append-only governance history snapshot contract for N1Hub anchor scorecards."
+    },
+    {
+      "id": "interface:anchors.terminology-lint",
+      "category": "interface",
+      "name": "anchors.terminology-lint",
+      "file": "lib/anchors/terminology-lint.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "script:anchors.terminology-lint",
+        "test:anchors.terminology-lint-contract",
+        "doc:governance.terminology"
+      ],
+      "state": "active",
+      "note": "Policy scanner for restricted terminology across scoped N1Hub governance surfaces."
+    },
+    {
+      "id": "interface:anchors.usage-lint",
+      "category": "interface",
+      "name": "anchors.usage-lint",
+      "file": "lib/anchors/usage-lint.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "script:anchors.lint-usage",
+        "test:anchors.usage-lint-contract",
+        "script:validate.anchors"
+      ],
+      "state": "active",
+      "note": "Policy scanner for fragile anchor artifact redirection usage."
+    },
+    {
+      "id": "interface:app.landing-entry",
+      "category": "interface",
+      "name": "app.landing-entry",
+      "file": "app/page.tsx",
+      "line": 1,
+      "links": [
+        "arch:app.root-layout",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "Public landing entry for the authenticated N1Hub vault experience."
+    },
+    {
+      "id": "interface:validator.public-api",
+      "category": "interface",
+      "name": "validator.public-api",
+      "file": "lib/validator/index.ts",
+      "line": 1,
+      "links": [
+        "arch:validator.engine",
+        "doc:validator.reference",
+        "script:validator.cli",
+        "script:validator.openapi"
+      ],
+      "state": "active",
+      "note": "Public validator barrel used by routes, scripts, and tests."
+    },
+    {
+      "id": "invariant:anchors.root-docs-policy",
+      "category": "invariant",
+      "name": "anchors.root-docs-policy",
+      "file": "lib/anchors/root-docs.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.package-api",
+        "doc:governance.anchors-spec",
+        "script:verify.root-docs",
+        "interface:anchors.core-api",
+        "test:anchors.root-docs-contract"
+      ],
+      "state": "active",
+      "note": "Root-doc triad validation keeps README, AGENTS, and CODEX aligned with the wider N1Hub instruction stack."
+    },
+    {
+      "id": "script:anchors.assert-scorecard",
+      "category": "script",
+      "name": "anchors.assert-scorecard",
+      "file": "scripts/assert-scorecard.ts",
+      "line": 1,
+      "links": [
+        "script:anchors.scorecard",
+        "interface:anchors.scorecard-api",
+        "interface:anchors.scorecard-assertion",
+        "doc:n1hub.codex"
+      ],
+      "state": "active",
+      "note": "Fails execution when scorecard.passed is not true."
+    },
+    {
+      "id": "script:anchors.coverage",
+      "category": "script",
+      "name": "anchors.coverage",
+      "file": "scripts/analyze-coverage.ts",
+      "line": 1,
+      "links": [
+        "script:anchors.kpis",
+        "script:verify.root-docs",
+        "interface:anchors.metrics-api"
+      ],
+      "state": "active",
+      "note": "Computes governed-target coverage and dark-matter report for N1Hub anchors."
+    },
+    {
+      "id": "script:anchors.intelligence",
+      "category": "script",
+      "name": "anchors.intelligence",
+      "file": "scripts/anchors-intelligence.ts",
+      "line": 1,
+      "links": [
+        "script:anchors.scorecard",
+        "script:anchors.kpis",
+        "interface:anchors.intelligence-api"
+      ],
+      "state": "active",
+      "note": "Computes topology and link-structure intelligence for the N1Hub anchor graph."
+    },
+    {
+      "id": "script:anchors.kpis",
+      "category": "script",
+      "name": "anchors.kpis",
+      "file": "scripts/report-kpis.ts",
+      "line": 1,
+      "links": [
+        "script:anchors.intelligence",
+        "script:anchors.coverage",
+        "interface:anchors.metrics-api"
+      ],
+      "state": "active",
+      "note": "Computes anchor governance KPI report for N1Hub."
+    },
+    {
+      "id": "script:anchors.lint-usage",
+      "category": "script",
+      "name": "anchors.lint-usage",
+      "file": "scripts/lint-anchors-usage.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.usage-lint",
+        "test:anchors.usage-lint-contract",
+        "doc:governance.anchors-spec"
+      ],
+      "state": "active",
+      "note": "Fails on fragile shell redirection patterns for anchor JSON commands."
+    },
+    {
+      "id": "script:anchors.scorecard",
+      "category": "script",
+      "name": "anchors.scorecard",
+      "file": "scripts/anchors-scorecard.ts",
+      "line": 1,
+      "links": [
+        "script:extract.anchors",
+        "script:anchors.intelligence",
+        "script:anchors.assert-scorecard",
+        "script:anchors.snapshot",
+        "interface:anchors.scorecard-api",
+        "doc:governance.risk-register"
+      ],
+      "state": "active",
+      "note": "Evaluates governance thresholds and final scorecard for N1Hub anchors."
+    },
+    {
+      "id": "script:anchors.snapshot",
+      "category": "script",
+      "name": "anchors.snapshot",
+      "file": "scripts/anchors-snapshot.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.snapshot-history",
+        "script:anchors.scorecard",
+        "test:anchors.snapshot-contract",
+        "doc:governance.anchors-spec"
+      ],
+      "state": "active",
+      "note": "Appends scorecard KPI snapshots to N1Hub anchor history."
+    },
+    {
+      "id": "script:anchors.terminology-lint",
+      "category": "script",
+      "name": "anchors.terminology-lint",
+      "file": "scripts/terminology-lint.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.terminology-lint",
+        "test:anchors.terminology-lint-contract",
+        "doc:governance.terminology"
+      ],
+      "state": "active",
+      "note": "Fails on restricted terminology across scoped N1Hub governance surfaces."
+    },
+    {
+      "id": "script:extract.anchors",
+      "category": "script",
+      "name": "extract.anchors",
+      "file": "scripts/extract-anchors.ts",
+      "line": 1,
+      "links": [
+        "arch:repo.entrypoint",
+        "script:validate.anchors",
+        "script:anchors.scorecard",
+        "doc:governance.anchors-spec"
+      ],
+      "state": "active",
+      "note": "Generates anchor index, map, and graph artifacts for N1Hub."
+    },
+    {
+      "id": "script:file.guardrails.audit",
+      "category": "script",
+      "name": "file.guardrails.audit",
+      "file": "scripts/check-file-guardrails.ts",
+      "line": 2,
+      "links": [
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex"
+      ],
+      "state": "active",
+      "note": "Audits app/lib/scripts file sizes against N1Hub AI-friendly soft and hard guardrails."
+    },
+    {
+      "id": "script:test.anchors-config",
+      "category": "script",
+      "name": "test.anchors-config",
+      "file": "vitest.anchors.config.ts",
+      "line": 1,
+      "links": [
+        "script:validate.anchors",
+        "test:anchors.core-contract",
+        "test:anchors.root-docs-contract"
+      ],
+      "state": "active",
+      "note": "Dedicated Vitest config for Node-based anchor governance tests."
+    },
+    {
+      "id": "script:validate.anchors",
+      "category": "script",
+      "name": "validate.anchors",
+      "file": "scripts/validate-anchors.ts",
+      "line": 1,
+      "links": [
+        "script:extract.anchors",
+        "script:verify.root-docs",
+        "script:test.anchors-config",
+        "interface:anchors.policy-config",
+        "doc:governance.anchors-spec"
+      ],
+      "state": "active",
+      "note": "Validates anchor integrity, freshness, and N1Hub spine rules."
+    },
+    {
+      "id": "script:validator.cli",
+      "category": "script",
+      "name": "validator.cli",
+      "file": "scripts/validate-cli.ts",
+      "line": 2,
+      "links": [
+        "interface:validator.public-api",
+        "arch:validator.engine",
+        "doc:validator.reference",
+        "doc:n1hub.tools"
+      ],
+      "state": "active",
+      "note": "CLI entrypoint for Capsule Validator checks in N1Hub."
+    },
+    {
+      "id": "script:validator.openapi",
+      "category": "script",
+      "name": "validator.openapi",
+      "file": "scripts/generate-validate-openapi.ts",
+      "line": 2,
+      "links": [
+        "arch:api.validate.route",
+        "interface:validator.public-api",
+        "doc:validator.reference"
+      ],
+      "state": "active",
+      "note": "Generates the OpenAPI document for N1Hub validator endpoints."
+    },
+    {
+      "id": "script:verify.root-docs",
+      "category": "script",
+      "name": "verify.root-docs",
+      "file": "scripts/verify-root-docs.ts",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "script:anchors.coverage",
+        "invariant:anchors.root-docs-policy"
+      ],
+      "state": "active",
+      "note": "Validates the N1Hub root-doc triad."
+    },
+    {
+      "id": "test:anchors.assert-scorecard-contract",
+      "category": "test",
+      "name": "anchors.assert-scorecard-contract",
+      "file": "__tests__/anchors/anchors.assert-scorecard.test.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.scorecard-assertion",
+        "script:anchors.assert-scorecard",
+        "test:anchors.scorecard-contract"
+      ],
+      "state": "active",
+      "note": "Contract tests for scorecard assertion diagnostics and outcomes."
+    },
+    {
+      "id": "test:anchors.core-contract",
+      "category": "test",
+      "name": "anchors.core-contract",
+      "file": "__tests__/anchors/anchors.spec.test.ts",
+      "line": 1,
+      "links": [
+        "test:anchors.metrics-contract",
+        "test:anchors.root-docs-contract",
+        "interface:anchors.core-api",
+        "interface:anchors.package-api",
+        "script:validate.anchors"
+      ],
+      "state": "active",
+      "note": "Contract tests for core anchor parsing and validation."
+    },
+    {
+      "id": "test:anchors.intelligence-contract",
+      "category": "test",
+      "name": "anchors.intelligence-contract",
+      "file": "__tests__/anchors/anchors.intelligence.test.ts",
+      "line": 1,
+      "links": [
+        "test:anchors.metrics-contract",
+        "test:anchors.scorecard-contract",
+        "interface:anchors.intelligence-api"
+      ],
+      "state": "active",
+      "note": "Contract tests for graph intelligence analytics."
+    },
+    {
+      "id": "test:anchors.metrics-contract",
+      "category": "test",
+      "name": "anchors.metrics-contract",
+      "file": "__tests__/anchors/anchors.metrics.test.ts",
+      "line": 1,
+      "links": [
+        "test:anchors.core-contract",
+        "test:anchors.intelligence-contract",
+        "interface:anchors.metrics-api"
+      ],
+      "state": "active",
+      "note": "Contract tests for governed coverage and KPI metric computation."
+    },
+    {
+      "id": "test:anchors.root-docs-contract",
+      "category": "test",
+      "name": "anchors.root-docs-contract",
+      "file": "__tests__/anchors/root-docs.integration.test.ts",
+      "line": 1,
+      "links": [
+        "test:anchors.scorecard-contract",
+        "test:anchors.core-contract",
+        "invariant:anchors.root-docs-policy",
+        "script:verify.root-docs"
+      ],
+      "state": "active",
+      "note": "Integration tests for the N1Hub root-doc triad policy."
+    },
+    {
+      "id": "test:anchors.scorecard-contract",
+      "category": "test",
+      "name": "anchors.scorecard-contract",
+      "file": "__tests__/anchors/anchors.scorecard.test.ts",
+      "line": 1,
+      "links": [
+        "test:anchors.intelligence-contract",
+        "test:anchors.root-docs-contract",
+        "interface:anchors.scorecard-api"
+      ],
+      "state": "active",
+      "note": "Contract tests for governance scorecard evaluation."
+    },
+    {
+      "id": "test:anchors.snapshot-contract",
+      "category": "test",
+      "name": "anchors.snapshot-contract",
+      "file": "__tests__/anchors/anchors.snapshot.test.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.snapshot-history",
+        "script:anchors.snapshot",
+        "interface:anchors.scorecard-assertion"
+      ],
+      "state": "active",
+      "note": "Contract tests for append-only governance history snapshots."
+    },
+    {
+      "id": "test:anchors.terminology-lint-contract",
+      "category": "test",
+      "name": "anchors.terminology-lint-contract",
+      "file": "__tests__/anchors/anchors.terminology-lint.test.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.terminology-lint",
+        "script:anchors.terminology-lint",
+        "doc:governance.terminology"
+      ],
+      "state": "active",
+      "note": "Contract tests for restricted terminology linting."
+    },
+    {
+      "id": "test:anchors.usage-lint-contract",
+      "category": "test",
+      "name": "anchors.usage-lint-contract",
+      "file": "__tests__/anchors/anchors.usage-lint.test.ts",
+      "line": 1,
+      "links": [
+        "interface:anchors.usage-lint",
+        "script:anchors.lint-usage",
+        "test:anchors.assert-scorecard-contract"
+      ],
+      "state": "active",
+      "note": "Contract tests for fragile anchors JSON usage linting."
+    }
+  ]
+}

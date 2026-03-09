@@ -1,3 +1,4 @@
+<!-- @anchor doc:symphony.reference links=doc:n1hub.readme,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,arch:symphony.runtime,flow:symphony.prompt-render note="Technical and operational reference for Symphony in N1Hub." -->
 # Symphony for N1Hub
 
 ## Purpose

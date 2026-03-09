@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.parliament.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "name": "N-Infinity Parliament",
     "priority": "high",
     "progress": 42,
@@ -19,21 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Parliament Agent: The Epistemic Arbitrator\n\n## 1. Definition\nParliament is the N-Infinity role responsible for epistemic arbitration. It investigates contradiction pressure, contested links, and risky claims, then routes them toward synthesis, quarantine, or explicit governance review.\n\n## 2. Core Functions\n- `contradiction_monitoring` watches for rising epistemic pressure.\n- `arbitration` compares provenance, logic, and contextual fit across competing claims.\n- `synthesis_or_quarantine` decides whether tension should produce a synthesis capsule, a cautionary path, or quarantine.\n- `governance_escalation` surfaces hard cases for humans instead of burying them in model output.\n\n## 3. Runtime Role\nIn N1Hub, Parliament should operate through bounded capsule jobs within the graph-maintenance lane, often with DeepMine support for heavy reasoning and with night-shift windows for cost-aware unattended review. It gives the system a formal mechanism for disagreement rather than passive contradiction accumulation.\n\n## 4. Philosophical Alignment\nParliament serves To Dig Deep by treating conflict as a structured search for stronger truth instead of a reason to hide ambiguity.\n"
+    "content": "# N-Infinity Parliament\n\n## 1. Definition\nParliament is the contradiction-arbitration engine of the runtime. In code it is a triad debate system exposed through `scripts/a2c/parliament.ts` and backed by `lib/a2c/parliament.ts`: proposer, critic, and synthesizer prompts are built, evidence is ranked, and a governed resolution capsule is emitted in draft form with a gate report.\n\n## 2. Runtime Mechanics\n- Gather evidence from the live index using question tokens, context IDs, contradiction neighbors, provenance, and validation strength.\n- Build three role prompts through the current prompt-pack discipline so each role reasons under the same structural contract.\n- Compare proposer strength and critic strength from evidence-weighted formulas rather than from opaque sentiment.\n- Emit a transcript, role prompts, monologue diagnostics, and a draft resolution capsule with explicit evidence links.\n- Run a local gate verdict over the resolution capsule, including G14, G15, and G16 checks.\n- Return resolution text, verdict, transcript, and candidate capsule for human or pipeline use.\n\n## 3. Why This Matters\nParliament does not pretend contradictions disappear because a model produced fluent prose. It records who argued what, why the system leaned one way, and when a middle path must preserve tension rather than collapsing it.\n\n## 4. Integration\n- **A2C Link / Synthesize:** escalate conflict-heavy cases into Parliament.\n- **Epistemic Ledger:** keeps the durable record of the dispute.\n- **Quarantine Buffer:** receives cases that remain unsafe after debate.\n\n## 5. Philosophical Alignment\nParliament serves To Dig Deep by treating disagreement as structured deliberation. It upgrades conflict from hidden noise into auditable reasoning work.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Parliament is the epistemic arbitrator of the swarm. It investigates contradiction pressure, reviews contested links or claims, and decides whether tension should be resolved through synthesis, quarantine, or governance escalation. This role matters because a sovereign graph must know how to handle conflict, not just store parallel assertions and hope users sort them out later. Parliament provides that discipline by combining evidence review, multi-agent reasoning, and auditable resolution paths so disagreement becomes structured deliberation rather than hidden systemic drift.",
+    "summary": "N-Infinity Parliament is the triad arbitration engine that turns contradiction handling into a reproducible debate instead of into private model intuition. The current runtime gathers evidence from the live index, builds proposer, critic, and synthesizer prompts through Prompt Singularity, computes verdict strength from provenance, validation, and contradiction signals, and emits a draft resolution capsule with transcript, diagnostics, and local gate report. This matters because sovereign graphs need a formal way to argue with themselves without erasing tension. Parliament therefore makes disagreement auditable, preserves middle-path outcomes when evidence is mixed, and gives A2C a disciplined escalation lane for hard conflicts.",
     "keywords": [
-      "parliament-agent",
-      "epistemic-arbitration",
-      "contradiction-pressure",
-      "quarantine",
-      "synthesis",
-      "capsule-jobs",
-      "graph-maintenance",
-      "deepmine",
       "n-infinity",
-      "n1hub"
+      "parliament",
+      "triad-debate",
+      "evidence-weighting",
+      "resolution-capsule",
+      "gate-verdict",
+      "contradiction-arbitration",
+      "prompt-singularity",
+      "human-review",
+      "governance"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -84,12 +84,27 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.a2c-synthesize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-link.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n1hub.v1",
         "relation_type": "supports"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "run_parliament_dry",
+        "intent": "Generate a draft triad resolution packet without mutating the live vault.",
+        "command": "tsx scripts/a2c/parliament.ts --question \"<question>\" --claim-a \"<claim-a>\" --claim-b \"<claim-b>\" --dry-run",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "0c85b2310e0cd88b013a210d877fe35609a6cc2309512a3ce921e07ef6335b251c8d03a8bd9478d4328e8f14f7c3622f490a1c37cd79d1be5efe153c41e16be8"
+  "integrity_sha3_512": "a6382590306c24364dd4f0269c00ac4a661b138431454c19769789865e5a1367abb59b916eeb849f5693b8b71e0a68643fd9e20e0d7656a68539b2fa77122dc5"
 }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.gardener.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
@@ -9,7 +9,7 @@
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "gardener-agent-prune-archive-maintain-ecology-gold-core",
     "name": "N-Infinity Gardener",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "priority": "medium",
     "progress": 46,
     "estimatedHours": 110,
@@ -19,21 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Gardener Agent: The Graph Ecologist\n\n## 1. Definition\nGardener is the N-Infinity role responsible for preserving graph health over time. It focuses on link hygiene, archival pressure, orphan detection, and other structural signals of entropy.\n\n## 2. Core Functions\n- `dead_link_detection` finds broken or decayed topology.\n- `archival_pressure` flags stale but historically important material for non-destructive state transitions.\n- `orphan_detection` finds capsules that remain active without meaningful graph embedding.\n- `maintenance_reporting` converts hygiene findings into reviewable maintenance work rather than silent destruction.\n\n## 3. Runtime Role\nIn N1Hub, Gardener operates as a capsule-graph maintenance worker whose findings should become bounded capsule jobs, reports, or suggestions. It is a natural night-shift role because broad hygiene sweeps are best done during off-peak windows under explicit cooldown and safety rules.\n\n## 4. Philosophical Alignment\nGardener serves To Dig Deep by refusing to let valuable structure decay into invisible entropy.\n"
+    "content": "# N-Infinity Gardener\n\n## 1. Definition\nGardener is the stale-structure maintenance worker of the runtime. In code it is materially expressed by the TypeScript sweep path exposed through `scripts/a2c/sweep.ts` and backed by `lib/a2c/sweeper.ts`, which scans for orphaned draft or archived capsules, measures age, recommends decay or deep archive, and can optionally apply confidence decay in place.\n\n## 2. Runtime Mechanics\n- Measure capsule age from `updated_at`, `created_at`, or file mtime.\n- Restrict maintenance candidates to draft / archived capsules with zero incoming edges so the sweeper does not attack live, connected knowledge.\n- Use a default stale threshold of 45 days and a deep-archive threshold of 180 days.\n- Compute decay factors that lower most confidence metrics while slightly increasing contradiction pressure for stale objects.\n- Write a human-review report instead of deleting anything.\n- When decay is enabled, stamp a structured `decay_note` and recompute the integrity seal.\n\n## 3. Why This Matters\nGraphs accumulate dead matter unless someone tends them. Gardener keeps entropy visible, but it does so through reviewable state transitions rather than through destructive cleanup.\n\n## 4. Integration\n- **Capsule Graph Maintenance:** receives the stale-orphan reports.\n- **Archive Policy:** uses deep-archive recommendations for longer retention decisions.\n- **Night-Shift Autonomy:** is the natural execution window for hygiene sweeps.\n\n## 5. Philosophical Alignment\nGardener serves To Dig Deep by protecting continuity. It lets knowledge age honestly and visibly instead of disappearing without lineage.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Gardener is the graph ecologist of the swarm. It patrols for dead links, structural decay, stale active capsules, and other signs that the knowledge topology is drifting toward entropy. The agent matters because long-lived graphs do not stay healthy by accident: without pruning, archiving, and low-impact hygiene work, navigation degrades and trust erodes. Gardener therefore protects continuity by maintaining graph cleanliness non-destructively, producing reports and state transitions that keep the cognitive plane traversable without erasing historical provenance.",
+    "summary": "N-Infinity Gardener is the stale-structure maintenance worker that keeps long-lived graph matter from quietly rotting. The current runtime scans for orphaned draft or archived capsules with zero incoming edges, measures age from timestamps or file metadata, applies a 45-day stale threshold and 180-day deep-archive threshold, and can optionally decay confidence while writing a structured decay note and new integrity seal. This matters because graph health degrades through neglect long before it fails dramatically. Gardener therefore turns entropy into reviewable maintenance signals, preserving lineage and archive discipline instead of relying on silent cleanup or periodic human guesswork.",
     "keywords": [
-      "gardener-agent",
-      "graph-ecology",
-      "maintenance",
-      "capsule-jobs",
-      "archival",
-      "dead-links",
       "n-infinity",
-      "night-shift",
-      "background-agent",
-      "n1hub"
+      "gardener",
+      "ts-sweeper",
+      "stale-orphan",
+      "deep-archive",
+      "confidence-decay",
+      "45-day",
+      "180-day",
+      "graph-ecology",
+      "maintenance-report"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -80,12 +80,23 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.n1hub.v1",
         "relation_type": "supports"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "run_apoptosis_dry",
+        "intent": "Generate a stale-orphan report without mutating the live vault.",
+        "command": "tsx scripts/a2c/sweep.ts --dry-run",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "144b524157bfaecb54bc41e58514dbcd94df56234e5ee94950fb9139976b7060db38508e7eef8b76e934570683745038b2846a4f3e16cb599ea9c76ebf2b98d0"
+  "integrity_sha3_512": "1b56f86742edc0a5b517a0c0e09c886a1417ba422a3a16371208435a8140f827d710c525ffa21704e5ee952a3eae9cfcf5e35e214431821aba0604fe9f58ccd7"
 }

@@ -1,3 +1,4 @@
+// @anchor arch:app.root-layout links=interface:app.landing-entry,arch:api.validate.route,doc:n1hub.readme note="App Router root layout and top-level application shell for N1Hub."
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { ToastProvider } from '@/contexts/ToastContext'

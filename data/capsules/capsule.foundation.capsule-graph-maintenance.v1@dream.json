@@ -22,26 +22,23 @@
     "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance defines the continuous operating discipline required to keep the sovereign graph healthy over time. It includes link hygiene, contradiction management, archival pressure, synthesis opportunities, suggestion generation, and the bounded background jobs that make this maintenance real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and other graph-shape problems.\n- `novel_synthesis` uses high-confidence regions to propose worthwhile new structure.\n- `maintenance_jobs` expresses this work as bounded capsule jobs rather than ambient magic.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity agents actually do night after night. It unifies Weaver, Gardener, Parliament, Innovator, Suggestion Agent, Capsule Job, and Night Shift Autonomy into one maintenance picture.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub makes it explicit that preservation, repair, arbitration, and synthesis are first-class system work.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772912503221\n- Job: Decompose Capsule Graph Maintenance Hub\n- Note: Refined the summary to emphasize the disciplined and bounded nature of maintenance jobs and explicitly mention key responsibilities like topology hygiene and structural refinement. Added missing keywords reflecting core responsibilities and processes. The capsule still needs further decomposition to reduce complexity and improve modular progress tracking.\n"
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Maintenance in Dream defines a disciplined, autonomous care model for the sovereign graph, emphasizing explicit bounded maintenance jobs that ensure topology repair, contradiction routing, archival pressure, and synthesis proposals to sustain long-term graph health.",
+    "summary": "Dream defines Capsule Graph Maintenance as a bounded control program for long-term graph health, where topology drift is detected, contradiction pressure is routed, and maintenance interventions are proposed as explicit jobs instead of broad rewrites. It keeps vault improvement continuous while preserving branch literacy: exploration can remain productive in Dream, and only validated outcomes should move toward Real. The strongest future discipline is a repeatable maintenance loop that starts with weak signals, proposes minimal corrective work, and stops once link integrity and contradiction pressure recover. That loop is where decomposition, markup, and refactor agents can operate safely without over-indexing on cosmetic churn.",
     "keywords": [
       "capsule-graph-maintenance",
       "graph-hygiene",
       "contradiction-management",
-      "synthesis",
-      "archival",
-      "n-infinity",
+      "graph-topology",
+      "maintenance-jobs",
       "capsule-jobs",
-      "night-shift",
       "capsuleos",
       "n1hub",
-      "topology_hygiene",
-      "structural_refinement",
-      "suggestion-generation",
-      "bounded-jobs",
+      "n-infinity",
+      "contradiction-management",
+      "branch-safe",
+      "structural-refinement",
+      "synthesis",
       "sovereign-graph-health",
-      "vault-steward",
-      "autonomous-swarm",
-      "decomposition"
+      "vault-stewardship"
     ],
     "confidence_vector": {
       "extraction": 1,

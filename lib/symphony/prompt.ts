@@ -1,3 +1,4 @@
+// @anchor flow:symphony.prompt-render links=arch:symphony.runtime,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift note="Prompt rendering flow for Symphony issue and N-Infinity worker sessions."
 import { Liquid } from 'liquidjs';
 import type { Issue } from './types';
 

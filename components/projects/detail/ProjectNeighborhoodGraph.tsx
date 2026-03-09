@@ -12,7 +12,7 @@ interface ProjectNeighborhoodGraphProps {
   graphFullscreen: boolean;
   onToggleGraph: () => void;
   onToggleFullscreen: () => void;
-  onNodeClick: (id: string) => void;
+  getNodeHref: (id: string) => string;
 }
 
 export default function ProjectNeighborhoodGraph({
@@ -21,7 +21,7 @@ export default function ProjectNeighborhoodGraph({
   graphFullscreen,
   onToggleGraph,
   onToggleFullscreen,
-  onNodeClick,
+  getNodeHref,
 }: ProjectNeighborhoodGraphProps) {
   const graphCapsules = useMemo(() => capsules, [capsules]);
 
@@ -48,7 +48,7 @@ export default function ProjectNeighborhoodGraph({
         >
           <CapsuleGraph
             capsules={graphCapsules}
-            onNodeClick={onNodeClick}
+            getNodeHref={getNodeHref}
             isFullscreen={graphFullscreen}
             onToggleFullscreen={onToggleFullscreen}
           />

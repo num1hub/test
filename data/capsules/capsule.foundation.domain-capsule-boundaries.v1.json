@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.domain-capsule-boundaries.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-09T11:30:00Z",
+    "updated_at": "2026-03-09T11:30:00Z",
+    "name": "Domain Capsule Boundaries",
+    "semantic_hash": "domain-capsule-boundaries-public-entrypoints-storage-ownership-dependencies",
+    "source": {
+      "uri": "internal://docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 29,
+    "estimatedHours": 180,
+    "actualHours": 36,
+    "dueDate": "2026-08-08",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Domain Capsule Boundaries\n\n## 1. Definition and Essence\nDomain Capsule Boundaries defines how major N1Hub subsystems stay isolated enough that one lane can evolve without quietly corrupting another. Each domain should own one responsibility center, one public entry surface, and one private implementation interior.\n\n## 2. Boundary Rules\n- callers depend on public APIs such as domain index files, route contracts, or explicit facade functions,\n- callers do not import private implementation files from foreign domains when a public surface exists,\n- storage ownership is explicit by namespace,\n- domain-specific DTOs are exported intentionally rather than leaked accidentally,\n- dependency arrows should stay one-directional and inspectable.\n\n## 3. N1Hub Mapping\nThe first-class runtime capsules are validator, A2C, Symphony, graph, branching, projects, and agent-runtime orchestration. For example, app routes should consume validator or A2C through their public surfaces, not by reaching into a private helper because it is convenient in the moment.\n\n## 4. Storage Ownership\nN1Hub should apply the same law to disk state. data/capsules belongs to vault and validator discipline. data/private/a2c and reports/a2c belong to A2C. .symphony belongs to Symphony. Other domains may read a published artifact or contract, but they should not rely on another runtime's private persistence shape.\n\n## 5. Architectural Value\nWhen boundaries are real, agents can work inside one capsule with a much smaller chance of breaking unrelated surfaces. The repository becomes easier to reason about, test, review, and recover."
+  },
+  "neuro_concentrate": {
+    "summary": "Domain Capsule Boundaries explains how N1Hub should isolate major runtime domains so work stays local and reviewable. The capsule requires one public entry surface per domain, private interiors behind that boundary, explicit storage ownership by namespace, and one-direction dependency flow. It adapts the classic modularity rule to N1Hub reality: validator, A2C, Symphony, graph, branching, projects, and agent runtime are not just folders but architectural capsules. This matters because hidden cross-domain imports and foreign writes into private on-disk state are exactly the kind of coupling that lets an agent fix one thing and silently damage another. The capsule turns domain isolation into a graph-native rule.",
+    "keywords": [
+      "domain-boundaries",
+      "capsules",
+      "public-api",
+      "storage-ownership",
+      "dependency-graph",
+      "isolation",
+      "n1hub",
+      "modularity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "domain-capsule-boundaries-public-entrypoints-storage-ownership-dependencies"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.low-blast-radius-architecture.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "dbaa06748db9719b82eb3c50bcc7de12002497533c7807873040051c90377a3dd9f0846d8b8ec7cceb744e7b2661372f9da2d5fe1302ea992561501afc62882a"
+}

@@ -21,17 +21,17 @@
     "content": "# Sovereign Access License: N1Hub v0\n\n## 1. Grant of Authority\nThis cryptographic capsule serves as the absolute, immutable access token granting **Egor N1** exclusive, private, and unrestricted operational authority over the `N1Hub v0 Personal Release`.\n\n## 2. Permissions and Scope\n- **Role Designation**: `owner` / `system_architect`\n- **Write Access**: Unlimited authority to mint, supersede, and quarantine capsules across the entire v0 database schema.\n- **Bypass Authority**: Explicit clearance to utilize the `architect_override` mechanism, allowing the manual sealing of foundation axioms without adhering to strict cosmetic token limits (Gate 14 exception).\n- **Expiration**: Perpetual. This genesis license possesses no time-bound restrictions.\n\n## 3. Cryptographic Enactment\nBy the existence of this sealed capsule within the Cognitive Plane, the underlying Node.js backend and JWT authentication microservices are instructed to unconditionally recognize `capsule.person.egor-n1.v1` as the root administrator of the `capsule.project.n1hub-v0.v1` hub."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, Egor N1 Access becomes a prototype for future authority design rather than a frozen founder privilege. It points toward visible delegation, bounded override power, clearer emergency-power rationale, reviewable succession paths, and cleaner lineage from bootstrap control to governed institutional stewardship, so that origin authority can evolve into a mature governance pattern instead of remaining an opaque personal exception.",
+    "summary": "In Dream, Egor N1 Access should evolve from a bootstrap-only privilege into a governance template: a traceable root authority capsule with bounded override conditions, explicit delegation boundaries, and auditable pathways toward eventual succession. It anchors the transition from personal inception to institutional stewardship by preserving cryptographic authority where needed while making escalation rationale, emergency use, and handoff constraints explicit. This shape keeps origin ownership truthful but prevents the system from hard-coding permanent founder exceptionality.",
     "keywords": [
-      "access-license",
-      "rbac",
+      "access-control",
+      "governance-safety",
       "bootstrap-authority",
+      "override-boundaries",
+      "delegation",
+      "succession",
+      "auditability",
       "n1hub-v0",
       "identity-binding",
-      "governance",
-      "auditability",
-      "architect-override",
-      "delegation",
       "operations"
     ],
     "confidence_vector": {

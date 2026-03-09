@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-08T22:50:00Z",
+    "updated_at": "2026-03-09T00:13:04.584Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, vault stewardship, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n- a more explicit planning swarm where Planning Horizon Engine coordinates the path from Dream to day-level execution\n- a more explicit vault stewardship lane where the system reads the vault, generates jobs, and executes bounded Dream-safe work\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about AI features.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772981823476\n- Job: Decomposition review for key-agents hub\n- Workstream: decomposition\n- Note: Refined the summary to emphasize this capsule's hub scope and added decomposition-oriented keywords for user-facing versus background roles, graph-maintenance, and execution handoff. Future split pressure is concentrated around three cleaner boundaries: assistant-facing roles, background mining and graph-maintenance workers, and the planning coordination layer centered on the Planning Horizon Engine."
+    "content": "# Key Agents\n\n## Dream Direction\nIn the Dream branch, Key Agents becomes a clearer operating map for the N1Hub intelligence system, with stronger role boundaries, better implementation alignment, and richer coordination between assistant, mining, planning, maintenance, and review workers.\n\n## Future Potential\n- cleaner division of user-facing and background roles\n- better orchestration of mining, planning, vault stewardship, and graph-maintenance workers\n- clearer implementation roadmap for the full swarm\n- stronger visibility into who owns which class of intelligence work\n- a more explicit planning swarm where Planning Horizon Engine coordinates the path from Dream to day-level execution\n- a more explicit vault stewardship lane where the system reads the vault, generates jobs, and executes bounded Dream-safe work\n\n## Why It Matters\nDream preserves this hub as the explicit architectural map of the sovereign agent system rather than leaving the project to vague talk about AI features.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773015063934\n- Job: Decomposition review for unfinished foundation hubs\n- Workstream: decomposition\n- Note: Refined the summary to keep this hub at the role-map and orchestration level rather than the details of any one lane. The cleanest future splits are assistant-facing roles, background mining and graph-maintenance workers, and the planning coordination layer anchored by Planning Horizon Engine."
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the Dream-branch architectural hub for the N1Hub intelligence system, defining role boundaries and coordination across assistant, mining, planning, vault stewardship, maintenance, and review work. It preserves the future map of the agent system as a set of bounded lanes rather than vague AI features, while positioning the Planning Horizon Engine as the bridge from Dream-level planning to day-level execution and the vault stewardship lane as the bridge from reading the vault to bounded capsule work.",
+    "summary": "Key Agents is the Dream-branch hub that maps the core agent lanes of N1Hub and their coordination boundaries across assistant, mining, planning, vault stewardship, maintenance, and review work. It preserves the system as a role map and implementation roadmap, with Planning Horizon Engine bridging Dream-to-day execution and vault stewardship bridging vault reading to bounded capsule work, rather than collapsing the architecture into vague AI features.",
     "keywords": [
       "key-agents",
       "dream-branch",
@@ -33,7 +33,15 @@
       "vault-stewardship",
       "planning-horizon-engine",
       "planning-lane",
-      "role-boundaries"
+      "role-boundaries",
+      "user-facing-roles",
+      "background-roles",
+      "graph-maintenance-workers",
+      "planning-swarm",
+      "implementation-roadmap",
+      "vault-steward",
+      "autonomous-swarm",
+      "decomposition"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -181,8 +189,16 @@
         "run_id": "vault-steward-1772981823476",
         "job_id": "vault-steward-job-56290ea8a4770d3f",
         "rationale": "The capsule content explicitly describes Key Agents as an operating map with stronger role boundaries, better implementation alignment, richer coordination across assistant, mining, planning, maintenance, and review workers, and a planning swarm that carries Dream into day-level execution. The maintenance change sharpens that existing hub role and records likely subordinate boundaries without introducing new doctrine."
+      },
+      {
+        "at": "2026-03-09T00:13:04.584Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1773015063934",
+        "job_id": "vault-steward-job-9bad6a9311d08afe",
+        "rationale": "The content emphasizes stronger role boundaries, orchestration across named worker classes, and a clearer implementation roadmap, so the maintenance change is justified by the capsule’s existing scope and future-potential bullets."
       }
     ]
   },
-  "integrity_sha3_512": "d6141c98e81730e7fb6f28dd4c91f7246825e701a597664ccc8e3f9bbbaae5b2e524b26362d5b788b26fb00c89f516bc330c4dccbe281bf31bcbdf5511cf74fc"
+  "integrity_sha3_512": "fcf4f2d3af6d9ef6c69430864f928bb7efb0286b2e750289a3351702919484377bdb0ab9392a2555768e96814367bdd5407dc8123bd3f648cce75eb3ede7a92d"
 }

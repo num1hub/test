@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
 import AddCapsuleModal from '@/components/projects/AddCapsuleModal';
 import DiffViewer from '@/components/DiffViewer';
@@ -25,7 +25,7 @@ import {
   parseErrorMessage,
 } from '@/lib/vault/capsuleBranchApi';
 
-export default function ProjectDetailPage() {
+function ProjectDetailPageContent() {
   const router = useRouter();
   const pathname = usePathname();
   const { showToast } = useToast();
@@ -63,7 +63,7 @@ export default function ProjectDetailPage() {
     setGraphFullscreen,
     deleting,
     handleDelete,
-    handleGraphNodeClick,
+    getGraphNodeHref,
     refetchCapsules,
   } = useProjectDetailState(projectId, branch);
 
@@ -349,7 +349,7 @@ export default function ProjectDetailPage() {
           graphFullscreen={graphFullscreen}
           onToggleGraph={() => setShowGraph((prev) => !prev)}
           onToggleFullscreen={() => setGraphFullscreen((prev) => !prev)}
-          onNodeClick={handleGraphNodeClick}
+          getNodeHref={getGraphNodeHref}
         />
       </div>
 
@@ -369,5 +369,13 @@ export default function ProjectDetailPage() {
         <DiffViewer diff={projectDiff} isOpen={isDiffOpen} onClose={() => setIsDiffOpen(false)} />
       )}
     </div>
+  );
+}
+
+export default function ProjectDetailPage() {
+  return (
+    <Suspense fallback={<ProjectDetailLoadingState />}>
+      <ProjectDetailPageContent />
+    </Suspense>
   );
 }

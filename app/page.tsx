@@ -1,3 +1,4 @@
+// @anchor interface:app.landing-entry links=arch:app.root-layout,doc:n1hub.readme note="Public landing entry for the authenticated N1Hub vault experience."
 import Link from 'next/link';
 
 export default function LandingPage() {

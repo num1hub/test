@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-extract.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "name": "A2C Stage: Extract",
     "semantic_hash": "capsule-foundation-a2c-extract-v1-stage-entities-evidence",
     "priority": "high",
@@ -19,18 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Extract\n\n## 1. Definition and Essence\nThe Extract stage identifies explicit entities, claims, relations, and structural cues from segmented inputs. It prioritizes fidelity to source evidence and records confidence signals for each extracted fragment.\n\n## 2. Core Attributes\n- `entity_candidates` and relation candidates with offsets\n- `extraction_confidence` metrics by fragment\n- `evidence_spans` linking extracted claims back to source segments\n- `ambiguity_notes` for contested interpretations\n- `extract_model_profile` describing model/tool configuration\n\n## 3. Lifecycle\nExtract executes deterministic and model-assisted parsing over segments, writes evidence-linked fragments, and emits structured candidates for synthesis. Low-confidence fragments remain traceable for human or agent arbitration.\n\n## 4. Integration\n- **Segment Stage:** receives ordered chunks.\n- **Synthesize Stage:** forwards extracted fragments for composition.\n- **Epistemic Ledger:** can feed contradiction-aware arbitration signals.\n- **Capsule Validator:** supports provenance and semantic constraints.\n\n## 5. Philosophical Alignment\nExtraction operationalizes To Dig Deep by anchoring every derived statement in observable evidence, reducing hallucination and preserving auditability.\n"
+    "content": "# A2C Stage: Extract\n\n## 1. Definition and Essence\nThe Extract stage identifies explicit entities, claims, relations, and structural cues from segmented inputs. It prioritizes fidelity to source evidence and records confidence signals for each extracted fragment.\n\n## 2. Core Attributes\n- `entity_candidates` and relation candidates with offsets\n- `extraction_confidence` metrics by fragment\n- `evidence_spans` linking extracted claims back to source segments\n- `ambiguity_notes` for contested interpretations\n- `extract_model_profile` describing model/tool configuration\n\n## 3. Lifecycle\nExtract executes deterministic and model-assisted parsing over segments, writes evidence-linked fragments, and emits structured candidates for synthesis. Low-confidence fragments remain traceable for human or agent arbitration.\n\n## 4. Integration\n- **Segment Stage:** receives ordered chunks.\n- **Synthesize Stage:** forwards extracted fragments for composition.\n- **Epistemic Ledger:** can feed contradiction-aware arbitration signals.\n- **Capsule Validator:** supports provenance and semantic constraints.\n\n## 5. Philosophical Alignment\nExtraction operationalizes To Dig Deep by anchoring every derived statement in observable evidence, reducing hallucination and preserving auditability.\n\n## 6. Evidence-Preserving Extraction\n\nExtraction should operate in a genuinely evidence-preserving mode. Claims must stay attached to supporting spans, ambiguous interpretations must remain visible, and contradiction pressure should be surfaced when the source contains competing statements instead of being cosmetically normalized away.\n\nHigh-entropy regions require escalation. If segmentation reports structural chaos, dense conflict, or unusually compressed signal, Extract should enter a deeper scan posture that allocates extra scrutiny to those regions before promoting their output into synthesis. The goal is not maximum extraction volume. The goal is trustworthy fragments whose meaning, source anchor, and uncertainty remain explicit.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Extract identifies entities, claims, relations, and evidence spans inside segmented material. It is the point where raw content begins turning into machine-actionable signal, but only under explicit confidence tracking and provenance discipline. The stage matters because extracted fragments become the building blocks of every later capsule candidate; if they are vague or untraceable, synthesis inherits that weakness. By pairing candidate statements with source anchors and ambiguity notes, Extract keeps the pipeline grounded in observable evidence rather than optimistic interpretation.",
+    "summary": "A2C Stage: Extract is where segments become graph-usable signal, so its job is not only to find claims and entities but to preserve the evidence geometry around them. Extraction should escalate scrutiny in high-entropy regions, keep claims attached to supporting spans, record ambiguity instead of smoothing it away, and preserve contradiction pressure when the source genuinely contains competing signals. This stage matters because weak extraction poisons every later synthesis and validation step. By coupling candidate statements to evidence spans, modality-aware context, and deep-scan escalation, Extract keeps the refinery grounded in observed source structure rather than optimistic interpretation.",
     "keywords": [
       "a2c",
       "extract",
-      "entities",
-      "evidence",
+      "evidence-geometry",
+      "paranoid-mode",
       "claims",
-      "pipeline",
-      "provenance"
+      "entities",
+      "ambiguity",
+      "entropy-escalation",
+      "provenance",
+      "source-structure"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -64,5 +67,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "bbc758cea0395cc8abb56651ca5bfc520f7daaa4815a2df4319c26f8561fe726cbc5216b4ac1ef6c24bc212a682f59e3c6423d8fedc53848d604d543dd93d326"
+  "integrity_sha3_512": "a3fba922d0c007451cffacdc17ec9f7f829759973a841cfc02e5d3a2885c11ce6849fc8afced166a7d35357090c4a445416cf7bd0c0998e9bc6994583526a3bf"
 }

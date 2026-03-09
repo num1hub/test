@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anything to Capsules"
+  short_description: "Autonomous RAW->Capsules integration with update/dedup/conflict-safe graph operations"
+  default_prompt: "Use $anything-to-capsules in autonomous handoff mode: user provides input only; run deep activation entry, workspace reconnaissance, CapsuleOS Focus classification, ingest via queue pipeline, audit, rebuild index, and return report paths plus deterministic next step."

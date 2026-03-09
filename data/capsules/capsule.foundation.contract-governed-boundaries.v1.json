@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.contract-governed-boundaries.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-09T11:30:00Z",
+    "updated_at": "2026-03-09T11:30:00Z",
+    "name": "Contract-Governed Boundaries",
+    "semantic_hash": "contract-governed-boundaries-validator-dtos-schemas-tests-compatibility",
+    "source": {
+      "uri": "internal://docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md",
+      "type": "repository_contract"
+    },
+    "priority": "high",
+    "progress": 27,
+    "estimatedHours": 190,
+    "actualHours": 34,
+    "dueDate": "2026-08-12",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Contract-Governed Boundaries\n\n## 1. Definition and Essence\nContract-Governed Boundaries defines the rule that important cross-domain behavior in N1Hub should be represented by versioned files and machine-checkable tests instead of unspoken assumptions. A contract should be visible, reviewable, and challengeable in CI.\n\n## 2. Core Rules\n- API boundaries should expose OpenAPI or comparable file-backed contracts,\n- shared payloads and DTOs should be defined through schemas or explicit public types,\n- capsule-shaped data should cross into trusted state through validator-owned contracts,\n- breaking boundary changes should be visible as contract edits rather than hidden implementation drift,\n- contract tests should pin what one domain expects from another.\n\n## 3. N1Hub Application\nThis doctrine applies to validator routes, branch diff payloads, A2C outputs, Symphony workflow config, graph projections, and future import or marketplace flows. If a boundary cannot point to the contract file or the test that proves compatibility, the boundary is under-governed.\n\n## 4. Why It Matters\nAgents work better when they can see the contract directly. They work badly when the contract is folklore encoded in scattered helpers. Contract-governed boundaries reduce guesswork and make change review far more objective."
+  },
+  "neuro_concentrate": {
+    "summary": "Contract-Governed Boundaries turns cross-domain behavior into visible repository artifacts instead of tribal memory. It requires important HTTP routes, DTOs, workflow payloads, and capsule-shaped state transitions to be described through versioned contract files and reinforced by contract tests. The capsule matters because N1Hub already has validator routes, branch diff surfaces, A2C outputs, Symphony workflow payloads, and graph projections that cross domain seams. When those seams are only implicit, an agent can satisfy local TypeScript checks while still breaking system behavior. By treating the contract as a file and the expected behavior as a test, N1Hub makes compatibility reviewable and boundary drift much harder to hide.",
+    "keywords": [
+      "contracts",
+      "schemas",
+      "openapi",
+      "validator-sovereignty",
+      "dto-boundaries",
+      "contract-tests",
+      "compatibility",
+      "n1hub"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "contract-governed-boundaries-validator-dtos-schemas-tests-compatibility"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.low-blast-radius-architecture.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-workflow.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "40600f929b8564bdf0734967e241133395d6b4126b41f93864fb928e68dfcba24bbdefbc315f6b5302da6a8fb57b220ce2d0a226330b28080d2942b5914d5fd6"
+}

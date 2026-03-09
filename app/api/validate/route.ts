@@ -1,3 +1,4 @@
+// @anchor arch:api.validate.route links=arch:validator.engine,interface:validator.public-api,doc:validator.reference note="Primary validator API boundary shared by app workflows and external callers."
 import { NextResponse } from 'next/server';
 import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';

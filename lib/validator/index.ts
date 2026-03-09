@@ -1,3 +1,4 @@
+// @anchor interface:validator.public-api links=arch:validator.engine,doc:validator.reference,script:validator.cli,script:validator.openapi note="Public validator barrel used by routes, scripts, and tests."
 import { autoFixCapsuleData } from '@/lib/validator/autofix';
 import { CapsuleValidator } from '@/lib/validator/core';
 import { GATE_DEFINITIONS } from '@/lib/validator/gates';

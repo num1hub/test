@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-segment.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "name": "A2C Stage: Segment",
     "semantic_hash": "capsule-foundation-a2c-segment-v1-stage-chunking-tokenization",
     "priority": "high",
@@ -19,17 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Segment\n\n## 1. Definition and Essence\nThe Segment stage breaks normalized material into bounded semantic chunks suitable for extraction and synthesis. It balances coherence with token budgets, preserving context boundaries and cross-chunk references for later reconstruction.\n\n## 2. Core Attributes\n- `segment_strategy` indicating paragraph, section, or semantic chunking method\n- `segment_index` ordered position in source stream\n- `token_estimate` used for model-safe processing windows\n- `context_window_refs` links to neighboring segments\n- `segment_quality_flags` for noisy or incomplete partitions\n\n## 3. Lifecycle\nSegment reads normalized payloads, computes chunk boundaries, tags sequence metadata, and emits indexed segments. Segment-level diagnostics guide extraction confidence and error recovery for malformed sources.\n\n## 4. Integration\n- **Normalize Stage:** consumes canonical data.\n- **Extract Stage:** provides chunks for structured signal extraction.\n- **DeepMine/LLM Routing:** aligns chunks to model constraints.\n- **Validator Gates:** supports coherence checks for long payloads.\n\n## 5. Philosophical Alignment\nSegmentation embodies To Dig Deep by choosing meaningful granularity: not too broad to hide truth, not too narrow to lose causal structure.\n"
+    "content": "# A2C Stage: Segment\n\n## 1. Definition and Essence\nThe Segment stage breaks normalized material into bounded semantic chunks suitable for extraction and synthesis. It balances coherence with token budgets, preserving context boundaries and cross-chunk references for later reconstruction.\n\n## 2. Core Attributes\n- `segment_strategy` indicating paragraph, section, or semantic chunking method\n- `segment_index` ordered position in source stream\n- `token_estimate` used for model-safe processing windows\n- `context_window_refs` links to neighboring segments\n- `segment_quality_flags` for noisy or incomplete partitions\n\n## 3. Lifecycle\nSegment reads normalized payloads, computes chunk boundaries, tags sequence metadata, and emits indexed segments. Segment-level diagnostics guide extraction confidence and error recovery for malformed sources.\n\n## 4. Integration\n- **Normalize Stage:** consumes canonical data.\n- **Extract Stage:** provides chunks for structured signal extraction.\n- **DeepMine/LLM Routing:** aligns chunks to model constraints.\n- **Validator Gates:** supports coherence checks for long payloads.\n\n## 5. Philosophical Alignment\nSegmentation embodies To Dig Deep by choosing meaningful granularity: not too broad to hide truth, not too narrow to lose causal structure.\n\n## 6. Holographic Segmentation Rules\n\nSegmentation should preserve global truth, not merely satisfy token budgets. Before tokenization, the pipeline should strip obvious semantic noise such as boilerplate, duplicated navigation, and formatting residue that lowers signal density.\n\nEach segment should then inherit a small fractal summary of the whole source:\n- a one-sentence essence,\n- a short operational brief,\n- the governing axiom of the artifact.\n\nBoundary logic must depend on modality. Code should fracture at AST boundaries, prose at headers and paragraphs, data at record boundaries, and logs or chats at temporal session boundaries. A boundary is illegal if it separates a claim from its evidence; where necessary, segments should overlap or expand to preserve the full thought unit. When structural chaos or contradiction density is high, the stage should emit an entropy heatmap so downstream extraction can escalate scrutiny instead of treating all chunks equally.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Segment chooses the granularity at which large inputs become processable knowledge. It breaks normalized material into bounded semantic chunks, tracks ordering, and preserves enough neighboring context that later stages can reconstruct meaning instead of treating text as isolated fragments. The stage matters because segmentation that is too coarse wastes compute, while segmentation that is too fine destroys causality and coherence. By managing chunk boundaries deliberately, Segment protects the quality of extraction, token efficiency, and the fidelity of evidence carried through the pipeline.",
+    "summary": "A2C Stage: Segment does more than split text into model-sized chunks. It preserves global meaning by pairing segmentation with noise filtering, fractal summaries of the full source, modality-aware boundaries, claim-evidence atomicity, and entropy-aware overlap when the source becomes risky or structurally chaotic. This stage matters because chunking is where many pipelines silently destroy truth before extraction even begins. By aligning boundaries to code structure, prose hierarchy, data records, and temporal logs while carrying compact global context into each segment, Segment protects coherence, causality, and auditability across the rest of the refinery.",
     "keywords": [
       "a2c",
       "segment",
+      "holographic-context",
+      "fractal-summary",
+      "modality-matrix",
+      "anchor-guarantee",
+      "entropy-heatmap",
       "chunking",
-      "tokenization",
       "coherence",
-      "pipeline"
+      "tokenization"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -63,5 +67,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c5db9536929ac74f619dc9a4cedb3548693f4a0e94f4c8656312c7f6422f4587b43be021bd9a8d033d2a63e0cea9265955f7cf2851916bcf6379d141d275e0be"
+  "integrity_sha3_512": "944ce653e2e38db300a2fca05d8700fdac5ebcf51ee138b5e6b2a426727da24562bcd99f610f63d5a6f61c8bd35d06eba7cd9fc5c41e1dddd038d3229680e8c6"
 }

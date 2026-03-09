@@ -20,6 +20,23 @@ const eslintConfig = defineConfig([
       "import/no-unresolved": "error",
     },
   },
+  {
+    files: ["**/*.{js,mjs,cjs,ts,tsx}"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["@/lib/agents/vaultSteward/*"],
+              message:
+                'Use "@/lib/agents/vaultSteward" public surface instead of private Vault Steward internals.',
+            },
+          ],
+        },
+      ],
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:

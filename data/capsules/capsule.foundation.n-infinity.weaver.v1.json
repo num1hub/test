@@ -1,7 +1,7 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.weaver.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
@@ -9,7 +9,7 @@
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "weaver-agent-soft-links-connector-discovery-gold-core",
     "name": "N-Infinity Weaver",
-    "updated_at": "2026-03-06T18:41:10.981Z",
+    "updated_at": "2026-03-09T00:47:59.418Z",
     "priority": "high",
     "progress": 43,
     "estimatedHours": 138,
@@ -19,21 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Weaver Agent: The Relational Architect\n\n## 1. Definition\nWeaver is the N-Infinity role responsible for discovering hidden semantic adjacency in the capsule graph. It proposes soft links and relational hypotheses where the graph appears fragmented or underconnected.\n\n## 2. Core Functions\n- `soft_link_discovery` proposes reviewable `might_relate` style hypotheses.\n- `probabilistic_weighting` records strength rather than pretending instant certainty.\n- `graph_gap_detection` finds orphaned or weakly embedded capsules.\n- `handoff_for_validation` routes strong clusters toward Suggestion Agent, Parliament, or human review.\n\n## 3. Runtime Role\nIn N1Hub, Weaver work is expected to become bounded capsule jobs inside the graph-maintenance lane rather than free ambient prompting. It is a night-shift-friendly role because broad graph scanning benefits from off-peak compute and careful cooldowns.\n\n## 4. Philosophical Alignment\nWeaver serves To Dig Deep by searching for real structural adjacency beneath surface separation.\n"
+    "content": "# N-Infinity Weaver\n\n## 1. Definition\nWeaver is the graph-resonance scanner of the runtime. In the actual code it is no longer imagined as a vague soft-link muse; the TypeScript weaving path exposed through `scripts/a2c/weave.ts` and backed by `lib/a2c/weaver.ts` computes Jaccard similarity over live graph tokens, forms resonance clusters, blocks unsafe merge pairs, and emits a reviewable merge PR report.\n\n## 2. Runtime Mechanics\n- Build token sets from title, summary, keywords, entities, and tags.\n- Scan pairwise similarity with posting budgets and per-node pair limits so graph maintenance stays bounded.\n- Skip merge pairs already protected by `duplicates` or `derived_from` relations.\n- Turn high-similarity pairs into resonance clusters with average similarity and pair-count metrics.\n- Choose primary merge candidates and emit explicit merge commands in Markdown instead of mutating the graph silently.\n- Surface unresolved contradiction edges alongside merge proposals so relational cleanup never hides epistemic tension.\n\n## 3. Why This Matters\nWeaver is about compaction without erasure. It looks for places where the vault is saying the same thing many times, but it keeps governance in the loop instead of auto-collapsing history.\n\n## 4. Integration\n- **Capsule Graph Maintenance:** uses Weaver outputs as reviewable work orders.\n- **Epistemic Parliament:** remains the lane for contradiction-heavy clusters.\n- **A2C Link / Merge Capsules:** inherit the merge candidates Weaver identifies.\n\n## 5. Philosophical Alignment\nWeaver serves To Dig Deep by compressing redundant structure only after the system can explain why those nodes resonate and which edges must stay visible.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Weaver is the relational architect that looks for connections the graph does not yet explicitly encode. It proposes soft links with probabilistic weight, helping isolated capsules find meaningful context without prematurely asserting hard truth. The agent matters because innovation and navigation often depend on seeing plausible adjacency before certainty is available. By generating reviewable hypotheses instead of irreversible structure, Weaver expands the graph’s exploratory surface while preserving the stricter integrity demanded of canonical relation types.",
+    "summary": "N-Infinity Weaver is the repo-native resonance scanner that looks for merge-worthy duplication without silently rewriting graph history. The current implementation computes Jaccard similarity across node titles, summaries, keywords, entities, and tags, applies posting and pair budgets to stay bounded, skips pairs already guarded by duplicates or derived_from relations, and emits a Markdown merge-PR report with explicit commands rather than mutating the graph directly. It also lists unresolved contradiction edges beside resonance clusters so compaction does not hide tension. Weaver therefore acts as reviewable graph compression logic, not as a speculative soft-link generator detached from governance.",
     "keywords": [
-      "weaver-agent",
-      "soft-links",
-      "capsule-jobs",
-      "graph-maintenance",
       "n-infinity",
-      "relational-discovery",
-      "night-shift",
-      "capsuleos",
-      "background-agent",
-      "n1hub"
+      "weaver",
+      "jaccard-resonance",
+      "merge-pr",
+      "duplicate-blocklist",
+      "derived-from-blocklist",
+      "contradiction-report",
+      "cluster-detection",
+      "ts-weaver",
+      "graph-maintenance"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -76,7 +76,7 @@
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "target_id": "capsule.foundation.a2c-link.v1",
         "relation_type": "references"
       },
       {
@@ -84,8 +84,15 @@
         "relation_type": "supports"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "scan_resonance_clusters",
+        "intent": "Generate merge-worthy resonance clusters and a reviewable merge PR report.",
+        "command": "npm run a2c:weave",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3c89eac554004a3ea6165f6d33f3c22183aaf3feee79bcc12d0471ca26063d9aed917d708c8e63c5c8a1a0e2de358fe19e3ccfe61b3e23c0555888d947d37916"
+  "integrity_sha3_512": "185b04fa9f819f396f4cae9554706cc84ee96e31425ac7770dff8a31961755603644a09157fe24806c049dab9c7b9f886db4f42491251f4cb517fe6a8f4e96cc"
 }

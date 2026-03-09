@@ -1,3 +1,4 @@
+// @anchor arch:validator.engine links=arch:a2c.runtime,interface:validator.public-api,doc:validator.reference,script:validator.cli note="Core Capsule Validator engine and gate orchestration for N1Hub."
 import { autoFixCapsuleData } from '@/lib/validator/autofix';
 import {
   buildValidationCacheKey,

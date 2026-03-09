@@ -55,6 +55,7 @@ codex:
   read_timeout_ms: 5000
   stall_timeout_ms: 300000
 ---
+<!-- @anchor doc:workflow.ninfinity-night-shift links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.tools,doc:governance.anchors-spec,doc:validator.reference,arch:symphony.runtime,arch:graph.runtime,flow:symphony.prompt-render note="Repo-owned N-Infinity night-shift workflow contract for N1Hub." -->
 # N-Infinity Capsule Night Shift
 
 You are working inside an isolated N1Hub.com workspace created by Symphony for an N-Infinity capsule graph task.
@@ -71,6 +72,7 @@ You are working inside an isolated N1Hub.com workspace created by Symphony for a
 - The canonical capsule store lives under `data/capsules`.
 - Validation rules are first-class and must remain intact.
 - The graph reality is defined by capsule files, branch overlays, validators, and capsule APIs, not by architectural slogans alone.
+- Governance references live in `README.md`, `AGENTS.md`, `CODEX.md`, `SOUL.md`, `TOOLS.md`, and `docs/ANCHORS_SPEC.md`.
 
 ## N-Infinity Operating Rules
 
@@ -79,7 +81,8 @@ You are working inside an isolated N1Hub.com workspace created by Symphony for a
 3. Prefer small, validated improvements over broad speculative rewrites.
 4. Keep changes auditable and conservative.
 5. If you introduce or update capsules, validate the smallest relevant set before finishing.
-6. If you cannot safely change graph structure, leave precise improvement artifacts in docs or capsule comments rather than inventing uncertain edits.
+6. If you touch governed code or doc surfaces outside the capsule corpus, run the relevant anchor checks before finishing.
+7. If you cannot safely change graph structure, leave precise improvement artifacts in docs or capsule comments rather than inventing uncertain edits.
 
 ## Available Internal Tools
 

@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-synthesize.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "A2C Stage: Synthesize",
     "semantic_hash": "capsule-foundation-a2c-synthesize-v1-stage-composition-draft",
     "priority": "high",
@@ -15,21 +15,29 @@
     "estimatedHours": 108,
     "actualHours": 44,
     "dueDate": "2026-06-05",
-    "tier": 3
+    "tier": 3,
+    "source": {
+      "uri": "internal://docs/a2c/protocols/prompt-pack.md",
+      "type": "repository_contract"
+    }
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Synthesize\n\n## 1. Definition and Essence\nThe Synthesize stage converts extracted fragments into coherent capsule candidates. It reconciles local fragments into stable narratives, metadata, summaries, and link intents while preserving evidence lineage.\n\n## 2. Core Attributes\n- `candidate_capsule_shape` containing 5-element draft structure\n- `synthesis_strategy` policy for aggregation and conflict handling\n- `narrative_coherence_score` quality indicator for generated payload\n- `lineage_refs` connecting candidate fields to extracted evidence\n- `open_questions` unresolved synthesis tensions for review\n\n## 3. Lifecycle\nSynthesize receives extraction output, composes candidate capsules, marks unresolved ambiguity, and hands off to link inference and hashing. Iterative synthesis may run until minimum coherence thresholds are met.\n\n## 4. Integration\n- **Extract Stage:** consumes structured evidence fragments.\n- **Link Stage:** passes candidate capsules for graph wiring.\n- **AI Assistant:** reuses synthesis patterns for interactive generation.\n- **Validator Gates:** prepares structural and semantic compliance checks.\n\n## 5. Philosophical Alignment\nSynthesis reflects To Dig Deep by integrating fragments into meaningful structure without severing traceability to origin evidence.\n"
+    "content": "# A2C Stage: Synthesize\n\n## 1. Definition and Essence\nSynthesize is where the current A2C runtime stops being a formatter and becomes a governed reasoning system. In N1Hub this stage is powered by the prompt-pack contracts in `docs/a2c/protocols`, compiled directive assembly, repo-native graph tooling under `lib/a2c`, JSON repair loops, and quote-anchored evidence checks across the TypeScript pipeline.\n\n## 2. Prompt-Pack Composition\nThe runtime no longer relies on one monolithic synthesis instruction. It draws from a prompt pack with distinct operational roles:\n- activation and full integration prompts for default runs,\n- update-existing and dedup/conflict prompts when overlap is likely,\n- decomposition, audit-only, and index-only prompts for narrower tasks,\n- insufficient-context, selective-synthesis, and deep-investigation prompts when uncertainty or scope pressure is high.\n\nThe directive compiler then layers on modality rules, semantic lenses, anti-sycophancy directives, epistemic frontier context, and vault-backed few-shot examples.\n\n## 3. Runtime Composition\n- Generate a fractal summary of the whole source before chunk-local work begins.\n- Build directive packets with explicit schema contract, chain-of-verification, and graph-query instructions.\n- Run graph and contradiction checks through the repo-native query and Parliament helpers when uncertainty remains.\n- Repair malformed JSON outputs and then pass them through a citation guillotine, which requires exact substring quotes for claims and entities.\n- Escalate high-impact contradiction clusters to Parliament and inject the resulting resolution into the candidate capsule.\n- Apply prompt-redesign discipline when a prompt family repeatedly fails or drifts.\n\n## 4. Why This Matters\nWithout this stack, synthesis would be fancy summarization. With it, synthesis becomes governed assembly: context-rich, contradiction-aware, quote-anchored, and legible when it fails.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Synthesize converts extracted fragments into coherent capsule candidates. It reconciles evidence into draft payload, metadata, summary, and link intentions while preserving open questions where the source material does not justify false certainty. The stage matters because useful capsules require integration, not mere accumulation of extracted facts. By making synthesis a dedicated step, the pipeline can optimize coherence, track lineage back to source fragments, and separate unresolved ambiguity from information that is ready to become structured sovereign knowledge.",
+    "summary": "A2C Stage: Synthesize is the point where the runtime turns extraction into governed assembly rather than polished paraphrase, and the current stack now uses a clearer prompt-pack discipline to do it. Instead of one generic instruction, synthesis draws from activation, integration, update, conflict, decomposition, selective-synthesis, and deep-investigation prompts, then compiles those templates with modality rules, anti-sycophancy directives, epistemic frontier context, few-shot examples, ReAct graph checks, citation guillotines, and Parliament escalation. This matters because capsules need more than coherent prose: they need prompt law, graph awareness, and failure modes that remain inspectable when reasoning goes wrong.",
     "keywords": [
       "a2c",
       "synthesize",
-      "composition",
-      "capsule-draft",
-      "coherence",
-      "pipeline"
+      "prompt-pack",
+      "prompt-singularity",
+      "compiled-directives",
+      "react-oracle",
+      "citation-guillotine",
+      "selective-synthesis",
+      "prompt-redesign",
+      "parliament-escalation"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,10 +66,39 @@
       {
         "target_id": "capsule.foundation.capsuleos-schema.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.prompt.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.deep-intake-investigation.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "run_autonomous_dry",
+        "intent": "Execute the full repo-native autonomous pipeline in dry-run mode to inspect synthesized candidate behavior.",
+        "command": "npm run a2c:auto -- --input <path>",
+        "hitl_required": false
+      },
+      {
+        "name": "query_context_before_synthesis",
+        "intent": "Retrieve ranked vault neighborhoods before composing a candidate capsule.",
+        "command": "npm run a2c:query -- --kb-root . --query \"<concept>\"",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1250d9df832b08dff677345bbf9afd3bc1af07ec76e89472e92028bb853d4c3a61a88e8dfde179c6266145fd8c8b6d513c69f70720244da23fdacff6f5bafd0b"
+  "integrity_sha3_512": "e55480e4c89f5e42e87d6e3e1822d20862866255407e251f2c939dbc771f0aef06e6562a190b7723e5e02c15aa391c5a0a0d255e3797f4582df5e402e646540b"
 }

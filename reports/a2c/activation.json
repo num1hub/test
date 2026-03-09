@@ -1,0 +1,276 @@
+{
+  "status": "READY",
+  "workspace_root": "/home/n1/n1hub.com",
+  "kb_root": "/home/n1/n1hub.com",
+  "workspace_mode": "n1hub_repo",
+  "protocol_checks": [
+    {
+      "relative": "docs/a2c.md",
+      "present": true
+    },
+    {
+      "relative": "docs/a2c/protocols/activation-entry-protocol.md",
+      "present": true
+    },
+    {
+      "relative": "docs/a2c/protocols/autonomous-agent-protocol.md",
+      "present": true
+    },
+    {
+      "relative": "scripts/a2c/recon.ts",
+      "present": true
+    },
+    {
+      "relative": "scripts/a2c/investigate.ts",
+      "present": true
+    },
+    {
+      "relative": "scripts/a2c/ingest.ts",
+      "present": true
+    },
+    {
+      "relative": "scripts/a2c/audit.ts",
+      "present": true
+    },
+    {
+      "relative": "scripts/a2c/index.ts",
+      "present": true
+    }
+  ],
+  "missing_protocol_paths": [],
+  "missing_governance_scripts": [],
+  "recon": {
+    "skill_id": "anything-to-capsules",
+    "module": "RECON",
+    "timestamp": "2026-03-09T08:56:21.939Z",
+    "status": "COMPLETE",
+    "scope": {
+      "workspace_root": "/home/n1/n1hub.com",
+      "kb_root": "/home/n1/n1hub.com"
+    },
+    "metrics": {
+      "triad_clusters": 2,
+      "triad_ratio": 0.133,
+      "inventory_count": 40
+    },
+    "results": {
+      "workspace": {
+        "mode": "n1hub_repo",
+        "hasN1HubGovernance": true
+      },
+      "top_level_inventory": [
+        {
+          "name": "__tests__",
+          "kind": "dir"
+        },
+        {
+          "name": ".env.test",
+          "kind": "file"
+        },
+        {
+          "name": ".github",
+          "kind": "dir"
+        },
+        {
+          "name": ".gitignore",
+          "kind": "file"
+        },
+        {
+          "name": ".husky",
+          "kind": "dir"
+        },
+        {
+          "name": "app",
+          "kind": "dir"
+        },
+        {
+          "name": "components",
+          "kind": "dir"
+        },
+        {
+          "name": "contexts",
+          "kind": "dir"
+        },
+        {
+          "name": "contracts",
+          "kind": "dir"
+        },
+        {
+          "name": "data",
+          "kind": "dir"
+        },
+        {
+          "name": "data-test",
+          "kind": "dir"
+        },
+        {
+          "name": "db",
+          "kind": "dir"
+        },
+        {
+          "name": "docs",
+          "kind": "dir"
+        },
+        {
+          "name": "eslint.config.mjs",
+          "kind": "file"
+        },
+        {
+          "name": "hooks",
+          "kind": "dir"
+        },
+        {
+          "name": "lib",
+          "kind": "dir"
+        },
+        {
+          "name": "next-env.d.ts",
+          "kind": "file"
+        },
+        {
+          "name": "next.config.ts",
+          "kind": "file"
+        },
+        {
+          "name": "NINFINITY_WORKFLOW.md",
+          "kind": "file"
+        },
+        {
+          "name": "node_modules",
+          "kind": "dir"
+        },
+        {
+          "name": "ops",
+          "kind": "dir"
+        },
+        {
+          "name": "package-lock.json",
+          "kind": "file"
+        },
+        {
+          "name": "package.json",
+          "kind": "file"
+        },
+        {
+          "name": "playwright.config.ts",
+          "kind": "file"
+        },
+        {
+          "name": "postcss.config.mjs",
+          "kind": "file"
+        },
+        {
+          "name": "public",
+          "kind": "dir"
+        },
+        {
+          "name": "README.md",
+          "kind": "file"
+        },
+        {
+          "name": "reports",
+          "kind": "dir"
+        },
+        {
+          "name": "scripts",
+          "kind": "dir"
+        },
+        {
+          "name": "skills",
+          "kind": "dir"
+        },
+        {
+          "name": "SOUL.md",
+          "kind": "file"
+        },
+        {
+          "name": "store",
+          "kind": "dir"
+        },
+        {
+          "name": "tests",
+          "kind": "dir"
+        },
+        {
+          "name": "TOOLS.md",
+          "kind": "file"
+        },
+        {
+          "name": "tsconfig.json",
+          "kind": "file"
+        },
+        {
+          "name": "tsconfig.tsbuildinfo",
+          "kind": "file"
+        },
+        {
+          "name": "types",
+          "kind": "dir"
+        },
+        {
+          "name": "utils",
+          "kind": "dir"
+        },
+        {
+          "name": "vitest.config.ts",
+          "kind": "file"
+        },
+        {
+          "name": "WORKFLOW.md",
+          "kind": "file"
+        }
+      ],
+      "kb_state": {
+        "present": true,
+        "kb_root": "/home/n1/n1hub.com",
+        "layout_mode": "n1hub_repo",
+        "vault_dir": "/home/n1/n1hub.com/data/capsules",
+        "index_path": "/home/n1/n1hub.com/data/private/a2c/index.json",
+        "reports_dir": "/home/n1/n1hub.com/reports/a2c",
+        "vault_capsules": 187,
+        "vault_contract_counts": {
+          "recursive_layer": 187,
+          "recursive": 0,
+          "unknown": 0
+        },
+        "mixed_recursive_shapes": false,
+        "index_present": false,
+        "pipeline_present": false,
+        "tasks_dir_present": false,
+        "plan_present": false
+      },
+      "typescript_cluster_context": {
+        "metrics": {
+          "source_clusters": 15,
+          "doc_clusters": 0,
+          "test_clusters": 5,
+          "triad_clusters": 2,
+          "triad_coverage_ratio": 0.133
+        }
+      },
+      "governance_scripts": {
+        "validate": true,
+        "validate:all": true,
+        "audit:capsules": true,
+        "test": true,
+        "build": true,
+        "vault-steward": true,
+        "ninfinity": true,
+        "symphony": true
+      },
+      "recommended_actions": [
+        "run repo-native validate -> audit -> rebuild loop after mutations",
+        "prefer data/private/a2c tasks and reports/a2c artifacts for staged ingestion",
+        "typescript triad coverage below target; inspect docs and tests clusters"
+      ],
+      "timestamp": "2026-03-09T08:56:21.938Z"
+    },
+    "warnings": [],
+    "errors": [],
+    "metadata": {
+      "confidence": "HIGH",
+      "human_review_required": false,
+      "self_corrections": 0
+    }
+  }
+}

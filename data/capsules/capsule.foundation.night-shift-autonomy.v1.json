@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.night-shift-autonomy.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-07T09:20:00Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "name": "Night Shift Autonomy",
     "semantic_hash": "night-shift-autonomy-window-budget-cooldown-handoff-policy",
     "source": {
@@ -23,22 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It names when the swarm may work without the human actively steering it, what class of actions remain Dream-safe, how provider budgets and cooldowns are enforced, and how unfinished work is handed back to the next shift, to daylight co-pilot mode, or to explicit human review.\n\n## 2. Core Responsibilities\n- `execution_window` defines the hours when unattended work is allowed to dispatch.\n- `day_vs_night_mode_shape` distinguishes human-facing co-pilot behavior from background industrial behavior.\n- `budget_and_rate_discipline` keeps token, credit, and provider-lane pressure bounded while nobody is watching live.\n- `economics_capture` pushes mining, synthesis, planning, and vault maintenance into the cheapest reliable lanes available.\n- `cooldown_policy` prevents one graph region from being hammered repeatedly.\n- `handoff_rules` decide what is completed, what stays queued, what becomes a morning review item, and what must wake a human immediately.\n- `mutation_boundary` keeps unattended work Dream-first until stronger evidence or explicit promotion exists.\n\n## 3. N1Hub Integration\nThis capsule formalizes the current compromise that makes N1Hub operationally sane: the platform may stay alive all day, but fully autonomous graph work should be concentrated inside explicit windows. During the day the user gets a legible assistant and review surface. During the night the swarm can mine, refine, validate, and plan more aggressively, but still inside bounded mutation rules. That is the bridge between co-pilot and true autonomy.\n\n## 4. Governance Value\nNight Shift Autonomy is not only about time. It is also about trust. A system that mutates knowledge while the human sleeps needs stronger rules than a system that merely chats. This capsule therefore depends on preferences, control-plane policy, provider health, wallet posture, security expectations, and notification semantics.\n\n## 5. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by giving deep unattended work a disciplined lane instead of pretending that permanent mutation equals maturity.\n"
+    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy defines the bounded autonomous operating window for N1Hub background agents. It names when the swarm may work without the human actively steering it, what class of actions remain Dream-safe, how provider budgets and cooldowns are enforced, and how unfinished work is handed back to the next shift, to daylight co-pilot mode, or to explicit human review.\n\n## 2. Core Responsibilities\n- `execution_window` defines the hours when unattended work is allowed to dispatch.\n- `day_vs_night_mode_shape` distinguishes human-facing co-pilot behavior from background industrial behavior.\n- `budget_and_rate_discipline` keeps token, credit, and provider-lane pressure bounded while nobody is watching live.\n- `economics_capture` pushes mining, synthesis, planning, and vault maintenance into the cheapest reliable lanes available.\n- `cooldown_policy` prevents one graph region from being hammered repeatedly.\n- `handoff_rules` decide what is completed, what stays queued, what becomes a morning review item, and what must wake a human immediately.\n- `mutation_boundary` keeps unattended work Dream-first until stronger evidence or explicit promotion exists.\n\n## 3. N1Hub Integration\nThis capsule formalizes the current compromise that makes N1Hub operationally sane: the platform may stay alive all day, but fully autonomous graph work should be concentrated inside explicit windows. During the day the user gets a legible assistant and review surface. During the night the swarm can mine, refine, validate, and plan more aggressively, but still inside bounded mutation rules. That is the bridge between co-pilot and true autonomy.\n\n## 4. Governance Value\nNight Shift Autonomy is not only about time. It is also about trust. A system that mutates knowledge while the human sleeps needs stronger rules than a system that merely chats. This capsule therefore depends on preferences, control-plane policy, provider health, wallet posture, security expectations, and notification semantics.\n\n## 5. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by giving deep unattended work a disciplined lane instead of pretending that permanent mutation equals maturity.\n\n## 6. Conscious vs Subconscious Handoff\n\nNight-shift policy should make the handoff between conscious and subconscious system behavior explicit.\n- The conscious lane is live collaboration, clarification, and approval.\n- The subconscious lane is bounded overnight consolidation, maintenance, and heavy background reasoning.\n\nThe value of the split is operational: the system can keep working while preserving a readable morning return path. Good night-shift autonomy therefore ends with reviewable insight, queued follow-up work, or clearly bounded Dream-safe changes rather than with silent mutation.\n"
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy defines the bounded scheduling and governance policy for unattended background work in N1Hub. It matters because a service that stays alive continuously is not the same as a system that should mutate the vault continuously. This capsule names the explicit night window, cooldowns, budget posture, mutation boundaries, and morning handoff rules that let the swarm perform deep capsule work without collapsing the human co-pilot lane. It also makes the trust model explicit: unattended autonomy should be economically disciplined, Dream-first, and legible when the human returns.",
+    "summary": "Night Shift Autonomy defines when unattended work may run and how it stays trustworthy, but it also benefits from a clearer conscious-versus-subconscious handoff model. Daytime is the conscious lane of visible co-pilot work and approval, while night is the subconscious lane of bounded consolidation, maintenance, and deferred heavy reasoning. This matters because autonomous mutation is easier to trust when the handoff between those modes is explicit: what the human framed during the day, what the swarm continued overnight, and what should return in the morning as review, insight, or further queued work. Autonomy therefore becomes a disciplined shift system rather than permanent invisible mutation.",
     "keywords": [
       "night-shift-autonomy",
-      "night-window",
-      "background-agents",
-      "offpeak",
-      "ai-economics",
-      "deepmine",
-      "symphony",
-      "n-infinity",
-      "day-night-modes",
-      "handoff",
-      "dream-safe"
+      "day-night-handoff",
+      "co-pilot",
+      "subconscious-lane",
+      "morning-review",
+      "bounded-autonomy",
+      "handoff-rules",
+      "queue-discipline",
+      "dream-safe",
+      "trust-model"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -120,5 +119,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "3c6bc099f53205269c00d3c8222f0dd8012302a7dffd321548c80de28a0e3da3e003cd99ea7c67e68c52f1544014f497e32a9809fcf9276f4c929b58d3645f88"
+  "integrity_sha3_512": "603f9b9c53664854aed72d487f44f06c86413651a26621409b8557a379b6f07fd150e0c17721b6083a4ce86123847a9655a85df8bc2ab1187bb9326383b0dd0f"
 }

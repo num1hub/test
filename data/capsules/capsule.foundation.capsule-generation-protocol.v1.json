@@ -1,34 +1,34 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-generation-protocol.v1",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
     "semantic_hash": "capsule-generation-protocol-master-prompt-matrix-gold-core",
-    "updated_at": "2026-03-08T20:20:00Z",
+    "updated_at": "2026-03-09T11:30:00Z",
     "name": "Capsule Generation Protocol",
     "tier": 1
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Generation Protocol\n\n## 1. Definition and Essence\nCapsule Generation Protocol is the architect-to-agent contract for creating new capsule candidates inside N1Hub. It defines the minimum structural, epistemic, and branch-routing expectations required before generated material may enter refinement, review, or promotion workflows.\n\n## 2. Core Principles\n- **Structural Conformity**: generated output must respect the CapsuleOS shape rather than improvising its own schema.\n- **Branch-Aware Drafting**: newly generated material defaults to Dream-safe candidate form unless evidence clearly justifies a stronger status.\n- **Evidence Bundling**: provenance, reasoning basis, and intended integration path should travel with the candidate.\n- **Reviewability**: generated structure must be legible enough for validation, quarantine, repair, or promotion.\n- **Deep Work Over Prompt Theater**: the protocol exists to produce durable capsules, not merely impressive prose.\n\n## 3. Operational Role\nThis protocol sits between human intent, assistant mediation, DeepMine extraction, and A2C refinement. It turns raw input into candidate capsule structure that can be validated, routed, repaired, or quarantined instead of leaking directly into trusted graph reality.\n\n## 4. Integration\n- **Instruction Surfaces / Context Engineering:** generation quality depends on disciplined inputs.\n- **DeepMine:** primary extraction and synthesis quarry.\n- **A2C / A2C Validate:** refinement and formal acceptance pipeline.\n- **Validation Gatekeeper / Branch Steward:** decide whether the candidate belongs in Dream review, Real promotion, or quarantine.\n- **Testing / Quarantine Buffer:** generated promises must survive evidence and failure-path scrutiny.\n\n## 5. Philosophical Alignment\nCapsule Generation Protocol serves To Dig Deep by turning raw possibility into structured, governable, and reviewable candidate knowledge. It is the disciplined bridge between chaos and sovereign memory.\n"
+    "content": "# Capsule Generation Protocol\n\n## 1. Definition and Essence\nCapsule Generation Protocol is the architect-to-agent contract for creating new capsule candidates inside N1Hub. It defines the minimum structural, epistemic, and branch-routing expectations required before generated material may enter refinement, review, or promotion workflows.\n\n## 2. Core Principles\n- Structural Conformity: generated output must respect the CapsuleOS shape rather than improvising its own schema.\n- Branch-Aware Drafting: newly generated material defaults to Dream-safe candidate form unless evidence clearly justifies a stronger status.\n- Evidence Bundling: provenance, reasoning basis, and intended integration path should travel with the candidate.\n- Reviewability: generated structure must be legible enough for validation, quarantine, repair, or promotion.\n- Boundary Discipline: generated changes should respect domain ownership, public entrypoints, and existing contracts instead of tunneling through private internals.\n- Deep Work Over Prompt Theater: the protocol exists to produce durable capsules, not merely impressive prose.\n\n## 3. Operational Role\nThis protocol sits between human intent, assistant mediation, DeepMine extraction, and A2C refinement. It turns raw input into candidate capsule structure that can be validated, routed, repaired, or quarantined instead of leaking directly into trusted graph reality.\n\n## 4. Integration\n- Instruction Surfaces and Context Engineering: generation quality depends on disciplined inputs.\n- DeepMine: primary extraction and synthesis quarry.\n- A2C and A2C Validate: refinement and formal acceptance pipeline.\n- Validation Gatekeeper and Branch Steward: decide whether the candidate belongs in Dream review, Real promotion, or quarantine.\n- Testing and Quarantine Buffer: generated promises must survive evidence and failure-path scrutiny.\n- Low-Blast-Radius Architecture: generated work should preserve existing module seams and contracts unless a deliberate architecture change is being made.\n\n## 5. Philosophical Alignment\nCapsule Generation Protocol serves To Dig Deep by turning raw possibility into structured, governable, and reviewable candidate knowledge. It is the disciplined bridge between chaos and sovereign memory.\n\n## 6. Routing and Merge Discipline\nCandidate generation should not assume that every new artifact deserves a brand-new capsule. The protocol should classify incoming material into four routing outcomes:\n- duplicate reuse,\n- lineage-preserving increment,\n- contradiction requiring explicit parallel preservation,\n- resonance worth a later synthesis or semantic squash merge.\n\nThis is the Git for Thoughts discipline of the capsule layer. Knowledge changes should behave like patches against the graph, with diffs, lineage, and explicit merge decisions, rather than like blind overwrites that destroy prior state. Generation quality therefore depends as much on routing judgment as on structural conformity."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Generation Protocol is the architect-to-agent contract for minting new capsule candidates inside N1Hub. It matters because generation quality determines the ceiling for everything later refinement, validation, quarantine, and promotion can rescue. The capsule defines structural conformity, branch-aware drafting, evidence bundling, and reviewability so raw input becomes governable candidate knowledge instead of uncontrolled graph mutation. In practice it is the disciplined bridge between human intent, DeepMine extraction, A2C refinement, and sovereign memory formation.",
+    "summary": "Capsule Generation Protocol is the contract that turns human or agent intent into governable capsule candidates, and it now carries stronger architectural discipline. Candidate generation should distinguish exact duplicates, lineage-preserving increments, real contradictions, and resonance clusters that deserve later synthesis instead of premature collapse. It should also preserve domain ownership and public module boundaries so generated work does not tunnel through private internals for short-term convenience. This matters because strong generation is not only about producing valid JSON. It is about deciding whether a new artifact should be preserved, merged, challenged, or deferred while keeping the surrounding repository architecture stable, legible, and recoverable.",
     "keywords": [
       "capsule-generation",
       "protocol",
-      "master-prompt",
-      "meta-directive",
-      "5-element-law",
-      "capsuleos",
-      "n1hub",
-      "negentropy",
-      "to-dig-deep",
-      "between-zero-and-one"
+      "smart-routing",
+      "git-for-thoughts",
+      "semantic-squash-merge",
+      "duplicates",
+      "lineage",
+      "contradiction",
+      "resonance",
+      "candidate-knowledge"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -89,10 +89,22 @@
       {
         "target_id": "capsule.foundation.agent-context-engineering.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.low-blast-radius-architecture.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.golden-path-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.contract-governed-boundaries.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "9f67ffd73846d1961b8d742afe959173ee602ecdabeda60f0dd4eaefadf10bf41a49797998a3a37877e4b9af41e4ece975cddeae9ee7a39669b0ca28fa94e691"
+  "integrity_sha3_512": "d1c2143cbbeae5a029a9cdd7c97853745e828bfd2e6bd1f1abfc80b09658d367893d7b16b086e7285b50571a3a41916e7e0b3bd667a3197db7a8508b7c648974"
 }

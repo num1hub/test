@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.testing.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-08T20:20:00Z",
+    "updated_at": "2026-03-09T11:30:00Z",
     "name": "Testing",
     "semantic_hash": "capsule-foundation-testing-v1-qa-validation-coverage-regression",
     "priority": "high",
-    "progress": 57,
+    "progress": 62,
     "estimatedHours": 180,
     "actualHours": 96,
     "dueDate": "2026-06-30",
@@ -19,20 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Testing\n\n## 1. Definition and Essence\nTesting is the evidence discipline of CapsuleOS. It defines how the platform challenges schema conformance, graph integrity, branch routing, runtime behavior, security posture, and promotion safety before knowledge or code is trusted.\n\n## 2. Core Attributes\n- `test_layers` unit, integration, component, end-to-end, adversarial, replay, and canary checks\n- `coverage_targets` minimum expectations for critical modules and trust-sensitive boundaries\n- `fixture_strategy` canonical capsule, branch, and assignment scenarios used as shared evidence\n- `regression_policy` release-blocking failure criteria and override thresholds\n- `quality_metrics` reliability, defect escape, branch contamination, and evidence integrity indicators\n- `replay_and_trace_policy` expectations for reproducing agent runs, promotions, and failure cases\n\n## 3. Lifecycle\nTesting standards evolve with architecture changes, new agent lanes, new provider surfaces, and new promotion paths. Checks are enforced in CI, replayed against production-like artifacts, and expanded after incidents, overrides, or quarantine events.\n\n## 4. Integration\n- **Validator / 16 Gates:** schema and gate conformance checks.\n- **Capsule Generation Protocol:** generation promises must be tested, not merely asserted.\n- **A2C / Workspace / Symphony:** runtime behavior and integration boundaries.\n- **Security / Architect Override / Quarantine:** adversarial, failure-path, and trust-boundary tests.\n- **Agent Evals and Traces:** evidence loop for agent behavior quality.\n\n## 5. Philosophical Alignment\nTesting serves To Dig Deep by insisting that depth includes repeatable evidence. It challenges assumptions before knowledge, code, or autonomous behavior is allowed to become trusted reality.\n"
+    "content": "# Testing\n\n## 1. Definition and Essence\nTesting is the evidence discipline of CapsuleOS. It defines how the platform challenges schema conformance, graph integrity, branch routing, runtime behavior, security posture, promotion safety, and architectural boundary drift before knowledge or code is trusted.\n\n## 2. Core Attributes\n- test_layers unit, integration, component, end-to-end, adversarial, replay, and canary checks\n- coverage_targets minimum expectations for critical modules and trust-sensitive boundaries\n- fixture_strategy canonical capsule, branch, and assignment scenarios used as shared evidence\n- regression_policy release-blocking failure criteria and override thresholds\n- quality_metrics reliability, defect escape, branch contamination, and evidence integrity indicators\n- replay_and_trace_policy expectations for reproducing agent runs, promotions, and failure cases\n- contract_test_priority boundary tests that describe what one domain expects from another so hidden coupling is caught before production\n\n## 3. Lifecycle\nTesting standards evolve with architecture changes, new agent lanes, new provider surfaces, and new promotion paths. Checks are enforced in CI, replayed against production-like artifacts, and expanded after incidents, overrides, quarantine events, or new cross-domain boundaries.\n\n## 4. Integration\n- Validator and 16 Gates: schema and gate conformance checks.\n- Capsule Generation Protocol: generation promises must be tested, not merely asserted.\n- A2C, Workspace, and Symphony: runtime behavior and integration boundaries.\n- Contract-Governed Boundaries: cross-domain DTO, route, and workflow expectations should be pinned by tests.\n- Security, Architect Override, and Quarantine: adversarial, failure-path, and trust-boundary tests.\n- Agent Evals and Traces: evidence loop for agent behavior quality.\n\n## 5. Philosophical Alignment\nTesting serves To Dig Deep by insisting that depth includes repeatable evidence. It challenges assumptions before knowledge, code, or autonomous behavior is allowed to become trusted reality."
   },
   "neuro_concentrate": {
-    "summary": "Testing is the evidence discipline of the platform. It defines how CapsuleOS checks schema conformance, graph integrity, branch routing, runtime behavior, regressions, trace replay, and release readiness across modules instead of relying on intuition or one-off confidence. The capsule is intentionally broad because trust in N1Hub now spans validator logic, A2C, autonomous agents, assignment flows, UI, storage, and security boundaries. In practice it anchors the expectation that knowledge and code are challenged before they are trusted, making reliability a governed subsystem rather than a hopeful side effect.",
+    "summary": "Testing is the evidence discipline of the platform, and in N1Hub it now explicitly includes boundary contracts as first-class targets. It defines how CapsuleOS checks schema conformance, graph integrity, branch routing, runtime behavior, regressions, trace replay, and release readiness across modules instead of relying on intuition or one-off confidence. This capsule matters because low-blast-radius architecture only works when public boundaries are challenged continuously. Contract tests on validator routes, A2C outputs, Symphony workflows, graph projections, and branch-diff payloads give the repository machine-checkable proof that one domain still behaves as another domain expects. That turns architecture rules into live evidence instead of static aspiration.",
     "keywords": [
       "testing",
       "quality-assurance",
-      "schema-conformance",
+      "contract-tests",
       "graph-integrity",
       "regression",
       "release-safety",
       "validator",
-      "reliability",
-      "evidence-discipline"
+      "evidence-discipline",
+      "low-blast-radius"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -77,10 +77,18 @@
       {
         "target_id": "capsule.foundation.agent-evals-and-traces.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.contract-governed-boundaries.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.golden-path-engineering.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "f2bdf355bbddc040f208c0b67888f55ee3bbf3a439746ee99d41e5f297dcd26e707b10f2c44663d8f21c6dc8f6bfcb0e7bc1ed62b83a9ef5e67ecd1af7ade101"
+  "integrity_sha3_512": "1186891bc23d0099941b589edc9a62a0a0832b97ad07db647b7bb16f0018b794ad78ed0ffa2658bea270d5603497d919162889339e7f81780667cff8523790a9"
 }

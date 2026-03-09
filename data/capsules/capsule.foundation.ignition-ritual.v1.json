@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.ignition-ritual.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-09T01:10:38.622Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
+    "name": "Ignition Ritual",
+    "semantic_hash": "ignition-ritual-voids-contradictions-seed-intent-ingestion-loop",
+    "source": {
+      "uri": "internal://docs/a2c/protocols/activation-entry-protocol.md",
+      "type": "repository_contract"
+    },
+    "priority": "medium",
+    "progress": 26,
+    "estimatedHours": 70,
+    "actualHours": 18,
+    "dueDate": "2026-07-10",
+    "tier": 3
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Ignition Ritual\n\n## 1. Definition and Essence\nIgnition Ritual defines the daily entry loop that turns a sleeping or idle knowledge runtime back into a directed cognitive workday. It is not only a greeting. It is a small operational ceremony that surfaces graph pressure, asks for present human intent, and then feeds that intent back into the intake pipeline in a controlled form.\n\n## 2. Ritual Flow\n- run the void mapper to identify the most pressing structural void,\n- surface a short list of unresolved contradiction edges from the current graph,\n- collect the operator's seed intent for the day,\n- write that intent into a deterministic seed artifact inside the task area,\n- optionally chain a dry-run ingest of the seed so the day begins with a concrete execution packet,\n- emit a machine-readable ritual summary for later replay.\n\n## 3. Integration\nIgnition belongs at the seam between Personal AI Assistant, Background Agent Runtime, Workspace, and A2C Ingest. It gives the human a clean morning handoff into the current epistemic state of the system instead of forcing them to reconstruct pressure from scattered logs.\n\n## 4. Why This Matters\nIf the runtime can work overnight, it also needs a disciplined way to begin the next day. Ignition gives that transition a repeatable structure.\n"
+  },
+  "neuro_concentrate": {
+    "summary": "Ignition Ritual defines the daily entry loop that reconnects the human and the autonomous graph before deeper work begins. It runs the void mapper, surfaces unresolved contradiction edges, asks for a seed intent, writes that intent into a deterministic task artifact, optionally chains a dry-run ingest, and emits a machine-readable summary for replay. This matters because a system that can think overnight also needs a disciplined morning handoff. Ignition therefore turns the start of the day into a clean operational seam between current graph pressure, human direction, and the next queue of work rather than leaving that transition to scattered logs and memory.",
+    "keywords": [
+      "ignition-ritual",
+      "seed-intent",
+      "void-mapper",
+      "contradiction-review",
+      "morning-handoff",
+      "daily-entry-loop",
+      "assistant-ritual",
+      "task-seed",
+      "a2c-ingest",
+      "operational-transition"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "ignition-ritual-voids-contradictions-seed-intent-ingestion-loop"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.gardener.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [
+      {
+        "name": "run_ignition_ritual",
+        "intent": "Surface active voids and contradictions, capture seed intent, and open the day with a deterministic intake packet.",
+        "command": "npm run a2c:activate && npm run a2c:recon && npm run a2c:status",
+        "hitl_required": false
+      }
+    ],
+    "epistemic_ledger": []
+  },
+  "integrity_sha3_512": "5c8e0b0a03ee9bd360e8008c051a6c4d5f7c06ace8f4291c1396c5a31eae033f340f2deb528df6377bc8dd4b38714d7014aaea53844036cfbc7a4ca08be75c2a"
+}

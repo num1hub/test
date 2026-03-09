@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-normalize.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "A2C Stage: Normalize",
     "semantic_hash": "capsule-foundation-a2c-normalize-v1-stage-canonicalization-schema",
     "priority": "high",
@@ -15,21 +15,29 @@
     "estimatedHours": 84,
     "actualHours": 46,
     "dueDate": "2026-05-22",
-    "tier": 3
+    "tier": 3,
+    "source": {
+      "uri": "internal://docs/a2c/protocols/prompt-pack.md",
+      "type": "repository_contract"
+    }
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Normalize\n\n## 1. Definition and Essence\nThe Normalize stage converts heterogeneous ingest artifacts into stable intermediate representations. It enforces canonical encodings, field naming conventions, and structural consistency so later stages operate predictably regardless of original source format.\n\n## 2. Core Attributes\n- `canonical_format` indicator for normalized payload\n- `schema_hints` describing inferred source structure\n- `normalization_ruleset` version reference\n- `normalization_warnings` for lossy or ambiguous transforms\n- `trace_id` inherited from ingest artifact\n\n## 3. Lifecycle\nNormalize consumes ingest artifacts, applies deterministic transforms, records warnings, and emits canonical intermediate data for segmentation. Any non-recoverable ambiguity is routed to quarantine with explicit diagnostics.\n\n## 4. Integration\n- **Ingest Stage:** receives raw-capture artifacts.\n- **Segment Stage:** provides canonical input for chunking.\n- **CapsuleOS Schema:** aligns field semantics with 5-element expectations.\n- **Validator Stack:** prepares predictable structures for downstream gates.\n\n## 5. Philosophical Alignment\nNormalize advances To Dig Deep by reducing noise without erasing context, creating clear substrate where true structure can emerge rather than forcing brittle assumptions.\n"
+    "content": "# A2C Stage: Normalize\n\n## 1. Definition and Essence\nNormalize is the discipline that converts messy source material and loose capsule drafts into forms the rest of A2C can trust. In the live runtime this logic is concentrated around the prompt-pack contracts in `docs/a2c/protocols`, shared schema helpers under `lib/a2c`, and the sanitation and preparation steps that feed the repo-native TypeScript pipeline.\n\n## 2. Runtime Responsibilities\n- Detect modality from filename, content type, and text shape. The compiler distinguishes code, legal, chat, concept, and general prose.\n- Apply modality-specific rules so code keeps signatures with implementations, chat keeps turn order, and prose keeps claim-predicate integrity.\n- Derive semantic lenses dynamically. Adversarial, axiomatic, and temporal lenses are activated from source signals so the extractor does not treat every document with the same posture.\n- Inject anti-sycophancy directives that explicitly challenge persuasive framing and unsupported certainty.\n- Sanitize payload structure against the active schema, including metadata shape, vector fields, recursive geometry, and retrieval-facing surfaces.\n- Redact PII from summaries, keywords, entities, and other retrieval layers before those fields become searchable.\n\n## 3. Frontier-Aware Prompt Preparation\nNormalize now also compiles higher-order context for later reasoning:\n- load the current epistemic frontier from voids and question themes,\n- attach frontier summary and bounty directives,\n- build vault-backed few-shot examples from high-trust capsules,\n- preserve ambiguity as warnings instead of silently smoothing it away.\n\nThis turns normalization into context-shaping as well as structure-shaping.\n\n## 4. Why This Matters\nMany failures that look semantic are actually normalization failures. If modality is misread, if PII survives into retrieval fields, or if the prompt surface lacks the right skeptical posture, then later synthesis inherits noise disguised as intelligence.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Normalize turns heterogeneous input into a canonical intermediate form that the rest of the pipeline can trust. It harmonizes encodings, field conventions, and structural shape so segmentation and extraction operate on stable material instead of source-specific noise. This stage matters because many failures that look semantic are actually formatting or schema drift problems upstream. By making normalization explicit, the vault preserves warnings about ambiguity while still producing a predictable substrate for later reasoning, validation, and synthesis.",
+    "summary": "A2C Stage: Normalize is the runtime discipline that prepares both structure and prompt posture before the system starts acting smart. In the current stack it detects modality, applies code or prose specific rules, activates adversarial, axiomatic, and temporal lenses, injects anti-sycophancy directives, sanitizes payload shape against the active schema, and redacts PII from retrieval-facing fields. It also compiles frontier context and vault-backed few-shot examples so later reasoning begins with the right local and global posture. This matters because many downstream failures are upstream normalization failures wearing semantic clothing.",
     "keywords": [
       "a2c",
       "normalize",
-      "canonicalization",
-      "schema",
-      "pipeline",
-      "preprocessing"
+      "prompt-pack",
+      "modality-rules",
+      "semantic-lenses",
+      "anti-sycophancy",
+      "frontier-context",
+      "few-shot-examples",
+      "schema-sanitization",
+      "pii-redaction"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -58,10 +66,39 @@
       {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.ai.prompt.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "detect_modality_profile",
+        "intent": "Classify an input as code, legal, chat, concept, or prose and attach the right semantic lenses.",
+        "hitl_required": false
+      },
+      {
+        "name": "sanitize_payload_for_schema",
+        "intent": "Normalize metadata, vector fields, lists, and recursive structure to the active schema before sealing.",
+        "hitl_required": false
+      },
+      {
+        "name": "redact_pii_from_retrieval_fields",
+        "intent": "Remove sensitive data from summary, keyword, entity, and vector-hint surfaces.",
+        "hitl_required": false
+      },
+      {
+        "name": "compile_prompt_directive",
+        "intent": "Generate a modality-aware, frontier-aware directive packet before extraction or synthesis begins.",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "52620d2407edbf017bcc9d3cbe4239904da244c97ffb78afca0df9f8f27d658a663b1ac6ef01eaa283a48c66e94bbb0bf7e511ac3265f32723158b3bfad57892"
+  "integrity_sha3_512": "aceb3d930a5233eb0a4ecdadc39c877e8dd20b1d1ac9fe9df78c94feac33088b64b4d18c64ea0cf5a7e5564a13137f63e720bf206555537d4ec0f6d8823d2b20"
 }

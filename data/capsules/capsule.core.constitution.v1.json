@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.core.constitution.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-08T21:10:00Z",
+    "updated_at": "2026-03-09T00:16:18.654Z",
     "semantic_hash": "core-constitution-capsuleos-laws-control-plane-sovereign-foundation",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
@@ -18,20 +18,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Core Constitution: CapsuleOS Foundational Law\n\n## 1. Purpose\nThis capsule codifies the constitutional layer of CapsuleOS: non-negotiable laws governing structure, trust, provenance, and mutation discipline across N1Hub.\n\n## 2. Constitutional Clauses\n- Every capsule must follow the 5-Element structure exactly.\n- Canonical relation typing and resolvable links are mandatory.\n- Non-draft capsules must preserve deterministic integrity sealing.\n- Mutation of protected knowledge requires versioned lineage, never destructive overwrite.\n- `Real` and `Dream` must stay explicitly distinguishable so possibility is never misrepresented as fact.\n- Agent and human changes alike remain subject to the same validation, review, and quarantine laws.\n\n## 3. Enforcement\nValidation gates, schema constraints, lifecycle rules, branch governance, and security boundaries enforce constitutional operation across the Control Plane and Cognitive Plane.\n\n## 4. Scope\nThis constitution anchors subordinate core capsules and serves as the legal reference for future extensions, runtime autonomy, and second-brain growth."
+    "content": "# Core Constitution: CapsuleOS Foundational Law\n\n## 1. Purpose\nThis capsule codifies the constitutional layer of CapsuleOS: non-negotiable laws governing structure, trust, provenance, and mutation discipline across N1Hub.\n\n## 2. Constitutional Clauses\n- Every capsule must follow the 5-Element structure exactly.\n- Canonical relation typing and resolvable links are mandatory.\n- Non-draft capsules must preserve deterministic integrity sealing.\n- Mutation of protected knowledge requires versioned lineage, never destructive overwrite.\n- `Real` and `Dream` must stay explicitly distinguishable so possibility is never misrepresented as fact.\n- Agent and human changes alike remain subject to the same validation, review, and quarantine laws.\n\n## 3. Enforcement\nValidation gates, schema constraints, lifecycle rules, branch governance, and security boundaries enforce constitutional operation across the Control Plane and Cognitive Plane.\n\n## 4. Scope\nThis constitution anchors subordinate core capsules and serves as the legal reference for future extensions, runtime autonomy, and second-brain growth.\n\n## 5. Non-Destructive Truth Law\n\nTwo governance rules deserve explicit constitutional status:\n- contradiction should remain visible through ledgers, evidence, and typed graph tension instead of being cosmetically flattened,\n- supersession should happen through lineage, archival, or legacy state rather than through silent deletion of prior knowledge.\n\nThese rules matter because a trustworthy second brain must preserve both chain of custody and epistemic tension when reality is incomplete, conflicting, or evolving.\n"
   },
   "neuro_concentrate": {
-    "summary": "Core Constitution is the non-negotiable law surface of CapsuleOS. It defines which structural, provenance, branch, link, and integrity rules are absolute, and it clarifies that system growth must happen through versioned lineage rather than destructive mutation. The capsule matters because every validator, branch merge, human override, and agent action ultimately depends on one stable constitutional reference. Without that reference, architecture turns into local preference and trust degrades over time. Constitution therefore anchors the legal boundary of the graph, giving downstream runtime modules, swarms, and second-brain workflows freedom to evolve only inside clearly defended systemic constraints.",
+    "summary": "Core Constitution is the non-negotiable law surface of CapsuleOS, and two governance duties deserve stronger emphasis: contradiction must remain visible, and knowledge must never be removed by silent overwrite. The system should preserve tension through explicit ledgers and typed graph edges, and it should supersede weaker knowledge through lineage and legacy transitions rather than destructive deletion. This matters because trust fails not only when schemas break, but also when systems hide conflict or rewrite history without trace. Constitution therefore governs not just structure and integrity, but the ethical posture of how N1Hub preserves disagreement, succession, and the chain of custody of meaning.",
     "keywords": [
       "core",
       "constitution",
-      "non-negotiable-law",
-      "governance",
+      "contradiction-visibility",
       "lineage",
-      "validation",
-      "trust-boundary",
+      "legacy-supersession",
       "integrity",
-      "branch-law",
+      "trust-boundary",
+      "graph-law",
+      "non-destructive-update",
       "capsuleos"
     ],
     "confidence_vector": {
@@ -86,5 +86,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "622d56bdb1e01943bdca65b0e291c8f2368a2c8b47fc2bc24ed9068b1d0c1decbd9113f359f4e3b54c08483edb4e078115c542866ed7c82607f128ab92b7b752"
+  "integrity_sha3_512": "74f737855cbb5b1f104ff9debe41db84b9173ec8967f2f2fb5f7c7f64dccc37813b0c8884c8a1fc1d409329d437778e812815d613127d09f7a192da9dbf18e1d"
 }

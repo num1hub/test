@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:40:00Z",
-    "updated_at": "2026-03-08T21:08:28.717Z",
+    "updated_at": "2026-03-08T23:41:03.677Z",
     "name": "Vault Stewardship Swarm",
     "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance",
     "priority": "high",
@@ -19,34 +19,34 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Stewardship Swarm\n\n## Dream Direction\nIn the Dream branch, Vault Stewardship Swarm becomes the explicit long-lived intelligence cluster that continuously improves the capsule vault with minimal human micromanagement.\n\n## Desired Future State\n- a swarm that can read the entire vault, detect pressure, and turn that pressure into bounded jobs\n- a clear daytime co-pilot mode where Personal AI Assistant proposes vault improvements and asks for confirmation\n- a bounded night mode where the swarm quietly works through maintenance queues, decomposition tasks, markup polish, graph refactors, and review handoffs\n- stronger branch routing so exploratory changes settle in Dream first and only mature into Real with evidence\n- explicit idle and reassess behavior so the swarm can pause honestly when the vault does not need fresh work\n- a cleaner feedback loop between DeepMine, A2C, vault review, graph maintenance, and promotion safety\n\n## Why It Matters\nDream preserves the idea that the second brain should not remain static. It should become a living vault that improves every day through disciplined collaboration between one human and a swarm of bounded agents.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773004016221\n- Job: Autonomous graph refactor pass for foundation.vault-stewardship-swarm\n- Workstream: graph_refactor\n- Note: Summary refined for graph-facing clarity, emphasizing structured modes and integrated workflows. Keywords expanded to cover intelligence cluster, operating modes, feedback mechanisms, and key components. Future attention needed for explicit decomposition of workflows and clearer mapping of swarm lineage and recursive links."
+    "content": "# Vault Stewardship Swarm\n\n## Dream Direction\nIn the Dream branch, Vault Stewardship Swarm becomes the explicit long-lived intelligence cluster that continuously improves the capsule vault with minimal human micromanagement.\n\n## Desired Future State\n- a swarm that can read the entire vault, detect pressure, and turn that pressure into bounded jobs\n- a clear daytime co-pilot mode where Personal AI Assistant proposes vault improvements and asks for confirmation\n- a bounded night mode where the swarm quietly works through maintenance queues, decomposition tasks, markup polish, graph refactors, and review handoffs\n- stronger branch routing so exploratory changes settle in Dream first and only mature into Real with evidence\n- explicit idle and reassess behavior so the swarm can pause honestly when the vault does not need fresh work\n- a cleaner feedback loop between DeepMine, A2C, vault review, graph maintenance, and promotion safety\n\n## Why It Matters\nDream preserves the idea that the second brain should not remain static. It should become a living vault that improves every day through disciplined collaboration between one human and a swarm of bounded agents.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773013204004\n- Job: Autonomous markup pass for foundation.vault-stewardship-swarm\n- Workstream: markup\n- Note: Summary clarified for scanability and metadata quality, emphasizing structured modes, branch routing, and feedback mechanisms. Keywords expanded for improved discovery and classification. Capsule content remains unchanged; future attention needed for explicit workflow decomposition and mapping of swarm lineage and recursive links."
   },
   "neuro_concentrate": {
-    "summary": "Vault Stewardship Swarm is a persistent intelligence hub in the Dream branch, designed for disciplined, continuous capsule vault improvement through distinct operating modes (co-pilot, night, idle, degraded), integrated job generation, decomposition, graph refactoring, and review workflows.",
+    "summary": "Vault Stewardship Swarm is a bounded intelligence cluster in the Dream branch that autonomously improves the capsule vault through structured maintenance cycles, clear day-night modes, and disciplined branch-safe sequencing, ensuring human-visible confirmation and safe promotion of validated updates.",
     "keywords": [
       "vault-stewardship-swarm",
       "dream-branch",
-      "capsule-vault",
       "capsule-maintenance",
       "night-shift",
-      "reassess-mode",
-      "cooldown-discipline",
-      "degraded-recovery",
-      "co-pilot",
-      "graph-refactoring",
+      "day-night-modes",
       "decomposition",
-      "job-generation",
-      "autonomous-swarm",
-      "intelligence-cluster",
-      "operating-modes",
-      "maintenance-queue",
-      "feedback-loop",
-      "DeepMine",
-      "A2C",
+      "review-gates",
       "branch-routing",
-      "swarm-behavior",
+      "maintenance-jobs",
+      "maintenance-queue",
+      "human-confirmation",
+      "n-infinity",
+      "cooldown",
+      "intelligence-cluster",
+      "maintenance-cycles",
+      "personal-ai-assistant",
+      "branch-safe-sequencing",
+      "feedback-loop",
+      "promotion-safety",
+      "swarm-lineage",
       "vault-steward",
-      "graph_refactor"
+      "autonomous-swarm",
+      "markup"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -146,8 +146,16 @@
         "run_id": "vault-steward-1773004016221",
         "job_id": "vault-steward-job-a87a186a170148d2",
         "rationale": "The capsule content describes a multi-mode, structured approach to vault stewardship, with emphasis on autonomous operation, job generation, and integrated review. The update clarifies these aspects for graph maintenance and prepares for future decomposition without altering recursive links."
+      },
+      {
+        "at": "2026-03-08T23:41:03.676Z",
+        "event": "autonomous_executor_update_applied",
+        "agent": "vault-steward-executor",
+        "run_id": "vault-steward-1773013204004",
+        "job_id": "vault-steward-job-8f856f01ae20f074",
+        "rationale": "The maintenance change is justified by the capsule's focus on structured intelligence, explicit operating modes, and branch-safe workflows, as well as the need for improved clarity and discoverability following the recent graph_refactor pass."
       }
     ]
   },
-  "integrity_sha3_512": "6c2deefa660b5097147f3d0bac77aa25f6dac00c9458de4e072042527e13c5c64df9fec01a812d4324301041cabf9d9a42504d98513055c947ffc39d33d2a676"
+  "integrity_sha3_512": "35325671a4c5cfc976da37cd0abc5f4187352bc47c5716ea72d88cd62503847487f642af45bf2b778456cd6e72a6084ffebdb9194a0baf8f285d74b7b0bd4bd6"
 }

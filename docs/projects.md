@@ -1,3 +1,4 @@
+<!-- @anchor doc:projects.reference links=doc:n1hub.readme,arch:graph.runtime,doc:branching.real-dream-diff note="Reference for project capsules and project graph behavior in N1Hub." -->
 # Projects in N1Hub
 
 ## Overview

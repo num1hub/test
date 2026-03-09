@@ -1,18 +1,18 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-evals-and-traces.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:20:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "Agent Evals and Traces",
     "semantic_hash": "agent-evals-traces-replay-review-regression-runtime-quality",
     "source": {
-      "uri": "https://developers.openai.com/api/docs/guides/agents-sdk",
-      "type": "web_documentation"
+      "uri": "internal://scripts/a2c/activate.ts",
+      "type": "repository_implementation"
     },
     "priority": "high",
     "progress": 23,
@@ -23,22 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Evals and Traces\n\n## 1. Definition and Essence\nAgent Evals and Traces defines the feedback layer that records what an agent did, why it did it, and whether the result was good enough. Traces preserve run lineage. Evals score or classify outcomes so the system can learn which patterns are useful, wasteful, unstable, or unsafe.\n\n## 2. Core Responsibilities\n- `run_traces` record handoffs, tool use, compact decisions, and outcome lineage across a swarm cycle.\n- `eval_loops` score plans, reviews, capsule jobs, and execution outputs against explicit quality criteria.\n- `replay_and_diff` lets operators compare runs and inspect what changed when a lane regressed or improved.\n- `review_gates` give reviewer and validation lanes structured evidence before Dream or Real promotion.\n- `failure_clustering` groups repeated breakdowns such as malformed JSON, timeout churn, or low-value duplicate jobs.\n- `assignment_lineage` keeps traces attached to assignment handles, lane identity, and branch targets instead of generic run blur.\n- `canary_tasks` provide a fixed set of representative tasks to test model or workflow changes before broad rollout.\n- `activity_projection` sends key trace and eval outcomes into control-plane and operator views instead of burying them in raw logs.\n\n## 3. N1Hub Role\nIn N1Hub this pattern belongs inside Background Agent Runtime, Vault Stewardship Swarm, Symphony observability, and the Dream-to-Real review path. A swarm that produces plans without traces cannot be debugged. A swarm that executes jobs without evals cannot become calmer or sharper over time. The same trace layer should also tell the control plane which lane worked, what branch it touched, and why the system currently trusts or distrusts the result.\n\n## 4. Architectural Value\nEvals and traces turn autonomy from a vibe into an inspectable engineering loop. They make cost, quality, failure, improvement, and governance visible at the same time.\n\n## 5. Operational Rule\nIf a lane changes behavior but the system cannot replay, compare, and score that change, the lane is still operating as folklore.\n\n## 6. Philosophical Alignment\nAgent Evals and Traces supports To Dig Deep by requiring deep work to leave behind evidence, lineage, and critique rather than only outputs."
+    "content": "# Agent Evals and Traces\n\n## 1. Definition and Essence\nAgent Evals and Traces defines the feedback layer that records what an agent did, why it did it, and whether the result was good enough. Traces preserve run lineage. Evals score or classify outcomes so the system can learn which patterns are useful, wasteful, unstable, or unsafe.\n\n## 2. Core Responsibilities\n- `run_traces` record handoffs, tool use, compact decisions, and outcome lineage across a swarm cycle.\n- `eval_loops` score plans, reviews, capsule jobs, and execution outputs against explicit quality criteria.\n- `replay_and_diff` lets operators compare runs and inspect what changed when a lane regressed or improved.\n- `review_gates` give reviewer and validation lanes structured evidence before Dream or Real promotion.\n- `failure_clustering` groups repeated breakdowns such as malformed JSON, timeout churn, or low-value duplicate jobs.\n\n## 3. Preflight and Forensic Artifacts\nThe A2C runtime now produces several machine-readable artifacts that should be treated as first-class trace surfaces:\n- activation bootstrap reports with readiness, blockers, and fingerprints,\n- workspace recon reports with SSOT ladders and governance command readiness,\n- deep investigation packets with risk scores, scenarios, and recommended actions,\n- forensic black-box validation packets with gate verdicts, seal forensics, and recovery recommendations.\n\nThese artifacts make the system inspectable before, during, and after mutation.\n\n## 4. Architectural Value\nEvals and traces turn autonomy from a vibe into an inspectable engineering loop. They make cost, quality, failure, environmental context, and recovery posture visible at the same time.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Evals and Traces defines the feedback and lineage layer for N1Hub agents. It combines run traces, structured eval loops, replayable artifacts, review gates, assignment lineage, failure clustering, and canary tasks so swarm work can be inspected and improved over time. This matters because autonomous work without traces cannot be debugged, and autonomous work without evals cannot become more trustworthy or more efficient. In N1Hub, this pattern is what turns repeated swarm cycles into an engineering loop instead of folklore about which agent felt smart.",
+    "summary": "Agent Evals and Traces defines the feedback and lineage layer for N1Hub agents, and the A2C runtime now contributes a richer set of preflight and forensic artifacts to that layer. Activation bootstrap reports, workspace recon packets, deep investigation decision records, and black-box validation packets all become replayable evidence about why a run was allowed to start, what risk posture it chose, and how it later passed, failed, or degraded. This matters because autonomous work cannot improve if only the final answer is visible. Trace quality therefore depends on preserving pre-mutation context and failure diagnostics alongside ordinary run lineage.",
     "keywords": [
       "agent-evals",
       "agent-traces",
-      "run-lineage",
+      "activation-report",
+      "workspace-recon",
+      "investigation-packet",
+      "forensic-black-box",
       "replay",
-      "review-gates",
-      "assignment-lineage",
       "failure-clustering",
-      "canary-tasks",
-      "vault-stewardship-swarm",
-      "symphony-observability",
-      "n1hub"
+      "run-lineage",
+      "quality-loop"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -95,10 +94,22 @@
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.agent-activation-readiness.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deep-intake-investigation.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e2e7b0c796032fc3a6c15c4e9500e4a94faf8e23cbcad45a1ca517b7f708c543a3a37dc371683492d9282108a7790927ae3447447afd6c52f7c852577571140c"
+  "integrity_sha3_512": "8b2e46316f277805bace2dd1e24b685c1c2f95dc0760af452a6e2705a2a5ad9bc23008145f62be479534122b1a421b72f6f86a387baaea470666657180d20f64"
 }

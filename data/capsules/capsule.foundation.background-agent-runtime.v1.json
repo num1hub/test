@@ -1,18 +1,18 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.background-agent-runtime.v1",
-    "version": "1.5.0",
+    "version": "1.7.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
-      "uri": "internal://docs/agents-operations.md",
-      "type": "repository_contract"
+      "uri": "internal://lib/agents/vaultSteward.ts",
+      "type": "repository_implementation"
     },
     "priority": "high",
     "progress": 44,
@@ -23,26 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, cool down, or wake early.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only runs, and Dream-safe execution runs.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `control_plane_governance` keeps fleet registry, policy rollout, searchable activity, and assignment visibility coherent as the swarm grows.\n- `async_assignment_and_session_continuity` allows work to begin from issues, comments, tasks, mobile clients, web clients, or daemons and continue with shared state instead of fragmenting into isolated runs.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `instruction_surfaces` ensures agents enter through durable repo-owned rules, docs indexes, and machine-readable resources before they begin deeper loops.\n- `context_engineering` assembles bounded context packs instead of dumping whole transcripts or the entire vault into one run.\n- `subagent_orchestration` allows scout, foreman, reviewer, and executor lanes to cooperate through explicit handoffs.\n- `harness_protocols` treats long-lived agent access as a host-controlled session protocol with events, approvals, and interrupts rather than as raw model plumbing.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, local skills, API providers, and subscription-backed lanes into one operating path.\n- `lane_separation` keeps the human symbiosis lane distinct from unattended automation and batch execution.\n- `vault_stewardship_support` gives capsule-facing agents a durable home for decomposition, markup, graph refactoring, validation, and safe update flow.\n- `traces_and_evals` records run lineage and quality signals so autonomy can be debugged and improved instead of merely observed.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. The runtime now also has a clearer capsule-vault mission: during the day it can support a co-pilot mode where Personal AI Assistant proposes vault work with human confirmation, while at night it can power bounded Vault Stewardship Swarm jobs that keep the repository improving without asking the user to micromanage every update. The stronger 2026 reading is that this runtime must combine six things at once: durable instruction surfaces, context-engineered task packs, host-controlled harness protocols, agent control plane governance, async session continuity across clients and assignment surfaces, and explicit mode-shaping so the same system can be polite by day and autonomous by night without confusing those modes.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, context discipline, and operator-visible control rather than to shallow prompt loops.\n"
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, cool down, or wake early.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only runs, and Dream-safe execution runs.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `instruction_surfaces` ensures agents enter through durable repo-owned rules and documentation before deeper loops begin.\n- `context_engineering` assembles bounded context packs instead of dumping entire transcripts or vault snapshots into one run.\n- `subagent_orchestration` allows scout, foreman, reviewer, and executor lanes to cooperate through explicit handoffs.\n- `operator_oversight` feeds status, logs, and controls into accountable surfaces.\n\n## 3. Pre-Mutation Runtime Gates\nThe runtime now has a clearer pre-mutation control loop:\n- **Activation Readiness** confirms the skill surface is complete enough to allow mutation.\n- **Workspace Recon** classifies the environment and its SSOT hierarchy.\n- **Deep Intake Investigation** converts incoming pressure into explicit risk scores and a chosen execution posture.\n\nThis means long-lived automation is gated by environmental understanding, not only by daemon liveness.\n\n## 4. Shift Entry and Ignition\nThe runtime also benefits from a morning ignition discipline. A good entry cycle can surface active voids, unresolved contradictions, and the operator's seed intent before starting deeper work. That gives day mode a cleaner handoff into queueing, planning, or ingestion and keeps autonomy aligned with current human direction.\n\n## 5. Daemon and Queue Discipline\nWatcher and scheduler behavior are part of the trust surface of autonomy. Background work should be partitioned by mode and time window, queues should expose visible state transitions such as quarantine, active, complete, and failed, and handoff between chat, queue, daemon, and review surfaces should preserve one coherent run identity.\n"
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the durable harness that makes always-on or nightly LLM agents viable inside N1Hub. It covers daemon lifecycle, dispatch rules, resumable state, capsule-job envelopes, conversation-to-delegation handoff, provider and tool access, honest idle and backoff behavior, degraded-lane recovery, and operator oversight. It now makes three stronger 2026 points explicit as well: the runtime needs a real control plane for fleet governance, it needs async assignment and cross-client continuity so work can move across web, terminal, mobile, and daemon surfaces without losing state, and it needs explicit mode-shaping so the same swarm can behave like a daytime co-pilot or a nighttime autonomous maintenance layer without mixing those responsibilities.",
+    "summary": "Background Agent Runtime is the durable harness that keeps long-lived agent work safe, legible, and resumable inside N1Hub, and its operating model now has sharper pre-mutation gates. A healthy runtime does not begin with blind daemon activity alone; it starts with activation readiness, workspace recon, and deep intake investigation so the system knows whether it is permitted to mutate, what repository contract it is inside, and what risk posture the current batch demands. Combined with ignition rituals, queue discipline, and day-night mode shaping, this makes autonomy easier to trust because the host can explain not only what is running, but why it was allowed to begin.",
     "keywords": [
       "background-agent-runtime",
-      "daemon",
-      "durable-runtime",
-      "hybrid-llm-access",
-      "night-batch-routing",
-      "agent-delegation",
-      "vault-stewardship-swarm",
-      "deepmine",
-      "agent-context-engineering",
-      "agent-subagents",
-      "agent-evals-and-traces",
-      "agent-instruction-surfaces",
-      "agent-harness-protocol",
-      "agent-control-plane",
-      "fallback-recovery"
+      "activation-readiness",
+      "workspace-recon",
+      "deep-investigation",
+      "daemon-lifecycle",
+      "queue-discipline",
+      "ignition-ritual",
+      "day-night-modes",
+      "operator-oversight",
+      "stateful-autonomy"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -215,10 +210,26 @@
       {
         "target_id": "capsule.project.symphony.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-activation-readiness.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deep-intake-investigation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ignition-ritual.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "9caa031ae8a6d786735ac893c8d2efbef6e874fc17934b4f7b97a2f9891e094bc4bb433c6e91660e1d91fe82004211d18d0aa64d8db19d8cdefa5722a9af2ff0"
+  "integrity_sha3_512": "f5e0a29b74f4e250344eac21e87097b9ac9f012301455e5110292b0d2a53c649e0c6e072fa42727e0e5885d6dd556dc326f6fb3f37405b7f948c7a944a0074a2"
 }

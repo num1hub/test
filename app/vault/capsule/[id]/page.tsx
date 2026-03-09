@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useMemo } from 'react';
+import { Suspense, use, useMemo } from 'react';
 import { useSearchParams } from 'next/navigation';
 import CapsuleDetailView from '@/components/CapsuleDetailView';
 import DiffViewer from '@/components/DiffViewer';
@@ -17,7 +17,7 @@ import { useCapsuleBranchState } from '@/hooks/useCapsuleBranchState';
 import { useCapsuleValidation } from '@/hooks/useCapsuleValidation';
 import { isBranchType, type BranchName } from '@/types/branch';
 
-export default function CapsuleDetailPage({
+function CapsuleDetailPageContent({
   params,
 }: {
   params: Promise<{ id: string }>;
@@ -126,5 +126,13 @@ export default function CapsuleDetailPage({
         )}
       </div>
     </div>
+  );
+}
+
+export default function CapsuleDetailPage(props: { params: Promise<{ id: string }> }) {
+  return (
+    <Suspense fallback={<CapsuleDetailLoadingState />}>
+      <CapsuleDetailPageContent {...props} />
+    </Suspense>
   );
 }

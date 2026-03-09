@@ -1,3 +1,4 @@
+// @anchor arch:symphony.runtime links=flow:symphony.prompt-render,arch:graph.runtime,doc:symphony.reference note="Public Symphony runtime barrel and orchestration surface for N1Hub."
 export { loadWorkflowRuntime, parseWorkflowConfig, validateDispatchConfig } from './config';
 export { SymphonyHttpServer } from './httpServer';
 export { StructuredLogger } from './logger';

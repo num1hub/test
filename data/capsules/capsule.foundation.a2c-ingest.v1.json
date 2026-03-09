@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-ingest.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-06T13:44:54.954Z",
+    "updated_at": "2026-03-09T01:10:38.622Z",
     "name": "A2C Stage: Ingest",
     "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline",
     "priority": "high",
@@ -15,22 +15,29 @@
     "estimatedHours": 72,
     "actualHours": 42,
     "dueDate": "2026-05-18",
-    "tier": 3
+    "tier": 3,
+    "source": {
+      "uri": "internal://scripts/a2c/investigate.ts",
+      "type": "repository_implementation"
+    }
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Ingest\n\n## 1. Definition and Essence\nThe Ingest stage is the entry point of Anything-to-Capsules. It captures raw artifacts from files, APIs, chats, and structured streams, normalizes envelope metadata, and preserves original context for downstream transformation. Ingest does not interpret meaning deeply; it ensures capture fidelity, provenance anchors, and deterministic handoff into the pipeline.\n\n## 2. Core Attributes\n- `input_uri` or source handle for acquired material\n- `source_type` classification (file, api, chat, stream)\n- `captured_at` timestamp and transport metadata\n- `raw_payload_ref` pointer to immutable raw snapshot\n- `ingest_trace_id` for cross-stage observability\n\n## 3. Lifecycle\nIngest receives an input trigger, captures payload and context, stamps provenance metadata, and emits a deterministic ingest artifact. Retries remain idempotent by trace ID, and failed captures are redirected to quarantine paths before normalization resumes.\n\n## 4. Integration\n- **A2C Core:** part_of relationship as first execution stage.\n- **Normalize Stage:** forwards raw artifact for canonical structure conversion.\n- **CapsuleOS:** depends on shared metadata and integrity semantics.\n- **To Dig Deep:** implements disciplined capture before synthesis.\n\n## 5. Philosophical Alignment\nIngest reflects To Dig Deep by refusing superficial intake. It captures the full substrate of evidence before any compression or interpretation, preserving sovereignty and traceability from the first byte.\n"
+    "content": "# A2C Stage: Ingest\n\n## 1. Definition and Essence\nIngest is the operational capture boundary of the repo-native A2C runtime. In N1Hub it is not only a watcher and queue entrypoint. It is the controlled handoff from arrival into investigated pipeline readiness, implemented through the TypeScript watcher in `scripts/a2c/watch.ts`, queue and runtime helpers under `lib/a2c`, and the deeper risk pass exposed through `scripts/a2c/investigate.ts`.\n\n## 2. Runtime Responsibilities\n- Probe incoming files for stability before mutation. The watcher waits for file size and mtime to stop changing instead of ingesting half-written artifacts.\n- Archive raw intake before transformation so the original evidence survives later synthesis or repair.\n- Stage work into deterministic queue artifacts with SHA-256 keyed filenames, sidecar metadata, staged timestamp, source hash, and attempt counters.\n- Append queue-ledger events such as `STAGED`, `STAGED_REUSED`, `ACTIVE`, `FAILED`, and `COMPLETE` so the entry path can be reconstructed after the fact.\n- Triage new material against the live vault for exact copy, increment, contradiction, resonance, or genuinely new state.\n\n## 3. Investigation After Capture\nIngest now includes a stricter preflight analysis layer:\n- classify source files as core, adjacent, or external to the current knowledge mission,\n- compute duplicate, conflict, PII, volume, and cluster-governance risk,\n- detect internal contradiction pairs inside the intake batch itself,\n- choose a conservative, integration, or synthesis posture before deeper mutation,\n- raise governance sensitivity when a strong docs/src/tests TypeScript triad exists in the workspace.\n\nThis makes ingest both evidence preservation and decision preparation.\n\n## 4. Repo-Native Flow\nThe live N1Hub flow is:\ndropzone -> raw archive -> queue artifact -> workspace recon -> deep intake investigation -> transmutation run.\n\nThat ordering prevents unstable files, dialect confusion, and shallow merge choices from leaking deeper into the pipeline.\n\n## 5. Integration\n- **Background Agent Runtime:** supplies watcher and scheduler discipline.\n- **Workspace Recon:** classifies the repository before batch mutation.\n- **Deep Intake Investigation:** converts intake pressure into explicit risk and scenario choice.\n- **A2C Normalize:** receives stable, traced, and investigated inputs rather than arbitrary files.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Ingest is the capture boundary of the pipeline. It receives raw files, chats, APIs, and streams, preserves source context, and produces the first deterministic artifact passed to later stages. The stage matters because every downstream transformation depends on faithful intake rather than reconstructed memory or lossy shortcuts. By anchoring provenance fields, trace identifiers, and immutable raw payload references at the moment of arrival, Ingest ensures the Anything-to-Capsules flow begins from evidence and not assumption.",
+    "summary": "A2C Stage: Ingest is the repo-native capture and staging boundary of the pipeline, but in the current runtime it also carries a real investigation layer. After watching files for stability, archiving raw evidence, and creating queue artifacts with sidecar metadata, ingest now classifies relevance, scores duplicate, conflict, PII, volume, and governance risk, and chooses a conservative, integration, or synthesis path before deeper mutation. This matters because many ingestion failures are not file-transfer failures at all; they are bad early decisions. Ingest therefore turns raw arrival into both auditable pipeline readiness and explicit preflight judgment.",
     "keywords": [
       "a2c",
       "ingest",
-      "capture",
-      "pipeline",
-      "provenance",
-      "normalization",
-      "capsuleos"
+      "queue-ledger",
+      "raw-archive",
+      "file-stability",
+      "workspace-recon",
+      "deep-investigation",
+      "risk-triage",
+      "source-routing",
+      "preflight"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -59,10 +66,45 @@
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.quarantine-buffer.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deep-intake-investigation.v1",
+        "relation_type": "references"
       }
     ],
-    "actions": [],
+    "actions": [
+      {
+        "name": "watch_dropzone_once",
+        "intent": "Run one repo-native watcher cycle and report which intake files are ready for staging.",
+        "command": "npm run a2c:watch:once",
+        "hitl_required": false
+      },
+      {
+        "name": "investigate_intake_batch",
+        "intent": "Classify an intake batch for risk, conflict, and recommended execution mode before mutation.",
+        "command": "npm run a2c:investigate -- --workspace-root . --kb-root . --input <path> --dry-run",
+        "hitl_required": false
+      },
+      {
+        "name": "profile_workspace_contract",
+        "intent": "Classify the workspace profile and SSOT ladder before staging a non-trivial intake batch.",
+        "command": "npm run a2c:recon",
+        "hitl_required": false
+      }
+    ],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c9dbb90aff475202fdb4edf447ce6effd80e5194b3404a96edfb5bc4b530af9c9846c9adb2ae4ce94f404175c56d482fdb135714343268b8dee0790a064088f8"
+  "integrity_sha3_512": "4386231c6bf40d965bc727208b48e279288d7b760d62f8d8482305887008026d4bb9fe15bf79bc8d867dd1f5596e53b1ad9fb3e68624a5218448fb696802f7b2"
 }

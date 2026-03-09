@@ -1,4 +1,5 @@
 #!/usr/bin/env tsx
+// @anchor script:validator.openapi links=arch:api.validate.route,interface:validator.public-api,doc:validator.reference note="Generates the OpenAPI document for N1Hub validator endpoints."
 import fs from 'fs/promises';
 import path from 'path';
 

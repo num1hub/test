@@ -1,0 +1,505 @@
+graph TD
+%% Auto-generated. Do not hand-edit.
+
+classDef arch fill:#1d4ed8,stroke:#334155,stroke-width:1px;
+classDef interface fill:#0f766e,stroke:#334155,stroke-width:1px;
+classDef invariant fill:#b45309,stroke:#334155,stroke-width:1px;
+classDef flow fill:#047857,stroke:#334155,stroke-width:1px;
+classDef script fill:#7c3aed,stroke:#334155,stroke-width:1px;
+classDef doc fill:#475569,stroke:#334155,stroke-width:1px;
+classDef test fill:#b91c1c,stroke:#334155,stroke-width:1px;
+classDef unknown fill:#cbd5e1,stroke:#334155,stroke-width:1px;
+
+A_arch_a2c_runtime["arch:a2c.runtime"]
+A_arch_api_validate_route["arch:api.validate.route"]
+A_arch_app_root_layout["arch:app.root-layout"]
+A_arch_governance_anchor_spec["arch:governance.anchor-spec"]
+A_arch_graph_runtime["arch:graph.runtime"]
+A_arch_repo_entrypoint["arch:repo.entrypoint"]
+A_arch_symphony_runtime["arch:symphony.runtime"]
+A_arch_validator_engine["arch:validator.engine"]
+A_doc_a2c_reference["doc:a2c.reference"]
+A_doc_branching_real_dream_diff["doc:branching.real-dream-diff"]
+A_doc_governance_anchors_spec["doc:governance.anchors-spec"]
+A_doc_governance_naming_grammar["doc:governance.naming-grammar"]
+A_doc_governance_patterns["doc:governance.patterns"]
+A_doc_governance_risk_register["doc:governance.risk-register"]
+A_doc_governance_terminology["doc:governance.terminology"]
+A_doc_n1hub_agents["doc:n1hub.agents"]
+A_doc_n1hub_codex["doc:n1hub.codex"]
+A_doc_n1hub_low_blast_radius_architecture["doc:n1hub.low-blast-radius-architecture"]
+A_doc_n1hub_memory["doc:n1hub.memory"]
+A_doc_n1hub_readme["doc:n1hub.readme"]
+A_doc_n1hub_soul["doc:n1hub.soul"]
+A_doc_n1hub_tools["doc:n1hub.tools"]
+A_doc_openclaw_fork_notes["doc:openclaw.fork-notes"]
+A_doc_projects_reference["doc:projects.reference"]
+A_doc_symphony_reference["doc:symphony.reference"]
+A_doc_validator_reference["doc:validator.reference"]
+A_doc_workflow_issue_worker["doc:workflow.issue-worker"]
+A_doc_workflow_ninfinity_night_shift["doc:workflow.ninfinity-night-shift"]
+A_flow_a2c_workspace_recon["flow:a2c.workspace-recon"]
+A_flow_symphony_prompt_render["flow:symphony.prompt-render"]
+A_interface_anchors_core_api["interface:anchors.core-api"]
+A_interface_anchors_intelligence_api["interface:anchors.intelligence-api"]
+A_interface_anchors_metrics_api["interface:anchors.metrics-api"]
+A_interface_anchors_package_api["interface:anchors.package-api"]
+A_interface_anchors_policy_config["interface:anchors.policy-config"]
+A_interface_anchors_scorecard_api["interface:anchors.scorecard-api"]
+A_interface_anchors_scorecard_assertion["interface:anchors.scorecard-assertion"]
+A_interface_anchors_snapshot_history["interface:anchors.snapshot-history"]
+A_interface_anchors_terminology_lint["interface:anchors.terminology-lint"]
+A_interface_anchors_usage_lint["interface:anchors.usage-lint"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_invariant_anchors_root_docs_policy["invariant:anchors.root-docs-policy"]
+A_script_anchors_assert_scorecard["script:anchors.assert-scorecard"]
+A_script_anchors_coverage["script:anchors.coverage"]
+A_script_anchors_intelligence["script:anchors.intelligence"]
+A_script_anchors_kpis["script:anchors.kpis"]
+A_script_anchors_lint_usage["script:anchors.lint-usage"]
+A_script_anchors_scorecard["script:anchors.scorecard"]
+A_script_anchors_snapshot["script:anchors.snapshot"]
+A_script_anchors_terminology_lint["script:anchors.terminology-lint"]
+A_script_extract_anchors["script:extract.anchors"]
+A_script_file_guardrails_audit["script:file.guardrails.audit"]
+A_script_test_anchors_config["script:test.anchors-config"]
+A_script_validate_anchors["script:validate.anchors"]
+A_script_validator_cli["script:validator.cli"]
+A_script_validator_openapi["script:validator.openapi"]
+A_script_verify_root_docs["script:verify.root-docs"]
+A_test_anchors_assert_scorecard_contract["test:anchors.assert-scorecard-contract"]
+A_test_anchors_core_contract["test:anchors.core-contract"]
+A_test_anchors_intelligence_contract["test:anchors.intelligence-contract"]
+A_test_anchors_metrics_contract["test:anchors.metrics-contract"]
+A_test_anchors_root_docs_contract["test:anchors.root-docs-contract"]
+A_test_anchors_scorecard_contract["test:anchors.scorecard-contract"]
+A_test_anchors_snapshot_contract["test:anchors.snapshot-contract"]
+A_test_anchors_terminology_lint_contract["test:anchors.terminology-lint-contract"]
+A_test_anchors_usage_lint_contract["test:anchors.usage-lint-contract"]
+
+class A_arch_a2c_runtime arch;
+class A_arch_api_validate_route arch;
+class A_arch_app_root_layout arch;
+class A_arch_governance_anchor_spec arch;
+class A_arch_graph_runtime arch;
+class A_arch_repo_entrypoint arch;
+class A_arch_symphony_runtime arch;
+class A_arch_validator_engine arch;
+class A_doc_a2c_reference doc;
+class A_doc_branching_real_dream_diff doc;
+class A_doc_governance_anchors_spec doc;
+class A_doc_governance_naming_grammar doc;
+class A_doc_governance_patterns doc;
+class A_doc_governance_risk_register doc;
+class A_doc_governance_terminology doc;
+class A_doc_n1hub_agents doc;
+class A_doc_n1hub_codex doc;
+class A_doc_n1hub_low_blast_radius_architecture doc;
+class A_doc_n1hub_memory doc;
+class A_doc_n1hub_readme doc;
+class A_doc_n1hub_soul doc;
+class A_doc_n1hub_tools doc;
+class A_doc_openclaw_fork_notes doc;
+class A_doc_projects_reference doc;
+class A_doc_symphony_reference doc;
+class A_doc_validator_reference doc;
+class A_doc_workflow_issue_worker doc;
+class A_doc_workflow_ninfinity_night_shift doc;
+class A_flow_a2c_workspace_recon flow;
+class A_flow_symphony_prompt_render flow;
+class A_interface_anchors_core_api interface;
+class A_interface_anchors_intelligence_api interface;
+class A_interface_anchors_metrics_api interface;
+class A_interface_anchors_package_api interface;
+class A_interface_anchors_policy_config interface;
+class A_interface_anchors_scorecard_api interface;
+class A_interface_anchors_scorecard_assertion interface;
+class A_interface_anchors_snapshot_history interface;
+class A_interface_anchors_terminology_lint interface;
+class A_interface_anchors_usage_lint interface;
+class A_interface_app_landing_entry interface;
+class A_interface_validator_public_api interface;
+class A_invariant_anchors_root_docs_policy invariant;
+class A_script_anchors_assert_scorecard script;
+class A_script_anchors_coverage script;
+class A_script_anchors_intelligence script;
+class A_script_anchors_kpis script;
+class A_script_anchors_lint_usage script;
+class A_script_anchors_scorecard script;
+class A_script_anchors_snapshot script;
+class A_script_anchors_terminology_lint script;
+class A_script_extract_anchors script;
+class A_script_file_guardrails_audit script;
+class A_script_test_anchors_config script;
+class A_script_validate_anchors script;
+class A_script_validator_cli script;
+class A_script_validator_openapi script;
+class A_script_verify_root_docs script;
+class A_test_anchors_assert_scorecard_contract test;
+class A_test_anchors_core_contract test;
+class A_test_anchors_intelligence_contract test;
+class A_test_anchors_metrics_contract test;
+class A_test_anchors_root_docs_contract test;
+class A_test_anchors_scorecard_contract test;
+class A_test_anchors_snapshot_contract test;
+class A_test_anchors_terminology_lint_contract test;
+class A_test_anchors_usage_lint_contract test;
+
+A_arch_a2c_runtime --> A_arch_symphony_runtime
+A_arch_a2c_runtime --> A_doc_a2c_reference
+A_arch_a2c_runtime --> A_flow_a2c_workspace_recon
+A_arch_api_validate_route --> A_arch_validator_engine
+A_arch_api_validate_route --> A_doc_validator_reference
+A_arch_api_validate_route --> A_interface_validator_public_api
+A_arch_app_root_layout --> A_arch_api_validate_route
+A_arch_app_root_layout --> A_doc_n1hub_readme
+A_arch_app_root_layout --> A_interface_app_landing_entry
+A_arch_governance_anchor_spec --> A_arch_app_root_layout
+A_arch_governance_anchor_spec --> A_doc_governance_anchors_spec
+A_arch_governance_anchor_spec --> A_script_validate_anchors
+A_arch_graph_runtime --> A_doc_branching_real_dream_diff
+A_arch_graph_runtime --> A_doc_n1hub_readme
+A_arch_graph_runtime --> A_doc_projects_reference
+A_arch_repo_entrypoint --> A_arch_governance_anchor_spec
+A_arch_repo_entrypoint --> A_doc_a2c_reference
+A_arch_repo_entrypoint --> A_doc_branching_real_dream_diff
+A_arch_repo_entrypoint --> A_doc_n1hub_readme
+A_arch_repo_entrypoint --> A_doc_projects_reference
+A_arch_repo_entrypoint --> A_doc_symphony_reference
+A_arch_repo_entrypoint --> A_doc_validator_reference
+A_arch_symphony_runtime --> A_arch_graph_runtime
+A_arch_symphony_runtime --> A_doc_symphony_reference
+A_arch_symphony_runtime --> A_flow_symphony_prompt_render
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_script_validator_cli
+A_doc_a2c_reference --> A_arch_a2c_runtime
+A_doc_a2c_reference --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_a2c_reference --> A_doc_n1hub_readme
+A_doc_a2c_reference --> A_doc_n1hub_tools
+A_doc_a2c_reference --> A_flow_a2c_workspace_recon
+A_doc_branching_real_dream_diff --> A_arch_graph_runtime
+A_doc_branching_real_dream_diff --> A_doc_n1hub_readme
+A_doc_branching_real_dream_diff --> A_doc_projects_reference
+A_doc_governance_anchors_spec --> A_doc_governance_naming_grammar
+A_doc_governance_anchors_spec --> A_doc_governance_patterns
+A_doc_governance_anchors_spec --> A_doc_governance_risk_register
+A_doc_governance_anchors_spec --> A_doc_governance_terminology
+A_doc_governance_anchors_spec --> A_doc_n1hub_agents
+A_doc_governance_anchors_spec --> A_doc_n1hub_codex
+A_doc_governance_anchors_spec --> A_doc_n1hub_memory
+A_doc_governance_anchors_spec --> A_doc_n1hub_readme
+A_doc_governance_anchors_spec --> A_doc_n1hub_soul
+A_doc_governance_anchors_spec --> A_doc_n1hub_tools
+A_doc_governance_anchors_spec --> A_doc_workflow_issue_worker
+A_doc_governance_anchors_spec --> A_doc_workflow_ninfinity_night_shift
+A_doc_governance_anchors_spec --> A_script_anchors_lint_usage
+A_doc_governance_anchors_spec --> A_script_anchors_scorecard
+A_doc_governance_anchors_spec --> A_script_anchors_snapshot
+A_doc_governance_anchors_spec --> A_script_anchors_terminology_lint
+A_doc_governance_naming_grammar --> A_doc_governance_anchors_spec
+A_doc_governance_naming_grammar --> A_doc_governance_patterns
+A_doc_governance_naming_grammar --> A_doc_governance_risk_register
+A_doc_governance_naming_grammar --> A_doc_governance_terminology
+A_doc_governance_patterns --> A_doc_governance_anchors_spec
+A_doc_governance_patterns --> A_doc_governance_naming_grammar
+A_doc_governance_patterns --> A_doc_governance_risk_register
+A_doc_governance_patterns --> A_doc_n1hub_readme
+A_doc_governance_patterns --> A_script_extract_anchors
+A_doc_governance_patterns --> A_script_validate_anchors
+A_doc_governance_risk_register --> A_doc_governance_anchors_spec
+A_doc_governance_risk_register --> A_doc_governance_naming_grammar
+A_doc_governance_risk_register --> A_doc_governance_patterns
+A_doc_governance_risk_register --> A_script_anchors_scorecard
+A_doc_governance_terminology --> A_doc_governance_anchors_spec
+A_doc_governance_terminology --> A_doc_governance_naming_grammar
+A_doc_governance_terminology --> A_doc_n1hub_codex
+A_doc_governance_terminology --> A_doc_n1hub_readme
+A_doc_governance_terminology --> A_script_anchors_terminology_lint
+A_doc_n1hub_agents --> A_arch_repo_entrypoint
+A_doc_n1hub_agents --> A_doc_governance_anchors_spec
+A_doc_n1hub_agents --> A_doc_governance_naming_grammar
+A_doc_n1hub_agents --> A_doc_governance_patterns
+A_doc_n1hub_agents --> A_doc_governance_risk_register
+A_doc_n1hub_agents --> A_doc_governance_terminology
+A_doc_n1hub_agents --> A_doc_n1hub_codex
+A_doc_n1hub_agents --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_n1hub_agents --> A_doc_n1hub_memory
+A_doc_n1hub_agents --> A_doc_n1hub_readme
+A_doc_n1hub_agents --> A_doc_n1hub_soul
+A_doc_n1hub_agents --> A_doc_n1hub_tools
+A_doc_n1hub_agents --> A_doc_workflow_issue_worker
+A_doc_n1hub_agents --> A_doc_workflow_ninfinity_night_shift
+A_doc_n1hub_agents --> A_script_file_guardrails_audit
+A_doc_n1hub_agents --> A_script_validate_anchors
+A_doc_n1hub_codex --> A_doc_governance_anchors_spec
+A_doc_n1hub_codex --> A_doc_governance_naming_grammar
+A_doc_n1hub_codex --> A_doc_governance_patterns
+A_doc_n1hub_codex --> A_doc_governance_risk_register
+A_doc_n1hub_codex --> A_doc_governance_terminology
+A_doc_n1hub_codex --> A_doc_n1hub_agents
+A_doc_n1hub_codex --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_n1hub_codex --> A_doc_n1hub_memory
+A_doc_n1hub_codex --> A_doc_n1hub_readme
+A_doc_n1hub_codex --> A_doc_n1hub_soul
+A_doc_n1hub_codex --> A_doc_n1hub_tools
+A_doc_n1hub_codex --> A_doc_workflow_issue_worker
+A_doc_n1hub_codex --> A_doc_workflow_ninfinity_night_shift
+A_doc_n1hub_codex --> A_interface_validator_public_api
+A_doc_n1hub_codex --> A_script_file_guardrails_audit
+A_doc_n1hub_codex --> A_script_verify_root_docs
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_a2c_reference
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_n1hub_agents
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_n1hub_codex
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_n1hub_readme
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_symphony_reference
+A_doc_n1hub_low_blast_radius_architecture --> A_doc_validator_reference
+A_doc_n1hub_low_blast_radius_architecture --> A_flow_a2c_workspace_recon
+A_doc_n1hub_low_blast_radius_architecture --> A_script_file_guardrails_audit
+A_doc_n1hub_memory --> A_doc_governance_anchors_spec
+A_doc_n1hub_memory --> A_doc_n1hub_agents
+A_doc_n1hub_memory --> A_doc_n1hub_codex
+A_doc_n1hub_memory --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_n1hub_memory --> A_doc_n1hub_readme
+A_doc_n1hub_memory --> A_doc_n1hub_soul
+A_doc_n1hub_memory --> A_doc_n1hub_tools
+A_doc_n1hub_memory --> A_doc_openclaw_fork_notes
+A_doc_n1hub_readme --> A_doc_governance_anchors_spec
+A_doc_n1hub_readme --> A_doc_governance_naming_grammar
+A_doc_n1hub_readme --> A_doc_governance_patterns
+A_doc_n1hub_readme --> A_doc_governance_risk_register
+A_doc_n1hub_readme --> A_doc_governance_terminology
+A_doc_n1hub_readme --> A_doc_n1hub_agents
+A_doc_n1hub_readme --> A_doc_n1hub_codex
+A_doc_n1hub_readme --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_n1hub_readme --> A_doc_n1hub_memory
+A_doc_n1hub_readme --> A_doc_n1hub_soul
+A_doc_n1hub_readme --> A_doc_n1hub_tools
+A_doc_n1hub_readme --> A_doc_openclaw_fork_notes
+A_doc_n1hub_readme --> A_doc_workflow_issue_worker
+A_doc_n1hub_readme --> A_doc_workflow_ninfinity_night_shift
+A_doc_n1hub_readme --> A_script_extract_anchors
+A_doc_n1hub_readme --> A_script_file_guardrails_audit
+A_doc_n1hub_readme --> A_script_validate_anchors
+A_doc_n1hub_readme --> A_script_verify_root_docs
+A_doc_n1hub_soul --> A_doc_governance_anchors_spec
+A_doc_n1hub_soul --> A_doc_n1hub_agents
+A_doc_n1hub_soul --> A_doc_n1hub_codex
+A_doc_n1hub_soul --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_n1hub_soul --> A_doc_n1hub_memory
+A_doc_n1hub_soul --> A_doc_n1hub_readme
+A_doc_n1hub_soul --> A_doc_n1hub_tools
+A_doc_n1hub_soul --> A_doc_symphony_reference
+A_doc_n1hub_soul --> A_doc_workflow_issue_worker
+A_doc_n1hub_soul --> A_doc_workflow_ninfinity_night_shift
+A_doc_n1hub_tools --> A_doc_a2c_reference
+A_doc_n1hub_tools --> A_doc_governance_anchors_spec
+A_doc_n1hub_tools --> A_doc_n1hub_agents
+A_doc_n1hub_tools --> A_doc_n1hub_codex
+A_doc_n1hub_tools --> A_doc_n1hub_memory
+A_doc_n1hub_tools --> A_doc_n1hub_readme
+A_doc_n1hub_tools --> A_doc_n1hub_soul
+A_doc_n1hub_tools --> A_doc_symphony_reference
+A_doc_n1hub_tools --> A_doc_validator_reference
+A_doc_n1hub_tools --> A_script_validator_cli
+A_doc_openclaw_fork_notes --> A_doc_n1hub_agents
+A_doc_openclaw_fork_notes --> A_doc_n1hub_codex
+A_doc_openclaw_fork_notes --> A_doc_n1hub_memory
+A_doc_openclaw_fork_notes --> A_doc_n1hub_readme
+A_doc_openclaw_fork_notes --> A_doc_n1hub_soul
+A_doc_openclaw_fork_notes --> A_doc_n1hub_tools
+A_doc_projects_reference --> A_arch_graph_runtime
+A_doc_projects_reference --> A_doc_branching_real_dream_diff
+A_doc_projects_reference --> A_doc_n1hub_readme
+A_doc_symphony_reference --> A_arch_symphony_runtime
+A_doc_symphony_reference --> A_doc_n1hub_readme
+A_doc_symphony_reference --> A_doc_workflow_issue_worker
+A_doc_symphony_reference --> A_doc_workflow_ninfinity_night_shift
+A_doc_symphony_reference --> A_flow_symphony_prompt_render
+A_doc_validator_reference --> A_arch_api_validate_route
+A_doc_validator_reference --> A_arch_validator_engine
+A_doc_validator_reference --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_validator_reference --> A_doc_n1hub_readme
+A_doc_validator_reference --> A_interface_validator_public_api
+A_doc_validator_reference --> A_script_validator_cli
+A_doc_validator_reference --> A_script_validator_openapi
+A_doc_workflow_issue_worker --> A_arch_symphony_runtime
+A_doc_workflow_issue_worker --> A_doc_branching_real_dream_diff
+A_doc_workflow_issue_worker --> A_doc_governance_anchors_spec
+A_doc_workflow_issue_worker --> A_doc_n1hub_agents
+A_doc_workflow_issue_worker --> A_doc_n1hub_codex
+A_doc_workflow_issue_worker --> A_doc_n1hub_readme
+A_doc_workflow_issue_worker --> A_doc_n1hub_soul
+A_doc_workflow_issue_worker --> A_doc_n1hub_tools
+A_doc_workflow_issue_worker --> A_doc_projects_reference
+A_doc_workflow_issue_worker --> A_doc_validator_reference
+A_doc_workflow_issue_worker --> A_flow_symphony_prompt_render
+A_doc_workflow_ninfinity_night_shift --> A_arch_graph_runtime
+A_doc_workflow_ninfinity_night_shift --> A_arch_symphony_runtime
+A_doc_workflow_ninfinity_night_shift --> A_doc_governance_anchors_spec
+A_doc_workflow_ninfinity_night_shift --> A_doc_n1hub_agents
+A_doc_workflow_ninfinity_night_shift --> A_doc_n1hub_codex
+A_doc_workflow_ninfinity_night_shift --> A_doc_n1hub_readme
+A_doc_workflow_ninfinity_night_shift --> A_doc_n1hub_soul
+A_doc_workflow_ninfinity_night_shift --> A_doc_n1hub_tools
+A_doc_workflow_ninfinity_night_shift --> A_doc_validator_reference
+A_doc_workflow_ninfinity_night_shift --> A_flow_symphony_prompt_render
+A_flow_a2c_workspace_recon --> A_arch_a2c_runtime
+A_flow_a2c_workspace_recon --> A_doc_a2c_reference
+A_flow_a2c_workspace_recon --> A_doc_governance_patterns
+A_flow_a2c_workspace_recon --> A_doc_n1hub_low_blast_radius_architecture
+A_flow_symphony_prompt_render --> A_arch_symphony_runtime
+A_flow_symphony_prompt_render --> A_doc_workflow_issue_worker
+A_flow_symphony_prompt_render --> A_doc_workflow_ninfinity_night_shift
+A_interface_anchors_core_api --> A_interface_anchors_intelligence_api
+A_interface_anchors_core_api --> A_interface_anchors_metrics_api
+A_interface_anchors_core_api --> A_interface_anchors_package_api
+A_interface_anchors_core_api --> A_invariant_anchors_root_docs_policy
+A_interface_anchors_core_api --> A_script_extract_anchors
+A_interface_anchors_core_api --> A_test_anchors_core_contract
+A_interface_anchors_intelligence_api --> A_interface_anchors_core_api
+A_interface_anchors_intelligence_api --> A_interface_anchors_package_api
+A_interface_anchors_intelligence_api --> A_interface_anchors_scorecard_api
+A_interface_anchors_intelligence_api --> A_script_anchors_intelligence
+A_interface_anchors_intelligence_api --> A_test_anchors_intelligence_contract
+A_interface_anchors_metrics_api --> A_interface_anchors_core_api
+A_interface_anchors_metrics_api --> A_interface_anchors_intelligence_api
+A_interface_anchors_metrics_api --> A_interface_anchors_package_api
+A_interface_anchors_metrics_api --> A_interface_anchors_scorecard_api
+A_interface_anchors_metrics_api --> A_test_anchors_metrics_contract
+A_interface_anchors_package_api --> A_interface_anchors_core_api
+A_interface_anchors_package_api --> A_interface_anchors_intelligence_api
+A_interface_anchors_package_api --> A_interface_anchors_metrics_api
+A_interface_anchors_package_api --> A_interface_anchors_policy_config
+A_interface_anchors_package_api --> A_interface_anchors_scorecard_api
+A_interface_anchors_package_api --> A_interface_anchors_scorecard_assertion
+A_interface_anchors_package_api --> A_interface_anchors_snapshot_history
+A_interface_anchors_package_api --> A_interface_anchors_terminology_lint
+A_interface_anchors_package_api --> A_interface_anchors_usage_lint
+A_interface_anchors_package_api --> A_invariant_anchors_root_docs_policy
+A_interface_anchors_policy_config --> A_doc_governance_anchors_spec
+A_interface_anchors_policy_config --> A_doc_governance_terminology
+A_interface_anchors_policy_config --> A_interface_anchors_package_api
+A_interface_anchors_policy_config --> A_invariant_anchors_root_docs_policy
+A_interface_anchors_policy_config --> A_test_anchors_root_docs_contract
+A_interface_anchors_scorecard_api --> A_doc_governance_anchors_spec
+A_interface_anchors_scorecard_api --> A_interface_anchors_metrics_api
+A_interface_anchors_scorecard_api --> A_interface_anchors_package_api
+A_interface_anchors_scorecard_api --> A_script_anchors_assert_scorecard
+A_interface_anchors_scorecard_api --> A_script_anchors_scorecard
+A_interface_anchors_scorecard_api --> A_test_anchors_scorecard_contract
+A_interface_anchors_scorecard_assertion --> A_interface_anchors_package_api
+A_interface_anchors_scorecard_assertion --> A_interface_anchors_scorecard_api
+A_interface_anchors_scorecard_assertion --> A_script_anchors_assert_scorecard
+A_interface_anchors_scorecard_assertion --> A_test_anchors_assert_scorecard_contract
+A_interface_anchors_snapshot_history --> A_interface_anchors_package_api
+A_interface_anchors_snapshot_history --> A_interface_anchors_scorecard_api
+A_interface_anchors_snapshot_history --> A_script_anchors_snapshot
+A_interface_anchors_snapshot_history --> A_test_anchors_snapshot_contract
+A_interface_anchors_terminology_lint --> A_doc_governance_terminology
+A_interface_anchors_terminology_lint --> A_interface_anchors_package_api
+A_interface_anchors_terminology_lint --> A_script_anchors_terminology_lint
+A_interface_anchors_terminology_lint --> A_test_anchors_terminology_lint_contract
+A_interface_anchors_usage_lint --> A_interface_anchors_package_api
+A_interface_anchors_usage_lint --> A_script_anchors_lint_usage
+A_interface_anchors_usage_lint --> A_script_validate_anchors
+A_interface_anchors_usage_lint --> A_test_anchors_usage_lint_contract
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_doc_n1hub_readme
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_openapi
+A_invariant_anchors_root_docs_policy --> A_doc_governance_anchors_spec
+A_invariant_anchors_root_docs_policy --> A_interface_anchors_core_api
+A_invariant_anchors_root_docs_policy --> A_interface_anchors_package_api
+A_invariant_anchors_root_docs_policy --> A_script_verify_root_docs
+A_invariant_anchors_root_docs_policy --> A_test_anchors_root_docs_contract
+A_script_anchors_assert_scorecard --> A_doc_n1hub_codex
+A_script_anchors_assert_scorecard --> A_interface_anchors_scorecard_api
+A_script_anchors_assert_scorecard --> A_interface_anchors_scorecard_assertion
+A_script_anchors_assert_scorecard --> A_script_anchors_scorecard
+A_script_anchors_coverage --> A_interface_anchors_metrics_api
+A_script_anchors_coverage --> A_script_anchors_kpis
+A_script_anchors_coverage --> A_script_verify_root_docs
+A_script_anchors_intelligence --> A_interface_anchors_intelligence_api
+A_script_anchors_intelligence --> A_script_anchors_kpis
+A_script_anchors_intelligence --> A_script_anchors_scorecard
+A_script_anchors_kpis --> A_interface_anchors_metrics_api
+A_script_anchors_kpis --> A_script_anchors_coverage
+A_script_anchors_kpis --> A_script_anchors_intelligence
+A_script_anchors_lint_usage --> A_doc_governance_anchors_spec
+A_script_anchors_lint_usage --> A_interface_anchors_usage_lint
+A_script_anchors_lint_usage --> A_test_anchors_usage_lint_contract
+A_script_anchors_scorecard --> A_doc_governance_risk_register
+A_script_anchors_scorecard --> A_interface_anchors_scorecard_api
+A_script_anchors_scorecard --> A_script_anchors_assert_scorecard
+A_script_anchors_scorecard --> A_script_anchors_intelligence
+A_script_anchors_scorecard --> A_script_anchors_snapshot
+A_script_anchors_scorecard --> A_script_extract_anchors
+A_script_anchors_snapshot --> A_doc_governance_anchors_spec
+A_script_anchors_snapshot --> A_interface_anchors_snapshot_history
+A_script_anchors_snapshot --> A_script_anchors_scorecard
+A_script_anchors_snapshot --> A_test_anchors_snapshot_contract
+A_script_anchors_terminology_lint --> A_doc_governance_terminology
+A_script_anchors_terminology_lint --> A_interface_anchors_terminology_lint
+A_script_anchors_terminology_lint --> A_test_anchors_terminology_lint_contract
+A_script_extract_anchors --> A_arch_repo_entrypoint
+A_script_extract_anchors --> A_doc_governance_anchors_spec
+A_script_extract_anchors --> A_script_anchors_scorecard
+A_script_extract_anchors --> A_script_validate_anchors
+A_script_file_guardrails_audit --> A_doc_n1hub_agents
+A_script_file_guardrails_audit --> A_doc_n1hub_codex
+A_script_file_guardrails_audit --> A_doc_n1hub_low_blast_radius_architecture
+A_script_test_anchors_config --> A_script_validate_anchors
+A_script_test_anchors_config --> A_test_anchors_core_contract
+A_script_test_anchors_config --> A_test_anchors_root_docs_contract
+A_script_validate_anchors --> A_doc_governance_anchors_spec
+A_script_validate_anchors --> A_interface_anchors_policy_config
+A_script_validate_anchors --> A_script_extract_anchors
+A_script_validate_anchors --> A_script_test_anchors_config
+A_script_validate_anchors --> A_script_verify_root_docs
+A_script_validator_cli --> A_arch_validator_engine
+A_script_validator_cli --> A_doc_n1hub_tools
+A_script_validator_cli --> A_doc_validator_reference
+A_script_validator_cli --> A_interface_validator_public_api
+A_script_validator_openapi --> A_arch_api_validate_route
+A_script_validator_openapi --> A_doc_validator_reference
+A_script_validator_openapi --> A_interface_validator_public_api
+A_script_verify_root_docs --> A_doc_n1hub_agents
+A_script_verify_root_docs --> A_doc_n1hub_codex
+A_script_verify_root_docs --> A_doc_n1hub_readme
+A_script_verify_root_docs --> A_invariant_anchors_root_docs_policy
+A_script_verify_root_docs --> A_script_anchors_coverage
+A_test_anchors_assert_scorecard_contract --> A_interface_anchors_scorecard_assertion
+A_test_anchors_assert_scorecard_contract --> A_script_anchors_assert_scorecard
+A_test_anchors_assert_scorecard_contract --> A_test_anchors_scorecard_contract
+A_test_anchors_core_contract --> A_interface_anchors_core_api
+A_test_anchors_core_contract --> A_interface_anchors_package_api
+A_test_anchors_core_contract --> A_script_validate_anchors
+A_test_anchors_core_contract --> A_test_anchors_metrics_contract
+A_test_anchors_core_contract --> A_test_anchors_root_docs_contract
+A_test_anchors_intelligence_contract --> A_interface_anchors_intelligence_api
+A_test_anchors_intelligence_contract --> A_test_anchors_metrics_contract
+A_test_anchors_intelligence_contract --> A_test_anchors_scorecard_contract
+A_test_anchors_metrics_contract --> A_interface_anchors_metrics_api
+A_test_anchors_metrics_contract --> A_test_anchors_core_contract
+A_test_anchors_metrics_contract --> A_test_anchors_intelligence_contract
+A_test_anchors_root_docs_contract --> A_invariant_anchors_root_docs_policy
+A_test_anchors_root_docs_contract --> A_script_verify_root_docs
+A_test_anchors_root_docs_contract --> A_test_anchors_core_contract
+A_test_anchors_root_docs_contract --> A_test_anchors_scorecard_contract
+A_test_anchors_scorecard_contract --> A_interface_anchors_scorecard_api
+A_test_anchors_scorecard_contract --> A_test_anchors_intelligence_contract
+A_test_anchors_scorecard_contract --> A_test_anchors_root_docs_contract
+A_test_anchors_snapshot_contract --> A_interface_anchors_scorecard_assertion
+A_test_anchors_snapshot_contract --> A_interface_anchors_snapshot_history
+A_test_anchors_snapshot_contract --> A_script_anchors_snapshot
+A_test_anchors_terminology_lint_contract --> A_doc_governance_terminology
+A_test_anchors_terminology_lint_contract --> A_interface_anchors_terminology_lint
+A_test_anchors_terminology_lint_contract --> A_script_anchors_terminology_lint
+A_test_anchors_usage_lint_contract --> A_interface_anchors_usage_lint
+A_test_anchors_usage_lint_contract --> A_script_anchors_lint_usage
+A_test_anchors_usage_lint_contract --> A_test_anchors_assert_scorecard_contract
