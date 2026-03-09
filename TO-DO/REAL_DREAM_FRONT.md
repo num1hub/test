@@ -34,7 +34,8 @@ Interpretation:
 
 - the only truly Dream-only lane in the live vault is the Vault Steward operational lane
 - this is a strong signal that Vault Steward is currently the practical steward of Dream activity
-- these operational capsules need explicit lifecycle law instead of remaining implicit branch residue
+- these operational capsules are intentional Dream-only operational mirrors written by `writeDreamOperationalCapsules()` in `lib/agents/vaultSteward.ts`
+- they should be overwritten in place as runtime state changes and should not be promoted to Real
 
 ## Real-Only Law Capsules
 
@@ -53,29 +54,49 @@ These are the current real-only IDs with no Dream overlay:
 Interpretation:
 
 - Real now contains newer engineering and governance law than Dream
-- Dream is therefore partially stale at the constitutional layer
-- future agents should not assume Dream is the more advanced branch in every domain
+- these nine capsules are `real-first canonical` mutation and boundary law in the current branch model
+- Dream is therefore partially stale at the constitutional layer and should not receive mirrors for this set without a concrete future governance divergence
 
 ## Highest-Drift Paired Hubs
 
-These paired overlays showed the strongest raw divergence during the current census:
+Measured on `2026-03-09` by running hub-scoped `computeDiff('real', 'dream', { scopeType: 'capsule', capsuleIds: [id] })`
+across all paired capsules whose real-side metadata advertises `subtype: "hub"`.
 
-- `capsule.foundation.key-agents.v1`
+Scoring model used for ranking:
+
+- `score = modifiedPaths * 5 + linkChanges * 8 + semanticEvents + actionPlanTasks`
+- `modifiedPaths` comes from diff field changes
+- `linkChanges` is `addedLinks + removedLinks + modifiedLinks`
+- `semanticEvents` and `actionPlanTasks` come from the live diff payload
+
+Current top measured hub drift set:
+
+- `capsule.foundation.background-agent-runtime.v1`
+  score `239` · `12` modified paths · `16` link changes · `23` semantic events · `28` action-plan tasks
+- `capsule.foundation.personal-ai-assistant.v1`
+  score `197` · `10` modified paths · `13` link changes · `20` semantic events · `23` action-plan tasks
+- `capsule.foundation.workspace.v1`
+  score `173` · `8` modified paths · `12` link changes · `17` semantic events · `20` action-plan tasks
 - `capsule.foundation.vault-stewardship-swarm.v1`
-- `capsule.foundation.capsule-librarian-agent.v1`
-- `capsule.foundation.capsuleos.v1`
+  score `156` · `13` modified paths · `7` link changes · `15` semantic events · `20` action-plan tasks
+- `capsule.foundation.key-agents.v1`
+  score `129` · `12` modified paths · `5` link changes · `12` semantic events · `17` action-plan tasks
 - `capsule.foundation.n1hub.v1`
-- `capsule.foundation.a2c-link.v1`
-- `capsule.foundation.n-infinity.weaver.v1`
-- `capsule.foundation.branch-steward-agent.v1`
-- `capsule.foundation.symphony-observability.v1`
-- `capsule.foundation.n1hub-gold-master.v1`
+  score `123` · `8` modified paths · `7` link changes · `12` semantic events · `15` action-plan tasks
+- `capsule.foundation.tracker.v1`
+  score `114` · `8` modified paths · `6` link changes · `12` semantic events · `14` action-plan tasks
+- `capsule.foundation.capsuleos.v1`
+  score `113` · `8` modified paths · `6` link changes · `11` semantic events · `14` action-plan tasks
+- `capsule.foundation.n-infinity.v1`
+  score `110` · `9` modified paths · `5` link changes · `11` semantic events · `14` action-plan tasks
+- `capsule.project.n-infinity.v1`
+  score `108` · `7` modified paths · `6` link changes · `12` semantic events · `13` action-plan tasks
 
 Interpretation:
 
-- the biggest Real/Dream pressure sits in agent architecture, vault stewardship, constitutional law, orchestration, and runtime doctrine
-- broad content cleanup is not the first move
-- the first move is hub triage, promotion discipline, and operational law around Dream-safe work
+- the measured drift front is concentrated in runtime governance, assistant orchestration, workspace doctrine, and vault stewardship
+- broad content cleanup is still not the first move
+- the next branch wave should start from hub triage and explicit branch decisions on the measured top set, not from older intuition lists
 
 ## Existing Runtime Surfaces
 
@@ -103,11 +124,14 @@ The gap is not total absence of runtime. The gap is missing operator-facing task
 
 ## First-Wave Execution Order
 
-1. Audit the whole Real/Dream field and freeze the current drift picture.
-2. Triage the highest-drift constitutional hubs into `promote`, `retain-dream`, or `rewrite`.
-3. Resolve the Vault Steward dream-only outliers with explicit lifecycle law.
-4. Reconcile the nine real-only law capsules with Dream branch policy.
-5. Expand tests around promotion and branch-safe workflows only after the triage targets are explicit.
+1. Treat the field census as frozen until live counts move again: `192 / 186 / 183 / 9 / 3`.
+2. Treat the `TODO-008` top-ten hub matrix as the current branch-decision baseline.
+3. Treat the three Vault Steward dream-only operational capsules as intentional Dream-only operational mirrors unless the publishing path changes.
+4. Treat the nine real-only engineering law capsules as `real-first canonical` unless a specific future governance divergence appears.
+5. `TODO-020` is now closed: the Dream `background-agent-runtime` hub was rewritten around current governed runtime truth with future-only delta preserved.
+6. `TODO-021` is now closed: the Dream `vault-stewardship-swarm` hub was rewritten around live stewardship truth and explicitly separated from the Dream-only operational mirrors.
+7. Continue the remaining selective `workspace` promotion packet.
+8. Expand promotion and branch-safe tests only after those policy and doctrine packets land.
 
 ## Task Links
 

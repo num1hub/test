@@ -9,10 +9,13 @@ Pull order rule: when the user does not give a narrower priority, agents should 
 
 | ID | Priority | Execution Band | Owner Lane | Status | Goal | Surface |
 | --- | --- | --- | --- | --- | --- | --- |
-| `TODO-007` | `P0` | `NOW` | `Branch Audit Agent` | `READY` | Freeze the Real/Dream field into a deterministic global audit with hotspot ranking. | `data/capsules/*`, `docs/real-dream-diff.md`, `lib/diff/*`, `scripts/curate-vault-real-dream.ts` |
-| `TODO-008` | `P0` | `NOW` | `Branch Steward Agent` | `READY` | Triage the highest-drift constitutional hubs into explicit promote, retain, or rewrite decisions. | `data/capsules/*`, `docs/real-dream-diff.md`, `lib/diff/*`, `lib/agents/vaultSteward/*` |
-| `TODO-009` | `P0` | `NOW` | `Vault Steward Agent` | `READY` | Resolve the three dream-only Vault Steward operational capsules with explicit lifecycle law. | `data/capsules/capsule.operations.vault-steward.*`, `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*` |
-| `TODO-010` | `P0` | `NOW` | `Governance Sync Agent` | `READY` | Reconcile the nine real-only engineering law capsules with Dream branch policy. | `data/capsules/*`, `scripts/curate-vault-real-dream.ts`, `docs/real-dream-diff.md` |
+| `TODO-007` | `P0` | `NOW` | `Branch Audit Agent` | `DONE` | Freeze the Real/Dream field into a deterministic global audit with hotspot ranking. | `data/capsules/*`, `docs/real-dream-diff.md`, `lib/diff/*`, `scripts/curate-vault-real-dream.ts` |
+| `TODO-008` | `P0` | `NOW` | `Branch Steward Agent` | `DONE` | Triage the highest-drift constitutional hubs into explicit promote, retain, or rewrite decisions. | `data/capsules/*`, `docs/real-dream-diff.md`, `lib/diff/*`, `lib/agents/vaultSteward/*` |
+| `TODO-009` | `P0` | `NOW` | `Vault Steward Agent` | `DONE` | Resolve the three dream-only Vault Steward operational capsules with explicit lifecycle law. | `data/capsules/capsule.operations.vault-steward.*`, `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*` |
+| `TODO-010` | `P0` | `NOW` | `Governance Sync Agent` | `DONE` | Reconcile the nine real-only engineering law capsules with Dream branch policy. | `data/capsules/*`, `scripts/curate-vault-real-dream.ts`, `docs/real-dream-diff.md` |
+| `TODO-020` | `P1` | `NEXT` | `Governance Sync Agent` | `DONE` | Rewrite the Dream background-agent-runtime hub around current governed runtime truth. | `data/capsules/capsule.foundation.background-agent-runtime.v1*.json`, `docs/a2c.md`, `docs/agents-operations.md`, `lib/a2c/*` |
+| `TODO-021` | `P1` | `NEXT` | `Vault Steward Agent` | `DONE` | Rewrite the Dream vault-stewardship-swarm hub without collapsing it into live operational residue. | `data/capsules/capsule.foundation.vault-stewardship-swarm.v1*.json`, `data/capsules/capsule.operations.vault-steward.*`, `lib/agents/vaultSteward/*` |
+| `TODO-022` | `P1` | `NEXT` | `Branch Steward Agent` | `READY` | Selectively promote Dream-side workspace boundary doctrine into Real while preserving runtime inventory. | `data/capsules/capsule.foundation.workspace.v1*.json`, `README.md`, `AGENTS.md`, `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md` |
 | `TODO-001` | `P1` | `NEXT` | `A2C Runtime Agent` | `READY` | Make A2C query semantics safe and read-only by default. | `lib/a2c/query.ts`, `scripts/a2c/query.ts`, `scripts/a2c/investigate.ts`, `lib/a2c/oracle.ts` |
 | `TODO-002` | `P1` | `NEXT` | `Cluster Refactor Agent` | `READY` | Decompose the Vault Steward runtime along real public seams. | `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*`, `scripts/vault-steward.ts` |
 | `TODO-003` | `P1` | `NEXT` | `A2C Test Agent` | `READY` | Turn the remaining A2C `TO-DO` contracts into real tests and close runtime drift. | `__tests__/a2c/*`, `lib/a2c/*`, `docs/a2c.md` |
@@ -33,23 +36,23 @@ Pull order rule: when the user does not give a narrower priority, agents should 
 
 Current recommended execution sequence:
 
-1. `TODO-007`
-2. `TODO-008`
-3. `TODO-009`
-4. `TODO-010`
-5. `TODO-001`
-6. `TODO-016`
-7. `TODO-017`
-8. `TODO-018`
-9. `TODO-019`
+1. `TODO-022`
+2. `TODO-001`
+3. `TODO-016`
+4. `TODO-017`
+5. `TODO-018`
+6. `TODO-019`
 
 Reason:
 
-- `TODO-007` stops future agents from operating on branch intuition instead of measured vault state.
-- `TODO-008` targets the highest-drift hubs where Dream currently disagrees most with active system law.
-- `TODO-009` resolves the only dream-only outliers in the live vault.
-- `TODO-010` closes the constitutional gap where Real now carries newer engineering law than Dream.
-- `TODO-001` remains hot, but only after the branch field is mapped and triaged.
+- `TODO-007` is now closed and the measured field census lives in `TO-DO/REAL_DREAM_FRONT.md` and `docs/real-dream-diff.md`.
+- `TODO-008` is now closed with an explicit top-ten triage matrix and split follow-up packets.
+- `TODO-009` is now closed: the three dream-only Vault Steward capsules are intentional Dream-only operational mirrors, not accidental residue.
+- `TODO-010` is now closed: the nine real-only engineering law capsules remain explicit `real-first canonical` doctrine rather than needing speculative Dream mirrors.
+- `TODO-020` is now closed: the Dream background-agent-runtime hub was rewritten around real-first mutation gates and future-only runtime delta.
+- `TODO-021` is now closed: the Dream stewardship hub was rewritten around live lane/runtime truth and explicitly separated from Dream-only operational mirrors.
+- `TODO-022` is now the remaining Front A doctrine pass: selectively move workspace boundary doctrine from Dream into Real.
+- `TODO-001` remains hot, but only after the branch field is mapped, triaged, and packetized.
 - `TODO-016` starts the direct path from operator input into A2C instead of leaving intent trapped in chat.
 - `TODO-017` turns the intake contract into real hot task packets the queue can execute.
 - `TODO-018` keeps N1 from routing every user message into the wrong lane.
@@ -60,7 +63,7 @@ Reason:
 Treat the queue as three fronts, not as one flat backlog:
 
 - `Front A · Real/Dream constitutional wave`
-  `TODO-007`, `TODO-008`, `TODO-009`, `TODO-010`
+  `TODO-007`, `TODO-008`, `TODO-009`, `TODO-010`, `TODO-020`, `TODO-021`, `TODO-022`
 - `Front B · A2C intake and packetization wave`
   `TODO-016`, `TODO-017`, `TODO-018`, `TODO-019`
 - `Front C · Runtime hardening and review systems`
@@ -69,12 +72,14 @@ Treat the queue as three fronts, not as one flat backlog:
 This means:
 
 - do not pull `Front B` as if `Front A` does not exist
-- do not let `Front C` sprawl across the queue while branch truth is still unmeasured
+- do not let `Front C` sprawl across the queue while the branch triage wave is still unresolved
 - when one front changes materially, update the queue order explicitly
 
 ## Dependency Notes
 
-- `TODO-007` is the main audit output dependency for `TODO-008`, `TODO-009`, and `TODO-010`
+- `TODO-007` is complete and now serves as the audit output dependency for `TODO-008`, `TODO-009`, `TODO-010`, `TODO-020`, `TODO-021`, and `TODO-022`
+- `TODO-020`, `TODO-021`, and `TODO-022` consume the triage output from `TODO-008`
+- `TODO-021` should consult `TODO-009` before mutating Dream stewardship doctrine
 - `TODO-016` should land before `TODO-017`
 - `TODO-017` and `TODO-018` should inform `TODO-019`
 - `TODO-012` should use the A2C intake and packetization work rather than outrunning it conceptually
@@ -128,6 +133,9 @@ Do not leave the queue looking `READY` when the real state is partial work, bloc
 - [TODO-017 A2C TO-DO Packet Builder](/home/n1/n1hub.com/TO-DO/tasks/TODO-017-a2c-todo-packet-builder.md)
 - [TODO-018 N1 User Input Routing Lane](/home/n1/n1hub.com/TO-DO/tasks/TODO-018-n1-user-input-routing-lane.md)
 - [TODO-019 A2C User Input Test Net](/home/n1/n1hub.com/TO-DO/tasks/TODO-019-a2c-user-input-test-net.md)
+- [TODO-020 Background Agent Runtime Dream Rewrite](/home/n1/n1hub.com/TO-DO/tasks/TODO-020-background-agent-runtime-dream-rewrite.md)
+- [TODO-021 Vault Stewardship Swarm Dream Rewrite](/home/n1/n1hub.com/TO-DO/tasks/TODO-021-vault-stewardship-swarm-dream-rewrite.md)
+- [TODO-022 Workspace Selective Promotion](/home/n1/n1hub.com/TO-DO/tasks/TODO-022-workspace-selective-promotion.md)
 - [TODO-011 Real Dream Promotion Test Net](/home/n1/n1hub.com/TO-DO/tasks/TODO-011-real-dream-promotion-test-net.md)
 - [TODO-004 Validator/API Boundary](/home/n1/n1hub.com/TO-DO/tasks/TODO-004-validator-api-boundary-package.md)
 - [TODO-005 Symphony Contract Split](/home/n1/n1hub.com/TO-DO/tasks/TODO-005-symphony-contract-split.md)

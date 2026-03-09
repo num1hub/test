@@ -232,3 +232,71 @@ The migration script:
 - Planner integrations should consume `diff.actionPlan`.
 - Tracker integrations should subscribe to `diff.semanticEvents`.
 - N-Infinity agents can call `/api/diff` and `/api/diff/apply` directly.
+
+## Field Audit Snapshot
+
+Measured on `2026-03-09` against the live vault.
+
+Verified census:
+
+- total files in `data/capsules`: `378`
+- real files: `192`
+- dream overlays: `186`
+- paired `real/dream` ids: `183`
+- dream-only ids: `3`
+- real-only ids: `9`
+- legacy `*.dream.json` count: `0`
+- non-dream overlay branch count in `data/capsules`: `0`
+
+Current dream-only ids:
+
+- `capsule.operations.vault-steward.latest.v1`
+- `capsule.operations.vault-steward.plan.v1`
+- `capsule.operations.vault-steward.queue.v1`
+
+Current real-only ids:
+
+- `capsule.foundation.agent-activation-readiness.v1`
+- `capsule.foundation.ai-friendly-engineering.v1`
+- `capsule.foundation.contract-governed-boundaries.v1`
+- `capsule.foundation.deep-intake-investigation.v1`
+- `capsule.foundation.domain-capsule-boundaries.v1`
+- `capsule.foundation.golden-path-engineering.v1`
+- `capsule.foundation.ignition-ritual.v1`
+- `capsule.foundation.low-blast-radius-architecture.v1`
+- `capsule.foundation.workspace-recon.v1`
+
+Measured hub ranking method:
+
+- start from paired capsules whose real-side metadata advertises `subtype: "hub"`
+- run `computeDiff('real', 'dream', { scopeType: 'capsule', capsuleIds: [id] })` for each hub id
+- rank with `score = modifiedPaths * 5 + linkChanges * 8 + semanticEvents + actionPlanTasks`
+
+Current top measured hub drift set:
+
+- `capsule.foundation.background-agent-runtime.v1`
+  score `239` · `12` modified paths · `16` link changes · `23` semantic events · `28` action-plan tasks
+- `capsule.foundation.personal-ai-assistant.v1`
+  score `197` · `10` modified paths · `13` link changes · `20` semantic events · `23` action-plan tasks
+- `capsule.foundation.workspace.v1`
+  score `173` · `8` modified paths · `12` link changes · `17` semantic events · `20` action-plan tasks
+- `capsule.foundation.vault-stewardship-swarm.v1`
+  score `156` · `13` modified paths · `7` link changes · `15` semantic events · `20` action-plan tasks
+- `capsule.foundation.key-agents.v1`
+  score `129` · `12` modified paths · `5` link changes · `12` semantic events · `17` action-plan tasks
+- `capsule.foundation.n1hub.v1`
+  score `123` · `8` modified paths · `7` link changes · `12` semantic events · `15` action-plan tasks
+- `capsule.foundation.tracker.v1`
+  score `114` · `8` modified paths · `6` link changes · `12` semantic events · `14` action-plan tasks
+- `capsule.foundation.capsuleos.v1`
+  score `113` · `8` modified paths · `6` link changes · `11` semantic events · `14` action-plan tasks
+- `capsule.foundation.n-infinity.v1`
+  score `110` · `9` modified paths · `5` link changes · `11` semantic events · `14` action-plan tasks
+- `capsule.project.n-infinity.v1`
+  score `108` · `7` modified paths · `6` link changes · `12` semantic events · `13` action-plan tasks
+
+Operational consequence:
+
+- `TODO-008` should start from the measured top drift hubs instead of stale intuition lists
+- `TODO-009` remains bound to the three Vault Steward dream-only capsules
+- `TODO-010` remains bound to the nine real-only engineering law capsules

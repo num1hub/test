@@ -2,7 +2,7 @@
 
 - Priority: `P0`
 - Execution Band: `NOW`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Governance Sync Agent`
 - Cluster: `Real/Dream governance`
 
@@ -74,6 +74,39 @@ If Dream remains silent on those laws, agents may incorrectly treat older Dream 
 2. Classify each one as `real-first canonical` or `needs dream overlay`.
 3. Write branch-policy rationale and split any true follow-up overlay work into bounded tasks.
 
+## Classification Matrix
+
+All nine real-only law capsules are `real-first canonical`:
+
+- `capsule.foundation.agent-activation-readiness.v1` -> `real-first canonical`
+- `capsule.foundation.ai-friendly-engineering.v1` -> `real-first canonical`
+- `capsule.foundation.contract-governed-boundaries.v1` -> `real-first canonical`
+- `capsule.foundation.deep-intake-investigation.v1` -> `real-first canonical`
+- `capsule.foundation.domain-capsule-boundaries.v1` -> `real-first canonical`
+- `capsule.foundation.golden-path-engineering.v1` -> `real-first canonical`
+- `capsule.foundation.ignition-ritual.v1` -> `real-first canonical`
+- `capsule.foundation.low-blast-radius-architecture.v1` -> `real-first canonical`
+- `capsule.foundation.workspace-recon.v1` -> `real-first canonical`
+
+## Branch Policy Decision
+
+Rule:
+
+- engineering law that gates mutation, governs boundaries, or establishes present-day operating discipline stays `real-first canonical` unless there is a concrete future branch policy that genuinely diverges from current runtime truth
+- Dream should not receive mirrors for these capsules just to avoid silence; speculative overlays would weaken the role of Real as the authoritative mutation contract
+- a Dream overlay is justified only when the future branch is carrying a specific, reviewable alternative governance behavior rather than generic aspiration
+
+Rationale:
+
+- these nine capsules already describe active engineering law that is reflected in live repo surfaces such as `AGENTS.md`, `README.md`, `CODEX.md`, `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`, `docs/a2c.md`, and validator/runtime boundaries
+- several other capsules already cite these laws as current dependencies, which means they are functioning as present tense repository doctrine rather than future speculation
+- `TODO-008` established that Dream is not universally more advanced at the constitutional layer, so leaving these capsules Real-only with explicit policy is more honest than manufacturing mirrors
+
+Follow-up outcome:
+
+- no Dream overlays should be created for this set in the current branch wave
+- no additional follow-up packet is required from this task
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -127,4 +160,4 @@ You are the Governance Sync Agent. Reconcile Real-first engineering law with Dre
 
 ## Handoff Note
 
-This task is about branch law, not about writing more capsule prose. Decide which engineering laws should remain Real-first and which ones need Dream mirrors, then encode that policy clearly.
+The policy is now explicit: the nine real-only engineering law capsules remain `real-first canonical` and should not gain Dream mirrors unless a specific future governance divergence appears. Continue with `TODO-020`, `TODO-021`, and `TODO-022` rather than manufacturing speculative overlays.

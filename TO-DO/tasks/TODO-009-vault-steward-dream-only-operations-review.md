@@ -2,7 +2,7 @@
 
 - Priority: `P0`
 - Execution Band: `NOW`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Vault Steward Agent`
 - Cluster: `Vault Steward / Real-Dream operations`
 
@@ -72,6 +72,35 @@ That makes Vault Steward the only live Dream-only lane. If these capsules are in
 2. Classify each one as ephemeral operational state, promotable governance state, or retireable residue.
 3. Write explicit lifecycle law and split any needed code follow-up into bounded tasks.
 
+## Lifecycle Classification
+
+Writer path:
+
+- `lib/agents/vaultSteward.ts`
+  `writeDreamOperationalCapsules()` writes all three capsules with `writeOverlayCapsule(..., 'dream')`
+- `lib/agents/vaultSteward/maintenance-artifacts.ts`
+  defines the concrete builders:
+  `buildLatestRunCapsule()`
+  `buildQueueCapsule()`
+  `buildPlanCapsule()`
+- `lib/agents/vaultSteward/runtime-store.ts`
+  persists the machine JSON mirrors under `data/private/agents/*`, which the Dream overlays summarize for graph visibility
+
+Lifecycle decisions:
+
+- `capsule.operations.vault-steward.latest.v1` -> `ephemeral operational state`
+  This capsule is rebuilt every run from the current `VaultStewardRun` via `buildLatestRunCapsule()` and mirrors the latest run summary, lanes, and graph snapshot. It should stay Dream-only, be overwritten on every new run, and never be promoted to Real.
+- `capsule.operations.vault-steward.queue.v1` -> `ephemeral operational state`
+  This capsule is rebuilt from the live queue via `buildQueueCapsule()` and exists to expose queued and completed Dream-side maintenance jobs inside the capsule graph. It is operational telemetry, not branch doctrine, so it should stay Dream-only and overwrite in place as queue state changes.
+- `capsule.operations.vault-steward.plan.v1` -> `ephemeral operational state`
+  This capsule is rebuilt from the current run plus queue via `buildPlanCapsule()` and acts as an operator-facing planning snapshot for the current maintenance cycle. It is not promotable governance law; it should remain Dream-only and rotate with each new planning cycle.
+
+Retention law:
+
+- keep these three capsules Dream-only as long as `writeDreamOperationalCapsules()` remains the publishing path
+- treat them as overwrite-in-place operational mirrors, not durable constitutional capsules
+- retire them together only if Vault Steward stops publishing capsule-visible operational state and replaces this surface with another explicit operator-facing artifact
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -125,4 +154,4 @@ You are the Vault Steward Agent. Trace the three dream-only Vault Steward capsul
 
 ## Handoff Note
 
-Trace these capsules from their live files back to the writer paths in Vault Steward. Decide whether they are durable governance objects or just operational branch exhaust, then write the rule explicitly.
+The lifecycle decision is now explicit: `latest`, `queue`, and `plan` are intentional Dream-only operational mirrors published by `writeDreamOperationalCapsules()`. Do not revisit their branch status unless the writer path or retention model changes.

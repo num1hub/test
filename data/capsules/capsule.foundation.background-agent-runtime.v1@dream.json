@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.background-agent-runtime.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-09T00:13:04.582Z",
+    "updated_at": "2026-03-09T20:18:07Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
     "source": {
@@ -15,42 +15,30 @@
       "type": "repository_contract"
     },
     "priority": "high",
-    "progress": 18,
+    "progress": 28,
     "estimatedHours": 480,
-    "actualHours": 96,
+    "actualHours": 104,
     "dueDate": "2026-11-20",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, or cool down.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only cycles, and Dream-safe execution cycles.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `capsule_job_execution` turns graph work into normalized, inspectable job envelopes.\n- `conversation_and_delegation_bridge` connects chat surfaces to deeper runtime lanes without collapsing everything into prompts.\n- `provider_and_tool_handoff` bridges AI Wallet, DeepMine, Symphony, local skills, and subscription-backed lanes into one operating path.\n- `operator_oversight` feeds status, logs, and controls into an accountable surface.\n\n## 3. N1Hub Integration\nIn N1Hub this runtime is realized through always-on Symphony and N-Infinity services, `capsule_graph` jobs, worktree-isolated execution, nightly autonomy windows, and provider-backed DeepMine calls. It is the layer that lets Chat to Capsules and Agent Delegation hand real work into background lanes instead of stopping at explanation. In Dream the runtime should become mode-aware enough that the same system can behave like a polite co-pilot by day and a bounded autonomous vault-maintenance layer by night without confusing those duties.\n\n## 4. Philosophical Alignment\nBackground Agent Runtime supports To Dig Deep by making autonomy answerable to capsule evidence, durable state, and operator-visible control rather than to shallow prompt loops.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773015063934\n- Job: Decomposition review for unfinished foundation hubs\n- Workstream: decomposition\n- Note: Tightened the boundary around runtime responsibilities and integration points rather than model behavior. Split pressure remains high along the named responsibility seams; the minimum viable future splits are lifecycle and scheduling, durable state plus capsule-job execution, and the delegation/provider/operator interface layer."
+    "content": "# Background Agent Runtime\n\n## 1. Dream Direction\nBackground Agent Runtime in the Dream branch describes the next durable substrate beneath N1Hub autonomy, but it now starts from current governed runtime truth instead of pre-governed daemon folklore. Real already owns the present mutation gates, readiness checks, and operator bring-up rules. Dream extends from that baseline toward a more resilient, lane-aware, and proof-bearing runtime for long-lived agent work.\n\n## 2. Real Baseline It Must Respect\n- `activation_gate_chain` keeps mutation behind Activation Readiness, Workspace Recon, Deep Intake Investigation, and ignition-style entry discipline.\n- `repo_owned_instruction_surfaces` ensures agents load governed docs, workflow contracts, and mode law before deeper execution.\n- `bounded_shift_windows` keeps day/night posture, cooldown, and dispatch timing explicit instead of burying them inside daemon folklore.\n- `queue_truth_and_run_identity` keeps status, quarantine, review, and completion visible across chat, queue, and background lanes.\n- `wallet_governed_provider_routing` keeps provider selection and model routing in runtime configuration rather than prompt residue.\n\n## 3. Dream Expansion\n- `lane_isolation_and_replay` should preserve resumable run identity across N1, A2C, Symphony, N-Infinity, and Vault Steward lanes.\n- `policy_shaped_dispatch` should schedule work from risk posture, approval state, budget lane, and operator context rather than from timers alone.\n- `ingress_to_background_baton` should let conversational ingress, TO-DO packets, delegated jobs, and daemon work hand off through one explicit baton.\n- `recurring_iteration_mesh` should combine repeated one-pass iterations with bounded long-lived services instead of hiding opaque endless autonomy.\n- `evidence_native_controls` should expose proof-bearing pause, resume, quarantine, review, and crash-recovery semantics to operators.\n\n## 4. Branch Boundary\nReal remains canonical for the implemented A2C activation path, workspace classification, deep intake posture, current provider/runtime bring-up, and existing time-window behavior. Dream keeps only the next horizon: stronger lane isolation, cleaner baton routing, richer crash recovery, and tighter operator control without claiming those extensions already exist.\n\n## 5. Philosophical Alignment\nBackground Agent Runtime in Dream preserves the idea that autonomous depth should grow only when runtime discipline, evidence surfaces, and recovery semantics grow faster than model ambition."
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the Dream-branch hub for the durable operating layer around long-lived LLM-backed work in N1Hub: supervised daemon lifecycle, dispatch and mode-aware scheduling, durable state, normalized capsule-job execution, chat-to-delegation bridging, provider and tool handoff, and operator-visible oversight. It defines how Symphony, N-Infinity, capsule_graph jobs, worktree-isolated execution, and nightly autonomy windows run inside one accountable runtime without redefining model behavior.",
+    "summary": "Background Agent Runtime in the Dream branch now starts from current governed runtime truth instead of from pre-governed always-on folklore. Real owns the present contract: activation readiness, workspace recon, deep intake investigation, ignition discipline, wallet-governed provider bring-up, and explicit time-windowed background dispatch. Dream preserves only the next horizon: stronger lane isolation and replay across N1, A2C, Symphony, N-Infinity, and Vault Steward, plus policy-shaped scheduling, cleaner baton handoff between conversational ingress and daemon work, and richer proof-bearing operator controls.",
     "keywords": [
       "background-agent-runtime",
-      "daemon",
-      "durable-runtime",
-      "capsule-jobs",
-      "agent-delegation",
-      "chat-to-capsules",
-      "n-infinity",
-      "symphony",
-      "mode-shaping",
-      "honest-idle",
-      "backoff",
-      "degraded-recovery",
-      "durable-state",
-      "provider-and-tool-handoff",
-      "operator-oversight",
-      "daemon-lifecycle",
-      "dispatch-and-scheduling",
-      "conversation-and-delegation-bridge",
-      "worktree-isolation",
-      "nightly-autonomy-windows",
-      "vault-steward",
-      "autonomous-swarm",
-      "decomposition"
+      "activation-readiness",
+      "workspace-recon",
+      "deep-intake-investigation",
+      "ignition-ritual",
+      "lane-isolation",
+      "policy-shaped-dispatch",
+      "baton-routing",
+      "recurring-iterations",
+      "crash-recovery",
+      "proof-bearing-autonomy"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -71,6 +59,10 @@
       {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.chat-to-capsules.v1",
@@ -97,6 +89,14 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.hybrid-llm-access.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.ai-control-surface.v1",
         "relation_type": "references"
       },
@@ -113,11 +113,35 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.capsule-job.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
         "relation_type": "references"
       },
       {
@@ -161,6 +185,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.vault-update-agent.v1",
         "relation_type": "references"
       },
@@ -174,6 +210,22 @@
       },
       {
         "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-activation-readiness.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace-recon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deep-intake-investigation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ignition-ritual.v1",
         "relation_type": "references"
       }
     ],
@@ -226,8 +278,15 @@
         "run_id": "vault-steward-1773015063934",
         "job_id": "vault-steward-job-9bad6a9311d08afe",
         "rationale": "The capsule already lists these responsibilities separately in Core Responsibilities and N1Hub Integration, so clarifying them in the summary and keywords improves routing and decomposition readiness without changing doctrine."
+      },
+      {
+        "at": "2026-03-09T20:18:07Z",
+        "event": "governance_sync_rewrite_applied",
+        "agent": "n1",
+        "run_id": "TODO-020",
+        "rationale": "The Dream branch was rewritten around current governed runtime truth. Mutation gates, workspace classification, deep intake posture, ignition discipline, and runtime bring-up remain real-first canonical, while Dream now preserves only the next-horizon runtime delta around lane isolation, policy-shaped dispatch, baton routing, and proof-bearing operator control."
       }
     ]
   },
-  "integrity_sha3_512": "bfc8527923cf3469620eb6300ea4adedef59d03773599971def479cbfb9ea9a00ff4fd61fc20965915b418d6175ac8323b6c3f98c36d40f46c6ccd2301f805a7"
+  "integrity_sha3_512": "23e27df73ea76a382b634e526df7767cd1f50a1bebc853f3c7ce58bdc52689cf33fea5f07895f67861adbe2e0ee4eadb5aa45da26272d5675b198cf24d26a307"
 }

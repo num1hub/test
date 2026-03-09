@@ -1,52 +1,47 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.vault-stewardship-swarm.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:40:00Z",
-    "updated_at": "2026-03-08T23:41:03.677Z",
+    "updated_at": "2026-03-09T20:24:25Z",
     "name": "Vault Stewardship Swarm",
     "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance",
+    "source": {
+      "uri": "internal://lib/agents/vaultSteward.ts",
+      "type": "repository_implementation"
+    },
     "priority": "high",
-    "progress": 37,
+    "progress": 46,
     "estimatedHours": 340,
-    "actualHours": 46,
+    "actualHours": 54,
     "dueDate": "2026-11-02",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Stewardship Swarm\n\n## Dream Direction\nIn the Dream branch, Vault Stewardship Swarm becomes the explicit long-lived intelligence cluster that continuously improves the capsule vault with minimal human micromanagement.\n\n## Desired Future State\n- a swarm that can read the entire vault, detect pressure, and turn that pressure into bounded jobs\n- a clear daytime co-pilot mode where Personal AI Assistant proposes vault improvements and asks for confirmation\n- a bounded night mode where the swarm quietly works through maintenance queues, decomposition tasks, markup polish, graph refactors, and review handoffs\n- stronger branch routing so exploratory changes settle in Dream first and only mature into Real with evidence\n- explicit idle and reassess behavior so the swarm can pause honestly when the vault does not need fresh work\n- a cleaner feedback loop between DeepMine, A2C, vault review, graph maintenance, and promotion safety\n\n## Why It Matters\nDream preserves the idea that the second brain should not remain static. It should become a living vault that improves every day through disciplined collaboration between one human and a swarm of bounded agents.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773013204004\n- Job: Autonomous markup pass for foundation.vault-stewardship-swarm\n- Workstream: markup\n- Note: Summary clarified for scanability and metadata quality, emphasizing structured modes, branch routing, and feedback mechanisms. Keywords expanded for improved discovery and classification. Capsule content remains unchanged; future attention needed for explicit workflow decomposition and mapping of swarm lineage and recursive links."
+    "content": "# Vault Stewardship Swarm\n\n## 1. Dream Direction\nVault Stewardship Swarm in the Dream branch now starts from current Vault Steward runtime truth instead of from a thin generic autonomy sketch. Real already owns the present lane stack, Dream-first execution posture, and publication of operational mirrors. Dream extends that baseline toward a more legible stewardship doctrine where maintenance lanes, review thresholds, and branch handoffs become clearer without pretending that the current run artifacts are the doctrine itself.\n\n## 2. Real Baseline It Must Respect\n- `lane_stack` already exists as Scout, optional Codex Foreman, Codex Reviewer, and Executor lanes inside the live Vault Steward runtime.\n- `bounded_workstream_mix` already routes maintenance through `decomposition`, `markup`, `graph_refactor`, and `mixed` workstreams with queue-aware selection.\n- `dream_first_mutation` already keeps autonomous executor writes on Dream overlays instead of silently mutating Real.\n- `cooldown_and_duplicate_control` already suppresses repeated jobs, respects completed workstream history, and lets the swarm idle honestly when no strong target survives review.\n- `operational_mirror_publication` already emits `latest`, `queue`, and `plan` capsules as Dream-only operational mirrors through `writeDreamOperationalCapsules()`.\n\n## 3. Dream Expansion\n- `lane_contract_hardening` should make Scout, Foreman, Reviewer, and Executor handoffs more inspectable, replayable, and easier to audit across runs.\n- `stewardship_budgeting` should make cooldown, retry, provider choice, and workstream pressure more visible as operator-facing stewardship policy instead of runtime trivia.\n- `promotion_preparation` should prepare Dream-side maintenance output for later Real review without collapsing maintenance doctrine into instant promotion logic.\n- `topology_preserving_maintenance` should improve decomposition, markup, graph refactor, and merge pressure handling without erasing lineage or manufacturing cosmetic churn.\n- `operator_visible_swarm_health` should expose when the swarm is healthy, throttled, vetoed, degraded, or intentionally idle instead of reporting activity volume as success.\n\n## 4. Operational Boundary\nThis hub is not the `latest`, `queue`, or `plan` capsule. Those remain Dream-only operational mirrors that summarize one run, one queue snapshot, or one planning frame. The hub should describe durable stewardship doctrine and the next-horizon swarm posture, while the operational capsules remain overwrite-in-place telemetry artifacts.\n\n## 5. Why It Matters\nN1Hub needs the vault to improve continuously without turning maintenance into invisible mutation theater. Vault Stewardship Swarm in Dream therefore preserves the future doctrine of a swarm that can care for the graph with more discipline than the current runtime already enforces, while still respecting that live operational residue and durable stewardship law are different surfaces.\n\n## 6. Philosophical Alignment\nVault Stewardship Swarm in Dream preserves the idea that the second brain should deepen through bounded care, explicit review, and restraint. The system gets better not when the swarm edits constantly, but when it knows what kind of maintenance pressure is justified, what should stay in Dream, and when no action is the honest action."
   },
   "neuro_concentrate": {
-    "summary": "Vault Stewardship Swarm is a bounded intelligence cluster in the Dream branch that autonomously improves the capsule vault through structured maintenance cycles, clear day-night modes, and disciplined branch-safe sequencing, ensuring human-visible confirmation and safe promotion of validated updates.",
+    "summary": "Vault Stewardship Swarm in the Dream branch now starts from live Vault Steward truth instead of from a generic autonomous-cluster sketch. Real already owns the current lane stack, Dream-first executor posture, diversified maintenance workstreams, cooldown and duplicate suppression, and the Dream-only publication of `latest`, `queue`, and `plan` operational mirrors. Dream preserves the next doctrine layer: stronger lane contracts, clearer stewardship budgets and health thresholds, cleaner preparation for Real-side review, and a hard separation between durable swarm law and ephemeral operational telemetry.",
     "keywords": [
       "vault-stewardship-swarm",
-      "dream-branch",
-      "capsule-maintenance",
-      "night-shift",
-      "day-night-modes",
+      "codex-foreman",
+      "codex-reviewer",
+      "dream-operational-mirrors",
+      "queue-cooldown",
+      "workstream-diversification",
+      "dream-first-mutation",
       "decomposition",
-      "review-gates",
-      "branch-routing",
-      "maintenance-jobs",
-      "maintenance-queue",
-      "human-confirmation",
-      "n-infinity",
-      "cooldown",
-      "intelligence-cluster",
-      "maintenance-cycles",
-      "personal-ai-assistant",
-      "branch-safe-sequencing",
-      "feedback-loop",
+      "markup",
+      "graph-refactor",
+      "lane-contracts",
+      "branch-safe-stewardship",
       "promotion-safety",
-      "swarm-lineage",
-      "vault-steward",
-      "autonomous-swarm",
-      "markup"
+      "operator-visible-health"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -98,6 +93,34 @@
       },
       {
         "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-async-assignment.v1",
         "relation_type": "references"
       },
       {
@@ -154,8 +177,15 @@
         "run_id": "vault-steward-1773013204004",
         "job_id": "vault-steward-job-8f856f01ae20f074",
         "rationale": "The maintenance change is justified by the capsule's focus on structured intelligence, explicit operating modes, and branch-safe workflows, as well as the need for improved clarity and discoverability following the recent graph_refactor pass."
+      },
+      {
+        "at": "2026-03-09T20:24:25Z",
+        "event": "governance_sync_rewrite_applied",
+        "agent": "n1",
+        "run_id": "TODO-021",
+        "rationale": "The Dream branch was rewritten around the live Vault Steward runtime. Current lane stack, Dream-only operational mirrors, queue cooldown discipline, and Dream-first mutation remain real-first canonical, while Dream now preserves only the next-horizon stewardship doctrine around lane contracts, swarm health visibility, and promotion-safe maintenance policy."
       }
     ]
   },
-  "integrity_sha3_512": "35325671a4c5cfc976da37cd0abc5f4187352bc47c5716ea72d88cd62503847487f642af45bf2b778456cd6e72a6084ffebdb9194a0baf8f285d74b7b0bd4bd6"
+  "integrity_sha3_512": "ee6c498ae386cc9f64054ae9162e120957910e6bed0d34134cc21a77031e9b502fa89c0cb69d9e2f6e2f3a4b121fa45d579135ac223d517fa602fc2a6db23b14"
 }

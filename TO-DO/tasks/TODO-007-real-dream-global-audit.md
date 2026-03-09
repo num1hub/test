@@ -2,7 +2,7 @@
 
 - Priority: `P0`
 - Execution Band: `NOW`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Branch Audit Agent`
 - Cluster: `Real/Dream governance`
 
@@ -41,7 +41,8 @@ Freeze the current Real/Dream field into one deterministic audit so future agent
 
 - live corpus facts: `192` real, `186` dream, `183` paired, `9` real-only, `3` dream-only
 - the only dream-only outliers are Vault Steward operational capsules
-- the heaviest drift is concentrated in constitutional and runtime hubs, not in random content capsules
+- the measured hub drift front is led by `background-agent-runtime`, `personal-ai-assistant`, `workspace`, `vault-stewardship-swarm`, and `key-agents`
+- hub ranking was reproduced from live diff payloads using `modifiedPaths`, `linkChanges`, `semanticEvents`, and `actionPlanTasks`, not from prose-only judgement
 
 ## Dependencies
 
@@ -62,9 +63,9 @@ Freeze the current Real/Dream field into one deterministic audit so future agent
 ## Implementation Plan
 
 1. Reproduce the current corpus counts from live files.
-2. Rank paired overlays by drift and cluster concentration.
-3. Write one bounded audit artifact that future agents can trust without rerunning the full census.
-4. Update queue context if the audit changes pull order.
+2. Rank paired hub overlays by measured diff pressure instead of intuition lists.
+3. Write the verified census and hotspot ranking into repo-native branch docs.
+4. Update queue truth so the next unfinished `P0` item becomes the real frontier.
 
 ## Mode and Skill
 
@@ -106,6 +107,7 @@ You are the Branch Audit Agent. Measure the live Real/Dream field, classify outl
 
 - agents may confuse raw textual divergence with architectural priority
 - an audit without explicit follow-up tasks may become a dead report
+- `TODO-008` still carries a pre-audit candidate hub set and should refresh its target list from the measured ranking before deep triage
 
 ## Stop Conditions
 
@@ -120,4 +122,5 @@ You are the Branch Audit Agent. Measure the live Real/Dream field, classify outl
 
 ## Handoff Note
 
-Start with the live corpus, not with old assumptions. Measure the field first, then reduce it to a small ranked action list that another agent can execute without rerunning the census.
+The field census is now frozen at `192 / 186 / 183 / 9 / 3` in `TO-DO/REAL_DREAM_FRONT.md` and `docs/real-dream-diff.md`.
+The next pass should open `TODO-008`, refresh its hub target set from the measured top drift list, and then classify those hubs into `promote`, `retain-dream`, or `rewrite` without rerunning the full census first.
