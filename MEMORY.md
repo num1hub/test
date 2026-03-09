@@ -1,4 +1,4 @@
-<!-- @anchor doc:n1hub.memory links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.tools,doc:openclaw.fork-notes,doc:n1hub.low-blast-radius-architecture,doc:governance.anchors-spec note="Durable memory surface for operator preferences, repo truths, and active architectural continuity in N1Hub." -->
+<!-- @anchor doc:n1hub.memory links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.tools,doc:todo.index,doc:todo.agent-operating-modes,doc:openclaw.fork-notes,doc:n1hub.low-blast-radius-architecture,doc:governance.anchors-spec note="Durable memory surface for operator preferences, repo truths, and active architectural continuity in N1Hub." -->
 # N1Hub Working Memory
 
 `MEMORY.md` is the durable markdown memory surface for N1Hub. It carries stable operator preferences, long-lived repo truths, active architectural priorities, and other high-signal continuity that should survive across sessions.
@@ -28,6 +28,7 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 - Treat root instruction surfaces as living governance files that must remain coherent.
 - Prefer evidence-backed changes, regenerated artifacts, and explicit verification over hand-wavy claims of completion.
 - When external systems inspire the repo, adapt them to N1Hub reality instead of importing foreign assumptions verbatim.
+- For hot execution planning, prefer priority, execution band, and pull order over early calendar deadlines. AI agents can move much faster than human schedule intuition, so date pressure should be added only when it reflects real external constraints.
 
 ## Stable Repo Truths
 
@@ -36,7 +37,14 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 - `data/capsules` is validator-owned storage and should not be casually mass-edited.
 - Anchor governance is a real repo-native governance layer, not a demo overlay.
 - The main instruction stack includes `README.md`, `AGENTS.md`, `SOUL.md`, `CODEX.md`, `TOOLS.md`, `WORKFLOW.md`, `NINFINITY_WORKFLOW.md`, and `MEMORY.md`.
+- `CONTEXT.md` is the deep role and mode context surface for assistant, executor, and swarm behavior.
 - `skills/` exists as a workspace-local capability layer in the OpenClaw-compatible style, but N1Hub still centers repo truth, validator law, capsules, and workflows.
+- Two operator-facing modes are now explicit: `Personal AI Assistant` and `TO-DO Executor`. `Swarm Conductor` is the bounded multi-agent orchestration lane when one worker is not enough.
+- `Automated Update Iteration` and `N1 Chief Orchestrator` now exist as machine-readable bridge modes for refresh and baton-routing rather than broad hidden autonomy.
+- The main AI agent identity for Egor N1 is `N1`.
+- serious status claims in N1Hub should be proof-bearing rather than declarative; command output, artifact paths, or equivalent evidence should back completion claims
+- N1 now has a repo-sync artifact under `data/private/agents/n1/` and `reports/n1/repo-sync/` to compress live project state into a cold-start packet without replacing live repo truth
+- N1 now also has an orchestration artifact under `data/private/agents/n1/` and `reports/n1/orchestration/` so the next cold-start agent can see available lanes, baton order, and the current conductor decision without inventing them from scratch
 
 ## Current Durable Priorities
 
@@ -48,6 +56,38 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
    Keep workflow law, prompt rendering, tracker state, and execution surfaces separable.
 4. Root-surface stewardship
    Keep `README.md`, `AGENTS.md`, `SOUL.md`, `CODEX.md`, `TOOLS.md`, and `MEMORY.md` coherent as one instruction stack.
+5. Assistant and execution-mode coherence
+   Keep `CONTEXT.md`, `TO-DO/AGENT_OPERATING_MODES.md`, and workspace `skills/` coherent with the actual assistant, executor, and swarm lanes used in N1Hub.
+
+## Hot Memory Horizons
+
+### Long Horizon
+
+- move `TO-DO/` from markdown-only hot buffer toward a capsule-native execution control plane
+- keep low-blast-radius architecture and public-boundary discipline as the base engineering law
+- preserve Real/Dream as a real planning and promotion system rather than branch folklore
+
+### Medium Horizon
+
+- finish the Real/Dream triage wave before broad new architecture work
+- harden A2C runtime semantics and tests after the branch field is mapped and classified
+- keep the Vault Steward runtime as the top cluster for bounded refactor work
+- treat cross-model review, scheduled one-pass iteration, and hot-warm-cold context routing as the next serious agent-systems frontier after current P0 branch work
+- deepen N1 as the chief orchestrator so Personal Assistant, TO-DO, Symphony, N-Infinity, Vault Steward, and A2C can be routed through one stable carrier identity
+
+### Short Horizon
+
+- `TODO-007` Real Dream Global Audit
+- `TODO-008` Real Dream Constitutional Hub Triage
+- `TODO-009` Vault Steward Dream-Only Operations Review
+- `TODO-010` Real-Only Law Sync
+
+### Recently Completed Context
+
+- `TO-DO/` now exists as a repo-native hot execution buffer with queue law, roadmap, and task packets
+- Real/Dream corpus facts were measured and converted into first-wave hot tasks
+- `CONTEXT.md` and `TO-DO/AGENT_OPERATING_MODES.md` now define deep mode context and reusable prompt slices for assistant, executor, and swarm lanes
+- `N1` now has machine-readable `repo-sync` and `orchestration` continuity layers plus dedicated CLI entrypoints for sync and baton-routing
 
 ## Memory Read Policy
 

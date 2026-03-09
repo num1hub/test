@@ -1,5 +1,5 @@
 <!-- @anchor arch:repo.entrypoint links=doc:n1hub.readme,arch:governance.anchor-spec,doc:validator.reference,doc:a2c.reference,doc:symphony.reference,doc:projects.reference,doc:branching.real-dream-diff note="Repository entrypoint and top-level runtime map for N1Hub." -->
-<!-- @anchor doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,doc:openclaw.fork-notes,script:extract.anchors,script:validate.anchors,script:verify.root-docs,script:file.guardrails.audit note="Repository overview, instruction stack map, and primary command surface for N1Hub." -->
+<!-- @anchor doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,doc:openclaw.fork-notes,script:extract.anchors,script:validate.anchors,script:verify.root-docs,script:file.guardrails.audit note="Repository overview, instruction stack map, and primary command surface for N1Hub." -->
 # N1Hub Vault
 
 N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with validator-governed storage, branch overlays, AI-assisted ingestion, workflow automation, and autonomous maintenance lanes.
@@ -16,20 +16,28 @@ Read the repo in this order:
    Execution protocol: how to implement, verify, and report work without widening blast radius.
 4. `SOUL.md`
    Identity and behavioral spine for user-facing intelligence.
-5. `MEMORY.md`
+5. `CONTEXT.md`
+   Deep role and mode context for AI agents: prompt assembly, operating modes, and delegation shape.
+6. `MEMORY.md`
    Durable working memory for stable operator preferences, active architectural priorities, and other cross-session continuity.
-6. `TOOLS.md`
+7. `TO-DO/README.md`
+   Hot execution buffer for AI agents: queue law, planning rules, and task structure.
+8. `TO-DO/AGENT_OPERATING_MODES.md`
+   Reusable mode cards, prompt slices, and command packs for Personal AI Assistant, TO-DO Executor, and Swarm Conductor lanes.
+9. `TO-DO/HOT_QUEUE.md`
+   Current high-priority execution list with pull order, execution band, owners, and acceptance criteria.
+10. `TOOLS.md`
    Local runtime and environment notes.
-7. `WORKFLOW.md`
+11. `WORKFLOW.md`
    Repo-owned Symphony workflow contract.
-8. `NINFINITY_WORKFLOW.md`
+12. `NINFINITY_WORKFLOW.md`
    Night-shift workflow contract for capsule-oriented automation.
-9. `docs/ANCHORS_SPEC.md`
-10. `docs/TERMINOLOGY.md`
-11. `docs/ANCHOR_NAMING_GRAMMAR.md`
-12. `docs/ANCHOR_GOVERNANCE_PATTERNS.md`
-13. `docs/ANCHOR_RISK_REGISTER.md`
-14. `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`
+13. `docs/ANCHORS_SPEC.md`
+14. `docs/TERMINOLOGY.md`
+15. `docs/ANCHOR_NAMING_GRAMMAR.md`
+16. `docs/ANCHOR_GOVERNANCE_PATTERNS.md`
+17. `docs/ANCHOR_RISK_REGISTER.md`
+18. `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`
 
 ## Root Surface Roles
 
@@ -39,6 +47,8 @@ The main instruction surfaces are complementary, not interchangeable:
   Repository map, runtime overview, command discovery, and current cluster priorities.
 - `AGENTS.md`
   Repo law for humans and AI agents: boundaries, prohibitions, and mandatory evidence.
+- `CONTEXT.md`
+  Deep context surface for mode selection, prompt assembly, command packets, and agent immersion.
 - `SOUL.md`
   Identity, trust posture, and behavioral spine for the intelligence layer that speaks to operators.
 - `MEMORY.md`
@@ -85,6 +95,10 @@ The main N1Hub runtime domains and their public surfaces are:
   - scripts: `scripts/symphony.ts`
   - docs: `WORKFLOW.md`
   - role: issue and workflow orchestration runtime
+- `n1 carrier / orchestration`
+  - code: `lib/agents/n1/*`
+  - scripts: `scripts/n1-automated-update.ts`
+  - role: main assistant carrier, cold-start sync bridge, and lane-routing orchestrator
 - `agent runtime / vault stewardship`
   - code: `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*`
   - public entry: `@/lib/agents/vaultSteward`
@@ -133,10 +147,40 @@ N1Hub treats its root instruction surfaces as living, but not free-form:
 - `README.md` should track actual runtime domains, public entrypoints, command surfaces, and current cluster status.
 - `AGENTS.md` should track active repo law and only change when that law is real, explicit, and enforceable.
 - `SOUL.md` should describe operator-facing identity and trust posture, not hide execution rules that belong elsewhere.
+- `CONTEXT.md` should describe mode selection, prompt assembly, command packets, and role immersion for agents.
 - `MEMORY.md` should carry durable continuity, not transient conversation residue or secret material.
 - `CODEX.md` should describe the execution protocol that is actually expected in the repo.
 
 External articles, chats, and best-practice lists are inputs, not law. Adapt them to N1Hub reality before promoting them into these files.
+
+## Hot Execution Buffer
+
+`TO-DO/` is the repo-native hot execution buffer for AI agents.
+
+- `TO-DO/README.md`
+  Queue law, planning rules, and 21st-century implementation standards.
+- `TO-DO/DECOMPOSITION_LAW.md`
+  Task-sizing, dependency, and split discipline for bounded agent execution.
+- `TO-DO/LANE_OWNERSHIP_MAP.md`
+  Maps each queue lane to the work classes and boundaries it should actually own.
+- `TO-DO/DEPENDENCY_MAP.md`
+  Shows which hot tasks unlock the next ones and where serial order matters.
+- `TO-DO/AGENT_OPERATING_MODES.md`
+  Mode cards, prompt slices, and command packs for the assistant, executor, and swarm lanes.
+- `TO-DO/HOT_QUEUE.md`
+  The live high-priority queue. Agents should read this before opportunistic work unless the user explicitly overrides priority.
+- `TO-DO/ROADMAP_Q2_2026.md`
+  Wave-based delivery plan across the next execution waves.
+- `TO-DO/tasks/*.md`
+  Detailed hot tasks with scope, execution band, acceptance criteria, prompts, and verification commands.
+
+This folder is not an archive. It is the active planning and execution intake surface.
+
+N1 entrypoints that sit on top of that buffer:
+
+- `npm run n1:update:once`
+- `npm run n1:sync`
+- `npm run n1:orchestrate`
 
 ## Development
 

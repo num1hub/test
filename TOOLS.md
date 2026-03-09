@@ -1,4 +1,4 @@
-<!-- @anchor doc:n1hub.tools links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:governance.anchors-spec,doc:validator.reference,doc:a2c.reference,doc:symphony.reference,script:validator.cli note="Stable tool and runtime notes for N1Hub operators and agents." -->
+<!-- @anchor doc:n1hub.tools links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:todo.agent-operating-modes,doc:governance.anchors-spec,doc:validator.reference,doc:a2c.reference,doc:symphony.reference,script:validator.cli note="Stable tool and runtime notes for N1Hub operators and agents." -->
 # N1Hub Tool Notes
 
 This file documents important local surfaces and conventions for agent work in this repository.
@@ -8,8 +8,10 @@ This file documents important local surfaces and conventions for agent work in t
 - `README.md` is the repo entrypoint.
 - `AGENTS.md` defines contributor and agent rules.
 - `CODEX.md` defines execution and verification gates.
+- `CONTEXT.md` defines deep mode context, prompt assembly, and delegation posture.
 - `SOUL.md` defines assistant identity and boundaries.
 - `MEMORY.md` defines durable cross-session memory and long-lived continuity.
+- `TO-DO/AGENT_OPERATING_MODES.md` defines reusable mode cards and command packs for assistant, executor, and swarm work.
 - `WORKFLOW.md` and `NINFINITY_WORKFLOW.md` define long-running agent prompts.
 - `docs/ANCHORS_SPEC.md` defines the anchor-governance contract.
 
@@ -43,8 +45,10 @@ This file documents important local surfaces and conventions for agent work in t
 ## Workspace Conventions
 
 - Treat `SOUL.md` as the personality and boundaries contract.
+- Treat `CONTEXT.md` as the deep role and mode context surface.
 - Treat `MEMORY.md` as the compact durable memory surface.
 - Treat `AGENTS.md` as operating instructions.
 - Treat `CODEX.md` as the execution charter and verification bar.
 - Treat `skills/` as workspace-local agent skills in the OpenClaw-compatible style.
+- Primary local skills now include `personal-ai-assistant`, `todo-executor`, and `swarm-orchestrator`.
 - When a capability already exists as a repo API, runtime tool, or validated capsule path, use that instead of inventing a parallel mechanism.

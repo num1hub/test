@@ -1,4 +1,4 @@
-<!-- @anchor doc:n1hub.codex links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,interface:validator.public-api,script:verify.root-docs,script:file.guardrails.audit note="Execution charter for deterministic implementation and verification inside N1Hub." -->
+<!-- @anchor doc:n1hub.codex links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,interface:validator.public-api,script:verify.root-docs,script:file.guardrails.audit note="Execution charter for deterministic implementation and verification inside N1Hub." -->
 # N1Hub Execution Charter
 
 This charter defines how implementation work is executed inside `n1hub.com`. `AGENTS.md` says what is allowed. This file says how to carry the work through without widening accidental damage.
@@ -10,7 +10,11 @@ Read the relevant subset of these before editing:
 - `README.md`
 - `AGENTS.md`
 - `SOUL.md`
+- `CONTEXT.md`
 - `MEMORY.md`
+- `TO-DO/README.md`
+- `TO-DO/AGENT_OPERATING_MODES.md`
+- `TO-DO/HOT_QUEUE.md`
 - `TOOLS.md`
 - `WORKFLOW.md`
 - `NINFINITY_WORKFLOW.md`
@@ -38,22 +42,36 @@ Every serious change should follow these principles:
 
 Use this default sequence unless the task is trivially small:
 
-1. Identify the target domain and whether the work is docs, runtime, contract, or capsule-state.
-2. Identify the public boundary that should own the change.
-3. Check whether the task touches an active cluster.
-4. Update docs, contracts, schemas, or public entry surfaces first when they are part of the change.
-5. Apply one bounded implementation step.
-6. Update `MEMORY.md` if the step created durable cross-session truth that future agents should not have to rediscover.
-7. Regenerate governed artifacts if the changed surface requires them.
-8. Run the relevant gates.
-9. Report results with changed surfaces, command evidence, and residual risk.
+1. Check `TO-DO/HOT_QUEUE.md` and the linked task file if the user has not already overridden priority.
+2. Check `CONTEXT.md` and `TO-DO/AGENT_OPERATING_MODES.md` when the task needs assistant, executor, or swarm-mode guidance.
+3. Identify the target domain and whether the work is docs, runtime, contract, capsule-state, or planning-control-plane work.
+4. Identify the public boundary that should own the change.
+5. Check whether the task touches an active cluster.
+6. Update docs, contracts, schemas, or public entry surfaces first when they are part of the change.
+7. Apply one bounded implementation step.
+8. Update `MEMORY.md` if the step created durable cross-session truth that future agents should not have to rediscover.
+9. Update `TO-DO/` if the step changed task status, execution band, acceptance criteria, or command packets.
+10. Regenerate governed artifacts if the changed surface requires them.
+11. Run the relevant gates.
+12. Report results with changed surfaces, command evidence, and residual risk.
+
+## Hot Queue Intake
+
+When `TO-DO/` exists, use this intake protocol:
+
+1. Read `TO-DO/README.md`.
+2. Read `TO-DO/AGENT_OPERATING_MODES.md` when the execution mode is not already obvious.
+3. Read `TO-DO/HOT_QUEUE.md`.
+4. Open the highest-priority relevant task file in `TO-DO/tasks/`.
+5. Confirm scope, execution band, non-goals, execution packet, and verification before editing.
+6. Do not silently widen the task beyond its acceptance criteria.
 
 ## Root-Doc Update Flow
 
-Use this when the work changes `README.md`, `AGENTS.md`, `SOUL.md`, `MEMORY.md`, or `CODEX.md`:
+Use this when the work changes `README.md`, `AGENTS.md`, `SOUL.md`, `CONTEXT.md`, `MEMORY.md`, or `CODEX.md`:
 
 1. Identify which document actually owns the change.
-2. State whether the change is about repository map, repo law, assistant identity, durable memory, or execution protocol.
+2. State whether the change is about repository map, repo law, assistant identity, deep mode context, durable memory, or execution protocol.
 3. Apply the smallest edit that restores coherence across the instruction stack.
 4. If the change came from an external article, conversation, or design note, adapt it to N1Hub reality before treating it as policy.
 5. Re-run the root-doc and anchor gates.

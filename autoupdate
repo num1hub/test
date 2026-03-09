@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+
+if [ -x "$ROOT_DIR/node_modules/.bin/tsx" ]; then
+  exec "$ROOT_DIR/node_modules/.bin/tsx" "$ROOT_DIR/scripts/n1-automated-update.ts" "$@"
+fi
+
+exec npx --no-install tsx "$ROOT_DIR/scripts/n1-automated-update.ts" "$@"

@@ -135,6 +135,12 @@ const detectKbState = async (kbRoot: string | null): Promise<Record<string, unkn
   const layout = resolveRuntimeLayout(kbRoot);
   const files = await fs.readdir(layout.vaultDir).catch(() => [] as string[]);
   const contractCounts = { recursive_layer: 0, recursive: 0, unknown: 0 };
+  const [indexPresent, pipelinePresent, tasksDirPresent, planPresent] = await Promise.all([
+    fs.access(layout.indexPath).then(() => true).catch(() => false),
+    fs.access(layout.pipelineRoot).then(() => true).catch(() => false),
+    fs.access(layout.tasksDir).then(() => true).catch(() => false),
+    fs.access(layout.defaultPlanPath).then(() => true).catch(() => false),
+  ]);
 
   for (const file of files.filter((name) => name.endsWith('.json') && !name.includes('@'))) {
     try {
@@ -159,10 +165,10 @@ const detectKbState = async (kbRoot: string | null): Promise<Record<string, unkn
     vault_capsules: files.filter((file) => file.endsWith('.json') && !file.includes('@')).length,
     vault_contract_counts: contractCounts,
     mixed_recursive_shapes: contractCounts.recursive_layer > 0 && contractCounts.recursive > 0,
-    index_present: false,
-    pipeline_present: false,
-    tasks_dir_present: false,
-    plan_present: false,
+    index_present: indexPresent,
+    pipeline_present: pipelinePresent,
+    tasks_dir_present: tasksDirPresent,
+    plan_present: planPresent,
   };
 };
 

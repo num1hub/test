@@ -19,6 +19,8 @@ A_arch_repo_entrypoint["arch:repo.entrypoint"]
 A_arch_symphony_runtime["arch:symphony.runtime"]
 A_arch_validator_engine["arch:validator.engine"]
 A_doc_a2c_reference["doc:a2c.reference"]
+A_doc_agents_ecosystem_signals["doc:agents.ecosystem-signals"]
+A_doc_agents_operations["doc:agents.operations"]
 A_doc_branching_real_dream_diff["doc:branching.real-dream-diff"]
 A_doc_governance_anchors_spec["doc:governance.anchors-spec"]
 A_doc_governance_naming_grammar["doc:governance.naming-grammar"]
@@ -27,6 +29,7 @@ A_doc_governance_risk_register["doc:governance.risk-register"]
 A_doc_governance_terminology["doc:governance.terminology"]
 A_doc_n1hub_agents["doc:n1hub.agents"]
 A_doc_n1hub_codex["doc:n1hub.codex"]
+A_doc_n1hub_context["doc:n1hub.context"]
 A_doc_n1hub_low_blast_radius_architecture["doc:n1hub.low-blast-radius-architecture"]
 A_doc_n1hub_memory["doc:n1hub.memory"]
 A_doc_n1hub_readme["doc:n1hub.readme"]
@@ -35,6 +38,17 @@ A_doc_n1hub_tools["doc:n1hub.tools"]
 A_doc_openclaw_fork_notes["doc:openclaw.fork-notes"]
 A_doc_projects_reference["doc:projects.reference"]
 A_doc_symphony_reference["doc:symphony.reference"]
+A_doc_todo_agent_operating_modes["doc:todo.agent-operating-modes"]
+A_doc_todo_capsule_native_execution["doc:todo.capsule-native-execution"]
+A_doc_todo_decomposition_law["doc:todo.decomposition-law"]
+A_doc_todo_dependency_map["doc:todo.dependency-map"]
+A_doc_todo_execution_protocol["doc:todo.execution-protocol"]
+A_doc_todo_hot_queue["doc:todo.hot-queue"]
+A_doc_todo_index["doc:todo.index"]
+A_doc_todo_lane_ownership["doc:todo.lane-ownership"]
+A_doc_todo_real_dream_front["doc:todo.real-dream-front"]
+A_doc_todo_roadmap_q2_2026["doc:todo.roadmap-q2-2026"]
+A_doc_todo_task_template["doc:todo.task-template"]
 A_doc_validator_reference["doc:validator.reference"]
 A_doc_workflow_issue_worker["doc:workflow.issue-worker"]
 A_doc_workflow_ninfinity_night_shift["doc:workflow.ninfinity-night-shift"]
@@ -87,6 +101,8 @@ class A_arch_repo_entrypoint arch;
 class A_arch_symphony_runtime arch;
 class A_arch_validator_engine arch;
 class A_doc_a2c_reference doc;
+class A_doc_agents_ecosystem_signals doc;
+class A_doc_agents_operations doc;
 class A_doc_branching_real_dream_diff doc;
 class A_doc_governance_anchors_spec doc;
 class A_doc_governance_naming_grammar doc;
@@ -95,6 +111,7 @@ class A_doc_governance_risk_register doc;
 class A_doc_governance_terminology doc;
 class A_doc_n1hub_agents doc;
 class A_doc_n1hub_codex doc;
+class A_doc_n1hub_context doc;
 class A_doc_n1hub_low_blast_radius_architecture doc;
 class A_doc_n1hub_memory doc;
 class A_doc_n1hub_readme doc;
@@ -103,6 +120,17 @@ class A_doc_n1hub_tools doc;
 class A_doc_openclaw_fork_notes doc;
 class A_doc_projects_reference doc;
 class A_doc_symphony_reference doc;
+class A_doc_todo_agent_operating_modes doc;
+class A_doc_todo_capsule_native_execution doc;
+class A_doc_todo_decomposition_law doc;
+class A_doc_todo_dependency_map doc;
+class A_doc_todo_execution_protocol doc;
+class A_doc_todo_hot_queue doc;
+class A_doc_todo_index doc;
+class A_doc_todo_lane_ownership doc;
+class A_doc_todo_real_dream_front doc;
+class A_doc_todo_roadmap_q2_2026 doc;
+class A_doc_todo_task_template doc;
 class A_doc_validator_reference doc;
 class A_doc_workflow_issue_worker doc;
 class A_doc_workflow_ninfinity_night_shift doc;
@@ -180,6 +208,17 @@ A_doc_a2c_reference --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_a2c_reference --> A_doc_n1hub_readme
 A_doc_a2c_reference --> A_doc_n1hub_tools
 A_doc_a2c_reference --> A_flow_a2c_workspace_recon
+A_doc_agents_ecosystem_signals --> A_doc_agents_operations
+A_doc_agents_ecosystem_signals --> A_doc_n1hub_context
+A_doc_agents_ecosystem_signals --> A_doc_n1hub_memory
+A_doc_agents_ecosystem_signals --> A_doc_openclaw_fork_notes
+A_doc_agents_ecosystem_signals --> A_doc_todo_agent_operating_modes
+A_doc_agents_ecosystem_signals --> A_doc_todo_hot_queue
+A_doc_agents_operations --> A_doc_agents_ecosystem_signals
+A_doc_agents_operations --> A_doc_n1hub_context
+A_doc_agents_operations --> A_doc_n1hub_memory
+A_doc_agents_operations --> A_doc_todo_agent_operating_modes
+A_doc_agents_operations --> A_doc_todo_execution_protocol
 A_doc_branching_real_dream_diff --> A_arch_graph_runtime
 A_doc_branching_real_dream_diff --> A_doc_n1hub_readme
 A_doc_branching_real_dream_diff --> A_doc_projects_reference
@@ -225,11 +264,15 @@ A_doc_n1hub_agents --> A_doc_governance_patterns
 A_doc_n1hub_agents --> A_doc_governance_risk_register
 A_doc_n1hub_agents --> A_doc_governance_terminology
 A_doc_n1hub_agents --> A_doc_n1hub_codex
+A_doc_n1hub_agents --> A_doc_n1hub_context
 A_doc_n1hub_agents --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_n1hub_agents --> A_doc_n1hub_memory
 A_doc_n1hub_agents --> A_doc_n1hub_readme
 A_doc_n1hub_agents --> A_doc_n1hub_soul
 A_doc_n1hub_agents --> A_doc_n1hub_tools
+A_doc_n1hub_agents --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_agents --> A_doc_todo_hot_queue
+A_doc_n1hub_agents --> A_doc_todo_index
 A_doc_n1hub_agents --> A_doc_workflow_issue_worker
 A_doc_n1hub_agents --> A_doc_workflow_ninfinity_night_shift
 A_doc_n1hub_agents --> A_script_file_guardrails_audit
@@ -240,16 +283,32 @@ A_doc_n1hub_codex --> A_doc_governance_patterns
 A_doc_n1hub_codex --> A_doc_governance_risk_register
 A_doc_n1hub_codex --> A_doc_governance_terminology
 A_doc_n1hub_codex --> A_doc_n1hub_agents
+A_doc_n1hub_codex --> A_doc_n1hub_context
 A_doc_n1hub_codex --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_n1hub_codex --> A_doc_n1hub_memory
 A_doc_n1hub_codex --> A_doc_n1hub_readme
 A_doc_n1hub_codex --> A_doc_n1hub_soul
 A_doc_n1hub_codex --> A_doc_n1hub_tools
+A_doc_n1hub_codex --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_codex --> A_doc_todo_hot_queue
+A_doc_n1hub_codex --> A_doc_todo_index
 A_doc_n1hub_codex --> A_doc_workflow_issue_worker
 A_doc_n1hub_codex --> A_doc_workflow_ninfinity_night_shift
 A_doc_n1hub_codex --> A_interface_validator_public_api
 A_doc_n1hub_codex --> A_script_file_guardrails_audit
 A_doc_n1hub_codex --> A_script_verify_root_docs
+A_doc_n1hub_context --> A_doc_agents_ecosystem_signals
+A_doc_n1hub_context --> A_doc_agents_operations
+A_doc_n1hub_context --> A_doc_n1hub_agents
+A_doc_n1hub_context --> A_doc_n1hub_codex
+A_doc_n1hub_context --> A_doc_n1hub_memory
+A_doc_n1hub_context --> A_doc_n1hub_readme
+A_doc_n1hub_context --> A_doc_n1hub_soul
+A_doc_n1hub_context --> A_doc_n1hub_tools
+A_doc_n1hub_context --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_context --> A_doc_todo_index
+A_doc_n1hub_context --> A_doc_workflow_issue_worker
+A_doc_n1hub_context --> A_doc_workflow_ninfinity_night_shift
 A_doc_n1hub_low_blast_radius_architecture --> A_doc_a2c_reference
 A_doc_n1hub_low_blast_radius_architecture --> A_doc_n1hub_agents
 A_doc_n1hub_low_blast_radius_architecture --> A_doc_n1hub_codex
@@ -261,11 +320,14 @@ A_doc_n1hub_low_blast_radius_architecture --> A_script_file_guardrails_audit
 A_doc_n1hub_memory --> A_doc_governance_anchors_spec
 A_doc_n1hub_memory --> A_doc_n1hub_agents
 A_doc_n1hub_memory --> A_doc_n1hub_codex
+A_doc_n1hub_memory --> A_doc_n1hub_context
 A_doc_n1hub_memory --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_n1hub_memory --> A_doc_n1hub_readme
 A_doc_n1hub_memory --> A_doc_n1hub_soul
 A_doc_n1hub_memory --> A_doc_n1hub_tools
 A_doc_n1hub_memory --> A_doc_openclaw_fork_notes
+A_doc_n1hub_memory --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_memory --> A_doc_todo_index
 A_doc_n1hub_readme --> A_doc_governance_anchors_spec
 A_doc_n1hub_readme --> A_doc_governance_naming_grammar
 A_doc_n1hub_readme --> A_doc_governance_patterns
@@ -273,11 +335,15 @@ A_doc_n1hub_readme --> A_doc_governance_risk_register
 A_doc_n1hub_readme --> A_doc_governance_terminology
 A_doc_n1hub_readme --> A_doc_n1hub_agents
 A_doc_n1hub_readme --> A_doc_n1hub_codex
+A_doc_n1hub_readme --> A_doc_n1hub_context
 A_doc_n1hub_readme --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_n1hub_readme --> A_doc_n1hub_memory
 A_doc_n1hub_readme --> A_doc_n1hub_soul
 A_doc_n1hub_readme --> A_doc_n1hub_tools
 A_doc_n1hub_readme --> A_doc_openclaw_fork_notes
+A_doc_n1hub_readme --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_readme --> A_doc_todo_hot_queue
+A_doc_n1hub_readme --> A_doc_todo_index
 A_doc_n1hub_readme --> A_doc_workflow_issue_worker
 A_doc_n1hub_readme --> A_doc_workflow_ninfinity_night_shift
 A_doc_n1hub_readme --> A_script_extract_anchors
@@ -287,6 +353,7 @@ A_doc_n1hub_readme --> A_script_verify_root_docs
 A_doc_n1hub_soul --> A_doc_governance_anchors_spec
 A_doc_n1hub_soul --> A_doc_n1hub_agents
 A_doc_n1hub_soul --> A_doc_n1hub_codex
+A_doc_n1hub_soul --> A_doc_n1hub_context
 A_doc_n1hub_soul --> A_doc_n1hub_low_blast_radius_architecture
 A_doc_n1hub_soul --> A_doc_n1hub_memory
 A_doc_n1hub_soul --> A_doc_n1hub_readme
@@ -298,10 +365,12 @@ A_doc_n1hub_tools --> A_doc_a2c_reference
 A_doc_n1hub_tools --> A_doc_governance_anchors_spec
 A_doc_n1hub_tools --> A_doc_n1hub_agents
 A_doc_n1hub_tools --> A_doc_n1hub_codex
+A_doc_n1hub_tools --> A_doc_n1hub_context
 A_doc_n1hub_tools --> A_doc_n1hub_memory
 A_doc_n1hub_tools --> A_doc_n1hub_readme
 A_doc_n1hub_tools --> A_doc_n1hub_soul
 A_doc_n1hub_tools --> A_doc_symphony_reference
+A_doc_n1hub_tools --> A_doc_todo_agent_operating_modes
 A_doc_n1hub_tools --> A_doc_validator_reference
 A_doc_n1hub_tools --> A_script_validator_cli
 A_doc_openclaw_fork_notes --> A_doc_n1hub_agents
@@ -318,6 +387,95 @@ A_doc_symphony_reference --> A_doc_n1hub_readme
 A_doc_symphony_reference --> A_doc_workflow_issue_worker
 A_doc_symphony_reference --> A_doc_workflow_ninfinity_night_shift
 A_doc_symphony_reference --> A_flow_symphony_prompt_render
+A_doc_todo_agent_operating_modes --> A_doc_agents_ecosystem_signals
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_agents
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_codex
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_context
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_memory
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_soul
+A_doc_todo_agent_operating_modes --> A_doc_n1hub_tools
+A_doc_todo_agent_operating_modes --> A_doc_todo_decomposition_law
+A_doc_todo_agent_operating_modes --> A_doc_todo_dependency_map
+A_doc_todo_agent_operating_modes --> A_doc_todo_execution_protocol
+A_doc_todo_agent_operating_modes --> A_doc_todo_hot_queue
+A_doc_todo_agent_operating_modes --> A_doc_todo_index
+A_doc_todo_agent_operating_modes --> A_doc_todo_lane_ownership
+A_doc_todo_capsule_native_execution --> A_doc_branching_real_dream_diff
+A_doc_todo_capsule_native_execution --> A_doc_n1hub_context
+A_doc_todo_capsule_native_execution --> A_doc_n1hub_readme
+A_doc_todo_capsule_native_execution --> A_doc_projects_reference
+A_doc_todo_capsule_native_execution --> A_doc_todo_agent_operating_modes
+A_doc_todo_capsule_native_execution --> A_doc_todo_hot_queue
+A_doc_todo_capsule_native_execution --> A_doc_todo_index
+A_doc_todo_decomposition_law --> A_doc_n1hub_agents
+A_doc_todo_decomposition_law --> A_doc_n1hub_context
+A_doc_todo_decomposition_law --> A_doc_todo_agent_operating_modes
+A_doc_todo_decomposition_law --> A_doc_todo_execution_protocol
+A_doc_todo_decomposition_law --> A_doc_todo_hot_queue
+A_doc_todo_decomposition_law --> A_doc_todo_index
+A_doc_todo_decomposition_law --> A_doc_todo_task_template
+A_doc_todo_dependency_map --> A_doc_n1hub_context
+A_doc_todo_dependency_map --> A_doc_todo_decomposition_law
+A_doc_todo_dependency_map --> A_doc_todo_hot_queue
+A_doc_todo_dependency_map --> A_doc_todo_index
+A_doc_todo_dependency_map --> A_doc_todo_lane_ownership
+A_doc_todo_dependency_map --> A_doc_todo_roadmap_q2_2026
+A_doc_todo_execution_protocol --> A_doc_n1hub_codex
+A_doc_todo_execution_protocol --> A_doc_n1hub_context
+A_doc_todo_execution_protocol --> A_doc_todo_agent_operating_modes
+A_doc_todo_execution_protocol --> A_doc_todo_decomposition_law
+A_doc_todo_execution_protocol --> A_doc_todo_dependency_map
+A_doc_todo_execution_protocol --> A_doc_todo_hot_queue
+A_doc_todo_execution_protocol --> A_doc_todo_index
+A_doc_todo_execution_protocol --> A_doc_todo_lane_ownership
+A_doc_todo_execution_protocol --> A_doc_todo_task_template
+A_doc_todo_hot_queue --> A_doc_n1hub_agents
+A_doc_todo_hot_queue --> A_doc_n1hub_codex
+A_doc_todo_hot_queue --> A_doc_n1hub_readme
+A_doc_todo_hot_queue --> A_doc_todo_decomposition_law
+A_doc_todo_hot_queue --> A_doc_todo_dependency_map
+A_doc_todo_hot_queue --> A_doc_todo_execution_protocol
+A_doc_todo_hot_queue --> A_doc_todo_index
+A_doc_todo_hot_queue --> A_doc_todo_lane_ownership
+A_doc_todo_hot_queue --> A_doc_todo_roadmap_q2_2026
+A_doc_todo_index --> A_doc_n1hub_agents
+A_doc_todo_index --> A_doc_n1hub_codex
+A_doc_todo_index --> A_doc_n1hub_context
+A_doc_todo_index --> A_doc_n1hub_memory
+A_doc_todo_index --> A_doc_n1hub_readme
+A_doc_todo_index --> A_doc_todo_agent_operating_modes
+A_doc_todo_index --> A_doc_todo_capsule_native_execution
+A_doc_todo_index --> A_doc_todo_decomposition_law
+A_doc_todo_index --> A_doc_todo_dependency_map
+A_doc_todo_index --> A_doc_todo_execution_protocol
+A_doc_todo_index --> A_doc_todo_hot_queue
+A_doc_todo_index --> A_doc_todo_lane_ownership
+A_doc_todo_index --> A_doc_todo_real_dream_front
+A_doc_todo_index --> A_doc_todo_roadmap_q2_2026
+A_doc_todo_index --> A_doc_todo_task_template
+A_doc_todo_lane_ownership --> A_doc_n1hub_agents
+A_doc_todo_lane_ownership --> A_doc_n1hub_context
+A_doc_todo_lane_ownership --> A_doc_todo_agent_operating_modes
+A_doc_todo_lane_ownership --> A_doc_todo_decomposition_law
+A_doc_todo_lane_ownership --> A_doc_todo_hot_queue
+A_doc_todo_lane_ownership --> A_doc_todo_index
+A_doc_todo_real_dream_front --> A_doc_branching_real_dream_diff
+A_doc_todo_real_dream_front --> A_doc_n1hub_context
+A_doc_todo_real_dream_front --> A_doc_n1hub_readme
+A_doc_todo_real_dream_front --> A_doc_todo_hot_queue
+A_doc_todo_real_dream_front --> A_doc_todo_index
+A_doc_todo_roadmap_q2_2026 --> A_doc_n1hub_low_blast_radius_architecture
+A_doc_todo_roadmap_q2_2026 --> A_doc_n1hub_readme
+A_doc_todo_roadmap_q2_2026 --> A_doc_todo_decomposition_law
+A_doc_todo_roadmap_q2_2026 --> A_doc_todo_dependency_map
+A_doc_todo_roadmap_q2_2026 --> A_doc_todo_hot_queue
+A_doc_todo_roadmap_q2_2026 --> A_doc_todo_index
+A_doc_todo_task_template --> A_doc_n1hub_agents
+A_doc_todo_task_template --> A_doc_n1hub_codex
+A_doc_todo_task_template --> A_doc_todo_decomposition_law
+A_doc_todo_task_template --> A_doc_todo_execution_protocol
+A_doc_todo_task_template --> A_doc_todo_hot_queue
+A_doc_todo_task_template --> A_doc_todo_index
 A_doc_validator_reference --> A_arch_api_validate_route
 A_doc_validator_reference --> A_arch_validator_engine
 A_doc_validator_reference --> A_doc_n1hub_low_blast_radius_architecture

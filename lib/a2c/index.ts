@@ -6,6 +6,10 @@ import type { A2CIndexPayload, CanonicalEdge, CanonicalNode } from './types';
 import { parseConfidenceRecord, preferredCapsuleTitle } from './common';
 import { resolveRuntimeLayout } from './layout';
 
+interface BuildIndexOptions {
+  write?: boolean;
+}
+
 const CAPTURE_RELATION_KEYS = ['recursive_layer', 'recursive'];
 
 const isArrayOfObjects = (value: unknown): value is Array<Record<string, unknown>> =>
@@ -111,7 +115,11 @@ export const writeIndex = async (kbRoot: string, indexPayload: A2CIndexPayload):
   return layout.indexPath;
 };
 
-export const buildIndex = async (kbRoot: string, defaultNodeType = 'capsule'): Promise<{ index: A2CIndexPayload; issues: string[]; written: boolean }> => {
+export const buildIndex = async (
+  kbRoot: string,
+  defaultNodeType = 'capsule',
+  options: BuildIndexOptions = {},
+): Promise<{ index: A2CIndexPayload; issues: string[]; written: boolean }> => {
   const layout = resolveRuntimeLayout(kbRoot);
   const issues: string[] = [];
 
@@ -196,9 +204,12 @@ export const buildIndex = async (kbRoot: string, defaultNodeType = 'capsule'): P
     },
   };
 
-  const indexPath = await writeIndex(kbRoot, index);
+  const shouldWrite = options.write !== false;
+  if (shouldWrite) {
+    await writeIndex(kbRoot, index);
+  }
 
-  return { index, issues, written: true };
+  return { index, issues, written: shouldWrite };
 };
 
 export const verifyIndexGeometry = async (kbRoot: string): Promise<{ valid: boolean; error?: string; index: A2CIndexPayload | null }> => {

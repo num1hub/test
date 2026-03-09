@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-03-09T14:53:53.276Z",
+  "generated_at": "2026-03-09T19:28:42.951Z",
   "root": ".",
-  "anchor_count": 67,
+  "anchor_count": 81,
   "anchors": [
     {
       "id": "arch:a2c.runtime",
@@ -138,6 +138,39 @@
       "note": "Technical reference for the repo-native A2C runtime."
     },
     {
+      "id": "doc:agents.ecosystem-signals",
+      "category": "doc",
+      "name": "agents.ecosystem-signals",
+      "file": "docs/AGENT_ECOSYSTEM_SIGNAL_BRIEF.md",
+      "line": 1,
+      "links": [
+        "doc:agents.operations",
+        "doc:n1hub.context",
+        "doc:n1hub.memory",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
+        "doc:openclaw.fork-notes"
+      ],
+      "state": "active",
+      "note": "Clean-room N1Hub brief that translates external AI-agent ecosystem signals into adopt-now, adapt-later, and watchlist decisions."
+    },
+    {
+      "id": "doc:agents.operations",
+      "category": "doc",
+      "name": "agents.operations",
+      "file": "docs/agents-operations.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.context",
+        "doc:n1hub.memory",
+        "doc:todo.agent-operating-modes",
+        "doc:todo.execution-protocol",
+        "doc:agents.ecosystem-signals"
+      ],
+      "state": "active",
+      "note": "Operational bring-up and execution posture for N1Hub AI and agent runtime lanes."
+    },
+    {
       "id": "doc:branching.real-dream-diff",
       "category": "doc",
       "name": "branching.real-dream-diff",
@@ -250,9 +283,13 @@
       "links": [
         "doc:n1hub.readme",
         "doc:n1hub.codex",
+        "doc:n1hub.context",
         "doc:n1hub.soul",
         "doc:n1hub.memory",
         "doc:n1hub.tools",
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
         "doc:workflow.issue-worker",
         "doc:workflow.ninfinity-night-shift",
         "doc:governance.anchors-spec",
@@ -277,9 +314,13 @@
       "links": [
         "doc:n1hub.readme",
         "doc:n1hub.agents",
+        "doc:n1hub.context",
         "doc:n1hub.soul",
         "doc:n1hub.memory",
         "doc:n1hub.tools",
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
         "doc:workflow.issue-worker",
         "doc:workflow.ninfinity-night-shift",
         "doc:governance.anchors-spec",
@@ -294,6 +335,29 @@
       ],
       "state": "active",
       "note": "Execution charter for deterministic implementation and verification inside N1Hub."
+    },
+    {
+      "id": "doc:n1hub.context",
+      "category": "doc",
+      "name": "n1hub.context",
+      "file": "CONTEXT.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:todo.index",
+        "doc:todo.agent-operating-modes",
+        "doc:workflow.issue-worker",
+        "doc:workflow.ninfinity-night-shift",
+        "doc:agents.ecosystem-signals",
+        "doc:agents.operations"
+      ],
+      "state": "active",
+      "note": "Deep context surface for mode selection, prompt assembly, and agent-role immersion inside N1Hub."
     },
     {
       "id": "doc:n1hub.low-blast-radius-architecture",
@@ -324,8 +388,11 @@
         "doc:n1hub.readme",
         "doc:n1hub.agents",
         "doc:n1hub.codex",
+        "doc:n1hub.context",
         "doc:n1hub.soul",
         "doc:n1hub.tools",
+        "doc:todo.index",
+        "doc:todo.agent-operating-modes",
         "doc:openclaw.fork-notes",
         "doc:n1hub.low-blast-radius-architecture",
         "doc:governance.anchors-spec"
@@ -342,9 +409,13 @@
       "links": [
         "doc:n1hub.agents",
         "doc:n1hub.codex",
+        "doc:n1hub.context",
         "doc:n1hub.soul",
         "doc:n1hub.memory",
         "doc:n1hub.tools",
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
         "doc:workflow.issue-worker",
         "doc:workflow.ninfinity-night-shift",
         "doc:governance.anchors-spec",
@@ -372,6 +443,7 @@
         "doc:n1hub.readme",
         "doc:n1hub.agents",
         "doc:n1hub.codex",
+        "doc:n1hub.context",
         "doc:n1hub.memory",
         "doc:n1hub.tools",
         "doc:governance.anchors-spec",
@@ -393,8 +465,10 @@
         "doc:n1hub.readme",
         "doc:n1hub.agents",
         "doc:n1hub.codex",
+        "doc:n1hub.context",
         "doc:n1hub.soul",
         "doc:n1hub.memory",
+        "doc:todo.agent-operating-modes",
         "doc:governance.anchors-spec",
         "doc:validator.reference",
         "doc:a2c.reference",
@@ -450,6 +524,216 @@
       ],
       "state": "active",
       "note": "Technical and operational reference for Symphony in N1Hub."
+    },
+    {
+      "id": "doc:todo.agent-operating-modes",
+      "category": "doc",
+      "name": "todo.agent-operating-modes",
+      "file": "TO-DO/AGENT_OPERATING_MODES.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.lane-ownership",
+        "doc:todo.dependency-map",
+        "doc:todo.hot-queue",
+        "doc:todo.execution-protocol",
+        "doc:n1hub.context",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.soul",
+        "doc:n1hub.memory",
+        "doc:n1hub.tools",
+        "doc:agents.ecosystem-signals"
+      ],
+      "state": "active",
+      "note": "Mode cards, prompt slices, and command packs for N1Hub AI agents."
+    },
+    {
+      "id": "doc:todo.capsule-native-execution",
+      "category": "doc",
+      "name": "todo.capsule-native-execution",
+      "file": "TO-DO/CAPSULE_NATIVE_EXECUTION.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
+        "doc:n1hub.context",
+        "doc:projects.reference",
+        "doc:branching.real-dream-diff",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "Design brief for moving planning and delegation from markdown into capsule-native execution surfaces."
+    },
+    {
+      "id": "doc:todo.decomposition-law",
+      "category": "doc",
+      "name": "todo.decomposition-law",
+      "file": "TO-DO/DECOMPOSITION_LAW.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.execution-protocol",
+        "doc:todo.task-template",
+        "doc:todo.agent-operating-modes",
+        "doc:n1hub.context",
+        "doc:n1hub.agents"
+      ],
+      "state": "active",
+      "note": "Decomposition law for keeping N1Hub hot tasks bounded, machine-actionable, and safe for AI-agent execution."
+    },
+    {
+      "id": "doc:todo.dependency-map",
+      "category": "doc",
+      "name": "todo.dependency-map",
+      "file": "TO-DO/DEPENDENCY_MAP.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.lane-ownership",
+        "doc:todo.hot-queue",
+        "doc:todo.roadmap-q2-2026",
+        "doc:n1hub.context"
+      ],
+      "state": "active",
+      "note": "Dependency map for N1Hub hot tasks so agents can see unlock order, fronts, and split points without inferring them from prose."
+    },
+    {
+      "id": "doc:todo.execution-protocol",
+      "category": "doc",
+      "name": "todo.execution-protocol",
+      "file": "TO-DO/EXECUTION_PROTOCOL.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.lane-ownership",
+        "doc:todo.dependency-map",
+        "doc:todo.hot-queue",
+        "doc:todo.task-template",
+        "doc:todo.agent-operating-modes",
+        "doc:n1hub.codex",
+        "doc:n1hub.context"
+      ],
+      "state": "active",
+      "note": "Execution and teamwork protocol for carrying one hot TO-DO task through bounded implementation inside N1Hub."
+    },
+    {
+      "id": "doc:todo.hot-queue",
+      "category": "doc",
+      "name": "todo.hot-queue",
+      "file": "TO-DO/HOT_QUEUE.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.lane-ownership",
+        "doc:todo.dependency-map",
+        "doc:todo.execution-protocol",
+        "doc:todo.roadmap-q2-2026",
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex"
+      ],
+      "state": "active",
+      "note": "Live hot execution queue for AI agents inside N1Hub."
+    },
+    {
+      "id": "doc:todo.index",
+      "category": "doc",
+      "name": "todo.index",
+      "file": "TO-DO/README.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "doc:n1hub.agents",
+        "doc:n1hub.codex",
+        "doc:n1hub.context",
+        "doc:n1hub.memory",
+        "doc:todo.decomposition-law",
+        "doc:todo.lane-ownership",
+        "doc:todo.dependency-map",
+        "doc:todo.hot-queue",
+        "doc:todo.execution-protocol",
+        "doc:todo.roadmap-q2-2026",
+        "doc:todo.task-template",
+        "doc:todo.real-dream-front",
+        "doc:todo.capsule-native-execution",
+        "doc:todo.agent-operating-modes"
+      ],
+      "state": "active",
+      "note": "Hot execution buffer and planning law for AI-agent work inside N1Hub."
+    },
+    {
+      "id": "doc:todo.lane-ownership",
+      "category": "doc",
+      "name": "todo.lane-ownership",
+      "file": "TO-DO/LANE_OWNERSHIP_MAP.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
+        "doc:n1hub.context",
+        "doc:n1hub.agents"
+      ],
+      "state": "active",
+      "note": "Ownership map for N1Hub agent lanes so hot tasks land on clear boundaries instead of vague agent personas."
+    },
+    {
+      "id": "doc:todo.real-dream-front",
+      "category": "doc",
+      "name": "todo.real-dream-front",
+      "file": "TO-DO/REAL_DREAM_FRONT.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:n1hub.context",
+        "doc:branching.real-dream-diff",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "Current Real/Dream field brief with corpus facts, hotspots, and first-wave execution order."
+    },
+    {
+      "id": "doc:todo.roadmap-q2-2026",
+      "category": "doc",
+      "name": "todo.roadmap-q2-2026",
+      "file": "TO-DO/ROADMAP_Q2_2026.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.dependency-map",
+        "doc:todo.hot-queue",
+        "doc:n1hub.low-blast-radius-architecture",
+        "doc:n1hub.readme"
+      ],
+      "state": "active",
+      "note": "Wave-based hot execution roadmap for AI-agent work inside N1Hub."
+    },
+    {
+      "id": "doc:todo.task-template",
+      "category": "doc",
+      "name": "todo.task-template",
+      "file": "TO-DO/TASK_TEMPLATE.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.decomposition-law",
+        "doc:todo.hot-queue",
+        "doc:todo.execution-protocol",
+        "doc:n1hub.codex",
+        "doc:n1hub.agents"
+      ],
+      "state": "active",
+      "note": "Template for new hot execution tasks inside the N1Hub TO-DO buffer."
     },
     {
       "id": "doc:validator.reference",

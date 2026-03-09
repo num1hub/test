@@ -10,6 +10,11 @@ interface WatchState {
   observedAt: number;
 }
 
+interface ScanOptions {
+  dryRun?: boolean;
+  allowStableOnFirstObservation?: boolean;
+}
+
 export class DebouncedDropzoneWatcher {
   private observed = new Map<string, WatchState>();
   private readonly settleMs: number;
@@ -30,9 +35,9 @@ export class DebouncedDropzoneWatcher {
     return age >= this.settleMs && sizeStable && mtimeStable;
   }
 
-  async scanOnce(): Promise<IngestAttempt[]> {
+  async scanOnce(options: ScanOptions = {}): Promise<IngestAttempt[]> {
     const layout = resolveRuntimeLayout(this.pipelineRoot);
-    await ensureRuntimeLayout(this.pipelineRoot);
+    await ensureRuntimeLayout(this.pipelineRoot, !options.dryRun);
     const candidates: string[] = [];
 
     const files = await fs.readdir(this.dropzoneDir).catch(() => [] as string[]);
@@ -49,8 +54,10 @@ export class DebouncedDropzoneWatcher {
         const stat = await fs.stat(inputPath);
         const previous = this.observed.get(inputPath);
         const now = Date.now();
+        const stableOnFirstObservation =
+          options.allowStableOnFirstObservation && now - stat.mtimeMs >= this.settleMs;
 
-        if (!previous) {
+        if (!previous && !stableOnFirstObservation) {
           this.observed.set(inputPath, {
             lastSize: stat.size,
             lastMtimeMs: stat.mtimeMs,
@@ -59,7 +66,7 @@ export class DebouncedDropzoneWatcher {
           continue;
         }
 
-        if (!this.isStable(previous, stat.size, stat.mtimeMs)) {
+        if (previous && !this.isStable(previous, stat.size, stat.mtimeMs)) {
           this.observed.set(inputPath, {
             lastSize: stat.size,
             lastMtimeMs: stat.mtimeMs,
@@ -68,7 +75,7 @@ export class DebouncedDropzoneWatcher {
           continue;
         }
 
-        const payload = await this.processReadyFile(inputPath, layout).catch(() => null);
+        const payload = await this.processReadyFile(inputPath, layout, { dryRun: options.dryRun }).catch(() => null);
         this.observed.delete(inputPath);
         if (payload) ready.push(payload);
       } catch {
@@ -88,12 +95,14 @@ export class DebouncedDropzoneWatcher {
     }
   }
 
-  private async processReadyFile(inputPath: string, layout: ReturnType<typeof resolveRuntimeLayout>): Promise<IngestAttempt | null> {
+  private async processReadyFile(
+    inputPath: string,
+    layout: ReturnType<typeof resolveRuntimeLayout>,
+    options: { dryRun?: boolean } = {},
+  ): Promise<IngestAttempt | null> {
     const sourceText = await fs.readFile(inputPath, 'utf-8');
     const archiveName = `${Date.now()}-${path.basename(inputPath)}-${computeHash(sourceText).slice(0, 10)}.txt`;
     const archived = path.join(layout.intakeArchiveRawDir, archiveName);
-    await fs.mkdir(layout.intakeArchiveRawDir, { recursive: true });
-    await fs.copyFile(inputPath, archived);
 
     const draftId = `${path.basename(inputPath)}.${computeHash(sourceText).slice(0, 10)}`;
     const draft = {
@@ -114,14 +123,8 @@ export class DebouncedDropzoneWatcher {
       source_text_preview: redactedText(String(sourceText).slice(0, 240)),
     };
 
-    await fs.mkdir(layout.pipelineQuarantineDir, { recursive: true });
-    await fs.writeFile(draft.draftPath, `${JSON.stringify(safePayload, null, 2)}\n`, 'utf-8');
-
     const reportPath = path.join(this.reportArtifactDir, `${draft.draftId}.json`);
-    await fs.mkdir(this.reportArtifactDir, { recursive: true });
     const report = { draft, status: 'staged', text_length: sourceText.length, created_at: isoUtcNow() };
-    await fs.writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf-8');
-
     const queueLine = JSON.stringify({
       event: 'QUEUED',
       draft_id: draft.draftId,
@@ -130,7 +133,15 @@ export class DebouncedDropzoneWatcher {
       source_hash: draft.sourceHash,
     });
 
-    await fs.appendFile(layout.queueLedgerPath, `${queueLine}\n`, 'utf-8');
+    if (!options.dryRun) {
+      await fs.mkdir(layout.intakeArchiveRawDir, { recursive: true });
+      await fs.copyFile(inputPath, archived);
+      await fs.mkdir(layout.pipelineQuarantineDir, { recursive: true });
+      await fs.writeFile(draft.draftPath, `${JSON.stringify(safePayload, null, 2)}\n`, 'utf-8');
+      await fs.mkdir(this.reportArtifactDir, { recursive: true });
+      await fs.writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`, 'utf-8');
+      await fs.appendFile(layout.queueLedgerPath, `${queueLine}\n`, 'utf-8');
+    }
 
     return {
       inputPath,
@@ -156,7 +167,10 @@ export const runDaemonWatcher = async (argv: string[]): Promise<{
   const once = argv.includes('--once');
   const dryRun = argv.includes('--dry-run');
 
-  const staged = await watcher.scanOnce();
+  const staged = await watcher.scanOnce({
+    dryRun,
+    allowStableOnFirstObservation: once,
+  });
   if (!dryRun) {
     // intentionally keep staging only; ingestion pipeline owns actual transform.
     for (const item of staged) {

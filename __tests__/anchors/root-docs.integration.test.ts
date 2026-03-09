@@ -12,21 +12,21 @@ const TOKEN = "anchor";
 function createValidBundle() {
   return {
     readme: [
-      `<!-- @${TOKEN} doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec -->`,
+      `<!-- @${TOKEN} doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec -->`,
       "# N1Hub",
-      "See AGENTS.md, CODEX.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
+      "See AGENTS.md, CODEX.md, CONTEXT.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
       "Run npm run extract:anchors, npm run validate:anchors, npm run verify:root-docs, npm run test:anchors, npm run typecheck, npm run anchors:coverage, npm run anchors:kpis, npm run anchors:intelligence, npm run anchors:scorecard, npm run anchors:assert-scorecard, npm run anchors:lint-usage, npm run terminology:lint, npm run anchors:snapshot, npm run check:anchors, and npm run check:anchors:full.",
     ].join("\n"),
     agents: [
-      `<!-- @${TOKEN} doc:n1hub.agents links=doc:n1hub.readme,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:governance.anchors-spec -->`,
+      `<!-- @${TOKEN} doc:n1hub.agents links=doc:n1hub.readme,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:governance.anchors-spec -->`,
       "# N1Hub Agent Guide",
-      "Refer to README.md, CODEX.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
+      "Refer to README.md, CODEX.md, CONTEXT.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
       "Mandatory command surface: npm run extract:anchors, npm run validate:anchors, npm run verify:root-docs, npm run test:anchors, npm run typecheck, npm run anchors:coverage, npm run anchors:kpis, npm run anchors:intelligence, npm run anchors:scorecard, npm run anchors:assert-scorecard, npm run anchors:lint-usage, npm run terminology:lint, npm run anchors:snapshot, npm run check:anchors, and npm run check:anchors:full.",
     ].join("\n"),
     codex: [
-      `<!-- @${TOKEN} doc:n1hub.codex links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:governance.anchors-spec -->`,
+      `<!-- @${TOKEN} doc:n1hub.codex links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:governance.anchors-spec -->`,
       "# N1Hub Codex Charter",
-      "See README.md, AGENTS.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
+      "See README.md, AGENTS.md, CONTEXT.md, SOUL.md, MEMORY.md, TOOLS.md, WORKFLOW.md, NINFINITY_WORKFLOW.md, docs/ANCHORS_SPEC.md, docs/TERMINOLOGY.md, docs/ANCHOR_NAMING_GRAMMAR.md, docs/ANCHOR_GOVERNANCE_PATTERNS.md, docs/ANCHOR_RISK_REGISTER.md, and docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md.",
       "Gate: npm run extract:anchors.",
       "Gate: npm run validate:anchors.",
       "Gate: npm run verify:root-docs.",

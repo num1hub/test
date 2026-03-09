@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
-import { runRecon, buildWorkspaceReport } from './recon';
+import { runRecon } from './recon';
 import { runAudit } from './audit';
 import { buildIndex } from './index';
 import { runDaemonWatcher } from './watch';
@@ -25,10 +25,10 @@ export const runAutonomousCycle = async (argv: string[]): Promise<A2CCommandRepo
   await ensureRuntimeLayout(kbRoot);
 
   const recon = await runRecon(workspaceRoot);
-  const indexBuild = await buildIndex(kbRoot);
-  const watcher = await runDaemonWatcher(['--once']);
+  const indexBuild = await buildIndex(kbRoot, 'capsule', { write: !dryRun });
+  const watcher = await runDaemonWatcher(['--once', ...(dryRun ? ['--dry-run'] : [])]);
   const audit = await runAudit(['--expected-dialect', 'repo_native']);
-  const weaver = await runWeaver();
+  const weaver = await runWeaver({ kbRoot, write: !dryRun });
   const sweeper = await runApoptosis(['--dry-run']);
 
   const manifest = {
@@ -48,6 +48,11 @@ export const runAutonomousCycle = async (argv: string[]): Promise<A2CCommandRepo
       audit,
       weaver: { status: weaver.status },
       sweeper: { status: sweeper.status },
+      persistence: {
+        index_written: indexBuild.written,
+        manifest_written: !dryRun,
+        history_written: !dryRun,
+      },
     },
     warnings: [],
     errors: audit.errors,
@@ -58,14 +63,16 @@ export const runAutonomousCycle = async (argv: string[]): Promise<A2CCommandRepo
     },
   };
 
-  const layout = await ensureRuntimeLayout(kbRoot);
-  const report = path.join(layout.tasksDir, `autonomous-${Date.now()}.json`);
-  await fs.mkdir(layout.tasksDir, { recursive: true });
-  await fs.writeFile(report, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8');
+  if (!dryRun) {
+    const layout = await ensureRuntimeLayout(kbRoot);
+    const report = path.join(layout.tasksDir, `autonomous-${Date.now()}.json`);
+    await fs.mkdir(layout.tasksDir, { recursive: true });
+    await fs.writeFile(report, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8');
 
-  const history = path.join(layout.autonomousRunHistoryPath);
-  const line = JSON.stringify({ timestamp: isoUtcNow(), run: crypto.createHash('sha1').update(JSON.stringify(manifest)).digest('hex') });
-  await fs.appendFile(history, `${line}\n`);
+    const history = path.join(layout.autonomousRunHistoryPath);
+    const line = JSON.stringify({ timestamp: isoUtcNow(), run: crypto.createHash('sha1').update(JSON.stringify(manifest)).digest('hex') });
+    await fs.appendFile(history, `${line}\n`);
+  }
 
   return manifest;
 };

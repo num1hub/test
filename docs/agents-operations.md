@@ -1,3 +1,4 @@
+<!-- @anchor doc:agents.operations links=doc:n1hub.context,doc:n1hub.memory,doc:todo.agent-operating-modes,doc:todo.execution-protocol,doc:agents.ecosystem-signals note="Operational bring-up and execution posture for N1Hub AI and agent runtime lanes." -->
 # N1Hub AI and Agent Operations
 
 This is the practical bring-up path for running LLM-backed agents on N1Hub.com.
@@ -7,6 +8,19 @@ The model is intentionally split into two layers:
 - the N1Hub web app manages AI Wallet secrets and protected API routes
 - Symphony and N-Infinity are long-running background services that use the same repository, data
   directory, and wallet state
+
+## Operational Truth Rule
+
+Agents operating inside N1Hub should not report status optimistically.
+
+If an agent says something is running, reviewed, or complete, that claim should be backed by proof such as:
+
+- the command used
+- a report or artifact path
+- a queue or teamwork artifact
+- an endpoint or process id
+
+No proof means the state should be reported as planned, pending, or blocked instead.
 
 ## What Must Be Running
 
@@ -171,6 +185,39 @@ curl -s http://127.0.0.1:3000/api/ai/generate \
 ```
 
 ## Background Agent Bring-Up
+
+## Review and Iteration Posture
+
+N1Hub is moving toward stronger autonomous execution, but two safety rules remain active:
+
+1. serious non-trivial work should gain a hostile second pass from an opposite-model reviewer when that lane is available
+2. recurring automated work should prefer repeated one-pass scheduling over hidden endless daemons
+
+Repo-native execution surfaces for those directions are:
+
+- `skills/adversarial-review/SKILL.md`
+- `TO-DO/AUTOMATED_UPDATE_WORKFLOW.md`
+- `docs/AGENT_ECOSYSTEM_SIGNAL_BRIEF.md`
+
+For N1 specifically, the current cold-start synchronization surfaces now include:
+
+- `data/private/agents/n1/teamwork.latest.json`
+- `data/private/agents/n1/repo-sync.latest.json`
+- `data/private/agents/n1/orchestration.latest.json`
+- `reports/n1/automated-update/*.md`
+- `reports/n1/repo-sync/*.md`
+- `reports/n1/orchestration/*.md`
+
+These artifacts exist to compress live project state and lane-routing context for the next N1 invocation. They do not outrank live code, tests, or governed docs.
+
+Useful N1 command surface:
+
+- `./autoupdate`
+- `./autoupdate sync`
+- `./autoupdate orchestrate`
+- `npm run n1:update:once`
+- `npm run n1:sync`
+- `npm run n1:orchestrate`
 
 ### N-Infinity
 

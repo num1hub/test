@@ -13,11 +13,26 @@ export const ROOT_DOC_FILES = ["README.md", "AGENTS.md", "CODEX.md"] as const;
 
 export const INSTRUCTION_SURFACE_FILES = [
   ...ROOT_DOC_FILES,
+  "CONTEXT.md",
   "SOUL.md",
   "MEMORY.md",
   "TOOLS.md",
   "WORKFLOW.md",
   "NINFINITY_WORKFLOW.md",
+] as const;
+
+export const TODO_EXECUTION_FILES = [
+  "TO-DO/README.md",
+  "TO-DO/DECOMPOSITION_LAW.md",
+  "TO-DO/LANE_OWNERSHIP_MAP.md",
+  "TO-DO/DEPENDENCY_MAP.md",
+  "TO-DO/HOT_QUEUE.md",
+  "TO-DO/EXECUTION_PROTOCOL.md",
+  "TO-DO/ROADMAP_Q2_2026.md",
+  "TO-DO/TASK_TEMPLATE.md",
+  "TO-DO/REAL_DREAM_FRONT.md",
+  "TO-DO/CAPSULE_NATIVE_EXECUTION.md",
+  "TO-DO/AGENT_OPERATING_MODES.md",
 ] as const;
 
 export const GOVERNANCE_DOC_FILES = [
@@ -34,6 +49,8 @@ export const REFERENCE_DOC_FILES = [
   "docs/symphony.md",
   "docs/projects.md",
   "docs/real-dream-diff.md",
+  "docs/agents-operations.md",
+  "docs/AGENT_ECOSYSTEM_SIGNAL_BRIEF.md",
   "docs/openclaw-fork.md",
   "docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md",
 ] as const;
@@ -131,6 +148,7 @@ export const ROOT_DOC_REQUIRED_MENTIONS = {
   readme: [
     "AGENTS.md",
     "CODEX.md",
+    "CONTEXT.md",
     "SOUL.md",
     "MEMORY.md",
     "TOOLS.md",
@@ -146,6 +164,7 @@ export const ROOT_DOC_REQUIRED_MENTIONS = {
   agents: [
     "README.md",
     "CODEX.md",
+    "CONTEXT.md",
     "SOUL.md",
     "MEMORY.md",
     "TOOLS.md",
@@ -161,6 +180,7 @@ export const ROOT_DOC_REQUIRED_MENTIONS = {
   codex: [
     "README.md",
     "AGENTS.md",
+    "CONTEXT.md",
     "SOUL.md",
     "MEMORY.md",
     "TOOLS.md",
@@ -177,6 +197,7 @@ export const ROOT_DOC_REQUIRED_MENTIONS = {
 
 export const GOVERNED_TARGET_FILES = uniqueSorted([
   ...INSTRUCTION_SURFACE_FILES,
+  ...TODO_EXECUTION_FILES,
   ...GOVERNANCE_DOC_FILES,
   ...REFERENCE_DOC_FILES,
   ...ARCHITECTURE_BOUNDARY_FILES,
@@ -187,6 +208,7 @@ export const GOVERNED_TARGET_FILES = uniqueSorted([
 
 export const USAGE_LINT_TARGET_FILES = uniqueSorted([
   ...INSTRUCTION_SURFACE_FILES,
+  ...TODO_EXECUTION_FILES,
   ...GOVERNANCE_DOC_FILES,
   "docs/openclaw-fork.md",
   ".github/workflows/validate-capsules.yml",
@@ -194,6 +216,7 @@ export const USAGE_LINT_TARGET_FILES = uniqueSorted([
 
 export const TERMINOLOGY_LINT_EXPLICIT_FILES = uniqueSorted([
   ...INSTRUCTION_SURFACE_FILES,
+  ...TODO_EXECUTION_FILES,
   "docs/ANCHORS_SPEC.md",
   "docs/ANCHOR_NAMING_GRAMMAR.md",
   "docs/ANCHOR_GOVERNANCE_PATTERNS.md",

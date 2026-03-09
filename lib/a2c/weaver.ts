@@ -5,6 +5,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import type { A2CCommandReport } from './types';
 
+interface WeaverOptions {
+  kbRoot?: string;
+  write?: boolean;
+}
+
 const jaccard = (left: Set<string>, right: Set<string>): number => {
   const intersection = [...left].filter((token) => right.has(token)).length;
   const union = new Set([...left, ...right]).size;
@@ -33,11 +38,11 @@ export const detectWeaveCandidates = async (kbRoot: string, threshold = 0.33): P
   return out.sort((a, b) => b.score - a.score);
 };
 
-export const runWeaver = async (): Promise<A2CCommandReport> => {
-  const kbRoot = process.cwd();
+export const runWeaver = async (options: WeaverOptions = {}): Promise<A2CCommandReport> => {
+  const kbRoot = options.kbRoot ?? process.cwd();
   const candidates = await detectWeaveCandidates(kbRoot, 0.28);
   const layout = resolveRuntimeLayout(kbRoot);
-  await fs.mkdir(layout.reportsDir, { recursive: true });
+  const shouldWrite = options.write !== false;
 
   const md = [
     '# Weaver Candidate Report',
@@ -46,8 +51,11 @@ export const runWeaver = async (): Promise<A2CCommandReport> => {
   ];
 
   const jsonOut = path.join(layout.reportsDir, 'weaver_report.json');
-  await fs.writeFile(jsonOut, `${JSON.stringify({ candidates }, null, 2)}\n`, 'utf-8');
-  await fs.writeFile(path.join(layout.reportsDir, 'WEAVER_REPORT.md'), md.join('\n'), 'utf-8');
+  if (shouldWrite) {
+    await fs.mkdir(layout.reportsDir, { recursive: true });
+    await fs.writeFile(jsonOut, `${JSON.stringify({ candidates }, null, 2)}\n`, 'utf-8');
+    await fs.writeFile(path.join(layout.reportsDir, 'WEAVER_REPORT.md'), md.join('\n'), 'utf-8');
+  }
 
   return {
     skill_id: 'anything-to-capsules',

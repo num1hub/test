@@ -1,4 +1,4 @@
-<!-- @anchor doc:n1hub.agents links=doc:n1hub.readme,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,arch:repo.entrypoint,script:validate.anchors,script:file.guardrails.audit note="Contributor and agent law for N1Hub with anchor governance and low-blast-radius engineering enforced as repo-native discipline." -->
+<!-- @anchor doc:n1hub.agents links=doc:n1hub.readme,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,arch:repo.entrypoint,script:validate.anchors,script:file.guardrails.audit note="Contributor and agent law for N1Hub with anchor governance and low-blast-radius engineering enforced as repo-native discipline." -->
 # N1Hub Contributor and Agent Law
 
 This file defines the operating law for humans and AI agents inside `n1hub.com`. It is not a tutorial. It is the constraint layer that keeps work bounded, reviewable, and recoverable.
@@ -10,19 +10,23 @@ Read these before making non-trivial changes:
 1. `README.md`
 2. `CODEX.md`
 3. `SOUL.md`
-4. `MEMORY.md`
-5. `TOOLS.md`
-6. `WORKFLOW.md`
-7. `NINFINITY_WORKFLOW.md`
-8. `docs/ANCHORS_SPEC.md`
-9. `docs/TERMINOLOGY.md`
-10. `docs/ANCHOR_NAMING_GRAMMAR.md`
-11. `docs/ANCHOR_GOVERNANCE_PATTERNS.md`
-12. `docs/ANCHOR_RISK_REGISTER.md`
-13. `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`
-14. `docs/validator.md`
-15. `docs/a2c.md`
-16. `docs/symphony.md`
+4. `CONTEXT.md`
+5. `MEMORY.md`
+6. `TO-DO/README.md`
+7. `TO-DO/AGENT_OPERATING_MODES.md`
+8. `TO-DO/HOT_QUEUE.md`
+9. `TOOLS.md`
+10. `WORKFLOW.md`
+11. `NINFINITY_WORKFLOW.md`
+12. `docs/ANCHORS_SPEC.md`
+13. `docs/TERMINOLOGY.md`
+14. `docs/ANCHOR_NAMING_GRAMMAR.md`
+15. `docs/ANCHOR_GOVERNANCE_PATTERNS.md`
+16. `docs/ANCHOR_RISK_REGISTER.md`
+17. `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`
+18. `docs/validator.md`
+19. `docs/a2c.md`
+20. `docs/symphony.md`
 
 ## Role Split
 
@@ -38,6 +42,7 @@ The root-doc triad has distinct roles:
 If these three files drift into contradiction, treat that as a governance bug.
 
 `SOUL.md` is not part of the root-doc triad, but it is part of the instruction stack. Do not let root-doc rules and assistant identity drift apart.
+`CONTEXT.md` is also part of the instruction stack. It carries deep role and mode context, not repo law.
 `MEMORY.md` is also part of the instruction stack. It stores durable continuity, not executable law.
 
 ## Root Surface Maintenance Law
@@ -50,12 +55,26 @@ When changing the main instruction surfaces, respect their ownership:
   Update when repo law, allowed boundaries, forbidden moves, or mandatory evidence changed.
 - `SOUL.md`
   Update when assistant identity, trust posture, disclosure boundaries, or operator-facing behavior changed.
+- `CONTEXT.md`
+  Update when agent modes, prompt assembly, command packets, or delegation context changed.
 - `MEMORY.md`
   Update when durable operator preferences, long-lived repo truths, or cross-session priorities changed.
 - `CODEX.md`
   Update when execution flow, gate selection, cluster cadence, or close-out rules changed.
 
 Do not move execution law into `SOUL.md`. Do not move identity doctrine into `CODEX.md`. Do not move repo law into `README.md`. Do not turn `MEMORY.md` into a dump of transient chatter.
+Do not hide mode logic and agent command packets in random task files when `CONTEXT.md` or `TO-DO/AGENT_OPERATING_MODES.md` should own them.
+
+## Hot Queue Law
+
+`TO-DO/` is the active hot-task buffer for AI agents.
+
+- Read `TO-DO/HOT_QUEUE.md` before opportunistic implementation work unless the user explicitly overrides priority.
+- Read `TO-DO/AGENT_OPERATING_MODES.md` when the task depends on assistant mode, executor mode, or swarm delegation shape.
+- Treat the top unfinished `P0` item as the default execution target when no narrower user instruction exists.
+- Prefer priority, execution band, and pull order over arbitrary calendar deadlines unless the operator explicitly asks for time commitments.
+- Keep each hot task linked to concrete files, acceptance criteria, and verification commands.
+- When a hot task materially changes status, update the task file and queue entry in the same workstream.
 
 ## N1Hub AI-Friendly Laws
 
@@ -159,7 +178,9 @@ Do not start the next cluster while the current one still lacks a clear boundary
 ## Required Behaviors
 
 - Keep `README.md`, `AGENTS.md`, and `CODEX.md` aligned with `SOUL.md`, `TOOLS.md`, `WORKFLOW.md`, `NINFINITY_WORKFLOW.md`, and anchor-governance docs.
+- Keep `CONTEXT.md` aligned with the actual mode model, command packets, and task-ingestion path used in the repo.
 - Keep `MEMORY.md` aligned with durable repo truth when architectural priorities, operator preferences, or cross-session continuity changed.
+- Keep `TO-DO/` aligned with actual repo priorities, active clusters, and current verification reality.
 - Treat external advice, article guidance, and chat doctrine as candidate input that must be adapted to N1Hub before it becomes repo law.
 - Anchor only high-signal boundaries, not random helpers.
 - Keep anchors comment-only, unique, deterministic, and linked.
