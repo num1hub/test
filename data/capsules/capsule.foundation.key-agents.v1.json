@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.key-agents.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-08T22:43:00Z",
+    "updated_at": "2026-03-09T21:05:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
     "source": {
@@ -15,20 +15,21 @@
       "type": "architect_prompt"
     },
     "priority": "high",
-    "progress": 41,
+    "progress": 48,
     "estimatedHours": 260,
-    "actualHours": 84,
+    "actualHours": 92,
     "dueDate": "2026-09-07",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, the vault-stewardship swarm, and the review or governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction, retrieval, and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- vault reading, capsule decomposition, markup, and graph refactoring\n- review, validation, branch discipline, and promotion safety\n\n## 3. Main Lanes\n- **User lane**: Personal AI Assistant, Chat to Capsules, and Capsule Librarian Agent.\n- **Mining lane**: DeepMine Prospector, Miner, and Foreman.\n- **Planning lane**: Roadmap Planner Agent, Planning Horizon Engine, and Daily Planner Agent.\n- **Vault stewardship lane**: Vault Stewardship Swarm, Capsule Decomposition Agent, Capsule Markup Agent, Capsule Graph Refactor Agent, and Vault Update Agent.\n- **Governance lane**: Branch Steward Agent, Validation Gatekeeper Agent, and Review Agent.\n- **Background swarm lane**: N-Infinity roles plus Background Agent Runtime.\n\n## 4. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the vault lane, it now explicitly shows that capsule improvement is a full-cycle system: read the vault, plan jobs, execute bounded Dream-safe work, review the result, and only then consider promotion.\n\n## 5. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about AI and instead naming the bounded roles that actually read, dig, plan, critique, refactor, validate, and maintain the graph.\n"
+    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, the vault-stewardship swarm, and the review or governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction, retrieval, and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- vault reading, capsule decomposition, markup, and graph refactoring\n- review, validation, branch discipline, and promotion safety\n\n## 3. Main Lanes\n- **User lane**: Personal AI Assistant, Chat to Capsules, and Capsule Librarian Agent.\n- **Mining lane**: DeepMine Prospector, Miner, and Foreman.\n- **Planning lane**: Roadmap Planner Agent, Planning Horizon Engine, and Daily Planner Agent.\n- **Vault stewardship lane**: Vault Stewardship Swarm, Capsule Decomposition Agent, Capsule Markup Agent, Capsule Graph Refactor Agent, and Vault Update Agent.\n- **Governance lane**: Branch Steward Agent, Validation Gatekeeper Agent, and Review Agent.\n- **Background swarm lane**: N-Infinity roles plus Background Agent Runtime.\n\n## 4. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the vault lane, it now explicitly shows that capsule improvement is a full-cycle system: read the vault, plan jobs, execute bounded Dream-safe work, review the result, and only then consider promotion.\n\n## 5. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about AI and instead naming the bounded roles that actually read, dig, plan, critique, refactor, validate, and maintain the graph.\n\n## 6. Real Canonical Rule\nReal owns the current legible role map for N1Hub's live agent system. That means this hub is the canonical source for the lanes that actually exist now, the current separation between user, mining, planning, vault stewardship, governance, and background swarm work, and the bounded full-cycle stewardship loop already reflected in queue law and runtime surfaces. Dream may continue to explore future swarm coordination, but Real is the source of truth for the present role topology.\n"
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit. It gathers the user lane, mining lane, planning lane, vault stewardship lane, governance lane, and background swarm lane into one graph-visible system. This matters because the project's most important work is no longer generic AI usage, but disciplined capsule work performed by bounded roles. The hub now makes full-cycle vault stewardship legible: read the vault, generate jobs, execute Dream-safe improvements, review outcomes, and only then consider promotion into trusted reality.",
+    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit and now serves as the canonical real-side map of the live role topology. It gathers the user lane, mining lane, planning lane, vault stewardship lane, governance lane, and background swarm lane into one graph-visible system. This matters because the project's most important work is no longer generic AI usage, but disciplined capsule work performed by bounded roles with clear ownership, review, and promotion boundaries.",
     "keywords": [
       "key-agents",
+      "real-canonical",
       "agent-hub",
       "user-lane",
       "mining-lane",
@@ -165,7 +166,15 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-09T21:05:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-024",
+        "rationale": "The real Key Agents hub now explicitly owns the live role topology that is already reflected in lane ownership, queue law, and N1 orchestration surfaces. Dream remains useful as future swarm-coordination doctrine, but it should no longer be read as the canonical statement of the current agent map."
+      }
+    ]
   },
-  "integrity_sha3_512": "490e8446f55dbbab0212138838b2cc2028e468194329786eb4c24083dfc494d6dd53c2fe0d15489c271178a2e2ed0e75116a96d7be30a223ecb0712cb1d08ea6"
+  "integrity_sha3_512": "7c05d3ef28f9cdea554966ed156f8290e7ff070ed38004f9d54bb4112ceefc744250e5b9be42d07a639ed005e4bede4e023b8b1c231626f6c00c2d722e4ff40e"
 }

@@ -115,6 +115,48 @@ export interface RunAutomatedUpdateOptions {
   repoStateProvider?: (rootDir: string) => RepoStateSnapshot;
 }
 
+export interface ScheduledIterationExecutionSnapshot {
+  status: "EXECUTED" | "SKIPPED_NOT_DUE";
+  reason: string;
+  selectedTaskId: string | null;
+  automatedUpdateIterationId: string | null;
+  automatedUpdateLatestPath: string | null;
+  automatedUpdateReportPath: string | null;
+  repoSyncLatestPath: string | null;
+  orchestrationLatestPath: string | null;
+}
+
+export interface N1ScheduledIterationSnapshot {
+  scheduleId: string;
+  createdAt: string;
+  workflow: "n1_scheduled_iteration";
+  intervalMinutes: number;
+  due: boolean;
+  force: boolean;
+  previousRunAt: string | null;
+  nextEligibleAt: string;
+  command: string;
+  execution: ScheduledIterationExecutionSnapshot;
+}
+
+export interface ScheduledIterationResult {
+  snapshot: N1ScheduledIterationSnapshot;
+  latestPath: string;
+  historyPath: string;
+  statePath: string;
+  reportPath: string;
+}
+
+export interface RunScheduledIterationOptions {
+  rootDir: string;
+  intervalMinutes: number;
+  taskId?: string;
+  dryRun?: boolean;
+  force?: boolean;
+  now?: Date;
+  repoStateProvider?: (rootDir: string) => RepoStateSnapshot;
+}
+
 export interface SkillScaffoldResult {
   name: string;
   slug: string;
@@ -218,6 +260,15 @@ export interface OrchestrationLaneSnapshot {
   nextAction: string;
 }
 
+export interface N1InputRoutingRule {
+  routeId: string;
+  operatorShape: string;
+  primaryMode: string;
+  defaultSkill: string;
+  handoffTarget: string;
+  outcome: string;
+}
+
 export interface N1OrchestrationSnapshot {
   orchestrationId: string;
   createdAt: string;
@@ -238,6 +289,11 @@ export interface N1OrchestrationSnapshot {
     primaryLane: string;
     secondaryLanes: string[];
     rationale: string[];
+  };
+  routingModel: {
+    decisionRule: string;
+    routes: N1InputRoutingRule[];
+    deferConditions: string[];
   };
   neuralOrchestraPacket: {
     loadOrder: string[];

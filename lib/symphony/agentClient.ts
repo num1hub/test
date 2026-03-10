@@ -1,4 +1,10 @@
 import { spawn, type ChildProcessWithoutNullStreams } from 'child_process';
+import {
+  asRecord,
+  buildNotificationResult,
+  extractString,
+  type TurnCompletion,
+} from './agentClient-events';
 import type { AgentEvent, Logger, SymphonyConfig } from './types';
 import { isoNow } from './utils';
 
@@ -24,60 +30,12 @@ interface PendingRequest {
   timeout: NodeJS.Timeout;
 }
 
-interface TurnCompletion {
-  success: boolean;
-  status: string;
-  message: string | null;
-}
-
 interface ActiveTurn {
   turnId: string;
   resolve: (value: TurnCompletion) => void;
   reject: (error: Error) => void;
   timeout: NodeJS.Timeout;
   title: string;
-}
-
-function asRecord(value: unknown): Record<string, unknown> | null {
-  if (!value || typeof value !== 'object' || Array.isArray(value)) return null;
-  return value as Record<string, unknown>;
-}
-
-function extractString(value: unknown, ...path: string[]): string | null {
-  let current: unknown = value;
-  for (const key of path) {
-    current = asRecord(current)?.[key];
-  }
-  return typeof current === 'string' && current.trim() ? current.trim() : null;
-}
-
-function findUsage(value: unknown): { input_tokens?: number; output_tokens?: number; total_tokens?: number } | undefined {
-  const candidates = [
-    asRecord(value),
-    asRecord(asRecord(value)?.usage),
-    asRecord(asRecord(value)?.total_token_usage),
-    asRecord(asRecord(value)?.totalTokenUsage),
-    asRecord(asRecord(value)?.tokenUsage),
-  ].filter((entry): entry is Record<string, unknown> => entry !== null);
-
-  for (const candidate of candidates) {
-    const input = candidate.input_tokens ?? candidate.inputTokens;
-    const output = candidate.output_tokens ?? candidate.outputTokens;
-    const total = candidate.total_tokens ?? candidate.totalTokens;
-    if (
-      typeof input === 'number' ||
-      typeof output === 'number' ||
-      typeof total === 'number'
-    ) {
-      return {
-        input_tokens: typeof input === 'number' ? input : undefined,
-        output_tokens: typeof output === 'number' ? output : undefined,
-        total_tokens: typeof total === 'number' ? total : undefined,
-      };
-    }
-  }
-
-  return undefined;
 }
 
 function createError(code: string, message: string): Error & { code: string } {
@@ -302,117 +260,33 @@ export class CodexAppServerClient {
   }
 
   private handleNotification(method: string, params: unknown): void {
-    const timestamp = isoNow();
-    const usage = findUsage(params);
+    const result = buildNotificationResult({
+      method,
+      params,
+      timestamp: isoNow(),
+      pid: this.child?.pid ? String(this.child.pid) : null,
+      threadId: this.threadId,
+    });
 
-    if (method === 'turn/started') {
-      this.onEvent({
-        event: 'turn_started',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        thread_id: extractString(params, 'threadId') ?? this.threadId ?? undefined,
-        turn_id: extractString(params, 'turn', 'id') ?? undefined,
-        usage,
-      });
-      return;
-    }
+    this.onEvent(result.event);
 
-    if (method === 'turn/completed') {
-      const status = extractString(params, 'turn', 'status') ?? 'failed';
-      const message = extractString(params, 'turn', 'lastAgentMessage') ?? extractString(params, 'turn', 'output');
-
-      this.onEvent({
-        event:
-          status === 'completed'
-            ? 'turn_completed'
-            : status === 'interrupted'
-              ? 'turn_cancelled'
-              : 'turn_failed',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        thread_id: extractString(params, 'threadId') ?? this.threadId ?? undefined,
-        turn_id: extractString(params, 'turn', 'id') ?? undefined,
-        message,
-        usage,
-        raw: params,
-      });
-
-      if (this.activeTurn) {
-        const outcome: TurnCompletion = {
-          success: status === 'completed',
-          status,
-          message,
-        };
-        if (status === 'completed') {
-          this.activeTurn.resolve(outcome);
-        } else {
-          this.activeTurn.reject(createError(status === 'interrupted' ? 'turn_cancelled' : 'turn_failed', message ?? status));
-        }
+    if (!result.completion || !this.activeTurn) {
+      if (result.errorCode) {
+        this.activeTurn?.reject(
+          createError(result.errorCode, result.completion?.message ?? method),
+        );
       }
       return;
     }
 
-    if (method === 'turn/failed' || method === 'turn/cancelled') {
-      const message = extractString(params, 'error', 'message') ?? extractString(params, 'message') ?? method;
-      this.onEvent({
-        event: method === 'turn/cancelled' ? 'turn_cancelled' : 'turn_failed',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        thread_id: extractString(params, 'threadId') ?? this.threadId ?? undefined,
-        turn_id: extractString(params, 'turnId') ?? extractString(params, 'turn', 'id') ?? undefined,
-        message,
-        usage,
-        raw: params,
-      });
-      this.activeTurn?.reject(
-        createError(method === 'turn/cancelled' ? 'turn_cancelled' : 'turn_failed', message),
-      );
+    if (!result.errorCode) {
+      this.activeTurn.resolve(result.completion);
       return;
     }
 
-    if (method === 'thread/tokenUsage/updated') {
-      this.onEvent({
-        event: 'notification',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        usage,
-        raw: params,
-      });
-      return;
-    }
-
-    if (method === 'account/rateLimits/updated') {
-      this.onEvent({
-        event: 'notification',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        rate_limits: asRecord(params)?.rateLimits ?? null,
-        raw: params,
-      });
-      return;
-    }
-
-    if (method === 'item/agentMessage/delta') {
-      this.onEvent({
-        event: 'notification',
-        timestamp,
-        codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-        thread_id: extractString(params, 'threadId') ?? this.threadId ?? undefined,
-        turn_id: extractString(params, 'turnId') ?? undefined,
-        message: extractString(params, 'delta'),
-        raw: params,
-      });
-      return;
-    }
-
-    this.onEvent({
-      event: 'other_message',
-      timestamp,
-      codex_app_server_pid: this.child?.pid ? String(this.child.pid) : null,
-      message: method,
-      usage,
-      raw: params,
-    });
+    this.activeTurn.reject(
+      createError(result.errorCode, result.completion.message ?? result.completion.status),
+    );
   }
 
   private async handleServerRequest(message: JsonRpcRequest): Promise<void> {

@@ -2,7 +2,7 @@
 
 - Priority: `P2`
 - Execution Band: `LATER`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Validator Boundary Agent`
 - Cluster: `#2 Validator/API boundary package`
 
@@ -77,6 +77,32 @@ Validator law is a core repo boundary. If CLI, API, docs, and gates drift, the e
 - refresh docs or OpenAPI artifacts when the public validator contract changes
 - record any intentional parity exceptions explicitly instead of leaving them implicit
 
+## Canonical Contract Decision
+
+- API canonical single-capsule contract:
+  - `POST /api/validate` uses the `{ capsule, options?, autoFix? }` envelope as the documented public request shape
+  - raw capsule-body submission remains backward-compatible route behavior, but it is compatibility mode rather than the canonical documented contract
+- CLI/API parity rule:
+  - local CLI mode and API mode share the same validator engine
+  - remote CLI mode delegates only single-capsule validation to `POST /api/validate`
+  - `--fix`, `--report`, and local file mutation/watch behavior remain CLI-only surfaces and are intentionally not mirrored by the remote API contract
+- owner-role boundary rule:
+  - `POST /api/validate/batch` and `POST /api/validate/fix` are explicit owner-role API surfaces
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - refreshed the validator OpenAPI generator so the generated spec matches live route behavior more closely
+  - documented the canonical request envelope for `POST /api/validate`
+  - documented the intentional CLI parity exception for local-only `--fix`, `--report`, and watch behavior
+  - added validator API coverage for batch success, fix role enforcement, fix response shape, and stats `limit` forwarding
+- Verification:
+  - `npm run docs:openapi` -> passed and regenerated `docs/openapi/validate.openapi.json`
+  - `npx vitest run __tests__/validator/api.test.ts __tests__/scripts/validateCli.test.ts` -> passed (`2 passed`, `13 passed`)
+  - `npm run validate -- --dir data/capsules --strict --report` -> passed (`192 passed`, `0 failed`, `0 warnings`); report written to `reports/validation-2026-03-10T12-02-27-960Z.md`
+  - `npm run typecheck` -> passed
+
 ## Risks
 
 - OpenAPI generation may expose undocumented route drift
@@ -94,4 +120,4 @@ Validator law is a core repo boundary. If CLI, API, docs, and gates drift, the e
 
 ## Handoff Note
 
-Start from the public contract first. If the CLI and the routes disagree, write down the intended truth before refactoring internals.
+The validator boundary is now explicit enough that further work should be follow-up hardening rather than contract archaeology. Reopen this packet only if route behavior, CLI delegation, or generated OpenAPI drift again.

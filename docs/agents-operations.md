@@ -192,6 +192,7 @@ N1Hub is moving toward stronger autonomous execution, but two safety rules remai
 
 1. serious non-trivial work should gain a hostile second pass from an opposite-model reviewer when that lane is available
 2. recurring automated work should prefer repeated one-pass scheduling over hidden endless daemons
+3. N1 recurring queue refresh should use `./autoupdate schedule --interval-minutes <n>` or `npm run n1:update:schedule` so each invocation stays one bounded pass with explicit scheduler artifacts
 
 Repo-native execution surfaces for those directions are:
 

@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { resolveRuntimeLayout } from './layout';
-import { loadIndex, verifyIndexGeometry } from './index';
+import { verifyIndexGeometry } from './index';
 import { validateCapsule } from '@/lib/validator';
 import { listRealCapsulePaths, getExistingCapsuleIds } from '@/lib/capsuleVault';
 import { isRecordObject } from '@/lib/validator/utils';
@@ -12,11 +12,13 @@ export const auditVault = async (kbRoot: string): Promise<{
   metrics: { total: number; valid: number; invalid: number };
   issues: Array<{ file: string; issue: string; gate?: string }>; 
 }> => {
-  const existing = await getExistingCapsuleIds();
-  const files = await listRealCapsulePaths();
+  const layout = resolveRuntimeLayout(kbRoot);
+  const existing = await getExistingCapsuleIds(layout.vaultDir);
+  const files = await listRealCapsulePaths(layout.vaultDir);
   let valid = 0;
   let invalid = 0;
   const issues: Array<{ file: string; issue: string; gate?: string }> = [];
+  const liveCapsuleIds = new Set<string>();
 
   for (const file of files) {
     const raw = await fs.readFile(file, 'utf-8').catch(() => '');
@@ -34,6 +36,13 @@ export const auditVault = async (kbRoot: string): Promise<{
       continue;
     }
 
+    const metadata = isRecordObject(parsed.metadata) ? parsed.metadata : null;
+    const capsuleId =
+      metadata && typeof metadata.capsule_id === 'string' && metadata.capsule_id.trim().length > 0
+        ? metadata.capsule_id.trim()
+        : path.basename(file, '.json');
+    liveCapsuleIds.add(capsuleId);
+
     const result = await validateCapsule(parsed, { existingIds: existing });
     if (!result.valid) {
       invalid += 1;
@@ -45,9 +54,33 @@ export const auditVault = async (kbRoot: string): Promise<{
     valid += 1;
   }
 
-  const layout = resolveRuntimeLayout(kbRoot);
   const indexVerification = await verifyIndexGeometry(kbRoot);
   const indexFile = path.join(layout.indexPath);
+  if (indexVerification.valid && indexVerification.index) {
+    const indexedIds = new Set(
+      indexVerification.index.graph.nodes
+        .map((node) => String(node.id || '').trim())
+        .filter(Boolean),
+    );
+
+    const missingFromIndex = [...liveCapsuleIds].filter((id) => !indexedIds.has(id));
+    const extraInIndex = [...indexedIds].filter((id) => !liveCapsuleIds.has(id));
+
+    if (missingFromIndex.length > 0) {
+      issues.push({
+        file: indexFile,
+        issue: `stale-index-missing-capsules:${missingFromIndex.slice(0, 5).join(',')}`,
+        gate: 'INDEX_FRESHNESS',
+      });
+    }
+    if (extraInIndex.length > 0) {
+      issues.push({
+        file: indexFile,
+        issue: `stale-index-extra-capsules:${extraInIndex.slice(0, 5).join(',')}`,
+        gate: 'INDEX_FRESHNESS',
+      });
+    }
+  }
   const total = valid + invalid;
 
   return {

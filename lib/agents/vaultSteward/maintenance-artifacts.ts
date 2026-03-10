@@ -1,5 +1,6 @@
 import { type z } from 'zod';
 
+import { readBranchManifest, writeOverlayCapsule } from '@/lib/diff/branch-manager';
 import { computeIntegrityHash } from '@/lib/validator/utils';
 import type { SovereignCapsule } from '@/types/capsule';
 import {
@@ -446,3 +447,17 @@ export {
   buildQueueCapsule,
   withAutonomousMaintenanceSection,
 };
+
+
+export async function writeDreamOperationalCapsules(
+  run: VaultStewardRun,
+  queue: VaultStewardQueue,
+  config: VaultStewardConfig,
+): Promise<void> {
+  const dreamManifest = await readBranchManifest('dream');
+  if (!dreamManifest) return;
+
+  await writeOverlayCapsule(buildLatestRunCapsule(run, config), 'dream');
+  await writeOverlayCapsule(buildQueueCapsule(queue), 'dream');
+  await writeOverlayCapsule(buildPlanCapsule(run, queue, config), 'dream');
+}

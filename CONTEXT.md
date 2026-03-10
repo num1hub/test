@@ -1,4 +1,4 @@
-<!-- @anchor doc:n1hub.context links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:agents.ecosystem-signals,doc:agents.operations note="Deep context surface for mode selection, prompt assembly, and agent-role immersion inside N1Hub." -->
+<!-- @anchor doc:n1hub.context links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.agent-operating-modes,doc:todo.codex-spark-profile,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:agents.ecosystem-signals,doc:agents.operations note="Deep context surface for mode selection, prompt assembly, and agent-role immersion inside N1Hub." -->
 # N1Hub Deep Context
 
 `CONTEXT.md` is the deep context surface for N1Hub agents. It sits between repo law and per-task execution. Its job is to help an AI agent choose the correct mode, assemble the right prompt stack, and enter work with enough immersion to stay useful without widening blast radius.
@@ -193,6 +193,48 @@ The preferred path for Egor N1 is:
 
 This keeps planning, execution, and orchestration distinct.
 
+## N1 Input Routing Matrix
+
+Before `N1` starts real work, classify operator input into one of these route classes:
+
+- `assistant_synthesis`
+  - use when the operator is thinking, comparing, asking for explanation, or steering architecture
+  - primary mode: `Personal AI Assistant`
+  - default skill: `skills/personal-ai-assistant/SKILL.md`
+  - handoff target: `n1_personal_assistant`
+  - output: synthesis, bounded plan, or durable handoff into `TO-DO` or capsule-planning surfaces
+- `queue_execution`
+  - use when the operator says `continue`, invokes the automated update workflow command, names a concrete `TODO-*` packet, or asks for direct execution
+  - primary mode: `TO-DO Executor`
+  - default skill: `skills/todo-executor/SKILL.md`
+  - model-specific overlay: when the operator explicitly requests `GPT-5.3-Codex-Spark` for code writing, also load `skills/codex-spark-coder/SKILL.md`
+  - handoff target: `todo_executor`
+  - output: one bounded verified pass on the named or top queue packet
+- `orchestrate_or_sync`
+  - use when the operator asks to sync N1Hub, refresh N1, choose the lane, or update the N1 carrier across multiple surfaces
+  - primary mode: `N1 Chief Orchestrator`
+  - default skill: `skills/n1/SKILL.md`
+  - handoff target: `n1_chief_orchestrator`
+  - output: primary lane, baton order, and the next bounded command pack
+- `capsule_projection`
+  - use when the operator wants knowledge preserved as capsules rather than left in chat
+  - primary mode: `Personal AI Assistant`
+  - default skill: `skills/personal-ai-assistant/SKILL.md`
+  - handoff target: `capsule_planning_agent`
+  - output: bounded capsule-planning or A2C-oriented structure without bypassing validator or queue law
+- `swarm_split`
+  - use when the operator explicitly asks for multiple lanes or a swarm
+  - primary mode: `Swarm Conductor`
+  - default skill: `skills/swarm-orchestrator/SKILL.md`
+  - handoff target: `swarm_conductor`
+  - output: disjoint lane packets with verification contracts
+- `defer_for_clarity`
+  - use when the request is ambiguous, conflicting, or high-risk
+  - primary mode: `Personal AI Assistant`
+  - default skill: `skills/personal-ai-assistant/SKILL.md`
+  - handoff target: `n1_personal_assistant`
+  - output: one precise clarifying question or a blocker report; no blind queue mutation
+
 ## Capsule-Native Planning Direction
 
 `TO-DO/` is the hot operator buffer, but the durable target architecture is vault-native planning:
@@ -205,6 +247,19 @@ This keeps planning, execution, and orchestration distinct.
 - `agent-delegation` and swarm lanes as the execution bridge
 
 The markdown queue should evolve toward a capsule-backed control plane, not become a permanent shadow system.
+
+## Model-Specific Execution Overlays
+
+Model-specific overlays do not create a new repo-law mode. They narrow how an existing mode should behave.
+
+- `GPT-5.3-Codex-Spark Coding Lane`
+  - route class stays `queue_execution`
+  - owning mode stays `TO-DO Executor`
+  - overlay skill: `skills/codex-spark-coder/SKILL.md`
+  - task-fit profile: `TO-DO/CODEX_SPARK_EXECUTION_PROFILE.md`
+  - use when the operator explicitly wants `GPT-5.3-Codex-Spark` or when a task packet is clearly implementation-heavy and code-first
+  - bias toward code, tests, scripts, and narrow verification instead of broad planning prose
+  - do not use this overlay as the default lane for repo-law rewrites, root-doc synthesis, or ambiguous architecture steering
 
 ## Lane Catalog
 
@@ -243,6 +298,12 @@ When the operator uses broad intent, route it like this:
   -> `Swarm Conductor`
 - “Make this live in capsules, not only markdown”
   -> `Personal AI Assistant` plus `Capsule Planning Agent`
+- “Sync the project” or “synchronize N1Hub”
+  -> `N1 Chief Orchestrator` first, then inspect root docs, `TO-DO/HOT_QUEUE.md`, and `TO-DO/REAL_DREAM_FRONT.md` before choosing the bounded execution lane
+- “Update N1” or “deep work on N1”
+  -> `N1 Chief Orchestrator` first, because this usually spans skills, shared context, baton order, and machine-readable bridge artifacts before it becomes one bounded implementation slice
+- “Update Real / Dream”
+  -> `TO-DO Executor` on the current branch packet; if `Front A` is materially contained, pull the next unresolved measured hub from `TO-DO/REAL_DREAM_FRONT.md`, otherwise return to the hot queue instead of improvising new branch folklore
 
 ## Hard Rules
 
@@ -251,6 +312,8 @@ When the operator uses broad intent, route it like this:
 - Do not let swarm mode bypass verification.
 - Do not let markdown planning replace capsule truth where capsule foundations already exist.
 - Do not keep planning in the assistant forever when the work is durable enough for `TO-DO` or capsule representation.
+- Do not let Dream overlays silently become pseudo-canonical when Real already owns the stronger runtime inventory or boundary doctrine.
+- Do not let `N1` route an ambiguous request into queue mutation when the honest answer is to defer for clarity.
 
 ## Update Rule
 
@@ -258,6 +321,7 @@ Update `CONTEXT.md` when:
 
 - the mode model changes
 - prompt assembly changes
+- command-routing defaults for project sync or Real/Dream work change
 - the assistant-to-execution path changes
 - capsule-native planning moves from concept to live implementation
 

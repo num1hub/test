@@ -18,6 +18,7 @@ import { readRepoState } from "./repo-state";
 import { readLatestProjectSync, snapshotA2CRuntime, snapshotQueueFrontier } from "./repo-sync";
 import { parseQueueTable } from "./task-packets";
 import type {
+  N1InputRoutingRule,
   N1OrchestrationResult,
   N1OrchestrationSnapshot,
   OrchestrationLaneSnapshot,
@@ -238,6 +239,19 @@ function toOrchestrationMarkdown(snapshot: N1OrchestrationSnapshot): string {
     "",
     ...snapshot.conductorDecision.rationale.map((item) => `- ${item}`),
     "",
+    "## Input Routing Model",
+    "",
+    `- Decision Rule: ${snapshot.routingModel.decisionRule}`,
+    "",
+    ...snapshot.routingModel.routes.map(
+      (route) =>
+        `- \`${route.routeId}\` · ${route.operatorShape} · primary mode: \`${route.primaryMode}\` · default skill: \`${route.defaultSkill}\` · handoff: \`${route.handoffTarget}\` · outcome: ${route.outcome}`,
+    ),
+    "",
+    "### Defer Conditions",
+    "",
+    ...snapshot.routingModel.deferConditions.map((item) => `- ${item}`),
+    "",
     "## Neural Orchestra Packet",
     "",
     "### Baton Order",
@@ -253,6 +267,75 @@ function toOrchestrationMarkdown(snapshot: N1OrchestrationSnapshot): string {
     ...snapshot.neuralOrchestraPacket.notes.map((item) => `- ${item}`),
     "",
   ].join("\n");
+}
+
+function buildRoutingModel(): {
+  decisionRule: string;
+  routes: N1InputRoutingRule[];
+  deferConditions: string[];
+} {
+  return {
+    decisionRule:
+      "Classify the operator request before execution starts. Prefer the smallest bounded lane, and let explicit user override beat heuristic routing.",
+    routes: [
+      {
+        routeId: "assistant_synthesis",
+        operatorShape: "broad thinking, explanation, architecture, comparison, or deep work on N1",
+        primaryMode: "Personal AI Assistant",
+        defaultSkill: "skills/personal-ai-assistant/SKILL.md",
+        handoffTarget: "n1_personal_assistant",
+        outcome:
+          "Synthesize the smallest valuable next move and mint durable structure only when the result becomes bounded.",
+      },
+      {
+        routeId: "queue_execution",
+        operatorShape: "continue, /autoupdate, explicit TODO execution, or direct do-the-work requests",
+        primaryMode: "TO-DO Executor",
+        defaultSkill: "skills/todo-executor/SKILL.md",
+        handoffTarget: "todo_executor",
+        outcome: "Read the hot queue and task packet, then perform one bounded verified pass.",
+      },
+      {
+        routeId: "orchestrate_or_sync",
+        operatorShape: "sync N1Hub, refresh N1, choose the correct lane, or update multiple N1 surfaces coherently",
+        primaryMode: "N1 Chief Orchestrator",
+        defaultSkill: "skills/n1/SKILL.md",
+        handoffTarget: "n1_chief_orchestrator",
+        outcome:
+          "Inspect repo-sync and orchestration truth, choose the baton lane, and return the next bounded command pack.",
+      },
+      {
+        routeId: "capsule_projection",
+        operatorShape: "turn this into capsules, preserve durable knowledge, or move intent out of chat residue",
+        primaryMode: "Personal AI Assistant",
+        defaultSkill: "skills/personal-ai-assistant/SKILL.md",
+        handoffTarget: "capsule_planning_agent",
+        outcome: "Produce capsule-planning or A2C-oriented structure without bypassing validator or queue law.",
+      },
+      {
+        routeId: "swarm_split",
+        operatorShape: "explicit swarm request or one bounded initiative that truly needs multiple lanes",
+        primaryMode: "Swarm Conductor",
+        defaultSkill: "skills/swarm-orchestrator/SKILL.md",
+        handoffTarget: "swarm_conductor",
+        outcome: "Emit disjoint lane packets with verification and merge contracts.",
+      },
+      {
+        routeId: "defer_for_clarity",
+        operatorShape: "ambiguous, conflicting, or high-risk requests with no stable mutation boundary",
+        primaryMode: "Personal AI Assistant",
+        defaultSkill: "skills/personal-ai-assistant/SKILL.md",
+        handoffTarget: "n1_personal_assistant",
+        outcome:
+          "Ask one precise clarifying question or report the blocker instead of mutating queue or runtime truth blindly.",
+      },
+    ],
+    deferConditions: [
+      "The operator request is ambiguous enough that queue mutation would be speculative.",
+      "Two lanes seem plausible, but the difference would change owned state or blast radius materially.",
+      "The request appears to span intake normalization, packet generation, and execution in one jump.",
+    ],
+  };
 }
 
 function buildN1Orchestration(
@@ -292,6 +375,7 @@ function buildN1Orchestration(
       ? `N-Infinity is available as a graph-maintenance lane${ninfinity.nightWindow ? ` during ${ninfinity.nightWindow}` : ""}.`
       : "N-Infinity is not available as a ready execution lane.",
   ];
+  const routingModel = buildRoutingModel();
 
   return {
     orchestrationId,
@@ -314,6 +398,7 @@ function buildN1Orchestration(
       secondaryLanes,
       rationale,
     },
+    routingModel,
     neuralOrchestraPacket: {
       loadOrder: [...CORE_INSTRUCTION_STACK, "data/private/agents/n1/repo-sync.latest.json", "data/private/agents/n1/orchestration.latest.json"],
       batonOrder: [
@@ -334,6 +419,7 @@ function buildN1Orchestration(
       ],
       notes: [
         "N1 is the chief orchestrator and should route work by bounded lanes rather than by vague autonomy.",
+        "Classify the operator request before picking a lane; ambiguous requests should defer instead of mutating queue truth blindly.",
         "Live repo truth outranks orchestration artifacts.",
         repoState.dirty
           ? "Repository is dirty, so orchestration should favor planning, routing, and verification over auto-commit posture."

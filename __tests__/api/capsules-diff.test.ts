@@ -64,4 +64,33 @@ describe('API: /api/capsules/[id]/diff', () => {
       }),
     )
   })
+
+  it('rejects unauthorized capsule diff requests', async () => {
+    const req = new Request(
+      'http://localhost/api/capsules/capsule.test.diff.v1/diff?branchA=real&branchB=dream',
+    )
+
+    const res = await GET(req, {
+      params: Promise.resolve({ id: 'capsule.test.diff.v1' }),
+    })
+
+    expect(res.status).toBe(401)
+    expect(await res.json()).toEqual({ error: 'Unauthorized' })
+  })
+
+  it('rejects invalid branch names for capsule diffs', async () => {
+    const req = new Request(
+      'http://localhost/api/capsules/capsule.test.diff.v1/diff?branchA=INVALID BRANCH&branchB=dream',
+      {
+        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      },
+    )
+
+    const res = await GET(req, {
+      params: Promise.resolve({ id: 'capsule.test.diff.v1' }),
+    })
+
+    expect(res.status).toBe(400)
+    expect(computeDiff).not.toHaveBeenCalled()
+  })
 })

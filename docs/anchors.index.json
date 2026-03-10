@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-03-09T19:28:42.951Z",
+  "generated_at": "2026-03-10T08:45:53.962Z",
   "root": ".",
-  "anchor_count": 81,
+  "anchor_count": 82,
   "anchors": [
     {
       "id": "arch:a2c.runtime",
@@ -351,6 +351,7 @@
         "doc:n1hub.tools",
         "doc:todo.index",
         "doc:todo.agent-operating-modes",
+        "doc:todo.codex-spark-profile",
         "doc:workflow.issue-worker",
         "doc:workflow.ninfinity-night-shift",
         "doc:agents.ecosystem-signals",
@@ -538,6 +539,7 @@
         "doc:todo.dependency-map",
         "doc:todo.hot-queue",
         "doc:todo.execution-protocol",
+        "doc:todo.codex-spark-profile",
         "doc:n1hub.context",
         "doc:n1hub.agents",
         "doc:n1hub.codex",
@@ -566,6 +568,22 @@
       ],
       "state": "active",
       "note": "Design brief for moving planning and delegation from markdown into capsule-native execution surfaces."
+    },
+    {
+      "id": "doc:todo.codex-spark-profile",
+      "category": "doc",
+      "name": "todo.codex-spark-profile",
+      "file": "TO-DO/CODEX_SPARK_EXECUTION_PROFILE.md",
+      "line": 1,
+      "links": [
+        "doc:todo.index",
+        "doc:todo.hot-queue",
+        "doc:todo.agent-operating-modes",
+        "doc:n1hub.context",
+        "doc:n1hub.codex"
+      ],
+      "state": "active",
+      "note": "Model-specific execution profile for GPT-5.3-Codex-Spark inside the N1Hub TO-DO system."
     },
     {
       "id": "doc:todo.decomposition-law",
@@ -663,7 +681,8 @@
         "doc:todo.task-template",
         "doc:todo.real-dream-front",
         "doc:todo.capsule-native-execution",
-        "doc:todo.agent-operating-modes"
+        "doc:todo.agent-operating-modes",
+        "doc:todo.codex-spark-profile"
       ],
       "state": "active",
       "note": "Hot execution buffer and planning law for AI-agent work inside N1Hub."

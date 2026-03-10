@@ -1,40 +1,40 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.tracker.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-07T10:22:14.375Z",
+    "updated_at": "2026-03-09T21:25:00Z",
     "name": "Tracker",
     "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core",
     "priority": "high",
-    "progress": 39,
+    "progress": 46,
     "estimatedHours": 400,
-    "actualHours": 120,
+    "actualHours": 128,
     "dueDate": "2026-09-01",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker in Dream represents predictive execution intelligence rather than only monitoring. It imagines a system that not only records what happened, but can see drift earlier, notice overloaded schedules sooner, and surface the right intervention path before goals and tasks degrade silently.\n\n## 2. Dream Direction\nThe future tracker should become the truth engine beneath planning and autonomy: a place where goals, milestones, tasks, reminders, notifications, and agent work are measured against actual movement instead of treated as equal statements.\n\n## 3. Integration\n- **Goal, Milestone, Task:** remain the main execution objects Tracker watches.\n- **Reminder, Notification, and Calendar:** turn telemetry into lived follow-through.\n- **Planner and Personal AI Assistant:** use tracker evidence to re-shape plans.\n- **N-Infinity and Symphony:** use drift and risk as orchestration signals.\n\n## 4. Philosophical Alignment\nTracker in Dream preserves the idea that a second brain should become better at telling the truth about execution, not just better at storing intentions.\n"
+    "content": "# Tracker: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical tracker contract for live accountability, branch-aware execution truth, reminder triggers, and orchestration signals. Dream therefore should not restate the current tracking runtime as if it were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future Tracker delta such as:\n- earlier drift detection before deadlines harden into missed commitments,\n- predictive overload and capacity warnings before schedules break down,\n- smarter reminder and notification strategies tied to human rhythm and actual execution patterns,\n- stronger closed-loop learning from repeated success and failure patterns across goals, milestones, tasks, and agent work,\n- richer intervention suggestions for assistant, planner, Symphony, and N-Infinity when follow-through starts degrading.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current tracking contract,\n- collapse live accountability into broad predictive marketing,\n- reintroduce future speculation as if it were already measured runtime truth.\n\n## 4. Dream Lens\nThe useful Dream stance is to preserve predictive execution intelligence and earlier intervention doctrine while letting Real stay canonical for the tracking behavior that already exists now."
   },
   "neuro_concentrate": {
-    "summary": "Tracker in the Dream branch represents predictive execution intelligence rather than only monitoring. It aims toward earlier risk detection, sharper effort drift analysis, more adaptive reminder and notification strategy, better calendar pressure handling, and stronger closed-loop learning from what goals, milestones, and tasks repeatedly fail or succeed in practice. The capsule matters because accountability grows stronger when the system can forecast friction before work breaks down. Dream therefore holds the higher bar for Tracker: not just recording progress, but protecting it through earlier intervention.",
+    "summary": "Tracker in the Dream branch now stands as the future overlay for predictive execution intelligence rather than the canonical source of current tracking truth. Real owns the live accountability contract, while Dream preserves the higher bar of earlier drift detection, overload warning, adaptive reminders, better calendar-pressure handling, and stronger closed-loop learning from success and failure patterns. This keeps Dream useful as future intervention doctrine without letting it replace the sharper real-side description of measured runtime behavior.",
     "keywords": [
       "tracker",
-      "deadlines",
-      "reminders",
-      "progress",
-      "notifications",
-      "monitoring",
-      "analytics",
-      "activity-log",
-      "workspace",
+      "future-overlay",
+      "predictive-tracking",
+      "drift-detection",
+      "adaptive-reminders",
       "calendar-pressure",
-      "predictive"
+      "intervention-doctrine",
+      "closed-loop-learning",
+      "workspace",
+      "n1hub",
+      "real-canonical"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -114,7 +114,15 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-09T21:25:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-026",
+        "rationale": "The Dream Tracker capsule was narrowed to future-only predictive execution doctrine after Real became the explicit canonical source for the current tracking contract. This preserves the predictive roadmap without leaving the branch split implicit."
+      }
+    ]
   },
-  "integrity_sha3_512": "fe50eaa5e2cd803e218ab5b050f2b46a17d819acf4464be81c0832f87aa6c443a1ba538435b460534bfe5aea84c82893a9f580935176a569415e998ced95425a"
+  "integrity_sha3_512": "5d5fcacc7b15ee8b7da2fd3b295756026a618b44be0e52f7fd268885f6b8f0035268bba85c3f6552ce90b03ad28b429b5b0351e3896e54e3ad9e61aba934eac8"
 }

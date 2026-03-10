@@ -61,4 +61,39 @@ describe('API: /api/diff', () => {
       expect.objectContaining({ scopeRootId: 'capsule.test.diff.v1' }),
     )
   })
+
+  it('rejects unauthorized diff requests', async () => {
+    const req = new Request('http://localhost/api/diff', {
+      method: 'POST',
+      body: JSON.stringify({
+        branchA: 'real',
+        branchB: 'dream',
+        scopeType: 'capsule',
+        scopeRootId: 'capsule.test.diff.v1',
+      }),
+    })
+
+    const res = await POST(req)
+
+    expect(res.status).toBe(401)
+    expect(await res.json()).toEqual({ error: 'Unauthorized' })
+  })
+
+  it('rejects invalid diff requests before computeDiff runs', async () => {
+    const req = new Request('http://localhost/api/diff', {
+      method: 'POST',
+      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      body: JSON.stringify({
+        branchA: 'INVALID BRANCH',
+        branchB: 'dream',
+        scopeType: 'capsule',
+        scopeRootId: 'capsule.test.diff.v1',
+      }),
+    })
+
+    const res = await POST(req)
+
+    expect(res.status).toBe(400)
+    expect(computeDiff).not.toHaveBeenCalled()
+  })
 })

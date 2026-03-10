@@ -1,4 +1,4 @@
-<!-- @anchor doc:todo.index links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.memory,doc:todo.decomposition-law,doc:todo.lane-ownership,doc:todo.dependency-map,doc:todo.hot-queue,doc:todo.execution-protocol,doc:todo.roadmap-q2-2026,doc:todo.task-template,doc:todo.real-dream-front,doc:todo.capsule-native-execution,doc:todo.agent-operating-modes note="Hot execution buffer and planning law for AI-agent work inside N1Hub." -->
+<!-- @anchor doc:todo.index links=doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.memory,doc:todo.decomposition-law,doc:todo.lane-ownership,doc:todo.dependency-map,doc:todo.hot-queue,doc:todo.execution-protocol,doc:todo.roadmap-q2-2026,doc:todo.task-template,doc:todo.real-dream-front,doc:todo.capsule-native-execution,doc:todo.agent-operating-modes,doc:todo.codex-spark-profile note="Hot execution buffer and planning law for AI-agent work inside N1Hub." -->
 # N1Hub Hot Execution Buffer
 
 Updated: 2026-03-09
@@ -30,6 +30,7 @@ Everything in `TO-DO/` should follow these rules:
 6. A task without verification commands is not ready for promotion.
 7. Finished items should move out of the hot lane or be explicitly marked complete with outcome evidence.
 8. If repo truth changes, update the task file instead of leaving stale plans in place.
+9. For Real/Dream branch packets, record both the real canonical outcome and the remaining Dream-only delta explicitly.
 
 ## Decomposition Law
 
@@ -93,6 +94,8 @@ Every task in this folder assumes these engineering standards:
   Design brief for moving planning and delegation from markdown into the capsule vault.
 - `AGENT_OPERATING_MODES.md`
   Reusable mode cards, prompt slices, and operator command packs for assistant, executor, and swarm lanes.
+- `CODEX_SPARK_EXECUTION_PROFILE.md`
+  Model-specific execution profile for `GPT-5.3-Codex-Spark`: task-fit matrix, pull preference, and anti-drift rules for code-first packets.
 - `EXECUTION_PROTOCOL.md`
   Status model, teamwork law, and per-pass execution rules for bounded task advancement.
 - `AUTOMATED_UPDATE_WORKFLOW.md`
@@ -113,11 +116,12 @@ When no user override exists, agents should read:
 3. `TO-DO/LANE_OWNERSHIP_MAP.md`
 4. `TO-DO/DEPENDENCY_MAP.md`
 5. `TO-DO/AGENT_OPERATING_MODES.md`
-6. `TO-DO/EXECUTION_PROTOCOL.md`
-7. `TO-DO/AUTOMATED_UPDATE_WORKFLOW.md` when the operator wants one automated N1 iteration instead of an open-ended chat turn
-8. `TO-DO/REAL_DREAM_FRONT.md` when branch, vault, or promotion work is in scope
-9. `TO-DO/HOT_QUEUE.md`
-10. the first relevant task file from `TO-DO/tasks/`
+6. `TO-DO/CODEX_SPARK_EXECUTION_PROFILE.md` when the operator explicitly asks for `GPT-5.3-Codex-Spark` or when a coding-heavy packet should use that overlay
+7. `TO-DO/EXECUTION_PROTOCOL.md`
+8. `TO-DO/AUTOMATED_UPDATE_WORKFLOW.md` when the operator wants one automated N1 iteration instead of an open-ended chat turn
+9. `TO-DO/REAL_DREAM_FRONT.md` when branch, vault, or promotion work is in scope
+10. `TO-DO/HOT_QUEUE.md`
+11. the first relevant task file from `TO-DO/tasks/`
 
 Then implementation may begin.
 
@@ -145,6 +149,8 @@ Treat queue grooming as part of execution, not as optional cleanup.
 - after each new blocker, write the blocker in the packet and reflect it in queue status immediately
 - after each new split, add the new bounded packet before pretending the parent task is still self-contained
 - after each frontier change, update `HOT_QUEUE.md` so the next agent does not inherit stale pull order
+- after each selective branch promotion, update the field brief so the next agent does not have to infer the new canonical branch rule
+- after each branch-governance containment pass, either return the default hot path to the queue or name the next unresolved hub explicitly; do not leave free-floating branch work implied
 
 ## Definition of Done
 

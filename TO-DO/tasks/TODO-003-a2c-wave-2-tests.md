@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `A2C Test Agent`
 - Cluster: `A2C runtime hardening`
 
@@ -57,6 +57,20 @@ The first A2C test wave exists, but the most dangerous remaining gaps still live
 2. Add focused fixtures for query, audit, and clusterContext.
 3. Align docs and tests on the same A2C semantics.
 
+## Added Contracts
+
+- `__tests__/a2c/query.test.ts`
+  - query stays read-only by default
+  - explicit synthesis opt-in still works
+- `__tests__/a2c/audit-cluster-context.test.ts`
+  - audit flags stale index geometry against live vault capsules
+  - cluster context scans only `lib/a2c`, dedicated A2C docs, and `__tests__/a2c`
+
+## Narrowed Future Contract
+
+- `__tests__/a2c/future.todo.test.ts`
+  - remaining placeholder is now only the narrower ingest API route-coverage gap for `operatorInput` plus multi-candidate quarantine summaries
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -90,6 +104,7 @@ You are the A2C Test Agent. Replace placeholder A2C contracts with real enforced
 
 - clusterContext heuristics may look green without measuring the right files
 - audit freshness checks may need careful fixture control
+- live repo audit may expose a stale index that this packet proves but does not repair
 
 ## Stop Conditions
 
@@ -97,4 +112,22 @@ You are the A2C Test Agent. Replace placeholder A2C contracts with real enforced
 
 ## Handoff Note
 
-Do not add more placeholder tests. Either convert a placeholder into a real enforced contract or narrow it into a better-defined future task.
+Contained on 2026-03-10. The next A2C gap is the remaining ingest API route contract; otherwise the queue can move to `TODO-014`.
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - converted the audit freshness placeholder into a real stale-index contract test
+  - converted the cluster-context placeholder into a real dedicated-scan contract test
+  - narrowed the only remaining A2C placeholder to the ingest API route layer
+  - aligned `docs/a2c.md` with the new audit and cluster-context semantics
+- Verification:
+  - `npx vitest run __tests__/a2c/*.test.ts` -> passed (`6 passed | 1 skipped`, `14 passed | 1 todo`)
+  - `npm run typecheck` -> passed
+  - `npm run a2c:recon` -> passed (`status: COMPLETE`)
+  - `npm run a2c:auto` -> command passed, report status `PARTIAL` because audit now surfaces `INDEX_FRESHNESS` drift in `data/private/a2c/index.json`
+  - follow-up runtime repair on `2026-03-10`:
+    - `npm run a2c:index` -> passed (`status: COMPLETE`, `nodes: 192`, `edges: 1898`, `issues: 0`)
+    - `npm run a2c:audit` -> passed (`status: COMPLETE`, `valid: 192`, `invalid: 0`, `issues: 0`)
+    - `npm run a2c:auto` -> command passed, report status `PARTIAL` with `issues: 0`; the remaining partial state is dry-run persistence only, not `INDEX_FRESHNESS`

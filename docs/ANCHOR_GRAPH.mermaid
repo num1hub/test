@@ -40,6 +40,7 @@ A_doc_projects_reference["doc:projects.reference"]
 A_doc_symphony_reference["doc:symphony.reference"]
 A_doc_todo_agent_operating_modes["doc:todo.agent-operating-modes"]
 A_doc_todo_capsule_native_execution["doc:todo.capsule-native-execution"]
+A_doc_todo_codex_spark_profile["doc:todo.codex-spark-profile"]
 A_doc_todo_decomposition_law["doc:todo.decomposition-law"]
 A_doc_todo_dependency_map["doc:todo.dependency-map"]
 A_doc_todo_execution_protocol["doc:todo.execution-protocol"]
@@ -122,6 +123,7 @@ class A_doc_projects_reference doc;
 class A_doc_symphony_reference doc;
 class A_doc_todo_agent_operating_modes doc;
 class A_doc_todo_capsule_native_execution doc;
+class A_doc_todo_codex_spark_profile doc;
 class A_doc_todo_decomposition_law doc;
 class A_doc_todo_dependency_map doc;
 class A_doc_todo_execution_protocol doc;
@@ -306,6 +308,7 @@ A_doc_n1hub_context --> A_doc_n1hub_readme
 A_doc_n1hub_context --> A_doc_n1hub_soul
 A_doc_n1hub_context --> A_doc_n1hub_tools
 A_doc_n1hub_context --> A_doc_todo_agent_operating_modes
+A_doc_n1hub_context --> A_doc_todo_codex_spark_profile
 A_doc_n1hub_context --> A_doc_todo_index
 A_doc_n1hub_context --> A_doc_workflow_issue_worker
 A_doc_n1hub_context --> A_doc_workflow_ninfinity_night_shift
@@ -394,6 +397,7 @@ A_doc_todo_agent_operating_modes --> A_doc_n1hub_context
 A_doc_todo_agent_operating_modes --> A_doc_n1hub_memory
 A_doc_todo_agent_operating_modes --> A_doc_n1hub_soul
 A_doc_todo_agent_operating_modes --> A_doc_n1hub_tools
+A_doc_todo_agent_operating_modes --> A_doc_todo_codex_spark_profile
 A_doc_todo_agent_operating_modes --> A_doc_todo_decomposition_law
 A_doc_todo_agent_operating_modes --> A_doc_todo_dependency_map
 A_doc_todo_agent_operating_modes --> A_doc_todo_execution_protocol
@@ -407,6 +411,11 @@ A_doc_todo_capsule_native_execution --> A_doc_projects_reference
 A_doc_todo_capsule_native_execution --> A_doc_todo_agent_operating_modes
 A_doc_todo_capsule_native_execution --> A_doc_todo_hot_queue
 A_doc_todo_capsule_native_execution --> A_doc_todo_index
+A_doc_todo_codex_spark_profile --> A_doc_n1hub_codex
+A_doc_todo_codex_spark_profile --> A_doc_n1hub_context
+A_doc_todo_codex_spark_profile --> A_doc_todo_agent_operating_modes
+A_doc_todo_codex_spark_profile --> A_doc_todo_hot_queue
+A_doc_todo_codex_spark_profile --> A_doc_todo_index
 A_doc_todo_decomposition_law --> A_doc_n1hub_agents
 A_doc_todo_decomposition_law --> A_doc_n1hub_context
 A_doc_todo_decomposition_law --> A_doc_todo_agent_operating_modes
@@ -445,6 +454,7 @@ A_doc_todo_index --> A_doc_n1hub_memory
 A_doc_todo_index --> A_doc_n1hub_readme
 A_doc_todo_index --> A_doc_todo_agent_operating_modes
 A_doc_todo_index --> A_doc_todo_capsule_native_execution
+A_doc_todo_index --> A_doc_todo_codex_spark_profile
 A_doc_todo_index --> A_doc_todo_decomposition_law
 A_doc_todo_index --> A_doc_todo_dependency_map
 A_doc_todo_index --> A_doc_todo_execution_protocol

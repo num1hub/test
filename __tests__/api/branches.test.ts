@@ -69,6 +69,15 @@ describe('API: /api/branches', () => {
     expect(payload.branches.map((branch) => branch.name)).toEqual(['real', 'dream'])
   })
 
+  it('rejects unauthorized branch reads', async () => {
+    const req = new Request('http://localhost/api/branches')
+
+    const res = await GET(req)
+
+    expect(res.status).toBe(401)
+    expect(await res.json()).toEqual({ error: 'Unauthorized' })
+  })
+
   it('creates a new branch manifest', async () => {
     const req = new Request('http://localhost/api/branches', {
       method: 'POST',
@@ -92,5 +101,25 @@ describe('API: /api/branches', () => {
         scopeType: 'capsule',
       }),
     )
+  })
+
+  it('returns 409 when creating a branch that already exists', async () => {
+    vi.mocked(readBranchManifest).mockResolvedValueOnce(dreamManifest as never)
+
+    const req = new Request('http://localhost/api/branches', {
+      method: 'POST',
+      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      body: JSON.stringify({
+        sourceCapsuleId: 'capsule.project.alpha.v1',
+        sourceBranch: 'real',
+        newBranchName: 'dream',
+        recursive: false,
+      }),
+    })
+
+    const res = await POST(req)
+
+    expect(res.status).toBe(409)
+    expect(await res.json()).toEqual({ error: 'Branch already exists' })
   })
 })

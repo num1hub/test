@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `A2C Intake Agent`
 - Cluster: `A2C intake and planning`
 
@@ -65,6 +65,47 @@ Right now a lot of high-value user intent arrives as chat and gets manually tran
 3. document where this contract should live and how later stages consume it
 4. leave a clear bridge to `TODO-017`
 
+## Contract Shapes
+
+### Raw Artifact
+
+- location: `data/private/a2c/intake/archive_raw/<intake-id>.raw.json`
+- fields:
+  - `intake_id`
+  - `received_at`
+  - `source.channel`
+  - `source.actor`
+  - `source.metadata`
+  - `raw_text`
+  - `text_sha256`
+  - `line_count`
+  - `char_count`
+
+### Normalized Artifact
+
+- location: `data/private/a2c/intake/normalized/<intake-id>.normalized.json`
+- fields:
+  - `intake_id`
+  - `received_at`
+  - `source`
+  - `normalized.objective`
+  - `normalized.route_class_hint`
+  - `normalized.scope_hints`
+  - `normalized.file_hints`
+  - `normalized.task_refs`
+  - `normalized.priority_hint`
+  - `normalized.execution_band_hint`
+  - `normalized.owner_lane_hints`
+  - `normalized.acceptance_criteria_hints`
+  - `normalized.verification_hints`
+  - `normalized.stop_condition_hints`
+
+## Current Repo Truth
+
+- `POST /api/a2c/ingest` now accepts an explicit `operatorInput` envelope in addition to the existing capsule-candidate ingest path.
+- A2C stages raw operator input and normalized intake artifacts under A2C-owned intake directories instead of mutating `TO-DO/` directly.
+- The normalized artifact is now the intended handoff surface for `TODO-017`, `TODO-018`, and `TODO-019`.
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -115,4 +156,16 @@ You are the A2C Intake Agent. Convert raw operator intent into a repo-native int
 
 ## Handoff Note
 
-Do not jump straight from chat to queue mutation. The win here is a stable intake contract that preserves operator intent cleanly enough for the next A2C stage to build real task packets.
+Contained on 2026-03-10. `TODO-017` should consume `data/private/a2c/intake/normalized/*.normalized.json` and map those stable fields into `TO-DO` packet sections without re-inventing the intake envelope.
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - added typed operator-input intake and normalized-contract surfaces in `lib/a2c/types.ts`
+  - added raw and normalized staging writes in `lib/a2c/ingest.ts`
+  - extended `POST /api/a2c/ingest` to accept `operatorInput.text` without disturbing capsule ingest
+  - documented the API intake path in `docs/a2c.md`
+- Verification:
+  - `npm run typecheck` -> passed
+  - `npm run check:anchors:full` -> passed

@@ -114,6 +114,16 @@ A new N1Hub domain should normally ship with:
 
 If a new subsystem cannot explain its public entrypoint, owned storage, contracts, and tests, it is not ready to become a first-class runtime surface.
 
+## Workspace Composition Boundary
+
+`Workspace` is an operator-facing composition lens, not a mega-domain that owns the full semantics of Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, or Vault Stewardship.
+
+The architectural rule is:
+
+- Real keeps the canonical live module inventory and ownership boundaries for Workspace.
+- Dream may explore future operator composition, visibility, and routing improvements.
+- Promotion from Dream into Real should be selective. Do not overwrite stronger real-side inventory just because the Dream prose is sharper.
+
 ## Refactor Rule
 
 Refactor by small reversible steps:

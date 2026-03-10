@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `A2C Intake Test Agent`
 - Cluster: `A2C intake and planning`
 
@@ -115,4 +115,27 @@ You are the A2C Intake Test Agent. Build the first contract tests for the path f
 
 ## Handoff Note
 
-Make this a real contract test layer, not an ambition essay. The correct first suite is small, explicit, and aimed straight at the user-input path that N1Hub is about to grow.
+Contained on 2026-03-10. The first fixture net now covers actionable, vague, noisy, and over-broad input at the `lib/a2c` contract layer. The next test expansion, if needed, is route-level coverage for `POST /api/a2c/ingest`.
+
+## Fixture Matrix
+
+- actionable input
+  - expects raw and normalized staging, `READY` packet output, preserved verification hints, preserved stop-condition hints
+- vague planning input
+  - expects `assistant_synthesis` route hint and `DEFERRED` packet status
+- noisy input
+  - expects defer without forced queue packet promotion
+- over-broad execution input
+  - expects defer even when verification hints are present
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - added fixture-driven operator-input tests for normalization and packetization
+  - extended the normalized intake contract to carry `stop_condition_hints`
+  - locked packetization against over-broad and planning-heavy input
+- Verification:
+  - `npx vitest run __tests__/a2c/*.test.ts` -> passed (`5 passed | 1 skipped`, `12 passed | 3 todo`)
+  - `npm run typecheck` -> passed
+  - `npm run check:anchors:full` -> passed

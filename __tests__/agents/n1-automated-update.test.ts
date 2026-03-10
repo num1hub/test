@@ -227,6 +227,10 @@ Measure the live branch field and prepare one deterministic launch packet.
     expect(content).toContain("name: n1");
     expect(content).toContain("# N1");
     expect(content).toContain("stable assistant identity");
+    expect(content).toContain("## Routing Matrix");
+    expect(content).toContain("defer_for_clarity");
+    expect(content).toContain("default skill");
+    expect(content).toContain("handoff target");
     expect(content).toContain("TO-DO/AGENT_OPERATING_MODES.md");
   });
 
@@ -413,6 +417,16 @@ agent:
       workflow: string;
       queueFrontier: Array<{ id: string }>;
       conductorDecision: { primaryLane: string; secondaryLanes: string[] };
+      routingModel: {
+        decisionRule: string;
+        routes: Array<{
+          routeId: string;
+          primaryMode: string;
+          defaultSkill: string;
+          handoffTarget: string;
+        }>;
+        deferConditions: string[];
+      };
       workflows: {
         symphony: { kind: string; maxConcurrentAgents: number | null } | null;
         ninfinity: { kind: string; nightWindow: string | null } | null;
@@ -428,6 +442,19 @@ agent:
     expect(latest.queueFrontier[0]?.id).toBe("TODO-007");
     expect(latest.conductorDecision.primaryLane).toBe("todo_executor");
     expect(latest.conductorDecision.secondaryLanes).toContain("swarm_conductor");
+    expect(latest.routingModel.decisionRule).toContain("explicit user override");
+    expect(latest.routingModel.routes.some((route) => route.routeId === "queue_execution")).toBe(true);
+    expect(latest.routingModel.routes.find((route) => route.routeId === "queue_execution")?.defaultSkill).toBe(
+      "skills/todo-executor/SKILL.md",
+    );
+    expect(latest.routingModel.routes.find((route) => route.routeId === "queue_execution")?.handoffTarget).toBe(
+      "todo_executor",
+    );
+    expect(latest.routingModel.routes.some((route) => route.primaryMode === "N1 Chief Orchestrator")).toBe(true);
+    expect(latest.routingModel.routes.find((route) => route.routeId === "orchestrate_or_sync")?.defaultSkill).toBe(
+      "skills/n1/SKILL.md",
+    );
+    expect(latest.routingModel.deferConditions.length).toBeGreaterThan(0);
     expect(latest.workflows.symphony?.kind).toBe("linear_issue");
     expect(latest.workflows.symphony?.maxConcurrentAgents).toBe(4);
     expect(latest.workflows.ninfinity?.kind).toBe("capsule_graph");
@@ -439,6 +466,10 @@ agent:
     expect(report).toContain("N1 Orchestration Snapshot");
     expect(report).toContain("TODO-007");
     expect(report).toContain("swarm_conductor");
+    expect(report).toContain("Input Routing Model");
+    expect(report).toContain("default skill");
+    expect(report).toContain("handoff");
+    expect(report).toContain("defer_for_clarity");
   });
 
   it("refuses to overwrite an existing skill scaffold without force", () => {

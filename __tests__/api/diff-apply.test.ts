@@ -64,6 +64,15 @@ describe('API: /api/diff/apply', () => {
     const res = await POST(req)
     expect(res.status).toBe(200)
     expect(mergeResultSchema.parse(await res.json()).applied).toBe(true)
+    expect(mergeBranches).toHaveBeenCalledWith(
+      expect.objectContaining({
+        sourceBranch: 'dream',
+        targetBranch: 'real',
+        scopeType: 'capsule',
+        scopeRootId: 'capsule.test.merge.v1',
+        conflictResolution: 'source-wins',
+      }),
+    )
   })
 
   it('returns 409 for manual conflicts', async () => {
@@ -111,5 +120,23 @@ describe('API: /api/diff/apply', () => {
     const res = await POST(req)
     expect(res.status).toBe(409)
     expect(mergeResultSchema.parse(await res.json()).conflicts).toHaveLength(1)
+  })
+
+  it('rejects unauthorized merge requests', async () => {
+    const req = new Request('http://localhost/api/diff/apply', {
+      method: 'POST',
+      body: JSON.stringify({
+        sourceBranch: 'dream',
+        targetBranch: 'real',
+        scopeType: 'capsule',
+        scopeRootId: 'capsule.test.merge.v1',
+        conflictResolution: 'source-wins',
+      }),
+    })
+
+    const res = await POST(req)
+
+    expect(res.status).toBe(401)
+    expect(await res.json()).toEqual({ error: 'Unauthorized' })
   })
 })

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.438Z",
+    "updated_at": "2026-03-09T21:35:00Z",
     "name": "N-Infinity Project",
     "semantic_hash": "capsule-project-infinity-iterations-autonomy-swarm-deployment-economics",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Project\n\n## 1. Dream Direction\nThe Dream branch pushes the founding idea of N-Infinity to its logical end. Human prompting remains precious and strategically decisive, but the real leap comes when the system can sustain thousands of bounded background iterations per day without collapsing into noise or runaway spend.\n\n## 2. Desired Future State\n- a denser `iteration_fabric` where mining, planning, refinery work, vault stewardship, review, repository execution, and promotion reinforce one another.\n- stronger assignment control and control-plane visibility for every lane.\n- richer day/night autonomy shaping instead of one generic always-on mode.\n- clearer capsule-job economics, review bundles, and evidence thresholds before stronger promotion.\n- a swarm that compounds graph work without burying the human under operational noise.\n\n## 3. Why It Matters\nDream preserves N-Infinity as the long-horizon execution lattice of N1Hub rather than only the current family of helpers. It is the place where finite human attention is amplified into near-continuous graph work while the human remains the center of judgment.\n"
+    "content": "# N-Infinity Project\n\n## 1. Dream Direction\nDream keeps the long-horizon roadmap for the N-Infinity program after the current live project contract in Real. It is the future control-plane vision for a denser, more visible, and more economically disciplined swarm.\n\n## 2. Desired Future State\n- a richer `iteration_fabric` where mining, planning, refinery work, vault stewardship, review, repository execution, and promotion reinforce one another.\n- explicit lane budgets, cost governance, and operator-visible assignment maps.\n- stronger review bundles and evidence thresholds before promotion or repository mutation widens.\n- deeper baton exchange between planning, mining, graph curation, contradiction handling, and assistant-facing synthesis.\n- 24/7 service behavior only when cooldown, rollback, and proof contracts are mature enough.\n\n## 3. Dream Delta\nDream preserves what Real does not yet own: broader control-plane visibility, calmer autonomy shaping, tighter iteration economics, and a more mature swarm-governance model. It should not be read as a shadow statement of the already-live deployment topology.\n\n## 4. Why It Matters\nDream keeps N-Infinity as the long-horizon execution lattice of N1Hub rather than only the current family of helpers. It is where finite human attention is amplified into near-continuous graph work while the human remains the center of judgment.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Project in the Dream branch is the roadmap for a more capable and better-governed autonomous swarm. It imagines agents that not only react to planner and tracker signals, but coordinate continuously around mining, refinement, risk, synthesis, reminders, repository execution, contradiction handling, and graph curation without losing assignment visibility or auditability. Dream preserves the target state where N-Infinity becomes a real operational intelligence lattice rather than a partially implemented family of helpers.",
+    "summary": "N-Infinity Project in the Dream branch is the roadmap for a more capable and better-governed autonomous swarm control plane. It preserves the future state where planning, mining, refinement, graph curation, contradiction handling, repository execution, and review are coordinated through visible budgets, assignment maps, stronger autonomy law, and calmer baton exchange between lanes, rather than through the current bounded deployment topology already owned by Real. Dream therefore keeps the long-horizon program delta without pretending that the future control plane is already live.",
     "keywords": [
       "n-infinity",
       "agent-swarm",
@@ -92,5 +92,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c62119589c7e5d13bf5d93286953acd97f91d04f70a309cc47da33318a88c7b9a5a01696f8dd4d1e85b7ca3caef62c1bcb5f43d82472cc178af333019f227baa"
+  "integrity_sha3_512": "946c364ad43aa9300982b01fdb5f4288c9b6ad61d120cceefa033410a7e0dddebce87531e72a507654c0d1483f37f961d2b78137071a2c43d1787fde6b08179f"
 }

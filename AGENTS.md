@@ -123,6 +123,21 @@ These domain rules are active now:
   - owned state: `data/branches`
   - rule: branch overlays and merge semantics stay explicit and validator-compatible
 
+## Workspace Composition Rule
+
+- `workspace`
+  - canonical capsule: `capsule.foundation.workspace.v1`
+  - rule: Workspace is a composition lens over linked modules such as Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship
+  - rule: Real keeps the canonical live inventory and ownership boundaries
+  - rule: Dream overlays may carry future workspace delta, but they must not erase stronger real-side inventory or re-own linked module semantics
+
+## CapsuleOS Branch Rule
+
+- `capsuleos`
+  - canonical capsule: `capsule.foundation.capsuleos.v1`
+  - rule: Real keeps the canonical live CapsuleOS operating contract, including validator sovereignty, capsule admission law, and branch-aware promotion discipline
+  - rule: Dream overlays may carry future operating-system delta such as better control surfaces, decomposition pressure, and lifecycle observability, but they must not shadow or restate current validator-owned trust law as if it were still future doctrine
+
 ## Mandatory Governance Checks
 
 Run these before closing non-trivial work on governed surfaces:
@@ -181,6 +196,8 @@ Do not start the next cluster while the current one still lacks a clear boundary
 - Keep `CONTEXT.md` aligned with the actual mode model, command packets, and task-ingestion path used in the repo.
 - Keep `MEMORY.md` aligned with durable repo truth when architectural priorities, operator preferences, or cross-session continuity changed.
 - Keep `TO-DO/` aligned with actual repo priorities, active clusters, and current verification reality.
+- When a Real/Dream doctrine packet promotes a hub selectively, update both the real canonical surface and the remaining Dream-only delta explicitly instead of silently leaving stale branch folklore behind.
+- When the Real/Dream constitutional wave is materially contained and the operator still asks for branch work, pull the next unresolved measured hub from `TO-DO/REAL_DREAM_FRONT.md` instead of reopening already-contained splits by intuition.
 - Treat external advice, article guidance, and chat doctrine as candidate input that must be adapted to N1Hub before it becomes repo law.
 - Anchor only high-signal boundaries, not random helpers.
 - Keep anchors comment-only, unique, deterministic, and linked.

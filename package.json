@@ -19,6 +19,7 @@
     "ninfinity": "tsx scripts/ninfinity.ts",
     "autoupdate": "tsx scripts/n1-automated-update.ts",
     "n1:update:once": "tsx scripts/n1-automated-update.ts",
+    "n1:update:schedule": "tsx scripts/n1-scheduled-iteration.ts --interval-minutes 30",
     "n1:sync": "tsx scripts/n1-automated-update.ts sync",
     "n1:orchestrate": "tsx scripts/n1-automated-update.ts orchestrate",
     "vault-steward": "tsx scripts/vault-steward.ts",

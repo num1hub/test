@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `BLOCKED`
 - Owner Lane: `Review Systems Agent`
 - Cluster: `Engineering quality`
 
@@ -103,6 +103,19 @@ You are the Review Systems Agent. Build a cross-model adversarial review lane fo
 - leave a clear example of review artifact or blocked-state artifact location
 - update teamwork or command surfaces if the review lane changes how N1 operates
 
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - inspected the host for an opposite-model external CLI boundary
+  - confirmed the current host exposes `codex` only
+  - did not implement a fake same-model adversarial-review lane
+  - moved this packet to `BLOCKED` because the hard stop condition is real on this machine
+- Verification:
+  - `for bin in claude codex gemini opencode aider; do if command -v "$bin" >/dev/null 2>&1; then printf "%s %s\n" "$bin" "$(command -v "$bin")"; fi; done` -> passed and reported only `codex /home/n1/.nvm/versions/node/v24.14.0/bin/codex`
+  - `rg -n "adversarial-review|opposite-model|Claude|Gemini|Codex|opencode|review lane|reviewer" skills TO-DO docs lib scripts --glob '!node_modules'` -> confirmed task intent and repo references, but did not surface a second installed opposite-model CLI contract
+  - blocker: same-model fallback is explicitly disallowed by this packet, so `codex` alone is insufficient proof
+
 ## Risks
 
 - opposite-model CLI availability may vary by host
@@ -121,4 +134,4 @@ You are the Review Systems Agent. Build a cross-model adversarial review lane fo
 
 ## Handoff Note
 
-This task succeeds when N1Hub gains a trustworthy hostile review lane, not when it gains another impressive-sounding prompt. Opposite-model proof is the center of gravity.
+This task is blocked on host capability, not repo structure. Resume when the current machine can prove an opposite-model external reviewer CLI such as a non-Codex model family. Do not unblock it by wrapping `codex` in a second prompt or by using same-model subagents.

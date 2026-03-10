@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:14.187Z",
+    "updated_at": "2026-03-10T18:07:00Z",
     "name": "N-Infinity Suggestion Agent",
     "semantic_hash": "capsule-foundation-infinity-suggestion-agent-v1-optimization-planner",
     "priority": "medium",
@@ -19,17 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Suggestion Agent\n\n## 1. Definition and Essence\nSuggestion Agent proposes next actions, sequencing improvements, and scope adjustments based on graph context and execution telemetry. It transforms detected risk or stagnation into concrete options that users or other agents can accept, refine, or reject.\n\n## 2. Core Attributes\n- `suggestion_id` stable identifier for recommendation objects\n- `rationale` evidence-linked explanation of why suggestion exists\n- `expected_impact` estimated value if adopted\n- `confidence` score and uncertainty notes\n- `feedback_outcome` accepted, modified, rejected lifecycle state\n\n## 3. Lifecycle\nSuggestion Agent listens to planner and tracker events, generates ranked actions, records feedback, and updates recommendation quality over time. It acts as a bridge between analytics signals and actionable human decisions.\n\n## 4. Integration\n- **N-Infinity:** part_of adaptive optimization swarm.\n- **Personal AI Assistant:** delivers suggestions conversationally.\n- **Planner:** applies accepted suggestions to roadmaps and tasks.\n- **Epistemic Ledger:** stores contradiction notes for disputed recommendations.\n\n## 5. Philosophical Alignment\nSuggestion intelligence embodies To Dig Deep by translating complexity into actionable, evidence-aware choices instead of shallow generic advice.\n"
+    "content": "# N-Infinity Suggestion Agent\n\n## 1. Future Role\nDream keeps Suggestion Agent as the next recommendation-control layer above the current real-side advisory contract. The real capsule remains canonical for today's bounded suggestion lane; Dream only preserves the future delta for higher-quality option shaping, better learning loops, and cleaner conversion from telemetry into execution-ready packets.\n\n## 2. Future Delta\n- rank and package suggestions with stronger comparative reasoning, expected-blast-radius framing, and clearer escalation choices\n- learn more directly from accept, reject, modify, and defer outcomes so recommendation quality compounds over time\n- emit cleaner packet-ready and queue-ready handoff bundles once A2C intake and packetization law mature further\n- coordinate more tightly with planner, tracker, assistant, and future swarm lanes without claiming that silent autonomous execution already exists\n- make overload, stagnation, and sequencing drift easier to convert into calm operator-facing options instead of generic advice\n\n## 3. Why Keep Dream\nThe current advisory contract is useful, but future execution depth will need a stronger option engine. Dream therefore keeps the next Suggestion Agent layer visible without overwriting the current bounded role.\n\n## 4. Guardrails\nDream does not replace the current advisory real contract, does not imply independent queue mutation or self-approval, and does not restate today's live suggestion lane as if it were still only a speculative future role.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Suggestion Agent in the Dream branch describes a more useful recommendation layer than generic advice can provide. It imagines stronger proposal quality, clearer expected impact, and tighter linkage between planner state, tracker evidence, and downstream decision outcomes. The agent matters because suggestions only improve work when they are relevant enough to change behavior. Dream therefore preserves Suggestion Agent as a future option-engine for the graph, not merely an explanatory assistant voice wrapped around familiar telemetry.",
+    "summary": "N-Infinity Suggestion Agent in Dream now keeps only the future option-engine delta above the current real-side advisory contract. Real remains canonical for the live suggestion lane that structures evidence-aware options, tracks rationale and expected impact, and routes accepted recommendations into planner, assistant, chat, or delegation flows without autonomous mutation authority. Dream instead preserves the next layer: better comparative ranking, stronger learning from accept or reject outcomes, cleaner packet-ready handoff bundles, and calmer conversion of overload or stagnation into actionable operator choices. This keeps future recommendation intelligence visible without pretending today's bounded lane is still only aspirational.",
     "keywords": [
       "n-infinity",
       "suggestion-agent",
-      "optimization",
+      "option-engine",
+      "packet-ready",
+      "feedback-learning",
       "planner",
-      "ai-assistant",
-      "workflow"
+      "tracker",
+      "assistant",
+      "future-doctrine"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -71,5 +74,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d4608e9195dbc13e363e84bfaab2ada4850f655594d5df53acce56bf09b0e4d6ad07caeac9bd1a46ee46d5018df7b9614df2cec1b6d335fa0a6e73b73a0d5c74"
+  "integrity_sha3_512": "56b46804b22a3d023ca2bbb6e11144b2afa0095ad295bc71dfda4f0f555a89b9b47b97f718c9efe9d86a27c995ee28e61aa8300364ff4ca458eb3eb3b6f4d0c5"
 }

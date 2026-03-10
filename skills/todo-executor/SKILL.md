@@ -18,6 +18,7 @@ Use this skill when the work already exists as a bounded task with scope, accept
 7. `TO-DO/AGENT_OPERATING_MODES.md`
 8. `TO-DO/HOT_QUEUE.md`
 9. the target task file in `TO-DO/tasks/`
+10. `skills/codex-spark-coder/SKILL.md` when the operator explicitly requested `GPT-5.3-Codex-Spark` for code writing
 
 ## Default Loop
 
@@ -26,6 +27,14 @@ Use this skill when the work already exists as a bounded task with scope, accept
 3. Execute one bounded implementation slice.
 4. Run the task verification.
 5. Update the queue or task packet if status or evidence changed.
+
+## Handoff Rules
+
+- stay in this skill only when the request is already classified as `queue_execution`
+- if the operator explicitly asked for `GPT-5.3-Codex-Spark`, use `skills/codex-spark-coder/SKILL.md` as a code-writing overlay but keep this skill as the queue boundary
+- hand back to `N1 Chief Orchestrator` when the work turns into multi-surface sync, baton routing, or lane selection
+- hand back to `Personal AI Assistant` when the packet boundary is no longer trustworthy and the next step is synthesis rather than implementation
+- do not mutate adjacent queue items just because they look related
 
 ## Rules
 

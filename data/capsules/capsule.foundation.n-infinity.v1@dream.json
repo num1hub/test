@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "n-infinity-iterations-swarm-compounding-background-runtime-engine",
-    "updated_at": "2026-03-09T00:13:04.590Z",
+    "updated_at": "2026-03-09T21:34:00Z",
     "name": "N-Infinity",
     "priority": "high",
     "progress": 30,
@@ -19,34 +19,26 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity: The Autonomous Evolution Engine\n\n## 1. Essence\nN-Infinity represents the self-evolving intelligence layer of the N1Hub ecosystem. It is an autonomous swarm of background AI agents that continuously and asynchronously patrol the CapsuleOS knowledge graph. While A2C acts as the refinery converting raw data into capsules, N-Infinity is the metabolic system that ensures these capsules grow, connect, and synthesize into higher-order intellectual capital over time.\n\n## 2. Origin of the Dream\nThe Dream branch sharpens the origin idea behind the name. N-Infinity begins with the recognition that human-quality interaction with models is precious but scarce: a person may produce dozens of deliberate prompts in a day, yet a mature system should be able to execute thousands of bounded background iterations over the same period. In this frame, infinity does not mean chaos. It means a practically unbounded cycle of useful iteration, where swarms keep thinking, checking, routing, and refining long after the human has finished the day's manual requests.\n\n## 3. Agent Archetypes\nThe swarm operates through specialized roles, often utilizing cost-effective, off-peak LLM processing:\n- **Weaver (Ткач)**: The relational architect.\n- **Gardener (Садовник)**: The ecologist of the graph.\n- **Parliament (Парламент)**: The epistemic arbitrator.\n- **Innovator (Инноватор)**: The catalyst for compound intelligence.\n\n## 4. Dream Direction\nThe future target is not merely an always-on swarm. It is an iteration engine where human strategic prompts, assistant routing, DeepMine mining, A2C refinement, Symphony execution, and swarm maintenance all stack into one compounding intelligence cycle. In that state, N-Infinity becomes the layer that converts finite human attention into effectively continuous graph evolution.\n\n## 5. Full-Cycle Position\nDream N-Infinity is explicitly downstream of quarry and refinery. It should inherit better raw material from DeepMine and better structured candidates from A2C, then turn those inputs into relationship growth, contradiction handling, reminders, risk detection, and synthesis at scale.\n\n## 6. Synergy and Continuous Evolution\nN-Infinity operates entirely within the strict physics of **CapsuleOS**, respecting graph law and cryptographic integrity. By operating 24/7, it embodies To Dig Deep as continuous graph metabolism rather than static storage.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773015063934\n- Job: Decomposition review for unfinished foundation hubs\n- Workstream: decomposition\n- Note: Tightened the summary around N-Infinity as the downstream graph-evolution layer, not the generic runtime or refinery. Split pressure is mainly between the core swarm mission, the named agent archetypes, and the full-cycle placement relative to DeepMine and A2C; those are the minimum viable future split points if this hub keeps expanding.\n"
+    "content": "# N-Infinity: Future Iteration Fabric\n\n## 1. Dream Direction\nDream N-Infinity keeps the long-horizon evolution layer that Real does not yet own. It is not the already-live night shift itself. It is the future fabric where bounded capsule jobs, review loops, planning signals, repository lanes, and graph-maintenance roles stack into one calmer and more continuous intelligence cycle.\n\n## 2. Desired Future State\n- a denser `iteration_fabric` linking DeepMine, A2C, planning, tracker signals, repository execution, review, and promotion work.\n- richer control-plane visibility, budget awareness, and lane-routing discipline across the swarm.\n- a broader role lattice where reminder, risk, suggestion, synthesis, contradiction, and graph-maintenance agents exchange batons cleanly.\n- stronger review bundles, contradiction arbitration, and promotion safety before autonomous action widens.\n- more durable 24/7 service behavior only after queue truth, cooldown policy, rollback law, and evidence contracts are strong enough.\n\n## 3. Future Role Lattice\nDream preserves a richer swarm than the current live runtime:\n- **Weaver, Gardener, Parliament, and Innovator** become a more tightly coupled compound-intelligence core.\n- **Reminder, Risk Detector, and Suggestion Agent** evolve into explicit planning-pressure lanes rather than auxiliary helpers.\n- future councils and maintenance workers may widen the swarm, but only under stronger control-plane visibility and review law.\n\n## 4. Dream Delta\nDream keeps what Real does not yet own: richer iteration economics, calmer continuous-service behavior, deeper cross-lane compounding, and a wider but still governed swarm topology. It should not be read as a shadow copy of the current night-shift runtime.\n\n## 5. Philosophical Alignment\nDream N-Infinity still operates inside the strict physics of **CapsuleOS**, but it points toward a more mature form of graph metabolism where near-continuous iteration is safe because governance, evidence, and baton discipline have all become stronger.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity is the Dream-branch hub for the autonomous background swarm that performs continuous, bounded iteration over the CapsuleOS knowledge graph after DeepMine extraction and A2C refinement. Its scope is the compounding graph-evolution layer itself: specialized swarm roles such as Weaver, Gardener, Parliament, and Innovator grow relationships, maintain graph health, handle contradiction pressure, and produce higher-order synthesis over time rather than defining the surrounding runtime.",
+    "summary": "N-Infinity in the Dream branch is the future iteration fabric for N1Hub: a denser, more visible, and more economically disciplined swarm where graph maintenance, planning pressure, review, synthesis, and repository lanes compound each other without losing governance. It preserves the long-horizon delta beyond the current real-side night-shift runtime, pointing toward stronger control-plane visibility, clearer baton exchange between swarm roles, and safer near-continuous service once evidence, cooldown, and rollback law are mature enough.",
     "keywords": [
       "n-infinity",
       "iterations",
       "agent-swarm",
-      "evolution-engine",
+      "iteration-fabric",
       "compound-intelligence",
-      "knowledge-graph",
       "capsuleos",
       "weaver",
       "gardener",
       "parliament",
       "innovator",
-      "deepmine",
-      "downstream-of-a2c",
-      "graph-metabolism",
-      "continuous-evolution",
+      "control-plane",
       "bounded-iteration",
-      "relationship-growth",
-      "contradiction-handling",
-      "risk-detection",
-      "higher-order-synthesis",
-      "vault-steward",
-      "autonomous-swarm",
-      "decomposition"
+      "review-bundles",
+      "continuous-service",
+      "swarm-governance"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -157,5 +149,5 @@
       }
     ]
   },
-  "integrity_sha3_512": "333ac33d8e8f2178425fa72eb3a0c698967193510fd6d1f573b3f9a93563dfcf3bf92d61df571299d06aaa31050294037508610799861982f222b75ed830c716"
+  "integrity_sha3_512": "f21e9acef07ca5c607590e9bd8a45816f877cbf386103c69d37e6c1802973a21964f0b86783518d3f7fc440756ea3b24274a0211dc85d333d3fd51c5e3d047ef"
 }

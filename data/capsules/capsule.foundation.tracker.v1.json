@@ -1,30 +1,31 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.tracker.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-06T22:05:00Z",
+    "updated_at": "2026-03-09T21:25:00Z",
     "name": "Tracker",
     "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core",
     "priority": "high",
-    "progress": 58,
+    "progress": 64,
     "estimatedHours": 240,
-    "actualHours": 120,
+    "actualHours": 128,
     "dueDate": "2026-06-10",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker is the execution telemetry and accountability layer of N1Hub. It watches goals, milestones, tasks, project state, issue state, and follow-through signals; computes drift and risk; and keeps real commitments visible over time. If Planner expresses intention, Tracker tells the truth about whether that intention is surviving contact with reality and whether the graph needs intervention.\n\n## 2. Core Functions\n- deadline and drift monitoring with configurable alert windows\n- progress tracking against estimated and actual effort\n- reminder and notification trigger generation for overdue, blocked, completed, or cooling commitments\n- historical review trails and temporal evidence for retrospectives\n- intake signals for Symphony issue work and capsule-vault maintenance\n- risk posture for N-Infinity, Reminder Agent, and assistant intervention\n- feedback loops into future planning, calendar pressure, and schedule revision\n- branch-aware follow-through logic so Dream intent is not confused with Real execution truth\n\n## 3. Data Model\nTracker consumes `dueDate`, `status`, `progress`, `estimatedHours`, `actualHours`, `completedAt`, recurrence, priority, and related metadata. It compares temporal state against current time, human rhythm, and planner expectations; generates reminders and notification-ready events; and can feed both repository issue orchestration and capsule-graph maintenance with evidence about what is stale, blocked, overloaded, or at risk. Its real value is not raw logging, but a usable evidence loop.\n\n## 4. N1Hub Role\nTracker is one of the organs that makes the second brain honest. Without it, the vault can accumulate beautiful plans that nobody can distinguish from real follow-through. With it, goals, milestones, tasks, and agent work become measurable, reviewable, and eligible for intervention, reassessment, or schedule compression.\n\n## 5. Integration\n- **Goal, Milestone, and Task:** provide the objects whose execution reality Tracker monitors.\n- **Planning Horizon Engine and Planner:** provide expectation, sequencing, and capacity context.\n- **Reminder, Notification, and Calendar:** turn telemetry into timing, prompts, and visible schedule pressure.\n- **Personal AI Assistant and AI Control Surface:** use tracker evidence to revise plans and explain reality.\n- **N-Infinity and Symphony:** consume tracker signals as risk, queue, and orchestration input.\n\n## 6. Philosophical Alignment\nTracker supports To Dig Deep by forcing intention to answer to evidence through an explicit `plan -> track -> remind -> review -> adjust` loop.\n"
+    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker is the execution telemetry and accountability layer of N1Hub. It watches goals, milestones, tasks, project state, issue state, and follow-through signals; computes drift and risk; and keeps real commitments visible over time. If Planner expresses intention, Tracker tells the truth about whether that intention is surviving contact with reality and whether the graph needs intervention.\n\n## 2. Core Functions\n- deadline and drift monitoring with configurable alert windows\n- progress tracking against estimated and actual effort\n- reminder and notification trigger generation for overdue, blocked, completed, or cooling commitments\n- historical review trails and temporal evidence for retrospectives\n- intake signals for Symphony issue work and capsule-vault maintenance\n- risk posture for N-Infinity, Reminder Agent, and assistant intervention\n- feedback loops into future planning, calendar pressure, and schedule revision\n- branch-aware follow-through logic so Dream intent is not confused with Real execution truth\n\n## 3. Data Model\nTracker consumes `dueDate`, `status`, `progress`, `estimatedHours`, `actualHours`, `completedAt`, recurrence, priority, and related metadata. It compares temporal state against current time, human rhythm, and planner expectations; generates reminders and notification-ready events; and can feed both repository issue orchestration and capsule-graph maintenance with evidence about what is stale, blocked, overloaded, or at risk. Its real value is not raw logging, but a usable evidence loop.\n\n## 4. N1Hub Role\nTracker is one of the organs that makes the second brain honest. Without it, the vault can accumulate beautiful plans that nobody can distinguish from real follow-through. With it, goals, milestones, tasks, and agent work become measurable, reviewable, and eligible for intervention, reassessment, or schedule compression.\n\n## 5. Integration\n- **Goal, Milestone, and Task:** provide the objects whose execution reality Tracker monitors.\n- **Planning Horizon Engine and Planner:** provide expectation, sequencing, and capacity context.\n- **Reminder, Notification, and Calendar:** turn telemetry into timing, prompts, and visible schedule pressure.\n- **Personal AI Assistant and AI Control Surface:** use tracker evidence to revise plans and explain reality.\n- **N-Infinity and Symphony:** consume tracker signals as risk, queue, and orchestration input.\n\n## 6. Philosophical Alignment\nTracker supports To Dig Deep by forcing intention to answer to evidence through an explicit `plan -> track -> remind -> review -> adjust` loop.\n\n## 7. Real Canonical Rule\nReal owns the current tracker contract: measured follow-through, deadline drift, risk telemetry, branch-aware execution truth, and the live orchestration signals already consumed by Symphony, N-Infinity, reminders, and assistant-facing replanning. Dream may continue to explore earlier prediction and smarter intervention, but Real is the canonical source for how Tracker currently keeps N1Hub honest.\n"
   },
   "neuro_concentrate": {
-    "summary": "Tracker is the monitoring and accountability layer of N1Hub Workspace. It watches goals, milestones, tasks, issue state, deadline drift, branch posture, and execution risk, then generates reminders, alerts, and analytics that keep action aligned with plan. This capsule matters because the second brain becomes unreliable if it can express intention but cannot measure follow-through. Tracker is therefore the bridge from planning to evidence, and from evidence to orchestration, intervention, schedule pressure, and review.",
+    "summary": "Tracker is the monitoring and accountability layer of N1Hub Workspace and now explicitly serves as the canonical real-side statement of the live tracking contract. It watches goals, milestones, tasks, issue state, deadline drift, branch posture, and execution risk, then generates reminders, alerts, and analytics that keep action aligned with plan. This capsule matters because the second brain becomes unreliable if it can express intention but cannot measure follow-through, so Tracker remains the bridge from planning to evidence, intervention, schedule pressure, and orchestration input.",
     "keywords": [
       "tracker",
+      "real-canonical",
       "deadlines",
       "progress",
       "orchestration-signals",
@@ -141,7 +142,15 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-09T21:25:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-026",
+        "rationale": "The real Tracker hub now explicitly owns the live accountability and orchestration contract already reflected in Symphony tracker mode, reminders, and branch-aware follow-through law. Dream remains valuable as predictive execution doctrine, but it should no longer be read as the canonical statement of current tracking behavior."
+      }
+    ]
   },
-  "integrity_sha3_512": "6e98ff747ae05bbde1948df633d6b2b00f80aceb81755e73390ca4c7d7875b98f14963cdb2b8c3408e60de8f20543bddbb9951465c90b5291cce627ace259471"
+  "integrity_sha3_512": "b932cb611bae8867e3b353fbacd79e67167d3d1b7dec4860ab66f4bc377e06c087ac924973ab24f85f861d888d3602d1da07130d0f3425f50392891ed6d55c84"
 }

@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Task Packet Agent`
 - Cluster: `A2C intake and planning`
 
@@ -65,6 +65,53 @@ An intake contract alone does not move work. N1Hub needs a packet-builder stage 
 3. define queue-insertion posture and packet storage posture
 4. leave a clean bridge to later capsule-native projection
 
+## Packet Builder Path
+
+- input artifact:
+  - `data/private/a2c/intake/normalized/<intake-id>.normalized.json`
+- builder runtime:
+  - `lib/a2c/todoPacket.ts`
+  - `scripts/a2c/packetize.ts`
+- staged output:
+  - `data/private/a2c/tasks/packet_candidates/<packet-id>.json`
+  - `data/private/a2c/tasks/packet_candidates/<packet-id>.md`
+- promotion posture:
+  - packet candidates stay outside `TO-DO/tasks/` and `TO-DO/HOT_QUEUE.md` until reviewed and assigned a real `TODO-###` id
+
+## Concrete Mapping Example
+
+- normalized input:
+  - `objective`: `Make A2C query behavior read only by default`
+  - `route_class_hint`: `queue_execution`
+  - `scope_hints`: `lib/a2c/query.ts`, `scripts/a2c/query.ts`, `__tests__/a2c/*`
+  - `priority_hint`: `P1`
+  - `execution_band_hint`: `NEXT`
+  - `owner_lane_hints`: `A2C Runtime Agent`
+  - `acceptance_criteria_hints`: `default query path leaves data/private/a2c untouched`
+  - `verification_hints`: `npm run typecheck`, `npx vitest run __tests__/a2c/*.test.ts`
+  - `stop_condition_hints`: `stop if a hidden caller still depends on write side effects`
+- mapped packet fields:
+  - title -> `TODO-DRAFT Make A2C Query Behavior Read Only By Default`
+  - goal -> objective text
+  - scope -> `scope_hints`
+  - priority / execution band / owner lane -> direct hint mapping
+  - acceptance criteria -> `acceptance_criteria_hints`
+  - verification -> `verification_hints`
+  - stop conditions -> `stop_condition_hints`
+  - handoff -> points back to the normalized intake artifact rather than mutating queue truth directly
+
+## Defer Rules
+
+- defer when `route_class_hint` is not `queue_execution`
+- defer when the objective is too short to bound the work
+- defer when scope, acceptance, and verification hints are all absent
+
+## Current Repo Truth
+
+- the builder now consumes the normalized intake contract emitted by `TODO-016`
+- packet candidates mirror the existing task template instead of inventing a second queue format
+- queue insertion remains explicit review work, not automatic promotion
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -115,4 +162,15 @@ You are the Task Packet Agent. Build the A2C packet-builder stage that turns nor
 
 ## Handoff Note
 
-This task is about generating bounded work packets, not about proving full autonomy. If you do it right, future N1 turns can pull clean tasks from user intent without rethinking the structure every time.
+Contained on 2026-03-10. `TODO-019` should add fixture coverage for queue-ready and deferred packetization paths, while future promotion work can use `data/private/a2c/tasks/packet_candidates/*.md` as the reviewed handoff into `TO-DO/tasks/`.
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - added a repo-native packet builder that consumes normalized intake artifacts and stages packet candidates under A2C-owned storage
+  - added explicit defer rules so vague or non-queue input does not flood the live queue
+  - documented the transitional bridge from A2C packet candidates to future capsule-native execution
+- Verification:
+  - `npm run typecheck` -> passed
+  - `npm run check:anchors:full` -> passed

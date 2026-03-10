@@ -1,53 +1,42 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.personal-ai-assistant.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-08T23:10:03.739Z",
+    "updated_at": "2026-03-09T20:55:00Z",
     "name": "Personal AI Assistant",
     "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core",
     "priority": "high",
-    "progress": 24,
+    "progress": 29,
     "estimatedHours": 560,
-    "actualHours": 110,
+    "actualHours": 118,
     "dueDate": "2026-10-31",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, graph relationships, and the wider agent fleet, then provides timely suggestions, automation, and conversational control over the ecosystem.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Multimodal ingress over text, files, and voice transcripts.\n- Context awareness based on active projects, tasks, user preference capsules, and bounded context packs.\n- Proactive planning support for daily, weekly, and long-horizon scheduling.\n- Horizon-aware conversation so one surface can answer about `today`, `tomorrow`, `30/60/90`, `365`, and `1000-day` intent.\n- Task automation for capsule creation, status updates, and reminders.\n- Knowledge retrieval and graph-grounded summaries.\n- Delegation into deeper runtime lanes with clear return paths and human override.\n- Learning from accept or reject feedback loops.\n\n## 3. Architecture\nThe Assistant uses N-Infinity as the background intelligence layer, DeepMine for model access and reasoning pipelines, A2C for transforming user instructions into structured capsules, and Planning Horizon Engine for compressing the whole Dream field through Real into grounded next actions. Interaction logs are stored as operations capsules to preserve continuity and auditability. As Dream matures, the assistant should increasingly act as a daytime co-pilot and routing layer over bounded subagents rather than as one monolithic answer engine.\n\n## 4. Integration\nIt orchestrates with Planner for decomposition and scheduling, with Planning Horizon Engine for multi-horizon distillation, with Tracker for overdue detection and follow-through, with project capsules for scope context, with Agent Delegation for bounded handoffs, and with CapsuleOS guarantees for sovereignty and traceability.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine ideas into precise actions, exposing hidden dependencies, and sustaining momentum from zero to one while keeping the human as final governor.\n\n## 6. Future Potential\nVoice mode, secure third-party automations, richer delegation workflows, stronger swarm supervision, and more transparent horizon compression can evolve this module without weakening data sovereignty.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1773011359164\n- Job: Markup review for personal-ai-assistant sovereign hub\n- Workstream: markup\n- Note: Summary was clarified for scanability and edge hygiene, emphasizing orchestration, continuity, and governance. Added keywords to improve discovery and classification, covering operations capsules, auditability, context packs, project graph, feedback loops, CapsuleOS, sovereignty, and traceability. Capsule boundaries are well described, but future atomic splits for horizon-aware conversation, automation, retrieval, and continuity are noted as needed. No speculative content was promoted."
+    "content": "# Personal AI Assistant: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical assistant carrier contract: the stable `N1` identity, bounded routing across assistant and execution lanes, and the current approval and branch discipline. Dream therefore should not restate the current live assistant runtime as if it were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future assistant delta such as:\n- richer multimodal ingress across voice, files, and ambient operator context,\n- deeper graph-backed execution guidance without collapsing into uncontrolled autonomy,\n- stronger memory-backed adaptation to operator style and long-horizon intent,\n- better daytime orchestration of bounded subagents with clearer return-path explanations,\n- more transparent economic, review, and control-surface awareness as the swarm matures.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current `N1` carrier contract,\n- collapse assistant doctrine into fleet-management or hidden autonomous control,\n- reintroduce operational swarm notes as constitutional assistant law.\n\n## 4. Dream Lens\nThe useful Dream stance is to keep the Personal AI Assistant future-facing as a richer symbiotic partner while letting Real remain canonical for what the assistant currently is, what it may claim, and how it must hand work into bounded runtime lanes."
   },
   "neuro_concentrate": {
-    "summary": "Personal AI Assistant is the conversational and orchestration hub in Dream, serving as a context-aware collaborator within N1Hub Workspace. It leverages project and task graph context, multimodal ingress, horizon-aware planning, delegation contracts, feedback loops, and integrations with N-Infinity, DeepMine, A2C, Planner, and Tracker to transform user intent into grounded actions, summaries, automations, and bounded handoffs. The capsule preserves continuity, auditability, explicit human governance, strong branch awareness, and review-aware workflows through durable operations capsules.",
+    "summary": "Personal AI Assistant is the Dream-side future overlay for a richer symbiotic partner, not the canonical source of current assistant runtime law. Real now owns the stable `N1` carrier contract, bounded routing posture, and current approval discipline, while Dream stays focused on future multimodal ingress, deeper graph-backed execution guidance, stronger memory-backed adaptation, clearer subagent return paths, and improved control-surface awareness as the swarm matures. This keeps Dream useful as roadmap doctrine without letting it masquerade as the live assistant contract inside N1Hub.",
     "keywords": [
-      "ai-assistant",
-      "jarvis",
-      "copilot",
-      "conversational",
+      "personal-ai-assistant",
+      "future-overlay",
+      "n1-carrier",
       "multimodal-ingress",
-      "planning-horizon-engine",
-      "task-automation",
-      "context-awareness",
+      "graph-execution-guidance",
+      "memory-adaptation",
+      "bounded-subagents",
+      "control-surface-awareness",
+      "branch-discipline",
+      "symbiotic-partner",
+      "future-delta",
       "workspace",
-      "n1hub",
-      "deepmine",
-      "agent-delegation",
-      "vault-steward",
-      "multi-horizon",
-      "human-governance",
-      "operations-capsule",
-      "auditability",
-      "context-pack",
-      "project-graph",
-      "feedback-loop",
-      "capsuleos",
-      "sovereignty",
-      "traceability",
-      "autonomous-swarm"
+      "n1hub"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -227,8 +216,15 @@
         "run_id": "vault-steward-1773011359164",
         "job_id": "vault-steward-job-e79ad7136f12d909",
         "rationale": "The maintenance changes are grounded in the capsule's content, which highlights orchestration, context-awareness, continuity, and governance as core functions. Added keywords reflect explicit features and integration points mentioned in the capsule, improving navigation and discoverability without altering meaning or doctrine."
+      },
+      {
+        "at": "2026-03-09T20:55:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-023",
+        "rationale": "The Dream assistant capsule was narrowed to future-only assistant delta after Real became the explicit canonical statement of the current N1 carrier contract. This preserves Dream as roadmap doctrine without letting it override live assistant behavior."
       }
     ]
   },
-  "integrity_sha3_512": "31f0db29ac576ee7f0879c60baf709a74efb35ce1facc6a7f9e907b116aab13b05a0206b7aae76f77c3786de7b9fa732db6a68d36cf449d6853cb42ee9a951be"
+  "integrity_sha3_512": "8168b25797834df0dd6af02402254023bb7d056dc5e5ad4b04cb5efadfe8c3c760af652e75ecb4b595dafaeda4e0053a84ccfa355e8c2026be8d78e51f231965"
 }

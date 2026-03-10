@@ -25,13 +25,25 @@ A2C is expected to operate inside the N1Hub low-blast-radius architecture:
   Validates the A2C protocol corpus in [`docs/a2c`](/home/n1/n1hub.com/docs/a2c) and confirms readiness.
 
 - `npm run a2c:recon`
-  Produces a repo-aware workspace intelligence report against the current N1Hub root.
+  Produces a repo-aware workspace intelligence report against the current N1Hub root. Its cluster-context scan is now intentionally limited to `lib/a2c`, `__tests__/a2c`, and dedicated A2C docs under `docs/a2c*`.
 
 - `npm run a2c:index`
   Rebuilds the TypeScript runtime graph index from [`data/capsules`](/home/n1/n1hub.com/data/capsules).
 
 - `npm run a2c:status`
   Reports aggregate graph health, daemon state, void count, and merge pressure.
+
+- `npm run a2c:query -- --query "<text>"`
+  Returns ranked capsule matches in read-only mode by default. Pass `--synthesize-on-fly` only when you explicitly want a transient synthesis draft written under [`data/private/a2c`](/home/n1/n1hub.com/data/private/a2c).
+
+- `npm run a2c:investigate -- --input <path>`
+  Combines recon plus query context for a candidate input. Its query step stays read-only by default and accepts `--synthesize-on-fly` as the explicit transient-write opt-in.
+
+- `POST /api/a2c/ingest`
+  Accepts `operatorInput.text` plus optional source metadata, stages a raw artifact under [`data/private/a2c/intake/archive_raw`](/home/n1/n1hub.com/data/private/a2c/intake/archive_raw), and writes the normalized intake contract under [`data/private/a2c/intake/normalized`](/home/n1/n1hub.com/data/private/a2c/intake/normalized) for later packet building. The normalized contract now carries verification and stop-condition hints so packetization can preserve bounded proof and pause rules.
+
+- `npx tsx scripts/a2c/packetize.ts --intake-id <id>`
+  Consumes one normalized intake artifact, renders a candidate in the existing `TO-DO` task-template shape, and stages JSON plus markdown packet candidates under [`data/private/a2c/tasks/packet_candidates`](/home/n1/n1hub.com/data/private/a2c/tasks/packet_candidates). This does not auto-promote into [`TO-DO/tasks`](/home/n1/n1hub.com/TO-DO/tasks).
 
 - `npm run a2c:voids`
   Runs structural void mapping and writes the frontier report into [`data/private/a2c/tasks`](/home/n1/n1hub.com/data/private/a2c/tasks).
@@ -59,6 +71,8 @@ A2C is expected to operate inside the N1Hub low-blast-radius architecture:
 ## Validation Note
 
 The authoritative gate for live N1Hub capsules remains the TypeScript validator and its API/CLI surfaces.
+
+Audit freshness rule: A2C audit and autonomous dry-run paths now treat the runtime index as stale when index node ids drift from the live real-capsule geometry, not only when the index schema is invalid.
 
 TypeScript-first workflow:
 

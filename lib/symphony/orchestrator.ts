@@ -1,5 +1,12 @@
 import { validateDispatchConfig } from './config';
 import { StructuredLogger } from './logger';
+import {
+  buildInitialState,
+  buildIssueDetails,
+  buildRuntimeSnapshot,
+  issueFields,
+  nextAttempt,
+} from './orchestrator-state';
 import { runAgentAttempt } from './runner';
 import { createTrackerClient, isTerminalBlocker } from './tracker';
 import type {
@@ -8,7 +15,6 @@ import type {
   Issue,
   Logger,
   OrchestratorRuntimeState,
-  RetryEntry,
   RunningEntry,
   RuntimeSnapshot,
   TrackerClient,
@@ -16,35 +22,6 @@ import type {
 } from './types';
 import { isoNow, monotonicNowMs, normalizeIssueState } from './utils';
 import { WorkspaceManager } from './workspace';
-
-function nextAttempt(value: number | null): number {
-  return (value ?? 0) + 1;
-}
-
-function buildInitialState(runtime: WorkflowRuntime): OrchestratorRuntimeState {
-  return {
-    poll_interval_ms: runtime.config.polling.interval_ms,
-    max_concurrent_agents: runtime.config.agent.max_concurrent_agents,
-    running: new Map(),
-    claimed: new Set(),
-    retry_attempts: new Map(),
-    completed: new Set(),
-    codex_totals: {
-      input_tokens: 0,
-      output_tokens: 0,
-      total_tokens: 0,
-      seconds_running: 0,
-    },
-    codex_rate_limits: null,
-  };
-}
-
-function issueFields(issue: Issue): { issue_id: string; issue_identifier: string } {
-  return {
-    issue_id: issue.id,
-    issue_identifier: issue.identifier,
-  };
-}
 
 export class SymphonyOrchestrator {
   private runtime: WorkflowRuntime;
@@ -118,91 +95,11 @@ export class SymphonyOrchestrator {
   }
 
   getSnapshot(): RuntimeSnapshot {
-    const activeSeconds = [...this.state.running.values()].reduce((sum, entry) => {
-      return sum + (Date.now() - new Date(entry.started_at).valueOf()) / 1000;
-    }, 0);
-
-    return {
-      generated_at: isoNow(),
-      counts: {
-        running: this.state.running.size,
-        retrying: this.state.retry_attempts.size,
-      },
-      running: [...this.state.running.values()].map((entry) => ({
-        issue_id: entry.issue_id,
-        issue_identifier: entry.identifier,
-        state: entry.issue.state,
-        session_id: entry.session_id,
-        turn_count: entry.turn_count,
-        last_event: entry.last_codex_event,
-        last_message: entry.last_codex_message,
-        started_at: entry.started_at,
-        last_event_at: entry.last_codex_timestamp,
-        tokens: {
-          input_tokens: entry.codex_input_tokens,
-          output_tokens: entry.codex_output_tokens,
-          total_tokens: entry.codex_total_tokens,
-        },
-      })),
-      retrying: [...this.state.retry_attempts.values()].map((entry) => ({
-        issue_id: entry.issue_id,
-        issue_identifier: entry.identifier,
-        attempt: entry.attempt,
-        due_at: new Date(Date.now() + Math.max(entry.due_at_ms - monotonicNowMs(), 0)).toISOString(),
-        error: entry.error,
-      })),
-      codex_totals: {
-        ...this.state.codex_totals,
-        seconds_running: this.state.codex_totals.seconds_running + activeSeconds,
-      },
-      rate_limits: this.state.codex_rate_limits,
-    };
+    return buildRuntimeSnapshot(this.state);
   }
 
   getIssueDetails(identifier: string): Record<string, unknown> | null {
-    const running = [...this.state.running.values()].find((entry) => entry.identifier === identifier);
-    const retry = [...this.state.retry_attempts.values()].find((entry) => entry.identifier === identifier);
-
-    if (!running && !retry) return null;
-
-    return {
-      issue_identifier: identifier,
-      issue_id: running?.issue_id ?? retry?.issue_id ?? null,
-      status: running ? 'running' : retry ? 'retrying' : 'unknown',
-      workspace: running
-        ? {
-            path: running.workspace_path,
-          }
-        : null,
-      attempts: {
-        restart_count: running?.retry_attempt ?? retry?.attempt ?? 0,
-        current_retry_attempt: retry?.attempt ?? running?.retry_attempt ?? 0,
-      },
-      running: running
-        ? {
-            session_id: running.session_id,
-            turn_count: running.turn_count,
-            state: running.issue.state,
-            started_at: running.started_at,
-            last_event: running.last_codex_event,
-            last_message: running.last_codex_message,
-            last_event_at: running.last_codex_timestamp,
-            tokens: {
-              input_tokens: running.codex_input_tokens,
-              output_tokens: running.codex_output_tokens,
-              total_tokens: running.codex_total_tokens,
-            },
-          }
-        : null,
-      retry: retry
-        ? {
-            attempt: retry.attempt,
-            due_at: new Date(Date.now() + Math.max(retry.due_at_ms - monotonicNowMs(), 0)).toISOString(),
-            error: retry.error,
-          }
-        : null,
-      last_error: running?.last_error ?? retry?.error ?? null,
-    };
+    return buildIssueDetails(this.state, identifier);
   }
 
   private scheduleTick(delayMs: number): void {
@@ -536,7 +433,7 @@ export class SymphonyOrchestrator {
       void this.handleRetryTimer(issueId);
     }, delay);
 
-    const entry: RetryEntry = {
+    const entry = {
       issue_id: issueId,
       identifier: options.identifier,
       attempt,

@@ -3,6 +3,7 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
+import { stageOperatorInput } from '@/lib/a2c/ingest';
 import { CAPSULES_DIR, ensureCapsulesDir, getExistingCapsuleIds } from '@/lib/capsuleVault';
 import { dataPath } from '@/lib/dataPath';
 import { appendValidationLog } from '@/lib/validationLog';
@@ -14,6 +15,14 @@ interface IngestBody {
   capsules?: unknown[];
   capsule?: unknown;
   autoFix?: boolean;
+  operatorInput?: {
+    text?: unknown;
+    source?: {
+      channel?: unknown;
+      actor?: unknown;
+      metadata?: unknown;
+    };
+  };
 }
 
 const QUARANTINE_DIR = dataPath('quarantine');
@@ -71,6 +80,39 @@ export async function POST(request: Request) {
 
   try {
     const body = (await request.json()) as IngestBody;
+    const operatorInput = isRecordObject(body.operatorInput) ? body.operatorInput : null;
+    const operatorText = operatorInput && typeof operatorInput.text === 'string' ? operatorInput.text.trim() : '';
+
+    if (operatorText) {
+      const source = isRecordObject(operatorInput?.source) ? operatorInput.source : null;
+      const staged = await stageOperatorInput(process.cwd(), {
+        text: operatorText,
+        source: {
+          channel: typeof source?.channel === 'string' ? (source.channel as 'api' | 'chat' | 'cli' | 'unknown') : 'api',
+          actor: typeof source?.actor === 'string' ? source.actor : undefined,
+          metadata: isRecordObject(source?.metadata) ? source.metadata : undefined,
+        },
+      });
+
+      await logActivity('import', {
+        message: 'A2C operator input staged for normalization.',
+        intake_id: staged.intake_id,
+        route_class_hint: staged.normalized.route_class_hint,
+      });
+
+      return NextResponse.json(
+        {
+          intake: staged,
+          summary: {
+            status: 'normalized',
+            task_refs: staged.normalized.task_refs.length,
+            verification_hints: staged.normalized.verification_hints.length,
+          },
+        },
+        { status: 202 },
+      );
+    }
+
     const capsules = Array.isArray(body.capsules)
       ? body.capsules
       : body.capsule !== undefined

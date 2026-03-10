@@ -16,6 +16,7 @@ const parseArgs = (argv: string[]) => {
     input: read('--input'),
     query: read('--query', ''),
     dryRun: argv.includes('--dry-run'),
+    synthesizeOnFly: argv.includes('--synthesize-on-fly'),
   };
 };
 
@@ -56,7 +57,11 @@ const summarizeInput = async (inputPath: string) => {
       ? inputSummary.preview.slice(0, 120)
       : 'n1hub architecture');
 
-  const queryResult = await queryVault({ kbRoot: args.kbRoot, query });
+  const queryResult = await queryVault({
+    kbRoot: args.kbRoot,
+    query,
+    synthesizeOnFly: args.synthesizeOnFly,
+  });
   process.stdout.write(
     JSON.stringify(
       {

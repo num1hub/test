@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Autonomy Systems Agent`
 - Cluster: `N1 runtime`
 
@@ -99,15 +99,13 @@ You are the Autonomy Systems Agent. Extend the one-shot N1 iteration engine into
 
 ## Evidence and Artifacts
 
-- update the workflow docs and operations notes
-- extend teamwork or report artifacts if recurring runs need new metadata
-- record the scheduler-facing command or run example
-
-## Evidence and Artifacts
-
-- update the workflow docs and operations notes
-- extend teamwork or report artifacts if recurring runs need new metadata
-- record the scheduler-facing command or run example
+- workflow docs updated in `TO-DO/AUTOMATED_UPDATE_WORKFLOW.md`
+- operations note updated in `docs/agents-operations.md`
+- scheduler artifacts added under `data/private/agents/n1/scheduler.*` and `reports/n1/scheduler/*.md`
+- scheduler-facing commands now include `./autoupdate schedule --interval-minutes 30` and `npm run n1:update:schedule`
+- `npx vitest run __tests__/agents/*.test.ts` passed on 2026-03-10
+- `npm run typecheck` passed on 2026-03-10
+- `npm run check:anchors:full` passed on 2026-03-10
 
 ## Risks
 
@@ -127,4 +125,4 @@ You are the Autonomy Systems Agent. Extend the one-shot N1 iteration engine into
 
 ## Handoff Note
 
-Treat this as scheduler engineering, not hype. The right answer is usually one honest iteration triggered many times, not one immortal process mutating itself in the dark.
+Treat this as scheduler engineering, not hype. The right answer is one honest iteration triggered many times, guarded by interval state and explicit reports, not one immortal process mutating itself in the dark.

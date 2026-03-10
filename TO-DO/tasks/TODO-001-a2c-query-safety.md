@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `A2C Runtime Agent`
 - Cluster: `A2C runtime hardening`
 
@@ -63,6 +63,15 @@ Right now A2C retrieval surfaces still risk acting like mutation surfaces. That 
 2. Make read-only the default query contract.
 3. Add explicit opt-in for transient synthesis and update tests plus docs.
 
+## Caller Map
+
+- `lib/a2c/oracle.ts:58`
+  `queryGraph` calls `queryVault` for ranked related capsules and now inherits the read-only default without losing result shape.
+- `scripts/a2c/investigate.ts:59`
+  investigate now stays read-only by default and exposes `--synthesize-on-fly` as an explicit transient-write opt-in.
+- `lib/a2c/query.ts:313`
+  the query CLI path now defaults to read-only and only synthesizes when `--synthesize-on-fly` is passed.
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -116,4 +125,16 @@ You are the A2C Runtime Agent. Make A2C query surfaces read-only by default, kee
 
 ## Handoff Note
 
-Start from `lib/a2c/query.ts`, then inspect every caller of `queryVault`. Change the contract once, not separately at each caller.
+Contained on 2026-03-10. Next A2C queue frontier is `TODO-016`; the next runtime-facing follow-up is `TODO-003` if more query/audit contract proof is needed.
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - `queryVault` now rebuilds missing indexes in memory instead of persisting them during query reads
+  - transient synthesis now stays behind explicit `--synthesize-on-fly` opt-ins on query and investigate surfaces
+  - placeholder query TODOs were replaced with real read-only and opt-in contract tests
+- Verification:
+  - `npx vitest run __tests__/a2c/*.test.ts` -> passed (`4 passed | 1 skipped`, `8 passed | 3 todo`)
+  - `npm run typecheck` -> passed
+  - `npm run a2c:recon` -> passed (`status: COMPLETE`)

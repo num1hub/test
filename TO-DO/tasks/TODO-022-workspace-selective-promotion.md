@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Branch Steward Agent`
 - Cluster: `Real/Dream governance`
 
@@ -34,6 +34,7 @@ Selectively promote the Dream-side boundary doctrine from `capsule.foundation.wo
 - updated real workspace capsule with selectively promoted boundary doctrine
 - preserved real-side runtime inventory where Dream is weaker
 - explicit note of what remained Dream-only after promotion
+- synchronized root docs and TO-DO surfaces that now describe Workspace as a composition lens with real-first canonical ownership
 
 ## Context Snapshot
 
@@ -61,7 +62,9 @@ Selectively promote the Dream-side boundary doctrine from `capsule.foundation.wo
 1. Compare real and dream workspace hubs against the named repo-law surfaces.
 2. Extract the Dream-side boundary doctrine that should become canonical in Real.
 3. Apply only that doctrine into the real capsule while preserving the stronger real-side inventory.
-4. Validate the result and record what stayed Dream-only.
+4. Rewrite the Dream workspace capsule so it keeps only future-facing delta.
+5. Sync root docs and TO-DO surfaces so the new workspace rule is visible to the next agent.
+6. Validate the result and record what stayed Dream-only.
 
 ## Mode and Skill
 
@@ -88,15 +91,31 @@ You are the Branch Steward Agent. Promote only the Dream-side workspace boundary
 
 ## Verification
 
-- `npm run validate -- data/capsules/capsule.foundation.workspace.v1.json`
+- `npm run validate -- --fix data/capsules/capsule.foundation.workspace.v1.json --ids-file /tmp/n1hub-capsule-ids.json`
+- `npm run validate -- --fix data/capsules/capsule.foundation.workspace.v1@dream.json --ids-file /tmp/n1hub-capsule-ids.json`
 - `npm run validate -- --dir data/capsules --strict --report`
 - `npx tsx scripts/curate-vault-real-dream.ts --dry-run`
+- `npm run check:anchors:full`
+- `npm run audit:file-guardrails`
+- `npm run n1:update:once -- --task TODO-001`
 
 ## Evidence and Artifacts
 
 - update this packet with the exact promoted doctrine and the exact retained real-side inventory
 - update [TODO-008 Real Dream Constitutional Hub Triage](/home/n1/n1hub.com/TO-DO/tasks/TODO-008-real-dream-constitutional-hub-triage.md) only if the promotion changes the branch interpretation materially
 - refresh teamwork artifacts if the active host lane supports them
+- capsule validation report: `reports/validation-2026-03-09T20-38-12-423Z.md`
+- N1 continuity reports:
+  - `reports/n1/automated-update/n1-iter-2026-03-09T20-39-03Z.md`
+  - `reports/n1/repo-sync/n1-sync-2026-03-09T20-39-03Z.md`
+  - `reports/n1/orchestration/n1-orch-2026-03-09T20-39-03Z.md`
+
+## Execution Outcome
+
+- Real `workspace` is now canonical for both boundary doctrine and current runtime inventory.
+- Dream `workspace` now keeps only future-facing operator composition delta.
+- Root docs now describe Workspace as a composition lens rather than as a mega-owner of linked module semantics.
+- `TODO-008` interpretation did not change materially, so the triage packet was left untouched.
 
 ## Risks
 
@@ -116,4 +135,4 @@ You are the Branch Steward Agent. Promote only the Dream-side workspace boundary
 
 ## Handoff Note
 
-Open the real and dream `workspace` hubs first, then read `README.md`, `AGENTS.md`, and `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`. The key constraint is simple: pull over boundary doctrine, not a whole replacement text.
+Workspace selective promotion is contained. Pull `TODO-001` next unless the operator explicitly reopens branch governance.

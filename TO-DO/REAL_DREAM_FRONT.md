@@ -97,6 +97,15 @@ Interpretation:
 - the measured drift front is concentrated in runtime governance, assistant orchestration, workspace doctrine, and vault stewardship
 - broad content cleanup is still not the first move
 - the next branch wave should start from hub triage and explicit branch decisions on the measured top set, not from older intuition lists
+- workspace is now no longer an open interpretation gap: Real is canonical for workspace boundaries and runtime inventory, while Dream is narrowed to future workspace delta
+- personal-ai-assistant is now also explicit: Real is canonical for the live `N1` carrier contract, while Dream remains future assistant doctrine instead of shadow runtime truth
+- key-agents is now also explicit: Real is canonical for the live lane topology, while Dream remains future swarm-coordination doctrine instead of a shadow map of current runtime ownership
+- n1hub is now also explicit: Real is canonical for the live N1Hub runtime contract, while Dream remains future habitat doctrine instead of a shadow statement of current runtime truth
+- tracker is now also explicit: Real is canonical for the live accountability and orchestration contract, while Dream remains predictive execution doctrine instead of a shadow statement of current runtime tracking truth
+- capsuleos is now also explicit: Real is canonical for the live CapsuleOS operating contract, while Dream remains future operating-system doctrine instead of a shadow restatement of validator-owned trust law
+- n-infinity is now also explicit: Real is canonical for the live bounded night-shift swarm contract, while Dream remains future iteration-fabric doctrine instead of a shadow statement of already-live runtime behavior
+- project.n-infinity is now also explicit: Real is canonical for the current implementation program and bounded deployment posture, while Dream remains future control-plane and swarm-governance doctrine instead of a shadow statement of the current project topology
+- operator-directed downstream capsule work can now continue from bounded atomic clusters or move to promotion testing, but the hub wave itself is no longer the bottleneck
 
 ## Existing Runtime Surfaces
 
@@ -130,8 +139,16 @@ The gap is not total absence of runtime. The gap is missing operator-facing task
 4. Treat the nine real-only engineering law capsules as `real-first canonical` unless a specific future governance divergence appears.
 5. `TODO-020` is now closed: the Dream `background-agent-runtime` hub was rewritten around current governed runtime truth with future-only delta preserved.
 6. `TODO-021` is now closed: the Dream `vault-stewardship-swarm` hub was rewritten around live stewardship truth and explicitly separated from the Dream-only operational mirrors.
-7. Continue the remaining selective `workspace` promotion packet.
-8. Expand promotion and branch-safe tests only after those policy and doctrine packets land.
+7. `TODO-022` is now closed: the real `workspace` hub owns the canonical boundary doctrine and live runtime inventory, while Dream keeps only future-facing workspace delta.
+8. `TODO-023` is now closed: the real `personal-ai-assistant` hub owns the canonical current `N1` carrier contract, while Dream keeps future assistant delta.
+9. `TODO-024` is now closed: the real `key-agents` hub owns the canonical live role map, while Dream keeps future swarm-coordination delta.
+10. `TODO-025` is now closed: the real `n1hub` hub owns the canonical current runtime contract, while Dream keeps future habitat doctrine.
+11. `TODO-026` is now closed: the real `tracker` hub owns the canonical current accountability contract, while Dream keeps predictive execution doctrine.
+12. `TODO-027` is now closed: the real `capsuleos` hub owns the canonical live operating contract, while Dream keeps future operating-system delta.
+13. `TODO-028` is now closed: the real `n-infinity` hub owns the canonical live night-shift and bounded swarm contract, while Dream keeps future iteration-fabric doctrine.
+14. `TODO-029` is now closed: the real `project.n-infinity` hub owns the canonical current implementation program and bounded deployment posture, while Dream keeps future control-plane and swarm-governance doctrine.
+15. First-wave hub containment is complete, so the default next branch-facing step is promotion and branch-safe test expansion unless the operator deliberately continues downstream capsule pairs.
+16. `TODO-030` is now closed: the first downstream N-Infinity atomic trio (`weaver`, `parliament`, `suggestion-agent`) keeps Real canonical for the current role contracts while Dream keeps future-only delta.
 
 ## Task Links
 
@@ -139,4 +156,8 @@ The gap is not total absence of runtime. The gap is missing operator-facing task
 - [TODO-008 Real Dream Constitutional Hub Triage](/home/n1/n1hub.com/TO-DO/tasks/TODO-008-real-dream-constitutional-hub-triage.md)
 - [TODO-009 Vault Steward Dream-Only Operations Review](/home/n1/n1hub.com/TO-DO/tasks/TODO-009-vault-steward-dream-only-operations-review.md)
 - [TODO-010 Real-Only Law Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-010-real-only-law-sync.md)
+- [TODO-027 CapsuleOS Retain-Dream Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-027-capsuleos-retain-dream-sync.md)
+- [TODO-028 N-Infinity Retain-Dream Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-028-n-infinity-retain-dream-sync.md)
+- [TODO-029 N-Infinity Project Retain-Dream Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-029-project-n-infinity-retain-dream-sync.md)
+- [TODO-030 N-Infinity Atomic Retain-Dream Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-030-n-infinity-atomic-retain-dream-sync.md)
 - [TODO-011 Real Dream Promotion Test Net](/home/n1/n1hub.com/TO-DO/tasks/TODO-011-real-dream-promotion-test-net.md)

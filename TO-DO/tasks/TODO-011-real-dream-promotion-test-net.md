@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `DONE`
 - Owner Lane: `Diff Test Agent`
 - Cluster: `Real/Dream runtime hardening`
 
@@ -65,6 +65,26 @@ Diff and merge runtime already has meaningful tests, but the promotion lane stil
 2. Add promotion-route success and failure contracts.
 3. Tighten auth, conflict, and scoped-merge route coverage without redesigning the merge engine.
 
+## Added Route Cases
+
+- `__tests__/api/capsules-promote.test.ts`
+  - promotion success returns the real capsule
+  - unauthorized promotion returns `401`
+  - missing dream overlay returns `404`
+  - merge conflict returns `409`
+- `__tests__/api/diff-apply.test.ts`
+  - scoped merge request forwards `scopeType`, `scopeRootId`, and conflict resolution
+  - unauthorized merge apply returns `401`
+- `__tests__/api/diff.test.ts`
+  - unauthorized diff returns `401`
+  - invalid diff input returns `400` before `computeDiff`
+- `__tests__/api/capsules-diff.test.ts`
+  - unauthorized capsule diff returns `401`
+  - invalid branch name returns `400`
+- `__tests__/api/branches.test.ts`
+  - unauthorized branch read returns `401`
+  - duplicate branch create returns `409`
+
 ## Mode and Skill
 
 - Primary mode: `TO-DO Executor`
@@ -117,4 +137,16 @@ You are the Diff Test Agent. Expand route-level Real/Dream promotion and merge e
 
 ## Handoff Note
 
-Start at the route contracts. Add the tests that make promotion and scoped merge safer for future agents, then stop before the work turns into a merge-engine rewrite.
+Contained on 2026-03-10. The next Real/Dream runtime lane is deeper route or engine proof only if new failures surface; otherwise the hot path returns to `TODO-003`.
+
+## Latest Pass
+
+- Date: `2026-03-10`
+- Outcome:
+  - added the missing promotion-route success and failure contracts
+  - tightened auth and invalid-input coverage around branches, diff, capsule-diff, and diff-apply routes
+  - preserved this as a route-test pass without touching merge-engine behavior
+- Verification:
+  - `npx vitest run __tests__/api/branches.test.ts __tests__/api/diff.test.ts __tests__/api/diff-apply.test.ts __tests__/api/capsules-diff.test.ts __tests__/api/capsules-promote.test.ts __tests__/lib/diff/*.test.ts` -> passed (`10 passed | 1 skipped`, `28 passed | 1 skipped`)
+  - `npm run typecheck` -> passed
+  - `npm run validate -- --dir data/capsules --strict --report` -> passed (report: `reports/validation-2026-03-10T09-20-24-182Z.md`)

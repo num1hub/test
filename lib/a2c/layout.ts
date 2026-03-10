@@ -32,11 +32,13 @@ export const resolveRuntimeLayout = (kbRoot: string): RuntimeLayoutConfig => {
     pipelineFailedDir: path.join(pipelineRoot, 'failed_retention'),
     runManifestsDir: path.join(tasksDir, 'run_manifests'),
     queueLedgerPath: path.join(tasksDir, 'QUEUE_LEDGER.jsonl'),
+    packetCandidatesDir: path.join(tasksDir, 'packet_candidates'),
     defaultPlanPath: path.join(tasksDir, 'PLAN.md'),
     defaultConflictReviewPath: path.join(tasksDir, 'CONFLICT_REVIEW.md'),
     defaultMergePlanPath: path.join(tasksDir, 'MERGE_PLAN.md'),
     intakeDropzoneDir: path.join(runtimeRoot, 'intake', 'dropzone'),
     intakeArchiveRawDir: path.join(runtimeRoot, 'intake', 'archive_raw'),
+    intakeNormalizedDir: path.join(runtimeRoot, 'intake', 'normalized'),
     daemonPidPath: path.join(root, 'reports', 'a2c', 'n1_daemon_pids.json'),
     cronStatePath: path.join(root, 'reports', 'a2c', 'cron_state.json'),
     cronLogPath: path.join(root, 'reports', 'a2c', 'cron_orchestrator.log'),
@@ -58,10 +60,11 @@ export const ensureRuntimeLayout = async (kbRoot: string, includeIntake = true):
     layout.pipelineWorkspaceDir,
     layout.pipelineFailedDir,
     layout.runManifestsDir,
+    layout.packetCandidatesDir,
   ];
 
   if (includeIntake) {
-    dirs.push(layout.intakeDropzoneDir, layout.intakeArchiveRawDir);
+    dirs.push(layout.intakeDropzoneDir, layout.intakeArchiveRawDir, layout.intakeNormalizedDir);
   }
 
   await Promise.all(dirs.map((dir) => fs.promises.mkdir(dir, { recursive: true })));

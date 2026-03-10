@@ -41,6 +41,11 @@ This file documents important local surfaces and conventions for agent work in t
   - `npx tsx scripts/validate-cli.ts data/capsules/<file>.json --fix`
   - `npx tsx scripts/validate-cli.ts data/capsules/<file>.json --strict --ids-file /tmp/n1hub-capsule-ids.json`
 - Prefer targeted validation over whole-vault validation unless the change truly spans the graph.
+- For Real/Dream retain-dream sync passes, use this proof chain:
+  - `npm run validate -- --fix data/capsules/<real-file>.json --ids-file /tmp/n1hub-capsule-ids.json`
+  - `npm run validate -- --fix data/capsules/<dream-file>.json --ids-file /tmp/n1hub-capsule-ids.json`
+  - `npx tsx scripts/curate-vault-real-dream.ts --dry-run`
+  - `npm run n1:update:once -- --task <next-hot-task>`
 
 ## Workspace Conventions
 

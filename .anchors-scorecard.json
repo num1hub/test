@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-09T20:11:32.208Z",
+  "generatedAt": "2026-03-10T12:14:10.794Z",
   "scorecard": {
     "score": 100,
     "grade": "A",
@@ -27,17 +27,17 @@
     "darkMatter": []
   },
   "kpis": {
-    "anchorCount": 81,
+    "anchorCount": 82,
     "categoryCounts": {
       "arch": 8,
-      "doc": 34,
+      "doc": 35,
       "flow": 2,
       "interface": 12,
       "invariant": 1,
       "script": 15,
       "test": 9
     },
-    "meanLinksOverall": 6.01,
+    "meanLinksOverall": 6.04,
     "meanLinksSpine": 3.63,
     "zeroLinkOverallPct": 0,
     "zeroLinkSpinePct": 0,
@@ -51,14 +51,14 @@
     "appEntrypointsMissingAnchor": []
   },
   "intelligence": {
-    "anchorCount": 81,
-    "edgeCount": 487,
+    "anchorCount": 82,
+    "edgeCount": 495,
     "brokenLinkCount": 0,
     "zeroInboundCount": 0,
     "weakComponentCount": 1,
     "reciprocalEdgeRatio": 0.715,
     "stronglyConnectedComponentCount": 1,
-    "largestStronglyConnectedComponentSize": 81,
+    "largestStronglyConnectedComponentSize": 82,
     "topOutDegree": [
       {
         "id": "doc:n1hub.readme",
@@ -78,15 +78,15 @@
       },
       {
         "id": "doc:todo.index",
-        "out": 15
+        "out": 16
       },
       {
         "id": "doc:todo.agent-operating-modes",
-        "out": 13
+        "out": 14
       },
       {
         "id": "doc:n1hub.context",
-        "out": 12
+        "out": 13
       },
       {
         "id": "doc:n1hub.tools",
@@ -107,11 +107,11 @@
         "in": 28
       },
       {
-        "id": "doc:governance.anchors-spec",
-        "in": 20
+        "id": "doc:n1hub.codex",
+        "in": 21
       },
       {
-        "id": "doc:n1hub.codex",
+        "id": "doc:governance.anchors-spec",
         "in": 20
       },
       {
@@ -120,22 +120,22 @@
       },
       {
         "id": "doc:n1hub.context",
-        "in": 16
+        "in": 17
       },
       {
         "id": "doc:todo.index",
-        "in": 15
+        "in": 16
       },
       {
         "id": "doc:todo.hot-queue",
+        "in": 15
+      },
+      {
+        "id": "doc:todo.agent-operating-modes",
         "in": 14
       },
       {
         "id": "doc:n1hub.tools",
-        "in": 13
-      },
-      {
-        "id": "doc:todo.agent-operating-modes",
         "in": 13
       },
       {

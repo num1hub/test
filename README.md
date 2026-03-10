@@ -73,6 +73,10 @@ The current law is:
 - use tests as machine-readable boundary documentation
 - refactor in small reversible steps instead of giant rewrites
 
+Workspace rule: `Workspace` is the operator-facing composition lens over Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Wallet, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship. Real owns the current workspace inventory and ownership boundaries; Dream should only carry future workspace delta that has not yet become canonical.
+
+CapsuleOS rule: `capsule.foundation.capsuleos.v1` is now explicitly real-first for the live operating contract. Real owns the current 5-element, 16-gate, validator-governed admission and promotion law; Dream should only carry future operating-system delta such as better control surfaces, clearer decomposition, and stronger lifecycle observability.
+
 Architecture doctrine: [`docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md`](docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md)
 
 Golden-path rule: when a safe public command, workflow file, or domain entry surface already exists, use it instead of inventing ad hoc execution paths.
@@ -111,9 +115,17 @@ The main N1Hub runtime domains and their public surfaces are:
   - code: `lib/diff`
   - routes: `POST /api/diff`, `POST /api/diff/apply`
   - docs: [`docs/real-dream-diff.md`](docs/real-dream-diff.md)
+- `capsuleos governance`
+  - capsules: `data/capsules/capsule.foundation.capsuleos.v1*.json`
+  - docs: [`docs/validator.md`](docs/validator.md)
+  - role: live operating contract for capsule law, branch lifecycle, validator sovereignty, and governed promotion
 - `projects`
   - docs: [`docs/projects.md`](docs/projects.md)
   - role: project-oriented projection of capsule graph state
+- `workspace composition`
+  - capsule: `data/capsules/capsule.foundation.workspace.v1.json`
+  - role: operator-facing composition lens across planning, tracking, assistant, chat-to-capsules, control surfaces, and execution lanes
+  - rule: workspace composes these surfaces; it does not own the deeper semantics of each linked module
 
 Owned storage is also part of the architecture:
 
@@ -139,6 +151,8 @@ N1Hub is not trying to refactor everything at once. Architectural work is sequen
    - goal: separate workflow law, prompt rendering, tracker logic, and runtime execution
 
 Cluster rule: one cluster at a time, verified end-to-end, then the next.
+
+Current governance front: the `Real/Dream` constitutional wave has now contained the audit, triage, Dream-only operational outliers, real-only law set, background runtime rewrite, vault stewardship rewrite, workspace selective promotion, and explicit real-first branch syncs for `personal-ai-assistant`, `key-agents`, `n1hub`, `tracker`, and `capsuleos`. The default hot path therefore returns to `TODO-001` and the A2C intake wave. If the operator deliberately reopens branch governance, continue from the next unresolved measured hub instead of re-editing already-contained splits.
 
 ## Living Governance Surfaces
 

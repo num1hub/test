@@ -2,9 +2,15 @@
 set -eu
 
 ROOT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+TARGET_SCRIPT="$ROOT_DIR/scripts/n1-automated-update.ts"
 
-if [ -x "$ROOT_DIR/node_modules/.bin/tsx" ]; then
-  exec "$ROOT_DIR/node_modules/.bin/tsx" "$ROOT_DIR/scripts/n1-automated-update.ts" "$@"
+if [ "${1:-}" = "schedule" ]; then
+  shift
+  TARGET_SCRIPT="$ROOT_DIR/scripts/n1-scheduled-iteration.ts"
 fi
 
-exec npx --no-install tsx "$ROOT_DIR/scripts/n1-automated-update.ts" "$@"
+if [ -x "$ROOT_DIR/node_modules/.bin/tsx" ]; then
+  exec "$ROOT_DIR/node_modules/.bin/tsx" "$TARGET_SCRIPT" "$@"
+fi
+
+exec npx --no-install tsx "$TARGET_SCRIPT" "$@"

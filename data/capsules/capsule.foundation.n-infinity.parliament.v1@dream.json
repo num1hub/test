@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance",
-    "updated_at": "2026-03-07T10:22:14.166Z",
+    "updated_at": "2026-03-10T18:06:00Z",
     "name": "N-Infinity Parliament",
     "priority": "high",
     "progress": 24,
@@ -19,21 +19,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Parliament Agent: The Epistemic Arbitrator\n\n## 1. Definition\nThe **Parliament** is an elite, high-order background agent operating within the N-Infinity swarm of the N1Hub ecosystem. Serving as the \"supreme court\" of the Cognitive Plane, the Parliament's primary mandate is epistemic arbitration: it identifies, analyzes, and resolves logical conflicts and contradictory claims embedded within the knowledge graph.\n\n## 2. Core Functions\n- **Contradiction Monitoring**: The Parliament continuously monitors the `contradiction_pressure` dimension of all capsules. It begins analyzing capsules when pressure elevates (e.g., > 0.5) and forces immediate systemic intervention when the pressure breaches critical thresholds (e.g., > 0.85).\n- **Epistemic Arbitration**: When a conflict is detected, the Parliament traces the provenance of the competing capsules. It employs advanced LLM reasoning—often convening multiple sub-agents to simulate a debate—to verify facts against foundational axioms or external deep-searches (via DeepMine).\n- **Resolution and Synthesis**: If the conflict is a matter of nuance, the Parliament generates a new synthesis capsule that resolves the tension, subsequently updating the `recursive_layer` of the original capsules.\n- **Quarantine Execution**: If the contradiction is unresolvable, maliciously hallucinatory, or poses a systemic risk to graph negentropy, the Parliament executes its executive authority to move the offending capsule(s) to the `quarantined` status, flagging them in the `epistemic_ledger` for human architectural review.\n\n## 3. Interaction with the Swarm\nThe Parliament acts as the systemic validator for the **Weaver** agent. While the Weaver generates probabilistic \"soft links\" (e.g., `might_relate`), the Parliament evaluates the logic of these connections. Through rigorous analysis, it can formally upgrade a soft link into a canonical hard link (such as `supports` or `extends`) or decisively discard it, permanently elevating the structural density of the ecosystem."
+    "content": "# N-Infinity Parliament\n\n## 1. Future Role\nDream keeps Parliament as the next deliberation layer above the current real-side triad arbitration runtime. The real capsule remains canonical for today's governed proposer-critic-synthesizer flow; Dream only preserves the future delta that could make contradiction handling more inspectable, more graduated, and calmer at higher graph scale.\n\n## 2. Future Delta\n- add stronger docketing and escalation tiers so contradiction cases can be grouped by severity instead of handled as isolated one-offs\n- improve evidence bundles, comparative verdict explanations, and quarantine handoff packaging for human review\n- support richer multi-case and cross-cluster arbitration when tension spans more than one pair of claims\n- make middle-path preservation and unresolved tension more explicit so Parliament can leave durable debate structure instead of forced closure\n- deepen the relationship between Parliament, Weaver, and future suggestion lanes without implying a new live runtime already exists\n\n## 3. Why Keep Dream\nFuture graph scale will increase contradiction pressure, not remove it. Parliament therefore still needs a future doctrine for broader deliberation, better review ergonomics, and more structured governance escalation once the current bounded runtime hits its ceiling.\n\n## 4. Guardrails\nDream does not replace the current TypeScript Parliament runtime, does not imply silent auto-quarantine authority, and does not restate today's live triad arbitration path as if it were still only speculative doctrine.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Parliament in the Dream branch describes a more capable deliberation layer for contradiction handling. It pushes toward richer evidence review, clearer arbitration outcomes, and stronger governance escalation when disagreement cannot be resolved through ordinary synthesis alone. The agent matters because future graph scale will multiply conflict, not eliminate it. Dream therefore preserves Parliament as a more mature epistemic institution that can keep disagreement legible, bounded, and productive across the ecosystem.",
+    "summary": "N-Infinity Parliament in Dream now keeps only the future deliberation delta above the current real-side arbitration runtime. Real remains canonical for the live proposer-critic-synthesizer flow, evidence-weighted verdicting, draft resolution capsule output, and local gate reporting that exist today. Dream instead preserves the next layer: richer docketing and escalation tiers, better evidence and quarantine handoff bundles, broader cross-cluster arbitration, and clearer preservation of unresolved tension when a conflict should stay open. This keeps future epistemic-governance ambition visible without pretending the current triad runtime is still only a planned institution.",
     "keywords": [
-      "parliament-agent",
       "n-infinity",
+      "parliament",
       "epistemic-arbitration",
-      "contradiction-pressure",
-      "conflict-resolution",
-      "quarantine",
-      "synthesis",
+      "docketing",
+      "governance-escalation",
+      "quarantine-handoff",
+      "cross-cluster-debate",
       "capsuleos",
       "n1hub",
-      "background-agent"
+      "future-doctrine"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -87,5 +87,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "85923af51f5bfc7011aa966213b1cdb6c53f5bd71ca0cc14571939280cc7728f5ab2c74911681772b31a99807476cdb0365c1cb34989f1eeb960d55c8c30a500"
+  "integrity_sha3_512": "df31fed2e69e2f28609630128fb6f9e59f88feb95c5a699cae5a9de960b02b0b6443200e8ee4f907ef8d181f3106f795d4c1fe1e584a7ff7218eabb9e2892259"
 }

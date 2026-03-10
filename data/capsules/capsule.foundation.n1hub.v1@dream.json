@@ -1,43 +1,44 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n1hub.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
     "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core",
-    "updated_at": "2026-03-08T22:48:00Z",
+    "updated_at": "2026-03-09T21:15:00Z",
     "source": {
       "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
       "type": "internal_derivation"
     },
     "name": "N1Hub Runtime",
     "priority": "high",
-    "progress": 58,
+    "progress": 63,
     "estimatedHours": 620,
-    "actualHours": 280,
+    "actualHours": 288,
     "dueDate": "2026-09-20",
     "tier": 1
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: The Digital Continent for Sovereign Projects\n\n## Dream Direction\nIn the Dream branch, N1Hub becomes a true sovereign second brain and work operating system. The future form is not just a vault with chat attached. It is a unified environment where capsules, planning, memory, mining, agent orchestration, and everyday execution all reinforce one another in a calm, durable runtime.\n\n## Desired Future State\n- a capsule vault that can absorb nearly any human input and turn it into disciplined memory\n- a simple user-facing ingress through Personal AI Assistant and Chat to Capsules\n- stronger day-time co-pilot help and night-time bounded autonomous upkeep\n- tighter integration between DeepMine, A2C, Vault Stewardship Swarm, Symphony, and the daily workspace\n- a system that meaningfully replaces scattered notes, documents, and disconnected tools\n\n## Why It Matters\nDream preserves the highest version of N1Hub as a living second brain. The point is not merely to store data. The point is to create an environment where one human and many bounded agents can continually improve memory, planning, execution, and graph structure together.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772912626965\n- Job: Refine N1Hub Hub Structure\n- Note: Refined the summary to emphasize the integrated sovereign runtime vision and added missing keywords reflecting key components like CapsuleOS, AI agents, Workspace tools, and monetization features. The summary now better captures the capsule's modular architecture and its role as a unified system. Further decomposition could clarify individual module interfaces and governance rules.\n"
+    "content": "# N1Hub.com: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical statement of the current N1Hub runtime contract. Dream therefore should not restate the live operating focus as if the present runtime were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future N1Hub delta such as:\n- a calmer and deeper habitat where memory, planning, mining, delegation, and execution feel even more unified,\n- stronger replacement of scattered tools with one sovereign environment,\n- richer long-horizon coordination between Workspace, Personal AI Assistant, A2C, DeepMine, Vault Stewardship, Symphony, and background runtime lanes,\n- a more complete second-brain operating system where one human and many bounded agents can improve memory and execution together.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current runtime contract,\n- collapse present operating law back into broad visionary prose,\n- reintroduce autonomous steward notes as constitutional runtime doctrine.\n\n## 4. Dream Lens\nThe useful Dream stance is to preserve the larger habitat vision and future integration delta while letting Real stay canonical for what N1Hub currently is in operation."
   },
   "neuro_concentrate": {
-    "summary": "N1Hub Runtime in the Dream branch envisions a unified sovereign second brain where capsule memory, mining, refinement, planning, execution, and bounded background agents operate as one coherent system. It preserves the future form of N1Hub as a practical habitat for human and agent symbiosis rather than a collection of disconnected tools. The dream state is a calm environment in which a person can live inside capsule memory while day-time co-pilot help and night-time autonomous stewardship continuously improve the vault in the background.",
+    "summary": "N1Hub Runtime in the Dream branch now stands as the future habitat overlay rather than the canonical source of current runtime truth. Real owns the live operating contract, while Dream preserves the larger sovereign second-brain vision in which memory, planning, mining, delegation, and bounded background agents feel more deeply unified. This keeps Dream useful as future integration doctrine without letting it replace the sharper real-side description of what N1Hub currently is in operation.",
     "keywords": [
       "n1hub-runtime",
+      "future-overlay",
       "second-brain",
       "sovereign-memory",
-      "capsuleos",
-      "deepmine",
-      "a2c",
-      "vault-steward",
-      "autonomous-swarm",
+      "integration-delta",
+      "human-agent-symbiosis",
       "workspace",
-      "human-agent-symbiosis"
+      "a2c",
+      "deepmine",
+      "vault-steward",
+      "bounded-autonomy"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -113,8 +114,15 @@
         "run_id": "vault-steward-1772912626965",
         "job_id": "vault-steward-job-b926b1a5f9c408ea",
         "rationale": "The capsule content details a comprehensive ecosystem with distinct modules (DeepMine, A2C, N-Infinity, Workspace, TileSims, Marketplace) and foundational elements (CapsuleOS, 5-Element Law, Quality Gates). The original summary was broad; refining it to highlight integration and adding keywords grounded in the text improves modularity and completeness without inventing new doctrine."
+      },
+      {
+        "at": "2026-03-09T21:15:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-025",
+        "rationale": "The Dream N1Hub capsule was narrowed to future-only habitat doctrine after Real became the explicit canonical source for the current N1Hub runtime contract. This preserves the larger vision without leaving the branch split implicit."
       }
     ]
   },
-  "integrity_sha3_512": "1b559649e02f5d04ebd834b1ada2d3d7c2e915ce2753f35566811b78334c34cd2f8848de8144cdef281d8ca561053f0672ec8080c317e5e771d14b39f97ea391"
+  "integrity_sha3_512": "f3705d9229217f8876f6c8ee1b074d74fc3e071f3f4b3749c94e51b474c23366eee5556f4fdeb64aa542006eb3ab644775f0a7fcdf11ddeb03cbe6a9268e5af8"
 }

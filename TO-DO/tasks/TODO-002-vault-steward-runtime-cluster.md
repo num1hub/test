@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `ACTIVE`
 - Owner Lane: `Cluster Refactor Agent`
 - Cluster: `#1 Vault Steward Runtime`
 
@@ -90,6 +90,68 @@ You are the Cluster Refactor Agent for the active Vault Steward cluster. Choose 
 - update this task packet with the chosen seam and resulting file map
 - refresh queue notes if the next cluster slice becomes clearer after extraction
 - record file-pressure or boundary evidence that justifies the next pass
+- chosen seam: prompt law duplication removed from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: daemon lifecycle extracted from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: Codex reviewer lane extracted from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: Codex foreman lane extracted from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: autonomous executor lane extracted from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: provider scout execution extracted from `lib/agents/vaultSteward.ts`
+- chosen seam in this pass: Dream operational capsule writing moved behind `lib/agents/vaultSteward/maintenance-artifacts.ts`
+- chosen seam in this pass: shared runtime helpers moved behind `lib/agents/vaultSteward/utils.ts`
+- chosen seam in this pass: queue job identity, fallback seeding, dedupe, and executor-selection logic moved behind `lib/agents/vaultSteward/job-planning.ts`
+- chosen seam in this pass: executor prompt guidance, prompt rendering, and executor JSON schema moved behind `lib/agents/vaultSteward/executor-prompting.ts`
+- resulting file map:
+  - `lib/agents/vaultSteward.ts`
+  - `lib/agents/vaultSteward/prompting.ts`
+  - `__tests__/lib/vaultSteward.prompting.test.ts`
+  - `lib/agents/vaultSteward/lifecycle.ts`
+  - `__tests__/lib/vaultSteward.lifecycle.test.ts`
+  - `lib/agents/vaultSteward/reviewer.ts`
+  - `__tests__/lib/vaultSteward.reviewer.test.ts`
+  - `lib/agents/vaultSteward/foreman.ts`
+  - `__tests__/lib/vaultSteward.foreman.test.ts`
+  - `lib/agents/vaultSteward/executor.ts`
+  - `__tests__/lib/vaultSteward.executor.test.ts`
+  - `lib/agents/vaultSteward/scout.ts`
+  - `__tests__/lib/vaultSteward.scout.test.ts`
+  - `lib/agents/vaultSteward/maintenance-artifacts.ts`
+  - `lib/agents/vaultSteward/utils.ts`
+  - `lib/agents/vaultSteward/queue-planning.ts`
+  - `lib/agents/vaultSteward/job-planning.ts`
+  - `__tests__/lib/vaultSteward.job-planning.test.ts`
+  - `lib/agents/vaultSteward/executor-prompting.ts`
+  - `__tests__/lib/vaultSteward.executor-prompting.test.ts`
+- public-surface contract for seam tests:
+  - `buildVaultStewardCodexSupervisorPrompt`
+  - `buildVaultStewardExecutorPrompt`
+  - `startVaultSteward`
+  - `stopVaultSteward`
+  - `markVaultStewardHeartbeat`
+  - `runVaultStewardCodexReviewer`
+  - `runVaultStewardCodexForeman`
+  - `runVaultStewardExecutorLane`
+  - `runVaultStewardProviderScoutOnce`
+- file-pressure evidence:
+  - `lib/agents/vaultSteward.ts` moved from `1952` lines to `1354` lines in the prompt-law pass
+  - `lib/agents/vaultSteward.ts` moved from `1354` lines to `1209` lines in the lifecycle pass
+  - `lib/agents/vaultSteward.ts` moved from `1209` lines to `1128` lines in the reviewer-lane pass
+  - `lib/agents/vaultSteward.ts` moved from `1128` lines to `849` lines in the foreman and executor pass
+  - `lib/agents/vaultSteward.ts` moved from `849` lines to `607` lines in the provider-scout pass
+  - `lib/agents/vaultSteward.ts` moved from `607` lines to `545` lines in the artifact/helper pass
+  - cumulative reduction in this task so far: `1952` to `545`
+  - `lib/agents/vaultSteward/queue-planning.ts` moved from `746` lines to `449` lines in the job-planning pass
+  - `lib/agents/vaultSteward/job-planning.ts` now owns `294` lines of queue job-selection and dedupe logic
+  - Vault Steward hard file-guardrail violations dropped from `8` to `7` in this pass because `queue-planning.ts` no longer reports as hard
+  - `lib/agents/vaultSteward/prompting.ts` moved from `649` lines to `507` lines in the executor-prompt pass
+  - `lib/agents/vaultSteward/executor-prompting.ts` now owns `145` lines of executor prompt-law logic
+  - Vault Steward hard file-guardrail violations dropped from `7` to `6` in this pass because `prompting.ts` no longer reports as hard
+  - Vault Steward no longer has any hard file-guardrail violations
+- verification evidence on `2026-03-10`:
+  - `npx vitest run __tests__/lib/vaultSteward.test.ts __tests__/lib/vaultSteward.prompting.test.ts __tests__/lib/vaultSteward.executor-prompting.test.ts __tests__/lib/vaultSteward.lifecycle.test.ts __tests__/lib/vaultSteward.reviewer.test.ts __tests__/lib/vaultSteward.foreman.test.ts __tests__/lib/vaultSteward.executor.test.ts __tests__/lib/vaultSteward.scout.test.ts __tests__/lib/vaultSteward.job-planning.test.ts __tests__/api/vault-steward.test.ts` passed
+  - `npx eslint eslint.config.mjs app/api/agents/vault-steward/route.ts scripts/vault-steward.ts __tests__/api/vault-steward.test.ts __tests__/lib/vaultSteward.test.ts __tests__/lib/vaultSteward.prompting.test.ts __tests__/lib/vaultSteward.executor-prompting.test.ts __tests__/lib/vaultSteward.lifecycle.test.ts __tests__/lib/vaultSteward.reviewer.test.ts __tests__/lib/vaultSteward.foreman.test.ts __tests__/lib/vaultSteward.executor.test.ts __tests__/lib/vaultSteward.scout.test.ts __tests__/lib/vaultSteward.job-planning.test.ts lib/agents/vaultSteward.ts lib/agents/vaultSteward/prompting.ts lib/agents/vaultSteward/executor-prompting.ts lib/agents/vaultSteward/lifecycle.ts lib/agents/vaultSteward/reviewer.ts lib/agents/vaultSteward/foreman.ts lib/agents/vaultSteward/executor.ts lib/agents/vaultSteward/scout.ts lib/agents/vaultSteward/maintenance-artifacts.ts lib/agents/vaultSteward/utils.ts lib/agents/vaultSteward/queue-planning.ts lib/agents/vaultSteward/job-planning.ts` passed
+  - `npm run audit:file-guardrails` passed
+  - `npm run typecheck` passed
+  - `npm run check:anchors:full` passed
 
 ## Verification
 
@@ -115,4 +177,4 @@ You are the Cluster Refactor Agent for the active Vault Steward cluster. Choose 
 
 ## Handoff Note
 
-Choose one seam only: prompt law, queue planning, state artifacts, or execution orchestration. Extract it cleanly, verify it, and stop.
+Prompt law, daemon lifecycle, reviewer, foreman, executor, provider-scout, artifact writing, shared helper logic, queue job planning, and executor prompt law are now materially more bounded. `lib/agents/vaultSteward.ts` is `545` lines, `lib/agents/vaultSteward/queue-planning.ts` is `449` lines, and `lib/agents/vaultSteward/prompting.ts` is `507` lines, so the Vault Steward cluster no longer carries any hard file-guardrail violations. The next clean hot-queue move is outside this cluster. Do not reopen the extracted lanes unless their public contracts change again.

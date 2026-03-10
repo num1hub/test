@@ -1,34 +1,35 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n1hub.v1",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
     "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core",
-    "updated_at": "2026-03-08T22:28:00Z",
+    "updated_at": "2026-03-09T21:15:00Z",
     "source": {
       "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
       "type": "internal_derivation"
     },
     "name": "N1Hub Runtime",
     "priority": "high",
-    "progress": 72,
+    "progress": 78,
     "estimatedHours": 420,
-    "actualHours": 280,
+    "actualHours": 288,
     "dueDate": "2026-07-20",
     "tier": 1
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: The Runtime for a Sovereign Second Brain\n\n## 1. Mission and Present Focus\nN1Hub.com is the active runtime that turns doctrine into lived operation. Guided by **To Dig Deep**, it exists to help a person or team move from scattered information to structured, evolving intelligence. The present focus is not superficial feature accumulation. It is the creation of a trustworthy second brain built from capsules, supported by agents, and used every day as a working environment.\n\n## 2. Core Runtime Priorities\nN1Hub currently centers around four operational priorities:\n- **Capsule vault**: capsules must be stored, validated, linked, and kept structurally healthy.\n- **AI access**: API keys, subscriptions, and local coding lanes must be connectable through AI Wallet and control surfaces.\n- **Anything to capsules**: text, files, web context, and mined material must be convertible into bounded capsule work.\n- **Daily workspace**: planning, reminders, tasks, calendar logic, and graph-grounded assistance must make N1Hub usable as an everyday command center.\n\n## 3. Core Architecture\n- **CapsuleOS** provides the law of capsule memory, validation, branch discipline, and graph integrity.\n- **DeepMine** digs raw ore from models, the internet, and user inputs.\n- **A2C** refines that ore into structured capsule candidates.\n- **Chat to Capsules** gives the user a natural-language ingress into the vault.\n- **Vault Stewardship Swarm** keeps the vault improving after ingestion.\n- **Background Agent Runtime** provides daemon, queue, state, and night-shift capability.\n- **Symphony** orchestrates repository-bound execution and coding lanes.\n\n## 4. Human + Agent Symbiosis\nIn active use, N1Hub should feel simple to the human and deep underneath. A person talks to Personal AI Assistant, uploads material, asks questions, or approves work. During the day the system behaves as a careful co-pilot. During the night the agent ecosystem can continue bounded maintenance, research, and planning so the vault becomes richer and cleaner without requiring constant micromanagement.\n\n## 5. Why This Runtime Matters\nN1Hub is strongest when it is neither a generic chat app nor a static note archive. It should be a living memory-and-work system where capsules, graph structure, planning, and background agents reinforce one another. That is the runtime contract this capsule protects."
+    "content": "# N1Hub.com: The Runtime for a Sovereign Second Brain\n\n## 1. Mission and Present Focus\nN1Hub.com is the active runtime that turns doctrine into lived operation. Guided by **To Dig Deep**, it exists to help a person or team move from scattered information to structured, evolving intelligence. The present focus is not superficial feature accumulation. It is the creation of a trustworthy second brain built from capsules, supported by agents, and used every day as a working environment.\n\n## 2. Core Runtime Priorities\nN1Hub currently centers around four operational priorities:\n- **Capsule vault**: capsules must be stored, validated, linked, and kept structurally healthy.\n- **AI access**: API keys, subscriptions, and local coding lanes must be connectable through AI Wallet and control surfaces.\n- **Anything to capsules**: text, files, web context, and mined material must be convertible into bounded capsule work.\n- **Daily workspace**: planning, reminders, tasks, calendar logic, and graph-grounded assistance must make N1Hub usable as an everyday command center.\n\n## 3. Core Architecture\n- **CapsuleOS** provides the law of capsule memory, validation, branch discipline, and graph integrity.\n- **DeepMine** digs raw ore from models, the internet, and user inputs.\n- **A2C** refines that ore into structured capsule candidates.\n- **Chat to Capsules** gives the user a natural-language ingress into the vault.\n- **Vault Stewardship Swarm** keeps the vault improving after ingestion.\n- **Background Agent Runtime** provides daemon, queue, state, and night-shift capability.\n- **Symphony** orchestrates repository-bound execution and coding lanes.\n\n## 4. Human + Agent Symbiosis\nIn active use, N1Hub should feel simple to the human and deep underneath. A person talks to Personal AI Assistant, uploads material, asks questions, or approves work. During the day the system behaves as a careful co-pilot. During the night the agent ecosystem can continue bounded maintenance, research, and planning so the vault becomes richer and cleaner without requiring constant micromanagement.\n\n## 5. Why This Runtime Matters\nN1Hub is strongest when it is neither a generic chat app nor a static note archive. It should be a living memory-and-work system where capsules, graph structure, planning, and background agents reinforce one another. That is the runtime contract this capsule protects.\n\n## 6. Real Canonical Rule\nReal owns the current N1Hub runtime contract. That means this capsule is the canonical source for the live operating focus, the active runtime priorities, and the present integration between CapsuleOS, DeepMine, A2C, Chat to Capsules, Vault Stewardship, Background Agent Runtime, Symphony, and the day-to-day workspace. Dream may continue to preserve the larger habitat vision, but Real is the source of truth for what N1Hub currently is in operation.\n"
   },
   "neuro_concentrate": {
-    "summary": "This capsule defines N1Hub as the active runtime of a sovereign second brain. It centers the present system around capsule storage and validation, AI access, conversion of arbitrary inputs into capsule work, and a daily workspace supported by graph-grounded agents. The runtime contract ties together CapsuleOS, DeepMine, A2C, Chat to Capsules, Vault Stewardship Swarm, Background Agent Runtime, and Symphony. Unlike high-level doctrine, it explains how the ecosystem should operate in day-to-day use, with a human-facing co-pilot during the day and bounded autonomous upkeep at night.",
+    "summary": "This capsule defines N1Hub as the active runtime of a sovereign second brain and now explicitly serves as the canonical real-side statement of the live N1Hub operating contract. It centers the present system around capsule storage and validation, AI access, conversion of arbitrary inputs into capsule work, and a daily workspace supported by graph-grounded agents. The runtime contract ties together CapsuleOS, DeepMine, A2C, Chat to Capsules, Vault Stewardship Swarm, Background Agent Runtime, and Symphony into the current day-to-day system rather than only a future aspiration.",
     "keywords": [
       "n1hub-runtime",
+      "real-canonical",
       "second-brain",
       "capsule-vault",
       "capsuleos",
@@ -133,7 +134,15 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-09T21:15:00Z",
+        "event": "governance_sync_retain_dream_applied",
+        "agent": "n1",
+        "run_id": "TODO-025",
+        "rationale": "The real N1Hub hub now explicitly owns the live operating contract that already matches current project, agent, and runtime surfaces. Dream remains valuable as future habitat doctrine, but it should no longer be read as the canonical statement of the current runtime."
+      }
+    ]
   },
-  "integrity_sha3_512": "e067291d07229349ea6c194483225fa104db89d8496f0c85529864867ddf82a776ca71dec6a3160f0a56be2408d4c70b12aa7a6f92dd6babf319f07b48710097"
+  "integrity_sha3_512": "2aacc54f2b0fe392a3ef383a55a26115f79dd64e3d055384c2dcf0ae1d23e1af6af90e4b7e66b4459bbee9e964078d299a3603784de0010175bda4fef1c86c88"
 }

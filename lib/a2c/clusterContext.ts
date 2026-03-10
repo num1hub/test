@@ -21,7 +21,9 @@ interface ClusterContext {
   };
 }
 
-const A2C_TEST_FILE_RE = /(a2c|cluster|capsule).*\.test\.(?:ts|tsx)$/i;
+const A2C_SOURCE_FILE_RE = /\.(?:ts|tsx)$/i;
+const A2C_TEST_FILE_RE = /\.test\.(?:ts|tsx)$/i;
+const A2C_DOC_FILE_RE = /\.md$/i;
 
 const EXPORT_RE = /^(export)\s+(?:type|interface|class|const|function)\s+([A-Za-z_][A-Za-z0-9_]*)/;
 const TEST_TITLE_RE = /\b(?:it|test)\(\s*['\"]([^'\"]+)['\"]/;
@@ -105,19 +107,18 @@ const invariantHints = (lines: string[]): string[] => {
 
 export const analyzeTypescriptClusterContext = async (workspaceRoot: string): Promise<ClusterContext> => {
   const root = path.resolve(workspaceRoot);
-  const srcDir = path.join(root, 'lib');
-  const docsDir = path.join(root, 'docs', 'a2c', 'protocols');
-  const testsDir = path.join(root, '__tests__');
+  const srcDir = path.join(root, 'lib', 'a2c');
+  const docsIndexPath = path.join(root, 'docs', 'a2c.md');
+  const docsDir = path.join(root, 'docs', 'a2c');
+  const testsDir = path.join(root, '__tests__', 'a2c');
 
   const sourceClusters: ExportSummary[] = [];
   const docClusters: ExportSummary[] = [];
   const testClusters: ExportSummary[] = [];
 
   try {
-    const srcEntries = await fs.readdir(srcDir, { withFileTypes: true });
-    const tsFiles = srcEntries.filter((entry) => entry.isFile() && entry.name.endsWith('.ts'));
-    for (const file of tsFiles.slice(0, 120)) {
-      const filePath = path.join(srcDir, file.name);
+    const tsFiles = await collectFiles(srcDir, (filePath) => A2C_SOURCE_FILE_RE.test(path.basename(filePath)));
+    for (const filePath of tsFiles.slice(0, 120)) {
       const lines = await readLines(filePath);
       sourceClusters.push({
         source: filePath,
@@ -131,18 +132,23 @@ export const analyzeTypescriptClusterContext = async (workspaceRoot: string): Pr
   }
 
   try {
-    const docEntries = await fs.readdir(docsDir);
-    for (const name of docEntries.slice(0, 120)) {
-      if (!name.endsWith('-cluster.md')) continue;
-      const filePath = path.join(docsDir, name);
+    const docFiles = [
+      ...(await fs
+        .access(docsIndexPath)
+        .then(() => [docsIndexPath])
+        .catch(() => [] as string[])),
+      ...(await collectFiles(docsDir, (filePath) => A2C_DOC_FILE_RE.test(path.basename(filePath)))),
+    ];
+    const seenDocFiles = [...new Set(docFiles)].sort();
+    for (const filePath of seenDocFiles.slice(0, 120)) {
       const lines = await readLines(filePath);
       const docLines = lines.slice(1);
       const title = lines.find((line) => DOC_TITLE_RE.test(line)) ?? '';
       const match = title ? DOC_TITLE_RE.exec(title) : null;
       docClusters.push({
-        source: match ? match[1].trim() : name,
+        source: filePath,
         exports: [],
-        tests: [match ? 'cluster-documentation' : 'cluster'],
+        tests: [match ? match[1].trim() : path.basename(filePath)],
         invariantHints: invariantHints(docLines),
       });
     }
@@ -165,7 +171,11 @@ export const analyzeTypescriptClusterContext = async (workspaceRoot: string): Pr
     // optional
   }
 
-  const triadClusters = testClusters.filter((entry) => entry.invariantHints.some((hint) => hint.includes('coverage'))).length;
+  const triadClusters = Math.min(
+    sourceClusters.length,
+    testClusters.length,
+    docClusters.length > 0 ? docClusters.length : sourceClusters.length,
+  );
   const triadCoverage = sourceClusters.length > 0 ? triadClusters / Math.max(1, sourceClusters.length) : 0;
 
   return {
@@ -187,6 +197,7 @@ export const renderClusterContextMarkdown = (context: ClusterContext): string =>
     '# TypeScript Cluster Context',
     '',
     `- Source clusters: ${context.metrics.source_clusters}`,
+    `- Doc clusters: ${context.metrics.doc_clusters}`,
     `- Test clusters: ${context.metrics.test_clusters}`,
     `- Triad clusters: ${context.metrics.triad_clusters}`,
     `- Triad coverage ratio: ${context.metrics.triad_coverage_ratio}`,

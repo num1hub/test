@@ -93,6 +93,19 @@ Required gates:
 - `npm run test:anchors`
 - `npm run check:anchors`
 
+### Real/Dream Selective Promotion
+
+Use when one branch hub should be promoted only partially rather than overwritten wholesale.
+
+Required sequence:
+
+1. Compare the real and dream capsule directly against the named repo-law surfaces.
+2. Promote only the doctrine that now belongs in Real.
+3. Preserve the stronger real-side runtime inventory or ownership facts when Dream is weaker.
+4. Rewrite Dream so the remaining delta is explicit and future-facing instead of stale duplicate doctrine.
+5. Update the task packet, field brief, and queue so the new branch interpretation is visible to the next agent.
+6. If `Front A` is already materially contained and the operator still asks for branch work, take the next unresolved measured hub from `TO-DO/REAL_DREAM_FRONT.md` rather than freeform rewriting an already-contained pair.
+
 ### Runtime Boundary Changes
 
 Use when touching validator, A2C, Symphony, graph, or agent-runtime boundaries.
@@ -199,3 +212,5 @@ For non-trivial work, the close-out must include:
 If root docs changed, say that explicitly.
 
 If cluster work changed public boundaries, say that explicitly.
+
+If Real/Dream doctrine changed, say which hub became canonical in Real and what remained Dream-only.

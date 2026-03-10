@@ -36,11 +36,15 @@ This gives N1 a repeatable memory bridge:
 
 - `data/private/agents/n1/teamwork.latest.json`
 - `data/private/agents/n1/teamwork.history.jsonl`
+- `data/private/agents/n1/scheduler.state.json`
+- `data/private/agents/n1/scheduler.latest.json`
+- `data/private/agents/n1/scheduler.history.jsonl`
 - `data/private/agents/n1/repo-sync.latest.json`
 - `data/private/agents/n1/repo-sync.history.jsonl`
 - `data/private/agents/n1/orchestration.latest.json`
 - `data/private/agents/n1/orchestration.history.jsonl`
 - `reports/n1/automated-update/*.md`
+- `reports/n1/scheduler/*.md`
 - `reports/n1/repo-sync/*.md`
 - `reports/n1/orchestration/*.md`
 
@@ -92,6 +96,8 @@ Useful flags:
 ./autoupdate --json
 ./autoupdate --dry-run
 ./autoupdate --task TODO-001
+./autoupdate schedule --interval-minutes 30
+./autoupdate schedule --interval-minutes 30 --force
 ./autoupdate sync
 ./autoupdate orchestrate
 ```
@@ -107,6 +113,7 @@ Package entrypoints:
 ```bash
 npm run autoupdate
 npm run n1:update:once
+npm run n1:update:schedule
 npm run n1:sync
 npm run n1:orchestrate
 ```
@@ -114,6 +121,7 @@ npm run n1:orchestrate
 ## Current Safety Posture
 
 - one run is one iteration, not an unbounded loop
+- scheduled execution is still one process and one pass; it only runs when the interval is due or `--force` overrides the guard
 - the workflow does not auto-commit when the repository is already dirty
 - the workflow does not pretend to have executed code when it only refreshed the launch packet
 - the workflow is compatible with later provider-backed execution lanes, but it does not hide them behind fake magic today

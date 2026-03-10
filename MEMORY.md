@@ -45,6 +45,10 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 - serious status claims in N1Hub should be proof-bearing rather than declarative; command output, artifact paths, or equivalent evidence should back completion claims
 - N1 now has a repo-sync artifact under `data/private/agents/n1/` and `reports/n1/repo-sync/` to compress live project state into a cold-start packet without replacing live repo truth
 - N1 now also has an orchestration artifact under `data/private/agents/n1/` and `reports/n1/orchestration/` so the next cold-start agent can see available lanes, baton order, and the current conductor decision without inventing them from scratch
+- `capsule.foundation.workspace.v1` is now canonically real-first for both workspace boundary doctrine and live runtime inventory; Dream should only carry future workspace delta
+- `capsule.foundation.capsuleos.v1` is now canonically real-first for the live CapsuleOS operating contract; Dream should only carry future operating-system delta and should not shadow validator-owned trust law
+- `N1` now has an explicit routing model: synthesis, queue execution, orchestration or sync, capsule projection, swarm split, and defer-for-clarity are distinct lanes, and explicit user override still beats heuristic routing
+- `N1` routing is now richer than mode-only classification: each route also carries a default skill and handoff target so cold-start orchestration can move from operator intent to the correct baton lane without rebuilding that mapping from prose
 
 ## Current Durable Priorities
 
@@ -69,7 +73,8 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 
 ### Medium Horizon
 
-- finish the Real/Dream triage wave before broad new architecture work
+- move from the now-contained Real/Dream constitutional wave into A2C intake, packetization, and routing work
+- if branch governance is deliberately reopened again, continue from the next newly measured unresolved hub or the promotion-test frontier instead of reopening already-contained branch splits
 - harden A2C runtime semantics and tests after the branch field is mapped and classified
 - keep the Vault Steward runtime as the top cluster for bounded refactor work
 - treat cross-model review, scheduled one-pass iteration, and hot-warm-cold context routing as the next serious agent-systems frontier after current P0 branch work
@@ -77,10 +82,11 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 
 ### Short Horizon
 
-- `TODO-007` Real Dream Global Audit
-- `TODO-008` Real Dream Constitutional Hub Triage
-- `TODO-009` Vault Steward Dream-Only Operations Review
-- `TODO-010` Real-Only Law Sync
+- `TODO-001` A2C Query Safety
+- `TODO-016` A2C User Input Intake Contract
+- `TODO-017` A2C TO-DO Packet Builder
+- `TODO-019` A2C User Input Test Net
+- `TODO-011` Real Dream Promotion Test Net
 
 ### Recently Completed Context
 
@@ -88,6 +94,16 @@ It is not a scratchpad, not a large conversation dump, and not a substitute for 
 - Real/Dream corpus facts were measured and converted into first-wave hot tasks
 - `CONTEXT.md` and `TO-DO/AGENT_OPERATING_MODES.md` now define deep mode context and reusable prompt slices for assistant, executor, and swarm lanes
 - `N1` now has machine-readable `repo-sync` and `orchestration` continuity layers plus dedicated CLI entrypoints for sync and baton-routing
+- `TODO-020` and `TODO-021` rewrote the Dream background runtime and Dream vault stewardship hubs around real-first runtime truth
+- `TODO-022` promoted workspace boundary doctrine into Real and rewrote Dream workspace as future-only overlay
+- `TODO-023`, `TODO-024`, `TODO-025`, `TODO-026`, and `TODO-027` made `personal-ai-assistant`, `key-agents`, `n1hub`, `tracker`, and `capsuleos` explicit real-first branch pairs instead of leaving the drift interpretation implicit
+- `TODO-028` and `TODO-029` made `n-infinity` and `project.n-infinity` explicit real-first branch pairs instead of leaving the last measured retain-dream decisions implicit
+- `TODO-030` extended branch containment into the first downstream N-Infinity atomic trio by making `weaver`, `parliament`, and `suggestion-agent` explicit real-first role pairs with future-only Dream delta
+- `TODO-031` created a repo-native `GPT-5.3-Codex-Spark` coding overlay for bounded code-writing passes without inventing a separate repo-law mode
+- `TODO-032` added a model-specific TO-DO execution profile for `GPT-5.3-Codex-Spark`, including a current fit matrix, pull preference, and anti-drift guidance for coding-heavy packets
+- `TODO-033` extended that profile into explicit work domains, concrete active packages, and a first-job ladder so the model has real current work rather than only abstract fit guidance
+- `TODO-018` made N1 user-input routing explicit across shared context, skills, and the machine-readable orchestration bridge
+- `TODO-018` now also makes the route-to-skill and handoff-target contract explicit across `SOUL.md`, mode cards, skills, and the orchestration snapshot
 
 ## Memory Read Policy
 

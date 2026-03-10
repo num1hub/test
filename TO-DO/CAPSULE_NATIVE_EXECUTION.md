@@ -59,6 +59,15 @@ That would let the user talk to the assistant in natural language while the syst
 
 Do not replace everything with markdown automation. Markdown can remain the operator buffer, but the durable task system should converge toward vault-native capsules and graph-native orchestration.
 
+## Transitional Queue Bridge
+
+Until task capsules become the durable control plane, A2C packetization should stage candidate markdown packets under `data/private/a2c/tasks/packet_candidates` first.
+
+- normalized intake stays in A2C-owned namespaces
+- packet candidates mirror the current `TO-DO/TASK_TEMPLATE.md` shape
+- promotion into `TO-DO/tasks/` and `TO-DO/HOT_QUEUE.md` remains an explicit queue-law step
+- later capsule-native execution can consume the same normalized intake and packet-candidate semantics without treating markdown staging as the final source of truth
+
 ## Task Link
 
 - [TODO-012 Capsule-Native Execution Control Plane](/home/n1/n1hub.com/TO-DO/tasks/TODO-012-capsule-native-execution-control-plane.md)

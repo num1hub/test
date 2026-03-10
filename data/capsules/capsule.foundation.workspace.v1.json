@@ -1,38 +1,40 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.workspace.v1",
-    "version": "1.12.0",
+    "version": "1.13.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "workspace-planner-tracker-dashboard-assistant-execution-habitat-center",
-    "updated_at": "2026-03-08T22:55:00Z",
+    "updated_at": "2026-03-09T20:42:00Z",
     "name": "Workspace",
     "priority": "high",
-    "progress": 73,
+    "progress": 79,
     "estimatedHours": 560,
-    "actualHours": 410,
+    "actualHours": 422,
     "dueDate": "2026-06-15",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace: The Unified Digital Command Center\n\n## 1. Definition\nWithin the N1Hub ecosystem, the **Workspace** serves as the user's primary interface and personal digital habitat. It is the command center where a person interacts with the sovereign graph, manages projects, and orchestrates AI capabilities without thinking in raw JSON or cryptographic seals. In practice, it is where the second brain becomes livable.\n\n## 2. Core Components\n- **Planner**: macro-goals, decomposition, sequencing, and dependency visibility.\n- **Tracker**: execution telemetry, deadlines, drift detection, and follow-through.\n- **Dashboard**: high-level metrics, recent activity, and proactive alerts.\n- **Personal AI Assistant**: the ambient co-pilot for graph-grounded conversation and next actions.\n- **Chat to Capsules**: the conversational ingress path where chat becomes real capsule work.\n- **AI Wallet**: the secure provider and subscription configuration surface.\n- **AI Control Surface**: the operator-facing pane for AI status, lanes, and runtime trust.\n- **Symphony Execution Lane**: isolated repository automation and coding-agent sessions.\n- **Background Agent Runtime**: the daemon and night-shift substrate beneath autonomous capsule work.\n- **Vault Stewardship lane**: the bounded swarm work that keeps the vault improving over time.\n\n## 3. Seamless CapsuleOS Integration\nWorkspace is not separate from the graph; it is the lens through which users manipulate it. Every action can mint, modify, retrieve, link, or delegate capsule work while respecting status boundaries, validation rules, and sovereignty constraints. A mature workspace should let a person think in natural language while the system carries the deeper capsule discipline underneath.\n\n## 4. Canonical Workspace Stack\nPlanner, Tracker, Personal AI Assistant, Chat to Capsules, AI Wallet, AI Control Surface, Symphony, Vault Stewardship, and the Background Agent Runtime form the canonical AI-capable workspace stack in N1Hub. Together they make the vault usable as daily memory, planning surface, and execution habitat rather than a passive repository.\n"
+    "content": "# Workspace: The Unified Digital Command Center\n\n## 1. Definition\nWithin the N1Hub ecosystem, the **Workspace** is the user's primary interface and personal digital habitat. It is the command center where a person interacts with the sovereign graph, manages projects, and orchestrates AI capabilities without thinking in raw JSON or cryptographic seals. In practice, it is where the second brain becomes livable.\n\n## 2. Canonical Boundary Doctrine\nWorkspace is a **composition lens**, not a semantic owner of every module it presents. Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship keep their own deeper contracts in dedicated capsules and runtime surfaces. Workspace owns the operator-facing composition rules:\n- which modules form the canonical daily command surface,\n- how visibility and handoff move across those modules,\n- how graph-grounded conversation becomes real capsule, task, or execution work,\n- how operator trust is preserved while background and swarm lanes remain inspectable.\n\n## 3. Canonical Workspace Stack\nThe current real-side runtime inventory remains canonical:\n- **Planner**: macro-goals, decomposition, sequencing, and dependency visibility.\n- **Tracker**: execution telemetry, deadlines, drift detection, and follow-through.\n- **Dashboard**: high-level metrics, recent activity, and proactive alerts.\n- **Personal AI Assistant**: the ambient co-pilot for graph-grounded conversation and next actions.\n- **Chat to Capsules**: the conversational ingress path where chat becomes real capsule work.\n- **AI Wallet**: the secure provider and subscription configuration surface.\n- **AI Control Surface**: the operator-facing pane for AI status, lanes, and runtime trust.\n- **Symphony Execution Lane**: isolated repository automation and coding-agent sessions.\n- **Background Agent Runtime**: the daemon and night-shift substrate beneath autonomous capsule work.\n- **Vault Stewardship lane**: the bounded swarm work that keeps the vault improving over time.\n\n## 4. Seamless CapsuleOS Integration\nWorkspace is not separate from the graph; it is the lens through which users manipulate it. Every action can mint, modify, retrieve, link, or delegate capsule work while respecting status boundaries, validation rules, and sovereignty constraints. A mature workspace lets a person think in natural language while the system carries the deeper capsule discipline underneath.\n\n## 5. Real Canonical Rule\nReal now owns the canonical workspace boundary doctrine and the live runtime inventory together. Dream may continue to explore future workspace delta, but Dream should not overwrite the stronger real-side inventory or re-own module semantics that belong to linked capsules and public runtime boundaries.\n"
   },
   "neuro_concentrate": {
-    "summary": "Workspace is the unified digital command center and personal habitat for users inside N1Hub. It integrates planning, tracking, dashboard telemetry, assistant conversation, chat-to-capsules behavior, AI credential control, vault stewardship, and both foreground and background execution lanes into one accountable operating surface. This capsule matters because N1Hub should not feel like disconnected tools bolted onto a graph. Workspace is where the capsule vault becomes a livable second brain and where graph work, chat, delegation, repository automation, and background maintenance are experienced as one coherent habitat.",
+    "summary": "Workspace is the unified digital command center and personal habitat for users inside N1Hub. It is now canonically defined as a composition lens over Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship rather than as the semantic owner of those modules. This capsule matters because N1Hub should feel like one coherent habitat while still preserving explicit module boundaries, public runtime contracts, and real graph-grounded handoff paths.",
     "keywords": [
       "workspace",
       "second-brain-interface",
       "command-center",
+      "composition-lens",
       "chat-to-capsules",
       "vault-stewardship",
       "background-runtime",
       "planner",
       "tracker",
       "assistant",
+      "boundary-doctrine",
       "n1hub"
     ],
     "confidence_vector": {
@@ -213,7 +215,15 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-09T20:42:00Z",
+        "event": "governance_sync_promotion_applied",
+        "agent": "n1",
+        "run_id": "TODO-022",
+        "rationale": "The real workspace capsule absorbed the Dream-side boundary doctrine that defines Workspace as a composition lens over linked modules while preserving the stronger real-side runtime inventory. This keeps Real canonical for current ownership boundaries and prevents Dream from erasing live inventory truth."
+      }
+    ]
   },
-  "integrity_sha3_512": "20647c9ab6c9db68e498326846c36cdd0dc59658a5649c0d420551a08318189bee4a906e47690c5fa3fb1c327d3dcb40769fd9bfdc7236cbb829b91857c8d69d"
+  "integrity_sha3_512": "d2d1214f2d78bf374935f766107ce2df59fd18c01e2fb0e046d35523bdb2fbbfe1a6ca5240c71f13d55cd57ffa6c43b9cf561cdcdd26fb33aacdca5c3a8703a6"
 }

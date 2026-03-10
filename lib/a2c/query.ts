@@ -31,7 +31,7 @@ const parseArgs = (argv: string[]) => {
     includeArchived: false,
     minProvenance: 0.85,
     minValidation: 0.5,
-    synthesizeOnFly: true,
+    synthesizeOnFly: false,
     jsonOut: '',
   };
   let seenTopK = false;
@@ -67,6 +67,10 @@ const parseArgs = (argv: string[]) => {
     if (arg === '--min-validation') {
       out.minValidation = Number(argv[i + 1] || 0.5);
       i += 1;
+      continue;
+    }
+    if (arg === '--synthesize-on-fly') {
+      out.synthesizeOnFly = true;
       continue;
     }
     if (arg === '--no-synthesize-on-fly') {
@@ -242,7 +246,7 @@ export const queryVault = async (input: {
 
   let index = await loadIndex(input.kbRoot);
   if (!index) {
-    const built = await buildIndex(input.kbRoot);
+    const built = await buildIndex(input.kbRoot, 'capsule', { write: false });
     index = built.index;
   }
 
