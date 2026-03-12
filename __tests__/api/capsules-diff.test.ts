@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { GET } from '@/app/api/capsules/[id]/diff/route'
 import { diffResultSchema } from '@/contracts/diff'
 import { computeDiff } from '@/lib/diff/diff-engine'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 const diffResult = {
   branchA: 'real',
@@ -44,7 +45,7 @@ describe('API: /api/capsules/[id]/diff', () => {
     const req = new Request(
       'http://localhost/api/capsules/capsule.test.diff.v1/diff?branchA=real&branchB=dream&recursive=true',
       {
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
       },
     )
 
@@ -82,7 +83,7 @@ describe('API: /api/capsules/[id]/diff', () => {
     const req = new Request(
       'http://localhost/api/capsules/capsule.test.diff.v1/diff?branchA=INVALID BRANCH&branchB=dream',
       {
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
       },
     )
 

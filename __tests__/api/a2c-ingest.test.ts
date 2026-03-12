@@ -6,6 +6,7 @@ import { stageOperatorInput } from '@/lib/a2c/ingest'
 import { ensureCapsulesDir } from '@/lib/capsuleVault'
 import { appendValidationLog } from '@/lib/validationLog'
 import { validateCapsule } from '@/lib/validator'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 vi.mock('@/lib/apiSecurity', () => ({
   isAuthorized: vi.fn(() => true),
@@ -85,7 +86,7 @@ describe('API: /api/a2c/ingest', () => {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
       body: JSON.stringify({
         operatorInput: {
@@ -117,7 +118,7 @@ describe('API: /api/a2c/ingest', () => {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
       body: JSON.stringify({
         operatorInput: {
@@ -164,7 +165,7 @@ describe('API: /api/a2c/ingest', () => {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
       body: JSON.stringify({
         autoFix: false,

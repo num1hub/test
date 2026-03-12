@@ -1,3 +1,4 @@
+import { createAuthToken } from '@/__tests__/helpers/auth'
 // @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -26,7 +27,7 @@ vi.mock('@/lib/agents/vaultSteward', () => ({
 import { GET, POST, PUT } from '@/app/api/agents/vault-steward/route';
 
 const AUTH_HEADER = {
-  Authorization: 'Bearer n1-authorized-architect-token-777',
+  Authorization: `Bearer ${createAuthToken()}`,
 };
 
 describe('app/api/agents/vault-steward/route.ts', () => {

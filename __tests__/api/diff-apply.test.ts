@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { POST } from '@/app/api/diff/apply/route'
 import { mergeResultSchema } from '@/contracts/diff'
 import { mergeBranches } from '@/lib/diff/merge-engine'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 const baseDiff = {
   branchA: 'real',
@@ -51,7 +52,7 @@ describe('API: /api/diff/apply', () => {
 
     const req = new Request('http://localhost/api/diff/apply', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         sourceBranch: 'dream',
         targetBranch: 'real',
@@ -107,7 +108,7 @@ describe('API: /api/diff/apply', () => {
 
     const req = new Request('http://localhost/api/diff/apply', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         sourceBranch: 'dream',
         targetBranch: 'real',

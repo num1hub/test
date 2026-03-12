@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { GET, PUT } from '@/app/api/user/ai-wallet/route';
+import { createAuthToken } from '@/__tests__/helpers/auth'
 import {
   clearAiWalletProvider,
   listAiWalletProviderSummaries,
@@ -57,7 +58,7 @@ describe('API: /api/user/ai-wallet', () => {
 
   it('returns provider summaries for authorized requests', async () => {
     const req = new Request('http://localhost/api/user/ai-wallet', {
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     });
 
     const res = await GET(req);
@@ -77,7 +78,7 @@ describe('API: /api/user/ai-wallet', () => {
     const req = new Request('http://localhost/api/user/ai-wallet', {
       method: 'PUT',
       headers: {
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -103,7 +104,7 @@ describe('API: /api/user/ai-wallet', () => {
     const req = new Request('http://localhost/api/user/ai-wallet', {
       method: 'PUT',
       headers: {
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

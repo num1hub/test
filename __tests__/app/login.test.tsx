@@ -1,76 +1,72 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { beforeEach, describe, expect, it } from 'vitest'
 import { HttpResponse, http } from 'msw'
-import { server } from '../setup'
 import LoginPage from '@/app/login/page'
-import { useRouter } from 'next/navigation'
+import PrivateOwnerLoginPage from '@/app/architect-gate/egor-n1-vault-7q4x/page'
+import { PRIVATE_OWNER_LOGIN_PATH } from '@/lib/authConfig'
+import { mockRedirect, mockRouter, server } from '../setup'
 
 describe('LoginPage', () => {
-  it('renders login form', () => {
-    render(<LoginPage />)
-    expect(screen.getByText('Architect Login')).toBeInTheDocument()
-    expect(screen.getByPlaceholderText('••••••••')).toBeInTheDocument()
+  beforeEach(() => {
+    window.localStorage.clear()
   })
 
-  it('shows error on invalid password', async () => {
-    render(<LoginPage />)
-    fireEvent.change(screen.getByPlaceholderText('••••••••'), { target: { value: 'wrong-pass' } })
-    fireEvent.click(screen.getByRole('button', { name: /unlock vault/i }))
+  it('redirects /login to the private owner gate', async () => {
+    await LoginPage({
+      searchParams: Promise.resolve({ next: '/vault' }),
+    })
+
+    expect(mockRedirect).toHaveBeenCalledWith(`${PRIVATE_OWNER_LOGIN_PATH}?next=%2Fvault`)
+  })
+
+  it('renders the private owner login form', () => {
+    render(<PrivateOwnerLoginPage />)
+
+    expect(screen.getByText('Restricted N1Hub login')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('egor-n1')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('Enter password')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('N1X1')).toBeInTheDocument()
+  })
+
+  it('shows error on invalid credentials', async () => {
+    server.use(
+      http.post('/api/auth', () =>
+        HttpResponse.json({ error: 'Invalid credentials.' }, { status: 401 }),
+      ),
+    )
+
+    render(<PrivateOwnerLoginPage />)
+
+    fireEvent.change(screen.getByPlaceholderText('egor-n1'), { target: { value: 'egor-n1' } })
+    fireEvent.change(screen.getByPlaceholderText('Enter password'), {
+      target: { value: 'wrong-pass' },
+    })
+    fireEvent.change(screen.getByPlaceholderText('N1X1'), { target: { value: 'n1x1' } })
+    fireEvent.click(screen.getByRole('button', { name: /unlock n1hub/i }))
 
     await waitFor(() => {
-      expect(screen.getByText('Access Denied. Incorrect clearance code.')).toBeInTheDocument()
+      expect(screen.getByText('Invalid credentials.')).toBeInTheDocument()
     })
     expect(window.localStorage.getItem('n1hub_vault_token')).toBeNull()
   })
 
   it('stores token and redirects on success', async () => {
-    const router = useRouter()
-    render(<LoginPage />)
-    
-    fireEvent.change(screen.getByPlaceholderText('••••••••'), { target: { value: 'correct-pass' } })
-    fireEvent.click(screen.getByRole('button', { name: /unlock vault/i }))
+    server.use(
+      http.post('/api/auth', () => HttpResponse.json({ token: 'mock-token' })),
+    )
+
+    render(<PrivateOwnerLoginPage />)
+
+    fireEvent.change(screen.getByPlaceholderText('egor-n1'), { target: { value: 'egor-n1' } })
+    fireEvent.change(screen.getByPlaceholderText('Enter password'), {
+      target: { value: 'correct-pass' },
+    })
+    fireEvent.change(screen.getByPlaceholderText('N1X1'), { target: { value: 'n1x1' } })
+    fireEvent.click(screen.getByRole('button', { name: /unlock n1hub/i }))
 
     await waitFor(() => {
       expect(window.localStorage.getItem('n1hub_vault_token')).toBe('mock-token')
-      expect(router.push).toHaveBeenCalledWith('/vault')
-    })
-  })
-
-  it('supports local ChatGPT login when a Codex session is available', async () => {
-    const router = useRouter()
-    server.use(
-      http.get('/api/auth/chatgpt', () =>
-        HttpResponse.json({
-          enabled: true,
-          available: true,
-          state: 'connected',
-          email: 'architect@example.com',
-          plan_type: 'plus',
-          subscription_active_until: '2026-04-01T00:00:00Z',
-          reason: null,
-        }),
-      ),
-      http.post('/api/auth/chatgpt', () =>
-        HttpResponse.json({
-          token: 'chatgpt-local-token',
-          provider: 'chatgpt_local_codex',
-          email: 'architect@example.com',
-          plan_type: 'plus',
-        }),
-      ),
-    )
-
-    render(<LoginPage />)
-
-    await waitFor(() => {
-      expect(screen.getByText('Connected')).toBeInTheDocument()
-      expect(screen.getByText(/architect@example.com/i)).toBeInTheDocument()
-    })
-
-    fireEvent.click(screen.getByRole('button', { name: /continue with chatgpt/i }))
-
-    await waitFor(() => {
-      expect(window.localStorage.getItem('n1hub_vault_token')).toBe('chatgpt-local-token')
-      expect(router.push).toHaveBeenCalledWith('/vault')
+      expect(mockRouter.push).toHaveBeenCalledWith('/')
     })
   })
 })

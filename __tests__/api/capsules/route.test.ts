@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { GET, POST } from '@/app/api/capsules/route'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 import { logActivity } from '@/lib/activity'
 import { getExistingCapsuleIds, readCapsulesFromDisk } from '@/lib/capsuleVault'
 import {
@@ -106,7 +107,7 @@ describe('API: /api/capsules', () => {
 
     it('returns real capsules by default', async () => {
       const req = new Request('http://localhost/api/capsules', {
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
       })
 
       vi.mocked(readCapsulesFromDisk).mockResolvedValue([mockCapsule] as never)
@@ -120,7 +121,7 @@ describe('API: /api/capsules', () => {
 
     it('returns overlay capsules for non-real branches', async () => {
       const req = new Request('http://localhost/api/capsules?branch=dream', {
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
       })
 
       vi.mocked(loadOverlayGraph).mockResolvedValue([mockCapsule] as never)
@@ -149,7 +150,7 @@ describe('API: /api/capsules', () => {
 
       const req = new Request('http://localhost/api/capsules', {
         method: 'POST',
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
         body: JSON.stringify({ metadata: { capsule_id: 'bad.v1' } }),
       })
 
@@ -162,7 +163,7 @@ describe('API: /api/capsules', () => {
 
       const req = new Request('http://localhost/api/capsules?branch=experimental-1', {
         method: 'POST',
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
         body: JSON.stringify(mockCapsule),
       })
 
@@ -180,7 +181,7 @@ describe('API: /api/capsules', () => {
 
       const req = new Request('http://localhost/api/capsules', {
         method: 'POST',
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
         body: JSON.stringify({
           ...mockCapsule,
           metadata: {
@@ -211,7 +212,7 @@ describe('API: /api/capsules', () => {
 
       const req = new Request('http://localhost/api/capsules', {
         method: 'POST',
-        headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
         body: JSON.stringify(mockCapsule),
       })
 

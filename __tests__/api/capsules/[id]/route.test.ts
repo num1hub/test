@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as fs from 'fs/promises'
 import { DELETE, GET, PUT } from '@/app/api/capsules/[id]/route'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 import { logActivity } from '@/lib/activity'
 import { getExistingCapsuleIds, getOverlayExistenceSet } from '@/lib/capsuleVault'
 import {
@@ -64,7 +65,7 @@ vi.mock('@/lib/validator', () => ({
 }))
 
 describe('API: /api/capsules/[id]', () => {
-  const authHeader = { Authorization: 'Bearer n1-authorized-architect-token-777' }
+  const authHeader = { Authorization: `Bearer ${createAuthToken()}` }
 
   const payload = {
     metadata: { capsule_id: 'test.v1' },

@@ -11,7 +11,10 @@ export const mockRouter = {
   prefetch: vi.fn(),
 }
 
+export const mockRedirect = vi.fn()
+
 vi.mock('next/navigation', () => ({
+  redirect: mockRedirect,
   useRouter: () => mockRouter,
   useParams: () => ({ id: 'test-capsule-id' }),
   usePathname: () => '/vault',
@@ -47,9 +50,15 @@ vi.mock('react-force-graph-2d', () => ({
 // 4. Setup MSW Server for API mocking
 export const handlers = [
   http.post('/api/auth', async ({ request }) => {
-    const { password } = (await request.json()) as { password?: string }
-    if (password === 'correct-pass') return HttpResponse.json({ token: 'mock-token' })
-    return new HttpResponse(null, { status: 401 })
+    const { login, password, accessCode } = (await request.json()) as {
+      login?: string
+      password?: string
+      accessCode?: string
+    }
+    if (login === 'egor-n1' && password === 'correct-pass' && accessCode === 'n1x1') {
+      return HttpResponse.json({ token: 'mock-token' })
+    }
+    return HttpResponse.json({ error: 'Invalid credentials.' }, { status: 401 })
   }),
   http.get('/api/auth/chatgpt', () =>
     HttpResponse.json({

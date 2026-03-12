@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { POST } from '@/app/api/diff/route'
 import { diffResultSchema } from '@/contracts/diff'
 import { computeDiff } from '@/lib/diff/diff-engine'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 const diffResult = {
   branchA: 'real',
@@ -43,7 +44,7 @@ describe('API: /api/diff', () => {
   it('returns a structured DiffResult', async () => {
     const req = new Request('http://localhost/api/diff', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         branchA: 'real',
         branchB: 'dream',
@@ -82,7 +83,7 @@ describe('API: /api/diff', () => {
   it('rejects invalid diff requests before computeDiff runs', async () => {
     const req = new Request('http://localhost/api/diff', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         branchA: 'INVALID BRANCH',
         branchB: 'dream',

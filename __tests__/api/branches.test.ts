@@ -1,6 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { z } from 'zod'
 import { GET, POST } from '@/app/api/branches/route'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 import { branchInfoSchema, branchManifestSchema } from '@/contracts/diff'
 import {
   createBranch,
@@ -56,7 +57,7 @@ describe('API: /api/branches', () => {
 
   it('lists real plus discovered non-real branches', async () => {
     const req = new Request('http://localhost/api/branches', {
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await GET(req)
@@ -81,7 +82,7 @@ describe('API: /api/branches', () => {
   it('creates a new branch manifest', async () => {
     const req = new Request('http://localhost/api/branches', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         sourceCapsuleId: 'capsule.project.alpha.v1',
         sourceBranch: 'real',
@@ -108,7 +109,7 @@ describe('API: /api/branches', () => {
 
     const req = new Request('http://localhost/api/branches', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
       body: JSON.stringify({
         sourceCapsuleId: 'capsule.project.alpha.v1',
         sourceBranch: 'real',

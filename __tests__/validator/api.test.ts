@@ -7,6 +7,7 @@ import { POST as fixPost } from '@/app/api/validate/fix/route';
 import { GET as gatesGet } from '@/app/api/validate/gates/route';
 import { GET as statsGet } from '@/app/api/validate/stats/route';
 import { readValidationLogs } from '@/lib/validationLog';
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 vi.mock('@/lib/capsuleVault', () => ({
   getExistingCapsuleIds: vi.fn(async () => new Set(['capsule.foundation.capsuleos.v1'])),
@@ -30,7 +31,7 @@ vi.mock('@/lib/validationLog', () => ({
   })),
 }));
 
-const authHeader = { Authorization: 'Bearer n1-authorized-architect-token-777' };
+const authHeader = { Authorization: `Bearer ${createAuthToken()}` };
 
 const fixture = async (name: string) => {
   const filePath = path.join(process.cwd(), '__tests__/validator/fixtures', name);

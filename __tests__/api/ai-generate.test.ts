@@ -1,3 +1,4 @@
+import { createAuthToken } from '@/__tests__/helpers/auth'
 // @vitest-environment node
 import { describe, expect, it, vi } from 'vitest';
 
@@ -39,7 +40,7 @@ describe('app/api/ai/generate/route.ts', () => {
       body: JSON.stringify({ prompt: 'hello', provider: 'openai' }),
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
     });
 
@@ -67,7 +68,7 @@ describe('app/api/ai/generate/route.ts', () => {
       body: JSON.stringify({ prompt: 'hello', provider: 'gemini' }),
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
     });
 

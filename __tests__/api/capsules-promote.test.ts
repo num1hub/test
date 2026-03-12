@@ -3,6 +3,7 @@ import { POST } from '@/app/api/capsules/[id]/promote/route'
 import { branchExists } from '@/lib/branching'
 import { dematerializeOverlayCapsule, readOverlayCapsule } from '@/lib/diff/branch-manager'
 import { mergeBranches } from '@/lib/diff/merge-engine'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 const promotedCapsule = {
   metadata: {
@@ -74,7 +75,7 @@ describe('API: /api/capsules/[id]/promote', () => {
   it('promotes a dream capsule into real and dematerializes the overlay', async () => {
     const req = new Request('http://localhost/api/capsules/capsule.test.promote.v1/promote', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await POST(req, {
@@ -115,7 +116,7 @@ describe('API: /api/capsules/[id]/promote', () => {
 
     const req = new Request('http://localhost/api/capsules/capsule.test.promote.v1/promote', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await POST(req, {
@@ -148,7 +149,7 @@ describe('API: /api/capsules/[id]/promote', () => {
 
     const req = new Request('http://localhost/api/capsules/capsule.test.promote.v1/promote', {
       method: 'POST',
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await POST(req, {

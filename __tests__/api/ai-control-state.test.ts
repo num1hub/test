@@ -1,3 +1,4 @@
+import { createAuthToken } from '@/__tests__/helpers/auth'
 // @vitest-environment node
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -40,7 +41,7 @@ describe('app/api/ai/control-state/route.ts', () => {
 
     const request = new Request('http://localhost/api/ai/control-state', {
       headers: {
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
       },
     });
 
@@ -65,7 +66,7 @@ describe('app/api/ai/control-state/route.ts', () => {
     const request = new Request('http://localhost/api/ai/control-state', {
       method: 'POST',
       headers: {
-        Authorization: 'Bearer n1-authorized-architect-token-777',
+        Authorization: `Bearer ${createAuthToken()}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({

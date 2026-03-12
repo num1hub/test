@@ -1,5 +1,6 @@
 import { describe, expect, it, vi } from 'vitest'
 import { GET } from '@/app/api/projects/[id]/hierarchy/route'
+import { createAuthToken } from '@/__tests__/helpers/auth'
 
 vi.mock('@/lib/diff/branch-manager', () => ({
   loadOverlayGraph: vi.fn(async () => [
@@ -19,7 +20,7 @@ vi.mock('@/lib/diff/branch-manager', () => ({
 describe('API: /api/projects/[id]/hierarchy', () => {
   it('returns hierarchy for a project root', async () => {
     const req = new Request('http://localhost/api/projects/capsule.project.root.v1/hierarchy', {
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await GET(req as never, {
@@ -39,7 +40,7 @@ describe('API: /api/projects/[id]/hierarchy', () => {
 
   it('returns 404 when project is missing', async () => {
     const req = new Request('http://localhost/api/projects/missing/hierarchy', {
-      headers: { Authorization: 'Bearer n1-authorized-architect-token-777' },
+      headers: { Authorization: `Bearer ${createAuthToken()}` },
     })
 
     const res = await GET(req as never, {
