@@ -127,8 +127,10 @@ function VaultDashboardContent() {
   };
 
   const handleExport = async () => {
+    const activeExportBranch = branch === 'dream' ? 'dream' : 'real';
+
     try {
-      await exportCapsulesToDisk(capsules);
+      await exportCapsulesToDisk(capsules, { activeBranch: activeExportBranch });
       showToast('Export successful.', 'success');
     } catch {
       showToast('Export failed.', 'error');
@@ -217,6 +219,7 @@ function VaultDashboardContent() {
           >
             <CapsuleGraph
               capsules={processedCapsules}
+              activeBranch={branch}
               getNodeHref={(id) =>
                 `/vault/capsule/${encodeURIComponent(id)}${
                   branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`

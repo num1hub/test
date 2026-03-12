@@ -7,17 +7,17 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-07T10:22:14.260Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "Profile",
     "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Profile\n\n## 1. Definition and Essence\nProfile in Dream describes a richer human identity substrate for N1Hub. It preserves the future possibility that one person's profile can carry not just account metadata, but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Core Attributes\n- `user_id` stable sovereign principal\n- `identity_and_keys` stronger authorship and trust anchors\n- `presence_and_theme` human continuity cues across clients\n- `review_and_approval_role` future promotion and governance authority\n- `wallet_and_access_ownership` explicit link to model-supply posture\n\n## 3. Dream Direction\nProfile should eventually become the durable human envelope from which preferences, assistant relationship, access posture, and review authority all derive, without collapsing personhood into a session cookie or a chat thread.\n\n## 4. Integration\n- **User Preferences:** remain the behavioral expression of the same human principal.\n- **AI Wallet and Access Models:** tie intelligence supply to a real owner.\n- **Human-AI Symbiosis and Personal AI Assistant:** preserve the partner loop around that identity.\n- **Agent Control Plane:** uses profile as the accountable human return path.\n\n## 5. Philosophical Alignment\nProfile in Dream protects the idea that the second brain should deepen one person's continuity rather than erase it.\n"
+    "content": "# Profile\n\n## 1. Role\nProfile will become the richer human identity substrate of N1Hub, carrying not only account metadata but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Future Identity Contract\nProfile will serve as the durable human envelope from which preferences, assistant relationship, access posture, review authority, and authorship lineage all derive, without collapsing personhood into a session cookie or chat thread.\n\n## 3. Operational Consequence\nThe vault will preserve one accountable human return path across approvals, background autonomy, wallet ownership, and assistant continuity. Identity quality will become part of system trust, not a decorative account surface.\n\n## 4. Philosophical Alignment\nProfile supports To Dig Deep by deepening one person’s continuity inside the second brain rather than erasing it."
   },
   "neuro_concentrate": {
-    "summary": "Profile in Dream describes a richer identity-continuity layer for humans and long-lived principals. It imagines clearer authorship, stronger review authority, wallet ownership, and better linkage between assistant continuity, background autonomy, and sovereign human presence across the ecosystem. The capsule matters because future second-brain systems will depend on identity quality as much as on data quality. Dream therefore preserves Profile as a more capable human substrate rather than only the current durable actor envelope.",
+    "summary": "Profile defines the future richer human identity substrate for N1Hub: stronger authorship, clearer review authority, deeper assistant continuity, tighter wallet ownership, and a more durable human envelope across approvals, autonomy, and long-horizon graph life.",
     "keywords": [
       "profile",
       "identity-envelope",
@@ -71,7 +71,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "38571302e87b584e32f7befbe5be6a0f6162433d5f6053b571560474b5ba9d41ac7a300e697a4a4e851ad6873381e2c2818af62513b067b0be4bbaea746c2be7"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

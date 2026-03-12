@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:20:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Evals and Traces",
-    "semantic_hash": "agent-evals-traces-replay-review-regression-runtime-quality",
+    "semantic_hash": "agent-evals-traces-replayable-canaries-assignment-lineage",
     "source": {
       "uri": "https://developers.openai.com/api/docs/guides/agents-sdk",
       "type": "web_documentation"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Evals and Traces\n\n## Dream Direction\nIn the Dream branch, every serious N1Hub agent lane should be traceable, replayable, and evaluable by design.\n\n## Desired Future State\n- each swarm cycle emits structured traces that can be replayed and diffed\n- assignment-aware lineage replaces anonymous run blur\n- reviewer and validation lanes score plans before promotion\n- repeated failure modes are clustered and surfaced as engineering work\n- canary task suites are used before changing models, prompts, or provider routing\n- operators can see not only what an agent produced, but how reliable that pattern has been across time\n\n## Why It Matters\nDream preserves the idea that long-lived agents should improve through evidence and feedback loops, not through folklore about which prompt felt smart last week."
+    "content": "# Agent Evals and Traces\n\n## 1. Role\nEvery serious N1Hub lane will produce replayable traces and structured evaluations by design. The system will not judge major runtime changes only by operator impression. It will compare runs, preserve assignment lineage, and inspect recurring failure patterns as explicit engineering evidence.\n\n## 2. Future Evidence Loop\n- structured traces that can be replayed and diffed\n- assignment-aware lineage instead of anonymous run blur\n- review and validation scores on plans, jobs, and artifacts before promotion\n- clustered failure modes that become visible maintenance work\n- representative canary suites for prompts, models, routing policy, and harness changes\n\n## 3. Operational Consequence\nOperators and agents will be able to ask not only what a lane produced, but how reliable that pattern has been across time, which context and policy framed it, and whether a new configuration genuinely improved the system.\n\n## 4. Philosophical Alignment\nAgent Evals and Traces supports To Dig Deep by making long-lived agent improvement evidence-driven, replayable, and reviewable."
   },
   "neuro_concentrate": {
-    "summary": "Agent Evals and Traces in the Dream branch defines the future state where every important N1Hub agent lane produces replayable traces and structured evaluations. It imagines swarms that can be measured, compared, and improved through explicit canaries, assignment-aware lineage, failure clusters, and review scores rather than intuition alone. In that future, major runtime changes are judged against evidence from representative tasks instead of only by operator impression, memory, or operator mood.",
+    "summary": "Agent Evals and Traces defines the future evidence loop for N1Hub agents: replayable traces, assignment-aware lineage, structured review scores, failure clustering, and representative canaries that let the swarm improve through evidence instead of folklore.",
     "keywords": [
       "agent-evals",
       "agent-traces",
@@ -46,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-evals-traces-replay-review-regression-runtime-quality"
+    "semantic_hash": "agent-evals-traces-replayable-canaries-assignment-lineage"
   },
   "recursive_layer": {
     "links": [
@@ -92,7 +92,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "1b3b7e056ecbcc6a23fc79fca4bf9dc08cebe1d9c63f4b398943021f9653de93a6dfd2a8394a6b66177169c233f58733f2d4972b431b195c90237e854d83a369"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

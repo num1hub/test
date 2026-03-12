@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry",
-    "updated_at": "2026-03-08T23:35:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "DeepMine",
     "priority": "high",
     "progress": 37,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine: The Cognitive Quarry\n\n## 1. Essence\nWithin the N1Hub ecosystem, **DeepMine** operates as the primary extraction layer. It is the cognitive quarry: a highly orchestrated interfacing system that drills into external models, the open internet, and user-uploaded corpora. Its purpose is to extract high-value raw intellectual material and feed it into the **A2C** refinery.\n\n## 2. The Extraction Mechanism\nDeepMine does not produce finished capsules; it produces raw ore. It executes bounded multi-stage drills designed to bypass surface-level conversational noise and expose deeper structures, claims, and evidence. In Dream this expands into a richer mining stack with clearer ore manifests, retrieval budgets, and stronger branch-aware handoff bundles.\n\n## 3. Internal Optimization and Routing\nTo operate efficiently at industrial scale, DeepMine employs advanced cost and performance architecture:\n- **Cost-Aware Routing** across providers and access lanes\n- **Caching** to prevent redundant extraction work\n- **Load Balancing** to avoid provider pressure\n- **Sleep-Time Compute** for off-peak deep mining\n- **Context-Pack Discipline** so extraction jobs stay bounded and inspectable\n\n## 4. Dream Direction\nThe future target is a true extraction fabric: multiple scout and miner lanes, better evidence packets, richer queueing, and stronger downstream compatibility with A2C, Vault Update, and swarm review.\n\n## 5. Architectural Integration\nDeepMine remains upstream of A2C and downstream of the assistant. It should become the quarry inside the broader Mining Company frame rather than a single async ingestion service."
+    "content": "# DeepMine: The Future Cognitive Quarry\n\n## 1. Role\nDeepMine will become the broader quarry fabric of N1Hub, extracting high-value intellectual ore from providers, the open internet, and user corpora through more deliberate routing, stronger manifests, and clearer downstream handoff discipline.\n\n## 2. Future Quarry Contract\nThe quarry will widen beyond the current implementation with better provider diversity, more explicit ore manifests, retrieval budgets, cache intelligence, and branch-aware extraction boundaries. Quarry output will carry enough structure that A2C, Workspace, and swarm lanes can consume it without folklore.\n\n## 3. Operational Consequence\nThe rest of the ecosystem will be able to reason more deeply because the raw material entering refinement will be cleaner, cheaper, and better packaged. Quarry quality will remain a first-order limit on higher-order intelligence.\n\n## 4. Philosophical Alignment\nDeepMine supports To Dig Deep by treating extraction quality and extraction economics as foundational rather than incidental."
   },
   "neuro_concentrate": {
-    "summary": "DeepMine in the Dream branch describes the future extraction substrate rather than only the current quarry implementation. It imagines broader provider routing, more autonomous research sweeps, stronger cache intelligence, and a cleaner conversion of expensive external intelligence into reusable raw material for the rest of the ecosystem. The capsule matters because every higher-order refinement layer is limited by extraction quality and extraction economics. Dream therefore preserves DeepMine as a more strategic intelligence-mining fabric, not merely the first asynchronous ingestion service.",
+    "summary": "DeepMine defines the future quarry fabric of N1Hub: broader provider routing, stronger ore-manifest discipline, richer cache and retrieval intelligence, better branch-aware handoff bundles, and more deliberate conversion of external intelligence into reusable raw material.",
     "keywords": [
       "deepmine",
       "extraction-layer",
@@ -108,7 +108,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "12df5545566b04ea6bde8a3bb8951f5aec7a171f2911efe64779a1c6784492f15906c7a790ff221f75b4660e8b22e40350765a03b2960801f3fade3707b89678"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

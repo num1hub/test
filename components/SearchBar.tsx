@@ -1,8 +1,12 @@
+import type { FocusEventHandler, KeyboardEventHandler } from 'react';
+
 interface SearchBarProps {
   value: string;
   onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
+  onKeyDown?: KeyboardEventHandler<HTMLInputElement>;
+  onFocus?: FocusEventHandler<HTMLInputElement>;
 }
 
 function SearchIcon({ className }: { className?: string }) {
@@ -28,6 +32,8 @@ export default function SearchBar({
   onChange,
   placeholder = 'Search capsules...',
   className = '',
+  onKeyDown,
+  onFocus,
 }: SearchBarProps) {
   return (
     <div className={`relative flex items-center ${className}`}>
@@ -36,6 +42,8 @@ export default function SearchBar({
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
+        onKeyDown={onKeyDown}
+        onFocus={onFocus}
         placeholder={placeholder}
         className="w-full rounded-lg border border-slate-700 bg-slate-900 py-2.5 pl-10 pr-10 text-slate-200 shadow-sm transition-colors focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
       />

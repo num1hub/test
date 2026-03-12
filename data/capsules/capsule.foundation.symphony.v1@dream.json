@@ -1,21 +1,21 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.symphony.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-07T19:55:38.536Z",
+    "updated_at": "2026-03-12T01:20:00Z",
     "name": "Symphony",
-    "semantic_hash": "symphony-service-orchestrator-linear-workspaces-agent-runtime-hub",
+    "semantic_hash": "symphony-routing-intake-session-governance-observability-runtime-contract",
     "source": {
       "uri": "internal://docs/symphony.md",
       "type": "repository_contract"
     },
     "priority": "high",
-    "progress": 33,
+    "progress": 46,
     "estimatedHours": 520,
     "actualHours": 128,
     "dueDate": "2026-09-25",
@@ -23,25 +23,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony\n\n## 1. Definition and Essence\nSymphony is the orchestration layer for N1Hub engineering work. It continuously reads eligible work, claims it under bounded concurrency, prepares deterministic workspaces, launches coding-agent sessions inside those workspaces, and reconciles live execution against tracker or capsule-graph state.\n\n## 2. Core Responsibilities\n- `poll_loop` fetches active Linear issues or local capsule jobs on a fixed cadence.\n- `claim_and_dispatch` prevents duplicate execution while honoring concurrency limits.\n- `workspace_isolation` ensures each run executes inside its own validated workspace path.\n- `workflow_contract` loads repo-owned `WORKFLOW.md` or `NINFINITY_WORKFLOW.md` for prompt policy, hooks, and runtime settings.\n- `session_reconciliation` stops or retries runs when source state, stalls, or failures require intervention.\n- `observability` emits logs and status snapshots for operator visibility.\n- `daemon_lane` acts as one of the core long-lived execution lanes inside N1Hub's background-agent runtime.\n\n## 3. Canonical Runtime Atoms\nThe Symphony hub now explicitly contains the atomic runtime concepts that make the service intelligible in the capsule graph: workflow contract, agent session, run attempt, retry entry, approval and sandbox policy, and observability surface.\n\n## 4. N1Hub Integration\nIn N1Hub, Symphony is wired to git-worktree issue workspaces, strict prompt rendering, capsule-aware validation, and repository-local documentation. It now serves both issue-driven coding work and N-Infinity capsule jobs through the same daemonized orchestration substrate, with night-shift gating available for autonomous capsule-graph execution.\n\n## 5. Philosophical Alignment\nSymphony applies To Dig Deep by forcing work to descend from issue text or graph-level intent into the actual capsules, validator rules, branch overlays, routes, tests, and runtime contracts that define the repository's real behavior.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772913261948\n- Job: Decompose Symphony Hub\n- Note: Refined the summary to emphasize Symphony's orchestration role and key integration points, added missing keywords reflecting core responsibilities and runtime atoms, and clarified the capsule's importance in ensuring deterministic and observable agent execution. Further decomposition work may focus on separating runtime atoms and session management into distinct capsules.\n"
+    "content": "# Symphony\n\n## 1. Role\nSymphony is the orchestration layer for N1Hub engineering work. It routes that orchestration through four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability remain explicit instead of collapsing into one 19-link parent hub.\n\n## 2. Routing Surfaces\n- `assignment-intake` owns tracker-fed work discovery, workspace entry, swarm-fed assignments, and capsule-job intake before live execution begins.\n- `live-session-fabric` owns the daemonized session substrate, harness protocol, and continuity surfaces that keep one run alive inside one workspace.\n- `workflow-safety` owns repo workflow law, approval and sandbox posture, night-shift gating, and the testing or security guardrails around execution.\n- `run-observability` owns run attempts, retry state, and observability surfaces that explain what happened, what failed, and what needs intervention next.\n\n## 3. Parent Boundary\nThe parent Symphony hub keeps only the top-level relationship to N1Hub, To Dig Deep, Workspace, the Symphony project envelope, and the four orchestration sub-hubs. Detailed runtime routing now flows through those sub-hubs so Symphony remains a legible execution contract instead of a flat registry of every session, retry, policy, and status surface."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, Symphony evolves from a single orchestration service into a reusable execution spine for mixed workloads: issue-driven coding, capsule jobs, and maintenance automation. The future posture is to strengthen lane typing, retry economics, and return-path artifacts so delegated sessions always hand back explainable state transitions instead of opaque outputs. It should preserve strict workspace and sandbox policy at every run boundary and keep operator-visible scheduler state for long-running jobs. This makes Night and Day operations safe to share the same orchestration substrate while preventing accidental escalation from a valid automated pattern into unsupervised maintenance behavior.",
+    "summary": "Symphony routes repository orchestration through four bounded surfaces: assignment intake, live session fabric, workflow safety, and run observability. The parent keeps only top-level relationships to N1Hub, To Dig Deep, Workspace, the Symphony project envelope, and the four sub-hubs. This makes future orchestration doctrine more legible because work intake, live runtime continuity, workflow law, safety posture, retries, and operator evidence no longer hide inside one overloaded parent capsule. The result is a clearer execution contract for how repository work enters, runs, and reports back.",
     "keywords": [
       "symphony",
+      "hub-decomposition",
+      "assignment-intake",
+      "live-session-fabric",
+      "workflow-safety",
+      "run-observability",
       "orchestration",
-      "capsule-jobs",
-      "workflow-contract",
-      "session-handoff",
-      "retry-strategy",
-      "observability",
       "night-shift",
-      "sandbox-policy",
-      "execution-spine",
-      "codex",
-      "assignment-lanes",
-      "lane-routing",
-      "daemon-boundary"
+      "observability"
     ],
     "confidence_vector": {
       "extraction": 0.97,
@@ -51,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0.06
     },
-    "semantic_hash": "symphony-service-orchestrator-linear-workspaces-agent-runtime-hub"
+    "semantic_hash": "symphony-routing-intake-session-governance-observability-runtime-contract"
   },
   "recursive_layer": {
     "links": [
@@ -60,72 +55,28 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.workspace.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-daemon.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-job.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.testing.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.security.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.symphony-workflow.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-agent-session.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-run-attempt.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-retry-entry.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-approval-sandbox-policy.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-observability.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.assignment-intake.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.live-session-fabric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.workflow-safety.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.run-observability.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.project.symphony.v1",
@@ -141,8 +92,20 @@
         "run_id": "vault-steward-1772913261948",
         "job_id": "vault-steward-job-4abf6c9b3a462229",
         "rationale": "The updated summary consolidates the detailed content sections into a concise description highlighting Symphony's orchestration scope and integration. Keywords were added to capture important concepts like concurrency, session management, and daemon lane that were described but not previously tagged. This aligns with the goal to reduce complexity and improve progress by clarifying the capsule's scope and key elements."
+      },
+      {
+        "at": "2026-03-11T23:35:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so Symphony states reusable orchestration doctrine directly."
+      },
+      {
+        "at": "2026-03-12T01:20:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Symphony into four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability no longer collapse into a 19-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "e7311be7ba337eb464147029a82ccef49ff11f00bd2da0b38a76e956b4642b9da6346f06468550aff23d70caa45487c36e44b2ec24624498f3db86872ee9a2c3"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-08T19:12:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "AI Economics: Night and Batch Routing",
-    "semantic_hash": "ai-economics-night-batch-subscription-api-offpeak-budget",
+    "semantic_hash": "ai-economics-night-batch-explicit-budget-responsive-routing",
     "priority": "high",
     "progress": 30,
     "estimatedHours": 120,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Dream Direction\nThe Dream branch turns current routing heuristics into a more explicit economic control system for the entire intelligence stack.\n\n## 2. Desired Future State\n- Subscription lanes are saturated for human-centered symbiosis.\n- API and hosted-inference lanes are reserved for programmable and parallel work.\n- Night and batch discounts are harvested automatically wherever providers expose them.\n- Budget policy becomes visible enough for operators to understand the tradeoffs in real time.\n- Assignment routing and daemon wakeups respond to budget state rather than ignoring it.\n\n## 3. Why It Matters\nN1Hub can only sustain large swarms and deep mining if compute is treated as a governable economic substrate rather than a hidden background bill. Dream preserves a future where the control plane, wallet, and daemon layer all understand cost posture well enough to steer the swarm intelligently.\n\n## 4. Philosophical Alignment\nDream preserves the idea that depth must remain affordable if it is going to remain sovereign.\n"
+    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Role\nN1Hub will turn current routing heuristics into an explicit economic control system for the intelligence stack. Compute will be treated as a governable substrate that shapes when lanes should run, what kind of work they may absorb, and which provider posture is rational at a given moment.\n\n## 2. Future Economic Routing\n- subscription lanes saturated for human-centered symbiosis\n- programmable API and hosted-inference lanes reserved for unattended and parallel work\n- systematic capture of provider batch and night discounts\n- visible budget posture in operator and control-plane surfaces\n- assignment routing and daemon wakeups that respond to budget state rather than ignoring it\n\n## 3. Operational Consequence\nLarge swarms and deep mining will stay strategically useful because cost posture, wallet health, and runtime scheduling will compound together instead of drifting upward as a hidden background bill.\n\n## 4. Philosophical Alignment\nAI Economics: Night and Batch Routing supports To Dig Deep by making depth financially sustainable and operationally legible."
   },
   "neuro_concentrate": {
-    "summary": "AI Economics: Night and Batch Routing in the Dream branch imagines a far more disciplined economic operating system for the N1Hub swarm. It pushes toward a future where subscription seats are saturated intelligently, API and hosted-inference spend are routed with high precision, assignment and daemon wakeups respond to budget state, and off-peak windows are exploited systematically rather than opportunistically. The capsule matters because always-on intelligence becomes strategically powerful only when its economics compound instead of drifting upward unnoticed. Dream therefore preserves a more advanced cost-routing layer as a necessary precondition for mature 24/7 background autonomy.",
+    "summary": "AI Economics: Night and Batch Routing defines the future economic control system for the N1Hub swarm: subscription saturation for symbiosis, programmable API routing for automation, automated discount capture, visible budget posture, and assignment-aware daemon wakeups.",
     "keywords": [
       "ai-economics",
       "night-batch-routing",
@@ -43,7 +43,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "ai-economics-night-batch-subscription-api-offpeak-budget"
+    "semantic_hash": "ai-economics-night-batch-explicit-budget-responsive-routing"
   },
   "recursive_layer": {
     "links": [
@@ -85,7 +85,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "2da211bde025afb62f301379da77c3a11dcdd9257196fe26b0c628a8ccf21fa965d9b96a90758e4f93420a11b1bd88d2b351074f15c8294756f8b7e9a926ab1e"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

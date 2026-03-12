@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.a2c.material-preparation.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-11T23:55:00Z",
+    "name": "A2C Material Preparation",
+    "semantic_hash": "a2c-material-preparation-ingest-normalize-segment-extract-fabric",
+    "source": {
+      "uri": "internal://capsule.foundation.a2c.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# A2C Material Preparation\n\n## 1. Role\nA2C Material Preparation owns the early-stage refinery work that turns captured source material into clean extraction-ready substrate. It preserves provenance, normalizes modality, segments safely, and isolates candidate evidence before synthesis begins.\n\n## 2. Material Preparation Surface\nThis sub-hub groups `a2c-ingest`, `a2c-normalize`, `a2c-segment`, and `a2c-extract`. Together they define how the refinery captures source material, regularizes envelope shape, preserves causal boundaries through chunking, and isolates claims or spans that later stages can reason over without guessing at raw context.\n\n## 3. Operating Boundary\nThis sub-hub does not decide repository readiness, construct graph candidates, or approve emitted mutations. Those responsibilities belong to `readiness-control`, `candidate-construction`, `governance-handoffs`, and `admission-emission`."
+  },
+  "neuro_concentrate": {
+    "summary": "A2C Material Preparation groups the early refinery stages: Ingest, Normalize, Segment, and Extract. It keeps source capture, modality cleanup, chunk discipline, and claim isolation together so later reasoning operates on prepared evidence instead of hostile raw payloads. This boundary matters because synthesis quality is constrained by how faithfully the pipeline preserves provenance, semantic boundaries, and extraction substrate before any graph-aware candidate assembly begins. It keeps the refinery honest at the raw-material edge.",
+    "keywords": [
+      "a2c",
+      "material-preparation",
+      "ingest",
+      "normalize",
+      "segment",
+      "extract",
+      "provenance"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "a2c-material-preparation-ingest-normalize-segment-extract-fabric"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-normalize.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-segment.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c-extract.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream A2C decomposition to isolate capture, normalization, segmentation, and extraction mechanics from readiness law, candidate reasoning, and later admission gates."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

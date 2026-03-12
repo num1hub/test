@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.runtime-substrate.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T00:55:00Z",
+    "updated_at": "2026-03-12T00:55:00Z",
+    "name": "CapsuleOS Runtime Substrate",
+    "semantic_hash": "capsuleos-runtime-substrate-storage-compute-audit-testing-security",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS Runtime Substrate\n\n## 1. Role\nCapsuleOS Runtime Substrate owns the non-optional operating substrate that lets sovereign memory remain durable at scale. It keeps storage, compute posture, audit traces, testing discipline, and security controls together so CapsuleOS law can execute on reliable infrastructure instead of optimistic assumptions.\n\n## 2. Runtime Substrate Surface\nThis sub-hub groups `hybrid-database`, `sleep-time-compute`, `audit-log`, `testing`, and `security`. Together they define the persistence, compute envelope, auditability, verification posture, and defensive controls that let capsule law survive long-lived runtime pressure.\n\n## 3. Operating Boundary\nThis sub-hub does not define capsule legality, trust-entry judgment, or human and agent maintenance interfaces. Those responsibilities belong to `law-surfaces`, `admission-lifecycle`, and `stewardship-interfaces`."
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS Runtime Substrate groups the non-optional operating substrate of the system: Hybrid Database, Sleep-Time Compute, Audit Log, Testing, and Security. It keeps persistence, compute posture, auditability, verification discipline, and defensive controls together so sovereign memory law can run on reliable infrastructure rather than assumption. This boundary matters because constitutional memory depends not only on rules, but on a durable substrate that can preserve, verify, and defend those rules over time.",
+    "keywords": [
+      "capsuleos",
+      "runtime-substrate",
+      "hybrid-database",
+      "sleep-time-compute",
+      "audit-log",
+      "testing",
+      "security"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsuleos-runtime-substrate-storage-compute-audit-testing-security"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.hybrid-database.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.sleep-time-compute.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.audit-log.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T00:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream CapsuleOS decomposition to isolate storage, compute, audit, testing, and security substrate from law, lifecycle, and stewardship interfaces."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

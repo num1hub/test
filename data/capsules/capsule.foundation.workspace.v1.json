@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.workspace.v1",
-    "version": "1.13.0",
+    "version": "1.13.1",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
-    "semantic_hash": "workspace-planner-tracker-dashboard-assistant-execution-habitat-center",
-    "updated_at": "2026-03-09T20:42:00Z",
+    "semantic_hash": "workspace-parent-routing-operator-execution-assistant-identity-runtime",
+    "updated_at": "2026-03-12T03:55:00Z",
     "name": "Workspace",
     "priority": "high",
     "progress": 79,
@@ -19,23 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace: The Unified Digital Command Center\n\n## 1. Definition\nWithin the N1Hub ecosystem, the **Workspace** is the user's primary interface and personal digital habitat. It is the command center where a person interacts with the sovereign graph, manages projects, and orchestrates AI capabilities without thinking in raw JSON or cryptographic seals. In practice, it is where the second brain becomes livable.\n\n## 2. Canonical Boundary Doctrine\nWorkspace is a **composition lens**, not a semantic owner of every module it presents. Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship keep their own deeper contracts in dedicated capsules and runtime surfaces. Workspace owns the operator-facing composition rules:\n- which modules form the canonical daily command surface,\n- how visibility and handoff move across those modules,\n- how graph-grounded conversation becomes real capsule, task, or execution work,\n- how operator trust is preserved while background and swarm lanes remain inspectable.\n\n## 3. Canonical Workspace Stack\nThe current real-side runtime inventory remains canonical:\n- **Planner**: macro-goals, decomposition, sequencing, and dependency visibility.\n- **Tracker**: execution telemetry, deadlines, drift detection, and follow-through.\n- **Dashboard**: high-level metrics, recent activity, and proactive alerts.\n- **Personal AI Assistant**: the ambient co-pilot for graph-grounded conversation and next actions.\n- **Chat to Capsules**: the conversational ingress path where chat becomes real capsule work.\n- **AI Wallet**: the secure provider and subscription configuration surface.\n- **AI Control Surface**: the operator-facing pane for AI status, lanes, and runtime trust.\n- **Symphony Execution Lane**: isolated repository automation and coding-agent sessions.\n- **Background Agent Runtime**: the daemon and night-shift substrate beneath autonomous capsule work.\n- **Vault Stewardship lane**: the bounded swarm work that keeps the vault improving over time.\n\n## 4. Seamless CapsuleOS Integration\nWorkspace is not separate from the graph; it is the lens through which users manipulate it. Every action can mint, modify, retrieve, link, or delegate capsule work while respecting status boundaries, validation rules, and sovereignty constraints. A mature workspace lets a person think in natural language while the system carries the deeper capsule discipline underneath.\n\n## 5. Real Canonical Rule\nReal now owns the canonical workspace boundary doctrine and the live runtime inventory together. Dream may continue to explore future workspace delta, but Dream should not overwrite the stronger real-side inventory or re-own module semantics that belong to linked capsules and public runtime boundaries.\n"
+    "content": "# Workspace\n\n## 1. Definition\nWorkspace remains the primary operator habitat of N1Hub, but it now routes that habitat through five bounded sub-hubs so visibility, execution state, assistant control, identity governance, and runtime lanes stay explicit instead of accumulating as one flat directory.\n\n## 2. Routing Surfaces\n- `operator-surfaces` owns the cockpit views that compress time, metrics, history, and attention into human-readable form.\n- `execution-loop` owns the project, planning, and tracking surfaces that turn intent into accountable work.\n- `assistant-control` owns the assistant-facing, chat-facing, wallet-facing, and delegation-facing control surfaces of workspace.\n- `identity-access` owns profile, team, entitlement, and integration posture.\n- `runtime-lanes` owns the deeper execution and maintenance lanes that workspace exposes without semantically owning.\n\n## 3. Parent Boundary\nThe parent workspace hub now keeps only the top-level relationship to N1Hub, CapsuleOS, hub-topology doctrine, and the enclosing workspace project. Detailed module routing flows through the five sub-hubs so workspace remains a composition lens instead of a gravity well."
   },
   "neuro_concentrate": {
-    "summary": "Workspace is the unified digital command center and personal habitat for users inside N1Hub. It is now canonically defined as a composition lens over Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, and Vault Stewardship rather than as the semantic owner of those modules. This capsule matters because N1Hub should feel like one coherent habitat while still preserving explicit module boundaries, public runtime contracts, and real graph-grounded handoff paths.",
+    "summary": "Workspace is the sovereign parent hub for five bounded composition surfaces: operator surfaces, execution loop, assistant control, identity access, and runtime lanes. The parent keeps only top-level habitat relationships to N1Hub, CapsuleOS, hub-topology doctrine, and the workspace project while detailed module routing flows through its sub-hubs. This boundary matters because workspace should function as the operator habitat for the whole system without collapsing visibility, planning, assistant control, identity, and runtime exposure into one overloaded registry. The hub now reads as a composition contract rather than a gravity well of leaves.",
     "keywords": [
       "workspace",
-      "second-brain-interface",
-      "command-center",
-      "composition-lens",
-      "chat-to-capsules",
-      "vault-stewardship",
-      "background-runtime",
-      "planner",
-      "tracker",
-      "assistant",
-      "boundary-doctrine",
-      "n1hub"
+      "hub-decomposition",
+      "operator-surfaces",
+      "execution-loop",
+      "assistant-control",
+      "identity-access",
+      "runtime-lanes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -45,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "workspace-planner-tracker-dashboard-assistant-execution-habitat-center"
+    "semantic_hash": "workspace-parent-routing-operator-execution-assistant-identity-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -54,31 +49,27 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.n1hub-projects.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.project.v1",
+        "target_id": "capsule.foundation.workspace.operator-surfaces.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.workspace.execution-loop.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
+        "target_id": "capsule.foundation.workspace.assistant-control.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "target_id": "capsule.foundation.workspace.identity-access.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "target_id": "capsule.foundation.workspace.runtime-lanes.v1",
         "relation_type": "references"
       },
       {
@@ -87,126 +78,6 @@
       },
       {
         "target_id": "capsule.foundation.hub-atomic.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n1hub.v1",
-        "relation_type": "derived_from"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-wallet.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-soul.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-skills-registry.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-delegation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-control-surface.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.key-agents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.dashboard.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.calendar.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.analytics.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.archive.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.profile.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.user-preferences.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.team.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.invitation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.role.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.permission.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.marketplace.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n1-pass.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.workspace.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.symphony.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.n1hub-v0.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.integrations.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.api-gateway.v1",
         "relation_type": "references"
       },
       {
@@ -222,8 +93,20 @@
         "agent": "n1",
         "run_id": "TODO-022",
         "rationale": "The real workspace capsule absorbed the Dream-side boundary doctrine that defines Workspace as a composition lens over linked modules while preserving the stronger real-side runtime inventory. This keeps Real canonical for current ownership boundaries and prevents Dream from erasing live inventory truth."
+      },
+      {
+        "at": "2026-03-11T14:20:37Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "n1",
+        "rationale": "Refactored parent hub to route through 5 sub-hubs. Outbound links reduced from 41 to ≤10."
+      },
+      {
+        "at": "2026-03-12T03:55:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the parent summary to satisfy validator length requirements while preserving the existing workspace routing doctrine and parent boundary."
       }
     ]
   },
-  "integrity_sha3_512": "d2d1214f2d78bf374935f766107ce2df59fd18c01e2fb0e046d35523bdb2fbbfe1a6ca5240c71f13d55cd57ffa6c43b9cf561cdcdd26fb33aacdca5c3a8703a6"
+  "integrity_sha3_512": "9562d819d791b0f46eafc8883a5f1598c0d5f76eb56ea18a5f11a76ccedd90b3be2f068f8a2e0f440516dab47185ace5042e63247f51a7c460d65f750f61508d"
 }

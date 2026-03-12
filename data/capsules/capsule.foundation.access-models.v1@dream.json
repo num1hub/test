@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "access-models-freemium-subscription-payg-n1coin-tier-economics",
-    "updated_at": "2026-03-07T10:22:13.895Z",
+    "updated_at": "2026-03-11T21:10:00Z",
     "name": "Access Models",
     "priority": "medium",
     "progress": 28,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nAccess Models in Dream describes a more mature contract between intelligence supply, human depth, and economic legibility. It keeps alive the possibility that N1Hub can offer a humane second-brain experience across multiple tiers without pretending all users need the same compute, autonomy, or provider posture.\n\n## 2. Dream Direction\nThe long-term target is not merely more plans. The long-term target is clearer mapping between:\n- interactive assistant quality\n- background autonomy rights\n- hosted versus self-supplied provider lanes\n- vault scale and retention expectations\n- industrial bursts of mining, refinement, and validation work\n\n## 3. Strategic Shape\nDream preserves a four-tier logic but makes the future emphasis clearer:\n- entry tiers should teach the architecture honestly\n- self-hosted paths should maximize sovereignty\n- subscription should maximize symbiotic quality, not just raw quota\n- burst lanes should be explicitly industrial rather than hidden upsells\n\n## 4. Integration\n- **AI Wallet and Hybrid LLM Access:** translate tier policy into real supply posture.\n- **Human-AI Symbiosis:** clarifies why interactive quality deserves special weight.\n- **Background Agent Runtime and Agent Control Plane:** turn tier policy into assignment and autonomy constraints.\n- **Sleep-Time Compute and Night Economics:** make industrial work economically sane.\n\n## 5. Philosophical Alignment\nAccess Models in Dream preserves the idea that economic design should deepen the second brain instead of distorting it.\n"
+    "content": "# Access and Monetization Models\n\n## 1. Philosophy of Accessibility and Power\nAccess Models defines a mature contract between intelligence supply, human depth, and economic legibility. It makes it possible for N1Hub to offer a humane second-brain experience across multiple tiers without pretending every user needs the same compute, autonomy, or provider posture.\n\n## 2. Strategic Direction\nThe long-term target is clearer mapping between:\n- interactive assistant quality\n- background autonomy rights\n- hosted versus self-supplied provider lanes\n- vault scale and retention expectations\n- industrial bursts of mining, refinement, and validation work\n\n## 3. Strategic Shape\nA four-tier logic keeps the emphasis clear:\n- entry tiers should teach the architecture honestly\n- self-hosted paths should maximize sovereignty\n- subscription should maximize symbiotic quality, not just raw quota\n- burst lanes should be explicitly industrial rather than hidden upsells\n\n## 4. Integration\n- **AI Wallet and Hybrid LLM Access:** translate tier policy into real supply posture.\n- **Human-AI Symbiosis:** clarifies why interactive quality deserves special weight.\n- **Background Agent Runtime and Agent Control Plane:** turn tier policy into assignment and autonomy constraints.\n- **Sleep-Time Compute and Night Economics:** make industrial work economically sane.\n\n## 5. Philosophical Alignment\nAccess Models ensures economic design deepens the second brain instead of distorting it.\n"
   },
   "neuro_concentrate": {
-    "summary": "Access Models in Dream describes a more mature capability-and-economics lattice for the platform. It pushes beyond current tiering toward clearer mapping between human-assistant quality, provider supply, autonomy rights, vault scale, and industrial compute posture. The capsule matters because business rules quietly shape product reality, runtime behavior, and the practical depth of the second brain. Dream therefore preserves Access Models as the future contract where pricing, sovereignty, access posture, and second-brain depth align without leaking confusing incentives into the user experience.",
+    "summary": "Access Models defines a mature capability-and-economics lattice for the platform. It moves beyond coarse tiering toward clearer mapping between human-assistant quality, provider supply, autonomy rights, vault scale, and industrial compute posture. The capsule matters because business rules quietly shape product reality, runtime behavior, and the practical depth of the second brain. Access Models therefore describes a contract where pricing, sovereignty, access posture, and second-brain depth align without leaking confusing incentives into the user experience.",
     "keywords": [
       "access-models",
       "tiering",
@@ -108,7 +108,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:10:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed Dream self-reference from Access Models so the economics doctrine is asserted directly as platform law rather than branch commentary."
+      }
+    ]
   },
-  "integrity_sha3_512": "1a0c74f6b6a239509713fe20163d31bde49b6edad21f659af27ed694c7455a9f9b996a6ace913f03760edea35ffc3aeecf6219c952d60b3597776e66b608273c"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

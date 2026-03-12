@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-09T00:47:59.418Z",
+    "updated_at": "2026-03-11T15:18:06Z",
     "name": "A2C Stage: Validate",
-    "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix",
+    "semantic_hash": "a2cvalidate-stage-trust-forensics-evidence-runtime-boundary-handoff",
     "priority": "critical",
     "progress": 64,
     "estimatedHours": 112,
@@ -19,21 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Validate\n\n## 1. Definition and Essence\nValidate is the trust boundary where an A2C candidate either earns graph admission or gets stopped with enough forensic detail to understand why. In the repo-native stack this work spans runtime validation and salvage logic under `lib/a2c`, the TypeScript A2C audit commands in `scripts/a2c`, and the application validator that remains the final admission authority for N1Hub.\n\n## 2. Runtime Responsibilities\n- Execute structural, link, provenance, vector, contradiction, and seal checks against candidate payloads.\n- Build a forensic black-box packet with gate results, integrity forensics, fatal error data, and recovery recommendation when a serious failure occurs.\n- Attempt conservative salvage when failures are recoverable.\n- Apply the narrow architect-override path only for explicitly eligible failure classes and always with auditable rationale.\n- Route unrecoverable candidates to quarantine instead of letting malformed knowledge leak into live state.\n\n## 3. Cross-Stack Reality\nRepo-native A2C validation is where the pipeline explains itself during ingestion and refinement. The application validator is the live N1Hub promotion gate. Deep integration means the layers should complement each other: runtime validation for pipeline forensics and recovery, application validation for final capsule law.\n\n## 4. Integration\n- **A2C Hash:** supplies sealed candidates.\n- **Quarantine Buffer:** stores failed or disputed artifacts with diagnostics.\n- **Audit Log / Epistemic Ledger:** preserve why a candidate passed, failed, or was forced through override.\n- **A2C Emit:** may only publish candidates that survive the trust boundary.\n\n## 5. Philosophical Alignment\nValidate serves To Dig Deep by making failure useful. It refuses quiet corruption, produces evidence-rich diagnostics, and treats admission as earned rather than presumed.\n"
+    "content": "# A2C Stage: Validate\n\n## 1. Definition and Essence\nValidate is the deterministic trust-check stage where an A2C candidate is tested against structural, topological, provenance, contradiction, and seal requirements before any publication step can continue. In the repo-native stack this work spans runtime validation helpers under `lib/a2c`, the TypeScript A2C audit commands in `scripts/a2c`, and the application validator that remains the final admission authority for N1Hub.\n\n## 2. Runtime Responsibilities\n- Execute structural, link, provenance, vector, contradiction, and seal checks against candidate payloads.\n- Build a forensic black-box packet with gate results, integrity forensics, fatal error data, and recovery diagnostics when a serious failure occurs.\n- Expose recoverable failure surfaces and repair hints without authorizing any repair path itself.\n- Emit deterministic validation evidence for downstream governance workers.\n\n## 3. Cross-Stack Reality\nRepo-native A2C validation is where the pipeline explains itself during ingestion and refinement. The application validator is the live N1Hub promotion gate. Deep integration means the layers should complement each other: runtime validation for deterministic checks and forensics, application validation for final capsule law, and a downstream governance lane that interprets stage output after the checks are complete.\n\n## 4. Integration\n- **A2C Hash:** supplies sealed candidates.\n- **Validation Gatekeeper Agent:** consumes validation results after the stage completes.\n- **Quarantine Buffer:** stores failed or disputed artifacts with diagnostics.\n- **Audit Log / Epistemic Ledger:** preserve why a candidate passed checks, failed checks, or escalated into review.\n- **A2C Emit:** may only publish candidates that survive the trust boundary.\n\n## 5. Philosophical Alignment\nValidate serves To Dig Deep by making failure useful. It refuses quiet corruption, produces evidence-rich diagnostics, and treats structural admissibility as earned rather than presumed."
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Validate is the trust boundary where the repo-native pipeline explains why a candidate deserves admission, not just whether it passed. The current stack combines runtime checks, forensic black-box packets, salvage attempts, architect-override discipline, repo-native audit surfaces, and the application validator that remains the final promotion gate in N1Hub. This matters because reliable pipelines need visible failure semantics, not only green outcomes. Validate therefore acts as both law and observability layer: it blocks malformed knowledge, records exactly where the break occurred, and preserves a deterministic path toward retry, quarantine, override, or rejection.",
+    "summary": "A2C Stage: Validate is the deterministic trust-check stage of the refinery. It executes structural and seal checks, produces forensic black-box packets and recovery diagnostics, and emits validation evidence for downstream governance workers. This matters because the stage must prove exactly what happened at the trust boundary, preserve machine-auditable failure evidence, and hand downstream agents a bounded record of admissibility without also collapsing acceptance policy, override authority, or promotion judgment into the validator step itself.",
     "keywords": [
       "a2c",
       "validate",
-      "16-gates",
       "forensic-black-box",
-      "salvage-run",
-      "architect-override",
-      "ts-validator",
-      "runtime-auditor",
-      "quarantine-routing",
-      "seal-verification"
+      "recovery-diagnostics",
+      "structural-checks",
+      "seal-verification",
+      "trust-boundary",
+      "validation-evidence"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -43,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix"
+    "semantic_hash": "a2cvalidate-stage-trust-forensics-evidence-runtime-boundary-handoff"
   },
   "recursive_layer": {
     "links": [
@@ -86,7 +84,14 @@
         "hitl_required": false
       }
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:18:06Z",
+        "event": "mechanism_policy_separation",
+        "agent": "n1",
+        "rationale": "Separated A2C stage mechanism from downstream gate interpretation. Validate retains deterministic checks and forensics."
+      }
+    ]
   },
-  "integrity_sha3_512": "720f9214071f29b63e1759333e326d1f2ee623161e56d4a11fdc5093d51dee8bcc12cc2f4498686d7a9068c607f31ed4dac4fc56d38017caa38eabd361cdbbe7"
+  "integrity_sha3_512": "71d0f4a7a0300be87a47ed0973af584810b02975e435a77e44a3cb16bc0792323ecc1f7d62203cd791f85f588c97a0d80f14f21e42267b9567c1b00dbcd3ebdd"
 }

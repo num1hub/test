@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `ACTIVE`
 - Owner Lane: `Capsule Planning Agent`
 - Cluster: `Planning / assistant / swarm control plane`
 
@@ -73,6 +73,42 @@ N1Hub already has the right capsule primitives: `roadmap`, `goal`, `milestone`, 
 3. Define Dream versus Real branch posture for planning and execution objects.
 4. Split the result into bounded follow-up implementation slices.
 
+## Progress Update
+
+- current control-plane model now treats `TO-DO/` as a temporary operator buffer in front of a stronger vault-native planning graph
+- the chosen execution loop is `chat-to-capsules -> personal-ai-assistant -> planner -> planning-horizon-engine -> A2C packet candidate -> markdown queue review -> Real task capsule -> agent delegation -> execution evidence`
+- the chosen branch posture is `Dream for exploratory planning`, `Real for accepted execution and proof`
+- the next work should not be a broad migration; it should be three bounded slices: projection bridge, workspace surface, and branch or validation guardrails
+
+## Chosen Control Loop
+
+1. `chat-to-capsules` receives natural-language intent.
+2. `personal-ai-assistant` grounds and classifies the request.
+3. `planner` plus `planning-horizon-engine` compress intent into bounded planning candidates.
+4. A2C writes normalized packet candidates under `data/private/a2c/tasks/packet_candidates`.
+5. Human review promotes the candidate into the markdown queue while markdown remains the hot visible buffer.
+6. Accepted queue items project into durable Real-side task and delegation capsules.
+7. Execution lanes work from the projected task and delegation objects and return evidence into the vault.
+8. Teamwork, repo-sync, orchestration, and markdown queue state act as projections of the stronger vault truth rather than private shadow systems.
+
+## Durable vs Temporary State
+
+- `durable`
+  roadmap, goal, milestone, task, and delegation capsules
+- `temporary`
+  markdown queue rows, human draft notes, staged packet candidates, and runtime launch artifacts
+
+This distinction is the key constraint that keeps the control plane from creating a second permanent planning island.
+
+## Follow-Up Implementation Slices
+
+1. `TODO-034 Capsule Execution Projection Bridge`
+   - map accepted markdown queue packets into durable task and delegation objects without inventing a parallel schema
+2. `TODO-035 Workspace Home Control Plane Surface`
+   - build the first authenticated workspace home that reads the new control-plane objects instead of treating `/` as only a static shell
+3. `TODO-036 Planning vs Execution Branch Guardrails`
+   - enforce Dream-planning vs Real-execution posture in branch, validation, and promotion behavior
+
 ## Mode and Skill
 
 - Primary mode: `Personal AI Assistant`
@@ -107,6 +143,7 @@ You are the Capsule Planning Agent. Design the smallest viable capsule-native ex
 - update the control-plane design brief if the model changes materially
 - leave explicit implementation slices for runtime, UI, validation, or vault-schema follow-up
 - update this packet with the chosen assistant-to-task-to-agent loop
+- queue follow-up packets under `TODO-034`, `TODO-035`, and `TODO-036`
 
 ## Risks
 
@@ -125,4 +162,4 @@ You are the Capsule Planning Agent. Design the smallest viable capsule-native ex
 
 ## Handoff Note
 
-Start from the existing capsule foundations and map the smallest viable control plane. The target is not “replace markdown because capsules are cool.” The target is a real vault-native planning and delegation loop that future agents can execute safely.
+The control-plane model is now explicit enough to stop improvising the architecture. The next pull should be `TODO-034`, which turns accepted queue packets into durable task and delegation projections without trying to replace the whole markdown queue in one leap.

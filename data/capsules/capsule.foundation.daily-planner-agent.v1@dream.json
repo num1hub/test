@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:28:00Z",
-    "updated_at": "2026-03-08T20:35:00Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "Daily Planner Agent",
     "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Daily Planner Agent\n\n## Dream Direction\nIn the Dream branch, Daily Planner Agent becomes a more adaptive short-horizon planner that can read the whole Dream field, compress it through Real, and continuously reshape `today`, `tomorrow`, and the immediate week without losing strategic alignment.\n\n## Future Potential\n- more intelligent today/tomorrow reshaping\n- stronger coordination with reminders, risk detection, and branch discipline\n- better capacity estimates from historical behavior\n- clearer handoff between roadmap planning and daily execution through Planning Horizon Engine\n- more visible explanation of why one item became \"today\" while another remained future structure\n\n## Why It Matters\nDream preserves Daily Planner Agent as the discipline that makes strategy livable at the scale of real days."
+    "content": "# Daily Planner Agent\n\n## 1. Role\nDaily Planner Agent will become the adaptive short-horizon planner that continuously compresses the larger planning field into grounded plans for today, tomorrow, and the immediate week.\n\n## 2. Future Daily Planning Contract\nThe agent will reshape near-horizon work from execution evidence, reminders, risk signals, branch posture, and realistic capacity instead of from static task lists. It will explain why one item deserves today, why another should wait, and what changed when the daily field is re-cut.\n\n## 3. Operational Consequence\nDaily planning will become more responsive to real human load, missed work, changing urgency, and new evidence from the graph. Strategy will stay livable at day scale because the short horizon will update without losing alignment with the roadmap.\n\n## 4. Philosophical Alignment\nDaily Planner Agent supports To Dig Deep by turning strategy into disciplined present-tense action at the scale of real days."
   },
   "neuro_concentrate": {
-    "summary": "Daily Planner Agent in the Dream branch describes a more adaptive short-horizon planning layer for N1Hub. It aims toward stronger coordination with reminders, notifications, risk signals, roadmap review pressure, and branch-aware horizon compression so the assistant can propose actionable daily structure instead of generic advice. The capsule matters because the value of planning is realized in days, not only in roadmaps. Dream therefore preserves a richer bridge between the whole Dream field and the lived execution window of today and tomorrow.",
+    "summary": "Daily Planner Agent defines the future adaptive short-horizon planning role for N1Hub: stronger today/tomorrow reshaping, capacity-aware focus selection, tighter coordination with reminder and risk signals, and clearer explanations of why work enters or leaves the immediate execution window.",
     "keywords": [
       "daily-planner-agent",
       "dream-branch",
@@ -122,7 +122,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "70a1b62af2fcf412cf18c23d63f4b6d73e4a2207152cd2eb0b5e4f9f74557e353fc3f2b9a11529c6f8b8563826c19f6ccf948c2785cdfebd93031448d5b8f057"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

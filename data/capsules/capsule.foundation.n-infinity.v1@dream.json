@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.v1",
-    "version": "1.7.0",
+    "version": "1.8.1",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
-    "semantic_hash": "n-infinity-iterations-swarm-compounding-background-runtime-engine",
-    "updated_at": "2026-03-09T21:34:00Z",
+    "semantic_hash": "ninfinity-parent-routing-runtime-roster-signals-governance-fabric",
+    "updated_at": "2026-03-12T04:55:00Z",
     "name": "N-Infinity",
     "priority": "high",
     "progress": 30,
@@ -19,26 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity: Future Iteration Fabric\n\n## 1. Dream Direction\nDream N-Infinity keeps the long-horizon evolution layer that Real does not yet own. It is not the already-live night shift itself. It is the future fabric where bounded capsule jobs, review loops, planning signals, repository lanes, and graph-maintenance roles stack into one calmer and more continuous intelligence cycle.\n\n## 2. Desired Future State\n- a denser `iteration_fabric` linking DeepMine, A2C, planning, tracker signals, repository execution, review, and promotion work.\n- richer control-plane visibility, budget awareness, and lane-routing discipline across the swarm.\n- a broader role lattice where reminder, risk, suggestion, synthesis, contradiction, and graph-maintenance agents exchange batons cleanly.\n- stronger review bundles, contradiction arbitration, and promotion safety before autonomous action widens.\n- more durable 24/7 service behavior only after queue truth, cooldown policy, rollback law, and evidence contracts are strong enough.\n\n## 3. Future Role Lattice\nDream preserves a richer swarm than the current live runtime:\n- **Weaver, Gardener, Parliament, and Innovator** become a more tightly coupled compound-intelligence core.\n- **Reminder, Risk Detector, and Suggestion Agent** evolve into explicit planning-pressure lanes rather than auxiliary helpers.\n- future councils and maintenance workers may widen the swarm, but only under stronger control-plane visibility and review law.\n\n## 4. Dream Delta\nDream keeps what Real does not yet own: richer iteration economics, calmer continuous-service behavior, deeper cross-lane compounding, and a wider but still governed swarm topology. It should not be read as a shadow copy of the current night-shift runtime.\n\n## 5. Philosophical Alignment\nDream N-Infinity still operates inside the strict physics of **CapsuleOS**, but it points toward a more mature form of graph metabolism where near-continuous iteration is safe because governance, evidence, and baton discipline have all become stronger.\n"
+    "content": "# N-Infinity\n\n## 1. Role\nN-Infinity provides the governed iteration fabric of N1Hub, and it routes that fabric through four bounded sub-hubs so runtime substrate, worker roster, upstream signal sources, and governance metrics remain explicit instead of collapsing into one dense role-and-physics directory.\n\n## 2. Routing Surfaces\n- `runtime-fabric` owns the execution substrate: background runtime, Symphony lane, job envelopes, continuity state, and night-window posture.\n- `swarm-roster` owns the named N-Infinity worker family: Weaver, Gardener, Parliament, Innovator, Reminder, Risk Detector, and Suggestion Agent.\n- `signal-fabric` owns the external lanes and operator-facing surfaces that feed context, urgency, and supply into the swarm.\n- `governance-metrics` owns relation semantics, confidence geometry, and epistemic memory the swarm uses to reason about graph quality.\n\n## 3. Parent Boundary\nThe parent hub keeps only the top-level relationship to CapsuleOS, N1Hub, To Dig Deep, the broader Mining Company frame, the enclosing N-Infinity project, and the four sub-hubs. Detailed runtime atoms and worker topology flow through the sub-hubs so N-Infinity stays a navigable swarm contract rather than a gravity well of mixed substrate, roles, and reasoning law."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity in the Dream branch is the future iteration fabric for N1Hub: a denser, more visible, and more economically disciplined swarm where graph maintenance, planning pressure, review, synthesis, and repository lanes compound each other without losing governance. It preserves the long-horizon delta beyond the current real-side night-shift runtime, pointing toward stronger control-plane visibility, clearer baton exchange between swarm roles, and safer near-continuous service once evidence, cooldown, and rollback law are mature enough.",
+    "summary": "N-Infinity is the future parent hub for four bounded swarm surfaces: runtime fabric, swarm roster, signal fabric, and governance metrics. The parent keeps only top-level doctrinal and project relationships while detailed runtime atoms, worker roles, signal sources, and reasoning metrics route through sub-hubs. This keeps the swarm contract legible, makes baton exchange and observability easier to inspect, and prevents the future iteration fabric from collapsing into one dense directory of mixed substrate, roles, and epistemic law.",
     "keywords": [
       "n-infinity",
-      "iterations",
-      "agent-swarm",
+      "hub-decomposition",
+      "runtime-fabric",
+      "swarm-roster",
+      "signal-fabric",
+      "governance-metrics",
       "iteration-fabric",
-      "compound-intelligence",
-      "capsuleos",
-      "weaver",
-      "gardener",
-      "parliament",
-      "innovator",
-      "control-plane",
-      "bounded-iteration",
-      "review-bundles",
-      "continuous-service",
-      "swarm-governance"
+      "swarm-contract"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -48,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "n-infinity-iterations-swarm-compounding-background-runtime-engine"
+    "semantic_hash": "ninfinity-parent-routing-runtime-roster-signals-governance-fabric"
   },
   "recursive_layer": {
     "links": [
@@ -57,79 +50,31 @@
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.n1hub.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.runtime-fabric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.swarm-roster.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.signal-fabric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.governance-metrics.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.weaver.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.gardener.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.parliament.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.innovator.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos.confidence-vector.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "supports"
-      },
-      {
-        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "supports"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.epistemic-ledger.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.project.mining-company.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.n-infinity.v1",
         "relation_type": "references"
       },
       {
@@ -145,9 +90,27 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1773015063934",
         "job_id": "vault-steward-job-9bad6a9311d08afe",
-        "rationale": "The capsule already separates essence, origin, agent archetypes, dream direction, and full-cycle position, so these boundary repairs and routing keywords are directly grounded in its existing sections."
+        "rationale": "The capsule already separates essence, origin, agent archetypes, bounded future routing, and full-cycle position, so these boundary repairs and routing keywords are directly grounded in its existing sections."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_parent_topology_sync",
+        "agent": "codex",
+        "rationale": "Synced Dream parent routing to the live four-subhub N-Infinity topology so future swarm doctrine inherits bounded runtime, roster, signal, and governance seams."
+      },
+      {
+        "at": "2026-03-12T04:55:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed stale branch-aware ledger phrasing so Dream N-Infinity remains filename-signaled even in maintenance rationale."
       }
     ]
   },
-  "integrity_sha3_512": "f21e9acef07ca5c607590e9bd8a45816f877cbf386103c69d37e6c1802973a21964f0b86783518d3f7fc440756ea3b24274a0211dc85d333d3fd51c5e3d047ef"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

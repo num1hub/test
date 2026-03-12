@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
-    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold",
-    "updated_at": "2026-03-08T23:35:00Z",
+    "semantic_hash": "a2c-routing-readiness-refinement-candidate-admission-governance-fabric",
+    "updated_at": "2026-03-11T23:55:00Z",
     "name": "A2C Pipeline",
     "priority": "high",
-    "progress": 45,
+    "progress": 49,
     "estimatedHours": 520,
     "actualHours": 190,
     "dueDate": "2026-09-30",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Essence\nA2C is the industrial-grade pipeline of the N1Hub ecosystem, acting as the \"Demon of Structure.\" It transforms chaotic, entropic raw data—files, texts, scans, voice notes, and LLM outputs—into pure, cryptographically sealed, and semantically linked capsules governed by CapsuleOS law.\n\n## 2. The 9-Step Pipeline\nA2C operates through a deterministic, high-rigor factory floor:\n1. **Ingest**\n2. **Normalize**\n3. **Segment**\n4. **Extract (Paranoid Mode)**\n5. **Synthesize (Shadow Integration)**\n6. **Link**\n7. **Hash**\n8. **Validate**\n9. **Emit & Seal**\n\n## 3. Dream Direction\nIn Dream, A2C becomes an even stricter refinery: stronger uncertainty routing, better human review boundaries, cleaner candidate-emission bundles, and tighter parity between semantic structure and branch-safe graph change.\n\n## 4. Synergy\nA2C relies on **DeepMine** to supply ore and supports **N-Infinity** by ensuring newly emitted structure is coherent enough for long-term swarm evolution. It is the definitive bridge between Zero and One.\n\n## 5. Refinery Role\nWithin the larger Mining Company frame, A2C is the place where raw potential either becomes durable knowledge or gets rejected before it pollutes the graph."
+    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Role\nA2C is the governed refinery that turns hostile, ambiguous, and high-volume source material into graph-admissible capsule state. It routes that refinery through five bounded sub-hubs so readiness law, material preparation, candidate construction, governance handoff, and admission mechanics remain explicit instead of collapsing into one 19-link parent directory.\n\n## 2. Routing Surfaces\n- `readiness-control` owns activation readiness, workspace recon, and deep intake risk scoring before stage work begins.\n- `material-preparation` owns ingest, normalize, segment, and extract as the early mechanical refinery line.\n- `candidate-construction` owns synthesize, link, and graph-aware swarm support for candidate assembly.\n- `governance-handoffs` owns branch posture, validation judgment, and controlled vault landing once evidence exists.\n- `admission-emission` owns hash, validate, and emit as the terminal admission mechanics.\n\n## 3. Parent Boundary\nThe parent A2C hub keeps only the top-level relationship to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five refinery sub-hubs. Detailed stage routing now flows through those sub-hubs so A2C remains the refinery contract for sovereign memory rather than a flat list of every stage and policy surface."
   },
   "neuro_concentrate": {
-    "summary": "A2C Pipeline in the Dream branch captures the future refinery discipline for turning hostile, ambiguous, or multimodal material into trustworthy sovereign capsules. It pushes beyond the current industrial pipeline toward better uncertainty routing, stronger human-in-the-loop boundaries, richer physical-world input handling, and cleaner parity between semantic structure and emitted graph state. The capsule matters because A2C determines whether raw potential becomes durable knowledge or polished confusion. Dream therefore preserves A2C as a deeper truth-refinement machine rather than only the current production pipeline.",
+    "summary": "A2C routes the refinery through five bounded surfaces: readiness control, material preparation, candidate construction, governance handoffs, and admission emission. The parent keeps only top-level relationships to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five sub-hubs. This makes future refinery doctrine more legible because pre-mutation control, stage mechanics, policy routing, and terminal admission no longer hide inside one overloaded parent capsule. The parent now reads as a routing contract instead of a flat inventory.",
     "keywords": [
       "a2c",
       "anything-to-capsules",
@@ -44,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold"
+    "semantic_hash": "a2c-routing-readiness-refinement-candidate-admission-governance-fabric"
   },
   "recursive_layer": {
     "links": [
@@ -65,47 +65,23 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
+        "target_id": "capsule.foundation.a2c.readiness-control.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "target_id": "capsule.foundation.a2c.material-preparation.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-normalize.v1",
+        "target_id": "capsule.foundation.a2c.candidate-construction.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-segment.v1",
+        "target_id": "capsule.foundation.a2c.governance-handoffs.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-extract.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-synthesize.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-link.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-hash.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-validate.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-emit.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.a2c.v1",
+        "target_id": "capsule.foundation.a2c.admission-emission.v1",
         "relation_type": "references"
       },
       {
@@ -115,18 +91,23 @@
       {
         "target_id": "capsule.project.mining-company.v1",
         "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T23:55:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream A2C into five bounded sub-hubs so readiness control, stage mechanics, governance handoff, and admission surfaces no longer collapse into a 19-link parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "c2923cd938328f52a97d1975c876db0e62b568bc97aa7a075a20147eb2d9495ea9de894e1fc8757099559a45d9f7a325bbea5727f7938fa1b21f80db8bb2a8ea"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -25,8 +25,18 @@ import {
 interface CapsuleGraphProps {
   capsules: SovereignCapsule[];
   getNodeHref?: (id: string) => string | null | undefined;
+  activeBranch?: string | null;
   isFullscreen: boolean;
   onToggleFullscreen: () => void;
+  searchQuery?: string;
+  searchMatchNodeIds?: string[];
+  searchFocusNodeId?: string | null;
+  searchFocusToken?: number;
+  searchSelectNodeId?: string | null;
+  searchSelectToken?: number;
+  fitRequestToken?: number;
+  clearSelectionToken?: number;
+  searchOverlay?: ReactNode;
 }
 
 type GraphDimensions = {
@@ -236,20 +246,34 @@ function GraphControls({
 export default function CapsuleGraph({
   capsules,
   getNodeHref,
+  activeBranch = null,
   isFullscreen,
   onToggleFullscreen,
+  searchQuery = '',
+  searchMatchNodeIds,
+  searchFocusNodeId = null,
+  searchFocusToken = 0,
+  searchSelectNodeId = null,
+  searchSelectToken = 0,
+  fitRequestToken = 0,
+  clearSelectionToken = 0,
+  searchOverlay,
 }: CapsuleGraphProps) {
   const graphRef = useRef<ForceGraphMethods<CapsuleGraphNodeData, CapsuleGraphLinkData> | undefined>(
     undefined,
   );
   const containerRef = useRef<HTMLDivElement>(null);
+  const focusFrameRef = useRef<number | null>(null);
 
   const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const dimensions = useResponsiveGraphDimensions(containerRef, isFullscreen);
-  const activeNodeId = hoveredNodeId ?? selectedNodeId;
+  const normalizedSearchQuery = searchQuery.trim().toLowerCase();
 
-  const graphData = useMemo(() => buildCapsuleGraphData(capsules), [capsules]);
+  const graphData = useMemo(
+    () => buildCapsuleGraphData(capsules, { activeBranch }),
+    [activeBranch, capsules],
+  );
   const nodeById = useMemo(
     () =>
       new Map(
@@ -257,22 +281,115 @@ export default function CapsuleGraph({
       ),
     [graphData.nodes],
   );
-  const activeNode = useMemo(
-    () => (activeNodeId ? nodeById.get(activeNodeId) ?? null : null),
-    [activeNodeId, nodeById],
+  const nodeIdsByCapsuleId = useMemo(() => {
+    const nextMap = new Map<string, string[]>();
+
+    graphData.nodes.forEach((node) => {
+      const existingIds = nextMap.get(node.capsuleId);
+      if (existingIds) {
+        existingIds.push(node.id);
+        return;
+      }
+
+      nextMap.set(node.capsuleId, [node.id]);
+    });
+
+    return nextMap;
+  }, [graphData.nodes]);
+  const resolveNodeId = useCallback(
+    (candidateId: string | null | undefined) => {
+      if (!candidateId) {
+        return null;
+      }
+
+      if (nodeById.has(candidateId)) {
+        return candidateId;
+      }
+
+      const capsuleMatches = nodeIdsByCapsuleId.get(candidateId);
+      if (!capsuleMatches || capsuleMatches.length !== 1) {
+        return null;
+      }
+
+      return capsuleMatches[0];
+    },
+    [nodeById, nodeIdsByCapsuleId],
   );
   const selectedNodeHref = useMemo(() => {
     if (!selectedNodeId || !getNodeHref) return null;
-    return getNodeHref(selectedNodeId) ?? null;
-  }, [getNodeHref, selectedNodeId]);
+    const selectedNode = nodeById.get(selectedNodeId);
+    if (!selectedNode) {
+      return null;
+    }
+    return getNodeHref(selectedNode.capsuleId) ?? null;
+  }, [getNodeHref, nodeById, selectedNodeId]);
+  const matchedNodeIds = useMemo(() => {
+    if (searchMatchNodeIds) {
+      return new Set(
+        searchMatchNodeIds
+          .map((nodeId) => resolveNodeId(nodeId))
+          .filter((nodeId): nodeId is string => Boolean(nodeId)),
+      );
+    }
+
+    const matches = new Set<string>();
+
+    if (!normalizedSearchQuery) {
+      return matches;
+    }
+
+    for (const node of graphData.nodes) {
+      const searchableFields = [
+        node.capsuleId,
+        node.id,
+        node.name,
+        node.fullName,
+        node.summary,
+        node.type,
+      ];
+      if (
+        searchableFields.some(
+          (field) => typeof field === 'string' && field.toLowerCase().includes(normalizedSearchQuery),
+        )
+      ) {
+        matches.add(node.id);
+      }
+    }
+
+    return matches;
+  }, [graphData.nodes, normalizedSearchQuery, resolveNodeId, searchMatchNodeIds]);
+  const resolvedSearchFocusNodeId = useMemo(
+    () => resolveNodeId(searchFocusNodeId),
+    [resolveNodeId, searchFocusNodeId],
+  );
+  const matchedNodeCount = matchedNodeIds.size;
+  const focusedSearchNodeId = useMemo(() => {
+    if (!normalizedSearchQuery || !resolvedSearchFocusNodeId) {
+      return null;
+    }
+
+    return matchedNodeIds.has(resolvedSearchFocusNodeId) ? resolvedSearchFocusNodeId : null;
+  }, [matchedNodeIds, normalizedSearchQuery, resolvedSearchFocusNodeId]);
+  const activeNodeId = useMemo(() => {
+    if (hoveredNodeId) {
+      return hoveredNodeId;
+    }
+
+    return selectedNodeId;
+  }, [hoveredNodeId, selectedNodeId]);
+  const visualFocusNodeId = activeNodeId ?? focusedSearchNodeId;
+  const selectedNode = useMemo(
+    () => (selectedNodeId ? nodeById.get(selectedNodeId) ?? null : null),
+    [nodeById, selectedNodeId],
+  );
 
   const activeNeighbors = useMemo(() => {
     const neighbors = new Set<string>();
 
-    if (!activeNodeId) return neighbors;
+    if (!visualFocusNodeId) return neighbors;
 
     graphData.links.forEach((link) => {
-      if (!isIncidentLink(link, activeNodeId)) return;
+      if (!isIncidentLink(link, visualFocusNodeId)) return;
 
       const sourceId = extractGraphEndpointId(link.source);
       const targetId = extractGraphEndpointId(link.target);
@@ -282,15 +399,15 @@ export default function CapsuleGraph({
     });
 
     return neighbors;
-  }, [activeNodeId, graphData.links]);
-  const activeLinkCount = useMemo(() => {
-    if (!activeNodeId) return 0;
+  }, [graphData.links, visualFocusNodeId]);
+  const selectedLinkCount = useMemo(() => {
+    if (!selectedNodeId) return 0;
 
     return graphData.links.reduce(
-      (total, link) => (isIncidentLink(link, activeNodeId) ? total + (link.weight ?? 1) : total),
+      (total, link) => (isIncidentLink(link, selectedNodeId) ? total + (link.weight ?? 1) : total),
       0,
     );
-  }, [activeNodeId, graphData.links]);
+  }, [graphData.links, selectedNodeId]);
 
   useEffect(() => {
     if (selectedNodeId && !nodeById.has(selectedNodeId)) {
@@ -346,27 +463,87 @@ export default function CapsuleGraph({
     graphRef.current?.centerAt(selectedNode.x, selectedNode.y, ZOOM_TRANSITION_MS);
     graphRef.current?.zoom(SELECT_FOCUS_ZOOM, ZOOM_TRANSITION_MS);
   }, [nodeById, selectedNodeId]);
+  const focusNodeById = useCallback(
+    (nodeId: string | null, attemptsRemaining = 12) => {
+      if (!nodeId) {
+        return;
+      }
+
+      const targetNode = nodeById.get(nodeId);
+      if (!targetNode || targetNode.x === undefined || targetNode.y === undefined) {
+        if (attemptsRemaining > 0 && typeof window !== 'undefined') {
+          if (focusFrameRef.current !== null) {
+            window.cancelAnimationFrame(focusFrameRef.current);
+          }
+          focusFrameRef.current = window.requestAnimationFrame(() => {
+            focusNodeById(nodeId, attemptsRemaining - 1);
+          });
+        }
+        return;
+      }
+
+      if (focusFrameRef.current !== null && typeof window !== 'undefined') {
+        window.cancelAnimationFrame(focusFrameRef.current);
+        focusFrameRef.current = null;
+      }
+
+      graphRef.current?.centerAt(targetNode.x, targetNode.y, ZOOM_TRANSITION_MS);
+      graphRef.current?.zoom(SELECT_FOCUS_ZOOM, ZOOM_TRANSITION_MS);
+    },
+    [nodeById],
+  );
+
+  useEffect(() => {
+    return () => {
+      if (focusFrameRef.current !== null && typeof window !== 'undefined') {
+        window.cancelAnimationFrame(focusFrameRef.current);
+      }
+    };
+  }, []);
 
   const isIncidentToActiveNode = useCallback(
-    (link: CapsuleGraphLinkData) => isIncidentLink(link, activeNodeId),
-    [activeNodeId],
+    (link: CapsuleGraphLinkData) => isIncidentLink(link, visualFocusNodeId),
+    [visualFocusNodeId],
   );
 
   const getNodeColor = useCallback(
     (node: CapsuleGraphNodeData) => {
-      if (!activeNodeId) return node.color || '#94a3b8';
       if (node.id === activeNodeId) return HIGHLIGHT_COLOR;
+      if (normalizedSearchQuery) {
+        if (focusedSearchNodeId && node.id === focusedSearchNodeId) {
+          return HIGHLIGHT_COLOR;
+        }
+        if (matchedNodeIds.has(node.id)) {
+          return node.color || '#94a3b8';
+        }
+        return DIMMED_NODE_COLOR;
+      }
+      if (!visualFocusNodeId) return node.color || '#94a3b8';
       return activeNeighbors.has(node.id) ? node.color || '#94a3b8' : DIMMED_NODE_COLOR;
     },
-    [activeNodeId, activeNeighbors],
+    [activeNodeId, activeNeighbors, focusedSearchNodeId, matchedNodeIds, normalizedSearchQuery, visualFocusNodeId],
   );
 
   const getLinkColor = useCallback(
     (link: CapsuleGraphLinkData) => {
-      if (!activeNodeId) return link.color || BASE_LINK_COLOR;
+      if (normalizedSearchQuery) {
+        if (focusedSearchNodeId && isIncidentLink(link, focusedSearchNodeId)) {
+          return HIGHLIGHT_COLOR;
+        }
+        const sourceId = extractGraphEndpointId(link.source);
+        const targetId = extractGraphEndpointId(link.target);
+        if (
+          (sourceId && matchedNodeIds.has(sourceId)) ||
+          (targetId && matchedNodeIds.has(targetId))
+        ) {
+          return link.color || BASE_LINK_COLOR;
+        }
+        return DIMMED_LINK_COLOR;
+      }
+      if (!visualFocusNodeId) return link.color || BASE_LINK_COLOR;
       return isIncidentToActiveNode(link) ? HIGHLIGHT_COLOR : DIMMED_LINK_COLOR;
     },
-    [activeNodeId, isIncidentToActiveNode],
+    [focusedSearchNodeId, isIncidentToActiveNode, matchedNodeIds, normalizedSearchQuery, visualFocusNodeId],
   );
 
   const getLinkWidth = useCallback(
@@ -398,6 +575,14 @@ export default function CapsuleGraph({
   }, []);
 
   const handleZoomFit = useCallback(() => {
+    graphRef.current?.zoomToFit(ZOOM_TRANSITION_MS, ZOOM_FIT_PADDING);
+  }, []);
+  const clearSelectionAndFit = useCallback(() => {
+    setSelectedNodeId(null);
+    setHoveredNodeId(null);
+    if (containerRef.current) {
+      containerRef.current.style.cursor = 'default';
+    }
     graphRef.current?.zoomToFit(ZOOM_TRANSITION_MS, ZOOM_FIT_PADDING);
   }, []);
 
@@ -445,6 +630,66 @@ export default function CapsuleGraph({
     ],
   );
 
+  useEffect(() => {
+    if (!focusedSearchNodeId || searchFocusToken === 0) {
+      return;
+    }
+
+    focusNodeById(focusedSearchNodeId);
+  }, [focusNodeById, focusedSearchNodeId, searchFocusToken]);
+
+  useEffect(() => {
+    const resolvedSearchSelectNodeId = resolveNodeId(searchSelectNodeId);
+
+    if (!resolvedSearchSelectNodeId || searchSelectToken === 0) {
+      return;
+    }
+
+    setHoveredNodeId(null);
+    setSelectedNodeId(resolvedSearchSelectNodeId);
+    focusNodeById(resolvedSearchSelectNodeId);
+  }, [focusNodeById, resolveNodeId, searchSelectNodeId, searchSelectToken]);
+
+  useEffect(() => {
+    if (fitRequestToken === 0) {
+      return;
+    }
+
+    graphRef.current?.zoomToFit(ZOOM_TRANSITION_MS, ZOOM_FIT_PADDING);
+  }, [fitRequestToken]);
+
+  useEffect(() => {
+    if (clearSelectionToken === 0) {
+      return;
+    }
+
+    setSelectedNodeId(null);
+    setHoveredNodeId(null);
+    if (containerRef.current) {
+      containerRef.current.style.cursor = 'default';
+    }
+  }, [clearSelectionToken]);
+
+  useEffect(() => {
+    if (!selectedNodeId) {
+      return;
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key !== 'Escape') {
+        return;
+      }
+
+      event.preventDefault();
+      clearSelectionAndFit();
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [clearSelectionAndFit, selectedNodeId]);
+
   if (capsules.length === 0) {
     return (
       <div className="flex h-full w-full items-center justify-center text-slate-500">
@@ -457,24 +702,41 @@ export default function CapsuleGraph({
     <div ref={containerRef} className="relative h-full w-full overflow-hidden bg-slate-900">
       <GraphControls controls={controlItems} />
 
-      {activeNode && (
-        <div className="absolute left-3 top-3 z-10 max-w-[72%] rounded-lg border border-slate-700 bg-slate-900/85 px-3 py-2 text-xs text-slate-200 shadow-lg backdrop-blur">
-          <p className="mb-1 text-[11px] uppercase tracking-wide text-slate-400">
-            {activeNodeId === selectedNodeId ? 'Selected Node' : 'Hovered Node'}
+      {isFullscreen && searchOverlay ? (
+        <div className="absolute left-3 top-3 z-10 w-[min(420px,calc(100%-6rem))]">
+          <div className="rounded-2xl border border-slate-700 bg-slate-900/85 p-2 shadow-lg backdrop-blur">
+            {searchOverlay}
+            {normalizedSearchQuery ? (
+              <p className="px-1 pt-2 text-[11px] uppercase tracking-[0.18em] text-slate-400">
+                {matchedNodeCount > 0
+                  ? `${matchedNodeCount} match${matchedNodeCount === 1 ? '' : 'es'}`
+                  : 'No matches'}
+              </p>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
+      {selectedNode && (
+        <div
+          className={`absolute left-3 z-10 max-w-[72%] rounded-lg border border-slate-700 bg-slate-900/85 px-3 py-2 text-xs text-slate-200 shadow-lg backdrop-blur ${
+            isFullscreen && searchOverlay ? 'top-[5.75rem]' : 'top-3'
+          }`}
+        >
+          <p className="mb-1 text-[11px] uppercase tracking-wide text-slate-400">Selected Node</p>
+          <p className="truncate font-medium text-slate-100" title={selectedNode.name}>
+            {selectedNode.name}
           </p>
-          <p className="truncate font-medium text-slate-100" title={activeNode.name}>
-            {activeNode.name}
-          </p>
-          {activeNode.name !== activeNode.fullName && (
-            <p className="mt-0.5 truncate text-[11px] text-slate-500" title={activeNode.fullName}>
-              {activeNode.fullName}
+          {selectedNode.name !== selectedNode.fullName && (
+            <p className="mt-0.5 truncate text-[11px] text-slate-500" title={selectedNode.fullName}>
+              {selectedNode.fullName}
             </p>
           )}
           <p className="mt-1 text-[11px] text-slate-400">
-            {activeNode.type} · {activeLinkCount} connection{activeLinkCount === 1 ? '' : 's'}
+            {selectedNode.type} · {selectedLinkCount} connection{selectedLinkCount === 1 ? '' : 's'}
           </p>
-          <p className="mt-1 text-[11px] text-slate-300">{activeNode.summary}</p>
-          {activeNodeId === selectedNodeId && selectedNodeHref && (
+          <p className="mt-1 text-[11px] text-slate-300">{selectedNode.summary}</p>
+          {selectedNodeHref && (
             <div className="mt-3 flex items-center gap-2">
               <a
                 href={selectedNodeHref}

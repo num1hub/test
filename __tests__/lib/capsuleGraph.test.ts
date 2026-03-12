@@ -81,6 +81,8 @@ describe('lib/graph/capsuleGraph.ts', () => {
   it('escapes tooltip HTML content to avoid injection', () => {
     const tooltip = buildCapsuleGraphTooltip({
       id: 'capsule.concept.test.v1',
+      capsuleId: 'capsule.concept.test.v1',
+      branch: null,
       name: 'Test',
       fullName: 'capsule.concept.test.v1',
       type: '<script>alert(1)</script>',

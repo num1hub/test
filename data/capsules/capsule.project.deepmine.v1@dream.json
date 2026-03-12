@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.422Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "DeepMine Project",
     "semantic_hash": "capsule-project-deepmine-v1-llm-routing-queues-caching",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine Project\n\n## 1. Dream Direction\nThe Dream branch pushes DeepMine Project toward a fuller quarry fabric: richer provider diversity, stronger context-pack assembly, smarter ore-manifest generation, better assignment-aware routing, and more deliberate night-shift economics.\n\n## 2. Desired Future State\n- hybrid `api + subscription + hosted inference` lanes feeding one governed quarry.\n- context packs assembled intentionally instead of dumping raw vault mass into the model.\n- ore manifests that preserve evidence, extraction boundaries, and downstream refinement expectations.\n- routing logic that understands user-facing, background, swarm, and repository-assignment work as distinct economic lanes.\n- batch and night-shift execution that materially improves cost-to-signal performance.\n- quarry output that is easier for A2C, Workspace, and N-Infinity to consume without folklore.\n\n## 3. Why It Matters\nDream preserves the idea that DeepMine should become more than a connector bundle. It should mature into an industrial extraction fabric that supplies the rest of N1Hub with cleaner, deeper, more inspectable, and more economically rational raw material.\n"
+    "content": "# DeepMine Project\n\n## 1. Role\nDeepMine Project will become the fuller quarry program of N1Hub, pushing mining beyond the first industrial layer toward richer provider diversity, stronger context assembly, smarter ore manifests, and better economic routing.\n\n## 2. Future Project Contract\nThe project will unify API, subscription, and hosted inference lanes under one governed quarry; assemble context packs intentionally; preserve clearer ore manifests and extraction boundaries; and route mining work by assignment class, background posture, and budget state.\n\n## 3. Operational Consequence\nQuarry output will become easier for A2C, Workspace, and N-Infinity to consume because the mining program will deliver cleaner ore, better economics, and more explicit handoff expectations.\n\n## 4. Philosophical Alignment\nDeepMine Project supports To Dig Deep by making extraction a governed program rather than a bag of provider calls."
   },
   "neuro_concentrate": {
-    "summary": "DeepMine Project in the Dream branch focuses on the future quarry fabric: broader provider diversity, stronger context-pack assembly, ore-manifest discipline, assignment-aware routing, and better cost-to-signal optimization across heavy intelligence workloads. The branch matters because current DeepMine infrastructure is only the first industrial layer of what a true cognitive quarry could become. In Dream, the project evolves toward a governed mining engine that supplies the rest of the ecosystem with deeper, cleaner, more inspectable, and more strategically filtered raw material.",
+    "summary": "DeepMine Project defines the future quarry program of N1Hub: richer provider diversity, stronger context-pack assembly, smarter ore-manifest generation, assignment-aware routing, and more deliberate night-shift economics for heavy intelligence workloads.",
     "keywords": [
       "deepmine",
       "extraction",
@@ -94,7 +94,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "7d5d493fbb4b252a359ef3a40ffb82b4af1e02bb958e4a019c92e72dcbf410081f0d6fb19f780c01565a526bcf9bbb42c110defd516922aa2acdc41eef80d6d8"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

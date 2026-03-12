@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-07T10:22:14.381Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "User Preferences",
     "semantic_hash": "capsule-foundation-user-preferences-v1-timezone-work-hours",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# User Preferences\n\n## 1. Definition and Essence\nUser Preferences in Dream describes a more complete human-rhythm contract for the second brain. It preserves the future where planning, notifications, autonomy, and assistant behavior adapt to the person with more nuance than today's baseline settings allow.\n\n## 2. Core Attributes\n- `timezone` and `work_windows`\n- `quiet_and_sleep_policy`\n- `assistant_style`\n- `autonomy_preference`\n- `review_thresholds`\n- `notification_and_escalation_rules`\n\n## 3. Dream Direction\nThe long-term target is not a larger settings page. The target is a behavioral contract that lets the platform decide when to speak, when to stay quiet, when to wake the human, and when to let the swarm continue safely.\n\n## 4. Integration\n- **Profile:** binds preferences to one durable person.\n- **Planner, Sleep-Time Compute, and Night Shift Autonomy:** use preferences as operating law.\n- **AI Control Surface and Agent Control Plane:** reflect those rules back into visible intervention posture.\n\n## 5. Philosophical Alignment\nUser Preferences in Dream preserves the idea that deep systems should learn how to serve the human rhythm, not force the human to adapt to machine convenience.\n"
+    "content": "# User Preferences\n\n## 1. Role\nUser Preferences will become a richer behavioral contract for the second brain, allowing planning, notifications, autonomy, and assistant behavior to adapt to the person with far more nuance than baseline settings allow.\n\n## 2. Future Preference Contract\nThis layer will govern when the platform should speak, stay quiet, wake the human, or let the swarm continue safely. It will shape sleep posture, quiet windows, assistant style, autonomy tolerance, review thresholds, and intervention behavior as explicit operating law.\n\n## 3. Operational Consequence\nHuman rhythm will remain central even as the system becomes more capable. Planning, night autonomy, reminder pressure, and control-surface behavior will align to one durable person-specific contract instead of generic automation defaults.\n\n## 4. Philosophical Alignment\nUser Preferences supports To Dig Deep by teaching deep systems how to serve human rhythm rather than forcing humans to adapt to machine convenience."
   },
   "neuro_concentrate": {
-    "summary": "User Preferences in Dream describes a richer behavioral contract for the second brain. It imagines better handling of sleep, quiet posture, assistant style, autonomy tolerance, and review thresholds so the platform can behave like a tuned partner instead of a noisy automation stack. The capsule matters because human rhythm is one of the hardest things to retrofit after systems become powerful. Dream therefore keeps this adaptation layer explicit and central.",
+    "summary": "User Preferences defines the future richer behavioral contract for N1Hub: deeper handling of sleep and quiet posture, assistant style, autonomy tolerance, review thresholds, and intervention timing so the platform behaves like a tuned partner instead of a generic automation stack.",
     "keywords": [
       "user-preferences",
       "timezone",
@@ -78,7 +78,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "03ccebf247a6088435fcb87b876bae54a1db760a7b89ca42a87ca000a309f1d1702b5ab3974e27581a060723d7d0d979b553b439f42541fa8f3fa8a7c6fa4e93"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

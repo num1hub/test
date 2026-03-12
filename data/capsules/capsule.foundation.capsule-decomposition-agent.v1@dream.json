@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:42:00Z",
-    "updated_at": "2026-03-07T12:48:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Capsule Decomposition Agent",
-    "semantic_hash": "capsule-decomposition-agent-atomization-split-hub-boundaries-discipline",
+    "semantic_hash": "capsule-decomposition-agent-continuous-atomization-lineage-safe-splits",
     "priority": "high",
     "progress": 33,
     "estimatedHours": 250,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Decomposition Agent\n\n## Dream Direction\nIn the Dream branch, Capsule Decomposition Agent becomes the explicit worker that continuously keeps atoms atomic and hubs bounded as the vault compounds.\n\n## Desired Future State\n- stronger automatic detection of oversized capsules and hidden multi-entity blobs\n- cleaner split previews that preserve lineage, links, and branch meaning\n- tighter cooperation with Review Agent, Branch Steward Agent, and Vault Update Agent\n- better night-shift queues for safe structural splitting of stale or overloaded capsules\n\n## Why It Matters\nDream preserves the idea that a sovereign vault should resist blob growth. N1Hub becomes much stronger when decomposition is treated as a first-class maintenance skill rather than as occasional manual cleanup."
+    "content": "# Capsule Decomposition Agent\n\n## 1. Role\nCapsule Decomposition Agent will continuously keep atoms atomic and hubs bounded as the vault compounds. Structural splitting will become a first-class maintenance skill instead of occasional cleanup performed only after ambiguity has hardened.\n\n## 2. Future Atomization Surface\n- stronger automatic detection of oversized capsules and hidden multi-entity blobs\n- cleaner split previews that preserve lineage, links, and branch meaning\n- tighter cooperation with Review Agent, Branch Steward Agent, and Vault Update Agent\n- safer night-shift queues for bounded structural splitting of stale or overloaded capsules\n\n## 3. Operational Consequence\nThe vault will resist blob growth because decomposition pressure will be continuous, reviewable, and explicitly routed instead of deferred until structure has already become expensive to reason about.\n\n## 4. Philosophical Alignment\nCapsule Decomposition Agent supports To Dig Deep by insisting that deep structure requires clear atoms and bounded hubs."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Decomposition Agent in the Dream branch captures a stronger future atomization worker for N1Hub. It aims toward better detection of overloaded capsules, cleaner split proposals, and tighter cooperation with review and branch-routing lanes. The capsule matters because a growing vault naturally accumulates pressure toward larger ambiguous objects. Dream therefore preserves the future role that keeps the system structurally sharp by continuously translating blob-like structures back into bounded atoms and hubs.",
+    "summary": "Capsule Decomposition Agent defines the future continuous atomization lane for N1Hub: stronger detection of overloaded capsules, lineage-preserving split previews, safer night-shift decomposition queues, and tighter coordination with review and branch-routing workers.",
     "keywords": [
       "capsule-decomposition-agent",
       "dream-branch",
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-decomposition-agent-atomization-split-hub-boundaries-discipline"
+    "semantic_hash": "capsule-decomposition-agent-continuous-atomization-lineage-safe-splits"
   },
   "recursive_layer": {
     "links": [
@@ -95,7 +95,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "cdca6701620f8943842dbe9ae2d005c49e9f66651b4de86d429b5fe40de0a5004c052711f4ad41740ced7fc14ab9b61483216f0fc541b9da915e1dc79dac2e14"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

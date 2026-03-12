@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.n1hub-sovereign-refactor.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-10T13:50:00.428Z",
+    "updated_at": "2026-03-10T13:50:00.428Z",
+    "semantic_hash": "n1hub-sovereign-refactor-legacy-capsules-program-delivery-runtime",
+    "source": {
+      "uri": "n1hub://operator/sovereign-refactor-2026-03-10",
+      "type": "operator_directive"
+    },
+    "name": "N1Hub Sovereign Refactor Program",
+    "priority": "high",
+    "progress": 5,
+    "estimatedHours": 320,
+    "actualHours": 6,
+    "dueDate": "2026-06-15",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub Sovereign Refactor Program\n\n## 1. Definition and Essence\nN1Hub Sovereign Refactor Program is the active short-horizon implementation program for turning the current repository, runtime, and supporting knowledge surfaces into a capsule-native sovereign foundation.\n\n## 2. Current Program Contract\n- Do not optimize for new features first.\n- Prefer refactoring legacy surfaces that already exist and already matter: runtime seams, unit tests, docs, anchors, task packets, and assistant context.\n- Convert important project truth into capsules or capsule-backed contracts before layering more behavior on top.\n- Keep each pass bounded, reviewable, and linked to real verification.\n\n## 3. Current Workstreams\n- **runtime_decomposition:** split oversized or cross-wired domains into capsule-aligned responsibility centers.\n- **test_contractization:** make tests act as durable boundary evidence and map critical test intent to capsule truth where it improves continuity.\n- **doc_projection_cleanup:** keep README, root docs, and task packets aligned while stronger capsule canon grows underneath.\n- **anchor_and_boundary_governance:** preserve explicit entrypoints, ownership lines, and blast-radius limits.\n- **capsule_native_control_plane:** move queue, planning, memory, and delegation toward capsule-native operation instead of markdown-only buffering.\n\n## 4. Success Conditions\nThe program is succeeding when existing behavior stays stable, the vault becomes the stronger source of truth, and each new refactor removes a legacy seam without replacing it with hidden agent folklore.\n\n## 5. Integration\n- **N1Hub Runtime**\n- **CapsuleOS**\n- **Capsule Librarian Agent**\n- **Capsule Decomposition Agent**\n- **Symphony**\n- **Vault Stewardship Swarm**\n- **Workspace**\n\n## 6. Philosophical Alignment\nThis program supports To Dig Deep by turning refactor work into sovereign structure rather than cosmetic cleanup."
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Sovereign Refactor Program is the active implementation program for converting the live repository and runtime into a more capsule-native sovereign foundation without destabilizing current behavior. It explicitly deprioritizes feature rush in favor of bounded refactor passes across runtime seams, tests, docs, anchors, task packets, and assistant context. The program matters because it turns the new doctrine into an execution shape: small verified passes that move project truth into capsules or capsule-backed contracts, clarify ownership, and reduce legacy folklore instead of layering more behavior on top of unstable structure.",
+    "keywords": [
+      "n1hub-sovereign-refactor",
+      "capsule-native-program",
+      "legacy-to-capsules",
+      "refactor-first",
+      "runtime-decomposition",
+      "test-contracts",
+      "doc-projections",
+      "anchor-governance",
+      "control-plane",
+      "bounded-passes"
+    ],
+    "confidence_vector": {
+      "extraction": 0.98,
+      "synthesis": 1,
+      "linking": 0.98,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0.08
+    },
+    "semantic_hash": "n1hub-sovereign-refactor-legacy-capsules-program-delivery-runtime"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.sovereign-refactor.v1",
+        "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-projects.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-10T13:50:00.428Z",
+        "event": "n1hub_sovereign_refactor_program_created",
+        "agent": "n1",
+        "run_id": "capsule-sovereign-refactor-2026-03-10",
+        "rationale": "The project now needs an execution program that keeps refactor pressure on legacy seams instead of diffusing attention into broad new-feature growth."
+      }
+    ]
+  },
+  "integrity_sha3_512": "5c6b4a8918e478b7df02df1e66e590a0b83710579d9faaf1d5ccfcf22ac7571b052b4a378c63c02046f9e3407133efd1d36f408d0a510f9a1e7e7e8bf78f8a9d"
+}

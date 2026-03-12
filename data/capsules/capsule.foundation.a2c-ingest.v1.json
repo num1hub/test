@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-09T01:10:38.622Z",
+    "updated_at": "2026-03-11T14:58:41Z",
     "name": "A2C Stage: Ingest",
-    "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline",
+    "semantic_hash": "a2cingest-stage-capture-queue-evidence-runtime-boundary-handoff",
     "priority": "high",
     "progress": 63,
     "estimatedHours": 72,
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Ingest\n\n## 1. Definition and Essence\nIngest is the operational capture boundary of the repo-native A2C runtime. In N1Hub it is not only a watcher and queue entrypoint. It is the controlled handoff from arrival into investigated pipeline readiness, implemented through the TypeScript watcher in `scripts/a2c/watch.ts`, queue and runtime helpers under `lib/a2c`, and the deeper risk pass exposed through `scripts/a2c/investigate.ts`.\n\n## 2. Runtime Responsibilities\n- Probe incoming files for stability before mutation. The watcher waits for file size and mtime to stop changing instead of ingesting half-written artifacts.\n- Archive raw intake before transformation so the original evidence survives later synthesis or repair.\n- Stage work into deterministic queue artifacts with SHA-256 keyed filenames, sidecar metadata, staged timestamp, source hash, and attempt counters.\n- Append queue-ledger events such as `STAGED`, `STAGED_REUSED`, `ACTIVE`, `FAILED`, and `COMPLETE` so the entry path can be reconstructed after the fact.\n- Triage new material against the live vault for exact copy, increment, contradiction, resonance, or genuinely new state.\n\n## 3. Investigation After Capture\nIngest now includes a stricter preflight analysis layer:\n- classify source files as core, adjacent, or external to the current knowledge mission,\n- compute duplicate, conflict, PII, volume, and cluster-governance risk,\n- detect internal contradiction pairs inside the intake batch itself,\n- choose a conservative, integration, or synthesis posture before deeper mutation,\n- raise governance sensitivity when a strong docs/src/tests TypeScript triad exists in the workspace.\n\nThis makes ingest both evidence preservation and decision preparation.\n\n## 4. Repo-Native Flow\nThe live N1Hub flow is:\ndropzone -> raw archive -> queue artifact -> workspace recon -> deep intake investigation -> transmutation run.\n\nThat ordering prevents unstable files, dialect confusion, and shallow merge choices from leaking deeper into the pipeline.\n\n## 5. Integration\n- **Background Agent Runtime:** supplies watcher and scheduler discipline.\n- **Workspace Recon:** classifies the repository before batch mutation.\n- **Deep Intake Investigation:** converts intake pressure into explicit risk and scenario choice.\n- **A2C Normalize:** receives stable, traced, and investigated inputs rather than arbitrary files.\n"
+    "content": "# A2C Stage: Ingest\n\n## 1. Definition and Essence\nIngest is the operational capture boundary of the repo-native A2C runtime. In N1Hub it is the controlled handoff from arrival into stable staged artifacts, implemented through the TypeScript watcher in `scripts/a2c/watch.ts`, queue and runtime helpers under `lib/a2c`, and the explicit handoff into workspace recon and deep intake investigation.\n\n## 2. Runtime Responsibilities\n- Probe incoming files for stability before mutation. The watcher waits for file size and mtime to stop changing instead of ingesting half-written artifacts.\n- Archive raw intake before transformation so the original evidence survives later synthesis or repair.\n- Stage work into deterministic queue artifacts with SHA-256 keyed filenames, sidecar metadata, staged timestamp, source hash, and attempt counters.\n- Append queue-ledger events such as `STAGED`, `STAGED_REUSED`, `ACTIVE`, `FAILED`, and `COMPLETE` so the entry path can be reconstructed after the fact.\n\n## 3. Handoff After Capture\nOnce a stable artifact exists, ingest hands the batch into the pre-mutation control loop. `workspace-recon` classifies the repository and its SSOT ladder, and `deep-intake-investigation` performs the deeper scope, risk, and posture analysis that decides how the batch should proceed. Ingest itself preserves evidence and queue state; it does not own the policy judgment about what the batch means.\n\n## 4. Repo-Native Flow\nThe live N1Hub flow is:\ndropzone -> raw archive -> queue artifact -> workspace recon -> deep intake investigation -> transmutation run.\n\nThat ordering prevents unstable files, dialect confusion, and shallow merge choices from leaking deeper into the pipeline.\n\n## 5. Integration\n- **Background Agent Runtime:** supplies watcher and scheduler discipline.\n- **Workspace Recon:** classifies the repository before batch mutation.\n- **Deep Intake Investigation:** converts a stable staged batch into explicit scope, risk, and scenario analysis.\n- **A2C Normalize:** receives stable, traced, and investigated inputs rather than arbitrary files."
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Ingest is the repo-native capture and staging boundary of the pipeline, but in the current runtime it also carries a real investigation layer. After watching files for stability, archiving raw evidence, and creating queue artifacts with sidecar metadata, ingest now classifies relevance, scores duplicate, conflict, PII, volume, and governance risk, and chooses a conservative, integration, or synthesis path before deeper mutation. This matters because many ingestion failures are not file-transfer failures at all; they are bad early decisions. Ingest therefore turns raw arrival into both auditable pipeline readiness and explicit preflight judgment.",
+    "summary": "A2C Stage: Ingest is the repo-native capture and staging boundary of the pipeline. It watches files for stability, archives raw evidence, creates deterministic queue artifacts with sidecar metadata, records queue-ledger events, and hands the staged batch into workspace recon and deep intake investigation. This matters because ingest must preserve provenance, file integrity, and queue order before any interpretive or mutating work starts, so later stages inherit stable evidence rather than noisy arrivals or accidental policy decisions.",
     "keywords": [
       "a2c",
       "ingest",
@@ -34,10 +34,10 @@
       "raw-archive",
       "file-stability",
       "workspace-recon",
-      "deep-investigation",
-      "risk-triage",
-      "source-routing",
-      "preflight"
+      "deep-intake-investigation",
+      "capture-boundary",
+      "staging",
+      "pre-mutation"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -47,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline"
+    "semantic_hash": "a2cingest-stage-capture-queue-evidence-runtime-boundary-handoff"
   },
   "recursive_layer": {
     "links": [
@@ -104,7 +104,14 @@
         "hitl_required": false
       }
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:58:41Z",
+        "event": "mechanism_policy_separation",
+        "agent": "n1",
+        "rationale": "Separated A2C stage mechanism from agent policy. Ingest retains capture mechanics; investigation owns risk classification and posture selection."
+      }
+    ]
   },
-  "integrity_sha3_512": "4386231c6bf40d965bc727208b48e279288d7b760d62f8d8482305887008026d4bb9fe15bf79bc8d867dd1f5596e53b1ad9fb3e68624a5218448fb696802f7b2"
+  "integrity_sha3_512": "2b0e96d65600bd7cea833eb224919c7f58fd4fb66bd31b72fc3e573bfe0e1d794979302038fde4bcaae86ca4206b76dc69a105c4d401c070a5888bf240c57c5c"
 }

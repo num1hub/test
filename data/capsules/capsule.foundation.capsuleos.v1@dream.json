@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
-    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity",
-    "updated_at": "2026-03-09T20:58:00Z",
+    "semantic_hash": "capsuleos-routing-law-admission-stewardship-runtime-substrate-contract",
+    "updated_at": "2026-03-12T00:55:00Z",
     "name": "CapsuleOS Foundation",
     "priority": "high",
-    "progress": 56,
+    "progress": 62,
     "estimatedHours": 760,
     "actualHours": 330,
     "dueDate": "2026-10-15",
@@ -19,23 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS: The Sovereign Operating System for Knowledge\n\n## Dream Direction\nIn the Dream branch, CapsuleOS remains future doctrine for how the sovereign memory system should mature beyond the already-live Real contract. Dream does not restate current validator-owned truth. It carries the next operating horizon.\n\n## Future Operating Delta\n- richer branch-aware control surfaces for inspection, retrieval, validation, and promotion review\n- clearer decomposition of CapsuleOS into smaller atomic laws when the current hub becomes too dense\n- stronger lifecycle observability so ingest, Dream landing, review, promotion, quarantine, and archive stay inspectable at scale\n- better agent-facing stewardship interfaces without weakening validator sovereignty\n- a calmer second-brain operating model where memory routing, branch discipline, and upkeep feel explicit rather than implied\n\n## Why Dream Stays Separate\nReal already owns the live CapsuleOS contract. Dream is kept separate so future operating-system improvements can be explored without mutating the current admission boundary, capsule law, or validator-governed trust model before they are ready.\n\n## Future Pressure to Watch\n- split large doctrinal surfaces when CapsuleOS law becomes too broad for one hub\n- improve branch-facing review ergonomics without collapsing Dream into runtime residue\n- keep future agent control surfaces compatible with validator sovereignty and promotion discipline\n"
+    "content": "# CapsuleOS\n\n## 1. Role\nCapsuleOS is the operating law of sovereign memory. It routes that law through four bounded sub-hubs so law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate remain explicit instead of collapsing into one dense parent hub.\n\n## 2. Routing Surfaces\n- `law-surfaces` owns the five-element contract, gate law, schema/spec contracts, semantic-hash discipline, and capsule-generation doctrine.\n- `admission-lifecycle` owns the route from refinery output into branch posture, validation judgment, and governed promotion discipline.\n- `stewardship-interfaces` owns the human and agent surfaces that inspect, maintain, and navigate CapsuleOS law during live runtime.\n- `runtime-substrate` owns the storage, compute, audit, testing, and security substrate that lets CapsuleOS operate durably at scale.\n\n## 3. Parent Boundary\nThe parent CapsuleOS hub keeps only the top-level relationship to N1Hub, To Dig Deep, the CapsuleOS project envelope, and the four law sub-hubs. Detailed operating-law routing now flows through those sub-hubs so CapsuleOS remains the sovereign memory contract for the vault rather than a flat registry of every adjacent runtime and governance surface."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Foundation in the Dream branch preserves only the future operating delta beyond the already-live Real contract. Dream focuses on richer branch-aware control surfaces, clearer doctrinal decomposition, stronger lifecycle observability, and better stewardship interfaces for a sovereign second-brain system. It does not redefine current validator-owned trust law. Instead, it protects a space where CapsuleOS can mature without confusing future operating-system improvements with the present admission boundary that already governs capsules in the repository.",
+    "summary": "CapsuleOS routes sovereign memory through four bounded law surfaces: law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate. The parent keeps only top-level relationships to N1Hub, To Dig Deep, the CapsuleOS project envelope, and the four sub-hubs. This makes future operating doctrine more legible because five-element law, trust admission, human and agent stewardship, and substrate requirements no longer hide inside one overloaded parent capsule. The result is a clearer constitutional map for how sovereign memory is admitted, maintained, and evolved.",
     "keywords": [
       "capsuleos",
+      "hub-decomposition",
+      "law-surfaces",
+      "admission-lifecycle",
+      "stewardship-interfaces",
+      "runtime-substrate",
       "sovereign-memory",
-      "second-brain",
-      "dream-branch",
-      "capsule-law",
-      "validation-gates",
-      "branch-routing",
-      "memory-lifecycle",
-      "vault-steward",
-      "decomposition",
-      "control-surfaces",
-      "lifecycle-observability"
+      "validator-sovereignty"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -45,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity"
+    "semantic_hash": "capsuleos-routing-law-admission-stewardship-runtime-substrate-contract"
   },
   "recursive_layer": {
     "links": [
@@ -58,60 +54,45 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos-schema.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos-spec.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.project.capsuleos.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-database.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.sleep-time-compute.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.audit-log.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.testing.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.project.capsuleos.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.law-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.admission-lifecycle.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.stewardship-interfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.runtime-substrate.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-12T00:55:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream CapsuleOS into four bounded sub-hubs so law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate no longer collapse into one dense parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "31d2cf2564b07bf8d54acfe4653cb60163bb8345103a40c28d3c80778fba689f1107b768dd5df55dd0e1fce7566d1540fd4efb5716142358171a621d32a14528"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

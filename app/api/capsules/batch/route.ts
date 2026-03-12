@@ -8,11 +8,7 @@ import { appendValidationLog } from '@/lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '@/lib/validator';
 import type { ValidationIssue } from '@/lib/validator/types';
 import { isRecordObject } from '@/lib/validator/utils';
-
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
+import { isAuthorized } from '@/lib/apiSecurity';
 
 const isFixableGate = (gate: string): boolean => {
   return gate === 'G10' || gate === 'G11' || gate === 'G15' || gate === 'G16';

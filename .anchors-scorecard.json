@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T12:14:10.794Z",
+  "generatedAt": "2026-03-11T22:01:10.306Z",
   "scorecard": {
     "score": 100,
     "grade": "A",
@@ -27,22 +27,22 @@
     "darkMatter": []
   },
   "kpis": {
-    "anchorCount": 82,
+    "anchorCount": 103,
     "categoryCounts": {
-      "arch": 8,
+      "arch": 18,
       "doc": 35,
       "flow": 2,
-      "interface": 12,
+      "interface": 23,
       "invariant": 1,
       "script": 15,
       "test": 9
     },
-    "meanLinksOverall": 6.04,
-    "meanLinksSpine": 3.63,
+    "meanLinksOverall": 5.49,
+    "meanLinksSpine": 3.61,
     "zeroLinkOverallPct": 0,
     "zeroLinkSpinePct": 0,
-    "medianAnchorPositionOverall": 0.008,
-    "medianAnchorPositionSpine": 0.005,
+    "medianAnchorPositionOverall": 0.01,
+    "medianAnchorPositionSpine": 0.355,
     "spineHeaderCoveragePct": 100,
     "ciOptionalSteps": [],
     "appEntrypointCount": 3,
@@ -51,12 +51,12 @@
     "appEntrypointsMissingAnchor": []
   },
   "intelligence": {
-    "anchorCount": 82,
-    "edgeCount": 495,
+    "anchorCount": 103,
+    "edgeCount": 565,
     "brokenLinkCount": 0,
     "zeroInboundCount": 0,
     "weakComponentCount": 1,
-    "reciprocalEdgeRatio": 0.715,
+    "reciprocalEdgeRatio": 0.719,
     "stronglyConnectedComponentCount": 1,
     "largestStronglyConnectedComponentSize": 82,
     "topOutDegree": [
@@ -104,7 +104,11 @@
     "topInDegree": [
       {
         "id": "doc:n1hub.readme",
-        "in": 28
+        "in": 35
+      },
+      {
+        "id": "doc:validator.reference",
+        "in": 24
       },
       {
         "id": "doc:n1hub.codex",
@@ -127,20 +131,16 @@
         "in": 16
       },
       {
+        "id": "script:validator.cli",
+        "in": 16
+      },
+      {
         "id": "doc:todo.hot-queue",
         "in": 15
       },
       {
         "id": "doc:todo.agent-operating-modes",
         "in": 14
-      },
-      {
-        "id": "doc:n1hub.tools",
-        "in": 13
-      },
-      {
-        "id": "doc:n1hub.memory",
-        "in": 12
       }
     ]
   }

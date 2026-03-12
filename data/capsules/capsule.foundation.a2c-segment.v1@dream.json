@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.868Z",
+    "updated_at": "2026-03-11T21:10:00Z",
     "name": "A2C Stage: Segment",
     "semantic_hash": "capsule-foundation-a2c-segment-v1-stage-chunking-tokenization",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Segment\n\n## 1. Definition and Essence\nThe Segment stage breaks normalized material into bounded semantic chunks suitable for extraction and synthesis. It balances coherence with token budgets, preserving context boundaries and cross-chunk references for later reconstruction.\n\n## 2. Core Attributes\n- `segment_strategy` indicating paragraph, section, or semantic chunking method\n- `segment_index` ordered position in source stream\n- `token_estimate` used for model-safe processing windows\n- `context_window_refs` links to neighboring segments\n- `segment_quality_flags` for noisy or incomplete partitions\n\n## 3. Lifecycle\nSegment reads normalized payloads, computes chunk boundaries, tags sequence metadata, and emits indexed segments. Segment-level diagnostics guide extraction confidence and error recovery for malformed sources.\n\n## 4. Integration\n- **Normalize Stage:** consumes canonical data.\n- **Extract Stage:** provides chunks for structured signal extraction.\n- **DeepMine/LLM Routing:** aligns chunks to model constraints.\n- **Validator Gates:** supports coherence checks for long payloads.\n\n## 5. Philosophical Alignment\nSegmentation embodies To Dig Deep by choosing meaningful granularity: not too broad to hide truth, not too narrow to lose causal structure.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Segment in the Dream branch represents a more precise chunking discipline than the current implementation maturity allows. It pushes toward segmentation that respects semantic boundaries, preserves causal sequence, and optimizes later extraction cost without fragmenting meaning. The stage matters because bad chunking contaminates the rest of the pipeline in subtle ways. Dream therefore keeps Segment as a future quality-control layer for granularity itself, not merely a preprocessing convenience.",
+    "summary": "A2C Stage: Segment defines a more precise chunking discipline for the refinery. It describes segmentation that respects semantic boundaries, preserves causal sequence, and optimizes later extraction cost without fragmenting meaning. The stage matters because bad chunking contaminates the rest of the pipeline in subtle ways. Segment therefore serves as a quality-control layer for granularity itself, not merely a preprocessing convenience, and keeps chunking decisions explainable, replayable, operator-reviewable, and robust under scale.",
     "keywords": [
       "a2c",
       "segment",
@@ -61,7 +61,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:10:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so Segment asserts granularity doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "d0fde06d67e7f506bd0e8823fb133556d17debb782e68556cc047c96da3cd48a7e8a760eb4fe4b29e5f8efe92b04f8473dccad552b1473f8d4bd46c2d7f5193e"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

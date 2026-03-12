@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.background-agent-runtime.v1",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-09T01:10:38.622Z",
+    "updated_at": "2026-03-12T04:20:00Z",
     "name": "Background Agent Runtime",
-    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub",
+    "semantic_hash": "background-runtime-parent-routing-daemon-control-gates-orchestration",
     "source": {
       "uri": "internal://lib/agents/vaultSteward.ts",
       "type": "repository_implementation"
@@ -23,21 +23,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime defines the durable operational harness that lets LLM-backed agents work continuously, safely, and observably inside N1Hub. It is not the model itself. It is the surrounding runtime that keeps daemon processes alive, schedules jobs, preserves state, routes tool access, and exposes enough control for operators to trust long-lived autonomy.\n\n## 2. Core Responsibilities\n- `daemon_lifecycle` keeps agent services alive under supervised host processes.\n- `dispatch_and_scheduling` decides when background work should run, pause, cool down, or wake early.\n- `mode_shaping` separates daytime co-pilot work, nighttime autonomy, planning-only runs, and Dream-safe execution runs.\n- `durable_state` preserves checkpoints, summaries, run history, and resumable execution context.\n- `instruction_surfaces` ensures agents enter through durable repo-owned rules and documentation before deeper loops begin.\n- `context_engineering` assembles bounded context packs instead of dumping entire transcripts or vault snapshots into one run.\n- `subagent_orchestration` allows scout, foreman, reviewer, and executor lanes to cooperate through explicit handoffs.\n- `operator_oversight` feeds status, logs, and controls into accountable surfaces.\n\n## 3. Pre-Mutation Runtime Gates\nThe runtime now has a clearer pre-mutation control loop:\n- **Activation Readiness** confirms the skill surface is complete enough to allow mutation.\n- **Workspace Recon** classifies the environment and its SSOT hierarchy.\n- **Deep Intake Investigation** converts incoming pressure into explicit risk scores and a chosen execution posture.\n\nThis means long-lived automation is gated by environmental understanding, not only by daemon liveness.\n\n## 4. Shift Entry and Ignition\nThe runtime also benefits from a morning ignition discipline. A good entry cycle can surface active voids, unresolved contradictions, and the operator's seed intent before starting deeper work. That gives day mode a cleaner handoff into queueing, planning, or ingestion and keeps autonomy aligned with current human direction.\n\n## 5. Daemon and Queue Discipline\nWatcher and scheduler behavior are part of the trust surface of autonomy. Background work should be partitioned by mode and time window, queues should expose visible state transitions such as quarantine, active, complete, and failed, and handoff between chat, queue, daemon, and review surfaces should preserve one coherent run identity.\n"
+    "content": "# Background Agent Runtime\n\n## 1. Definition and Essence\nBackground Agent Runtime is the sovereign hub that defines how N1Hub keeps long-lived agents alive outside the foreground chat loop. It now routes its doctrine through four bounded sub-hubs so daemon lifecycle, control-plane continuity, mutation permission, and execution orchestration stay explicit instead of collapsing into one flat runtime directory.\n\n## 2. Routing Surfaces\n- `daemon-lifecycle` owns host lifecycle, ignition, off-peak posture, model-access readiness, and cost-aware runtime bring-up.\n- `control-plane` owns assignment continuity, memory state, instruction surfaces, context engineering, harness semantics, and operator-visible control.\n- `mutation-gates` owns permission-to-run, workspace profiling, deep intake risk review, branch discipline, validation, and critique pressure.\n- `work-orchestration` owns job envelopes, delegation, observability, stewardship maintenance, and mining/update workers.\n\n## 3. Parent Boundary\nThe parent hub now keeps only the top-level runtime relationship to N1Hub, Personal AI Assistant, human-ai symbiosis, and its upstream project and doctrine links. Detailed runtime atoms route through the four sub-hubs so the background runtime remains legible as the sovereign envelope rather than a flat directory of runtime concerns."
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the durable harness that keeps long-lived agent work safe, legible, and resumable inside N1Hub, and its operating model now has sharper pre-mutation gates. A healthy runtime does not begin with blind daemon activity alone; it starts with activation readiness, workspace recon, and deep intake investigation so the system knows whether it is permitted to mutate, what repository contract it is inside, and what risk posture the current batch demands. Combined with ignition rituals, queue discipline, and day-night mode shaping, this makes autonomy easier to trust because the host can explain not only what is running, but why it was allowed to begin.",
+    "summary": "Background Agent Runtime is the sovereign parent hub for four bounded runtime surfaces: daemon lifecycle, control plane, mutation gates, and work orchestration. The parent keeps only top-level runtime relationships to N1Hub, Personal AI Assistant, human-ai symbiosis, project envelopes, and doctrine anchors while detailed runtime atoms route through its four sub-hubs. This boundary matters because long-lived agent execution should remain legible as one governed runtime contract rather than collapsing daemon survival, assignment continuity, mutation permission, and job execution into one overloaded directory.",
     "keywords": [
       "background-agent-runtime",
-      "activation-readiness",
-      "workspace-recon",
-      "deep-investigation",
+      "hub-decomposition",
       "daemon-lifecycle",
-      "queue-discipline",
-      "ignition-ritual",
-      "day-night-modes",
-      "operator-oversight",
-      "stateful-autonomy"
+      "control-plane",
+      "mutation-gates",
+      "work-orchestration",
+      "runtime-boundaries"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -47,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "background-agents-runtime-daemon-durable-state-jobs-hub"
+    "semantic_hash": "background-runtime-parent-routing-daemon-control-gates-orchestration"
   },
   "recursive_layer": {
     "links": [
@@ -64,139 +61,19 @@
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "target_id": "capsule.foundation.background-agent-runtime.daemon-lifecycle.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.agent-delegation.v1",
+        "target_id": "capsule.foundation.background-agent-runtime.control-plane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.symphony.v1",
+        "target_id": "capsule.foundation.background-agent-runtime.mutation-gates.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-wallet.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-llm-access.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.ai-economics-night-batch.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-control-surface.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-daemon.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-memory-state.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-context-engineering.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-harness-protocol.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-subagents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-job.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.key-agents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.security.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-observability.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-markup-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
+        "target_id": "capsule.foundation.background-agent-runtime.work-orchestration.v1",
         "relation_type": "references"
       },
       {
@@ -210,26 +87,23 @@
       {
         "target_id": "capsule.project.symphony.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.agent-activation-readiness.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.workspace-recon.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deep-intake-investigation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ignition-ritual.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:04:33Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "n1",
+        "rationale": "Refactored parent hub to route through 4 sub-hubs. Outbound links reduced from 44 to ≤15."
+      },
+      {
+        "at": "2026-03-12T04:20:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the parent summary to satisfy validator summary-length requirements and normalized the semantic hash to an eight-token canonical form without changing runtime boundaries."
+      }
+    ]
   },
-  "integrity_sha3_512": "f5e0a29b74f4e250344eac21e87097b9ac9f012301455e5110292b0d2a53c649e0c6e072fa42727e0e5885d6dd556dc326f6fb3f37405b7f948c7a944a0074a2"
+  "integrity_sha3_512": "08abb069e4063308e82abf6d2a6b0c273a4f08c9d6154da726465b4adf933640a29af376fb3160e1e1aa1f7c60a2d11052c57c505fb643aaa6ab0867d0b104a0"
 }

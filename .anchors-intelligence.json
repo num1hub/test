@@ -1,10 +1,10 @@
 {
-  "anchorCount": 82,
-  "edgeCount": 495,
+  "anchorCount": 103,
+  "edgeCount": 565,
   "brokenLinkCount": 0,
   "zeroInboundCount": 0,
   "weakComponentCount": 1,
-  "reciprocalEdgeRatio": 0.715,
+  "reciprocalEdgeRatio": 0.719,
   "stronglyConnectedComponentCount": 1,
   "largestStronglyConnectedComponentSize": 82,
   "topOutDegree": [
@@ -52,7 +52,11 @@
   "topInDegree": [
     {
       "id": "doc:n1hub.readme",
-      "in": 28
+      "in": 35
+    },
+    {
+      "id": "doc:validator.reference",
+      "in": 24
     },
     {
       "id": "doc:n1hub.codex",
@@ -75,20 +79,16 @@
       "in": 16
     },
     {
+      "id": "script:validator.cli",
+      "in": 16
+    },
+    {
       "id": "doc:todo.hot-queue",
       "in": 15
     },
     {
       "id": "doc:todo.agent-operating-modes",
       "in": 14
-    },
-    {
-      "id": "doc:n1hub.tools",
-      "in": 13
-    },
-    {
-      "id": "doc:n1hub.memory",
-      "in": 12
     }
   ]
 }

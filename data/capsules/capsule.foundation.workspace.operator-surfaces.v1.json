@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.workspace.operator-surfaces.v1",
+    "version": "1.0.1",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:20:37Z",
+    "updated_at": "2026-03-12T03:55:00Z",
+    "name": "Workspace Operator Surfaces",
+    "semantic_hash": "workspace-operator-surfaces-dashboard-calendar-analytics-archive-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.workspace.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Workspace Operator Surfaces\n\n## 1. Boundary\nWorkspace Operator Surfaces owns the operator-facing visibility layer of workspace: the views that compress graph state into something a human can scan, inspect, and steer. This sub-hub exists so cockpit surfaces stay distinct from execution logic, identity rules, and background runtime lanes.\n\n## 2. What Belongs Here\nThis sub-hub groups `dashboard`, `calendar`, `analytics`, and `archive` because they are the main views through which workspace projects attention, time, metrics, and retained history back to the operator. These surfaces help the user see the field without becoming the semantic owner of the data they display.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own planning decomposition, assistant routing, identity and access policy, or runtime execution lanes. Those belong to `execution-loop`, `assistant-control`, `identity-access`, and `runtime-lanes`."
+  },
+  "neuro_concentrate": {
+    "summary": "Workspace Operator Surfaces groups the human-facing cockpit views of workspace: dashboard, calendar, analytics, archive, and adjacent visualization surfaces. It keeps visibility, attention design, and retrospective context together so the operator can see state, time, and trend pressure without mixing those concerns into planning, identity, or deeper runtime lanes. This boundary matters because a usable habitat needs one calm visibility layer that explains what is happening before asking the user to plan, delegate, or repair structure. It gives workspace one explicit surface family for seeing rather than doing.",
+    "keywords": [
+      "workspace",
+      "operator-surfaces",
+      "dashboard",
+      "calendar",
+      "analytics",
+      "archive",
+      "visibility"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "workspace-operator-surfaces-dashboard-calendar-analytics-archive-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.analytics.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:20:37Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of workspace hub decomposition to reduce parent link density from 41 outbound to ≤10."
+      },
+      {
+        "at": "2026-03-12T03:55:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the operator-surfaces summary to satisfy validator length requirements while keeping the existing visibility boundary unchanged."
+      }
+    ]
+  },
+  "integrity_sha3_512": "0d285d5bcc3b6e93d40b82d7344523100b4fc773dde85b609b98812ac6aa3f2c175fb7639ef004a4c261c09f7f68c46551081fb72654998e7b865c54258f6d15"
+}

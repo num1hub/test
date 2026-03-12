@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.personal-ai-assistant.v1",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-09T20:55:00Z",
+    "updated_at": "2026-03-11T20:40:00Z",
     "name": "Personal AI Assistant",
-    "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core",
+    "semantic_hash": "assistant-parent-routing-conversation-continuity-planning-orchestration-governance",
     "priority": "high",
-    "progress": 29,
+    "progress": 36,
     "estimatedHours": 560,
     "actualHours": 118,
     "dueDate": "2026-10-31",
@@ -19,24 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical assistant carrier contract: the stable `N1` identity, bounded routing across assistant and execution lanes, and the current approval and branch discipline. Dream therefore should not restate the current live assistant runtime as if it were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future assistant delta such as:\n- richer multimodal ingress across voice, files, and ambient operator context,\n- deeper graph-backed execution guidance without collapsing into uncontrolled autonomy,\n- stronger memory-backed adaptation to operator style and long-horizon intent,\n- better daytime orchestration of bounded subagents with clearer return-path explanations,\n- more transparent economic, review, and control-surface awareness as the swarm matures.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current `N1` carrier contract,\n- collapse assistant doctrine into fleet-management or hidden autonomous control,\n- reintroduce operational swarm notes as constitutional assistant law.\n\n## 4. Dream Lens\nThe useful Dream stance is to keep the Personal AI Assistant future-facing as a richer symbiotic partner while letting Real remain canonical for what the assistant currently is, what it may claim, and how it must hand work into bounded runtime lanes."
+    "content": "# Personal AI Assistant\n\n## 1. Role\nPersonal AI Assistant is the symbiotic carrier surface through which one human speaks to N1Hub, receives graph-grounded explanation, and routes bounded work into deeper execution lanes. It routes that surface through five bounded sub-hubs so conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control stay explicit instead of collapsing into one overloaded directory.\n\n## 2. Routing Surfaces\n- `conversation-ingress` owns graph-grounded conversation, session memory shell, and prompt surfaces that turn operator intent into bounded assistant work.\n- `memory-continuity` owns identity, memory, context engineering, and preference surfaces that keep the assistant stable across time.\n- `planning-navigation` owns planning, tracking, retrieval, and suggestion surfaces that help the assistant explain what matters now.\n- `execution-orchestration` owns delegation, mining, swarm, stewardship, and A2C handoff surfaces that let the assistant move work into deeper lanes without becoming the fleet itself.\n- `governance-control` owns wallet, control-plane, review, branch, notification, and integration posture that keep assistant action visible and governable.\n\n## 3. Parent Boundary\nThe parent assistant hub keeps only the top-level relationship to Workspace, Human-AI Symbiosis, Key Agents, CapsuleOS, To Dig Deep, and the five sub-hubs. Detailed routing now flows through the sub-hubs so the assistant remains the carrier contract for one stable partner surface instead of a flat registry of every adjacent module."
   },
   "neuro_concentrate": {
-    "summary": "Personal AI Assistant is the Dream-side future overlay for a richer symbiotic partner, not the canonical source of current assistant runtime law. Real now owns the stable `N1` carrier contract, bounded routing posture, and current approval discipline, while Dream stays focused on future multimodal ingress, deeper graph-backed execution guidance, stronger memory-backed adaptation, clearer subagent return paths, and improved control-surface awareness as the swarm matures. This keeps Dream useful as roadmap doctrine without letting it masquerade as the live assistant contract inside N1Hub.",
+    "summary": "Personal AI Assistant routes its partner surface through five bounded sub-hubs instead of carrying every adjacent module at the parent layer. Conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control now define the assistant topology explicitly, which keeps the carrier surface legible while preserving richer future routing across chat, continuity, planning, swarm handoff, and operator governance. The result is a clearer assistant doctrine that no longer depends on one overlinked parent hub to describe the whole symbiotic system.",
     "keywords": [
       "personal-ai-assistant",
-      "future-overlay",
-      "n1-carrier",
-      "multimodal-ingress",
-      "graph-execution-guidance",
-      "memory-adaptation",
-      "bounded-subagents",
-      "control-surface-awareness",
-      "branch-discipline",
-      "symbiotic-partner",
-      "future-delta",
-      "workspace",
-      "n1hub"
+      "hub-decomposition",
+      "conversation-ingress",
+      "memory-continuity",
+      "planning-navigation",
+      "execution-orchestration",
+      "governance-control",
+      "symbiotic-carrier"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -46,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core"
+    "semantic_hash": "assistant-parent-routing-conversation-continuity-planning-orchestration-governance"
   },
   "recursive_layer": {
     "links": [
@@ -55,27 +50,11 @@
         "relation_type": "part_of"
       },
       {
-        "target_id": "capsule.foundation.deepmine.v1",
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.project.v1",
+        "target_id": "capsule.foundation.key-agents.v1",
         "relation_type": "references"
       },
       {
@@ -83,88 +62,28 @@
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.conversation-ingress.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.agent-delegation.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.memory-continuity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.planning-navigation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.execution-orchestration.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.governance-control.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
-      },
-      {
-        "target_id": "capsule.ai.conversation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.ai.prompt.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.ai.suggestion.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.notification.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.user-preferences.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.profile.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.api-gateway.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.integrations.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-llm-access.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.key-agents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.daily-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -223,8 +142,20 @@
         "agent": "n1",
         "run_id": "TODO-023",
         "rationale": "The Dream assistant capsule was narrowed to future-only assistant delta after Real became the explicit canonical statement of the current N1 carrier contract. This preserves Dream as roadmap doctrine without letting it override live assistant behavior."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T20:40:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Personal AI Assistant into five bounded sub-hubs so conversation, continuity, planning, orchestration, and governance routing no longer collapse into a 29-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "8168b25797834df0dd6af02402254023bb7d056dc5e5ad4b04cb5efadfe8c3c760af652e75ecb4b595dafaeda4e0053a84ccfa355e8c2026be8d78e51f231965"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

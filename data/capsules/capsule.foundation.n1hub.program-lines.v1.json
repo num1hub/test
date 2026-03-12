@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub.program-lines.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-11T23:58:00Z",
+    "name": "N1Hub Program Lines",
+    "semantic_hash": "n1hub-program-lines-tilesims-refactor-access-expansion-value",
+    "source": {
+      "uri": "internal://capsule.foundation.n1hub.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub Program Lines\n\n## 1. Role\nN1Hub Program Lines owns the expansion and portfolio surface of the habitat. It keeps economic posture, flagship program lines, and active strategic refactor tracks together so the runtime can connect its internal architecture to visible product and value arcs.\n\n## 2. Program Line Surface\nThis sub-hub groups `access-models`, `tilesims`, `project.tilesims`, `sovereign-refactor`, and `project.n1hub-sovereign-refactor`. Together they define how N1Hub expresses monetization posture, flagship habitat extensions, and the current structural cleanup program that reshapes the live runtime.\n\n## 3. Operating Boundary\nThis sub-hub does not own first-principles doctrine, deep cognition lanes, or daemon coordination. Those responsibilities belong to `doctrinal-core`, `intelligence-fabric`, and `runtime-coordination`."
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Program Lines groups the expansion and portfolio surfaces of the habitat: Access Models, TileSims foundation and project lines, Sovereign Refactor, and the N1Hub Sovereign Refactor project. It keeps economic posture, flagship program arcs, and the current structural cleanup program together so the runtime can connect internal architecture to visible product and value lines. This boundary matters because N1Hub should expose its strategic programs as a coherent surface instead of scattering them across the parent runtime capsule.",
+    "keywords": [
+      "n1hub",
+      "program-lines",
+      "access-models",
+      "tilesims",
+      "sovereign-refactor",
+      "portfolio",
+      "value-lines"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-program-lines-tilesims-refactor-access-expansion-value"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.access-models.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tilesims.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.tilesims.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-refactor.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-sovereign-refactor.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:58:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during N1Hub decomposition to isolate economic posture, flagship program lines, and the live sovereign-refactor program from the parent runtime contract."
+      }
+    ]
+  },
+  "integrity_sha3_512": "b50ad7c8e4767904c879e6381c106a6d4f9a4c73e0e0c5c495c31d9d314bec088b979257f71ab303f8debb9f9b80ab9803fccdc35e103ec5c395f010238ea58e"
+}

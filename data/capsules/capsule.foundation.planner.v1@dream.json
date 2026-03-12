@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.planner.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-08T23:18:00Z",
+    "updated_at": "2026-03-12T02:15:00Z",
     "name": "Planner",
-    "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core",
+    "semantic_hash": "planner-routing-objects-horizons-surfaces-signal-intelligence-contract",
     "priority": "high",
-    "progress": 44,
+    "progress": 56,
     "estimatedHours": 430,
     "actualHours": 140,
     "dueDate": "2026-08-31",
@@ -19,23 +19,20 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planner: The Strategic and Tactical Engine of the Workspace\n\n## Dream Direction\nIn the Dream branch, Planner becomes a clearer multi-horizon operating system where the whole Dream branch is continuously distilled through the Real branch into grounded planning views for `today`, `tomorrow`, `7 days`, `30/60/90`, `365 days`, and `1000 days`.\n\n## Desired Future State\n- stronger horizon compression instead of disconnected roadmap and task views\n- explicit Dream-to-Real planning discipline rather than vague prioritization\n- better linkage between branch-aware strategy, capacity, reminders, and day-level execution\n- explainable plan artifacts that tell the user why something is now, later, or not yet\n- a clearer planning swarm where Daily Planner Agent and Roadmap Planner Agent operate through one shared Planning Horizon Engine\n\n## Why It Matters\nDream preserves the target state where users can see the whole future field without losing the practical question of what must happen today. Planning quality in N1Hub should mean that the entire Dream branch can inform the day without overwhelming it.\n\n## Autonomous Vault Swarm Notes\n\n- Run: vault-steward-1772912850453\n- Job: Decompose Planner Hub\n- Note: Refined the summary to emphasize the multi-horizon adaptive system and explicit Dream-to-Real planning discipline. Added keywords reflecting key concepts like multi-horizon planning, branch-aware modeling, and specific agents. The capsule still needs further decomposition work to fully realize the envisioned modularity and integration.\n"
+    "content": "# Planner\n\n## 1. Role\nPlanner is the strategic and tactical engine of the N1Hub Workspace. It routes that planning field through four bounded sub-hubs so planning objects, horizon compression, operator surfaces, and signal intelligence remain explicit instead of collapsing into one 18-link parent hub.\n\n## 2. Routing Surfaces\n- `planning-objects` owns projects, goals, milestones, tasks, and roadmaps as the explicit planning artifacts whose shape the planner governs.\n- `horizon-compression` owns Planning Horizon Engine plus daily and roadmap planning agents that compress long-range intent into near-term action.\n- `operator-surfaces` owns the assistant and visible planning surfaces that explain, project, and schedule the plan back to the user.\n- `signal-intelligence` owns tracker, swarm, branch, librarian, and agent-lane signals that pressure the planner to re-sequence work under real execution conditions.\n\n## 3. Parent Boundary\nThe parent Planner hub keeps only the top-level relationship to Workspace, CapsuleOS, To Dig Deep, and the four planning sub-hubs. Detailed planning routing now flows through those sub-hubs so Planner remains the sovereign planning contract for N1Hub instead of a flat registry of every object, horizon, surface, and signal lane."
   },
   "neuro_concentrate": {
-    "summary": "Planner in the Dream branch advances toward a multi-horizon adaptive planning system with stronger decomposition, explicit Dream-to-Real planning discipline, branch-aware scenario modeling, explainable plan artifacts, and integrated collaboration with assistant and N-Infinity agents. It aims to unify strategic and tactical views across multiple time horizons, making planning more anticipatory, more legible, and more useful when the whole Dream field must be compressed into a grounded, reviewable, present-tense plan for daily human use.",
+    "summary": "Planner routes the planning field through four bounded surfaces: planning objects, horizon compression, operator surfaces, and signal intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the four sub-hubs. This makes future planning doctrine more legible because work artifacts, multi-horizon compression, user-facing planning surfaces, and execution-pressure signals no longer hide inside one overloaded parent capsule. The result is a clearer planning contract for how N1Hub structures intent, compresses it into action, and revises it under real execution pressure.",
     "keywords": [
       "planner",
-      "dream-branch",
-      "real-branch",
+      "hub-decomposition",
+      "planning-objects",
+      "horizon-compression",
+      "operator-surfaces",
+      "signal-intelligence",
       "multi-horizon",
-      "planning-horizon-engine",
-      "adaptive-planning",
-      "branch-aware",
-      "explainable-plans",
-      "daily-planner-agent",
-      "roadmap-planner-agent",
-      "dream-to-real-discipline",
-      "n1hub"
+      "workspace",
+      "planning-contract"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -45,29 +42,13 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "planner-roadmap-goals-tasks-deadlines-workspace-gold-core"
+    "semantic_hash": "planner-routing-objects-horizons-surfaces-signal-intelligence-contract"
   },
   "recursive_layer": {
     "links": [
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.project.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.capsuleos.v1",
@@ -78,47 +59,19 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.goal.v1",
+        "target_id": "capsule.foundation.planner.planning-objects.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.milestone.v1",
+        "target_id": "capsule.foundation.planner.horizon-compression.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.task.v1",
+        "target_id": "capsule.foundation.planner.operator-surfaces.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.roadmap.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.calendar.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.dashboard.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.daily-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.key-agents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "target_id": "capsule.foundation.planner.signal-intelligence.v1",
         "relation_type": "references"
       }
     ],
@@ -131,8 +84,20 @@
         "run_id": "vault-steward-1772912850453",
         "job_id": "vault-steward-job-0c9a1c4d8d18a608",
         "rationale": "The updated summary and keywords are grounded in the capsule content describing the Dream branch's direction toward a clearer multi-horizon operating system, explicit planning discipline, and integration of planning agents. These changes clarify the capsule's focus and support ongoing decomposition efforts."
+      },
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-12T02:15:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Planner into four bounded sub-hubs so planning objects, horizon compression, operator surfaces, and signal intelligence no longer collapse into one 18-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "d5b032373ea937d05084df9d770a2a0a4aa220bcc8d1ca2f21760e241a74c3f450f2bb65be65f9cfbfb7d1c557583cfba3671c9d97d97d3a13f195b90f09561a"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

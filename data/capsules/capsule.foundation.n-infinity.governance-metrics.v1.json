@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n-infinity.governance-metrics.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:49:18Z",
+    "updated_at": "2026-03-11T14:49:18Z",
+    "name": "N-Infinity Governance Metrics",
+    "semantic_hash": "ninfinity-governance-metrics-relations-confidence-ledger-reasoning-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.n-infinity.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N-Infinity Governance Metrics\n\n## 1. Boundary\nN-Infinity Governance Metrics owns the abstract structures the swarm uses to reason about graph quality, epistemic tension, and relation semantics. This sub-hub exists so those metrics and reasoning abstractions remain explicit instead of being mixed into runtime substrate or worker-roster descriptions.\n\n## 2. What Belongs Here\nThis sub-hub groups `capsuleos.relation-types`, `capsuleos.confidence-vector`, and `epistemic-ledger`. Together they define the typed graph edges the swarm traverses, the confidence geometry it uses to prioritize work, and the contradiction memory it uses to preserve reasoning history.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own the runtime substrate that hosts work, the swarm workers that carry it out, or the external lanes that feed the swarm fresh signal. Those belong to `runtime-fabric`, `swarm-roster`, and `signal-fabric`."
+  },
+  "neuro_concentrate": {
+    "summary": "N-Infinity Governance Metrics groups the reasoning abstractions the swarm uses to interpret graph quality: relation types, confidence vector, and epistemic ledger. It keeps semantic law and epistemic memory distinct from runtime substrate, incoming signals, and worker roles. This matters because the swarm needs a visible boundary for relation semantics, confidence interpretation, and memory of epistemic events so quality judgment does not disappear into worker folklore or runtime machinery over time.",
+    "keywords": [
+      "n-infinity",
+      "governance-metrics",
+      "relation-types",
+      "confidence-vector",
+      "epistemic-ledger",
+      "graph-quality",
+      "epistemic-memory"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "ninfinity-governance-metrics-relations-confidence-ledger-reasoning-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.relation-types.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.confidence-vector.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.epistemic-ledger.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:49:18Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of n-infinity hub decomposition to reduce parent link density from 26 outbound to ≤9."
+      }
+    ]
+  },
+  "integrity_sha3_512": "6d2cef068db7da00e1f7a236bd829436838748a95fcdde3c11aef4d6de709b2b1187156d9aad2d7973440d1d554d3310439931b43c5dfc3402afc7219e62fbad"
+}

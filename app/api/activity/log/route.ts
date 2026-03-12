@@ -1,10 +1,6 @@
 import { NextResponse } from 'next/server';
 import { ACTIVITY_ACTIONS, logActivity, type ActivityAction } from '@/lib/activity';
-
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
+import { isAuthorized } from '@/lib/apiSecurity';
 
 const isRecord = (input: unknown): input is Record<string, unknown> => {
   return Boolean(input && typeof input === 'object' && !Array.isArray(input));

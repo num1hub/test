@@ -1,7 +1,7 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.weaver.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
@@ -9,7 +9,7 @@
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "weaver-agent-soft-links-connector-discovery-gold-core",
     "name": "N-Infinity Weaver",
-    "updated_at": "2026-03-10T18:05:00Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "priority": "high",
     "progress": 23,
     "estimatedHours": 240,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Weaver\n\n## 1. Future Role\nDream keeps Weaver as the next topology-scout layer above the current Jaccard merge-report runtime. The real capsule remains canonical for today's bounded weaving path; Dream only describes the future delta that could make resonance discovery more expressive without weakening graph law.\n\n## 2. Future Delta\n- stage richer soft-link and bridge-candidate hypotheses before they become merge proposals\n- attach clearer confidence packaging, review bundles, and comparative rationale for candidate clusters\n- distinguish duplicate pressure, bridge pressure, and contradiction pressure more precisely before routing work onward\n- surface better handoffs into Parliament and Suggestion Agent when a cluster should be debated or converted into an advisory packet instead of merged\n- improve topology scouting so isolated but adjacent capsules become legible without implying silent graph mutation\n\n## 3. Why Keep Dream\nFuture graph depth will require more than bounded duplicate compaction. Weaver still needs a future doctrine for exploratory topology discovery, better review ergonomics, and calmer routing across merge, contradiction, and suggestion lanes.\n\n## 4. Guardrails\nDream does not replace the current TypeScript weaving runtime, does not imply silent auto-link mutation, and does not restate today's live merge-report path as if it were still only aspirational doctrine.\n"
+    "content": "# N-Infinity Weaver\n\n## 1. Role\nWeaver is the topology-scout layer that expands graph discovery beyond bounded duplicate compaction. It stages soft-link and bridge-candidate hypotheses, packages why a cluster appears adjacent, and keeps exploratory structure reviewable before anything is allowed to change the canonical graph.\n\n## 2. Discovery Surface\n- stage richer soft-link and bridge-candidate hypotheses before they become merge proposals\n- attach clearer confidence packaging, review bundles, and comparative rationale for candidate clusters\n- distinguish duplicate pressure, bridge pressure, and contradiction pressure before routing work onward\n- hand off cluster tension to Parliament when debate is required and to Suggestion Agent when the right next move is advisory rather than mutative\n- improve discovery of isolated but adjacent capsules without implying silent auto-link mutation\n\n## 3. Operating Boundary\nWeaver produces reviewable topology candidates, not silent graph edits. Merge, contradiction, and advisory routing remain explicit downstream decisions, so exploratory discovery can widen without weakening graph law."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Weaver in Dream now keeps only the future topology-scout delta above the current real-side runtime. Real remains canonical for the bounded Jaccard similarity scan, guarded merge candidate generation, contradiction-aware cleanup, and reviewable merge report that exist today. Dream instead preserves the next layer: richer soft-link and bridge-candidate staging, better confidence and review packaging, clearer routing between merge, contradiction, and suggestion lanes, and improved discovery of isolated but adjacent capsules. This keeps future exploratory graph intelligence visible without pretending the current governed weaving path is still merely aspirational.",
+    "summary": "N-Infinity Weaver is the topology-scout layer that widens graph discovery beyond duplicate compaction. It stages soft-link and bridge-candidate hypotheses, packages confidence and comparative rationale, distinguishes duplicate, bridge, and contradiction pressure, and routes contested clusters toward Parliament or Suggestion Agent instead of mutating the graph silently. This keeps exploratory topology work visible and reviewable, makes isolated but adjacent capsules easier to discover, and preserves graph law by ensuring that discovery, debate, and mutation remain separate acts.",
     "keywords": [
       "n-infinity",
       "weaver",
@@ -31,9 +31,7 @@
       "bridge-candidates",
       "graph-discovery",
       "review-bundles",
-      "future-doctrine",
-      "capsuleos",
-      "n1hub"
+      "contradiction-pressure"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -69,7 +67,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Rewrote doctrine in present tense so Weaver asserts future topology scouting directly instead of talking about Dream as a branch-aware overlay."
+      }
+    ]
   },
-  "integrity_sha3_512": "495867b4ba98e51b57dcec67f278675b8cdc6391b92c3232b573f5a5a775b05eaaa9004b0673902b161af7a2674a54e2c488223bd65e8f0af745eef3228f2646"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-07T10:22:14.128Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Integrations",
     "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Integrations\n\n## 1. Definition and Essence\nIntegrations in Dream describes a richer governed connector fabric around N1Hub. It preserves the future where model providers, hosted inference surfaces, repositories, calendars, notifications, and other external systems become first-class, policy-aware parts of the operating environment rather than ad hoc bolt-ons.\n\n## 2. Core Attributes\n- `integration_catalog` with clearer trust classes\n- `credential_and_secret_model`\n- `event_contracts`\n- `retry_and_recovery_policy`\n- `governance_flags`\n- `agent_operability` that distinguishes co-pilot-safe from autonomy-safe connectors\n\n## 3. Dream Direction\nThe long-term target is not connector sprawl. The target is a deliberately governed ecosystem where outside systems can enrich the second brain without silently deforming it.\n\n## 4. Integration\n- **API Gateway:** remains the transport boundary.\n- **AI Wallet and Hybrid LLM Access:** cover model-supply connectors.\n- **Agent Control Plane and Agent Daemon:** decide how background work may use connectors.\n- **Workspace and AI Control Surface:** keep connector reality visible to the human.\n\n## 5. Philosophical Alignment\nIntegrations in Dream preserves the idea that interoperability should expand intelligence without weakening sovereignty.\n"
+    "content": "# Integrations\n\n## 1. Role\nIntegrations will become the governed connector fabric of N1Hub, allowing external services to join the graph through explicit capability boundaries, trust classes, and operability rules rather than through ad hoc plugin sprawl.\n\n## 2. Future Connector Contract\nThe integration layer will carry clearer health monitoring, retry and recovery policy, secret handling, event contracts, and agent-operability distinctions so the system can tell the difference between co-pilot-safe connectors, autonomy-safe connectors, and connectors that require stronger human control.\n\n## 3. Operational Consequence\nExternal capability will deepen without dissolving sovereignty. Connectors will widen the system’s reach while staying inspectable, governable, and compatible with vault law.\n\n## 4. Philosophical Alignment\nIntegrations supports To Dig Deep by letting the ecosystem connect outward without abandoning control inward."
   },
   "neuro_concentrate": {
-    "summary": "Integrations in Dream captures a more deliberate connector fabric for the ecosystem. It imagines external services joining the graph through clearer capability boundaries, better health monitoring, stronger agent-operability rules, and tighter alignment with sovereign data policy than the real branch currently enforces. The capsule matters because useful ecosystems eventually depend on connectors, but connectors also widen the attack and complexity surface. Dream therefore preserves Integrations as a future architecture layer for governed interoperability, not accidental plugin sprawl.",
+    "summary": "Integrations defines the future governed connector fabric of N1Hub: clearer capability boundaries, better health monitoring, stronger agent-operability rules, and tighter sovereign control over how outside systems join the graph.",
     "keywords": [
       "integrations",
       "connectors",
@@ -74,7 +74,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "9cf280d3c71c6d9ada48d3a173f74b1a95282e4520ee8a9995254019919ff62c517a8378c483fae25f91a04b2a12b551d19bcde76c1dbd1b229e18b68229e145"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

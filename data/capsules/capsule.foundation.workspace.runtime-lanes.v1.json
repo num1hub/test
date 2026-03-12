@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.workspace.runtime-lanes.v1",
+    "version": "1.0.1",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:20:37Z",
+    "updated_at": "2026-03-12T03:55:00Z",
+    "name": "Workspace Runtime Lanes",
+    "semantic_hash": "workspace-runtime-lanes-a2c-symphony-background-swarm-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.workspace.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Workspace Runtime Lanes\n\n## 1. Boundary\nWorkspace Runtime Lanes owns the deeper execution lanes that workspace surfaces but does not semantically own: refinery, orchestration, background runtime, swarm maintenance, and graph-improvement infrastructure. This sub-hub exists so workspace can expose these lanes clearly without flattening them into one undifferentiated command surface.\n\n## 2. What Belongs Here\nThis sub-hub groups `a2c`, `n-infinity`, `background-agent-runtime`, `capsule-graph-maintenance`, `symphony`, `vault-stewardship-swarm`, `key-agents`, and `project.symphony`. Together they define the runtime substrate and execution lanes that workspace routes into when work leaves direct human manipulation and enters governed background or repository execution.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own dashboard visibility, planning decomposition, or identity and entitlement surfaces. Those belong to `operator-surfaces`, `execution-loop`, and `identity-access`."
+  },
+  "neuro_concentrate": {
+    "summary": "Workspace Runtime Lanes groups the deeper execution and maintenance lanes that workspace exposes to the operator: A2C, Symphony, background runtime, stewardship, key agents, N-Infinity, and graph maintenance. It keeps runtime routing together so the habitat can supervise execution substrates without semantically owning their internal mechanics or mixing them into human-facing composition rules. This boundary matters because workspace should reveal which deeper lanes are active, available, or pressurized while leaving their actual runtime contracts to the modules that own them. It gives the habitat one clear seam for exposing execution depth without becoming the runtime itself.",
+    "keywords": [
+      "workspace",
+      "runtime-lanes",
+      "a2c",
+      "symphony",
+      "background-agent-runtime",
+      "vault-stewardship",
+      "n-infinity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "workspace-runtime-lanes-a2c-symphony-background-swarm-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:20:37Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of workspace hub decomposition to reduce parent link density from 41 outbound to ≤10."
+      },
+      {
+        "at": "2026-03-12T03:55:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the runtime-lanes summary to satisfy validator length requirements while preserving the existing execution-substrate boundary."
+      }
+    ]
+  },
+  "integrity_sha3_512": "141fd65535cc57f35472ed44192635c027557c3833983f86a8952bb01f85de2d654cb4d8736a2d64c6178e611acd213252cd3aa2dd3e49dbaa3ce9d474ea07d0"
+}

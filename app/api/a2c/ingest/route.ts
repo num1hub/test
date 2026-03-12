@@ -82,6 +82,18 @@ export async function POST(request: Request) {
     const body = (await request.json()) as IngestBody;
     const operatorInput = isRecordObject(body.operatorInput) ? body.operatorInput : null;
     const operatorText = operatorInput && typeof operatorInput.text === 'string' ? operatorInput.text.trim() : '';
+    const capsules = Array.isArray(body.capsules)
+      ? body.capsules
+      : body.capsule !== undefined
+        ? [body.capsule]
+        : [];
+
+    if (operatorText && capsules.length > 0) {
+      return NextResponse.json(
+        { error: 'A2C ingest accepts either operatorInput or capsule candidates per request, not both.' },
+        { status: 400 },
+      );
+    }
 
     if (operatorText) {
       const source = isRecordObject(operatorInput?.source) ? operatorInput.source : null;
@@ -112,12 +124,6 @@ export async function POST(request: Request) {
         { status: 202 },
       );
     }
-
-    const capsules = Array.isArray(body.capsules)
-      ? body.capsules
-      : body.capsule !== undefined
-        ? [body.capsule]
-        : [];
 
     if (capsules.length === 0) {
       return NextResponse.json({ error: 'A2C ingest requires one or more capsule candidates.' }, { status: 400 });

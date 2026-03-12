@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.personal-ai-assistant.execution-orchestration.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-11T20:40:00Z",
+    "name": "Personal AI Assistant Execution Orchestration",
+    "semantic_hash": "assistant-execution-orchestration-delegation-runtime-swarm-synthesis-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.personal-ai-assistant.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Personal AI Assistant Execution Orchestration\n\n## 1. Role\nPersonal AI Assistant Execution Orchestration owns the handoff surfaces that move work out of conversation and into deeper runtime lanes. It keeps delegation, mining, swarm routing, stewardship, A2C mutation handoff, and live session return paths together so the assistant can coordinate bounded execution without becoming the fleet manager itself.\n\n## 2. Execution Orchestration Surface\nThis sub-hub groups `agent-delegation`, `deepmine`, `deepmine-foreman-agent`, `n-infinity`, `background-agent-runtime`, `symphony`, `key-agents`, `vault-stewardship-swarm`, `a2c`, `agent-subagents`, and `symphony-agent-session`. Together they define how the assistant hands off work, receives results, escalates to specialist lanes, and stays assignment-aware across background runtime and code-execution surfaces.\n\n## 3. Operating Boundary\nThis sub-hub does not own the human-facing chat shell, the assistant's memory contract, or final governance authority over review and branch posture. Those remain in `conversation-ingress`, `memory-continuity`, and `governance-control`."
+  },
+  "neuro_concentrate": {
+    "summary": "Personal AI Assistant Execution Orchestration groups the deeper work lanes behind the assistant: Agent Delegation, DeepMine, N-Infinity, Background Agent Runtime, Symphony, Key Agents, Vault Stewardship Swarm, A2C, Agent Subagents, and Symphony Agent Session. It keeps bounded handoff and assignment-aware return paths together without letting the assistant collapse into low-level fleet administration. This boundary matters because the assistant should coordinate specialist work confidently while still leaving runtime control, review authority, and operator trust surfaces explicit.",
+    "keywords": [
+      "personal-ai-assistant",
+      "execution-orchestration",
+      "agent-delegation",
+      "deepmine",
+      "n-infinity",
+      "background-agent-runtime",
+      "symphony"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "assistant-execution-orchestration-delegation-runtime-swarm-synthesis-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-subagents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T20:40:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Personal AI Assistant decomposition to isolate delegation, swarm, runtime, stewardship, and A2C handoff surfaces from conversation and governance control."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

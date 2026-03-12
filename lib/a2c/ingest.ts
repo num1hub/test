@@ -133,17 +133,19 @@ const deriveExecutionBandHint = (text: string): A2CExecutionBandHint | null => {
 
 const deriveRouteClassHint = (text: string, taskRefs: string[], fileHints: string[], verificationHints: string[]): A2CRouteClassHint => {
   const lower = text.toLowerCase();
-  if (taskRefs.length > 0 || fileHints.length > 0 || verificationHints.length > 0 || /\b(implement|fix|write|add|update|test|harden|route|contract)\b/.test(lower)) {
-    return 'queue_execution';
+  if (/\b(sync|orchestrate|route this|choose the lane)\b/.test(lower)) {
+    return 'orchestrate_or_sync';
   }
   if (/\b(capsule|vault|preserve)\b/.test(lower) && !/\b(queue|task|todo)\b/.test(lower)) {
     return 'capsule_projection';
   }
-  if (/\b(sync|orchestrate|route this|choose the lane)\b/.test(lower)) {
-    return 'orchestrate_or_sync';
-  }
-  if (/\b(explain|compare|why|think|plan|architecture)\b/.test(lower)) {
+  const asksForSynthesis = /\b(explain|compare|why|think|plan|architecture)\b/.test(lower);
+  const explicitExecutionVerb = /\b(implement|fix|write|add|update|test|harden|route|contract)\b/.test(lower);
+  if (asksForSynthesis && (/\bbefore coding\b|\bbefore implementation\b/.test(lower) || !explicitExecutionVerb)) {
     return 'assistant_synthesis';
+  }
+  if (taskRefs.length > 0 || fileHints.length > 0 || verificationHints.length > 0 || explicitExecutionVerb) {
+    return 'queue_execution';
   }
   return 'defer_for_clarity';
 };

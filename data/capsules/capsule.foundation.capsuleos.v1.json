@@ -1,39 +1,38 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.v1",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
-    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity",
-    "updated_at": "2026-03-09T20:58:00Z",
+    "semantic_hash": "capsuleos-routing-law-admission-stewardship-runtime-substrate-contract",
+    "updated_at": "2026-03-12T00:55:00Z",
     "name": "CapsuleOS Foundation",
     "priority": "high",
-    "progress": 72,
+    "progress": 77,
     "estimatedHours": 520,
-    "actualHours": 330,
+    "actualHours": 354,
     "dueDate": "2026-08-10",
     "tier": 1
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS: The Sovereign Operating System for Knowledge\n\n## 1. Essence\nCapsuleOS is the operating law of the N1Hub vault. It turns scattered files, notes, ideas, and project fragments into structured **capsules** that can be read by humans, validated by machines, and improved by agents over time. In practice, CapsuleOS is what lets the vault behave like a disciplined second brain instead of a pile of documents.\n\n## 2. The 5-Element Law\nEvery capsule must contain exactly five root keys:\n- **metadata**: identity, version, status, authorship, timestamps, semantic hash, and optional source or override\n- **core_payload**: the actual content with an explicit content type\n- **neuro_concentrate**: AI-readable essence with summary, keywords, and a 6-dimensional confidence vector\n- **recursive_layer**: typed links that place the capsule inside a living graph\n- **integrity_sha3_512**: a cryptographic seal over the other four elements\n\n## 3. The 16 Gates\nBefore a capsule can be trusted by the Cognitive Plane, it must pass deterministic gates for shape, typing, provenance, semantic hash parity, link resolution, confidence structure, and cryptographic integrity. These gates are the acceptance boundary between random structure and sovereign memory.\n\n## 4. Canonical Live Contract\nIn the current repository, **Real** is the canonical statement of CapsuleOS law. That live contract already includes:\n- validator sovereignty over capsule admissibility and trust\n- the 5-element root contract and 16-gate validation boundary\n- branch-aware lifecycle law across ingest, Dream landing, review, promotion, quarantine, and archive\n- graph integrity strong enough for planning, retrieval, review, and autonomous upkeep\n- a repo-wide rule that exploratory futures can live in **Dream**, but trust only lands through governed validation and promotion discipline\n\n## 5. Branches and Lifecycle\nCapsuleOS governs the full lifecycle of vault knowledge:\n- ingestion from conversation, files, the web, or mining lanes\n- refinement through DeepMine and A2C\n- safe landing in **Dream** for exploratory, draft, speculative, or future-facing material\n- validation, review, and branch discipline before promotion\n- promotion into **Real** only when the material is confirmed, legible, and trustworthy\n- quarantine or archive when quality, contradiction pressure, or historical status requires it\n\n## 6. Human and Agent Stewardship\nCapsuleOS is designed for symbiosis. During the day, Personal AI Assistant and Chat to Capsules help a human inspect, retrieve, draft, and approve capsule work. At night, Vault Stewardship Swarm, Branch Steward Agent, Validation Gatekeeper Agent, and other bounded workers can continue careful maintenance so the vault grows cleaner and stronger over time without collapsing branch discipline.\n\n## 7. Graph and Memory Value\nThe recursive layer turns isolated capsules into a navigable memory graph. That graph is the foundation for planning, retrieval, execution, review, and autonomous upkeep. CapsuleOS therefore is not only a schema. It is the law that makes N1Hub's second brain durable enough to survive scale, multiple agents, and long-term evolution."
+    "content": "# CapsuleOS\n\n## 1. Role\nCapsuleOS is the operating law of the N1Hub vault. It now routes that law through four bounded sub-hubs so law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate remain explicit instead of collapsing into one 21-link parent hub.\n\n## 2. Routing Surfaces\n- `law-surfaces` owns the five-element contract, gate law, schema/spec contracts, semantic-hash discipline, and capsule-generation doctrine.\n- `admission-lifecycle` owns the route from refinery output into branch posture, validation judgment, and governed promotion discipline.\n- `stewardship-interfaces` owns the human and agent surfaces that inspect, maintain, and navigate CapsuleOS law during live runtime.\n- `runtime-substrate` owns the storage, compute, audit, testing, and security substrate that lets CapsuleOS operate durably at scale.\n\n## 3. Parent Boundary\nThe parent CapsuleOS hub keeps only the top-level relationship to N1Hub, To Dig Deep, the CapsuleOS project envelope, and the four law sub-hubs. Detailed operating-law routing now flows through those sub-hubs so CapsuleOS remains the sovereign memory contract for the vault rather than a flat registry of every adjacent runtime and governance surface."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS is the operating law that turns N1Hub into a structured second brain. In the current repository, the Real branch is the canonical statement of that law: the five-element capsule contract, the sixteen validation gates, validator sovereignty, branch-aware lifecycle discipline, and graph-grounded stewardship already define how trust enters the vault. Dream may extend future doctrine, but live admissibility and promotion still flow through CapsuleOS as governed memory law rather than through informal agent practice or speculative branch folklore.",
+    "summary": "CapsuleOS now acts as a bounded routing hub for four explicit law surfaces: law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate. The parent keeps only top-level ties to N1Hub, To Dig Deep, the CapsuleOS project envelope, and the four sub-hubs. This makes operating law easier to inspect because five-element doctrine, trust admission, human and agent stewardship, and substrate requirements no longer hide inside one overloaded parent capsule. The result is a cleaner constitutional map for how sovereign memory enters, survives, and evolves inside the vault.",
     "keywords": [
       "capsuleos",
-      "second-brain",
+      "hub-decomposition",
+      "law-surfaces",
+      "admission-lifecycle",
+      "stewardship-interfaces",
+      "runtime-substrate",
       "5-element-law",
       "16-gates",
-      "dream-real-lifecycle",
-      "cryptographic-seal",
-      "knowledge-graph",
-      "vault-stewardship",
-      "validation",
-      "n1hub"
+      "sovereign-memory"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -43,7 +42,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsuleos-core-five-elements-validation-gates-graph-integrity"
+    "semantic_hash": "capsuleos-routing-law-admission-stewardship-runtime-substrate-contract"
   },
   "recursive_layer": {
     "links": [
@@ -56,84 +55,39 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos.semantic-hash.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos-schema.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsuleos-spec.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.project.capsuleos.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-database.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.sleep-time-compute.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.audit-log.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.testing.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.security.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.project.capsuleos.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.law-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.admission-lifecycle.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.stewardship-interfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.runtime-substrate.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T00:55:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored CapsuleOS into four bounded sub-hubs so law surfaces, admission lifecycle, stewardship interfaces, and runtime substrate no longer collapse into a 21-link parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "05049e9a2f1df448d3b118d768ad4fcce0c29dac1f735a8b57acbc04bbc9685bf835fd400caf04d11cb455b3362e54f199a7c8036b03a17d08b8e96d2e85c2e1"
+  "integrity_sha3_512": "1dade62a0f4b92ff7e96010a279adba8992fdcdfe15d3b3bfc1aeff4dc7042c2f019f8893152737da974984b42c384fa095a7d3b5e038ac474b1f86f44e9a7bb"
 }

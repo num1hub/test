@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Symphony Agent Session",
     "semantic_hash": "symphony-agent-session-thread-turn-runtime-codex-workspace",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Agent Session\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Agent Session as a richer live runtime object that remains visible across terminal, web, mobile, and control-plane views while work is still in flight.\n\n## 2. Desired Future State\n- assignment handles that preserve where a session came from and where its outputs should return\n- richer event and artifact projection instead of only token counters and last message\n- better continuity for async coding work started from issues, comments, or other agent surfaces\n- stronger linkage between session telemetry, review requests, and downstream control surfaces\n\n## 3. Why It Matters\nDream preserves the idea that a live coding session should remain accountable and discoverable while it is running, not only after the attempt ends. That is the difference between a durable coding lane and a black-box prompt call.\n"
+    "content": "# Symphony Agent Session\n\n## 1. Role\nSymphony Agent Session will become the durable live execution envelope for one coding-agent conversation inside one repository assignment, visible across terminal, web, mobile, and control-plane surfaces while work is still in flight.\n\n## 2. Future Session Contract\nSessions will carry assignment handles, richer event and artifact projection, degraded-state visibility, clearer return paths, and stronger linkage between session telemetry, review requests, and downstream operator surfaces.\n\n## 3. Operational Consequence\nSymphony will move from tracking a live thread to managing a searchable, accountable session object whose running state, outputs, failures, and recovery paths remain visible throughout execution.\n\n## 4. Philosophical Alignment\nSymphony Agent Session supports To Dig Deep by making live coding work stateful, inspectable, and attributable while it is still happening."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Agent Session in the Dream branch preserves a richer live execution envelope for one coding-agent conversation inside one issue workspace. It imagines assignment handles, cross-surface continuity, stronger artifact projection, explicit degraded-session state, clearer session discoverability, and a cleaner link between live coding work and the control surfaces that supervise it. The capsule matters because Symphony should evolve from tracking a live thread to managing a durable, accountable, searchable session object whose running state, review signals, degraded-path recoveries, and outputs remain visible while work is still in flight.",
+    "summary": "Symphony Agent Session defines the future live execution envelope for repository work: assignment handles, richer artifact projection, degraded-session state, cross-surface continuity, and clearer linkage between active coding work and the control surfaces that supervise it.",
     "keywords": [
       "symphony",
       "agent-session",
@@ -90,7 +90,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "18aa6e25f33d9312f086e8d3a663169347399fbbb323322bab2e9cf213215a922ea663bab32979bac75d35669636d5cd3ceba95fb59e1bdc28018e898a858f5c"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

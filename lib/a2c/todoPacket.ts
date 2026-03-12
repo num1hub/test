@@ -86,6 +86,17 @@ const isActionable = (normalized: A2COperatorInputNormalized): { ready: boolean;
   }
 
   if (
+    /\bbefore coding\b|\bbefore implementation\b/i.test(normalized.objective) ||
+    (/\b(explain|compare|think|plan|architecture)\b/i.test(normalized.objective) &&
+      !/\b(implement|fix|write|add|update|test|harden|route|contract)\b/i.test(normalized.objective))
+  ) {
+    return {
+      ready: false,
+      reason: 'objective is still synthesis-oriented and should not promote into queue execution yet',
+    };
+  }
+
+  if (
     normalized.scope_hints.length === 0 &&
     normalized.acceptance_criteria_hints.length === 0 &&
     normalized.verification_hints.length === 0

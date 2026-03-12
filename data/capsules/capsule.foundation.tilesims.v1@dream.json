@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
     "semantic_hash": "tilesims-digital-twin-spatial-os-blueprint-gold-core",
-    "updated_at": "2026-03-07T18:46:00Z",
+    "updated_at": "2026-03-11T21:25:00Z",
     "name": "TileSims Foundation",
     "priority": "medium",
     "progress": 19,
@@ -22,7 +22,7 @@
     "content": "# TileSims: The Spatial Operating System and Digital Twin Platform\n\n## 1. Definition and Essence\nTileSims is the flagship, real-world instantiation of the CapsuleOS architecture applied to physical space. It is an industrial-grade digital twin platform that transforms the entropic chaos of construction and interior design into a cryptographically sealed, millimeter-accurate spatial graph. TileSims proves that the 5-Element Law extends beyond abstract knowledge into concrete reality.\n\n## 2. Core Principles and Architecture\nIn TileSims, physical reality is parsed through the A2C pipeline using LiDAR scans, blueprints, and photogrammetry. \n- **Physical Object Capsules**: Every tangible element—a load-bearing wall, a cold-water pipe, a ceramic tile, an electrical socket—is instantiated as an `atomic` capsule of `type: \"physical_object\"`. These capsules store exact geometric coordinates, material properties, and historical provenance.\n- **Spatial Hubs**: Rooms, floors, and entire buildings act as `hub` capsules, aggregating these physical atoms via strict topological links (e.g., `part_of`, `depends_on`).\n\n## 3. Real/Dream Branching (Git for Reality)\nTileSims pioneers the application of parallel state architecture to physical environments:\n- **The Real Branch**: Represents the immutable, verified baseline of the current physical space.\n- **The Dream Branch**: A speculative, mutable fork where architects, designers, and clients can experiment with layouts, move walls, or change materials.\n- **Algorithmic Estimation**: A recursive diff algorithm computes the exact delta between the Real and Dream graphs, instantly generating flawless material manifests, financial estimates, and labor requirements.\n\n## 4. Ecosystem Interactions\nTileSims natively integrates with the broader N1Hub ecosystem:\n- **DeepMine & A2C**: Processes raw spatial data into structured capsules.\n- **N-Infinity**: Spatial agents act as structural engineers, continuously scanning the Dream graph to detect physical contradictions (e.g., a water pipe intersecting electrical wiring) and proposing optimized layouts.\n\n## 5. Philosophical Alignment and Future Vision\nTileSims embodies the \"To Dig Deep\" philosophy by refusing to accept surface-level, 2D architectural approximations. It drills down to the atomic level of physical space, moving the construction industry \"Between Zero and One.\" As it evolves, TileSims aims to become the definitive Spatial OS, establishing a universal, sovereign standard for Building Information Modeling (BIM) and augmented reality environments."
   },
   "neuro_concentrate": {
-    "summary": "TileSims Foundation in the Dream branch is archived alongside the real line so the future spatial-OS vision stays preserved without remaining live. It still captures the more ambitious target state where physical-object capsules, geometry capture, branching, cost intelligence, and field execution converge into one graph-native substrate. The capsule matters because the spatial line remains strategically meaningful even while paused. In archive mode Dream keeps the future doctrine intact as dormant leverage rather than active near-term planning.",
+    "summary": "TileSims Foundation is archived alongside the real line as dormant leverage for a spatial operating system. It still captures the target state where physical-object capsules, geometry capture, branching, cost intelligence, and field execution converge into one graph-native substrate. The capsule matters because the spatial line remains strategically meaningful even while paused. In archive mode the capsule keeps the spatial-OS doctrine intact as dormant leverage rather than active near-term planning, preserving a technically legible return path.",
     "keywords": [
       "tilesims",
       "digital-twin",
@@ -77,7 +77,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:25:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware archive phrasing so TileSims states dormant spatial-OS doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "1490bec7bcb2a102efff52d0a2517e71868e5bce28c23e74560f9b92b1cdd03e36ed8e2525174be0bd37750309a5ae62547315019486eac4340cb415daf1515c"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

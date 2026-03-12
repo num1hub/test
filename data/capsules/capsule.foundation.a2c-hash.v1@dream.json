@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-hash.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.850Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "A2C Stage: Hash",
     "semantic_hash": "capsule-foundation-a2c-hash-v1-stage-semantic-integrity",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Hash\n\n## 1. Definition and Essence\nThe Hash stage computes semantic and integrity seals for capsule candidates using canonical serialization and cryptographic hashing. It guarantees deterministic identity signals before validation and persistence.\n\n## 2. Core Attributes\n- `semantic_hash` generation inputs and tokenization profile\n- `integrity_sha3_512` computed from canonical 5-element payload subset\n- `hash_profile` indicating algorithm and canonicalization version\n- `hash_mismatch_flags` for parity and integrity inconsistencies\n- `seal_timestamp` for audit traceability\n\n## 3. Lifecycle\nHash receives linked candidate capsules, computes semantic and integrity digests, syncs parity fields, and emits sealed candidates to validation. Any digest mismatch becomes a hard pre-storage failure.\n\n## 4. Integration\n- **Link Stage:** receives graph-complete capsule drafts.\n- **Validate Stage:** supplies cryptographically sealed candidates for gate checks.\n- **CapsuleOS Semantic Hash:** aligns 8-token semantic digest format.\n- **Capsule Validator G16:** enforces integrity seal parity.\n\n## 5. Philosophical Alignment\nHashing supports To Dig Deep by making meaning and integrity explicit, preventing invisible drift between what a capsule claims and what it actually contains.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Hash in the Dream branch describes a more rigorous sealing layer for candidate capsules. It pushes toward clearer parity between semantic identity and cryptographic identity, stronger mismatch detection, and tighter diagnostics around canonicalization before artifacts move into validation. The stage matters because trust decays quickly when identity signals drift. Dream therefore preserves Hash as a future integrity discipline that makes seal generation more transparent, comparable, and operationally reliable across branches, histories, and downstream tooling.",
+    "summary": "A2C Stage: Hash defines the sealing layer for candidate capsules. It strengthens parity between semantic identity and cryptographic identity, mismatch detection, and canonicalization diagnostics before artifacts move into validation. The stage matters because trust decays quickly when identity signals drift across systems. Hash therefore serves as the integrity discipline that makes seal generation transparent, comparable, and operationally reliable across branches, histories, and downstream tooling without confusing candidate identity with admission judgment.",
     "keywords": [
       "a2c",
       "hash",
@@ -61,7 +61,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Hash states its sealing doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "945f79a62ac490034a6b7eb58c4fab6bc1997ab89edbd75aac047a86df0ef5d83a1015ed933355a2065ed9fa9a7b9f5f9e757cc96a49b7d0168b805418621605"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

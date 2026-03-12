@@ -1,44 +1,38 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.tracker.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-09T21:25:00Z",
+    "updated_at": "2026-03-12T00:20:00Z",
     "name": "Tracker",
-    "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core",
+    "semantic_hash": "tracker-routing-objects-pressure-feedback-orchestration-history-loop",
     "priority": "high",
-    "progress": 64,
+    "progress": 69,
     "estimatedHours": 240,
-    "actualHours": 128,
+    "actualHours": 142,
     "dueDate": "2026-06-10",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: The Vigilant Sentinel of the Workspace\n\n## 1. Definition and Essence\nTracker is the execution telemetry and accountability layer of N1Hub. It watches goals, milestones, tasks, project state, issue state, and follow-through signals; computes drift and risk; and keeps real commitments visible over time. If Planner expresses intention, Tracker tells the truth about whether that intention is surviving contact with reality and whether the graph needs intervention.\n\n## 2. Core Functions\n- deadline and drift monitoring with configurable alert windows\n- progress tracking against estimated and actual effort\n- reminder and notification trigger generation for overdue, blocked, completed, or cooling commitments\n- historical review trails and temporal evidence for retrospectives\n- intake signals for Symphony issue work and capsule-vault maintenance\n- risk posture for N-Infinity, Reminder Agent, and assistant intervention\n- feedback loops into future planning, calendar pressure, and schedule revision\n- branch-aware follow-through logic so Dream intent is not confused with Real execution truth\n\n## 3. Data Model\nTracker consumes `dueDate`, `status`, `progress`, `estimatedHours`, `actualHours`, `completedAt`, recurrence, priority, and related metadata. It compares temporal state against current time, human rhythm, and planner expectations; generates reminders and notification-ready events; and can feed both repository issue orchestration and capsule-graph maintenance with evidence about what is stale, blocked, overloaded, or at risk. Its real value is not raw logging, but a usable evidence loop.\n\n## 4. N1Hub Role\nTracker is one of the organs that makes the second brain honest. Without it, the vault can accumulate beautiful plans that nobody can distinguish from real follow-through. With it, goals, milestones, tasks, and agent work become measurable, reviewable, and eligible for intervention, reassessment, or schedule compression.\n\n## 5. Integration\n- **Goal, Milestone, and Task:** provide the objects whose execution reality Tracker monitors.\n- **Planning Horizon Engine and Planner:** provide expectation, sequencing, and capacity context.\n- **Reminder, Notification, and Calendar:** turn telemetry into timing, prompts, and visible schedule pressure.\n- **Personal AI Assistant and AI Control Surface:** use tracker evidence to revise plans and explain reality.\n- **N-Infinity and Symphony:** consume tracker signals as risk, queue, and orchestration input.\n\n## 6. Philosophical Alignment\nTracker supports To Dig Deep by forcing intention to answer to evidence through an explicit `plan -> track -> remind -> review -> adjust` loop.\n\n## 7. Real Canonical Rule\nReal owns the current tracker contract: measured follow-through, deadline drift, risk telemetry, branch-aware execution truth, and the live orchestration signals already consumed by Symphony, N-Infinity, reminders, and assistant-facing replanning. Dream may continue to explore earlier prediction and smarter intervention, but Real is the canonical source for how Tracker currently keeps N1Hub honest.\n"
+    "content": "# Tracker\n\n## 1. Role\nTracker is the execution telemetry and accountability layer of N1Hub. It now routes that telemetry through five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence remain explicit instead of collapsing into one 22-link parent hub.\n\n## 2. Routing Surfaces\n- `tracked-objects` owns the goals, milestones, tasks, and project objects whose follow-through Tracker measures.\n- `schedule-pressure` owns reminders, notifications, and calendar pressure that turn telemetry into visible timing consequences.\n- `planning-feedback` owns replanning and operator explanation loops with Planner, Planning Horizon Engine, Personal AI Assistant, and AI Control Surface.\n- `orchestration-signals` owns the execution-risk feeds that Tracker emits toward N-Infinity, Symphony, capsule jobs, and graph-maintenance work.\n- `historical-intelligence` owns metrics, analytics, and archive memory so time-series evidence remains available for retrospection and learning.\n\n## 3. Parent Boundary\nThe parent Tracker hub keeps only the top-level relationship to Workspace, CapsuleOS, To Dig Deep, and the five tracker sub-hubs. Detailed execution routing now flows through those sub-hubs so Tracker remains the honesty contract for N1Hub execution instead of a flat registry of every timing, orchestration, and history surface."
   },
   "neuro_concentrate": {
-    "summary": "Tracker is the monitoring and accountability layer of N1Hub Workspace and now explicitly serves as the canonical real-side statement of the live tracking contract. It watches goals, milestones, tasks, issue state, deadline drift, branch posture, and execution risk, then generates reminders, alerts, and analytics that keep action aligned with plan. This capsule matters because the second brain becomes unreliable if it can express intention but cannot measure follow-through, so Tracker remains the bridge from planning to evidence, intervention, schedule pressure, and orchestration input.",
+    "summary": "Tracker now acts as a bounded routing hub for five explicit telemetry surfaces: tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence. The parent keeps only top-level ties to Workspace, CapsuleOS, To Dig Deep, and the five sub-hubs. This makes execution truth easier to inspect because follow-through evidence, timing pressure, replanning loops, runtime risk feeds, and historical memory no longer hide inside one overloaded parent capsule. The result is a cleaner contract for how N1Hub measures reality and turns that reality into corrective action.",
     "keywords": [
       "tracker",
-      "real-canonical",
-      "deadlines",
-      "progress",
+      "hub-decomposition",
+      "tracked-objects",
+      "schedule-pressure",
+      "planning-feedback",
       "orchestration-signals",
-      "capsule-jobs",
-      "graph-maintenance",
-      "analytics",
-      "workspace",
-      "symphony",
-      "n1hub",
-      "follow-through",
+      "historical-intelligence",
       "evidence-loop",
-      "calendar-pressure",
-      "branch-aware"
+      "workspace"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -48,65 +42,13 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core"
+    "semantic_hash": "tracker-routing-objects-pressure-feedback-orchestration-history-loop"
   },
   "recursive_layer": {
     "links": [
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.goal.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.milestone.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.task.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-control-surface.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.project.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-job.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-run-attempt.v1",
-        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.capsuleos.v1",
@@ -117,27 +59,23 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.reminder.v1",
+        "target_id": "capsule.foundation.tracker.tracked-objects.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.notification.v1",
+        "target_id": "capsule.foundation.tracker.schedule-pressure.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.calendar.v1",
+        "target_id": "capsule.foundation.tracker.planning-feedback.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.metric.v1",
+        "target_id": "capsule.foundation.tracker.orchestration-signals.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.analytics.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.archive.v1",
+        "target_id": "capsule.foundation.tracker.historical-intelligence.v1",
         "relation_type": "references"
       }
     ],
@@ -149,8 +87,14 @@
         "agent": "n1",
         "run_id": "TODO-026",
         "rationale": "The real Tracker hub now explicitly owns the live accountability and orchestration contract already reflected in Symphony tracker mode, reminders, and branch-aware follow-through law. Dream remains valuable as predictive execution doctrine, but it should no longer be read as the canonical statement of current tracking behavior."
+      },
+      {
+        "at": "2026-03-12T00:20:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Tracker into five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence no longer collapse into a 22-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "b932cb611bae8867e3b353fbacd79e67167d3d1b7dec4860ab66f4bc377e06c087ac924973ab24f85f861d888d3602d1da07130d0f3425f50392891ed6d55c84"
+  "integrity_sha3_512": "a8ff27c890eb5886ce5bfc1dddafdfd07a7e0f4f771129ec70dedfa4872f2c231471f32fa65ec0b822cdce85989fc37f7a1e5ad944d8b3bd2304ee9b8ebf2e2b"
 }

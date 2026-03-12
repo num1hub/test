@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.tracker.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-09T21:25:00Z",
+    "updated_at": "2026-03-12T00:20:00Z",
     "name": "Tracker",
-    "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core",
+    "semantic_hash": "tracker-routing-objects-pressure-feedback-orchestration-history-loop",
     "priority": "high",
-    "progress": 46,
+    "progress": 52,
     "estimatedHours": 400,
     "actualHours": 128,
     "dueDate": "2026-09-01",
@@ -19,22 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Tracker: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical tracker contract for live accountability, branch-aware execution truth, reminder triggers, and orchestration signals. Dream therefore should not restate the current tracking runtime as if it were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future Tracker delta such as:\n- earlier drift detection before deadlines harden into missed commitments,\n- predictive overload and capacity warnings before schedules break down,\n- smarter reminder and notification strategies tied to human rhythm and actual execution patterns,\n- stronger closed-loop learning from repeated success and failure patterns across goals, milestones, tasks, and agent work,\n- richer intervention suggestions for assistant, planner, Symphony, and N-Infinity when follow-through starts degrading.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current tracking contract,\n- collapse live accountability into broad predictive marketing,\n- reintroduce future speculation as if it were already measured runtime truth.\n\n## 4. Dream Lens\nThe useful Dream stance is to preserve predictive execution intelligence and earlier intervention doctrine while letting Real stay canonical for the tracking behavior that already exists now."
+    "content": "# Tracker\n\n## 1. Role\nTracker is the predictive execution and accountability layer of N1Hub. It routes that execution field through five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence remain explicit instead of collapsing into one parent hub.\n\n## 2. Routing Surfaces\n- `tracked-objects` owns the goals, milestones, tasks, and project objects whose follow-through Tracker measures.\n- `schedule-pressure` owns reminders, notifications, and calendar pressure that turn telemetry into visible timing consequences.\n- `planning-feedback` owns replanning and operator explanation loops with Planner, Planning Horizon Engine, Personal AI Assistant, and AI Control Surface.\n- `orchestration-signals` owns the execution-risk feeds that Tracker emits toward N-Infinity, Symphony, capsule jobs, and graph-maintenance work.\n- `historical-intelligence` owns metrics, analytics, and archive memory so time-series evidence remains available for retrospection and learning.\n\n## 3. Parent Boundary\nThe parent Tracker hub keeps only the top-level relationship to Workspace, CapsuleOS, To Dig Deep, and the five tracker sub-hubs. Detailed execution routing now flows through those sub-hubs so Tracker remains the predictive execution contract for N1Hub instead of a flat registry of every timing, orchestration, and history surface."
   },
   "neuro_concentrate": {
-    "summary": "Tracker in the Dream branch now stands as the future overlay for predictive execution intelligence rather than the canonical source of current tracking truth. Real owns the live accountability contract, while Dream preserves the higher bar of earlier drift detection, overload warning, adaptive reminders, better calendar-pressure handling, and stronger closed-loop learning from success and failure patterns. This keeps Dream useful as future intervention doctrine without letting it replace the sharper real-side description of measured runtime behavior.",
+    "summary": "Tracker routes the execution field through five bounded surfaces: tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the five sub-hubs. This makes future tracking doctrine more legible because predictive execution, timing pressure, replanning loops, runtime risk feeds, and historical memory no longer hide inside one overloaded parent capsule. The result is a cleaner contract for how execution evidence turns into earlier intervention and better recovery.",
     "keywords": [
       "tracker",
-      "future-overlay",
-      "predictive-tracking",
-      "drift-detection",
-      "adaptive-reminders",
-      "calendar-pressure",
-      "intervention-doctrine",
-      "closed-loop-learning",
-      "workspace",
-      "n1hub",
-      "real-canonical"
+      "hub-decomposition",
+      "tracked-objects",
+      "schedule-pressure",
+      "planning-feedback",
+      "orchestration-signals",
+      "historical-intelligence",
+      "predictive-execution"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -44,41 +41,13 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "tracker-deadlines-reminders-progress-notifications-sentinel-gold-core"
+    "semantic_hash": "tracker-routing-objects-pressure-feedback-orchestration-history-loop"
   },
   "recursive_layer": {
     "links": [
       {
         "target_id": "capsule.foundation.workspace.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.goal.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.milestone.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.task.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.project.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.capsuleos.v1",
@@ -89,27 +58,23 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.reminder.v1",
+        "target_id": "capsule.foundation.tracker.tracked-objects.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.notification.v1",
+        "target_id": "capsule.foundation.tracker.schedule-pressure.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.calendar.v1",
+        "target_id": "capsule.foundation.tracker.planning-feedback.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.metric.v1",
+        "target_id": "capsule.foundation.tracker.orchestration-signals.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.analytics.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.archive.v1",
+        "target_id": "capsule.foundation.tracker.historical-intelligence.v1",
         "relation_type": "references"
       }
     ],
@@ -121,8 +86,20 @@
         "agent": "n1",
         "run_id": "TODO-026",
         "rationale": "The Dream Tracker capsule was narrowed to future-only predictive execution doctrine after Real became the explicit canonical source for the current tracking contract. This preserves the predictive roadmap without leaving the branch split implicit."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-12T00:20:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Tracker into five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence no longer collapse into one parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "5d5fcacc7b15ee8b7da2fd3b295756026a618b44be0e52f7fd268885f6b8f0035268bba85c3f6552ce90b03ad28b429b5b0351e3896e54e3ad9e61aba934eac8"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

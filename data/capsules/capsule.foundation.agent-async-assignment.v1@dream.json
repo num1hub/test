@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T21:40:00Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Async Assignment",
-    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return",
+    "semantic_hash": "agent-async-assignment-durable-cross-surface-lineage-routing",
     "source": {
       "uri": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/",
       "type": "web_article"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Async Assignment\n\n## 1. Dream Direction\nThe Dream branch imagines asynchronous assignment as a native interaction style across N1Hub. Work should be assignable from issues, comments, mobile controls, assistant prompts, and operator surfaces, then continue autonomously until it produces a draft artifact, a capsule update batch, or a clarification request.\n\n## 2. Future Responsibilities\n- stable assignment handles that survive client switches and daemon restarts\n- issue and comment triggered assignments across repository and capsule surfaces\n- cross-client continuation without losing history or ownership\n- status and notification projection into mobile and operator dashboards\n- assignment-aware review and merge pipelines\n- bounded artifact return into Dream-side batches, pull requests, plans, and review surfaces\n- explicit routing of assignments into the right daemon family and wallet lane\n- assignment lineage that stays visible in the control plane from request to artifact return\n\n## 3. N1Hub Vision\nAs the swarm grows, users should not need to stay inside one synchronous chat to get real work done. Assignment becomes its own object, and the system becomes capable of receiving work anywhere, routing it into the right lane, running it in the background, and returning results or questions in the right place.\n\n## 4. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by allowing deep work to continue independently while still preserving origin, accountability, ownership, routing posture, and review."
+    "content": "# Agent Async Assignment\n\n## 1. Role\nN1Hub will treat asynchronous assignment as a first-class work object that can begin from issues, comments, tasks, assistant actions, mobile controls, or operator surfaces and then continue independently until it returns a bounded artifact or a clarification request.\n\n## 2. Durable Assignment Contract\n- stable assignment handles that survive client switches and daemon restarts\n- visible assignment origin, owner, due window, and lane selection\n- artifact return tied to the same assignment chain\n- clarification loops that route back to the originating surface\n- status projection across web, terminal, mobile, and daemon views\n\n## 3. Runtime Consequence\nAssignment-aware routing will let the control plane, wallet, and daemon layer choose the right execution lane for each job instead of treating all background work as interchangeable. The same assignment will remain legible from request to artifact return even when multiple surfaces and agents participate.\n\n## 4. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by letting deep work continue autonomously without losing origin, ownership, routing discipline, or reviewability."
   },
   "neuro_concentrate": {
-    "summary": "Agent Async Assignment in the Dream branch represents a future where N1Hub treats agent work as a durable assignment object rather than a transient chat action. It imagines issue-triggered, comment-triggered, mobile-triggered, and assistant-triggered work continuing autonomously with stable assignment handles, clear clarification loops, artifact return, review-aware status projection, honest no-work returns, and explicit daemon or wallet lane routing. The capsule matters because deeper autonomy requires assignment continuity, explicit return paths, visible ownership, stable assignment identity across clients, and cleaner handoff discipline between humans, assistants, and background lanes.",
+    "summary": "Agent Async Assignment defines the future durable assignment object for N1Hub: stable handles, cross-client continuation, assignment-aware routing, artifact return, status projection, and review-safe clarification loops across assistant, issue, mobile, terminal, and daemon surfaces.",
     "keywords": [
       "agent-async-assignment",
       "assignment-origin",
@@ -47,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-async-assignment-issue-comment-draft-clarification-return"
+    "semantic_hash": "agent-async-assignment-durable-cross-surface-lineage-routing"
   },
   "recursive_layer": {
     "links": [
@@ -89,7 +89,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "8f5fbe3344b313492129f52a78a6f1707c8e6f876e425a8a167d4dcb14f0103ba645c0eb3e5eda28b7b654767237059e940812ff03d05f768e5077216ca7a460"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

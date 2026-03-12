@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-extract.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.845Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "A2C Stage: Extract",
     "semantic_hash": "capsule-foundation-a2c-extract-v1-stage-entities-evidence",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Extract\n\n## 1. Definition and Essence\nThe Extract stage identifies explicit entities, claims, relations, and structural cues from segmented inputs. It prioritizes fidelity to source evidence and records confidence signals for each extracted fragment.\n\n## 2. Core Attributes\n- `entity_candidates` and relation candidates with offsets\n- `extraction_confidence` metrics by fragment\n- `evidence_spans` linking extracted claims back to source segments\n- `ambiguity_notes` for contested interpretations\n- `extract_model_profile` describing model/tool configuration\n\n## 3. Lifecycle\nExtract executes deterministic and model-assisted parsing over segments, writes evidence-linked fragments, and emits structured candidates for synthesis. Low-confidence fragments remain traceable for human or agent arbitration.\n\n## 4. Integration\n- **Segment Stage:** receives ordered chunks.\n- **Synthesize Stage:** forwards extracted fragments for composition.\n- **Epistemic Ledger:** can feed contradiction-aware arbitration signals.\n- **Capsule Validator:** supports provenance and semantic constraints.\n\n## 5. Philosophical Alignment\nExtraction operationalizes To Dig Deep by anchoring every derived statement in observable evidence, reducing hallucination and preserving auditability.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Extract in the Dream branch captures a more ambitious evidence-mining layer for the refinery. It aims toward deeper claim isolation, stronger provenance anchors, better ambiguity surfacing, and more reliable separation between observed fact, inference, and unresolved uncertainty. The stage matters because extraction quality defines the raw truthfulness of everything synthesis sees later. Dream therefore preserves Extract as a future discipline of evidence harvesting rather than a simple entity-recognition pass.",
+    "summary": "A2C Stage: Extract defines the evidence-mining layer of the refinery. It sharpens claim isolation, provenance anchors, ambiguity surfacing, and separation between observed fact, inference, and unresolved uncertainty. The stage matters because extraction quality defines the raw truthfulness of everything synthesis sees later in the pipeline. Extract therefore serves as the discipline of evidence harvesting that preserves what is known, what is inferred, and what remains unresolved before candidate construction begins.",
     "keywords": [
       "a2c",
       "extract",
@@ -62,7 +62,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Extract states its evidence-mining doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "f24dcfeddfe057607bbc60849856c6d4e18de1dc11a487e7c54f119bcc0d5aa3b90d7f07c29457b3afd205c4b4eb24778d00728674051b6cf0955cdabd432326"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

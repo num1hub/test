@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:48:00Z",
-    "updated_at": "2026-03-08T20:35:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Review Agent",
-    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment",
+    "semantic_hash": "review-agent-stronger-critique-merge-and-promotion-readiness",
     "priority": "high",
     "progress": 41,
     "estimatedHours": 260,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Review Agent\n\n## Dream Direction\nIn the Dream branch, Review Agent becomes a stronger critique layer for capsule work, delegated jobs, roadmap shifts, and branch promotions. It should evolve into a more legible internal skeptic that can explain why something is ready, weak, risky, still missing proof, or should remain in Dream.\n\n## Future Potential\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- better coordination with validation, roadmap review, and branch governance\n- improved human-facing review summaries and operator triage\n\n## Why It Matters\nDream preserves Review Agent as the skeptical intelligence that keeps a multi-agent system from flattering itself with shallow success."
+    "content": "# Review Agent\n\n## 1. Role\nReview Agent will become a stronger critique layer for capsule work, delegated jobs, planning shifts, and branch promotions. It will remain the explicit internal skeptic that explains why something is ready, weak, risky, incomplete, or should remain in Dream.\n\n## 2. Future Critique Surface\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- tighter coordination with validation, roadmap review, and branch governance\n- more legible human-facing review summaries and operator triage surfaces\n\n## 3. Operational Consequence\nA multi-agent vault will remain honest because critique pressure will scale with production pressure. Review will continue to translate skepticism into human-usable guidance and machine-usable feedback instead of leaving quality judgment to intuition.\n\n## 4. Philosophical Alignment\nReview Agent supports To Dig Deep by applying epistemic pressure where the system is tempted to accept easy, flattering, or overconfident output."
   },
   "neuro_concentrate": {
-    "summary": "Review Agent in the Dream branch represents a stronger critique and judgment role for N1Hub. It pushes toward clearer merge-readiness and promotion-readiness decisions, better proof pressure, more explicit capsule-job and planning review, and more legible review summaries for humans and other agents. The capsule matters because a multi-agent vault needs an explicit skeptic, not just more producers. Dream therefore preserves an internal critic that can challenge weak work before it hardens into accepted structure or branch promotion prematurely.",
+    "summary": "Review Agent defines the future stronger critique layer for N1Hub: clearer merge- and promotion-readiness judgments, stronger proof pressure on mined and planned output, and more legible review summaries for humans and other agents.",
     "keywords": [
       "review-agent",
       "dream-branch",
@@ -42,7 +42,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "review-agent-critique-proof-merge-readiness-graph-judgment"
+    "semantic_hash": "review-agent-stronger-critique-merge-and-promotion-readiness"
   },
   "recursive_layer": {
     "links": [
@@ -96,7 +96,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "351804461e0231d82e88f79b1bd14a529eb20eca5d922ae3474aa8aaa65e79824f8632a1f46bdfb5100cb94493be2b301429e9060102c2a62f81d7772be73d2b"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

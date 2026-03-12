@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `ACTIVE`
+- Status: `DONE`
 - Owner Lane: `Cluster Refactor Agent`
 - Cluster: `#1 Vault Steward Runtime`
 

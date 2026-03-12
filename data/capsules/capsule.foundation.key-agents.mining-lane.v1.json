@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.key-agents.mining-lane.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:36:12Z",
+    "updated_at": "2026-03-11T14:36:12Z",
+    "name": "Key Agents Mining Lane",
+    "semantic_hash": "key-agents-mining-lane-prospector-miner-foreman-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.key-agents.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Key Agents Mining Lane\n\n## 1. Boundary\nKey Agents Mining Lane owns the discovery and extraction workers of the DeepMine stack. This sub-hub exists so scouting, excavation, and mining supervision stay visible as one bounded lane instead of disappearing into a generic list of agents.\n\n## 2. What Belongs Here\nThis sub-hub groups `deepmine-prospector-agent`, `deepmine-miner-agent`, and `deepmine-foreman-agent`. Together they define how the system scouts promising seams, performs bounded excavation, and supervises mining cost, quality, and branch posture.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own user-facing interaction, planning compression, graph-maintenance workers, validation authority, or the N-Infinity swarm. Those belong to `user-lane`, `planning-lane`, `stewardship-lane`, `governance-lane`, and `swarm-lane`."
+  },
+  "neuro_concentrate": {
+    "summary": "Key Agents Mining Lane groups the DeepMine discovery and extraction workers of N1Hub: prospector, miner, and foreman. It keeps mining responsibilities explicit and separate from assistant, planning, governance, and swarm lanes. This matters because scouting promising seams, executing bounded excavation, and supervising extraction quality form one coherent operating lane, and the lane boundary keeps discovery pressure visible without blurring it into user interaction, governance review, background orchestration, or strategic planning noise.",
+    "keywords": [
+      "key-agents",
+      "mining-lane",
+      "deepmine-prospector-agent",
+      "deepmine-miner-agent",
+      "deepmine-foreman-agent",
+      "discovery",
+      "extraction"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "key-agents-mining-lane-prospector-miner-foreman-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:36:12Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of key-agents hub decomposition to reduce parent link density from 28 outbound to ≤9."
+      }
+    ]
+  },
+  "integrity_sha3_512": "4c4b5b2fc1983c18afa55e1b55ec2952f4542acbb5fef060fa6f29d788c911d570f65ee04edafadebf172c90f36c8b2b4e1d40e07a5f1e3d3b79bf06849984e2"
+}

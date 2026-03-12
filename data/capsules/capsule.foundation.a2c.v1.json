@@ -1,19 +1,19 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c.v1",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
-    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold",
-    "updated_at": "2026-03-09T01:10:38.622Z",
+    "semantic_hash": "a2c-routing-readiness-refinement-candidate-admission-governance-fabric",
+    "updated_at": "2026-03-11T23:55:00Z",
     "name": "A2C Pipeline",
     "priority": "high",
-    "progress": 63,
+    "progress": 66,
     "estimatedHours": 310,
-    "actualHours": 190,
+    "actualHours": 202,
     "dueDate": "2026-07-18",
     "tier": 2,
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Essence\nA2C is the industrial-grade pipeline of the N1Hub ecosystem, acting as the structured refinery between raw digital material and graph-admissible capsules. It does not merely summarize files. It stages evidence, investigates risk, reasons under explicit prompt law, links candidates into the live graph, and only then attempts validation and emission.\n\n## 2. The 9-Step Pipeline\n1. **Ingest**: capture raw material and queue it with provenance.\n2. **Normalize**: detect modality, apply semantic lenses, and sanitize payload shape.\n3. **Segment**: split material without severing claim from evidence.\n4. **Extract**: isolate entities, claims, and supporting spans.\n5. **Synthesize**: assemble candidate capsules through Prompt Singularity and graph-aware reasoning.\n6. **Link**: situate the candidate against the live graph with contradiction checks.\n7. **Hash**: compute the provisional integrity seal over canonical geometry.\n8. **Validate**: force the candidate through structural, epistemic, and seal gates.\n9. **Emit**: publish accepted candidates or divert unsafe ones to quarantine.\n\n## 3. Pre-Mutation Control Loop\nThe live repo-native runtime now treats mutation as a gated sequence:\n- **Activation Readiness** verifies that the A2C skill surface is fully loaded and that mutation is even allowed.\n- **Workspace Recon** classifies whether the repository is a governed N1Hub workspace or still unknown, then builds the repo-native SSOT ladder.\n- **Deep Intake Investigation** scores duplicate, conflict, PII, volume, and governance risk before stage work begins.\n\nThis matters because the cheapest ingestion mistake is the one prevented before the first mutation.\n\n## 4. Refinery Discipline\nA2C treats each input as a proposed pull request against the graph rather than as a blind file upload. In practice that means deterministic routing into exact copy, increment, contradiction, resonance, or genuinely new material. It also means prompt behavior is compiled, not improvised: modality rules, anti-sycophancy directives, epistemic frontier context, and vault-backed few-shot examples are injected deliberately.\n\n## 5. Institutional Meaning\nWithin the broader Mining Company frame, DeepMine discovers and hauls ore, but A2C decides whether that material can survive normalization, extraction, synthesis, linking, hashing, and validation strongly enough to become part of sovereign memory. It is the bridge between raw signal and trustworthy capsule state.\n"
+    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Role\nA2C is the governed refinery that turns hostile, ambiguous, and high-volume source material into graph-admissible capsule state. It now routes that refinery through five bounded sub-hubs so readiness law, material preparation, candidate construction, governance handoff, and admission mechanics remain explicit instead of collapsing into one 23-link parent directory.\n\n## 2. Routing Surfaces\n- `readiness-control` owns activation readiness, workspace recon, and deep intake risk scoring before stage work begins.\n- `material-preparation` owns ingest, normalize, segment, and extract as the early mechanical refinery line.\n- `candidate-construction` owns synthesize, link, and graph-aware swarm support for candidate assembly.\n- `governance-handoffs` owns branch posture, validation judgment, and controlled vault landing once evidence exists.\n- `admission-emission` owns hash, validate, and emit as the terminal admission mechanics.\n\n## 3. Parent Boundary\nThe parent A2C hub keeps only the top-level relationship to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five refinery sub-hubs. Detailed stage routing now flows through those sub-hubs so A2C remains the refinery contract for sovereign memory rather than a flat list of every stage and policy surface."
   },
   "neuro_concentrate": {
-    "summary": "A2C is the refinery that turns raw material into graph-admissible capsule candidates, but the current runtime now begins with a stricter pre-mutation control loop. Activation readiness confirms the skill surface is loaded, workspace recon classifies the repository and its SSOT ladder, and deep intake investigation chooses a conservative, integration, or synthesis posture before stage work begins. After that, A2C still performs ingest, normalize, segment, extract, synthesize, link, hash, validate, and emit, but now under clearer prompt law and risk discipline. This makes the pipeline less like a file converter and more like a governed change-management system for sovereign memory.",
+    "summary": "A2C now acts as a bounded routing hub for five explicit refinery surfaces: readiness control, material preparation, candidate construction, governance handoffs, and admission emission. The parent keeps only top-level ties to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five sub-hubs. This makes the refinery easier to inspect because pre-mutation control, stage mechanics, policy routing, and terminal admission no longer hide inside one overloaded parent capsule.",
     "keywords": [
       "a2c",
       "capsule-refinery",
@@ -47,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "a2c-pipeline-raw-data-to-capsule-refinery-gold"
+    "semantic_hash": "a2c-routing-readiness-refinement-candidate-admission-governance-fabric"
   },
   "recursive_layer": {
     "links": [
@@ -68,55 +68,23 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
+        "target_id": "capsule.foundation.a2c.readiness-control.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-ingest.v1",
+        "target_id": "capsule.foundation.a2c.material-preparation.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-normalize.v1",
+        "target_id": "capsule.foundation.a2c.candidate-construction.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-segment.v1",
+        "target_id": "capsule.foundation.a2c.governance-handoffs.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c-extract.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-synthesize.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-link.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-hash.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-validate.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.a2c-emit.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "target_id": "capsule.foundation.a2c.admission-emission.v1",
         "relation_type": "references"
       },
       {
@@ -125,27 +93,18 @@
       },
       {
         "target_id": "capsule.project.a2c.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.a2c.v1",
         "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.agent-activation-readiness.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.workspace-recon.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deep-intake-investigation.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:55:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored A2C into five bounded sub-hubs so readiness control, stage mechanics, governance handoff, and admission surfaces no longer collapse into a 23-link parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "248c0d8e2d5e6b2b181e507a4080b1ebbfada2c09b7726a2367dc954352590c7e249488140af65f1ca05f67ebf6f50c467480d733531560298011a166c6858f6"
+  "integrity_sha3_512": "4a2848b82da6d03106b0fb1ab44f0991027f700726b99a2c4c41e85b496db17faa2fea4dd20492d35aa7faaa6e6866ac7159445ac1757c40498b13d11cddf6ed"
 }

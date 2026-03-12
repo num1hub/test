@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-09T21:35:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "N-Infinity Project",
     "semantic_hash": "capsule-project-infinity-iterations-autonomy-swarm-deployment-economics",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Project\n\n## 1. Dream Direction\nDream keeps the long-horizon roadmap for the N-Infinity program after the current live project contract in Real. It is the future control-plane vision for a denser, more visible, and more economically disciplined swarm.\n\n## 2. Desired Future State\n- a richer `iteration_fabric` where mining, planning, refinery work, vault stewardship, review, repository execution, and promotion reinforce one another.\n- explicit lane budgets, cost governance, and operator-visible assignment maps.\n- stronger review bundles and evidence thresholds before promotion or repository mutation widens.\n- deeper baton exchange between planning, mining, graph curation, contradiction handling, and assistant-facing synthesis.\n- 24/7 service behavior only when cooldown, rollback, and proof contracts are mature enough.\n\n## 3. Dream Delta\nDream preserves what Real does not yet own: broader control-plane visibility, calmer autonomy shaping, tighter iteration economics, and a more mature swarm-governance model. It should not be read as a shadow statement of the already-live deployment topology.\n\n## 4. Why It Matters\nDream keeps N-Infinity as the long-horizon execution lattice of N1Hub rather than only the current family of helpers. It is where finite human attention is amplified into near-continuous graph work while the human remains the center of judgment.\n"
+    "content": "# N-Infinity Project\n\n## 1. Role\nN-Infinity Project will become the long-horizon control-plane program for a denser, more visible, and more economically disciplined autonomous swarm.\n\n## 2. Future Project Contract\nThe project will grow a richer iteration fabric where planning, mining, refinement, stewardship, review, repository execution, and promotion reinforce one another through explicit lane budgets, visible assignment maps, stronger evidence thresholds, and calmer baton exchange between lanes.\n\n## 3. Operational Consequence\nAutonomous service will widen only when proof, cooldown, rollback, and budget law are mature enough to support it. The swarm program will remain governed even as it becomes more continuous and more capable.\n\n## 4. Philosophical Alignment\nN-Infinity Project supports To Dig Deep by making autonomous scale answerable to explicit law, evidence, and economic discipline."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Project in the Dream branch is the roadmap for a more capable and better-governed autonomous swarm control plane. It preserves the future state where planning, mining, refinement, graph curation, contradiction handling, repository execution, and review are coordinated through visible budgets, assignment maps, stronger autonomy law, and calmer baton exchange between lanes, rather than through the current bounded deployment topology already owned by Real. Dream therefore keeps the long-horizon program delta without pretending that the future control plane is already live.",
+    "summary": "N-Infinity Project defines the future control-plane program for a denser autonomous swarm: richer iteration fabric, explicit lane budgets, stronger evidence thresholds, calmer baton exchange, and more visible assignment maps across planning, mining, refinement, review, and repository execution.",
     "keywords": [
       "n-infinity",
       "agent-swarm",
@@ -90,7 +90,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "946c364ad43aa9300982b01fdb5f4288c9b6ad61d120cceefa033410a7e0dddebce87531e72a507654c0d1483f37f961d2b78137071a2c43d1787fde6b08179f"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

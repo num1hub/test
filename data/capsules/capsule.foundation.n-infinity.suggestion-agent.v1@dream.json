@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-10T18:07:00Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "N-Infinity Suggestion Agent",
     "semantic_hash": "capsule-foundation-infinity-suggestion-agent-v1-optimization-planner",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Suggestion Agent\n\n## 1. Future Role\nDream keeps Suggestion Agent as the next recommendation-control layer above the current real-side advisory contract. The real capsule remains canonical for today's bounded suggestion lane; Dream only preserves the future delta for higher-quality option shaping, better learning loops, and cleaner conversion from telemetry into execution-ready packets.\n\n## 2. Future Delta\n- rank and package suggestions with stronger comparative reasoning, expected-blast-radius framing, and clearer escalation choices\n- learn more directly from accept, reject, modify, and defer outcomes so recommendation quality compounds over time\n- emit cleaner packet-ready and queue-ready handoff bundles once A2C intake and packetization law mature further\n- coordinate more tightly with planner, tracker, assistant, and future swarm lanes without claiming that silent autonomous execution already exists\n- make overload, stagnation, and sequencing drift easier to convert into calm operator-facing options instead of generic advice\n\n## 3. Why Keep Dream\nThe current advisory contract is useful, but future execution depth will need a stronger option engine. Dream therefore keeps the next Suggestion Agent layer visible without overwriting the current bounded role.\n\n## 4. Guardrails\nDream does not replace the current advisory real contract, does not imply independent queue mutation or self-approval, and does not restate today's live suggestion lane as if it were still only a speculative future role.\n"
+    "content": "# N-Infinity Suggestion Agent\n\n## 1. Role\nSuggestion Agent is the recommendation-control layer that turns telemetry, pressure, and graph context into ranked operator options. It packages expected blast radius, comparative rationale, and cleaner packet-ready handoffs so the next move is legible before any queue, planner, or assistant lane acts on it.\n\n## 2. Option Surface\n- rank and package suggestions with stronger comparative reasoning, expected-blast-radius framing, and clearer escalation choices\n- learn directly from accept, reject, modify, and defer outcomes so recommendation quality compounds over time\n- emit cleaner packet-ready and queue-ready handoff bundles for downstream execution lanes\n- coordinate tightly with planner, tracker, assistant, and swarm lanes without claiming silent autonomous execution\n- convert overload, stagnation, and sequencing drift into calm operator-facing options instead of generic advice\n\n## 3. Operating Boundary\nSuggestion Agent produces evidence-aware options, not self-authorized execution. Recommendation quality grows through feedback, routing discipline, and reviewable handoffs rather than through hidden queue mutation or silent approval power."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Suggestion Agent in Dream now keeps only the future option-engine delta above the current real-side advisory contract. Real remains canonical for the live suggestion lane that structures evidence-aware options, tracks rationale and expected impact, and routes accepted recommendations into planner, assistant, chat, or delegation flows without autonomous mutation authority. Dream instead preserves the next layer: better comparative ranking, stronger learning from accept or reject outcomes, cleaner packet-ready handoff bundles, and calmer conversion of overload or stagnation into actionable operator choices. This keeps future recommendation intelligence visible without pretending today's bounded lane is still only aspirational.",
+    "summary": "N-Infinity Suggestion Agent is the recommendation-control layer that turns telemetry, pressure, and graph context into ranked operator options. It packages comparative rationale, expected blast radius, and packet-ready handoffs, learns directly from accept or reject outcomes, and converts overload or stagnation into calm next-step choices without claiming self-authorized execution. This keeps recommendation intelligence visible, feedback-bearing, and useful for planner, tracker, assistant, and swarm lanes while preserving the boundary between advisory work and actual mutation authority.",
     "keywords": [
       "n-infinity",
       "suggestion-agent",
@@ -32,7 +32,7 @@
       "planner",
       "tracker",
       "assistant",
-      "future-doctrine"
+      "blast-radius"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -72,7 +72,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Rewrote doctrine in present tense so Suggestion Agent asserts future recommendation control directly instead of referring to Dream as a self-aware branch."
+      }
+    ]
   },
-  "integrity_sha3_512": "56b46804b22a3d023ca2bbb6e11144b2afa0095ad295bc71dfda4f0f555a89b9b47b97f718c9efe9d86a27c995ee28e61aa8300364ff4ca458eb3eb3b6f4d0c5"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

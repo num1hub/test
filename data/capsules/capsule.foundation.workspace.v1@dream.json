@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.workspace.v1",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
-    "semantic_hash": "workspace-planner-tracker-dashboard-assistant-execution-habitat-center",
-    "updated_at": "2026-03-09T20:42:00Z",
+    "semantic_hash": "workspace-parent-routing-subhubs-operator-composition-future-habitat",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "Workspace",
     "priority": "high",
     "progress": 61,
@@ -19,22 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical workspace boundary doctrine and the live runtime inventory. Dream therefore should not restate the current module stack or pretend to own the semantics of Planner, Tracker, Dashboard, Personal AI Assistant, Chat to Capsules, AI Control Surface, Symphony, Background Agent Runtime, or Vault Stewardship.\n\n## 2. What Dream Still Owns\nDream remains the place for future workspace delta such as:\n- richer cross-module visibility policy and operator-specific views,\n- predictive routing between assistant, planner, tracker, and execution lanes,\n- future control-surface compositions that make background and swarm behavior easier to inspect,\n- stronger operator affordances for turning conversation into bounded capsule or TO-DO work without leaking module ownership.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side runtime inventory,\n- collapse linked module semantics back into the workspace hub,\n- reintroduce operational residue or vault-maintainer notes as constitutional doctrine.\n\n## 4. Dream Lens\nThe useful Dream stance is simple: keep Workspace future-facing as a better operator composition lens while letting Real remain the canonical source for what exists now and who owns which boundary."
+    "content": "# Workspace\n\n## 1. Role\nWorkspace provides the operator composition layer that makes N1Hub behave like one coherent habitat while keeping deeper module contracts explicit. It routes that habitat through five bounded sub-hubs so visibility, execution state, assistant control, identity governance, and runtime lanes remain legible at higher scale.\n\n## 2. Routing Surfaces\n- `operator-surfaces` exposes cross-module visibility, time pressure, health signals, and review context in one calm cockpit.\n- `execution-loop` composes projects, plans, and tracker state into one accountable execution field.\n- `assistant-control` carries assistant session state, chat-to-capsule handoffs, wallet posture, and delegation controls.\n- `identity-access` defines profile, team, entitlement, and integration governance.\n- `runtime-lanes` exposes long-lived execution substrates that workspace supervises without semantically owning.\n\n## 3. Parent Boundary\nThe parent workspace hub keeps only the top-level habitat relationship to N1Hub, CapsuleOS, the five sub-hubs, To Dig Deep, hub-and-atomic doctrine, and the enclosing workspace project. Detailed module routing flows through the sub-hubs so workspace stays a composition lens instead of a flat registry."
   },
   "neuro_concentrate": {
-    "summary": "Workspace is the Dream-side future overlay for operator composition rather than the canonical source of current module ownership. Real now owns the live workspace inventory and boundary doctrine, while Dream stays focused on future visibility policy, predictive routing between assistant, planner, tracker, and execution lanes, and better operator control-surface composition. The purpose of this overlay is to explore future workspace improvements without erasing the stronger real-side inventory or collapsing linked module semantics back into the workspace hub.",
+    "summary": "Workspace is the future parent hub for five bounded composition surfaces: operator surfaces, execution loop, assistant control, identity access, and runtime lanes. The parent keeps only top-level habitat relationships while detailed module routing flows through sub-hubs, which makes cross-module visibility, execution state, assistant control, and runtime supervision easier to inspect without turning workspace into a flat registry of leaves. This keeps the operator habitat coherent, legible, and reviewable even as the platform grows more capable.",
     "keywords": [
       "workspace",
-      "future-overlay",
-      "composition-lens",
-      "predictive-routing",
-      "visibility-policy",
-      "operator-control-surface",
-      "graph-lens",
-      "module-boundaries",
-      "real-canonical",
-      "future-delta",
-      "decomposition-boundaries"
+      "operator-composition",
+      "hub-decomposition",
+      "operator-surfaces",
+      "execution-loop",
+      "assistant-control",
+      "identity-access",
+      "runtime-lanes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -44,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "workspace-planner-tracker-dashboard-assistant-execution-habitat-center"
+    "semantic_hash": "workspace-parent-routing-subhubs-operator-composition-future-habitat"
   },
   "recursive_layer": {
     "links": [
@@ -53,23 +50,27 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.n1hub-projects.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.project.v1",
+        "target_id": "capsule.foundation.workspace.operator-surfaces.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.workspace.execution-loop.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.v1",
+        "target_id": "capsule.foundation.workspace.assistant-control.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.identity-access.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.runtime-lanes.v1",
         "relation_type": "references"
       },
       {
@@ -78,86 +79,6 @@
       },
       {
         "target_id": "capsule.foundation.hub-atomic.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n1hub.v1",
-        "relation_type": "derived_from"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.dashboard.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.calendar.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.analytics.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.archive.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.profile.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.user-preferences.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.team.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.invitation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.role.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.permission.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.marketplace.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n1-pass.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.workspace.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.n1hub-v0.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.integrations.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.api-gateway.v1",
         "relation_type": "references"
       },
       {
@@ -221,8 +142,20 @@
         "agent": "n1",
         "run_id": "TODO-022",
         "rationale": "Real absorbed the workspace boundary doctrine that now belongs in canonical form. Dream was rewritten to keep only future-facing operator composition delta and to stop restating the stronger real-side runtime inventory."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_parent_topology_sync",
+        "agent": "codex",
+        "rationale": "Synced Dream parent routing to the live five-subhub workspace topology so future doctrine no longer collapses execution, assistant, identity, and runtime concerns into one flat hub."
       }
     ]
   },
-  "integrity_sha3_512": "6e5237d91f03dcca4624aece3b271a45d1368b4c7d0d39591ecbf8aa86fe8355daa8308bc29faf757c041027b79e70b948b23eb3c91ab030499b46f33c267aeb"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

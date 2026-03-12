@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-normalize.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.864Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "A2C Stage: Normalize",
     "semantic_hash": "capsule-foundation-a2c-normalize-v1-stage-canonicalization-schema",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Normalize\n\n## 1. Definition and Essence\nThe Normalize stage converts heterogeneous ingest artifacts into stable intermediate representations. It enforces canonical encodings, field naming conventions, and structural consistency so later stages operate predictably regardless of original source format.\n\n## 2. Core Attributes\n- `canonical_format` indicator for normalized payload\n- `schema_hints` describing inferred source structure\n- `normalization_ruleset` version reference\n- `normalization_warnings` for lossy or ambiguous transforms\n- `trace_id` inherited from ingest artifact\n\n## 3. Lifecycle\nNormalize consumes ingest artifacts, applies deterministic transforms, records warnings, and emits canonical intermediate data for segmentation. Any non-recoverable ambiguity is routed to quarantine with explicit diagnostics.\n\n## 4. Integration\n- **Ingest Stage:** receives raw-capture artifacts.\n- **Segment Stage:** provides canonical input for chunking.\n- **CapsuleOS Schema:** aligns field semantics with 5-element expectations.\n- **Validator Stack:** prepares predictable structures for downstream gates.\n\n## 5. Philosophical Alignment\nNormalize advances To Dig Deep by reducing noise without erasing context, creating clear substrate where true structure can emerge rather than forcing brittle assumptions.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Normalize in the Dream branch describes a more capable transformation layer for hostile or inconsistent input. It aims toward cleaner canonicalization, better ambiguity handling, and stronger resilience against messy upstream formats before segmentation begins. The stage matters because normalization quality determines whether later reasoning works on signal or on formatting residue. Dream therefore preserves a stricter future Normalize stage that can turn diverse raw material into a stable substrate without flattening away meaningful context.",
+    "summary": "A2C Stage: Normalize defines the transformation layer that turns hostile or inconsistent input into stable refinery substrate. It strengthens canonicalization, ambiguity handling, and resilience against messy upstream formats before segmentation begins. The stage matters because normalization quality determines whether later reasoning works on signal or on formatting residue. Normalize therefore serves as the discipline that makes diverse raw material structurally consistent without flattening away meaningful context that later stages still need.",
     "keywords": [
       "a2c",
       "normalize",
@@ -61,7 +61,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Normalize states its transformation doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "d56f7645d88a2c01aae1cc1f08299f1aa7e03eb1eb73e6dad960007dc9baf6c23846a702b98ac7f618fab26268629482ac8eb2e9d48c37940751285a59316e08"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

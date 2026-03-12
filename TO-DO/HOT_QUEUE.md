@@ -31,7 +31,10 @@ Pull order rule: when the user does not give a narrower priority, agents should 
 | `TODO-002` | `P1` | `NEXT` | `Cluster Refactor Agent` | `DONE` | Decompose the Vault Steward runtime along real public seams. | `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*`, `scripts/vault-steward.ts` |
 | `TODO-003` | `P1` | `NEXT` | `A2C Test Agent` | `DONE` | Turn the remaining A2C `TO-DO` contracts into real tests and close runtime drift. | `__tests__/a2c/*`, `lib/a2c/*`, `docs/a2c.md` |
 | `TODO-011` | `P1` | `NEXT` | `Diff Test Agent` | `DONE` | Expand Real/Dream promotion and merge test coverage around agent-facing routes. | `app/api/diff/*`, `app/api/capsules/[id]/promote/route.ts`, `__tests__/api/*`, `__tests__/lib/diff/*` |
-| `TODO-012` | `P1` | `NEXT` | `Capsule Planning Agent` | `READY` | Turn the markdown hot queue into a capsule-native execution control plane backed by the vault. | `data/capsules/*`, `docs/projects.md`, `docs/real-dream-diff.md`, `lib/a2c/*`, `lib/agents/*` |
+| `TODO-012` | `P1` | `NEXT` | `Capsule Planning Agent` | `ACTIVE` | Turn the markdown hot queue into a capsule-native execution control plane backed by the vault. | `data/capsules/*`, `docs/projects.md`, `docs/real-dream-diff.md`, `lib/a2c/*`, `lib/agents/*` |
+| `TODO-034` | `P1` | `NEXT` | `Control Plane Runtime Agent` | `READY` | Project accepted markdown queue packets into durable task and delegation objects without inventing a second planning ontology. | `lib/a2c/*`, `lib/agents/n1/*`, `data/private/a2c/*`, `data/private/agents/n1/*`, `TO-DO/*` |
+| `TODO-035` | `P1` | `NEXT` | `Workspace Surface Agent` | `ACTIVE` | Turn authenticated `/` into the first real workspace-home control plane surface over graph, queue, and assistant state. | `app/page.tsx`, `components/home/*`, `components/AppNav.tsx`, `app/vault/*`, `app/api/*` |
+| `TODO-036` | `P1` | `NEXT` | `Planning Guardrail Agent` | `READY` | Enforce the difference between Dream planning and Real execution for capsule-native control-plane objects. | `docs/real-dream-diff.md`, `lib/diff/*`, `lib/validator/*`, `lib/a2c/*`, `app/api/*` |
 | `TODO-013` | `P1` | `NEXT` | `Review Systems Agent` | `BLOCKED` | Introduce a cross-model adversarial review lane with opposite-model proof and synthesized verdicts. | `skills/adversarial-review/*`, `scripts/n1-automated-update.ts`, `lib/agents/n1/*`, `docs/agents-operations.md` |
 | `TODO-014` | `P1` | `NEXT` | `Autonomy Systems Agent` | `DONE` | Turn one-shot N1 automated update into a scheduler-friendly recurring iteration lane. | `scripts/n1-automated-update.ts`, `lib/agents/n1/*`, `docs/agents-operations.md`, `NINFINITY_WORKFLOW.md` |
 | `TODO-016` | `P1` | `NEXT` | `A2C Intake Agent` | `DONE` | Turn raw operator input into a structured A2C intake contract with TO-DO-ready fields instead of chat residue. | `lib/a2c/*`, `app/api/a2c/ingest/route.ts`, `docs/a2c.md`, `TO-DO/*`, `data/private/a2c/*` |
@@ -39,7 +42,7 @@ Pull order rule: when the user does not give a narrower priority, agents should 
 | `TODO-018` | `P1` | `NEXT` | `N1 Routing Agent` | `DONE` | Teach N1 to classify user input into assistant, TO-DO, capsule, or defer lanes before work starts. | `SOUL.md`, `CONTEXT.md`, `MEMORY.md`, `TO-DO/AGENT_OPERATING_MODES.md`, `skills/n1/*`, `skills/personal-ai-assistant/*`, `skills/todo-executor/*`, `lib/agents/n1/*` |
 | `TODO-019` | `P1` | `NEXT` | `A2C Intake Test Agent` | `DONE` | Add a test net that proves user input becomes stable TO-DO packets, rejects noise, and preserves repo boundaries. | `__tests__/a2c/*`, `lib/a2c/*`, `TO-DO/*`, `docs/a2c.md` |
 | `TODO-004` | `P2` | `LATER` | `Validator Boundary Agent` | `DONE` | Harden validator/API contract parity and OpenAPI discipline. | `lib/validator/*`, `app/api/validate/*`, `scripts/validate-cli.ts`, `scripts/generate-validate-openapi.ts` |
-| `TODO-005` | `P2` | `LATER` | `Symphony Contract Agent` | `ACTIVE` | Split Symphony orchestration law, prompt rendering, and runtime tracking into bounded contracts. | `lib/symphony/*`, `scripts/symphony.ts`, `WORKFLOW.md` |
+| `TODO-005` | `P2` | `LATER` | `Symphony Contract Agent` | `DONE` | Split Symphony orchestration law, prompt rendering, and runtime tracking into bounded contracts. | `lib/symphony/*`, `scripts/symphony.ts`, `WORKFLOW.md` |
 | `TODO-006` | `P2` | `LATER` | `Architecture Steward Agent` | `READY` | Turn file guardrails into a changed-files CI gate with waiver discipline. | `scripts/check-file-guardrails.ts`, `.github/workflows/*`, `package.json`, `docs/N1HUB_LOW_BLAST_RADIUS_ARCHITECTURE.md` |
 | `TODO-015` | `P2` | `LATER` | `Context Systems Agent` | `READY` | Formalize a hot-warm-cold memory topology for N1Hub context surfaces, skills, and capsules. | `CONTEXT.md`, `MEMORY.md`, `TO-DO/*`, `skills/*`, `data/capsules/*` |
 
@@ -49,8 +52,7 @@ Current recommended execution sequence:
 
 1. `TODO-012`
 2. `TODO-015`
-3. `TODO-005`
-4. `TODO-006`
+3. `TODO-006`
 
 Reason:
 
@@ -80,12 +82,12 @@ Reason:
 - `TODO-019` is now the direct follow-up frontier because the intake and packet-builder contracts are both explicit and ready for fixture coverage.
 - `TODO-019` is now contained: the first fixture-driven user-input test net proves actionable, vague, noisy, and over-broad outcomes plus verification and stop-condition preservation.
 - `TODO-011` is now contained: promotion, diff, capsule-diff, branch, and diff-apply routes have materially stronger auth, invalid-input, conflict, and promotion coverage.
-- `TODO-003` is now contained: the remaining audit and cluster-context placeholders are real contract tests, and the only leftover A2C placeholder is the narrower ingest API route gap.
+- `TODO-003` is now contained: the remaining audit and cluster-context placeholders are real contract tests, and the former ingest API route gap is now concrete route coverage instead of placeholder debt.
 - `TODO-003` follow-up repair is now complete: `npm run a2c:index`, `npm run a2c:audit`, and `npm run a2c:auto` confirm the live A2C index is fresh again, and `a2c:auto` no longer reports `INDEX_FRESHNESS` drift.
 - `TODO-002` is now contained: Vault Steward runtime, queue planning, lifecycle, scout/reviewer/foreman/executor lanes, artifacts, helpers, and prompt-law seams are split enough that the cluster no longer carries any hard file-guardrail violations.
 - `TODO-013` is now blocked on host capability: the current machine can prove only a local `codex` CLI, and the packet explicitly forbids same-model fallback for adversarial review.
 - `TODO-004` is now contained: validator docs, generated OpenAPI, and API tests agree on the canonical single-capsule envelope, owner-role route boundaries, stats query behavior, and the intentional CLI-only fix/report/watch parity exception.
-- `TODO-005` is now active: Symphony orchestrator runtime-state shaping is extracted into a dedicated helper module, and `lib/symphony/orchestrator.ts` is down to `584` lines.
+- `TODO-005` is now contained: Symphony runtime-state shaping, tracker normalization, and agent-client event shaping are extracted into dedicated helper modules, and `__tests__/symphony/*.test.ts` plus `npm run typecheck` pass with the main pressure files below the hard limit.
 - `TODO-016` starts the direct path from operator input into A2C instead of leaving intent trapped in chat.
 - `TODO-017` turns the intake contract into real hot task packets the queue can execute.
 - `TODO-019` prevents the new intake path from becoming untested prompt magic.
@@ -115,6 +117,7 @@ This means:
 - `TODO-016` should land before `TODO-017`
 - `TODO-017` and `TODO-018` should inform `TODO-019`
 - `TODO-012` should use the A2C intake and packetization work rather than outrunning it conceptually
+- `TODO-034`, `TODO-035`, and `TODO-036` now depend on the control-plane model established by `TODO-012`
 
 If any of those dependencies stop being true, change the packets and the queue instead of carrying stale coupling in your head.
 
@@ -159,6 +162,9 @@ Do not leave the queue looking `READY` when the real state is partial work, bloc
 - [TODO-009 Vault Steward Dream-Only Operations Review](/home/n1/n1hub.com/TO-DO/tasks/TODO-009-vault-steward-dream-only-operations-review.md)
 - [TODO-010 Real-Only Law Sync](/home/n1/n1hub.com/TO-DO/tasks/TODO-010-real-only-law-sync.md)
 - [TODO-012 Capsule-Native Execution Control Plane](/home/n1/n1hub.com/TO-DO/tasks/TODO-012-capsule-native-execution-control-plane.md)
+- [TODO-034 Capsule Execution Projection Bridge](/home/n1/n1hub.com/TO-DO/tasks/TODO-034-capsule-execution-projection-bridge.md)
+- [TODO-035 Workspace Home Control Plane Surface](/home/n1/n1hub.com/TO-DO/tasks/TODO-035-workspace-home-control-plane-surface.md)
+- [TODO-036 Planning vs Execution Branch Guardrails](/home/n1/n1hub.com/TO-DO/tasks/TODO-036-planning-vs-execution-branch-guardrails.md)
 - [TODO-013 Cross-Model Adversarial Review Lane](/home/n1/n1hub.com/TO-DO/tasks/TODO-013-cross-model-adversarial-review.md)
 - [TODO-014 N1 Scheduled Iteration Loop](/home/n1/n1hub.com/TO-DO/tasks/TODO-014-n1-scheduled-iteration-loop.md)
 - [TODO-016 A2C User Input Intake Contract](/home/n1/n1hub.com/TO-DO/tasks/TODO-016-a2c-user-input-intake-contract.md)

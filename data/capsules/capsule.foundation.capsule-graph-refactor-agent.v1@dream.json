@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:46:00Z",
-    "updated_at": "2026-03-07T12:48:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Capsule Graph Refactor Agent",
-    "semantic_hash": "capsule-graph-refactor-agent-topology-partof-repair-hygiene",
+    "semantic_hash": "capsule-graph-refactor-agent-continuous-topology-repair-lane",
     "priority": "high",
     "progress": 36,
     "estimatedHours": 250,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Graph Refactor Agent\n\n## Dream Direction\nIn the Dream branch, Capsule Graph Refactor Agent becomes a stronger topology specialist that continuously improves graph neighborhoods, link quality, and containment structure across the growing vault.\n\n## Desired Future State\n- better automatic detection of weak, stale, or confused relationships\n- cleaner `part_of` repair workflows across hubs, atoms, and project lines\n- deeper collaboration with Weaver, Gardener, Branch Steward Agent, and Review Agent\n- more reliable night-shift graph refactors that stay bounded and reviewable\n\n## Why It Matters\nDream preserves the idea that a second brain needs topology as much as content. A vault can grow in words while still degrading in structure unless graph refactoring becomes an explicit maintenance lane."
+    "content": "# Capsule Graph Refactor Agent\n\n## 1. Role\nCapsule Graph Refactor Agent will become a stronger topology specialist that continuously improves graph neighborhoods, link quality, and containment structure across the growing vault.\n\n## 2. Future Topology Surface\n- better automatic detection of weak, stale, or confused relationships\n- cleaner `part_of` repair workflows across hubs, atoms, and project lines\n- deeper collaboration with Weaver, Gardener, Branch Steward Agent, and Review Agent\n- more reliable night-shift graph refactors that stay bounded and reviewable\n\n## 3. Operational Consequence\nA growing vault will remain coherent not only in content but also in topological shape because graph repair will have an explicit maintenance lane instead of relying on opportunistic cleanup.\n\n## 4. Philosophical Alignment\nCapsule Graph Refactor Agent supports To Dig Deep by insisting that deep knowledge needs deep topology."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Refactor Agent in the Dream branch captures a stronger future topology worker for N1Hub. It aims toward better link hygiene, cleaner containment repair, and more reliable graph refactors during bounded maintenance runs. The capsule matters because structural drift is one of the main long-term risks for a graph-based memory system. Dream therefore preserves the future role that keeps the vault coherent not only in content, but also in topological shape.",
+    "summary": "Capsule Graph Refactor Agent defines the future continuous topology-repair lane for N1Hub: stronger weak-edge detection, cleaner containment repair, deeper collaboration with swarm maintenance roles, and more reliable bounded graph refactors during maintenance windows.",
     "keywords": [
       "capsule-graph-refactor-agent",
       "dream-branch",
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-graph-refactor-agent-topology-partof-repair-hygiene"
+    "semantic_hash": "capsule-graph-refactor-agent-continuous-topology-repair-lane"
   },
   "recursive_layer": {
     "links": [
@@ -95,7 +95,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "4738a0f9df15fdba4952cc34fbc79a03a22a7e18f20c8e6daee8cf987fcff91cb297e801de4caa5275886acdf193950d50fe572168890035f5d0815830e60c9b"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-v0-access-license-sovereign-control-root",
-    "updated_at": "2026-03-08T21:08:00Z",
+    "updated_at": "2026-03-11T23:35:00Z",
     "source": {
       "uri": "internal://capsule.project.n1hub-v0.v1",
       "type": "internal_policy_record"
@@ -21,7 +21,7 @@
     "content": "# Sovereign Access License: N1Hub v0\n\n## 1. Grant of Authority\nThis cryptographic capsule serves as the absolute, immutable access token granting **Egor N1** exclusive, private, and unrestricted operational authority over the `N1Hub v0 Personal Release`.\n\n## 2. Permissions and Scope\n- **Role Designation**: `owner` / `system_architect`\n- **Write Access**: Unlimited authority to mint, supersede, and quarantine capsules across the entire v0 database schema.\n- **Bypass Authority**: Explicit clearance to utilize the `architect_override` mechanism, allowing the manual sealing of foundation axioms without adhering to strict cosmetic token limits (Gate 14 exception).\n- **Expiration**: Perpetual. This genesis license possesses no time-bound restrictions.\n\n## 3. Cryptographic Enactment\nBy the existence of this sealed capsule within the Cognitive Plane, the underlying Node.js backend and JWT authentication microservices are instructed to unconditionally recognize `capsule.person.egor-n1.v1` as the root administrator of the `capsule.project.n1hub-v0.v1` hub."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, Egor N1 Access should evolve from a bootstrap-only privilege into a governance template: a traceable root authority capsule with bounded override conditions, explicit delegation boundaries, and auditable pathways toward eventual succession. It anchors the transition from personal inception to institutional stewardship by preserving cryptographic authority where needed while making escalation rationale, emergency use, and handoff constraints explicit. This shape keeps origin ownership truthful but prevents the system from hard-coding permanent founder exceptionality.",
+    "summary": "Egor N1 Access is a governance template rather than a bootstrap-only privilege: a traceable root-authority capsule with bounded override conditions, explicit delegation boundaries, and auditable pathways toward eventual succession. It anchors the transition from personal inception to institutional stewardship by preserving cryptographic authority where needed while making escalation rationale, emergency use, and handoff constraints explicit. This shape keeps origin ownership truthful but prevents the system from hard-coding permanent founder exceptionality.",
     "keywords": [
       "access-control",
       "governance-safety",
@@ -66,7 +66,14 @@
     "actions": [
       "GRANT_ROLE_OWNER"
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:35:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so the access capsule states future governance posture directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "8b791cdeed2aadcd10ee515d323e1059f1bb8f763df21a9b2e940044fee42c462bf23cc71e5db61f9ae9587ec6e2dab2e6905088823b1a8edf9f3541a23a64e7"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.477Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "Workspace Project",
     "semantic_hash": "capsule-project-workspace-v1-planner-tracker-assistant-dashboard",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace Project\n\n## 1. Dream Direction\nThe Dream branch pushes Workspace toward a truly seamless second-brain habitat: one place to ask, think, plan, upload, review, and delegate without context leaking into disconnected tools.\n\n## 2. Desired Future State\n- a unified multimodal composer for text, voice, files, and capsule-aware commands.\n- visible day, week, roadmap, and branch context in one calm operational surface.\n- assistant and swarm visibility that feels native instead of bolted on.\n- mobile-first and desktop-deep interaction that still respects the same graph truth.\n- stronger human override and approval patterns around mutations and delegation.\n\n## 3. Why It Matters\nDream preserves the idea that Workspace should become more than a productivity shell. It should feel like the place where a human genuinely lives with the second brain and where agent help becomes calm, legible, and habitual.\n"
+    "content": "# Workspace Project\n\n## 1. Role\nWorkspace Project will become a truly seamless second-brain habitat: one place to ask, think, plan, upload, review, and delegate without context leaking into disconnected tools.\n\n## 2. Future Habitat Contract\nThe project will deliver a unified multimodal composer for text, voice, files, and capsule-aware commands; visible day, week, roadmap, and branch context in one calm operating surface; native-feeling assistant and swarm visibility; and stronger human override and approval patterns around mutation and delegation.\n\n## 3. Operational Consequence\nWorkspace will stop feeling like a productivity shell wrapped around deeper systems. It will feel like the place where a human genuinely lives with the second brain and where graph truth, agent help, and daily rhythm become one coherent instrument.\n\n## 4. Philosophical Alignment\nWorkspace Project supports To Dig Deep by making second-brain life calm, legible, habitual, and graph-native every day."
   },
   "neuro_concentrate": {
-    "summary": "Workspace Project in the Dream branch describes the target habitat rather than only the current product surface. It imagines a calmer and more unified command layer where planning, tracking, dashboards, profile context, chat-to-capsules, approvals, and swarm visibility feel like one coherent operational instrument instead of adjacent modules. The branch matters because the existing workspace already works, but the desired state is far more adaptive, humane, mobile-aware, and graph-native. Dream therefore carries the roadmap for turning Workspace into a place where a human truly lives with the second brain.",
+    "summary": "Workspace Project defines the future seamless habitat of N1Hub: a unified multimodal composer, calmer day/week/roadmap context, native assistant and swarm visibility, stronger approval patterns, and a more coherent place to live with the second brain instead of merely using adjacent tools.",
     "keywords": [
       "workspace",
       "product-surface",
@@ -87,7 +87,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "5ed3a027705699b0b807a3f67f4bf3674127ce2f396ba58574fa88b2bf0d961748829c92a2e443fec581c58631d3a7ab4ca6327f81e3a33c9a6e166108cb9740"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

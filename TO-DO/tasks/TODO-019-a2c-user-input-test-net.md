@@ -115,7 +115,7 @@ You are the A2C Intake Test Agent. Build the first contract tests for the path f
 
 ## Handoff Note
 
-Contained on 2026-03-10. The first fixture net now covers actionable, vague, noisy, and over-broad input at the `lib/a2c` contract layer. The next test expansion, if needed, is route-level coverage for `POST /api/a2c/ingest`.
+Contained on 2026-03-10. The first fixture net now covers actionable, vague, noisy, and over-broad input at the `lib/a2c` contract layer, and route-level coverage now exists for `POST /api/a2c/ingest` operator-input, mixed-payload rejection, and multi-candidate quarantine summaries.
 
 ## Fixture Matrix
 

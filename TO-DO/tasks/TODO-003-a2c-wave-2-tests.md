@@ -68,8 +68,8 @@ The first A2C test wave exists, but the most dangerous remaining gaps still live
 
 ## Narrowed Future Contract
 
-- `__tests__/a2c/future.todo.test.ts`
-  - remaining placeholder is now only the narrower ingest API route-coverage gap for `operatorInput` plus multi-candidate quarantine summaries
+- no remaining placeholder contracts from the original A2C wave-2 backlog
+- future ingest API expansion should be treated as new edge-case coverage, not as deferred placeholder debt
 
 ## Mode and Skill
 
@@ -112,7 +112,7 @@ You are the A2C Test Agent. Replace placeholder A2C contracts with real enforced
 
 ## Handoff Note
 
-Contained on 2026-03-10. The next A2C gap is the remaining ingest API route contract; otherwise the queue can move to `TODO-014`.
+Contained on 2026-03-10. The original A2C wave-2 placeholder backlog is now exhausted; any further ingest-route growth should be tracked as new edge coverage rather than leftover contract debt.
 
 ## Latest Pass
 
@@ -131,3 +131,6 @@ Contained on 2026-03-10. The next A2C gap is the remaining ingest API route cont
     - `npm run a2c:index` -> passed (`status: COMPLETE`, `nodes: 192`, `edges: 1898`, `issues: 0`)
     - `npm run a2c:audit` -> passed (`status: COMPLETE`, `valid: 192`, `invalid: 0`, `issues: 0`)
     - `npm run a2c:auto` -> command passed, report status `PARTIAL` with `issues: 0`; the remaining partial state is dry-run persistence only, not `INDEX_FRESHNESS`
+  - follow-up contract pass on `2026-03-10`:
+    - added route-level coverage for `POST /api/a2c/ingest` operator-input `202`, mixed-payload `400`, and multi-candidate quarantine `207`
+    - removed the last A2C placeholder test because the remaining ingest route gap is now covered by concrete API tests

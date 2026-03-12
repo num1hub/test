@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.n1hub.runtime-coordination.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-11T23:58:00Z",
+    "name": "N1Hub Runtime Coordination",
+    "semantic_hash": "n1hub-runtime-coordination-daemon-orchestration-stewardship-agents-continuity",
+    "source": {
+      "uri": "internal://capsule.foundation.n1hub.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# N1Hub Runtime Coordination\n\n## 1. Role\nN1Hub Runtime Coordination owns the long-lived execution and maintenance lattice of the habitat. It keeps daemon posture, orchestration, agent-lane coordination, and stewardship runtime together so the system can continue operating beyond the immediate chat loop without dissolving into opaque background behavior.\n\n## 2. Runtime Coordination Surface\nThis sub-hub groups `background-agent-runtime`, `symphony`, `key-agents`, and `vault-stewardship-swarm`. Together they define how N1Hub stays alive between operator interactions, orchestrates repository execution, coordinates specialist lanes, and keeps vault maintenance visible rather than magical.\n\n## 3. Operating Boundary\nThis sub-hub does not own doctrinal meaning, raw intelligence production, or product program topology. Those responsibilities belong to `doctrinal-core`, `intelligence-fabric`, and `program-lines`."
+  },
+  "neuro_concentrate": {
+    "summary": "N1Hub Runtime Coordination groups the long-lived execution lattice of the habitat: Background Agent Runtime, Symphony, Key Agents, and Vault Stewardship Swarm. It keeps daemon continuity, repository orchestration, lane coordination, and maintenance runtime together so the system can keep working between direct human interactions without becoming an opaque background blur. This boundary matters because N1Hub needs a visible seam where autonomous continuity is coordinated and governed instead of silently absorbed into every other runtime surface.",
+    "keywords": [
+      "n1hub",
+      "runtime-coordination",
+      "background-agent-runtime",
+      "symphony",
+      "key-agents",
+      "vault-stewardship-swarm",
+      "daemon"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "n1hub-runtime-coordination-daemon-orchestration-stewardship-agents-continuity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:58:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream N1Hub decomposition to isolate daemon continuity, orchestration, agent-lane coordination, and stewardship runtime from doctrine, operator ingress, and program lines."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

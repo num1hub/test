@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.chat-to-capsules.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-07T10:22:14.039Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "Chat to Capsules",
     "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined path by which a conversation can inspect capsules, summarize graph context, draft new capsules, refine existing ones, and delegate bounded actions into the deeper runtime.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_drafting` turns conversational intent into structured candidate capsules or edits.\n- `multimodal_ingest` treats text, file content, and voice transcripts as one ingress family.\n- `memory_alignment` keeps session continuity useful without confusing agent memory or vault truth.\n- `explainability` shows which capsules, prompts, or runtime paths informed the answer.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, or N-Infinity.\n- `planning_entry` allows chat to open bounded backlog work for later swarm execution.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the missing user-level bridge between Personal AI Assistant, AI Conversation Session, A2C, and the background-agent runtime. It gives the system a clear model for how users talk to the graph without collapsing serious graph work into shallow chat UX.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, delegable, and explicit about when it is answering, when it is planning, and when it is asking for mutation approval.\n"
   },
   "neuro_concentrate": {
-    "summary": "Chat to Capsules in the Dream branch describes a richer conversational ingress where graph grounding, drafting, explainability, planning, and delegation feel native rather than bolted on. It imagines cleaner memory continuity, better evidence display, stronger conversion from chat into structured capsule work, and more transparent handoff into DeepMine, Symphony, or N-Infinity. The capsule matters because user trust in AI depends on seeing how conversation maps to real graph action. Dream therefore preserves Chat to Capsules as a more capable graph-native dialogue surface instead of only the first grounded chat pattern.",
+    "summary": "Chat to Capsules defines a richer conversational ingress where graph grounding, drafting, explainability, planning, and delegation feel native rather than bolted on. It strengthens memory continuity, evidence display, conversion from chat into structured capsule work, and handoff into DeepMine, Symphony, or N-Infinity. The capsule matters because user trust in AI depends on seeing how conversation maps to real graph action. Chat to Capsules therefore serves as the graph-native dialogue surface that turns language into legible, governed work.",
     "keywords": [
       "chat-to-capsules",
       "conversation",
@@ -109,7 +109,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Chat to Capsules states its graph-native dialogue doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "7c7503538227803b78c68998c43f854b01a1b3c2e6fad6c376eb27c6f71b056a1e6fc1b685771619a297ea8c01c9336afc75a55edad4c039c61ae7f7eb55f453"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

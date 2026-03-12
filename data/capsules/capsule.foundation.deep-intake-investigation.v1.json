@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-09T01:10:38.622Z",
-    "updated_at": "2026-03-09T01:10:38.622Z",
+    "updated_at": "2026-03-11T14:58:41Z",
     "name": "Deep Intake Investigation",
-    "semantic_hash": "deep-intake-investigation-risk-scenarios-conflict-routing-analysis",
+    "semantic_hash": "deep-intake-investigation-scope-risk-scenarios-posture-selection",
     "source": {
       "uri": "internal://scripts/a2c/investigate.ts",
       "type": "repository_implementation"
@@ -23,21 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Deep Intake Investigation\n\n## 1. Definition and Essence\nDeep Intake Investigation is the structured analysis pass that happens after workspace recon and before non-trivial A2C mutation. Its purpose is to convert ambiguous or noisy intake into explicit execution intelligence instead of letting ingestion begin from a shallow first read.\n\n## 2. Investigation Procedure\n- assess scope: literal ask, underlying operational need, missing context, and required depth,\n- extract a small set of evidence-grounded key insights,\n- map observation -> inference -> implication,\n- compare conservative, integration, and synthesis scenarios when ambiguity is material,\n- choose one execution path and translate it into deterministic actions.\n\n## 3. Risk Model\nThe runtime computes and reports pressure across:\n- duplicate risk,\n- conflict risk,\n- PII risk,\n- volume risk,\n- cluster-governance risk.\n\nIt also detects internal contradiction pairs inside the intake batch itself and can exclude irrelevant external files when focus mode is active.\n\n## 4. Dynamic Context Signals\nInvestigation expands relevance using live vault probes and, when present, the TypeScript triad context from docs, source, and tests. That lets the system reason about contract depth, threshold capital, and likely governance sensitivity instead of only about token overlap.\n\n## 5. Why This Matters\nStrong integration decisions require more than good extraction. They require a justified posture before extraction begins. Investigation turns that posture into an auditable artifact.\n"
+    "content": "# Deep Intake Investigation\n\n## 1. Definition and Essence\nDeep Intake Investigation is the structured analysis pass that happens after workspace recon and before non-trivial A2C mutation. Its purpose is to convert ambiguous or noisy intake into explicit execution intelligence instead of letting ingestion begin from a shallow first read.\n\n## 2. Scope and Signal Classification\nInvestigation owns the first serious interpretation pass over the staged batch. It classifies whether source files are core, adjacent, or external to the current knowledge mission, extracts a small set of evidence-grounded key insights, and maps observation -> inference -> implication so downstream stages receive a reasoned posture instead of raw ambiguity.\n\n## 3. Risk and Contradiction Model\nThe runtime computes and reports pressure across:\n- duplicate risk,\n- conflict risk,\n- PII risk,\n- volume risk,\n- cluster-governance risk.\n\nIt also detects internal contradiction pairs inside the intake batch itself and can exclude irrelevant external files when focus mode is active.\n\n## 4. Scenario Comparison and Posture Selection\nInvestigation compares conservative, integration, and synthesis scenarios when ambiguity is material. It chooses one execution posture, records why the alternatives lost, and translates that choice into deterministic next actions for the refinery. This is the policy boundary that decides how much mutation pressure the batch is allowed to carry.\n\n## 5. Dynamic Context Signals\nInvestigation expands relevance using live vault probes and, when present, the TypeScript triad context from docs, source, and tests. That lets the system reason about contract depth, threshold capital, and likely governance sensitivity instead of only about token overlap.\n\n## 6. Why This Matters\nStrong integration decisions require more than good extraction. They require a justified posture before extraction begins. Investigation turns that posture into an auditable artifact."
   },
   "neuro_concentrate": {
-    "summary": "Deep Intake Investigation is the structured pre-mutation analysis pass that converts ambiguous intake into explicit execution intelligence. It performs scope assessment, extracts key insights, maps observation to implication, compares conservative, integration, and synthesis scenarios when needed, and computes duplicate, conflict, PII, volume, and cluster-governance risk before a batch is allowed to proceed. It also uses live vault probes and TypeScript triad signals to expand relevance and detect internal contradiction pressure. This matters because many poor ingest outcomes are really poor early decisions. Investigation therefore gives A2C a justified posture before extraction, synthesis, or merge logic starts changing the graph.",
+    "summary": "Deep Intake Investigation is the pre-mutation policy layer that converts staged intake into explicit execution intelligence. It owns scope classification, duplicate, conflict, PII, volume, and cluster-governance risk detection, internal contradiction review, scenario comparison, and posture selection before deeper A2C mutation begins. This matters because many refinery failures start as weak early judgment, and this layer turns ambiguous intake into a deliberate operating posture instead of letting downstream transforms inherit hidden risk, false urgency, or unbounded scope.",
     "keywords": [
       "deep-intake-investigation",
+      "scope-classification",
       "risk-scoring",
-      "scenario-selection",
-      "duplicate-risk",
-      "conflict-risk",
-      "pii-risk",
-      "focus-mode",
+      "contradiction-detection",
+      "scenario-comparison",
+      "posture-selection",
       "vault-probes",
       "typescript-triad",
-      "pre-mutation-analysis"
+      "pre-mutation-analysis",
+      "policy-layer"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -47,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "deep-intake-investigation-risk-scenarios-conflict-routing-analysis"
+    "semantic_hash": "deep-intake-investigation-scope-risk-scenarios-posture-selection"
   },
   "recursive_layer": {
     "links": [
@@ -84,7 +84,14 @@
         "hitl_required": false
       }
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:58:41Z",
+        "event": "mechanism_policy_separation",
+        "agent": "n1",
+        "rationale": "Separated A2C stage mechanism from agent policy. Ingest retains capture mechanics; investigation owns risk classification and posture selection."
+      }
+    ]
   },
-  "integrity_sha3_512": "c514a90a8d7681508cc7d859b017997f6493b85252fd5e0cec65a249891177db3f0e8df9c4fddbbba182445d0a176c6fbd4d2a310fc19ccea5ed71dba3d3950c"
+  "integrity_sha3_512": "6e8436cdd4c2616799752a2f54313299e767022aa150ff153bc0081e8cdaa42a2d1e7a0704b586792519cb442d08c6bcecbeed7b196a2e9bb870e06fd4592f17"
 }

@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:46:00Z",
-    "updated_at": "2026-03-08T22:40:00Z",
+    "updated_at": "2026-03-11T15:18:06Z",
     "name": "Validation Gatekeeper Agent",
-    "semantic_hash": "validation-gatekeeper-agent-gates-quality-quarantine-acceptance-review",
+    "semantic_hash": "validation-gatekeeper-agent-acceptance-policy-salvage-override-promotion",
     "source": {
       "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
       "type": "architect_prompt"
@@ -23,23 +23,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Validation Gatekeeper Agent\n\n## 1. Definition and Essence\nValidation Gatekeeper Agent is the acceptance-boundary worker of the N1Hub vault. It interprets gate results, classifies quality risk, blocks malformed or weak capsule changes from entering the graph, and routes failures toward remediation or quarantine rather than quiet compromise.\n\n## 2. Core Responsibilities\n- `gate_interpretation` reads validation evidence in a way other agents and operators can act on.\n- `accept_reject_decision` decides whether a candidate is ready, fixable, review-worthy, or unsafe.\n- `autofix_supervision` allows bounded repair without confusing repair with approval.\n- `quarantine_routing` ensures hard failures remain inspectable and recoverable.\n- `real_promotion_boundary` protects the step from Dream-side candidate structure into trusted Real.\n- `quality_feedback` sends explicit improvement signals back to mining, update, and review lanes.\n\n## 3. N1Hub Role\nIn N1Hub, Validation Gatekeeper Agent keeps the vault honest after A2C refinement but before final acceptance. It is the difference between structured output and trusted sovereign knowledge, and it gives the system a clear answer to the question: has this candidate actually passed enough evidence and gate discipline to enter the accepted graph?\n\n## 4. Philosophical Alignment\nValidation Gatekeeper Agent serves To Dig Deep by insisting that depth includes rigor, not just volume or novelty.\n"
+    "content": "# Validation Gatekeeper Agent\n\n## 1. Definition and Essence\nValidation Gatekeeper Agent is the acceptance-boundary worker of the N1Hub vault. It interprets the evidence emitted by `a2c-validate`, classifies quality risk, authorizes or blocks the next move, and routes weak or unsafe candidates toward bounded repair, review, quarantine, or rejection instead of quiet compromise.\n\n## 2. Core Responsibilities\n- `accept_reject_classification` decides whether a candidate is ready, fixable, review-worthy, or unsafe.\n- `salvage_authorization` determines when bounded repair is allowed and what recovery path remains inside policy.\n- `override_authorization` governs the narrow architect-override path with explicit eligibility and auditable rationale.\n- `quarantine_routing` ensures unrecoverable or disputed candidates remain inspectable and recoverable.\n- `real_promotion_boundary` protects the step from Dream-side candidate structure into trusted Real.\n- `quality_feedback` sends explicit improvement signals back to mining, update, review, and refinement lanes.\n\n## 3. Stage and Policy Separation\n`a2c-validate` executes checks, emits gate results, and produces forensic diagnostics. Validation Gatekeeper Agent owns the policy that follows those results: whether the candidate advances, whether bounded salvage is allowed, whether an override is eligible, whether quarantine is required, and whether Dream-side output is promotable toward Real.\n\n## 4. N1Hub Role\nIn N1Hub, Validation Gatekeeper Agent keeps the vault honest after A2C refinement but before final acceptance. It is the difference between structurally plausible output and trusted sovereign knowledge because it decides what the evidence permits the system to do next.\n\n## 5. Philosophical Alignment\nValidation Gatekeeper Agent serves To Dig Deep by insisting that depth includes rigor, explicit boundary law, and auditable escalation rather than fluent structure alone."
   },
   "neuro_concentrate": {
-    "summary": "Validation Gatekeeper Agent is the explicit quality boundary between candidate capsule output and trusted graph acceptance. It matters because a pipeline can produce sophisticated-looking structure that still should not enter the vault. The gatekeeper interprets validation evidence, classifies whether a candidate is acceptable, fixable, review-worthy, or unsafe, and protects the boundary between Dream-side experimentation, review-ready work, and Real-side trust. This turns quality control and promotion discipline into accountable agent functions instead of silent side effects.",
+    "summary": "Validation Gatekeeper Agent is the explicit policy boundary between validation evidence and trusted graph acceptance. It owns accept/reject classification, salvage authorization, override authorization, quarantine routing, and the Dream-to-Real promotion boundary. This matters because the system needs one clear worker that interprets validation evidence, decides what the evidence permits next, and keeps admission policy separate from deterministic validation mechanics, silent compromise, unaccountable promotion decisions, hidden exception handling, and trust drift.",
     "keywords": [
       "validation-gatekeeper-agent",
-      "quality-control",
-      "a2c-validate",
-      "quarantine",
-      "capsule-job",
-      "capsule-gates",
+      "acceptance-policy",
+      "salvage-authorization",
+      "override-authorization",
+      "quarantine-routing",
       "real-promotion-boundary",
-      "promotion-discipline",
-      "vault-update",
-      "review",
-      "n1hub",
-      "capsuleos"
+      "quality-control",
+      "a2c-validate"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -49,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "validation-gatekeeper-agent-gates-quality-quarantine-acceptance-review"
+    "semantic_hash": "validation-gatekeeper-agent-acceptance-policy-salvage-override-promotion"
   },
   "recursive_layer": {
     "links": [
@@ -103,7 +99,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:18:06Z",
+        "event": "mechanism_policy_separation",
+        "agent": "n1",
+        "rationale": "Separated A2C stage mechanism from agent policy. Validate retains deterministic checks and forensics; gatekeeper owns acceptance, salvage, override, and quarantine policy."
+      }
+    ]
   },
-  "integrity_sha3_512": "2122e67ac26bedcf980abd8341d593c8b12a352eceb71aa364e103f3cf3cac86868bfb413e557c69b2acaea4ee7ef47870255efa5c1b6eab49c3b5837084321c"
+  "integrity_sha3_512": "47be6d82c697262008bfe57ec1da01e1d68906a74e7edbda761df25785c0f1bde11e49848b1478370aa89522e1bae153525ab78f619478dfd90af6c68a6ee84b"
 }

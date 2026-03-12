@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-validate.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.877Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "A2C Stage: Validate",
     "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix",
     "priority": "critical",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Validate\n\n## 1. Definition and Essence\nThe Validate stage executes the 16 Validation Gates against sealed capsule candidates. It classifies failures, applies safe autofixes when policy allows, and determines whether a candidate is accepted, retried, or quarantined.\n\n## 2. Core Attributes\n- `gate_results` pass/fail matrix with issue details\n- `autofix_actions` record of non-destructive corrections applied\n- `severity_class` used for routing decisions\n- `validation_latency_ms` performance metric for observability\n- `quarantine_reason` for rejected candidates\n\n## 3. Lifecycle\nValidate runs all configured gates, applies optional autofix for eligible issues, revalidates fixed candidates, and routes failures to quarantine. Successful candidates proceed to emit and persistence workflows.\n\n## 4. Integration\n- **Hash Stage:** consumes sealed capsule candidates.\n- **Emit Stage:** forwards only validated capsules.\n- **16 Gates:** depends on canonical gate definitions and thresholds.\n- **Quarantine Buffer:** isolates persistent failures for audit.\n\n## 5. Philosophical Alignment\nValidation reflects To Dig Deep through disciplined epistemic gates that block superficial or malformed knowledge from entering the sovereign graph.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Validate in the Dream branch represents a stricter and more explainable quality boundary for capsule admission. It imagines richer validator telemetry, better autofix boundaries, clearer quarantine routing, and stronger feedback loops from failures back into earlier pipeline stages. The stage matters because this is where structured output either earns trust or is denied entry. Dream therefore preserves Validate as a future trust gateway whose rigor becomes more visible, actionable, and evolution-friendly over time.",
+    "summary": "A2C Stage: Validate defines the quality boundary for capsule admission. It sharpens validator telemetry, autofix boundaries, quarantine routing, and feedback loops from failures back into earlier pipeline stages. The stage matters because this is where structured output either earns trust or is denied entry. Validate therefore serves as the trust gateway whose rigor stays visible, actionable, and evolution-friendly while preserving a clear boundary between deterministic gate checks and later governance interpretation.",
     "keywords": [
       "a2c",
       "validate",
@@ -65,7 +65,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Validate states its trust-gateway doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "f40a6a09643a6a93321c1d86ad4c0cacca5caf806304e56e3e4480fb473b77d57773270264f61db8e8a93244df3512ae3c71f3d4801ac74aaf3aaaf280f562df"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

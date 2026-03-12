@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.854Z",
+    "updated_at": "2026-03-11T21:10:00Z",
     "name": "A2C Stage: Ingest",
     "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Ingest\n\n## 1. Definition and Essence\nThe Ingest stage is the entry point of Anything-to-Capsules. It captures raw artifacts from files, APIs, chats, and structured streams, normalizes envelope metadata, and preserves original context for downstream transformation. Ingest does not interpret meaning deeply; it ensures capture fidelity, provenance anchors, and deterministic handoff into the pipeline.\n\n## 2. Core Attributes\n- `input_uri` or source handle for acquired material\n- `source_type` classification (file, api, chat, stream)\n- `captured_at` timestamp and transport metadata\n- `raw_payload_ref` pointer to immutable raw snapshot\n- `ingest_trace_id` for cross-stage observability\n\n## 3. Lifecycle\nIngest receives an input trigger, captures payload and context, stamps provenance metadata, and emits a deterministic ingest artifact. Retries remain idempotent by trace ID, and failed captures are redirected to quarantine paths before normalization resumes.\n\n## 4. Integration\n- **A2C Core:** part_of relationship as first execution stage.\n- **Normalize Stage:** forwards raw artifact for canonical structure conversion.\n- **CapsuleOS:** depends on shared metadata and integrity semantics.\n- **To Dig Deep:** implements disciplined capture before synthesis.\n\n## 5. Philosophical Alignment\nIngest reflects To Dig Deep by refusing superficial intake. It captures the full substrate of evidence before any compression or interpretation, preserving sovereignty and traceability from the first byte.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Ingest in the Dream branch pushes the intake boundary toward a richer evidence-capture system. It imagines broader channel support, cleaner raw-material preservation, stronger trace identifiers, and more reliable source envelopes before refinement begins. The stage matters because intake quality constrains every later step in the pipeline. Dream therefore keeps Ingest as a future-ready capture layer where origin context is preserved with less loss, less ambiguity, and stronger discipline around what is allowed to enter the refinery.",
+    "summary": "A2C Stage: Ingest extends the intake boundary toward richer evidence capture. It describes broader channel support, cleaner raw-material preservation, stronger trace identifiers, and more reliable source envelopes before refinement begins. The stage matters because intake quality constrains every later step in the pipeline. Ingest therefore stands as the capture layer where origin context is preserved with less loss, less ambiguity, and stronger discipline around what is allowed to enter the refinery.",
     "keywords": [
       "a2c",
       "ingest",
@@ -62,7 +62,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:10:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so Ingest states future intake doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "32beb00e2ba13f35299165847f5e8874a4f832786b8744cd95f043abd01122181d135d014323f59b1428d72991209f31c935d2722058f606abd12713ae95d43f"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.key-agents.stewardship-lane.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:36:12Z",
+    "updated_at": "2026-03-11T14:36:12Z",
+    "name": "Key Agents Stewardship Lane",
+    "semantic_hash": "key-agents-stewardship-lane-vault-maintenance-reviewable-structure",
+    "source": {
+      "uri": "internal://capsule.foundation.key-agents.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Key Agents Stewardship Lane\n\n## 1. Boundary\nKey Agents Stewardship Lane owns the graph-improvement and vault-maintenance workers that read the vault, plan bounded jobs, improve structure, and prepare update-ready output. This sub-hub exists so stewardship work is legible as a full-cycle maintenance lane rather than a loose set of background utilities.\n\n## 2. What Belongs Here\nThis sub-hub groups `vault-stewardship-swarm`, `capsule-decomposition-agent`, `capsule-markup-agent`, `capsule-graph-refactor-agent`, and `vault-update-agent`. Together they define the maintenance loop that inspects graph health, splits overloaded capsules, enriches markup, repairs topology, and lands reviewed vault updates.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own human conversation, mining discovery, planning compression, or branch-acceptance authority. Those belong to `user-lane`, `mining-lane`, `planning-lane`, and `governance-lane`, while background swarm activity remains under `swarm-lane`."
+  },
+  "neuro_concentrate": {
+    "summary": "Key Agents Stewardship Lane groups the vault-maintenance workers of N1Hub: stewardship swarm, decomposition, markup, graph refactor, and update. It makes the full-cycle graph-improvement lane explicit instead of burying maintenance inside a flat agent list. This matters because reading the vault, planning bounded jobs, repairing structure, and preparing update-ready output belong to one accountable lane whose work must stay reviewable rather than dissolving into general background activity, opaque automation, or drift.",
+    "keywords": [
+      "key-agents",
+      "stewardship-lane",
+      "vault-stewardship-swarm",
+      "capsule-decomposition-agent",
+      "capsule-markup-agent",
+      "capsule-graph-refactor-agent",
+      "vault-update-agent"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "key-agents-stewardship-lane-vault-maintenance-reviewable-structure"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:36:12Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of key-agents hub decomposition to reduce parent link density from 28 outbound to ≤9."
+      }
+    ]
+  },
+  "integrity_sha3_512": "d6e7bee3a02b54084fb1c34837f237fe3b25c0e9249f74b381aba4d5b03995862dc8415eed2339a783f66ee9d56a5a5960ac0015b068e8198f4daaadec9a803b"
+}

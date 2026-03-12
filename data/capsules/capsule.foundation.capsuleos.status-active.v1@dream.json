@@ -1,33 +1,31 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos.status-active.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "status-active-execution-phase-validated-mutable-gold-master",
-    "updated_at": "2026-03-08T21:08:00Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "CapsuleOS Status: Active",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Status: Active\n\n## 1. Definition\nIn the Dream branch, `active` is imagined less as a static label and more as a carefully governed runtime posture: the set of capsules that the system is willing to treat as present, trusted, and operational at a given moment.\n\n## 2. Future Direction\nDream clarifies that active should eventually become machine-actionable rather than only descriptive.\n- active capsules should advertise why they are trusted\n- active promotion should carry explicit evidence bundles\n- swarm maintenance should prioritize active capsules without collapsing into needless churn\n- active state should be explainable to both humans and agents as current working reality\n\n## 3. Branch Discipline\nDream preserves the distinction between `stored`, `candidate`, and `operative`. Not every important capsule should become active immediately. The future design assumes stronger review, quieter promotion, and more visible reasoning around why a capsule is allowed to shape planning, retrieval, or autonomous work.\n\n## 4. Why Dream Cares\nAs N1Hub grows into a second brain, `active` must mean more than merely \"not archived.\" It should mean: this capsule is currently trusted enough to participate in the live metabolism of the system."
+    "content": "# Capsule Status: Active\n\n## 1. Definition\n`active` is the governed runtime posture for capsules that the system is willing to treat as present, trusted, and operational. It is not a decorative label. It marks material that may shape planning, retrieval, automation, and operator-facing reasoning inside the live metabolism of the graph.\n\n## 2. Activation Evidence\n- active capsules advertise why they are trusted\n- promotion into active carries explicit evidence bundles\n- swarm maintenance prioritizes active capsules without collapsing into needless churn\n- active state remains explainable to both humans and agents as current working reality\n\n## 3. Status Discipline\nActive remains distinct from `stored`, `candidate`, and `operative`. Not every important capsule becomes active immediately. The status is reserved for capsules whose review history, evidence, and runtime consequence justify live participation in the system.\n\n## 4. Why It Matters\nAs N1Hub grows into a second brain, active means more than merely \"not archived.\" It means the capsule is trusted enough to participate in retrieval, planning, and autonomous work because its trust boundary is explicit."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, the `active` status becomes a more explicit runtime contract for trusted working reality rather than a loose descriptive label. It points toward a future where promotion into active state carries clearer evidence, explainable trust, visible review rationale, branch-aware activation rules, and stronger swarm discipline so that operational knowledge can stay live, searchable, and useful without becoming noisy, casually mutable, politically ambiguous, or operationally confusing to humans and agents.",
+    "summary": "The `active` status is the governed runtime posture for capsules that the system is willing to treat as present, trusted, and operational. It requires explicit activation evidence, explainable trust, visible review rationale, and clear separation from stored, candidate, and operative states. This keeps active capsules useful for planning, retrieval, and autonomous work without turning the live graph into a noisy or politically ambiguous surface. The status therefore functions as a real trust boundary rather than a loose descriptive label.",
     "keywords": [
       "capsule-status",
       "active",
-      "execution-phase",
-      "trusted-working-reality",
-      "controlled-mutability",
+      "trusted-runtime-posture",
       "promotion-evidence",
-      "versioning",
-      "capsuleos",
+      "review-rationale",
       "swarm-priority",
+      "capsuleos",
       "n1hub"
     ],
     "confidence_vector": {
@@ -60,7 +58,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Rewrote active-status doctrine in present tense so the capsule states the future trust contract directly instead of narrating Dream as a branch."
+      }
+    ]
   },
-  "integrity_sha3_512": "b0f3323982fd563dbfd2eab36fecb58112f09a3f7ef7be163764b7b1632106167201ac35f29913358e42d1094e03305fa6f5013ed030f256156e136db67ac284"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

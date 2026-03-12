@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-librarian-agent.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:42:00Z",
-    "updated_at": "2026-03-09T00:47:59.418Z",
+    "updated_at": "2026-03-10T13:50:00.428Z",
     "name": "Capsule Librarian Agent",
     "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map",
     "source": {
@@ -23,21 +23,21 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Librarian Agent\n\n## 1. Definition and Essence\nCapsule Librarian Agent is the retrieval spine that lets N1Hub and A2C read the existing vault before creating new state. In current code this role is concretely embodied by the TypeScript query and ranking path exposed through `scripts/a2c/query.ts` and backed by `lib/a2c/query.ts`, which ranks live capsules with 6D confidence-aware scoring and can synthesize a transient query capsule when enough strong evidence is present.\n\n## 2. Runtime Responsibilities\n- Tokenize titles, summaries, keywords, entities, and tags for graph-aware retrieval.\n- Weight results using validation, provenance, extraction, synthesis, linking, and contradiction balance rather than plain keyword overlap alone.\n- Hydrate candidates from payload files when index metadata is thin.\n- Apply minimum provenance and validation thresholds so retrieval favors trustworthy nodes.\n- Optionally include archived capsules for deeper historical reading.\n- Build a transient synthesis capsule on the fly when enough ranked sources support a query, then gate-check that transient object before returning it.\n\n## 3. Why This Matters\nThe strongest way to prevent duplicate capsules and shallow reasoning is to read the vault well before acting. Librarian is the component that makes that possible.\n\n## 4. Integration\n- **Personal AI Assistant:** uses Librarian for grounded answers.\n- **A2C Link / Synthesize:** benefit from ranked graph context before new capsule creation.\n- **Vault Stewardship Swarm:** relies on Librarian to know what already exists.\n\n## 5. Philosophical Alignment\nCapsule Librarian Agent serves To Dig Deep by insisting that new work begins with deep retrieval from sovereign memory rather than with generic model improvisation.\n"
+    "content": "# Capsule Librarian Agent\n\n## 1. Definition and Essence\nCapsule Librarian Agent is the vault-native memory interface that lets N1Hub read, explain, compare, and navigate existing capsule truth before it creates or mutates state. In current code this role is concretely embodied by the TypeScript query and ranking path exposed through `scripts/a2c/query.ts` and backed by `lib/a2c/query.ts`, which ranks live capsules with 6D confidence-aware scoring and can synthesize a transient query capsule when enough strong evidence is present. The larger boundary, however, is broader than search alone: Librarian is the agent surface through which N1 should increasingly know the vault.\n\n## 2. Runtime Responsibilities\n- Tokenize titles, summaries, keywords, entities, and tags for graph-aware retrieval.\n- Weight results using validation, provenance, extraction, synthesis, linking, and contradiction balance rather than plain keyword overlap alone.\n- Compare overlapping capsules, surface contradictions, and reveal the stronger canonical nodes.\n- Ground assistant answers and refactor proposals in vault evidence before new state is created.\n- Help map legacy files, docs, tests, and task surfaces to capsule owners during sovereign refactor passes.\n- Hydrate candidates from payload files when index metadata is thin.\n- Apply minimum provenance and validation thresholds so retrieval favors trustworthy nodes.\n- Keep transient synthesis opt-in and subordinate to explicit evidence.\n\n## 3. Why This Matters\nIf capsules are the durable memory format and files are projections, Librarian is the bridge that lets a human or agent talk to living vault truth without browsing raw storage by hand.\n\n## 4. Integration\n- **Personal AI Assistant:** uses Librarian for grounded answers, capsule navigation, and contextual comparison.\n- **Workspace:** depends on Librarian to make the habitat feel natural while deeper capsule structure stays inspectable.\n- **A2C Link / Synthesize:** benefit from ranked graph context before new capsule creation.\n- **Vault Stewardship Swarm:** relies on Librarian to know what already exists.\n- **N1Hub Sovereign Refactor Program:** uses Librarian to ground conversion of legacy surfaces into capsule-native ownership.\n\n## 5. Philosophical Alignment\nCapsule Librarian Agent serves To Dig Deep by insisting that new work begins with deep retrieval from sovereign memory rather than with generic model improvisation."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Librarian Agent is the retrieval spine that helps both users and A2C read the vault before they create more graph state. The live implementation ranks capsules with a 6D confidence-aware weighting formula, hydrates thin index rows from payload files when needed, filters by provenance and validation thresholds, and can build a transient synthesis capsule when several strong sources converge on the same query. This matters because duplicate creation and shallow reasoning usually begin with weak retrieval. Librarian therefore turns the vault into active working memory, giving the assistant, A2C, and stewardship agents a disciplined way to consult sovereign memory before they speak or mutate.",
+    "summary": "Capsule Librarian Agent is the vault-native memory interface that helps N1Hub read, compare, and explain capsule truth before more state is created. The live implementation remains the query and ranking path in the A2C stack, but the role is now clarified as broader than search alone. Librarian should ground assistant answers, reveal stronger canonical nodes, surface contradictions, and help map legacy files, docs, tests, and task surfaces to capsule owners during sovereign refactor passes. If capsules become the durable memory format and files remain projections, Librarian is the bridge that lets humans and agents interact with living vault truth without depending on raw storage folklore.",
     "keywords": [
       "capsule-librarian-agent",
+      "vault-native-interface",
       "query-vault",
-      "vector-weighting",
-      "transient-synthesis",
-      "vault-navigation",
-      "retrieval-spine",
       "ranked-evidence",
-      "thresholds",
+      "capsule-navigation",
+      "sovereign-refactor",
       "assistant-grounding",
-      "graph-memory"
+      "graph-memory",
+      "files-as-projections",
+      "canonical-nodes"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -98,6 +98,18 @@
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.sovereign-refactor.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.n1hub-sovereign-refactor.v1",
+        "relation_type": "supports"
       }
     ],
     "actions": [
@@ -108,7 +120,15 @@
         "hitl_required": false
       }
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-10T13:50:00.428Z",
+        "event": "vault_native_interface_boundary_clarified",
+        "agent": "n1",
+        "run_id": "capsule-sovereign-refactor-2026-03-10",
+        "rationale": "Librarian is no longer described only as an A2C retrieval helper. The capsule now records its broader role as the vault-native interface through which N1 and the operator should increasingly know capsule truth."
+      }
+    ]
   },
-  "integrity_sha3_512": "f61d91a59d849d5a75258a80c355b7aee72b88dfd588b2a19342acd221b080e30a03a97dfe67d88f9216d0a2fdcb0817114dff2a8e06e5e3b501eb70b3a4077b"
+  "integrity_sha3_512": "4239458ffd8460e5c6142e53eb34040cbd198a8b83a113bae04949dada9b77325bacdc8e37333519eb41c28401c70cf65bf3c77812055e8b2cdc56cadd29f9bf"
 }

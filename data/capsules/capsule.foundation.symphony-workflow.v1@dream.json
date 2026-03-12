@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-08T23:42:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Symphony Workflow Contract",
     "semantic_hash": "symphony-workflow-md-prompt-hooks-sandbox-policy-contract",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Workflow Contract\n\n## 1. Dream Direction\nThe Dream branch imagines `WORKFLOW.md` becoming a richer repo-owned law surface for Symphony.\n\n## 2. Desired Future State\n- tracker, workspace, hooks, concurrency, and Codex settings remaining versioned in-repo.\n- stronger instruction-surface integration so workflow, prompt body, AGENTS-like guidance, and repo law act as one coherent surface.\n- clearer assignment-aware execution and review boundaries instead of one generic run loop.\n- stronger Dream-safe output discipline before anything hardens into Real-side repository truth.\n- better alignment between workflow law, harness protocol, and downstream artifact return.\n\n## 3. Why It Matters\nDream preserves the idea that orchestration policy should remain visible, reviewable, reloadable, and shared with the repository itself. The workflow contract should be the law surface that makes agent behavior change through versioned doctrine instead of operator folklore.\n"
+    "content": "# Symphony Workflow Contract\n\n## 1. Role\nSymphony Workflow Contract will become the richer repo-owned law surface for orchestration, binding workflow policy, instruction surfaces, harness behavior, and review boundaries into one explicit execution contract.\n\n## 2. Future Workflow Contract\nWorkflow law will keep tracker, workspace, hooks, concurrency, Codex settings, and assignment-aware execution rules versioned in-repo. It will enforce stronger Dream-safe output discipline and cleaner alignment between harness protocol, workflow law, and downstream artifact return.\n\n## 3. Operational Consequence\nAutonomous coding quality will depend less on hidden operator memory and more on one visible repository-owned execution contract that every serious run can load and follow.\n\n## 4. Philosophical Alignment\nSymphony Workflow Contract supports To Dig Deep by keeping orchestration law explicit, legible, and shared."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Workflow Contract in the Dream branch preserves the idea that `WORKFLOW.md` should become a richer law surface for orchestration. It imagines stronger instruction-surface integration, clearer assignment-aware execution, stricter Dream-safe output discipline, and versioned policy that remains reviewable inside the repository itself. The capsule matters because the quality of autonomous coding work depends not only on the runtime, but on whether the repo-owned workflow contract remains explicit, legible, and shared.",
+    "summary": "Symphony Workflow Contract defines the future richer repo-owned law surface for orchestration: stronger instruction-surface integration, assignment-aware execution, stricter Dream-safe output discipline, and better alignment between workflow law, harness protocol, and artifact return.",
     "keywords": [
       "symphony-workflow",
       "workflow-md",
@@ -92,7 +92,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "00dcc452eceda74ae981a88ecb7c9cf721cf16e43745d9fea1c03c2bc3bf83c0a6892809c64054a8157dfaf0d705e9d72b7de0b642451a575d60787702f5ff26"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

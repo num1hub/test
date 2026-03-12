@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.planner.signal-intelligence.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T02:15:00Z",
+    "name": "Planner Signal Intelligence",
+    "semantic_hash": "planner-signal-intelligence-tracker-branch-librarian-swarm-feedback",
+    "source": {
+      "uri": "internal://capsule.foundation.planner.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Planner Signal Intelligence\n\n## 1. Role\nPlanner Signal Intelligence owns the pressure signals that force the planner to adapt under live conditions. It keeps execution telemetry, swarm pressure, branch discipline, librarian context, and agent-lane coordination together so replanning responds to evidence instead of wishful sequencing.\n\n## 2. Signal Intelligence Surface\nThis sub-hub groups `tracker`, `n-infinity`, `branch-steward-agent`, `capsule-librarian-agent`, and `key-agents`. Together they define how execution truth, risk pressure, branch literacy, graph context, and agent-lane feedback shape the next planning revision.\n\n## 3. Operating Boundary\nThis sub-hub does not own planning objects, horizon compression logic, or user-facing plan projection. Those responsibilities belong to `planning-objects`, `horizon-compression`, and `operator-surfaces`."
+  },
+  "neuro_concentrate": {
+    "summary": "Planner Signal Intelligence groups the evidence and pressure feeds that force planning to adapt: Tracker, N-Infinity, Branch Steward Agent, Capsule Librarian Agent, and Key Agents. It keeps execution telemetry, risk pressure, branch literacy, graph context, and lane-level planning signals together so replanning responds to evidence instead of wishful sequencing. This boundary matters because planning quality depends on explicit feedback pressure from the live system, not only on roadmap structure or operator preference. It gives the planner stack one named seam where execution reality pushes back.",
+    "keywords": [
+      "planner",
+      "signal-intelligence",
+      "tracker",
+      "n-infinity",
+      "branch-steward-agent",
+      "capsule-librarian-agent",
+      "key-agents"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "planner-signal-intelligence-tracker-branch-librarian-swarm-feedback"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:15:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Planner decomposition to isolate execution telemetry, swarm pressure, branch literacy, librarian context, and lane-level feedback that force planning to adapt."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

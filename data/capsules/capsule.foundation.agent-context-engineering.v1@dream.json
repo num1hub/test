@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:10:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Context Engineering",
-    "semantic_hash": "agent-context-engineering-packs-memory-editing-artifact-branch",
+    "semantic_hash": "agent-context-engineering-replayable-branch-aware-holographic-packs",
     "source": {
       "uri": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
       "type": "web_article"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Context Engineering\n\n## Dream Direction\nIn the Dream branch, Agent Context Engineering becomes a first-class design discipline for every major N1Hub agent lane.\n\n## Desired Future State\n- each agent run receives a generated context pack instead of a raw vault dump\n- Dream and Real evidence are explicitly labeled in the pack\n- context packs can be replayed, diffed, and audited after a run\n- instruction surfaces are injected deliberately instead of drifting in through prior conversation residue\n- handoff bundles move cleanly between scout, foreman, reviewer, and executor lanes\n- context editing suppresses stale tool chatter before it contaminates later cycles\n- retrieval budgets keep large vaults deep without becoming noisy\n\n## Why It Matters\nDream preserves the idea that a stronger swarm is not produced only by stronger models. It is produced by better context design, better evidence packing, and better separation between memory, artifacts, and immediate prompt state."
+    "content": "# Agent Context Engineering\n\n## 1. Role\nEvery serious N1Hub run will begin from a designed context pack rather than from a raw transcript, vault dump, or accidental residue from earlier chat turns. Context will be assembled as a bounded evidence artifact that preserves branch meaning, doctrine framing, and task-specific signal.\n\n## 2. Future Context Pack Discipline\n- replayable context packs that can be diffed and audited after a run\n- explicit Real and Dream labeling instead of silent branch blending\n- deliberate instruction-surface injection rather than accidental prompt inheritance\n- handoff-ready bundles that move cleanly between scout, foreman, reviewer, and executor lanes\n- retrieval budgets that keep large vaults deep without becoming noisy or economically irrational\n\n## 3. Holographic Coverage\nA strong pack will preserve a compact image of the whole source alongside the local fragment: essence, governing axiom, modality profile, and the evidence needed for the immediate step. This keeps local edits grounded in the larger truth instead of rewarding narrow but context-starved reasoning.\n\n## 4. Operational Consequence\nContext engineering will make swarm work cheaper, deeper, and easier to explain because each run can show why it saw the evidence it saw, which doctrine framed it, and what was intentionally left out.\n\n## 5. Philosophical Alignment\nAgent Context Engineering supports To Dig Deep by making depth come from careful evidence design rather than raw prompt volume."
   },
   "neuro_concentrate": {
-    "summary": "Agent Context Engineering in the Dream branch defines the future state where every N1Hub agent run is driven by a deliberate context pack instead of a noisy transcript or a vault dump. It envisions replayable, branch-aware, handoff-ready bundles that preserve evidence quality, doctrine framing, and retrieval discipline while making swarm work cheaper, deeper, and more explainable over time. In that future, the assistant, mining lanes, and vault swarm all operate on designed evidence bundles rather than raw accumulation.",
+    "summary": "Agent Context Engineering defines the future evidence-pack discipline for N1Hub: replayable, branch-aware, handoff-ready context packs with deliberate instruction injection, retrieval budgeting, and holographic coverage of both the local fragment and the larger source.",
     "keywords": [
       "agent-context-engineering",
       "dream-branch",
@@ -46,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-context-engineering-packs-memory-editing-artifact-branch"
+    "semantic_hash": "agent-context-engineering-replayable-branch-aware-holographic-packs"
   },
   "recursive_layer": {
     "links": [
@@ -100,7 +100,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "ede8804ade9503db26514d8d9dafc3fb648cc0e6b0173720c3daf9444fa78183322ce3f550157b257f49de5cd4c92b533e2ad57538a89a8af3c4e41b45509599"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

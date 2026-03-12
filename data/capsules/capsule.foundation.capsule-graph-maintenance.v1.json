@@ -1,38 +1,36 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsule-graph-maintenance.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-09T00:16:18.654Z",
+    "updated_at": "2026-03-12T03:20:00Z",
     "name": "Capsule Graph Maintenance",
-    "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime",
+    "semantic_hash": "capsule-graph-maintenance-routing-topology-arbitration-synthesis-runtime",
     "priority": "high",
-    "progress": 31,
+    "progress": 44,
     "estimatedHours": 280,
-    "actualHours": 70,
+    "actualHours": 94,
     "dueDate": "2026-08-08",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Graph Maintenance\n\n## 1. Definition and Essence\nCapsule Graph Maintenance is the continuous operating discipline that keeps the sovereign graph healthy after capsules are created. It covers link hygiene, contradiction management, structural refinement, synthesis opportunities, archival pressure, and the bounded jobs that make those activities real.\n\n## 2. Core Responsibilities\n- `topology_hygiene` keeps links traversable, scoped, and non-rotting.\n- `contradiction_management` identifies pressure and routes epistemic conflict toward review, validation, or synthesis.\n- `structural_refinement` detects bloated hubs, weak atoms, and broken neighborhoods.\n- `vault_stewardship` makes explicit that graph work and capsule work must reinforce one another.\n- `maintenance_jobs` expresses this work as bounded capsule jobs instead of ambient magic.\n- `promotion_safety` keeps graph repair aligned with branch discipline so improvements do not silently contaminate Real.\n\n## 3. N1Hub Role\nIn N1Hub this hub gives a concrete home to what N-Infinity and vault-facing workers do night after night. The graph should not merely accumulate capsules; it should become clearer, more navigable, and more trustworthy every day. That requires capsule-level decomposition and markup as much as high-level graph weaving and synthesis.\n\n## 4. Architectural Value\nWithout graph maintenance, capsule sovereignty decays into slow entropy. This hub therefore exists to name preservation, repair, arbitration, synthesis, and vault stewardship as first-class system work.\n\n## 5. Specialized Maintenance Patterns\n\nGraph maintenance should name its specialist patterns explicitly:\n- resonance clustering and merge-plan preparation,\n- contradiction adjudication across competing nodes,\n- void mapping for high-centrality gaps in the graph,\n- controlled decay or archival pressure for stale regions,\n- semantic squash merges for low-value fragment piles when retrieval should shift toward one curated node.\n\nThese patterns matter because not all graph pressure is the same. Some regions require preservation of tension, some need synthesis, some need rest, and some reveal missing knowledge that should become a future excavation target.\n"
+    "content": "# Capsule Graph Maintenance\n\n## 1. Role\nCapsule Graph Maintenance is the continuous operating discipline that keeps the sovereign graph healthy after capsules are created. It now routes that discipline through four bounded sub-hubs so topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs remain explicit instead of collapsing into one 18-link parent hub.\n\n## 2. Routing Surfaces\n- `topology-pressure` owns link hygiene, structural refinement, decomposition pressure, markup repair, and neighborhood-shape diagnostics.\n- `epistemic-arbitration` owns contradiction pressure, debate routing, and advisory handling when claims, links, or cluster boundaries remain contested.\n- `synthesis-evolution` owns resonance clustering, void mapping, novel synthesis, and graph-growth pressure where strong regions should become higher-signal structure.\n- `runtime-jobs` owns capsule jobs, night-shift operation, vault stewardship coupling, and background runtime support that make graph maintenance materially executable.\n\n## 3. Parent Boundary\nThe parent graph-maintenance hub keeps only the top-level relationship to CapsuleOS, N-Infinity, Background Agent Runtime, Vault Stewardship Swarm, To Dig Deep, and the four maintenance sub-hubs. Detailed maintenance routing now flows through those sub-hubs so graph upkeep remains a legible operating contract instead of a flat registry of every worker, debate lane, and runtime hook."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Maintenance defines the continuous labor that keeps the graph healthy after ingestion, and its maintenance picture is now more concrete. Beyond generic hygiene, the system should recognize resonance clusters, adjudicate contradictions, identify central knowledge voids, decay stale regions deliberately, and consolidate low-value fragments into higher-signal synthesis nodes without destroying lineage. This matters because graph quality does not improve through accumulation alone. It improves through recurring maintenance patterns that preserve tension where it is useful and compress noise where it is wasteful. Graph maintenance is therefore the long-term metabolism of the second brain, not a cosmetic cleanup task.",
+    "summary": "Capsule Graph Maintenance now acts as a bounded routing hub for four explicit maintenance surfaces: topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs. The parent keeps only top-level ties to CapsuleOS, N-Infinity, Background Agent Runtime, Vault Stewardship Swarm, To Dig Deep, and the four sub-hubs. This makes graph upkeep easier to inspect because topology repair, contradiction handling, synthesis pressure, and executable maintenance jobs no longer hide inside one overloaded parent capsule. The result is a clearer maintenance contract for how the sovereign graph preserves trust while evolving.",
     "keywords": [
       "capsule-graph-maintenance",
-      "graph-hygiene",
-      "autonomous-weaver",
-      "epistemic-parliament",
-      "void-mapping",
-      "apoptosis",
-      "squash-merge",
-      "lineage-preservation",
-      "contradiction-management",
+      "hub-decomposition",
+      "topology-pressure",
+      "epistemic-arbitration",
+      "synthesis-evolution",
+      "runtime-jobs",
+      "graph-upkeep",
       "vault-stewardship"
     ],
     "confidence_vector": {
@@ -43,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-graph-maintenance-links-contradictions-synthesis-archival-runtime"
+    "semantic_hash": "capsule-graph-maintenance-routing-topology-arbitration-synthesis-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -53,75 +51,46 @@
       },
       {
         "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "supports"
+        "relation_type": "part_of"
       },
       {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-job.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
-        "relation_type": "references"
+        "relation_type": "part_of"
       },
       {
         "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "target_id": "capsule.foundation.capsule-graph-maintenance.topology-pressure.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "target_id": "capsule.foundation.capsule-graph-maintenance.epistemic-arbitration.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+        "target_id": "capsule.foundation.capsule-graph-maintenance.synthesis-evolution.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.n-infinity.weaver.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.gardener.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.parliament.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.innovator.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
+        "target_id": "capsule.foundation.capsule-graph-maintenance.runtime-jobs.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
-      },
-      {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
-        "relation_type": "part_of"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "part_of"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T03:20:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Capsule Graph Maintenance into four bounded sub-hubs so topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs no longer collapse into an 18-link parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "f4da5ae4a4265eaa30a8b9af88922af8ac6204ed91828149c26d0982cb0c366f7b2426e7fa9098e3cb0da0c419a65dda97410143e011fb2b9a1296cb4101b80f"
+  "integrity_sha3_512": "cff10fbaf992399ddf384168ce8eac180e7ef8e025eb3d036c5ae25113705e3505e0a41c3675586cf382fa244e2f9f35623bf855377894916d1190b11f074f51"
 }

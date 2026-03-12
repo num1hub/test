@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.symphony.assignment-intake.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T02:55:00Z",
+    "name": "Symphony Project Assignment Intake",
+    "semantic_hash": "project-symphony-assignment-intake-tracker-workspace-jobs-routing",
+    "source": {
+      "uri": "internal://capsule.project.symphony.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Project Assignment Intake\n\n## 1. Role\nSymphony Project Assignment Intake owns the delivery surfaces that turn repository demand into runnable orchestration work. It keeps tracker-fed intake, workspace-origin requests, swarm-fed assignments, and capsule-job routing together so the implementation stream starts from explicit sources.\n\n## 2. Assignment Intake Surface\nThis sub-hub groups `foundation.symphony.assignment-intake`, `tracker`, `workspace`, `capsule-job`, and the supporting project lanes for Workspace and N-Infinity. Together they define how issue demand, workspace-origin requests, graph jobs, and swarm-fed assignments enter the implemented Symphony service.\n\n## 3. Operating Boundary\nThis sub-hub does not own long-lived session continuity, workflow safety posture, or retry and observability evidence. Those responsibilities belong to `live-session-fabric`, `workflow-safety`, and `run-observability`."
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Project Assignment Intake groups the delivery entry surfaces of the implementation stream: the matching foundation intake surface, Tracker, Workspace, Capsule Job, and the supporting Workspace and N-Infinity project lanes. It keeps issue demand, workspace-origin requests, graph jobs, and swarm-fed assignments together so the implemented service starts from explicit sources rather than scheduler folklore. This boundary matters because delivery quality depends on knowing where work came from before any daemon or session machinery begins to act.",
+    "keywords": [
+      "symphony-project",
+      "assignment-intake",
+      "tracker",
+      "workspace",
+      "capsule-job",
+      "n-infinity",
+      "delivery-entry"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "project-symphony-assignment-intake-tracker-workspace-jobs-routing"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.assignment-intake.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.project.n-infinity.v1",
+        "relation_type": "supports"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Symphony Project decomposition to isolate tracker-fed intake, workspace-origin requests, swarm assignments, and capsule-job routing."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

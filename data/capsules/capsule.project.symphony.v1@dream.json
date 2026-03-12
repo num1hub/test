@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.project.symphony.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-07T10:22:14.453Z",
+    "updated_at": "2026-03-12T02:55:00Z",
     "name": "Symphony Project",
-    "semantic_hash": "capsule-project-symphony-v1-agent-automation-runtime-integration",
+    "semantic_hash": "project-symphony-routing-intake-session-safety-observability-delivery",
     "source": {
       "uri": "internal://scripts/symphony.ts",
       "type": "repository_implementation"
@@ -23,30 +23,29 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Project\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Project maturing from a working repository runner into a deeper orchestration program for N1Hub engineering.\n\n## 2. Desired Future State\n- stronger workflow-law integration so `WORKFLOW.md`, instruction surfaces, and harness policy act as one coherent execution surface.\n- assignment-aware execution that can begin from issues, comments, control actions, or swarm assignments without losing attribution.\n- richer control-plane and status projection across terminal, web, mobile, and operator views.\n- clearer Dream-safe output discipline before anything hardens into repository truth.\n- better coordination between Symphony lanes and the broader swarm instead of one isolated coding daemon.\n- tighter coupling to capsule jobs, review bundles, and promotion evidence.\n\n## 3. Why It Matters\nDream preserves Symphony as a durable engineering substrate, not only the current implementation. It is the place where repository automation becomes more governable, more inspectable, and more tightly integrated with the rest of the N1Hub intelligence stack.\n"
+    "content": "# Symphony Project\n\n## 1. Role\nSymphony Project is the concrete N1Hub engineering stream that delivers repository orchestration in the live codebase. It routes that delivery work through four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability remain explicit instead of collapsing into one 16-link project hub.\n\n## 2. Routing Surfaces\n- `assignment-intake` owns tracker-fed intake, workspace entry, swarm-fed assignments, and capsule-job routing before live execution begins.\n- `live-session-fabric` owns service runtime, workspace lifecycle, harness protocol, and assignment continuity while a run is active.\n- `workflow-safety` owns workflow law, approval and sandbox posture, night-shift gating, and the testing or security guardrails around execution.\n- `run-observability` owns attempts, retries, status projection, lineage, and the evidence surfaces that explain what happened and what must happen next.\n\n## 3. Parent Boundary\nThe parent Symphony Project hub keeps only the top-level relationship to CapsuleOS platform work, the Symphony foundation contract, and the four project delivery sub-hubs. Detailed implementation routing now flows through those sub-hubs so the project remains a legible delivery map instead of a flat registry of every runtime atom, control surface, and integration lane."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Project in the Dream branch represents the future repository-orchestration lane beyond the already working implementation. It imagines stronger workflow-law integration, assignment-aware execution, richer live reconciliation, better branch-aware workspaces, safer approval handling, tighter handoff between issues and swarm assignments, and cleaner linkage to capsule jobs and promotion evidence. The branch matters because the current project proves the service can run, but the longer-term target is a more durable automation substrate for N1Hub engineering. Dream therefore preserves Symphony as a deeper execution program rather than only the present repository runner.",
+    "summary": "Symphony Project routes repository delivery through four bounded surfaces: assignment intake, live session fabric, workflow safety, and run observability. The parent keeps only top-level relationships to the CapsuleOS platform, the Symphony foundation contract, and the four project sub-hubs. This makes future project doctrine more legible because intake, runtime continuity, workflow law, and recovery evidence no longer hide inside one overloaded project capsule. The result is a clearer implementation contract for how repository orchestration is delivered in code.",
     "keywords": [
       "symphony-project",
-      "automation",
-      "orchestrator",
-      "linear",
-      "codex",
-      "workspaces",
-      "status-surface",
-      "capsule-integration",
-      "n1hub"
+      "hub-decomposition",
+      "assignment-intake",
+      "live-session-fabric",
+      "workflow-safety",
+      "run-observability",
+      "repository-orchestration",
+      "delivery-contract"
     ],
     "confidence_vector": {
-      "extraction": 0.96,
-      "synthesis": 0.97,
-      "linking": 0.97,
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
       "provenance_coverage": 1,
       "validation_score": 1,
-      "contradiction_pressure": 0.08
+      "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-project-symphony-v1-agent-automation-runtime-integration"
+    "semantic_hash": "project-symphony-routing-intake-session-safety-observability-delivery"
   },
   "recursive_layer": {
     "links": [
@@ -59,64 +58,37 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.workspace.v1",
+        "target_id": "capsule.project.symphony.assignment-intake.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.tracker.v1",
+        "target_id": "capsule.project.symphony.live-session-fabric.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.symphony-workflow.v1",
+        "target_id": "capsule.project.symphony.workflow-safety.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.symphony-agent-session.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-run-attempt.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-observability.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-job.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.testing.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.security.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-control-surface.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.n1hub-v0.v1",
+        "target_id": "capsule.project.symphony.run-observability.v1",
         "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-12T02:55:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Symphony Project into four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability no longer collapse into a 16-link project hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "3c6c9661dc8c6a688885ba3ff01e5083fc13985adc22c387c51d39fea42f3222817823d6ff00f61b1e98bb594a20e8839ecd32d2e84e4b9dc745341a7f6e4f0a"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

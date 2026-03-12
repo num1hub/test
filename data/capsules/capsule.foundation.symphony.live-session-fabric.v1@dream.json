@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.symphony.live-session-fabric.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T01:20:00Z",
+    "name": "Symphony Live Session Fabric",
+    "semantic_hash": "symphony-live-session-fabric-daemon-harness-runtime-continuity",
+    "source": {
+      "uri": "internal://capsule.foundation.symphony.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Live Session Fabric\n\n## 1. Role\nSymphony Live Session Fabric owns the long-lived runtime continuity of one orchestration run. It keeps daemon footing, harness protocol, session state, and background runtime support together so a live coding session remains durable and controllable inside one workspace.\n\n## 2. Live Session Fabric Surface\nThis sub-hub groups `background-agent-runtime`, `agent-daemon`, `agent-harness-protocol`, and `symphony-agent-session`. Together they define the substrate that launches, hosts, and resumes live execution without treating agent work as one-shot prompt traffic.\n\n## 3. Operating Boundary\nThis sub-hub does not own work-entry selection, workflow safety policy, or retry and observability state. Those responsibilities belong to `assignment-intake`, `workflow-safety`, and `run-observability`."
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Live Session Fabric groups the continuity surfaces of the orchestration system: Background Agent Runtime, Agent Daemon, Agent Harness Protocol, and Symphony Agent Session. It keeps daemon footing, live session state, and protocol-driven execution together so one run can stay durable and controllable inside one workspace instead of degrading into one-shot prompt traffic. This boundary matters because repository automation needs an explicit live-execution substrate before retries, observability, or workflow law can mean anything. It gives Symphony one clear runtime fabric for persistent sessions.",
+    "keywords": [
+      "symphony",
+      "live-session-fabric",
+      "background-agent-runtime",
+      "agent-daemon",
+      "agent-harness-protocol",
+      "symphony-agent-session",
+      "runtime-continuity"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "symphony-live-session-fabric-daemon-harness-runtime-continuity"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-daemon.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-harness-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-agent-session.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T01:20:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Symphony decomposition to isolate daemon footing, harness protocol, session continuity, and background runtime support."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

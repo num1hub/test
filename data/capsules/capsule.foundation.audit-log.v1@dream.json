@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.audit-log.v1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-07T10:22:13.955Z",
+    "updated_at": "2026-03-12T04:55:00Z",
     "name": "Audit Log",
     "semantic_hash": "capsule-foundation-audit-log-v1-events-governance-forensics",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Audit Log\n\n## 1. Definition and Essence\nAudit Log defines immutable event recording for capsule creation, mutation, validation, overrides, and governance actions. It standardizes event schema, retention policies, and integrity requirements for forensic traceability.\n\n## 2. Core Attributes\n- `event_id` immutable audit record identifier\n- `actor_ref` identity capsule responsible for action\n- `subject_ref` capsule or resource affected\n- `event_payload` normalized mutation metadata\n- `retention_policy` storage duration and archival tiering\n\n## 3. Lifecycle\nAudit events are emitted on protected operations, indexed for query, rotated by retention policy, and archived while preserving tamper-evident integrity.\n\n## 4. Integration\n- **Validator and A2C:** records gate outcomes and fixes.\n- **Architect Override and Parliament:** logs exceptional governance actions.\n- **Archive:** long-term retention and restoration coupling.\n- **Security:** incident response and compliance evidence source.\n\n## 5. Philosophical Alignment\nAudit logging realizes To Dig Deep by ensuring every important action can be reconstructed, challenged, and learned from.\n"
   },
   "neuro_concentrate": {
-    "summary": "Audit Log in the Dream branch represents a stronger evidentiary memory for the platform. It pushes toward richer event granularity, better causal reconstruction, cleaner actor lineage, and more useful long-horizon review of how graph and agent state actually changed over time. The capsule matters because trust depends on reconstructability, not on declarations alone. Dream therefore preserves Audit Log as a future forensic substrate for the ecosystem, not just a record of notable mutations.",
+    "summary": "Audit Log represents a stronger evidentiary memory for the platform. It pushes toward richer event granularity, better causal reconstruction, cleaner actor lineage, and more useful long-horizon review of how graph and agent state actually changed over time. The capsule matters because trust depends on reconstructability, not on declarations alone. It therefore stands as the forensic substrate of the ecosystem rather than just a record of notable mutations.",
     "keywords": [
       "audit-log",
       "forensics",
@@ -64,7 +64,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T04:55:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Audit Log states forensic-memory doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "a6702a857a6dab5721e7832eb05e2919d735753073b95789fae82a380cbed22bef69cd7d6c457b7a5965a93f2b6a11d3a4216b1dd6a89ad78b5858b4ca8ef162"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

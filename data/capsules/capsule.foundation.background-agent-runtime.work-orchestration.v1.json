@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.background-agent-runtime.work-orchestration.v1",
+    "version": "1.0.1",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:04:33Z",
+    "updated_at": "2026-03-12T04:20:00Z",
+    "name": "Background Agent Runtime Work Orchestration",
+    "semantic_hash": "background-runtime-work-orchestration-jobs-stewardship-mining-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.background-agent-runtime.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Background Agent Runtime Work Orchestration\n\n## 1. Boundary\nBackground Agent Runtime Work Orchestration owns the bounded execution layer of the runtime: job envelopes, delegation, queue-facing observability, vault maintenance workers, and the mining/update agents that turn runtime continuity into concrete graph work.\n\n## 2. What Belongs Here\nThis sub-hub groups the atoms that schedule or execute actual background work: `capsule-job`, `agent-delegation`, `symphony-observability`, `capsule-graph-maintenance`, `vault-stewardship-swarm`, `capsule-decomposition-agent`, `capsule-markup-agent`, `capsule-graph-refactor-agent`, `vault-update-agent`, `deepmine-prospector-agent`, `deepmine-miner-agent`, and `deepmine-foreman-agent`. Together they describe how work packets are shaped, observed, routed, and applied.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own daemon host lifecycle, instruction or memory continuity, or permission-to-mutate gates. Those remain in `daemon-lifecycle`, `control-plane`, and `mutation-gates`. Work orchestration exists to execute and observe bounded jobs after those other layers have already supplied runtime footing and governance."
+  },
+  "neuro_concentrate": {
+    "summary": "Background Agent Runtime Work Orchestration is the bounded execution layer of the runtime. It groups job envelopes, delegation, observability, vault-maintenance workers, and DeepMine update workers so background work can be routed and observed without mixing with daemon lifecycle or mutation-permission logic. This boundary matters because long-lived runtime power becomes useful only when work packets, stewardship edits, and mining updates move through one explicit execution lane rather than through ambient control-plane state. It gives the runtime a clear seam for doing bounded work after footing and governance have already been established.",
+    "keywords": [
+      "background-agent-runtime",
+      "work-orchestration",
+      "capsule-job",
+      "agent-delegation",
+      "vault-stewardship",
+      "deepmine-workers",
+      "observability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "background-runtime-work-orchestration-jobs-stewardship-mining-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-delegation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-maintenance.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-markup-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.vault-update-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:04:33Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of background-agent-runtime hub decomposition to reduce parent link density from 44 outbound to ≤15."
+      },
+      {
+        "at": "2026-03-12T04:20:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the work-orchestration summary to satisfy validator length requirements and normalized the semantic hash to an eight-token canonical form while preserving the existing execution boundary."
+      }
+    ]
+  },
+  "integrity_sha3_512": "3404a8a6eee0a069982818bb42f844e9263d9fc4b3214dc49d5d31d10f0a1c75f7b42f02443973cbd04735558871a3ebb4dd149caa0026778b7e7ab8143e4bee"
+}

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.key-agents.planning-lane.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:36:12Z",
+    "updated_at": "2026-03-11T14:36:12Z",
+    "name": "Key Agents Planning Lane",
+    "semantic_hash": "key-agents-planning-lane-horizon-roadmap-daily-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.key-agents.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Key Agents Planning Lane\n\n## 1. Boundary\nKey Agents Planning Lane owns the temporal compression workers that turn long-horizon intent into grounded plans. This sub-hub exists so the planning swarm stays visible as its own lane instead of being flattened into the broader agent roster.\n\n## 2. What Belongs Here\nThis sub-hub groups `daily-planner-agent`, `roadmap-planner-agent`, and `planning-horizon-engine`. Together they define day-level planning, roadmap shaping, and horizon compression from long-range intent into bounded execution structure.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own conversational partnership, mining, maintenance execution, validation authority, or background swarm maintenance. Those belong to `user-lane`, `mining-lane`, `stewardship-lane`, `governance-lane`, and `swarm-lane`."
+  },
+  "neuro_concentrate": {
+    "summary": "Key Agents Planning Lane groups the temporal compression workers of N1Hub: daily planning, roadmap planning, and planning-horizon compression. It keeps planning intelligence distinct from mining, governance, and background swarm behavior. This matters because the system needs one visible lane that translates long-horizon intent into day-level sequencing, roadmap pressure, and bounded planning artifacts without mixing time-shaping work into discovery, critique, autonomous maintenance routines, reactive runtime firefighting, or avoidable schedule churn today.",
+    "keywords": [
+      "key-agents",
+      "planning-lane",
+      "daily-planner-agent",
+      "roadmap-planner-agent",
+      "planning-horizon-engine",
+      "horizon-compression",
+      "planning"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "key-agents-planning-lane-horizon-roadmap-daily-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.key-agents.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planning-horizon-engine.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:36:12Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of key-agents hub decomposition to reduce parent link density from 28 outbound to ≤9."
+      }
+    ]
+  },
+  "integrity_sha3_512": "b6f0e07e9bad9fd531966c1042826c10f7828e8189595d6e3486381f67f624e3ca9749c57d75700ae3b06994842e6e577259c65aae8a5c11bf56a183a846ee30"
+}

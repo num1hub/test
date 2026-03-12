@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.sovereign-refactor.v1",
+    "version": "1.0.0",
+    "status": "sovereign",
+    "type": "foundation",
+    "subtype": "atomic",
+    "author": "Number One Projects",
+    "created_at": "2026-03-10T13:50:00.428Z",
+    "updated_at": "2026-03-10T13:50:00.428Z",
+    "semantic_hash": "sovereign-refactor-capsule-native-files-projections-runtime-foundation",
+    "source": {
+      "uri": "n1hub://operator/sovereign-refactor-2026-03-10",
+      "type": "operator_directive"
+    },
+    "name": "Sovereign Refactor",
+    "priority": "high",
+    "progress": 12,
+    "estimatedHours": 220,
+    "actualHours": 8,
+    "dueDate": "2026-05-31",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Sovereign Refactor\n\n## 1. Definition and Essence\nSovereign Refactor is the foundation doctrine that sets N1Hub's near-term priority: refactor the live system so the capsule vault becomes the stronger canonical layer and legacy repo surfaces become bounded projections of that canon. The point is not feature velocity. The point is to reduce hidden coupling, convert legacy knowledge into capsule-owned truth, and make the project safer for both humans and agents.\n\n## 2. Operating Doctrine\n- Capsules are the preferred canonical container for durable project truth when a concept, contract, program, or runtime boundary deserves long-lived identity.\n- Files remain necessary runtime artifacts for code execution, git review, CI, tests, and docs publication, but they should increasingly behave as projections, entrypoints, or evidence surfaces rather than the only place meaning lives.\n- Refactor pressure should focus on legacy seams: code domains, tests, docs, anchors, task packets, and operating context that still depend on folklore or oversized files.\n- Each step must preserve working runtime behavior while clarifying ownership, public entrypoints, and machine-checkable contracts.\n- New feature work should not outrun the structural conversion unless the operator explicitly chooses it.\n\n## 3. Why This Matters\nIf capsules become the durable memory format, N1 can reason over a clearer vault, stewardship agents can operate with lower blast radius, and Number One Projects can reuse the same sovereign patterns across products instead of rebuilding doctrine from scratch.\n\n## 4. Integration\n- **N1Hub Runtime:** adopts this as the short-term operating focus.\n- **Capsule Librarian Agent:** becomes the living interface over the growing vault.\n- **Capsule Decomposition Agent:** applies the atomization pressure to legacy surfaces.\n- **Workspace:** keeps the human-facing surface simple while deeper structure becomes more capsule-native.\n\n## 5. Real Canonical Rule\nReal owns the live sovereign-refactor doctrine for N1Hub. Dream may imagine more radical fileless futures, but Real must protect the incremental rule: refactor the existing runtime into capsule-native truth without breaking the current working system."
+  },
+  "neuro_concentrate": {
+    "summary": "Sovereign Refactor is the foundation doctrine that makes short-term project priority explicit: N1Hub should refactor legacy repo truth into capsule-native sovereign structure before it chases more feature growth. Capsules become the stronger canonical containers for durable project meaning, while files remain necessary runtime, git, CI, test, and documentation projections. The doctrine aims to reduce hidden coupling, clarify ownership, and make the system safer for humans and agents without pretending the current working runtime can be replaced in one leap. It also defines the boundary between practical real-side refactor and more radical dream-side visions of fileless interaction.",
+    "keywords": [
+      "sovereign-refactor",
+      "capsule-native",
+      "files-as-projections",
+      "legacy-conversion",
+      "n1hub",
+      "number-one-projects",
+      "low-blast-radius",
+      "capsule-canon",
+      "refactor-first",
+      "runtime-foundation"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "sovereign-refactor-capsule-native-files-projections-runtime-foundation"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.n1hub.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-sovereign-refactor.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-10T13:50:00.428Z",
+        "event": "sovereign_refactor_doctrine_created",
+        "agent": "n1",
+        "run_id": "capsule-sovereign-refactor-2026-03-10",
+        "rationale": "The operator explicitly set short-term project priority on refactoring N1Hub toward sovereign capsule-native structure rather than on shipping new feature layers."
+      }
+    ]
+  },
+  "integrity_sha3_512": "8ddcffcb2d42c100bc3c76c641c3f44a305290bd302df6cdca27b2c20cf1d2a3e19a704e5a92ad376f66e967109989f3734a86b6f01b6b31082a9564fefdae1c"
+}

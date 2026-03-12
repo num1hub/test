@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n-infinity.parliament.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "parliament-agent-epistemic-arbitration-contradictions-quarantine-resolution-governance",
-    "updated_at": "2026-03-10T18:06:00Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "N-Infinity Parliament",
     "priority": "high",
     "progress": 24,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Parliament\n\n## 1. Future Role\nDream keeps Parliament as the next deliberation layer above the current real-side triad arbitration runtime. The real capsule remains canonical for today's governed proposer-critic-synthesizer flow; Dream only preserves the future delta that could make contradiction handling more inspectable, more graduated, and calmer at higher graph scale.\n\n## 2. Future Delta\n- add stronger docketing and escalation tiers so contradiction cases can be grouped by severity instead of handled as isolated one-offs\n- improve evidence bundles, comparative verdict explanations, and quarantine handoff packaging for human review\n- support richer multi-case and cross-cluster arbitration when tension spans more than one pair of claims\n- make middle-path preservation and unresolved tension more explicit so Parliament can leave durable debate structure instead of forced closure\n- deepen the relationship between Parliament, Weaver, and future suggestion lanes without implying a new live runtime already exists\n\n## 3. Why Keep Dream\nFuture graph scale will increase contradiction pressure, not remove it. Parliament therefore still needs a future doctrine for broader deliberation, better review ergonomics, and more structured governance escalation once the current bounded runtime hits its ceiling.\n\n## 4. Guardrails\nDream does not replace the current TypeScript Parliament runtime, does not imply silent auto-quarantine authority, and does not restate today's live triad arbitration path as if it were still only speculative doctrine.\n"
+    "content": "# N-Infinity Parliament\n\n## 1. Role\nParliament is the deliberation layer for contradiction and tension cases that exceed simple pairwise cleanup. It groups cases by severity, preserves durable debate structure, and produces evidence-rich verdict packaging that can survive human review, quarantine routing, or continued unresolved coexistence.\n\n## 2. Deliberation Surface\n- group contradiction cases through stronger docketing and escalation tiers\n- improve evidence bundles, comparative verdict explanations, and quarantine handoff packaging for human review\n- support richer multi-case and cross-cluster arbitration when tension spans more than one pair of claims\n- preserve middle paths and unresolved tension explicitly when forced closure would be false confidence\n- deepen the relationship between Parliament, Weaver, and Suggestion Agent while keeping debate and mutation separate\n\n## 3. Operating Boundary\nParliament arbitrates tension; it does not grant silent mutation authority. Debate output remains explicit, auditable, and reviewable so contradiction handling can scale without hiding governance pressure inside opaque runtime behavior."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Parliament in Dream now keeps only the future deliberation delta above the current real-side arbitration runtime. Real remains canonical for the live proposer-critic-synthesizer flow, evidence-weighted verdicting, draft resolution capsule output, and local gate reporting that exist today. Dream instead preserves the next layer: richer docketing and escalation tiers, better evidence and quarantine handoff bundles, broader cross-cluster arbitration, and clearer preservation of unresolved tension when a conflict should stay open. This keeps future epistemic-governance ambition visible without pretending the current triad runtime is still only a planned institution.",
+    "summary": "N-Infinity Parliament is the deliberation layer for contradiction and tension cases that need more than isolated pairwise cleanup. It groups cases through docketing and escalation tiers, produces richer evidence and quarantine handoff bundles, supports cross-cluster arbitration, and preserves unresolved tension explicitly when forced closure would be false confidence. This keeps epistemic governance visible, auditable, and calm at higher graph scale, and it ensures that deliberation remains a reviewable authority rather than a silent mutation path hidden inside runtime behavior.",
     "keywords": [
       "n-infinity",
       "parliament",
@@ -31,9 +31,7 @@
       "governance-escalation",
       "quarantine-handoff",
       "cross-cluster-debate",
-      "capsuleos",
-      "n1hub",
-      "future-doctrine"
+      "unresolved-tension"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -85,7 +83,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Rewrote doctrine in present tense so Parliament states its future deliberation contract directly without branch-aware meta framing."
+      }
+    ]
   },
-  "integrity_sha3_512": "df31fed2e69e2f28609630128fb6f9e59f88feb95c5a699cae5a9de960b02b0b6443200e8ee4f907ef8d181f3106f795d4c1fe1e584a7ff7218eabb9e2892259"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

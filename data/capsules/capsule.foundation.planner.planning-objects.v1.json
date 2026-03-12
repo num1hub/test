@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.planner.planning-objects.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T02:15:00Z",
+    "name": "Planner Planning Objects",
+    "semantic_hash": "planner-planning-objects-goals-milestones-roadmaps-projects-tasks",
+    "source": {
+      "uri": "internal://capsule.foundation.planner.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Planner Planning Objects\n\n## 1. Role\nPlanner Planning Objects owns the explicit artifacts whose shape the planner governs. It keeps projects, goals, milestones, tasks, and roadmaps together so planning begins from named objects instead of from loose intent.\n\n## 2. Planning Objects Surface\nThis sub-hub groups `project`, `goal`, `milestone`, `task`, and `roadmap`. Together they define the object field whose sequence, scope, dependency posture, and horizon placement the planner manipulates.\n\n## 3. Operating Boundary\nThis sub-hub does not own compression logic, user-facing planning projection, or execution-pressure signals. Those responsibilities belong to `horizon-compression`, `operator-surfaces`, and `signal-intelligence`."
+  },
+  "neuro_concentrate": {
+    "summary": "Planner Planning Objects groups the explicit artifacts of the planning system: Project, Goal, Milestone, Task, and Roadmap. It keeps the object field whose scope, sequencing, and dependency posture the planner actually shapes before any horizon compression or operator explanation occurs. This boundary matters because planning quality depends on clear ownership of the artifacts being planned rather than on vague strategy language alone. It gives the planner stack one stable place to define the objects whose arrangement becomes plan structure.",
+    "keywords": [
+      "planner",
+      "planning-objects",
+      "project",
+      "goal",
+      "milestone",
+      "task",
+      "roadmap"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "planner-planning-objects-goals-milestones-roadmaps-projects-tasks"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:15:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Planner decomposition to isolate projects, goals, milestones, tasks, and roadmaps as the explicit artifacts whose shape the planner governs."
+      }
+    ]
+  },
+  "integrity_sha3_512": "b005a738c512292dadb38af1d14ccd4c90dc43b76e67839eaf8614c80715e653147fb2150ccc3b5b55eab2de1b78d89f8ab923210f541ed5c6dd47d85f815c21"
+}

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.planner.operator-surfaces.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T02:15:00Z",
+    "name": "Planner Operator Surfaces",
+    "semantic_hash": "planner-operator-surfaces-assistant-dashboard-calendar-explanation-projection",
+    "source": {
+      "uri": "internal://capsule.foundation.planner.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Planner Operator Surfaces\n\n## 1. Role\nPlanner Operator Surfaces owns the visible planning projection that returns plan state to the user. It keeps the assistant, dashboard, and calendar-facing surfaces together so the plan can be explained, viewed, and scheduled without inventing a second planning truth.\n\n## 2. Operator Surfaces\nThis sub-hub groups `personal-ai-assistant`, `dashboard`, and `calendar`. Together they define how planning artifacts are projected into conversation, visible dashboard context, and schedule-aware timing surfaces.\n\n## 3. Operating Boundary\nThis sub-hub does not own the planning artifacts themselves, the compression logic that produces near-term sequencing, or the execution-pressure signals that force replanning. Those responsibilities belong to `planning-objects`, `horizon-compression`, and `signal-intelligence`."
+  },
+  "neuro_concentrate": {
+    "summary": "Planner Operator Surfaces groups the visible planning projection of the system: Personal AI Assistant, Dashboard, and Calendar. It keeps conversational explanation, operator-facing planning views, and schedule-aware projection together so planning artifacts can be seen and understood without inventing a second planning truth. This boundary matters because planning only becomes useful when it is legible to the operator at the point of use. It gives the planner stack one explicit surface family for explanation, display, and schedule projection.",
+    "keywords": [
+      "planner",
+      "operator-surfaces",
+      "personal-ai-assistant",
+      "dashboard",
+      "calendar",
+      "planning-views",
+      "explanation"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "planner-operator-surfaces-assistant-dashboard-calendar-explanation-projection"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:15:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Planner decomposition to isolate the assistant, dashboard, and calendar-facing surfaces that project plan state back to the operator."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Symphony Observability",
     "semantic_hash": "symphony-observability-logs-status-snapshot-telemetry-runtime-surface",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Observability\n\n## 1. Dream Direction\nThe Dream branch imagines Symphony Observability as a richer evidence layer for orchestration.\n\n## 2. Desired Future State\n- stronger assignment-aware status views instead of anonymous run lists.\n- clearer cost, rate-limit, and lane attribution for each session family.\n- activity filters that work across terminal, web, mobile, control-surface, and control-plane views.\n- easier projection of review requests, failures, degraded modes, and follow-up ownership into operator surfaces.\n\n## 3. Why It Matters\nDream preserves the idea that a trustworthy issue runner must be able to explain not only what it ran, but on whose behalf it ran, what it cost, which lane did the work, and what requires intervention next.\n"
+    "content": "# Symphony Observability\n\n## 1. Role\nSymphony Observability will become the evidence layer that explains orchestration with enough depth for operators and agents to understand who asked for work, what lane ran it, what it cost, what degraded, and what needs intervention next.\n\n## 2. Future Observability Contract\nThe system will expose assignment-aware status views, cost and rate attribution, cross-client activity filters, and clearer projection of failures, recovery paths, and review requests into operator and control-plane surfaces.\n\n## 3. Operational Consequence\nA trustworthy issue runner will explain not only what ran, but on whose behalf it ran, under which economic posture, and with what next-step obligations. Observability will therefore become a first-class orchestration contract rather than an afterthought dashboard.\n\n## 4. Philosophical Alignment\nSymphony Observability supports To Dig Deep by turning runtime behavior into accountable evidence instead of opaque automation."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Observability in the Dream branch preserves a richer evidence layer for orchestration. It imagines assignment-aware status views, clearer cost and lane attribution, cross-client activity filters, and stronger projection of review requests, failures, degraded modes, and fallback recoveries into operator surfaces. The capsule matters because a trustworthy issue runner must explain not only what it ran, but on whose behalf it ran, what it cost, which lane carried the work, whether the result needed recovery, and what needs intervention next.",
+    "summary": "Symphony Observability defines the future evidence layer for orchestration: assignment-aware status views, clearer cost and lane attribution, cross-client activity filters, and stronger projection of failures, degraded modes, and review requests into operator surfaces.",
     "keywords": [
       "symphony",
       "observability",
@@ -83,7 +83,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "0777216de9f7c46be718f678779ed266b8e375bdf4453d9c379612c48efb5fad1d222ab25fc8476997c00210c9aa6a9ce1f779175539bb7b18f771b4fa870bb4"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

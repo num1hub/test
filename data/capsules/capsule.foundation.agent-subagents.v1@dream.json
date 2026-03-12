@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:15:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Subagents",
-    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor",
+    "semantic_hash": "agent-subagents-default-bounded-worker-architecture",
     "source": {
       "uri": "https://docs.langchain.com/oss/javascript/deepagents/harness",
       "type": "web_documentation"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Subagents\n\n## Dream Direction\nIn the Dream branch, N1Hub subagents become the standard operating form of autonomous work rather than an optional optimization.\n\n## Desired Future State\n- every major swarm has a clear triage, strategy, critique, and execution split\n- handoffs carry typed artifacts and bounded context packs\n- workers can be mapped to different provider lanes, harnesses, and costs\n- assignment-aware worker chains replace loose conversational relay\n- reviewer lanes can veto or redirect risky execution before Dream or Real is touched\n- subagent outputs can be replayed and compared across runs\n\n## Why It Matters\nDream preserves the idea that swarm quality should come from composable specialist workers, not from one oversized prompt pretending to be a whole team."
+    "content": "# Agent Subagents\n\n## 1. Role\nBounded specialist workers will become the standard operating form of autonomous work in N1Hub. Serious tasks will be decomposed into compact workers that can be compared, budgeted, improved, and governed independently instead of being hidden inside one oversized prompt loop.\n\n## 2. Future Worker Chain\n- clear triage, strategy, critique, and execution splits across major swarms\n- typed handoffs that carry bounded context packs and artifacts\n- assignment-aware worker chains instead of loose conversational relay\n- provider-aware specialization across different model lanes and harnesses\n- reviewer veto before risky execution touches Dream or Real\n- replayable outputs that can be compared across runs\n\n## 3. Architectural Consequence\nSubagents will reduce role confusion, prompt inflation, and debugging ambiguity. Different workers will be able to use different cost lanes and runtime contracts while still returning compact artifacts to one governing controller.\n\n## 4. Philosophical Alignment\nAgent Subagents supports To Dig Deep by preferring many bounded deep passes over one inflated pseudo-team."
   },
   "neuro_concentrate": {
-    "summary": "Agent Subagents in the Dream branch captures the future state where N1Hub treats bounded specialist workers as the default architecture for autonomous work. It emphasizes typed handoffs, assignment-aware chains, distinct strategy and review lanes, provider-aware specialization, and replayable artifacts so swarms can scale without role confusion or runaway prompt inflation. In that future, most serious tasks are decomposed into compact workers that can be compared, budgeted, improved, and governed independently.",
+    "summary": "Agent Subagents defines the future default architecture for autonomous N1Hub work: bounded specialist workers, typed handoffs, assignment-aware chains, reviewer veto, replayable artifacts, and provider-aware specialization instead of oversized prompt teams.",
     "keywords": [
       "agent-subagents",
       "dream-branch",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-subagents-bounded-workers-handoffs-triage-reviewer-executor"
+    "semantic_hash": "agent-subagents-default-bounded-worker-architecture"
   },
   "recursive_layer": {
     "links": [
@@ -99,7 +99,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "db2749495c932bcc996c25bf4da0ba150e06c25dc39d74d915a03f1da9d85413396099f6e831046276e78cac10116b2ff4a0f70e64bea1a0af8cc497ed978ef7"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

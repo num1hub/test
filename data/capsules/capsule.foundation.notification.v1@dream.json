@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-07T10:22:14.238Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "Notification",
     "semantic_hash": "capsule-foundation-notification-v1-delivery-alerts-channels-priority",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Notification\n\n## 1. Definition and Essence\nNotification in Dream preserves a higher-quality attention system for N1Hub. It imagines fewer but more meaningful signals, better return paths, stronger distinction between human prompts and machine operational alerts, and more adaptive escalation based on context and preference.\n\n## 2. Dream Direction\nThe future notification layer should not simply route messages. It should know what kind of event is occurring, how urgent it truly is, whether it belongs to day co-pilot or night autonomy, and whether the human needs immediate interruption or later review.\n\n## 3. Integration\n- **Reminder and Tracker:** remain the main source of disciplined time pressure.\n- **Personal AI Assistant and AI Control Surface:** make signals interpretable.\n- **Agent Control Plane and Background Agent Runtime:** supply operational and failure alerts.\n- **Integrations:** deliver across external channels.\n\n## 4. Philosophical Alignment\nNotification in Dream preserves the idea that the second brain should sharpen attention rather than fragment it.\n"
+    "content": "# Notification\n\n## 1. Role\nNotification will become the mature attention system of N1Hub, designed to deliver fewer but more meaningful signals with explicit distinction between human prompts, machine-operational alerts, and mixed review events.\n\n## 2. Future Attention Contract\nThe notification layer will classify what kind of event is happening, how urgent it truly is, whether it belongs to day co-pilot or night autonomy, and whether the human needs interruption, quiet queuing, or later review.\n\n## 3. Operational Consequence\nAttention will sharpen instead of fragmenting. Notification will preserve return paths, escalation semantics, and operator clarity while reducing low-value noise across planning, assistant, control-plane, and runtime surfaces.\n\n## 4. Philosophical Alignment\nNotification supports To Dig Deep by making significance visible without allowing the second brain to decay into alert spam."
   },
   "neuro_concentrate": {
-    "summary": "Notification in Dream describes a more mature attention system for N1Hub. It imagines clearer separation between human prompts and machine operational alerts, better escalation rules, richer return paths, explicit attention classes, and less noise overall for users and operators. The capsule matters because the second brain only helps when it sharpens attention instead of fragmenting it. Dream therefore keeps notification quality as a first-class design problem rather than a generic delivery concern.",
+    "summary": "Notification defines the future mature attention system for N1Hub: clearer separation between human prompts and machine alerts, better escalation logic, richer return paths, explicit attention classes, and less noise across planner, assistant, runtime, and control-plane surfaces.",
     "keywords": [
       "notification",
       "delivery",
@@ -96,7 +96,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "3100252c470261305e8538a9381ce1a68e0cf9aebc48a73d3222b04cd01bd42d4aa0219932865d99ec37382dfe0d2bafb586cfce13980e23373c137f9ee45d31"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

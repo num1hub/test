@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T20:05:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Instruction Surfaces",
-    "semantic_hash": "agent-instruction-surfaces-agents-claude-llms-repodocs-n1hub",
+    "semantic_hash": "agent-instruction-surfaces-durable-stack-machine-readable-lane-order",
     "source": {
       "uri": "https://vercel.com/docs/agent-resources",
       "type": "web_documentation"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Instruction Surfaces\n\n## Dream Direction\nIn the Dream branch, every serious N1Hub agent enters the repository through a rich instruction surface before any large tool loop begins.\n\n## Desired Future State\n- `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `WORKFLOW.md` form an explicit instruction stack\n- machine-readable exports such as `llms-full.txt` or markdown index packs exist for the vault and codebase\n- instruction surfaces are concise enough to stay always present while still giving broad project literacy\n- skills are reserved for action-specific workflows, not overloaded as the only way to teach the repository\n- every major swarm lane declares which instruction surfaces it loads and in what order\n- control-plane lanes know which instruction surfaces govern each assignment family\n\n## Why It Matters\nDream preserves the idea that N1Hub agents should not enter the repository blind. They should enter through durable local doctrine, versioned rules, and compact machine-readable knowledge maps."
+    "content": "# Agent Instruction Surfaces\n\n## 1. Role\nEvery serious N1Hub agent will enter the repository through a durable local instruction stack before any large tool loop begins. Repository law, doctrine summaries, indexes, and machine-readable exports will remain always-present operating surfaces instead of optional prompt cargo.\n\n## 2. Future Instruction Stack\n- `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `WORKFLOW.md` acting as an explicit layered instruction surface\n- machine-readable exports such as full-vault and codebase index packs\n- concise always-on surfaces that still preserve broad project literacy\n- lane-declared load order so every major swarm lane states which instruction surfaces govern it\n- control-plane awareness of which instruction stack applies to each assignment family\n\n## 3. Operational Consequence\nAgents will enter N1Hub already oriented to repository law, project structure, capsule doctrine, and blast-radius constraints. Skills will remain procedural, while instruction surfaces will carry broad repository and framework truth.\n\n## 4. Philosophical Alignment\nAgent Instruction Surfaces supports To Dig Deep by making versioned local doctrine the default onboarding path for every serious agent lane."
   },
   "neuro_concentrate": {
-    "summary": "Agent Instruction Surfaces in the Dream branch captures a future where every serious N1Hub agent begins with a durable local instruction stack instead of relying on one-off prompts or accidental context inheritance. It imagines a system where repo doctrine, markdown indexes, and machine-readable knowledge exports are standard operating surfaces for every lane, while skills remain focused on narrower procedural behaviors and context packs remain reserved for live task evidence. In that future, agents enter N1Hub already oriented to repository law, project structure, and capsule doctrine before deeper tool loops begin.",
+    "summary": "Agent Instruction Surfaces defines the future durable instruction stack for N1Hub agents: repo doctrine, compact indexes, machine-readable exports, lane-declared load order, and explicit governance over which surfaces guide each assignment family.",
     "keywords": [
       "agent-instruction-surfaces",
       "dream-branch",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-instruction-surfaces-agents-claude-llms-repodocs-n1hub"
+    "semantic_hash": "agent-instruction-surfaces-durable-stack-machine-readable-lane-order"
   },
   "recursive_layer": {
     "links": [
@@ -87,7 +87,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "d1d6456aadd2098712882a48e9ac9e695bbfe63e943d126e17fac8c34bfa9b0f262a0653f4190eb579d1881acaa3ba081d150bf1f949d1a3cba33e6372624431"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

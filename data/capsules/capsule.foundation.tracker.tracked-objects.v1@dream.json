@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.tracker.tracked-objects.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T00:20:00Z",
+    "name": "Tracker Tracked Objects",
+    "semantic_hash": "tracker-tracked-objects-goals-milestones-tasks-project-state",
+    "source": {
+      "uri": "internal://capsule.foundation.tracker.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Tracker Tracked Objects\n\n## 1. Role\nTracker Tracked Objects owns the execution objects whose follow-through Tracker measures. It keeps the live state of goals, milestones, tasks, and projects together so accountability begins with clear ownership of what is being tracked.\n\n## 2. Tracked Objects Surface\nThis sub-hub groups `goal`, `milestone`, `task`, and `project`. Together they define the object field whose deadlines, progress, completion state, and priority posture become the raw execution truth that Tracker later turns into pressure, replanning, or intervention.\n\n## 3. Operating Boundary\nThis sub-hub does not own reminder timing, orchestration feeds, or historical reporting. Those responsibilities belong to `schedule-pressure`, `orchestration-signals`, and `historical-intelligence`."
+  },
+  "neuro_concentrate": {
+    "summary": "Tracker Tracked Objects groups the core execution objects of the tracking system: Goal, Milestone, Task, and Project. It keeps the object field whose progress, deadlines, and completion posture Tracker measures before that evidence is converted into timing pressure, replanning, or orchestration signals. This boundary matters because accountability starts with clear ownership of what is being tracked rather than with downstream reminders or analytics alone. It gives the tracker stack one stable place to define the work surfaces whose reality all later telemetry depends on.",
+    "keywords": [
+      "tracker",
+      "tracked-objects",
+      "goal",
+      "milestone",
+      "task",
+      "project",
+      "execution-truth"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "tracker-tracked-objects-goals-milestones-tasks-project-state"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.goal.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.task.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T00:20:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Tracker decomposition to isolate the work objects whose deadlines, progress, and completion state define execution truth."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

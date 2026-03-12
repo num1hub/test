@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.personal-ai-assistant.memory-continuity.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-11T20:40:00Z",
+    "name": "Personal AI Assistant Memory Continuity",
+    "semantic_hash": "assistant-memory-continuity-identity-context-preferences-profile-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.personal-ai-assistant.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Personal AI Assistant Memory Continuity\n\n## 1. Role\nPersonal AI Assistant Memory Continuity owns the identity and continuity surfaces that let the assistant remain one stable partner across time instead of a chain of unrelated sessions. It keeps symbiosis doctrine, memory state, context engineering, profile, and preference posture together so adaptive behavior remains legible and governed.\n\n## 2. Continuity Surface\nThis sub-hub groups `human-ai-symbiosis`, `agent-soul`, `agent-instruction-surfaces`, `agent-skills-registry`, `agent-memory-state`, `agent-context-engineering`, `user-preferences`, and `profile`. Together they define why the assistant feels continuous, how context is shaped, what identity contract it inherits, and which human rhythms or boundaries it should respect.\n\n## 3. Operating Boundary\nThis sub-hub does not own planning choices, delegation into deeper execution lanes, or runtime governance controls. Those belong to `planning-navigation`, `execution-orchestration`, and `governance-control`."
+  },
+  "neuro_concentrate": {
+    "summary": "Personal AI Assistant Memory Continuity groups the identity and continuity surfaces that keep the assistant stable across time: Human-AI Symbiosis, Agent Soul, instruction and skill surfaces, memory state, context engineering, user preferences, and profile. It protects adaptive behavior from turning into opaque persona drift or ungoverned session sprawl. This boundary matters because a symbiotic partner has to feel continuous, preference-aware, and accountable without letting memory, identity, and context policy blur into execution or governance decisions.",
+    "keywords": [
+      "personal-ai-assistant",
+      "memory-continuity",
+      "human-ai-symbiosis",
+      "agent-soul",
+      "agent-memory-state",
+      "context-engineering",
+      "user-preferences"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "assistant-memory-continuity-identity-context-preferences-profile-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-soul.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-skills-registry.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-memory-state.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.agent-context-engineering.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T20:40:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Personal AI Assistant decomposition to isolate identity, memory, profile, and context surfaces from planning, delegation, and governance-control responsibilities."
+      }
+    ]
+  },
+  "integrity_sha3_512": "765611b6d8192b1cb99f486de5ba79d382cb424ade162e92e97bad2961b49c8ae35c9f13efa5a3efdef1752cf7e6acb7a43ce9687b4e6b1a0f1fa08e02d40778"
+}

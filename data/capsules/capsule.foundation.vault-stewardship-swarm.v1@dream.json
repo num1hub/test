@@ -1,47 +1,41 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.vault-stewardship-swarm.v1",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:40:00Z",
-    "updated_at": "2026-03-09T20:24:25Z",
+    "updated_at": "2026-03-11T23:10:00Z",
     "name": "Vault Stewardship Swarm",
-    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance",
+    "semantic_hash": "vault-stewardship-swarm-routing-pressure-governance-mutation-runtime",
     "source": {
       "uri": "internal://lib/agents/vaultSteward.ts",
       "type": "repository_implementation"
     },
     "priority": "high",
-    "progress": 46,
+    "progress": 52,
     "estimatedHours": 340,
-    "actualHours": 54,
+    "actualHours": 70,
     "dueDate": "2026-11-02",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Stewardship Swarm\n\n## 1. Dream Direction\nVault Stewardship Swarm in the Dream branch now starts from current Vault Steward runtime truth instead of from a thin generic autonomy sketch. Real already owns the present lane stack, Dream-first execution posture, and publication of operational mirrors. Dream extends that baseline toward a more legible stewardship doctrine where maintenance lanes, review thresholds, and branch handoffs become clearer without pretending that the current run artifacts are the doctrine itself.\n\n## 2. Real Baseline It Must Respect\n- `lane_stack` already exists as Scout, optional Codex Foreman, Codex Reviewer, and Executor lanes inside the live Vault Steward runtime.\n- `bounded_workstream_mix` already routes maintenance through `decomposition`, `markup`, `graph_refactor`, and `mixed` workstreams with queue-aware selection.\n- `dream_first_mutation` already keeps autonomous executor writes on Dream overlays instead of silently mutating Real.\n- `cooldown_and_duplicate_control` already suppresses repeated jobs, respects completed workstream history, and lets the swarm idle honestly when no strong target survives review.\n- `operational_mirror_publication` already emits `latest`, `queue`, and `plan` capsules as Dream-only operational mirrors through `writeDreamOperationalCapsules()`.\n\n## 3. Dream Expansion\n- `lane_contract_hardening` should make Scout, Foreman, Reviewer, and Executor handoffs more inspectable, replayable, and easier to audit across runs.\n- `stewardship_budgeting` should make cooldown, retry, provider choice, and workstream pressure more visible as operator-facing stewardship policy instead of runtime trivia.\n- `promotion_preparation` should prepare Dream-side maintenance output for later Real review without collapsing maintenance doctrine into instant promotion logic.\n- `topology_preserving_maintenance` should improve decomposition, markup, graph refactor, and merge pressure handling without erasing lineage or manufacturing cosmetic churn.\n- `operator_visible_swarm_health` should expose when the swarm is healthy, throttled, vetoed, degraded, or intentionally idle instead of reporting activity volume as success.\n\n## 4. Operational Boundary\nThis hub is not the `latest`, `queue`, or `plan` capsule. Those remain Dream-only operational mirrors that summarize one run, one queue snapshot, or one planning frame. The hub should describe durable stewardship doctrine and the next-horizon swarm posture, while the operational capsules remain overwrite-in-place telemetry artifacts.\n\n## 5. Why It Matters\nN1Hub needs the vault to improve continuously without turning maintenance into invisible mutation theater. Vault Stewardship Swarm in Dream therefore preserves the future doctrine of a swarm that can care for the graph with more discipline than the current runtime already enforces, while still respecting that live operational residue and durable stewardship law are different surfaces.\n\n## 6. Philosophical Alignment\nVault Stewardship Swarm in Dream preserves the idea that the second brain should deepen through bounded care, explicit review, and restraint. The system gets better not when the swarm edits constantly, but when it knows what kind of maintenance pressure is justified, what should stay in Dream, and when no action is the honest action."
+    "content": "# Vault Stewardship Swarm\n\n## 1. Role\nVault Stewardship Swarm is the explicit maintenance cluster that studies the vault, plans bounded improvement, and keeps graph quality rising over time. It routes that work through four bounded sub-hubs so inventory pressure, work planning and review, mutation workers, and runtime modes stay explicit instead of collapsing into one flat registry.\n\n## 2. Routing Surfaces\n- `inventory-pressure` owns vault reading, research pressure detection, and gap sensing before any mutation packet is proposed.\n- `work-planning-review` owns job generation, critique pressure, evidence trails, and branch or validation handoff.\n- `mutation-workers` owns decomposition, markup, graph refactor, and update landing once a packet is ready to act.\n- `runtime-modes` owns day and night posture, control surfaces, daemon footing, assignment continuity, and operator-visible stewardship channels.\n\n## 3. Parent Boundary\nThe parent swarm hub keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four stewardship sub-hubs. Detailed worker routing now flows through those sub-hubs so Vault Stewardship Swarm remains a coordination map instead of a 24-link directory of mixed runtime, review, and mutation surfaces."
   },
   "neuro_concentrate": {
-    "summary": "Vault Stewardship Swarm in the Dream branch now starts from live Vault Steward truth instead of from a generic autonomous-cluster sketch. Real already owns the current lane stack, Dream-first executor posture, diversified maintenance workstreams, cooldown and duplicate suppression, and the Dream-only publication of `latest`, `queue`, and `plan` operational mirrors. Dream preserves the next doctrine layer: stronger lane contracts, clearer stewardship budgets and health thresholds, cleaner preparation for Real-side review, and a hard separation between durable swarm law and ephemeral operational telemetry.",
+    "summary": "Vault Stewardship Swarm routes stewardship through four bounded surfaces: inventory pressure, work planning and review, mutation workers, and runtime modes. The parent keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four sub-hubs. This makes future stewardship doctrine more legible because vault reading, review discipline, structural mutation, and day or night runtime posture no longer hide inside one overloaded parent capsule.",
     "keywords": [
       "vault-stewardship-swarm",
-      "codex-foreman",
-      "codex-reviewer",
-      "dream-operational-mirrors",
-      "queue-cooldown",
-      "workstream-diversification",
-      "dream-first-mutation",
-      "decomposition",
-      "markup",
-      "graph-refactor",
-      "lane-contracts",
-      "branch-safe-stewardship",
-      "promotion-safety",
-      "operator-visible-health"
+      "hub-decomposition",
+      "inventory-pressure",
+      "work-planning-review",
+      "mutation-workers",
+      "runtime-modes",
+      "vault-maintenance",
+      "swarm-health"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -51,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance"
+    "semantic_hash": "vault-stewardship-swarm-routing-pressure-governance-mutation-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -72,79 +66,19 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.inventory-pressure.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.work-planning-review.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.mutation-workers.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-context-engineering.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-subagents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-daemon.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-async-assignment.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-markup-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.runtime-modes.v1",
         "relation_type": "references"
       },
       {
@@ -184,8 +118,20 @@
         "agent": "n1",
         "run_id": "TODO-021",
         "rationale": "The Dream branch was rewritten around the live Vault Steward runtime. Current lane stack, Dream-only operational mirrors, queue cooldown discipline, and Dream-first mutation remain real-first canonical, while Dream now preserves only the next-horizon stewardship doctrine around lane contracts, swarm health visibility, and promotion-safe maintenance policy."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T23:10:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream Vault Stewardship Swarm into four bounded sub-hubs so inventory sensing, planning and review, mutation workers, and runtime modes no longer collapse into a 24-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "ee6c498ae386cc9f64054ae9162e120957910e6bed0d34134cc21a77031e9b502fa89c0cb69d9e2f6e2f3a4b121fa45d579135ac223d517fa602fc2a6db23b14"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

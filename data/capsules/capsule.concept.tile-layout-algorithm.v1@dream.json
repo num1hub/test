@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-07T18:46:00Z",
+    "updated_at": "2026-03-11T21:10:00Z",
     "semantic_hash": "tile-layout-algorithm-pattern-optimization-cuts-waste-estimation",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# Tile Layout Algorithm Concept\n\n## 1. Objective\nDesign an algorithmic strategy for tile patterns that balances aesthetics, installation complexity, and material efficiency.\n\n## 2. Strategies\nUse deterministic pattern generators, constraint aware boundary handling, and waste estimation with configurable margins.\n\n## 3. Evaluation\nEvery layout should emit metrics such as cut count, edge complexity, estimated waste, and labor intensity.\n\n## 4. Research\nExplore hybrid methods that combine deterministic templates with local optimization on irregular geometry."
   },
   "neuro_concentrate": {
-    "summary": "Tile Layout Algorithm in the Dream branch is archived with the rest of the TileSims line so its future optimization core remains preserved without remaining live. It still imagines stronger pattern selection, richer boundary handling, better waste and labor reasoning, and more transparent tradeoff scoring across competing layout strategies. The concept matters because layout quality determines whether the spatial graph becomes economically useful or only visually interesting. In archive mode Dream keeps this explainable layout-intelligence engine as recoverable future leverage.",
+    "summary": "Tile Layout Algorithm is archived with the TileSims line as recoverable optimization doctrine for later reactivation. It describes stronger pattern selection, richer boundary handling, better waste and labor reasoning, and more transparent tradeoff scoring across competing layout strategies. The concept matters because layout quality determines whether spatial intelligence becomes economically useful or merely decorative. In archive mode the capsule keeps this explainable layout engine available as future product leverage and technical reuse.",
     "keywords": [
       "concept",
       "tile-layout",
@@ -68,7 +68,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:10:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware archive phrasing so the concept states its layout doctrine directly and remains filename-only branch signaled."
+      }
+    ]
   },
-  "integrity_sha3_512": "8f9c9f260ba48edeb017665aa68a66ab285133c0754fa46034bae59f489f49f0b7af62b81f29053885152d392aed27cd7027ddbfc59befb23e42224dd3e4f269"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

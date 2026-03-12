@@ -1,43 +1,41 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.vault-stewardship-swarm.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:40:00Z",
-    "updated_at": "2026-03-09T00:16:18.654Z",
+    "updated_at": "2026-03-11T23:10:00Z",
     "name": "Vault Stewardship Swarm",
-    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance",
+    "semantic_hash": "vault-stewardship-swarm-routing-pressure-governance-mutation-runtime",
     "source": {
       "uri": "n1hub://specs/vault-stewardship-cluster-2026-03-07",
       "type": "architect_prompt"
     },
     "priority": "critical",
-    "progress": 39,
+    "progress": 44,
     "estimatedHours": 260,
-    "actualHours": 64,
+    "actualHours": 80,
     "dueDate": "2026-09-12",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Stewardship Swarm\n\n## 1. Definition and Essence\nVault Stewardship Swarm is the explicit agent cluster dedicated to the capsule vault itself. It does not primarily chase the outside world. It studies the vault, plans work against the vault, and performs bounded improvement on capsules and graph structure so the second brain becomes sharper over time.\n\n## 2. Full-Cycle Responsibilities\n- `capsule_inventory_reading` continuously surveys the vault instead of operating on shallow memory.\n- `research_and_pressure_detection` identifies weak summaries, bloated hubs, duplicate pressure, branch confusion, stale overlays, and graph-shape problems.\n- `planning_and_job_generation` turns observations into bounded capsule jobs rather than ambient promises.\n- `decomposition_and_atomization` keeps large capsules from silently mutating into pseudo-hubs.\n- `markup_and_semantic_clarity` improves metadata, summaries, keywords, and structural legibility.\n- `graph_refactoring` repairs weak links, misplaced `part_of` edges, and broken neighborhoods.\n- `branch_and_validation_handoff` routes work toward Dream, Real review, validation, or quarantine instead of uncontrolled mutation.\n- `trace_and_eval_loop` records why a target was chosen, what changed, and whether the work should be repeated.\n- `idle_and_reassess_discipline` allows the swarm to watch, cool down, and reassess instead of manufacturing fake work when the vault is temporarily in a healthy state.\n\n## 3. Swarm Shape\nThe swarm should operate as bounded workers, not a single vague loop:\n- `Scout` reads the vault and identifies pressure points.\n- `Foreman` compresses findings into a high-signal work plan.\n- `Reviewer` challenges weak proposals before execution.\n- `Executor` performs bounded Dream-safe capsule work.\nThis shape matters because the vault improves best when research, judgment, and mutation are separated. The control plane should know which lane produced a proposal, which lane approved it, and which lane actually touched the Dream-side artifact.\n\n## 4. Day and Night Modes\nDuring the day, the swarm should behave as a co-pilot through Personal AI Assistant and Chat to Capsules, proposing changes and asking for confirmation. At night, it should continue bounded maintenance through Background Agent Runtime and Night Shift Autonomy so the vault keeps improving while the human sleeps. When no new high-value work exists, the swarm should deliberately enter watch-and-reassess behavior instead of burning tokens for cosmetic activity.\n\n## 5. Why It Matters\nN1Hub is strongest when the vault is not a static archive of notes, but a living memory system. Vault Stewardship Swarm names the labor required for that outcome and makes capsule improvement first-class work.\n\n## 6. Operational Rule\nThis swarm should prefer a small number of high-signal Dream-safe jobs with clear evidence and review surfaces over a large number of shallow automatic edits. The goal is not activity volume. The goal is sustained vault quality.\n\n## 7. Philosophical Alignment\nVault Stewardship Swarm serves To Dig Deep by treating the vault itself as a mine, library, workshop, and laboratory that deserves continuous care instead of one-time ingestion.\n\n## 8. Specialist Maintenance Lenses\n\nStewardship work benefits from named specialist lenses:\n- weaver behavior for resonance clustering and merge-plan preparation,\n- parliament behavior for contradiction review and adjudication,\n- void-mapper behavior for central missing knowledge,\n- apoptosis behavior for stale or low-value fragment decay,\n- synthesis behavior for consolidating fragment piles without erasing lineage.\n\nNaming these patterns helps the swarm choose the right kind of maintenance pressure instead of treating every vault problem as just another generic edit job.\n"
+    "content": "# Vault Stewardship Swarm\n\n## 1. Role\nVault Stewardship Swarm is the explicit maintenance cluster that studies the vault, plans bounded improvement, and keeps graph quality rising over time. It now routes that work through four bounded sub-hubs so inventory pressure, work planning and review, mutation workers, and runtime modes stay explicit instead of collapsing into one flat registry.\n\n## 2. Routing Surfaces\n- `inventory-pressure` owns vault reading, research pressure detection, and gap sensing before any mutation packet is proposed.\n- `work-planning-review` owns job generation, critique pressure, evidence trails, and branch or validation handoff.\n- `mutation-workers` owns decomposition, markup, graph refactor, and update landing once a packet is ready to act.\n- `runtime-modes` owns day and night posture, control surfaces, daemon footing, assignment continuity, and operator-visible stewardship channels.\n\n## 3. Parent Boundary\nThe parent swarm hub keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four stewardship sub-hubs. Detailed worker routing now flows through those sub-hubs so Vault Stewardship Swarm remains a coordination map instead of a 24-link directory of mixed runtime, review, and mutation surfaces."
   },
   "neuro_concentrate": {
-    "summary": "Vault Stewardship Swarm is the bounded agent cluster that studies and improves the vault itself, and its specialist lenses are now more explicit. Beyond scout, foreman, reviewer, and executor flow, stewardship should recognize resonance clustering, contradiction adjudication, void mapping, stale-fragment decay, and low-value-fragment squash merges as recurring maintenance patterns. This matters because vault quality is not protected by activity volume alone. It is protected when the swarm knows when to preserve tension, when to merge noise, when to identify missing knowledge, and when to stop. Stewardship therefore remains the maintenance arm of the second brain, but with clearer doctrines for synthesis, repair, and restraint.",
+    "summary": "Vault Stewardship Swarm now acts as a bounded routing hub for four explicit stewardship surfaces: inventory pressure, work planning and review, mutation workers, and runtime modes. The parent keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four sub-hubs. This makes stewardship easier to inspect because vault reading, review discipline, structural mutation, and day or night runtime posture no longer hide inside one overloaded parent capsule.",
     "keywords": [
       "vault-stewardship-swarm",
-      "resonance-clustering",
-      "contradiction-adjudication",
-      "void-mapping",
-      "fragment-decay",
-      "squash-merge",
-      "capsule-jobs",
-      "maintenance-patterns",
-      "restraint",
-      "second-brain-maintenance"
+      "hub-decomposition",
+      "inventory-pressure",
+      "work-planning-review",
+      "mutation-workers",
+      "runtime-modes",
+      "vault-maintenance",
+      "review-discipline"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -47,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "vault-stewardship-swarm-capsule-agents-day-night-maintenance"
+    "semantic_hash": "vault-stewardship-swarm-routing-pressure-governance-mutation-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -68,79 +66,19 @@
         "relation_type": "supports"
       },
       {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.inventory-pressure.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.work-planning-review.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.mutation-workers.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-context-engineering.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-subagents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-evals-and-traces.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-daemon.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-async-assignment.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-markup-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "target_id": "capsule.foundation.vault-stewardship-swarm.runtime-modes.v1",
         "relation_type": "references"
       },
       {
@@ -149,7 +87,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:10:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Vault Stewardship Swarm into four bounded sub-hubs so inventory sensing, planning and review, mutation workers, and runtime modes no longer collapse into a 24-link parent hub."
+      }
+    ]
   },
-  "integrity_sha3_512": "85e0420411ad72c1c91f91699cf35d911c404397248669f0d2ff5f58b2ccc75fcd2ee55a2f9ca8fa29baa01c56360ccfce5be1479e878a4663b4e64312146fff"
+  "integrity_sha3_512": "821a82f4de0c15daff451d76b21a10d7ddfd18ceb8be69c4cac534708633826565a36e65da143cb699640dd2ad9b30e57295290dabb3eedd5814912a0c056d8d"
 }

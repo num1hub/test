@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.between-zero-and-one.v1",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
     "semantic_hash": "between-zero-and-one-entropy-to-negentropy-gold",
-    "updated_at": "2026-03-07T10:22:13.965Z",
+    "updated_at": "2026-03-12T04:55:00Z",
     "name": "Between Zero and One",
     "tier": 1
   },
@@ -17,7 +17,7 @@
     "content": "# The Between Zero and One Principle: From Chaos to Sovereign Order\n\n## 1. Definition and Essence\nWithin the N1Hub ecosystem, **\"Between Zero and One\"** is the fundamental epistemological axiom defining the transition from entropic chaos to absolute, structured order. \n\n- **Zero (0)** represents raw data, ambient internet noise, unfiltered LLM outputs, and fragmented human thought. It is pure entropy—formless and susceptible to decay.\n- **One (1)** represents the Sovereign Capsule. It is absolute negentropy—cryptographically sealed, semantically linked, structurally infallible, and legally significant intellectual capital.\n\n\"Number One Projects\" derives its name from this very destination. The platform exists solely to facilitate the perilous, industrial journey across the chasm between Zero and One.\n\n## 2. Core Principles and Architecture\nThe journey from 0 to 1 is not spontaneous; it is a mechanical, deterministic process governed by the physics of CapsuleOS:\n- **The Chasm of Refinement**: Data does not leap from 0 to 1. It must be processed through the **A2C (Anything-to-Capsules)** pipeline. As it moves through Ingestion (0.1), Normalization (0.3), Extraction (0.5), and Synthesis (0.8), its entropy drops, and its semantic density increases.\n- **The Singularity of Validation**: To reach the state of 'One', a digital artifact must survive the **16 Validation Gates**. Only by achieving perfect structural parity and obtaining the SHA3-512 cryptographic seal does the artifact cross the threshold into sovereignty.\n\n## 3. Interactions within the Ecosystem\nThis philosophical axiom dictates the function of every major N1Hub component:\n- **DeepMine** operates in the realm of Zero, excavating raw potential from external models.\n- **A2C** is the physical manifestation of the journey *Between* Zero and One.\n- **CapsuleOS** is the vault of Ones, the digital continent where entropy is permanently locked out.\n- **N-Infinity** agents operate exclusively on Ones, colliding them to synthesize higher-order, compound intelligence.\n\n## 4. Philosophical Alignment\nPaired intrinsically with the **\"To Dig Deep\"** manifesto, this principle rejects the illusion of 0.5—the \"deep-sounding\" but structurally hollow answers pervasive in modern AI. N1Hub demands the absolute realization of knowledge. A project, a physical space (TileSims), or a thought is not considered truly possessed until it has been transmuted into a One.\n\n## 5. Future Potential\nAs the N1Hub ecosystem expands globally, the \"Between Zero and One\" principle will guide the assimilation of entire corporate knowledge bases, decentralized Web3 economies, and physical real estate into the CapsuleOS graph. It is the universal equation for turning the fleeting noise of the universe into an immortal digital heritage."
   },
   "neuro_concentrate": {
-    "summary": "Between Zero and One in the Dream branch describes a more articulated passage from raw possibility to trusted sovereign capital. It imagines clearer intermediate states between noisy intake, branch-local drafts, validator-earned acceptance, and market-grade reusable knowledge than the current doctrine spells out. The capsule matters because future scale will depend on managing transitions, not only endpoints. Dream therefore preserves this threshold as a richer operational gradient for how entropy becomes accountable graph value.",
+    "summary": "Between Zero and One describes an articulated passage from raw possibility to trusted sovereign capital. It sharpens intermediate states between noisy intake, branch-local drafts, validator-earned acceptance, and market-grade reusable knowledge beyond a simple endpoint model. The capsule matters because scale depends on managing transitions, not only destinations. It therefore stands as the operational gradient for how entropy becomes accountable graph value.",
     "keywords": [
       "between-zero-and-one",
       "transformation-boundary",
@@ -67,7 +67,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T04:55:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Between Zero and One states its transformation gradient directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "488a091e8a888486f81f4dfa4491812e09ff4113f90b5fe669693905bcbf88ca491e6345c97a440a2b441073db576280f0a60846031f4f172231221a09dd6cb4"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-08T19:12:00Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Hybrid LLM Access",
     "semantic_hash": "hybrid-llm-access-subscription-api-wallet-routing-economics",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Hybrid LLM Access\n\n## 1. Dream Direction\nThe Dream branch extends Hybrid LLM Access from a pragmatic current policy into a mature intelligence supply fabric.\n\n## 2. Desired Future State\n- Subscription seats, API pools, hosted inference, and bridge providers are routed together under one policy engine.\n- The wallet understands workload classes, failover preferences, assignment classes, and safety boundaries.\n- Interactive symbiosis and unattended automation can both choose the right lane without manual reconfiguration.\n- Hosted inference and local authenticated lanes can participate without collapsing the distinction between supply types.\n\n## 3. Why It Matters\nA mature N1Hub should not break every time one provider changes pricing, rate limits, or interface shape. It should continue operating because its supply plane is intentionally diversified and because its routing policy can shift across lanes before a human has to intervene.\n\n## 4. Philosophical Alignment\nDream preserves hybrid access as strategic resilience: many paths to intelligence, one governed routing layer.\n"
+    "content": "# Hybrid LLM Access\n\n## 1. Role\nHybrid LLM Access will become the governed intelligence supply fabric of N1Hub, routing subscription seats, API pools, hosted inference, and bridge providers through one policy engine instead of treating them as unrelated access modes.\n\n## 2. Future Supply Contract\nThe wallet and control plane will understand workload classes, failover preferences, assignment types, budget posture, and safety boundaries across the full supply portfolio. Interactive symbiosis, unattended mining, and background execution will therefore choose the right lane without ad hoc manual reconfiguration.\n\n## 3. Operational Consequence\nN1Hub will treat access to intelligence like a resilient infrastructure portfolio rather than a provider toggle. Supply routing will become more durable, more economical, and easier to supervise as providers and pricing models change.\n\n## 4. Philosophical Alignment\nHybrid LLM Access supports To Dig Deep by making access diversity governable instead of accidental."
   },
   "neuro_concentrate": {
-    "summary": "Hybrid LLM Access in the Dream branch describes a richer intelligence supply fabric where subscription seats, API pools, hosted inference, private bridges, and future provider classes are routed together with clearer policy, better failover, assignment-aware placement, and more nuanced workload selection. The capsule matters because N1Hub should eventually treat access to intelligence the way advanced systems treat energy or bandwidth: as a diversified supply portfolio rather than as one provider toggle. Dream therefore preserves the long-term shape of a wallet-governed supply plane that remains resilient even as providers, pricing models, and authorization patterns continue to change.",
+    "summary": "Hybrid LLM Access defines the future intelligence supply fabric of N1Hub: one governed policy engine across subscription seats, API pools, hosted inference, and bridge providers, with better failover, assignment-aware placement, and workload-specific routing.",
     "keywords": [
       "hybrid-llm-access",
       "subscription",
@@ -93,7 +93,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "a3515b7d73a08dbcff1b0fc6bf6bf5bf777547f63724d19b8f5512f0251e63a28afe00c30a0c0e4d504c4980fee61a1c1543d277dac8bade608bc8f8fd624aa9"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

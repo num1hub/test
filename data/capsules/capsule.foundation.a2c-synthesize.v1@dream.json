@@ -1,13 +1,13 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-synthesize.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.872Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "name": "A2C Stage: Synthesize",
     "semantic_hash": "capsule-foundation-a2c-synthesize-v1-stage-composition-draft",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# A2C Stage: Synthesize\n\n## 1. Definition and Essence\nThe Synthesize stage converts extracted fragments into coherent capsule candidates. It reconciles local fragments into stable narratives, metadata, summaries, and link intents while preserving evidence lineage.\n\n## 2. Core Attributes\n- `candidate_capsule_shape` containing 5-element draft structure\n- `synthesis_strategy` policy for aggregation and conflict handling\n- `narrative_coherence_score` quality indicator for generated payload\n- `lineage_refs` connecting candidate fields to extracted evidence\n- `open_questions` unresolved synthesis tensions for review\n\n## 3. Lifecycle\nSynthesize receives extraction output, composes candidate capsules, marks unresolved ambiguity, and hands off to link inference and hashing. Iterative synthesis may run until minimum coherence thresholds are met.\n\n## 4. Integration\n- **Extract Stage:** consumes structured evidence fragments.\n- **Link Stage:** passes candidate capsules for graph wiring.\n- **AI Assistant:** reuses synthesis patterns for interactive generation.\n- **Validator Gates:** prepares structural and semantic compliance checks.\n\n## 5. Philosophical Alignment\nSynthesis reflects To Dig Deep by integrating fragments into meaningful structure without severing traceability to origin evidence.\n"
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Synthesize in the Dream branch represents the future quality bar for turning fragments into capsule candidates. It imagines stronger reconciliation of partial evidence, better handling of contradiction pressure, and more disciplined decisions about what should remain draft versus what is ready for structured commitment. The stage matters because synthesis is where the system can either produce coherent knowledge or prematurely package confusion. Dream therefore preserves Synthesize as a deeper integrative intelligence layer, not merely a formatting step.",
+    "summary": "A2C Stage: Synthesize defines the integrative layer that turns fragments into capsule candidates. It reconciles partial evidence, handles contradiction pressure, and makes disciplined decisions about what remains draft versus what is ready for structured commitment. The stage matters because synthesis is where the refinery can either produce coherent knowledge or prematurely package confusion. Synthesize therefore serves as the integrative intelligence layer that converts prepared evidence into candidate structure without pretending uncertainty is already resolved.",
     "keywords": [
       "a2c",
       "synthesize",
@@ -61,7 +61,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so Synthesize states its integrative doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "20c38ae0894385cac630514e3cf244742245baec548f2e0261d4928e4b3003b1086d52ada3c3f08f6eac72fe1744be5cca4d4d232f9498a934fef2a2efd4cef3"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

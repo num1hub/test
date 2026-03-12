@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.418Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "CapsuleOS Project",
     "semantic_hash": "capsule-project-capsuleos-v1-hub-architecture-governance-execution",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS Project\n\n## 1. Dream Direction\nThe Dream branch pushes CapsuleOS toward a deeper control plane for sovereign knowledge: stronger branch intelligence, safer promotion mechanics, richer validator orchestration, cleaner artifact transport, and a calmer substrate for every downstream subsystem.\n\n## 2. Desired Future State\n- platform law that remains legible even as agents, projects, and branches scale.\n- stronger control-plane visibility across runtime, review, promotion, and archive decisions.\n- clearer contracts between quarry, refinery, workspace, swarm, and repository execution.\n- more deliberate governance for override, quarantine, evidence, and promotion.\n- a substrate that makes second-brain behavior calm instead of fragile.\n\n## 3. Why It Matters\nDream preserves CapsuleOS as more than the current implementation program. It is the place where the platform grows into a true operating system for structured memory, governed automation, and sovereign graph truth.\n"
+    "content": "# CapsuleOS Project\n\n## 1. Role\nCapsuleOS Project will become the deeper control-plane program for sovereign knowledge, expanding the platform beyond the current implementation stream toward stronger branch intelligence, safer promotion mechanics, richer validator orchestration, and clearer runtime contracts.\n\n## 2. Future Project Contract\nThe project will focus on making platform law legible at scale, deepening control-plane visibility across runtime, review, promotion, and archive decisions, and creating calmer contracts between quarry, refinery, workspace, swarm, and repository execution lanes.\n\n## 3. Operational Consequence\nSecond-brain behavior will feel more stable because the substrate beneath it will become more deliberate, more governable, and less reliant on scattered folklore.\n\n## 4. Philosophical Alignment\nCapsuleOS Project supports To Dig Deep by making sovereign memory operate through stronger platform law rather than accidental coordination."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Project in the Dream branch represents the next platform horizon rather than only the current implementation stream. It concentrates on deeper graph governance, broader branch intelligence, stronger validator orchestration, safer automation, and a cleaner operating substrate for every downstream subsystem. Dream reframes the hub as the architecture program for what CapsuleOS still needs to become: a real control plane for sovereign memory, governed agent work, and disciplined promotion across Workspace, DeepMine, A2C, Symphony, and N-Infinity.",
+    "summary": "CapsuleOS Project defines the future control-plane program for sovereign knowledge: stronger branch intelligence, richer validator orchestration, safer promotion mechanics, clearer cross-domain contracts, and a calmer substrate for every downstream N1Hub system.",
     "keywords": [
       "capsuleos",
       "platform-root",
@@ -91,7 +91,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "dbae98abb2d1c7755ef62e612dca33ec1965d77dadc488c2cba2f09f68efed7701f8c0431ac640aba705c37d513a722fb1c4437ef9aae4803d37fcf70bdd9cc5"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -40,7 +40,7 @@ A2C is expected to operate inside the N1Hub low-blast-radius architecture:
   Combines recon plus query context for a candidate input. Its query step stays read-only by default and accepts `--synthesize-on-fly` as the explicit transient-write opt-in.
 
 - `POST /api/a2c/ingest`
-  Accepts `operatorInput.text` plus optional source metadata, stages a raw artifact under [`data/private/a2c/intake/archive_raw`](/home/n1/n1hub.com/data/private/a2c/intake/archive_raw), and writes the normalized intake contract under [`data/private/a2c/intake/normalized`](/home/n1/n1hub.com/data/private/a2c/intake/normalized) for later packet building. The normalized contract now carries verification and stop-condition hints so packetization can preserve bounded proof and pause rules.
+  Accepts `operatorInput.text` plus optional source metadata, stages a raw artifact under [`data/private/a2c/intake/archive_raw`](/home/n1/n1hub.com/data/private/a2c/intake/archive_raw), and writes the normalized intake contract under [`data/private/a2c/intake/normalized`](/home/n1/n1hub.com/data/private/a2c/intake/normalized) for later packet building. The normalized contract now carries verification and stop-condition hints so packetization can preserve bounded proof and pause rules. Requests must choose one ingest mode per call: `operatorInput` or capsule candidates, not both.
 
 - `npx tsx scripts/a2c/packetize.ts --intake-id <id>`
   Consumes one normalized intake artifact, renders a candidate in the existing `TO-DO` task-template shape, and stages JSON plus markdown packet candidates under [`data/private/a2c/tasks/packet_candidates`](/home/n1/n1hub.com/data/private/a2c/tasks/packet_candidates). This does not auto-promote into [`TO-DO/tasks`](/home/n1/n1hub.com/TO-DO/tasks).

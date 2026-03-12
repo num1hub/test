@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T18:46:00Z",
+    "updated_at": "2026-03-11T21:25:00Z",
     "name": "TileSims V2",
     "semantic_hash": "capsule-project-tilesimsv2-v1-tilesims-v2-simulation-generation",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# TileSims V2\n\n## 1. Definition and Essence\nTileSims V2 represents the next-generation execution hub for tile simulation and generation workflows, extending lessons from earlier TileSims efforts into an upgraded architecture and product direction.\n\n## 2. Core Attributes\n- `upgrade_scope` capabilities introduced beyond prior TileSims version\n- `migration_plan` transition path from current TileSims assets\n- `simulation_pipeline` core generation and optimization steps\n- `integration_surface` AI, layout algorithms, and scanning inputs\n- `release_milestones` staged rollout checkpoints\n\n## 3. Lifecycle\nTileSims V2 advances through prototyping, migration, validation, and release phases while preserving lineage to earlier simulation artifacts.\n\n## 4. Integration\n- **TileSims Existing Project:** lineage and migration reference.\n- **Lidar/Layout/Generative Concepts:** conceptual technical inputs.\n- **Planner/Tracker:** execution decomposition and monitoring.\n- **Independent Project Set:** root-level project unless explicitly nested.\n\n## 5. Philosophical Alignment\nTileSims V2 reflects To Dig Deep through iterative product refinement grounded in real technical feedback and measurable progress.\n"
   },
   "neuro_concentrate": {
-    "summary": "TileSims V2 in the Dream branch is archived alongside the rest of the TileSims line so the successor vision remains preserved but inactive. It still represents the forward architectural bet for migration, stronger simulation fidelity, more production-grade workflows, and a cleaner bridge from prototype logic to a marketable system. The capsule matters because the next version may be reactivated later. In archive mode Dream keeps that bet explicit without treating it as a live roadmap.",
+    "summary": "TileSims V2 is archived alongside the rest of the TileSims line as the forward architectural bet for migration, stronger simulation fidelity, more production-grade workflows, and a cleaner bridge from prototype logic to a marketable system. The capsule matters because the next version may be reactivated later. In archive mode the capsule keeps that bet explicit without presenting it as a live roadmap, preserving a legible successor path for future restart.",
     "keywords": [
       "tilesimsv2",
       "next-generation",
@@ -68,7 +68,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:25:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware archive phrasing so TileSims V2 states its successor doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "7edec7b0e80abbc763ee4ddf599fb84a46865544d1b1dcbc6310003834b7795f93cae3513435df98d9ffe09df184f54e5041f5f73a21bc6665afb07fe0d90830"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

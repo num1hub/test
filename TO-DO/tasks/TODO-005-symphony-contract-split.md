@@ -2,7 +2,7 @@
 
 - Priority: `P2`
 - Execution Band: `LATER`
-- Status: `ACTIVE`
+- Status: `DONE`
 - Owner Lane: `Symphony Contract Agent`
 - Cluster: `#3 Symphony orchestration contracts`
 
@@ -128,7 +128,7 @@ Symphony already acts like an operating system inside N1Hub. It needs clearer se
 
 ## Handoff Note
 
-The orchestrator and tracker files are now both below the hard file limit, and their extracted seams are explicit. The next clean Symphony seam is `lib/symphony/agentClient.ts` or a narrower Capsule Graph run-state persistence split inside `lib/symphony/tracker.ts`, not worker execution or workflow-law redesign. Treat `WORKFLOW.md` as a contract surface and keep future passes bounded to one Symphony seam at a time.
+Contained on 2026-03-10. Runtime-state shaping, tracker normalization, and agent-client event shaping are now split into dedicated helper modules, the main high-pressure Symphony files are below the hard size limit, and the current verification set passes. Future Symphony decomposition should land as a fresh packet rather than continuing `TODO-005`.
 
 ## Pass Update: 2026-03-10 agentClient notification seam
 
@@ -140,5 +140,5 @@ The orchestrator and tracker files are now both below the hard file limit, and t
   - `npx vitest run __tests__/symphony/*.test.ts`
   - `npm run typecheck`
 - Handoff:
-  - `TODO-005` remains `ACTIVE`.
-  - Next clean Symphony seam is soft-pressure reduction in `lib/symphony/orchestrator.ts` or `lib/symphony/tracker.ts`, not more `agentClient` protocol splitting.
+  - `TODO-005` is now `DONE`.
+  - Any further Symphony seam work should open a new bounded packet instead of keeping this one artificially active.

@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T21:25:00Z",
-    "updated_at": "2026-03-08T20:38:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Control Plane",
-    "semantic_hash": "agent-control-plane-roster-policy-activity-assignment-governance",
+    "semantic_hash": "agent-control-plane-searchable-governed-cross-client-fleet-shell",
     "source": {
       "uri": "https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available",
       "type": "web_article"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Control Plane\n\n## 1. Dream Direction\nThe Dream branch imagines Agent Control Plane as the mature governance substrate for a large N1Hub swarm. It should not only show status. It should let one operator discover agent sessions across clients, inspect queued assignments, apply fleet-wide policies, trace agent lineage, manage lane budgets, and control how agent definitions evolve over time.\n\n## 2. Future Responsibilities\n- searchable activity views for all agent lanes\n- unified session and assignment discovery across web, mobile, terminal, and daemon contexts\n- programmatic policy rollout and canonical definition paths\n- branch-aware audit trails for Dream and Real side effects\n- assignment handles with origin, owner, due window, and return path\n- lane budgeting for API, subscription, foreground, and night-shift work\n- escalation and notification routing for failures, clarifications, and review requests\n- governance over external tools, partner agents, and future MCP-style connectors\n\n## 3. N1Hub Vision\nIn the long run, N1Hub should feel like one coherent intelligence system even when many specialized agents are running. Agent Control Plane is the piece that prevents that future from turning into invisible chaos. It is the registry, audit view, assignment ledger, and governance shell that keeps swarm growth intelligible.\n\n## 4. Philosophical Alignment\nAgent Control Plane supports To Dig Deep by ensuring that as the number of agents grows, accountability, inspectability, and economic discipline grow with them instead of collapsing."
+    "content": "# Agent Control Plane\n\n## 1. Role\nAgent Control Plane will become the administrative substrate through which one operator can discover, supervise, and govern a large N1Hub swarm across web, terminal, mobile, and daemon surfaces.\n\n## 2. Future Governance Surface\n- searchable activity views across all agent lanes\n- unified session and assignment discovery across clients and daemon contexts\n- programmatic policy rollout and canonical definition paths\n- branch-aware audit trails for Dream and Real side effects\n- lane budgeting for API, subscription, foreground, and night-shift work\n- escalation and notification routing for failures, clarifications, and review requests\n\n## 3. Assignment and Continuity Layer\nThe control plane will treat assignments, artifacts, ownership, and return paths as first-class objects. Swarm growth will remain intelligible because session history, budget posture, artifact lineage, and runtime health will project into one authoritative administrative surface instead of fragmenting across hidden local files or ad hoc dashboards.\n\n## 4. Philosophical Alignment\nAgent Control Plane supports To Dig Deep by making swarm scale come with accountability, inspectability, and economic discipline rather than invisible sprawl."
   },
   "neuro_concentrate": {
-    "summary": "Agent Control Plane in the Dream branch represents the future governance shell for a large N1Hub swarm. It imagines searchable session activity, assignment discovery, policy rollout, lane budgeting, branch-aware audit, degraded-mode visibility, and cross-client continuity becoming one coherent administrative substrate. The capsule matters because swarm scale without governance would make N1Hub more opaque as it becomes more powerful. Dream therefore preserves the control plane as the antidote to invisible agent sprawl, policy drift, fragmented session visibility, and unowned asynchronous work.",
+    "summary": "Agent Control Plane defines the future governance shell for the N1Hub swarm: searchable activity, assignment discovery, lane budgeting, branch-aware audit, policy rollout, and cross-client continuity managed as one coherent administrative substrate.",
     "keywords": [
       "agent-control-plane",
       "fleet-registry",
@@ -48,7 +48,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-control-plane-roster-policy-activity-assignment-governance"
+    "semantic_hash": "agent-control-plane-searchable-governed-cross-client-fleet-shell"
   },
   "recursive_layer": {
     "links": [
@@ -86,7 +86,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "22406687b4893282f5f03a1777b10e9e9357d266352113c143095d3a1b85eb21e861508e4383ec68800782bdc65a90f23f48aa11802154c6eb4564736a80670f"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

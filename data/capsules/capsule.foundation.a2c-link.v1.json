@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-link.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-09T00:47:59.418Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "A2C Stage: Link",
-    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph",
+    "semantic_hash": "capsule-foundation-a2clink-stage-linking-collision-evidence-boundary",
     "priority": "medium",
     "progress": 54,
     "estimatedHours": 86,
@@ -19,20 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Link\n\n## 1. Definition and Essence\nLink is the graph-situating stage of the A2C runtime. In N1Hub it is not a naive nearest-neighbor add-on. It uses the ReAct Graph Oracle, contradiction checks, and confidence calibration to decide whether a candidate should connect, conflict, merge, or stay sparse.\n\n## 2. Runtime Responsibilities\n- Build a query index from live graph nodes using titles, summaries, keywords, entities, and validation metadata.\n- Use `query_graph` to rank relevant capsules by token overlap plus validation and provenance strength.\n- Use `check_contradiction` to test claim tension. When evidence rows exist, the runtime can ask Parliament for a stronger verdict; otherwise it falls back to conservative lexical contradiction heuristics.\n- Calibrate confidence upward only when graph evidence was actually consulted. Complex claims without graph verification are explicitly capped.\n- Preserve conflict instead of silently overwriting it. If contradiction targets exist, increment mode is blocked and the new claim must branch or wait for governance.\n- Deduplicate links and keep topology sparse enough to stay meaningful.\n\n## 3. Why This Matters\nThe graph becomes unusable when linking is either timid or promiscuous. Link protects the middle path: enough topology to compute and navigate, not enough noise to destroy trust.\n\n## 4. Integration\n- **A2C Synthesize:** provides the candidate capsule.\n- **Epistemic Ledger:** records claim collisions and unresolved tension.\n- **N-Infinity Parliament:** becomes the escalation lane for difficult contradiction clusters.\n- **A2C Hash:** seals only after topology and graph evidence are in place.\n\n## 5. Philosophical Alignment\nLink serves To Dig Deep by connecting ideas with proof-sensitive discipline. It prefers explainable structure over dense but shallow graph decoration.\n"
+    "content": "# A2C Stage: Link\n\n## 1. Definition and Essence\nLink is the graph-situating stage of the A2C runtime. It resolves likely targets, selects canonical relation types, packages contradiction evidence, and keeps topology sparse enough to remain meaningful before any seal is applied.\n\n## 2. Runtime Responsibilities\n- Build a query index from live graph nodes using titles, summaries, keywords, entities, and validation metadata.\n- Use `query_graph` to rank relevant capsules by token overlap plus validation and provenance strength.\n- Use contradiction checks to detect claim tension and emit collision evidence with target IDs, supporting spans, and confidence packaging.\n- Produce contested-link evidence bundles that downstream governance workers can interpret without rerunning graph matching.\n- Calibrate confidence upward only when graph evidence was actually consulted. Complex claims without graph verification stay capped.\n- Deduplicate links and keep topology sparse enough to stay meaningful.\n\n## 3. Stage Boundary\nLink does not decide whether contested structure stays in Dream, branches, waits for Parliament, or advances toward review. It emits sparse topology and evidence. Branch Steward Agent interprets branch posture for contested links, Parliament handles deeper contradiction debate, and Validation Gatekeeper interprets later acceptance evidence after validation completes.\n\n## 4. Integration\n- **A2C Synthesize:** provides the candidate capsule.\n- **Epistemic Ledger:** records claim collisions and unresolved tension.\n- **Branch Steward Agent:** consumes contested-link evidence when branch routing or overlay posture is unclear.\n- **N-Infinity Parliament:** consumes contradiction bundles for debate.\n- **A2C Hash:** seals only after topology and graph evidence are in place.\n\n## 5. Philosophical Alignment\nLink serves To Dig Deep by connecting ideas with proof-sensitive discipline. It prefers explainable structure over dense but shallow graph decoration."
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Link is the graph-discipline layer that decides whether a candidate capsule should connect, collide, merge, or remain sparse. In the current runtime it queries the live graph, ranks targets by lexical overlap plus provenance and validation strength, checks contradictions through Parliament-aware tooling, and only raises confidence for complex claims when graph evidence was actually consulted. It also blocks silent overwrite: contradiction targets disable naive increment mode and force branching or review. This matters because graph quality collapses under both under-linking and over-linking. Link therefore keeps topology computable, meaningful, and auditable before the seal is applied.",
+    "summary": "A2C Stage: Link is the graph-discipline layer that resolves likely targets, selects canonical relation types, packages contradiction evidence, and emits sparse topology before sealing. It builds contested-link bundles with target IDs, supporting spans, and confidence packaging so downstream governance workers can interpret branch posture or contradiction pressure without rerunning graph matching. This keeps linking mechanistic and auditable, prevents silent overwrite or promiscuous edge creation, and preserves a clean boundary between deterministic topology construction and later policy decisions about branching, debate, review, or promotion.",
     "keywords": [
       "a2c",
       "link",
-      "react-graph-oracle",
-      "query-graph",
-      "check-contradiction",
-      "confidence-calibration",
+      "graph-discipline",
+      "collision-evidence",
       "target-resolution",
-      "duplicate-detection",
-      "conflict-routing",
+      "contradiction-checks",
+      "branch-routing-evidence",
       "graph-topology"
     ],
     "confidence_vector": {
@@ -43,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph"
+    "semantic_hash": "capsule-foundation-a2clink-stage-linking-collision-evidence-boundary"
   },
   "recursive_layer": {
     "links": [
@@ -68,6 +66,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "supports"
+      },
+      {
         "target_id": "capsule.foundation.n-infinity.parliament.v1",
         "relation_type": "references"
       }
@@ -86,7 +88,14 @@
         "hitl_required": false
       }
     ],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "mechanism_policy_separation",
+        "agent": "codex",
+        "rationale": "Link now emits contested-link and contradiction evidence bundles while Branch Steward and Parliament own branch routing and deeper governance interpretation."
+      }
+    ]
   },
-  "integrity_sha3_512": "c14f386a3307a104c0f647ed6a684dd21749f4b39c89f6f61e804886903f674595329d2352532f89dbeaf422230d255a2b12babddbae3cb7a4fc703f85587235"
+  "integrity_sha3_512": "2b54250206c72c6d86c69ef7f361f4e499d93a7fa3bfafea03ccee2717ae9a3c5a82a093c5a8939abfa9ecf968a4cfdbc2904e4cfd180b88febceb07d5618b91"
 }

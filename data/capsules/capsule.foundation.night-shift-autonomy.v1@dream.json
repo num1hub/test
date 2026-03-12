@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-06T18:41:12.166Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Night Shift Autonomy",
     "semantic_hash": "night-shift-autonomy-window-budget-cooldown-handoff-policy",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Definition and Essence\nNight Shift Autonomy in Dream describes a more mature unattended operating mode for N1Hub. It imagines stronger shift shaping, richer morning handoffs, better mutation boundaries, and tighter integration with wallet lanes, user consent, and control-plane oversight.\n\n## 2. Core Responsibilities\n- `execution_window` keeps autonomy explicit and reviewable\n- `day_vs_night_mode_shape` cleanly separates co-pilot behavior from deep unattended work\n- `budget_and_rate_discipline` bounds industrial work when humans are offline\n- `cooldown_policy` prevents obsessive graph hammering\n- `handoff_rules` create a clear morning return path for review, promotion, or pause\n- `mutation_boundary` keeps unattended work Dream-first until evidence becomes stronger\n\n## 3. Dream Direction\nDream preserves this capsule as the route from today's bounded night runs toward a future where the system can sustain trustworthy 24/7 operations without losing human sovereignty or clarity.\n\n## 4. Integration\n- **Sleep-Time Compute:** provides the economic and scheduler substrate.\n- **User Preferences and Profile:** encode human rhythm and autonomy tolerance.\n- **AI Wallet and Hybrid LLM Access:** determine which night lanes are real.\n- **Agent Daemon and Agent Control Plane:** govern live shift behavior.\n\n## 5. Philosophical Alignment\nNight Shift Autonomy in Dream protects the idea that deeper autonomy should arrive through better discipline, not through careless removal of boundaries.\n"
+    "content": "# Night Shift Autonomy\n\n## 1. Role\nNight Shift Autonomy will become the mature unattended operating mode of N1Hub, shaping what the system may do while the human is offline and how that work must return for daylight review.\n\n## 2. Future Shift Contract\nThis mode will coordinate execution windows, day-vs-night behavior, budget discipline, cooldown posture, handoff rules, and mutation boundaries with much more explicit operator and wallet awareness. Night work will remain bounded, reviewable, and preference-aware instead of merely aggressive.\n\n## 3. Operational Consequence\nThe system will be able to compound useful progress overnight while still producing clear morning return paths, safer Dream-first mutation posture, and better protection against runaway cost or unreviewed structural change.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by making unattended depth calmer, more legible, and more trustworthy."
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy in Dream describes the path from supervised nightly runs toward more mature unattended operation. It matters because a system that works while the human sleeps needs stronger boundaries, clearer morning handoffs, better wallet- and preference-aware governance, and more explicit mutation discipline than today's baseline. Dream preserves this capsule as the design space where deeper autonomy becomes more trustworthy, more legible to the returning human, and more economically sane rather than merely more aggressive.",
+    "summary": "Night Shift Autonomy defines the future mature unattended mode of N1Hub: stronger shift shaping, richer morning handoffs, tighter mutation boundaries, better wallet and preference awareness, and more legible control-plane oversight while humans are offline.",
     "keywords": [
       "night-shift-autonomy",
       "night-window",
@@ -109,7 +109,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "a9ac6651018d306bac28f134c4f537abef6440b958782e9e99e7a4a4f6975b734a9c69cbff0462fbb476d703b1a4c8c8a3528b04bb198c08bcd2248e1bf55fc0"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

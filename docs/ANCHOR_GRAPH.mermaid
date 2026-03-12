@@ -12,11 +12,21 @@ classDef unknown fill:#cbd5e1,stroke:#334155,stroke-width:1px;
 
 A_arch_a2c_runtime["arch:a2c.runtime"]
 A_arch_api_validate_route["arch:api.validate.route"]
+A_arch_api_validate_route["arch:api.validate.route"]
+A_arch_api_validate_route["arch:api.validate.route"]
+A_arch_app_root_layout["arch:app.root-layout"]
 A_arch_app_root_layout["arch:app.root-layout"]
 A_arch_governance_anchor_spec["arch:governance.anchor-spec"]
 A_arch_graph_runtime["arch:graph.runtime"]
+A_arch_graph_runtime["arch:graph.runtime"]
 A_arch_repo_entrypoint["arch:repo.entrypoint"]
 A_arch_symphony_runtime["arch:symphony.runtime"]
+A_arch_validator_engine["arch:validator.engine"]
+A_arch_validator_engine["arch:validator.engine"]
+A_arch_validator_engine["arch:validator.engine"]
+A_arch_validator_engine["arch:validator.engine"]
+A_arch_validator_engine["arch:validator.engine"]
+A_arch_validator_engine["arch:validator.engine"]
 A_arch_validator_engine["arch:validator.engine"]
 A_doc_a2c_reference["doc:a2c.reference"]
 A_doc_agents_ecosystem_signals["doc:agents.ecosystem-signals"]
@@ -66,6 +76,17 @@ A_interface_anchors_snapshot_history["interface:anchors.snapshot-history"]
 A_interface_anchors_terminology_lint["interface:anchors.terminology-lint"]
 A_interface_anchors_usage_lint["interface:anchors.usage-lint"]
 A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_app_landing_entry["interface:app.landing-entry"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_interface_validator_public_api["interface:validator.public-api"]
+A_interface_validator_public_api["interface:validator.public-api"]
 A_interface_validator_public_api["interface:validator.public-api"]
 A_invariant_anchors_root_docs_policy["invariant:anchors.root-docs-policy"]
 A_script_anchors_assert_scorecard["script:anchors.assert-scorecard"]
@@ -95,11 +116,21 @@ A_test_anchors_usage_lint_contract["test:anchors.usage-lint-contract"]
 
 class A_arch_a2c_runtime arch;
 class A_arch_api_validate_route arch;
+class A_arch_api_validate_route arch;
+class A_arch_api_validate_route arch;
+class A_arch_app_root_layout arch;
 class A_arch_app_root_layout arch;
 class A_arch_governance_anchor_spec arch;
 class A_arch_graph_runtime arch;
+class A_arch_graph_runtime arch;
 class A_arch_repo_entrypoint arch;
 class A_arch_symphony_runtime arch;
+class A_arch_validator_engine arch;
+class A_arch_validator_engine arch;
+class A_arch_validator_engine arch;
+class A_arch_validator_engine arch;
+class A_arch_validator_engine arch;
+class A_arch_validator_engine arch;
 class A_arch_validator_engine arch;
 class A_doc_a2c_reference doc;
 class A_doc_agents_ecosystem_signals doc;
@@ -149,6 +180,17 @@ class A_interface_anchors_snapshot_history interface;
 class A_interface_anchors_terminology_lint interface;
 class A_interface_anchors_usage_lint interface;
 class A_interface_app_landing_entry interface;
+class A_interface_app_landing_entry interface;
+class A_interface_app_landing_entry interface;
+class A_interface_app_landing_entry interface;
+class A_interface_app_landing_entry interface;
+class A_interface_app_landing_entry interface;
+class A_interface_validator_public_api interface;
+class A_interface_validator_public_api interface;
+class A_interface_validator_public_api interface;
+class A_interface_validator_public_api interface;
+class A_interface_validator_public_api interface;
+class A_interface_validator_public_api interface;
 class A_interface_validator_public_api interface;
 class A_invariant_anchors_root_docs_policy invariant;
 class A_script_anchors_assert_scorecard script;
@@ -180,16 +222,28 @@ A_arch_a2c_runtime --> A_arch_symphony_runtime
 A_arch_a2c_runtime --> A_doc_a2c_reference
 A_arch_a2c_runtime --> A_flow_a2c_workspace_recon
 A_arch_api_validate_route --> A_arch_validator_engine
+A_arch_api_validate_route --> A_arch_validator_engine
+A_arch_api_validate_route --> A_arch_validator_engine
+A_arch_api_validate_route --> A_doc_validator_reference
+A_arch_api_validate_route --> A_doc_validator_reference
 A_arch_api_validate_route --> A_doc_validator_reference
 A_arch_api_validate_route --> A_interface_validator_public_api
+A_arch_api_validate_route --> A_interface_validator_public_api
+A_arch_api_validate_route --> A_interface_validator_public_api
+A_arch_app_root_layout --> A_arch_api_validate_route
 A_arch_app_root_layout --> A_arch_api_validate_route
 A_arch_app_root_layout --> A_doc_n1hub_readme
+A_arch_app_root_layout --> A_doc_n1hub_readme
+A_arch_app_root_layout --> A_interface_app_landing_entry
 A_arch_app_root_layout --> A_interface_app_landing_entry
 A_arch_governance_anchor_spec --> A_arch_app_root_layout
 A_arch_governance_anchor_spec --> A_doc_governance_anchors_spec
 A_arch_governance_anchor_spec --> A_script_validate_anchors
 A_arch_graph_runtime --> A_doc_branching_real_dream_diff
+A_arch_graph_runtime --> A_doc_branching_real_dream_diff
 A_arch_graph_runtime --> A_doc_n1hub_readme
+A_arch_graph_runtime --> A_doc_n1hub_readme
+A_arch_graph_runtime --> A_doc_projects_reference
 A_arch_graph_runtime --> A_doc_projects_reference
 A_arch_repo_entrypoint --> A_arch_governance_anchor_spec
 A_arch_repo_entrypoint --> A_doc_a2c_reference
@@ -202,8 +256,32 @@ A_arch_symphony_runtime --> A_arch_graph_runtime
 A_arch_symphony_runtime --> A_doc_symphony_reference
 A_arch_symphony_runtime --> A_flow_symphony_prompt_render
 A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_arch_a2c_runtime
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_doc_validator_reference
+A_arch_validator_engine --> A_doc_validator_reference
 A_arch_validator_engine --> A_doc_validator_reference
 A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_interface_validator_public_api
+A_arch_validator_engine --> A_script_validator_cli
+A_arch_validator_engine --> A_script_validator_cli
+A_arch_validator_engine --> A_script_validator_cli
+A_arch_validator_engine --> A_script_validator_cli
+A_arch_validator_engine --> A_script_validator_cli
+A_arch_validator_engine --> A_script_validator_cli
 A_arch_validator_engine --> A_script_validator_cli
 A_doc_a2c_reference --> A_arch_a2c_runtime
 A_doc_a2c_reference --> A_doc_n1hub_low_blast_radius_architecture
@@ -575,10 +653,44 @@ A_interface_anchors_usage_lint --> A_script_anchors_lint_usage
 A_interface_anchors_usage_lint --> A_script_validate_anchors
 A_interface_anchors_usage_lint --> A_test_anchors_usage_lint_contract
 A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_arch_app_root_layout
+A_interface_app_landing_entry --> A_doc_n1hub_readme
+A_interface_app_landing_entry --> A_doc_n1hub_readme
+A_interface_app_landing_entry --> A_doc_n1hub_readme
+A_interface_app_landing_entry --> A_doc_n1hub_readme
+A_interface_app_landing_entry --> A_doc_n1hub_readme
 A_interface_app_landing_entry --> A_doc_n1hub_readme
 A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_arch_validator_engine
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_doc_validator_reference
+A_interface_validator_public_api --> A_doc_validator_reference
 A_interface_validator_public_api --> A_doc_validator_reference
 A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_cli
+A_interface_validator_public_api --> A_script_validator_openapi
+A_interface_validator_public_api --> A_script_validator_openapi
+A_interface_validator_public_api --> A_script_validator_openapi
+A_interface_validator_public_api --> A_script_validator_openapi
+A_interface_validator_public_api --> A_script_validator_openapi
+A_interface_validator_public_api --> A_script_validator_openapi
 A_interface_validator_public_api --> A_script_validator_openapi
 A_invariant_anchors_root_docs_policy --> A_doc_governance_anchors_spec
 A_invariant_anchors_root_docs_policy --> A_interface_anchors_core_api

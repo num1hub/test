@@ -105,6 +105,36 @@ describe('A2C operator input pipeline', () => {
     expect(packet.defer_reason).toContain('route_class_hint');
   });
 
+  it('keeps explanation-first requests out of queue execution even when they mention tasks, files, and verification', async () => {
+    const { root } = await createWorkspace();
+
+    const staged = await stageOperatorInput(root, {
+      text: [
+        'Explain TODO-001 and compare options in lib/a2c/query.ts before coding.',
+        '',
+        'Verification:',
+        '- npm run typecheck',
+      ].join('\n'),
+      source: { channel: 'chat' },
+    });
+
+    const report = await runTaskPacketCommand([
+      '--kb-root',
+      root,
+      '--intake-id',
+      staged.intake_id,
+    ]);
+    const packet = report.results.packet as {
+      status: string;
+      defer_reason?: string;
+    };
+
+    expect(staged.normalized.route_class_hint).toBe('assistant_synthesis');
+    expect(report.status).toBe('PARTIAL');
+    expect(packet.status).toBe('DEFERRED');
+    expect(packet.defer_reason).toContain('route_class_hint');
+  });
+
   it('defers noisy input with insufficient bounded signal', async () => {
     const { root } = await createWorkspace();
 

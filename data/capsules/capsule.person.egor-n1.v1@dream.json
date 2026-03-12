@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-identity-creator-founder-visionary-gold-core",
-    "updated_at": "2026-03-08T21:08:00Z",
+    "updated_at": "2026-03-11T23:35:00Z",
     "name": "Egor N1",
     "tier": 2
   },
@@ -17,7 +17,7 @@
     "content": "# Identity Profile: Egor N1\n\n## 1. Primary Designation\nThis capsule establishes the sovereign digital identity of **Egor N1**, the principal creator, visionary founder, and Chief Mining Architect of the N1Hub ecosystem and the DeepMine corporate entity.\n\n## 2. Role and Vision\nEgor N1 operates at the absolute apex of the CapsuleOS hierarchy. He is the original architect of the \"To Dig Deep\" philosophy, driving the paradigm shift from entropic, file-based chaos toward the negentropic, cryptographically sealed reality of the 5-Element Law. His vision birthed the A2C pipeline, the N-Infinity agent swarm, and the concept of bridging physical reality via TileSims.\n\n## 3. Systemic Authority\nAs the founding node of the ecosystem, this identity capsule holds absolute cryptographic provenance over the Genesis Boot sequences of N1Hub. It serves as the primary anchor for all subsequent high-level access grants, architectural templates, and sovereign intellectual property minted within the Cognitive Plane."
   },
   "neuro_concentrate": {
-    "summary": "In Dream, Egor N1 should be preserved as the founding provenance anchor while shedding mythology in favour of accountable continuity patterns: a clear authorship root that seeds doctrine, enables constrained delegation to agent systems, and remains linked to explicit governance handoff and succession pathways. This keeps founder signal useful for memory and design lineage, while explicitly constraining operational control and preventing implicit personalization as the system scales and matures toward durable institutions.",
+    "summary": "Egor N1 is the founding provenance anchor while shedding mythology in favour of accountable continuity patterns: a clear authorship root that seeds doctrine, enables constrained delegation to agent systems, and remains linked to explicit governance handoff and succession pathways. This keeps founder signal useful for memory, design lineage, constitutional interpretation, and institutional memory while explicitly constraining operational control and preventing implicit personalization as the system scales and matures toward durable institutions.",
     "keywords": [
       "founder-provenance",
       "human-node",
@@ -64,7 +64,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T23:35:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so the identity capsule states founding provenance and succession doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "f5bc064a693d778de3de8ed2eed0e8e81c2f5104338cd59310ceb493841e728a1b868dfd890a0011ade0c5d84b84077af1ae473e53a8a16226bb5d2f9dc2a4d1"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

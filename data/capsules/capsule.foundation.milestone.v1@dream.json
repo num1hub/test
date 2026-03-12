@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-07T10:22:14.151Z",
+    "updated_at": "2026-03-11T15:47:00Z",
     "name": "Milestone",
     "semantic_hash": "milestone-key-date-marker-roadmap-checkpoint-gold-core",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Definition and Essence\nMilestone in Dream preserves a stricter phase-gate model for N1Hub. It imagines checkpoints that are not only visible on a timeline, but tied to measurable readiness, stronger evidence bundles, and cleaner branch-aware decision boundaries.\n\n## 2. Dream Direction\nThe future milestone should act as a real checkpoint where the system can ask whether a phase is truly crossed, delayed, or still speculative rather than simply painting a date on a roadmap.\n\n## 3. Integration\n- **Goal and Task:** give the milestone its strategic and atomic ladder.\n- **Tracker, Reminder, and Calendar:** provide timing, pressure, and evidence.\n- **Planner:** uses milestones as real phase boundaries.\n\n## 4. Philosophical Alignment\nMilestone in Dream preserves the idea that progress should pass through verifiable checkpoints, not only through stories of momentum.\n"
+    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Role\nMilestone will become a stricter phase-gate object for N1Hub, where checkpoints are tied to measurable readiness, stronger evidence bundles, and explicit branch-aware decision boundaries.\n\n## 2. Future Milestone Contract\nA milestone will not merely mark a date on a roadmap. It will ask whether a phase is truly crossed, delayed, or still speculative, and it will carry the review and evidence posture needed to justify that answer.\n\n## 3. Operational Consequence\nRoadmaps will gain sharper phase integrity because progress will pass through verifiable checkpoints instead of being narrated as momentum. Milestones will become high-signal gates for planning review, tracker pressure, and promotion readiness.\n\n## 4. Philosophical Alignment\nMilestone supports To Dig Deep by turning long journeys into evidence-bearing checkpoints rather than stories of movement."
   },
   "neuro_concentrate": {
-    "summary": "Milestone in the Dream branch represents a more operational phase-gate model than the current one. It pushes toward checkpoints that are not only visible on a timeline, but also linked to measurable readiness, branch alternatives, stronger task evidence, reminder and notification pressure, and explicit review before a phase is treated as crossed. The capsule matters because ambiguous checkpoints create false momentum and weak review discipline. Dream therefore keeps milestones as stricter decision boundaries that improve roadmap integrity and project realism across the graph.",
+    "summary": "Milestone defines the future stricter phase-gate model for N1Hub: measurable readiness, stronger evidence bundles, clearer branch-aware decision boundaries, and more explicit checkpoint review before a phase is treated as truly crossed.",
     "keywords": [
       "milestone",
       "checkpoint",
@@ -86,7 +86,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:47:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "345ab9ba7c908ab1ef7dbbf4d08010f2b2ef70960885d4854b51668d2dee983bb6cd93a00d0f700d238915e5d55ec210371ffe1347f84af3266d97b4b611030c"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

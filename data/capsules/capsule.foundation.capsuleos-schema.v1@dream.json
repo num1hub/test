@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.capsuleos-schema.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "capsuleos-schema-five-elements-enums-vectors-links-hashes",
-    "updated_at": "2026-03-06T13:44:55.851Z",
+    "updated_at": "2026-03-11T21:23:25Z",
     "source": {
       "uri": "internal://capsule.foundation.capsuleos-spec.v1",
       "type": "normative_contract"
@@ -21,7 +21,7 @@
     "content": "# CapsuleOS Schema: The Master Blueprint\n\n## 1. Introduction\nThis capsule is the absolute sovereign reference for the structural and semantic schema of all capsules within the N1Hub ecosystem.\n\nWhile `capsule.foundation.capsuleos-spec.v1` defines governance-level doctrine, this capsule is the executable machine contract used by validators and data pipelines. Every entity in CapsuleOS must strictly adhere to the definitions, enums, and vectors established herein.\n\n## 2. The 5-Element Law\nEvery valid capsule must consist of exactly five root keys:\n1. **`metadata`**: Houses identity (`capsule_id`), versioning (SemVer), status, type, subtype, authorship, temporal markers (`created_at`, `updated_at`), and the semantic hash.\n2. **`core_payload`**: Contains the primary data. Requires a `content_type` (e.g., `markdown`, `json`) and the actual `content` string.\n3. **`neuro_concentrate`**: The AI-derived essence of the payload. Includes a concise `summary` (70-160 words), an array of `keywords` (5-15 items), a 6-dimensional `confidence_vector`, and a `semantic_hash` mirroring the metadata.\n4. **`recursive_layer`**: The topological connective tissue. An array of `links` containing `target_id` and a canonical `relation_type`. May also include an `epistemic_ledger` for contradiction tracking.\n5. **`integrity_sha3_512`**: A 128-character lowercase hexadecimal string representing the SHA3-512 hash of the preceding four elements, canonicalized via RFC 8785 JCS.\n\n## 3. Allowed Enumerations\n\n### 3.1 Capsule Types\n- **`concept`**: Theoretical constructs, ideas, or hypotheses.\n- **`foundation`**: Axiomatic definitions, schemas, and core systemic rules.\n- **`operations`**: Actionable items, tasks, workflows, or logs.\n- **`physical_object`**: Digital twins of real-world entities (e.g., walls, pipes in TileSims).\n\n### 3.2 Capsule Subtypes\n- **`atomic`**: Irreducible, self-contained units of knowledge.\n- **`hub`**: Aggregating capsules that organize other capsules via the recursive layer.\n\n### 3.3 Status Lifecycle\n- **`draft`**: Incomplete, hot, mutable state.\n- **`active`**: Undergoing execution or refinement.\n- **`sovereign`**: Terminal, immutable gold master. The ultimate source of truth.\n- **`frozen`**: Temporarily locked from modification.\n- **`archived`**: Retired from active search but retained for historical integrity.\n- **`quarantined`**: Isolated due to validation failure or extreme epistemic contradiction.\n- **`legacy`**: Superseded by a newer version.\n\n### 3.4 Canonical Relation Types\n`supports`, `contradicts`, `extends`, `derived_from`, `depends_on`, `references`, `duplicates`, `implements`, `part_of`.\n\n## 4. Semantic Hash & Confidence Vector\n- **Semantic Hash**: Exactly 8 lowercase alphanumeric tokens, separated by hyphens. Acts as a human-readable, unique semantic fingerprint.\n- **Confidence Vector**: A 6-tuple of floats [0.0, 1.0] evaluating: `extraction`, `synthesis`, `linking`, `provenance_coverage`, `validation_score`, and `contradiction_pressure`. Axiomatic sovereign capsules must have a `contradiction_pressure` of `0.0`.\n\n## 5. The 16 Validation Gates\nAll capsules must clear 16 rigorous computational and semantic gates (G01-G16)—ranging from structural type checking to exact length constraints and cryptographic signature verification—before admission into the active Cognitive Plane."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Schema in the Dream branch describes a more extensible executable contract for the ecosystem. It pushes toward clearer extension seams, sharper branch-aware invariants, richer interoperability boundaries, and better support for future physical-world and economic payloads without weakening the five-element law. The capsule matters because schemas become strategic once multiple products and agents depend on them at once. Dream therefore preserves Schema as a future compatibility layer for scale, not only the current machine-valid shape contract.",
+    "summary": "CapsuleOS Schema defines an extensible executable contract for the ecosystem. It sharpens extension seams, invariants, interoperability boundaries, and support for physical-world and economic payloads without weakening the five-element law. The capsule matters because schemas become strategic once multiple products, agents, and branches depend on them at once. CapsuleOS Schema therefore serves as the compatibility layer that keeps machine-valid shape contracts stable while allowing the vault to grow in scope, domain variety, and operational complexity.",
     "keywords": [
       "capsuleos-schema",
       "machine-contract",
@@ -128,7 +128,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:23:25Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary framing so CapsuleOS Schema states the executable contract directly as present-tense doctrine."
+      }
+    ]
   },
-  "integrity_sha3_512": "ccb9808901600bfca04e10b7d885da2fe6da9f23ad074446ceb86855f5943a95bbc4ef5f5cc47b95282596851ea3318001032e21f2cd3bd4392936ae171cfb6d"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

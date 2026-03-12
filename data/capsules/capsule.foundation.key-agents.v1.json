@@ -7,9 +7,9 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-09T21:05:00Z",
+    "updated_at": "2026-03-11T14:36:12Z",
     "name": "Key Agents",
-    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm",
+    "semantic_hash": "keyagents-parent-routing-lanes-rolemap-governance-runtime-boundary",
     "source": {
       "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
       "type": "architect_prompt"
@@ -23,22 +23,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents is the explicit hub for the main intelligence roles that make N1Hub operational. It gathers the primary user-facing assistant, the DeepMine mining chain, the planning agents, the graph-maintenance swarm, the vault-stewardship swarm, and the review or governance workers into one visible topology instead of leaving the agent architecture implicit.\n\n## 2. Purpose\nThis hub exists so N1Hub can reason about which agent owns which layer of work:\n- user interaction, retrieval, and routing\n- mining and extraction\n- planning across short and long horizons\n- horizon compression from full Dream into grounded day plans\n- vault reading, capsule decomposition, markup, and graph refactoring\n- review, validation, branch discipline, and promotion safety\n\n## 3. Main Lanes\n- **User lane**: Personal AI Assistant, Chat to Capsules, and Capsule Librarian Agent.\n- **Mining lane**: DeepMine Prospector, Miner, and Foreman.\n- **Planning lane**: Roadmap Planner Agent, Planning Horizon Engine, and Daily Planner Agent.\n- **Vault stewardship lane**: Vault Stewardship Swarm, Capsule Decomposition Agent, Capsule Markup Agent, Capsule Graph Refactor Agent, and Vault Update Agent.\n- **Governance lane**: Branch Steward Agent, Validation Gatekeeper Agent, and Review Agent.\n- **Background swarm lane**: N-Infinity roles plus Background Agent Runtime.\n\n## 4. N1Hub Role\nKey Agents is not another worker. It is the map of the sovereign agent system. It makes the architecture legible for users, operators, and future implementations built through Personal AI Assistant, DeepMine, Symphony, and N-Infinity. In the vault lane, it now explicitly shows that capsule improvement is a full-cycle system: read the vault, plan jobs, execute bounded Dream-safe work, review the result, and only then consider promotion.\n\n## 5. Philosophical Alignment\nThe hub serves To Dig Deep by refusing vague talk about AI and instead naming the bounded roles that actually read, dig, plan, critique, refactor, validate, and maintain the graph.\n\n## 6. Real Canonical Rule\nReal owns the current legible role map for N1Hub's live agent system. That means this hub is the canonical source for the lanes that actually exist now, the current separation between user, mining, planning, vault stewardship, governance, and background swarm work, and the bounded full-cycle stewardship loop already reflected in queue law and runtime surfaces. Dream may continue to explore future swarm coordination, but Real is the source of truth for the present role topology.\n"
+    "content": "# Key Agents\n\n## 1. Definition and Essence\nKey Agents remains the sovereign role map for the main intelligence lanes that make N1Hub operational, but it now routes that map through six bounded lane hubs so user-facing, mining, planning, stewardship, governance, and swarm work stay explicit instead of flattening into one long list of workers.\n\n## 2. Routing Lanes\n- `user-lane` owns the assistant carrier, graph-grounded conversational ingress, and vault-native retrieval roles.\n- `mining-lane` owns the DeepMine scouting, extraction, and supervision workers.\n- `planning-lane` owns the horizon-compression and planning agents that turn intent into bounded plans.\n- `stewardship-lane` owns the vault-maintenance workers that improve structure and land reviewed updates.\n- `governance-lane` owns branch discipline, validation authority, and critique pressure.\n- `swarm-lane` owns the N-Infinity role family plus the background runtime substrate.\n\n## 3. Parent Boundary\nThe parent hub now keeps only the top-level relationship to N1Hub, Workspace, and To Dig Deep. Detailed lane membership flows through the six sub-hubs so Key Agents stays a navigable role topology instead of a flat registry of leaves."
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the hub that makes the main N1Hub agent architecture explicit and now serves as the canonical real-side map of the live role topology. It gathers the user lane, mining lane, planning lane, vault stewardship lane, governance lane, and background swarm lane into one graph-visible system. This matters because the project's most important work is no longer generic AI usage, but disciplined capsule work performed by bounded roles with clear ownership, review, and promotion boundaries.",
+    "summary": "Key Agents is now the sovereign parent hub for six bounded role lanes: user, mining, planning, stewardship, governance, and swarm. The parent keeps only top-level architectural relationships and routes detailed agent membership through lane hubs so the live role map stays legible and reviewable. This matters because the parent should show the canonical lane structure of the system while leaving lane-specific workers, responsibilities, and coupling detail to bounded sub-hubs instead of one overloaded registry.",
     "keywords": [
       "key-agents",
-      "real-canonical",
-      "agent-hub",
+      "hub-decomposition",
       "user-lane",
       "mining-lane",
       "planning-lane",
-      "vault-stewardship-lane",
+      "stewardship-lane",
       "governance-lane",
-      "background-swarm",
-      "validation",
-      "n1hub"
+      "swarm-lane"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -48,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "key-agents-hub-assistant-deepmine-planning-review-swarm"
+    "semantic_hash": "keyagents-parent-routing-lanes-rolemap-governance-runtime-boundary"
   },
   "recursive_layer": {
     "links": [
@@ -61,103 +58,27 @@
         "relation_type": "part_of"
       },
       {
-        "target_id": "capsule.foundation.personal-ai-assistant.v1",
+        "target_id": "capsule.foundation.key-agents.user-lane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "target_id": "capsule.foundation.key-agents.mining-lane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine-prospector-agent.v1",
+        "target_id": "capsule.foundation.key-agents.planning-lane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine-miner-agent.v1",
+        "target_id": "capsule.foundation.key-agents.stewardship-lane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
+        "target_id": "capsule.foundation.key-agents.governance-lane.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-decomposition-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-markup-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-graph-refactor-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-update-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.daily-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.weaver.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.gardener.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.parliament.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.innovator.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.reminder-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.risk-detector.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
+        "target_id": "capsule.foundation.key-agents.swarm-lane.v1",
         "relation_type": "references"
       },
       {
@@ -173,8 +94,14 @@
         "agent": "n1",
         "run_id": "TODO-024",
         "rationale": "The real Key Agents hub now explicitly owns the live role topology that is already reflected in lane ownership, queue law, and N1 orchestration surfaces. Dream remains useful as future swarm-coordination doctrine, but it should no longer be read as the canonical statement of the current agent map."
+      },
+      {
+        "at": "2026-03-11T14:36:12Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "n1",
+        "rationale": "Refactored parent hub to route through 6 sub-hubs. Outbound links reduced from 28 to ≤9."
       }
     ]
   },
-  "integrity_sha3_512": "7c05d3ef28f9cdea554966ed156f8290e7ff070ed38004f9d54bb4112ceefc744250e5b9be42d07a639ed005e4bede4e023b8b1c231626f6c00c2d722e4ff40e"
+  "integrity_sha3_512": "398e648808049ac5ce808e6ff532fca65f64cd026f9868cef1327a30366977ed5207ec5d68aa0905a34fb84ceb5acaea630b158b9db7ec7a259d7b075f81a9d9"
 }

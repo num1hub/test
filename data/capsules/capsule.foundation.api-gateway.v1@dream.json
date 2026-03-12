@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-07T10:22:13.938Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "API Gateway",
-    "semantic_hash": "capsule-foundation-api-gateway-v1-routing-auth-rate",
+    "semantic_hash": "api-gateway-hard-sovereignty-surface-actor-bound-boundary-law",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 250,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# API Gateway\n\n## 1. Definition and Essence\nAPI Gateway in Dream describes a more mature governed edge for N1Hub. It preserves the future where provider traffic, hosted inference, connectors, webhook callbacks, and background agent egress all pass through a boundary that is lane-aware, redactable, auditable, and economically governed.\n\n## 2. Core Attributes\n- `route_catalog` for richer service families\n- `auth_and_actor_binding`\n- `rate_and_budget_control`\n- `observability_and_artifact_lineage`\n- `policy_hooks` for redaction, review, and compliance\n- `lane_awareness` across interactive, background, and hosted inference traffic\n\n## 3. Dream Direction\nThe future gateway should become one of the hardest sovereignty surfaces in the system: powerful enough to unlock many external services, strict enough that boundary crossings never disappear into scripts or intuition.\n\n## 4. Integration\n- **Integrations:** supplies connector families.\n- **AI Wallet and Hybrid LLM Access:** supply the provider side.\n- **Agent Control Plane and Background Agent Runtime:** govern machine use of the boundary.\n- **Security and Audit:** keep external power searchable and reviewable.\n\n## 5. Philosophical Alignment\nAPI Gateway in Dream preserves the idea that openness should deepen capability without weakening control.\n"
+    "content": "# API Gateway\n\n## 1. Role\nAPI Gateway will become one of the hardest sovereignty surfaces in N1Hub. Every provider call, hosted-inference request, webhook callback, connector exchange, and background agent egress will pass through a boundary that is lane-aware, redactable, auditable, and economically governed.\n\n## 2. Future Boundary Contract\n- richer route catalogs for model providers, hosted inference, connectors, and callbacks\n- actor-bound authentication and authorization at the boundary itself\n- lane-aware rate and budget control for interactive, background, and hosted traffic\n- stronger observability and artifact lineage for every boundary crossing\n- policy hooks for redaction, review, compliance, and trust enforcement\n\n## 3. Operational Consequence\nExternal capability will deepen without becoming opaque because outside power will remain searchable, reviewable, and constrained by explicit policy rather than disappearing into scripts or intuition.\n\n## 4. Philosophical Alignment\nAPI Gateway supports To Dig Deep by making openness powerful without weakening control."
   },
   "neuro_concentrate": {
-    "summary": "API Gateway in Dream describes a more policy-aware ingress and egress boundary for the platform. It pushes toward stricter service contracts, actor-bound auth, lane-aware economics, and stronger observability around what external systems are allowed to touch or retrieve. The capsule matters because integration surfaces become silent trust leaks when they stay under-modeled. Dream therefore preserves API Gateway as a future control boundary where external connectivity is powerful without becoming opaque.",
+    "summary": "API Gateway defines the future hardest sovereignty surface in N1Hub: stricter service contracts, actor-bound auth, lane-aware economics, stronger observability, and reviewable policy hooks around every external boundary crossing.",
     "keywords": [
       "api-gateway",
       "routing",
@@ -40,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-api-gateway-v1-routing-auth-rate"
+    "semantic_hash": "api-gateway-hard-sovereignty-surface-actor-bound-boundary-law"
   },
   "recursive_layer": {
     "links": [
@@ -74,7 +74,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "c2d7ca49e5c5f0ac2d175c8f973f0df2dd09239cf8a8ab7a6b7838e165d61dc461d3b9aff037bdc7577ae33085aa5e715c0723de1975982e4e9a2ac75c5fa02d"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

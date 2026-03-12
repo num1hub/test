@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:42:00Z",
-    "updated_at": "2026-03-06T23:54:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Capsule Librarian Agent",
-    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map",
+    "semantic_hash": "capsule-librarian-agent-vault-memory-guide-branch-archive-literacy",
     "priority": "high",
     "progress": 42,
     "estimatedHours": 270,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Librarian Agent\n\n## Dream Direction\nIn the Dream branch, Capsule Librarian Agent grows into a richer vault-memory guide with stronger retrieval, branch literacy, archive intelligence, and graph-neighborhood explanation for both users and other agents.\n\n## Future Potential\n- clearer graph-neighborhood retrieval and ranking\n- stronger duplicate and overlap detection\n- better guidance across Real, Dream, and archive contexts\n- deeper support for chat grounding and cross-agent memory\n\n## Why It Matters\nDream preserves Librarian as the role that lets a large capsule vault remain navigable instead of turning into sovereign fog."
+    "content": "# Capsule Librarian Agent\n\n## 1. Role\nCapsule Librarian Agent will become a richer vault-memory guide that helps users and agents navigate the sovereign library through stronger retrieval, branch literacy, archive awareness, and graph-neighborhood explanation.\n\n## 2. Future Retrieval Surface\n- clearer graph-neighborhood retrieval and ranking\n- stronger duplicate and overlap detection across related capsules\n- better guidance across Real, Dream, and archive contexts\n- deeper support for grounded chat, cross-agent memory, and capsule comparison\n\n## 3. Operational Consequence\nA large capsule vault will remain navigable because retrieval will explain not only what matched, but which canonical nodes are stronger, which branches are relevant, and what historical context should remain in scope.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent supports To Dig Deep by insisting that new work begins with deep retrieval from sovereign memory rather than generic improvisation."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Librarian Agent in the Dream branch represents a more capable retrieval and vault-literacy layer for N1Hub. It aims toward stronger graph-neighborhood explanation, better archive awareness, and more reliable distinction between Real, Dream, and historical material. The capsule matters because a growing sovereign library needs a first-class guide to remain usable. Dream therefore keeps vault literacy visible as a named intelligence role rather than an accidental side effect of search.",
+    "summary": "Capsule Librarian Agent defines the future richer vault-memory guide for N1Hub: stronger graph-neighborhood retrieval, better overlap detection, clearer Real/Dream/archive literacy, and deeper support for grounding chat and cross-agent memory.",
     "keywords": [
       "capsule-librarian-agent",
       "dream-branch",
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-librarian-agent-vault-memory-graph-guidance-map"
+    "semantic_hash": "capsule-librarian-agent-vault-memory-guide-branch-archive-literacy"
   },
   "recursive_layer": {
     "links": [
@@ -87,7 +87,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "052d0367dcac1d984cee407f750c2ce52dfd714dcc977a76a2611a73b1b261be622433a3c8e90b2313cee2ec50d7190d1291387a44a9f74ae0b7596b377ea3a5"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

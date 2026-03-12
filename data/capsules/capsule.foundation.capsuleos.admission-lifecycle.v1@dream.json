@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.capsuleos.admission-lifecycle.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T00:55:00Z",
+    "updated_at": "2026-03-12T00:55:00Z",
+    "name": "CapsuleOS Admission Lifecycle",
+    "semantic_hash": "capsuleos-admission-lifecycle-a2c-branch-validation-promotion-discipline",
+    "source": {
+      "uri": "internal://capsule.foundation.capsuleos.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# CapsuleOS Admission Lifecycle\n\n## 1. Role\nCapsuleOS Admission Lifecycle owns the transition from refinery output into governed memory. It keeps the handoff from A2C into branch posture, validation judgment, and promotion discipline explicit so trust enters the vault through named boundaries rather than through ambient assumption.\n\n## 2. Admission Lifecycle Surface\nThis sub-hub groups `a2c`, `branch-steward-agent`, and `validation-gatekeeper-agent`. Together they define how capsule candidates are refined, placed into the right branch posture, reviewed against trust law, and either promoted, deferred, or held away from Real until evidence is strong enough.\n\n## 3. Operating Boundary\nThis sub-hub does not define constitutional capsule law, human-facing maintenance interfaces, or substrate operations. Those responsibilities belong to `law-surfaces`, `stewardship-interfaces`, and `runtime-substrate`."
+  },
+  "neuro_concentrate": {
+    "summary": "CapsuleOS Admission Lifecycle groups the trust-entry surfaces of the operating system: A2C, Branch Steward Agent, and Validation Gatekeeper Agent. It keeps candidate refinement, branch posture, validation judgment, and promotion discipline together so new memory enters the vault through named boundaries rather than assumption. This boundary matters because sovereign memory depends on the path into trust staying explicit, governable, and separable from both constitutional law and day-to-day maintenance interfaces. It preserves one visible route from candidate evidence into trusted memory.",
+    "keywords": [
+      "capsuleos",
+      "admission-lifecycle",
+      "a2c",
+      "branch-steward-agent",
+      "validation-gatekeeper-agent",
+      "promotion-discipline",
+      "trust-entry"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "capsuleos-admission-lifecycle-a2c-branch-validation-promotion-discipline"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.capsuleos.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.validation-gatekeeper-agent.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T00:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream CapsuleOS decomposition to isolate the route from refinery output into branch posture, validation judgment, and governed trust entry."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

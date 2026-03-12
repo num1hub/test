@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-08T23:35:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Skills Registry",
-    "semantic_hash": "agent-skills-registry-tool-guidance-workspace-runtime-validator",
+    "semantic_hash": "agent-skills-registry-full-cycle-procedural-lattice",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 240,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Skills Registry\n\n## 1. Definition and Essence\nAgent Skills Registry defines the workspace-local skill layer for N1Hub intelligence surfaces. It maps focused agent capabilities to concrete `skills/<name>/SKILL.md` documents so recurring patterns are documented once and reused consistently. In Dream it expands into a richer operating library for mining, refining, reviewing, and stewarding capsules.\n\n## 2. Core Responsibilities\n- `skill_catalog` describes how agents should use important local capabilities.\n- `tool_guidance` separates tool patterns from persona and high-level workflow prompts.\n- `workspace_scope` keeps skills versioned with the repository that actually defines the tools and constraints.\n- `operator_visibility` makes important changes to agent skill behavior reviewable in normal repo diff flow.\n- `full_cycle_procedures` preserves operational patterns across quarry, refinery, swarm, and execution lanes.\n\n## 3. N1Hub Integration\nThe initial N1Hub registry covers DeepMine generation, capsule graph snapshotting, targeted capsule validation, and conditional Linear GraphQL behavior. It is designed to support the Personal AI Assistant, DeepMine, Symphony sessions, A2C, and N-Infinity agent lanes.\n\n## 4. Dream Direction\nThe future target is a true skills lattice where scout, miner, foreman, reviewer, and executor lanes all reuse explicit procedures instead of prompt folklore.\n\n## 5. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable skill documents instead of tribal memory.\n"
+    "content": "# Agent Skills Registry\n\n## 1. Role\nAgent Skills Registry will become a richer procedural library for N1Hub intelligence surfaces. Skills will remain the local, reviewable place where recurring operational patterns are documented once and reused across mining, refining, reviewing, stewarding, and execution lanes.\n\n## 2. Future Skill Lattice\n- explicit procedures for scout, miner, foreman, reviewer, executor, and steward lanes\n- skill-guided context-pack assembly and structured-output discipline\n- versioned runtime and tool guidance that stays with the repository\n- clearer separation between broad instruction surfaces and narrow procedural playbooks\n- reusable full-cycle procedures that make quarry, refinery, swarm, and execution work repeatable\n\n## 3. Operational Consequence\nThe registry will become the place where the capsule factory learns how to repeat itself without drifting into accidental habit. Agents will improve because good tactics are preserved as inspectable local procedures rather than rediscovered badly in prompts.\n\n## 4. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable craft."
   },
   "neuro_concentrate": {
-    "summary": "Agent Skills Registry defines the workspace-local skill layer for N1Hub agents. It matters because the same tool patterns otherwise get rediscovered badly in prompts, chat turns, and operator folklore. By versioning `skills/<name>/SKILL.md` with the repo, N1Hub can teach agents how to use DeepMine generation, capsule graph inspection, validator workflows, and runtime-conditional tracker tools without confusing those instructions with persona or orchestration policy. It also creates a stable bridge between repo-local capabilities and future assistant loaders.",
+    "summary": "Agent Skills Registry defines the future procedural lattice for N1Hub agents: versioned playbooks for scout, miner, foreman, reviewer, executor, and refiner lanes that turn recurring tactics into explicit reusable craft instead of prompt folklore.",
     "keywords": [
       "agent-skills",
       "skills",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-skills-registry-tool-guidance-workspace-runtime-validator"
+    "semantic_hash": "agent-skills-registry-full-cycle-procedural-lattice"
   },
   "recursive_layer": {
     "links": [
@@ -91,7 +91,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "7c6f964aaea9c804c8de939eeb6ea172be60549b4f613b36e81b7d34a5ec746d4c78e65f0b8afcf0c119d764d7b7b2bcf22909716b6b38568d4e16babd93e8af"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-08T19:12:00Z",
+    "updated_at": "2026-03-11T21:10:00Z",
     "name": "Human-AI Symbiosis",
     "semantic_hash": "human-ai-symbiosis-daemon-partner-collective-intelligence-routing",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Human-AI Symbiosis\n\n## 1. Dream Direction\nIn the Dream branch, Human-AI Symbiosis pushes toward a world where the user's assistant behaves like a true always-on cognitive exoskeleton: continuous, trustworthy, memory-rich, and deeply integrated with the rest of the N1Hub swarm.\n\n## 2. Desired Future State\n- The human remains the sovereign center.\n- The Personal AI Assistant becomes a nearly frictionless daemon-partner.\n- Collective intelligence becomes instantly callable without losing clarity about who is acting and why.\n- The wallet, control surface, and control plane cooperate so intelligence supply stays visible instead of magical.\n- Real and Dream branch discipline stays visible so deeper automation never masquerades as unquestioned truth.\n\n## 3. Why It Matters\nThe future value of N1Hub depends not on having more agents than everyone else, but on making those agents feel like a coherent extension of one person's thinking and operating power. Dream preserves a future where agency and automation strengthen each other because supply, governance, and delegation remain legible.\n\n## 4. Philosophical Alignment\nDream preserves symbiosis as the right end state: the system grows more capable, but the human remains more present, not less.\n"
+    "content": "# Human-AI Symbiosis\n\n## 1. Role\nHuman-AI Symbiosis defines a state where the user's assistant behaves like a trustworthy cognitive exoskeleton: continuous, memory-rich, economically legible, and deeply integrated with the rest of the N1Hub swarm.\n\n## 2. Symbiotic Contract\n- The human remains the sovereign center.\n- The Personal AI Assistant operates as a nearly frictionless daemon-partner.\n- Collective intelligence becomes instantly callable without ambiguity about who is acting and why.\n- The wallet, control surface, and control plane keep intelligence supply visible instead of magical.\n- Branch discipline remains explicit so deeper automation never masquerades as unquestioned truth.\n\n## 3. Why It Matters\nThe value of N1Hub depends on making agents feel like a coherent extension of one person's thinking and operating power. Symbiosis works because supply, governance, delegation, and explanation remain legible while capability grows.\n\n## 4. Philosophical Alignment\nSymbiosis keeps the human more present, not less, as the system grows more capable.\n"
   },
   "neuro_concentrate": {
-    "summary": "Human-AI Symbiosis in the Dream branch imagines an even tighter bond between the person and a persistent AI partner, where memory, delegation, wallet-governed supply, and background swarm work feel seamless without erasing human sovereignty. The capsule matters because the future risk is not lack of intelligence but loss of agency under excessive automation. Dream therefore preserves the idea that the assistant remains a devoted partner surface for one person, while collective intelligence, mining, and orchestration continue to expand behind that surface in a way the human can still understand, direct, trust, and economically govern.",
+    "summary": "Human-AI Symbiosis defines a tight bond between one person and a persistent AI partner where memory, delegation, wallet-governed supply, and background swarm work feel seamless without erasing human sovereignty. It matters because the core risk is not lack of intelligence but loss of agency under excessive automation. The capsule therefore keeps the assistant as a devoted partner surface for one person while collective intelligence, mining, and orchestration expand behind that surface in ways the human can still understand, direct, trust, and economically govern.",
     "keywords": [
       "human-ai-symbiosis",
       "personal-ai-assistant",
@@ -100,7 +100,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:10:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed Dream self-reference so Human-AI Symbiosis states the symbiotic contract directly as present doctrine."
+      }
+    ]
   },
-  "integrity_sha3_512": "19f6bf88452b92ef615e5ea28373e5a56a0566ba82be500f850847f299e0c70303f3970ee3514ca6b58486719c432bffd16d34668306c0a6f447922b3aac83bf"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

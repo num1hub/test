@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "n1hub-v0-personal-release-genesis-alpha-gold-core",
-    "updated_at": "2026-03-07T10:22:14.442Z",
+    "updated_at": "2026-03-11T21:25:00Z",
     "source": {
       "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
       "sha256": "f1cec6b5254341fe1d8e50fdf16efc7d5536c444286b0db43997d67686e837fa",
@@ -27,7 +27,7 @@
     "content": "# Project: N1Hub v0 Personal Release\n\n## 1. Project Overview\nThis capsule represents the **Genesis Boot** of the N1Hub ecosystem—designated as the `v0` Personal Release. It is a highly specialized, private deployment explicitly tailored for the sole access and operational control of the founder, Egor N1.\n\n## 2. Core Capabilities (v0)\nWhile this release precedes public or beta availability, it contains the fully functional, axiomatic core of the ecosystem:\n- **CapsuleOS Storage Layer**: Complete implementation of the 5-Element Law, cryptographic hashing (SHA3-512), and PostgreSQL/Neo4j database schemas.\n- **Basic Workspace**: A foundational user interface enabling the manual drafting, sealing, and viewing of sovereign capsules.\n- **Graph Navigation**: Preliminary capability to traverse the `recursive_layer` links and view the nascent topology of the Cognitive Plane.\n\n## 3. Strategic Purpose\nThe v0 release is not a commercial product; it is the ultimate sandbox. It allows the Chief Architect to securely instantiate the first set of foundational capsules (like this one), test the integrity of the 16 Validation Gates, and prepare the bedrock architecture before the A2C pipeline and N-Infinity swarm are fully activated."
   },
   "neuro_concentrate": {
-    "summary": "N1Hub v0 in the Dream branch is preserved not only as a historical alpha, but as the future-controlled reference lab for migration, doctrine testing, and genesis-grade regression checks. It imagines the first environment becoming a cleaner museum and proving ground where foundational runtime behavior can still be compared against later system layers without losing the original shape of the habitat. The project matters because mature platforms need a trustworthy memory of their first live substrate. Dream therefore keeps N1Hub v0 as a reference sandbox with stronger lineage value, not merely a retired founder environment.",
+    "summary": "N1Hub v0 is preserved as a controlled reference lab for migration, doctrine testing, and genesis-grade regression checks. It imagines the first environment becoming a cleaner museum and proving ground where foundational runtime behavior can still be compared against later system layers without losing the original habitat shape. The project matters because mature platforms need a trustworthy memory of their first live substrate. N1Hub v0 therefore stands as a reference sandbox with stronger lineage value, not merely a retired founder environment.",
     "keywords": [
       "n1hub-v0",
       "personal-release",
@@ -77,7 +77,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:25:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so N1Hub v0 states its reference-lab role directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "09da3143e40521be579e4a462d9f6cb4772d3b9da23cbead280ee0ea774cf80c00ca2d78315c8a17aee22ee4f9f3107dc88dc922bbe87d748f6281788e61a8bd"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

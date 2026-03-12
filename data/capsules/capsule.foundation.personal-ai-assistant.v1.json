@@ -1,17 +1,17 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.personal-ai-assistant.v1",
-    "version": "1.14.0",
+    "version": "1.15.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-09T20:55:00Z",
+    "updated_at": "2026-03-11T20:40:00Z",
     "name": "Personal AI Assistant",
-    "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core",
+    "semantic_hash": "assistant-parent-routing-conversation-continuity-planning-orchestration-governance",
     "priority": "high",
-    "progress": 54,
+    "progress": 61,
     "estimatedHours": 340,
     "actualHours": 142,
     "dueDate": "2026-07-20",
@@ -19,23 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant: The Cognitive Co-Pilot\n\n## 1. Definition and Essence\nInspired by the JARVIS archetype, the Personal AI Assistant is a proactive intelligence layer inside N1Hub Workspace. It is not a basic chatbot. It is a context-aware collaborator that understands projects, goals, tasks, graph relationships, and the state of the wider agent fleet, then provides timely suggestions, graph-grounded explanations, and conversational control over deeper execution lanes. In N1Hub terms, it is the user's main symbiotic partner surface: the front door through which one human can steer a much larger intelligence system without personally micromanaging every worker.\n\n## 2. Core Capabilities\n- Natural language interaction for query, command, and synthesis.\n- Multimodal ingress over text, files, and voice transcripts routed through graph-grounded `chat to capsules` behavior instead of generic free chat.\n- Context awareness based on active projects, tasks, user preferences, capsule references, bounded context packs, and durable assignment continuity.\n- Symbiotic continuity so the assistant behaves like a persistent daemon-partner instead of an occasional prompt box.\n- Multi-horizon planning support so the user can ask for `today`, `tomorrow`, `this week`, `30/60/90`, `365`, or `1000-day` views from one surface.\n- Planning compression through Planning Horizon Engine so the whole Dream field can be distilled through Real into one grounded plan for the day.\n- Vault literacy through Capsule Librarian Agent so conversation can navigate the repository instead of hallucinating its contents.\n- Vault stewardship awareness so the assistant can propose capsule decomposition, markup, and graph refactor work instead of treating the repository as a static library.\n- Triage and handoff awareness so the assistant can route bounded work into scout, foreman, reviewer, and executor lanes instead of trying to do everything itself.\n- Control-plane awareness so the assistant can explain which agents are active, what work is queued, and how the swarm is behaving without itself becoming the low-level fleet manager.\n- Task automation for capsule drafting, refinement, review, and follow-through.\n- Symphony awareness for explaining issue execution status, workflow policy, and next repository actions.\n- AI Wallet awareness for choosing user-enabled providers, model defaults, and subscription-backed execution paths.\n- Delegation awareness for handing bounded work to DeepMine, Symphony, or N-Infinity when conversation alone is insufficient.\n- Review and branch awareness so the assistant can route work through critique, validation, and Real/Dream discipline rather than speaking with unjustified certainty.\n- Human-governance fidelity so the assistant knows when to ask, when to suggest, when to delegate, and when to stop rather than overstepping the user's authority.\n\n## 3. Architecture\nThe Assistant uses Chat to Capsules as the user-facing grounding pattern, AI Conversation Session as the operational memory shell, DeepMine for model access and reasoning pipelines, N-Infinity as the background intelligence layer, and A2C for transforming conversational output into structured capsules. Agent Delegation defines how it hands real work to deeper execution lanes without collapsing orchestration policy into chat. In practice the Assistant is the main front door and router for the key agent cluster: it can lean on Capsule Librarian Agent for retrieval, on Planning Horizon Engine plus the planning agents for temporal structure, on DeepMine Foreman for mining escalation, and on Review or Branch Steward roles when graph quality or branch placement is in question. It should also become the main daytime co-pilot surface for Vault Stewardship Swarm, proposing capsule improvements for human approval while background lanes carry quieter autonomous maintenance at night. As the swarm matures, the assistant should increasingly orchestrate through context-engineered handoffs, bounded subagents, and assignment-aware return paths rather than through one giant conversational turn, while leaving fleet governance and assignment administration to the deeper Agent Control Plane.\n\n## 4. Integration\nThe Assistant orchestrates with Planner for decomposition and scheduling, with Planning Horizon Engine for horizon compression, with Tracker for overdue detection and follow-through, with AI Wallet for provider readiness, with AI Control Surface for operator-visible status, with Agent Control Plane for fleet-state awareness, with Symphony for repository execution awareness, and with Background Agent Runtime for longer-lived delegated work. It is therefore both the voice of the system and the user-facing routing layer across the wider agent topology.\n\n## 5. Philosophical Alignment\nThe Assistant advances To Dig Deep by helping users refine vague thoughts into precise, evidence-bound graph actions instead of shallow one-off answers, while keeping the human at the center of the loop as final governor of meaning, approval, and direction.\n\n## 6. Adaptive Partner Roles\n\nThe assistant should behave as one adaptive partner with several legitimate operating roles:\n- strategist for scenario framing and prioritization,\n- analyst for KPI reading, comparison, and interpretation,\n- personal assistant for reminders, scheduling, and operational drafting.\n\nThose role shifts should remain grounded in one identity contract and one memory posture. The point is not persona sprawl. The point is contextual adaptation to communication style, priorities, deadlines, and historical trace while keeping approval, evidence, and branch discipline stable.\n\n## 7. Real Canonical Rule\nReal owns the current assistant carrier contract: one stable `N1` identity, bounded routing into assistant, TO-DO, orchestration, and review lanes, and human-governed escalation instead of hidden autonomy theater. Dream may continue to explore future assistant behavior, but Real is the canonical source for what the assistant currently is allowed to claim, route, remember, and execute inside N1Hub.\n"
+    "content": "# Personal AI Assistant\n\n## 1. Role\nPersonal AI Assistant is the symbiotic carrier surface through which one human speaks to N1Hub, receives graph-grounded explanation, and routes bounded work into deeper execution lanes. It now routes that surface through five bounded sub-hubs so conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control stay explicit instead of collapsing into one overloaded directory.\n\n## 2. Routing Surfaces\n- `conversation-ingress` owns graph-grounded conversation, session memory shell, and prompt surfaces that turn operator intent into bounded assistant work.\n- `memory-continuity` owns identity, memory, context engineering, and preference surfaces that keep the assistant stable across time.\n- `planning-navigation` owns planning, tracking, retrieval, and suggestion surfaces that help the assistant explain what matters now.\n- `execution-orchestration` owns delegation, mining, swarm, stewardship, and A2C handoff surfaces that let the assistant move work into deeper lanes without becoming the fleet itself.\n- `governance-control` owns wallet, control-plane, review, branch, notification, and integration posture that keep assistant action visible and governable.\n\n## 3. Parent Boundary\nThe parent assistant hub keeps only the top-level relationship to Workspace, Human-AI Symbiosis, Key Agents, CapsuleOS, To Dig Deep, and the five sub-hubs. Detailed routing now flows through the sub-hubs so the assistant remains the carrier contract for one stable partner surface instead of a flat registry of every adjacent module."
   },
   "neuro_concentrate": {
-    "summary": "The Personal AI Assistant is the graph-grounded partner surface of N1Hub and the current canonical carrier for the stable `N1` assistant identity. It should shift cleanly between strategist, analyst, and personal-assistant roles while preserving one approval model, one routing posture, and one historical trace. This matters because users do not experience the system as isolated subsystems; they experience one partner that should understand priorities, deadlines, style, continuity, and when to hand work into bounded execution lanes without pretending to own the whole fleet.",
+    "summary": "Personal AI Assistant now acts as a bounded routing hub instead of a flat dependency directory. It keeps only top-level ties to Workspace, Human-AI Symbiosis, Key Agents, CapsuleOS, To Dig Deep, and five assistant sub-hubs covering conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control. This makes the assistant easier to inspect, extend, and govern without diluting its role as the user-facing symbiotic carrier surface for the wider N1Hub intelligence system.",
     "keywords": [
       "personal-ai-assistant",
-      "n1-carrier",
-      "adaptive-partner",
-      "strategist",
-      "analyst",
-      "personal-assistant",
-      "contextual-adaptation",
-      "historical-trace",
-      "delegation",
-      "graph-grounded",
-      "symbiosis",
-      "memory-partner"
+      "hub-decomposition",
+      "conversation-ingress",
+      "memory-continuity",
+      "planning-navigation",
+      "execution-orchestration",
+      "governance-control",
+      "symbiotic-carrier"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -45,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "personal-ai-assistant-jarvis-cognitive-copilot-gold-core"
+    "semantic_hash": "assistant-parent-routing-conversation-continuity-planning-orchestration-governance"
   },
   "recursive_layer": {
     "links": [
@@ -58,91 +54,7 @@
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.chat-to-capsules.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-delegation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planner.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.planning-horizon-engine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.tracker.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.ai-wallet.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.hybrid-llm-access.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-soul.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-instruction-surfaces.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-skills-registry.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.ai-control-surface.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-control-plane.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.background-agent-runtime.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.key-agents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.vault-stewardship-swarm.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-memory-state.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.agent-context-engineering.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.agent-subagents.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.project.v1",
         "relation_type": "references"
       },
       {
@@ -150,72 +62,28 @@
         "relation_type": "depends_on"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.conversation-ingress.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.daily-planner-agent.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.memory-continuity.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.roadmap-planner-agent.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.planning-navigation.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.capsule-librarian-agent.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.execution-orchestration.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.foundation.deepmine-foreman-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.branch-steward-agent.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.review-agent.v1",
+        "target_id": "capsule.foundation.personal-ai-assistant.governance-control.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
-      },
-      {
-        "target_id": "capsule.ai.conversation.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.ai.prompt.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.symphony-agent-session.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.ai.suggestion.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.notification.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.user-preferences.v1",
-        "relation_type": "depends_on"
-      },
-      {
-        "target_id": "capsule.foundation.profile.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.api-gateway.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.integrations.v1",
-        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -226,8 +94,14 @@
         "agent": "n1",
         "run_id": "TODO-023",
         "rationale": "The real assistant capsule now explicitly owns the current N1 carrier contract, bounded routing posture, and human-governed escalation law. Dream remains valid as future assistant doctrine, but it should no longer be read as the canonical statement of live assistant behavior."
+      },
+      {
+        "at": "2026-03-11T20:40:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Personal AI Assistant into five bounded sub-hubs so conversation, continuity, planning, orchestration, and governance routing no longer collapse into a 42-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "a8fb41422a0406c48833ec86e124eca4725f57d53a1e4ac91e305620129b1304eb5b7e9f0f26c35a5d4224811c01413151fd21b1767dab1ab3ed1ff0a81182ca"
+  "integrity_sha3_512": "fc5e5ccb8303fca72989aecf68365beba3c08969b86c8a36b411107c2d1ed38662cae6098edd0ca1f45faa616c42d30dc58e8095d9af3f26ce82b092a3d25265"
 }

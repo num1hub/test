@@ -6,7 +6,6 @@ import Link from 'next/link';
 import PasswordChangeForm from '@/components/PasswordChangeForm';
 import AiWalletForm from '@/components/AiWalletForm';
 import AppNav from '@/components/AppNav';
-import ChatGptAuthStatusCard from '@/components/ChatGptAuthStatusCard';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useToast } from '@/contexts/ToastContext';
 import { logClientAction } from '@/lib/clientActivity';
@@ -72,8 +71,15 @@ export default function SettingsPage() {
     if (!token) router.push('/login');
   }, [router]);
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
     void logClientAction('logout', { message: 'Session terminated by architect.' });
+
+    try {
+      await fetch('/api/auth/logout', { method: 'POST' });
+    } catch {
+      // Even if cookie clearing fails, drop the local token and return to login.
+    }
+
     localStorage.removeItem('n1hub_vault_token');
     showToast('Session terminated.', 'info');
     router.push('/login');
@@ -160,9 +166,6 @@ export default function SettingsPage() {
             <PasswordChangeForm />
           </div>
         </div>
-
-        <ChatGptAuthStatusCard mode="compact" />
-
         <AiWalletForm />
       </div>
     </div>

@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.symphony.run-observability.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T01:20:00Z",
+    "name": "Symphony Run Observability",
+    "semantic_hash": "symphony-run-observability-attempt-retry-status-recovery-evidence",
+    "source": {
+      "uri": "internal://capsule.foundation.symphony.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Run Observability\n\n## 1. Role\nSymphony Run Observability owns the evidence surfaces that explain what an orchestration run did and what should happen next. It keeps attempt state, retry state, and observability together so failure, recovery, and operator intervention remain legible.\n\n## 2. Run Observability Surface\nThis sub-hub groups `symphony-run-attempt`, `symphony-retry-entry`, and `symphony-observability`. Together they define how one run is recorded, how recovery is scheduled, and how operators or downstream agents can see current state, degraded state, and next-step obligations.\n\n## 3. Operating Boundary\nThis sub-hub does not own assignment discovery, daemon continuity, or workflow safety law. Those responsibilities belong to `assignment-intake`, `live-session-fabric`, and `workflow-safety`."
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Run Observability groups the evidence surfaces of orchestration: Symphony Run Attempt, Symphony Retry Entry, and Symphony Observability. It keeps attempt state, recovery scheduling, and operator-visible status together so failure, recovery, and next-step obligations remain legible after work starts. This boundary matters because automation becomes harder to trust when run history, retry posture, and status evidence are scattered across unrelated runtime modules. It gives Symphony one explicit evidence seam for understanding what happened and what intervention is needed next.",
+    "keywords": [
+      "symphony",
+      "run-observability",
+      "symphony-run-attempt",
+      "symphony-retry-entry",
+      "symphony-observability",
+      "recovery",
+      "status-evidence"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "symphony-run-observability-attempt-retry-status-recovery-evidence"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-run-attempt.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-retry-entry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T01:20:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Symphony decomposition to isolate attempt evidence, retry posture, and operator-facing run status from intake and live session fabric."
+      }
+    ]
+  },
+  "integrity_sha3_512": "ace2454400cb610478260432853197e4c034b5c72ec1d80dbe6381cf97726eaf5e622168ec15f248a6b766b2dc035c0efb5715b0c6e8440e604c645531804ea3"
+}

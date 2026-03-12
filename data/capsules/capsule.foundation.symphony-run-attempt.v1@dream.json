@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-06T18:41:12.201Z",
+    "updated_at": "2026-03-11T16:05:00Z",
     "name": "Symphony Run Attempt",
     "semantic_hash": "symphony-run-attempt-issue-workspace-status-retry-lifecycle",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Run Attempt\n\n## 1. Dream Direction\nThe Dream branch imagines each Symphony attempt as a richer assignment-bearing object rather than only a runtime wrapper around one coding pass.\n\n## 2. Desired Future State\n- clearer assignment handles and return paths for work started asynchronously.\n- stronger artifact bundles that package review requests, follow-up work, and promotion candidates.\n- better linkage between attempt outcome, branch discipline, and downstream control surfaces.\n- clearer distinction between a durable attempt record and the live session nested inside it.\n\n## 3. Why It Matters\nDream preserves the idea that repository work should remain attributable and reviewable even when it becomes more autonomous. A good run attempt is not only execution; it is execution plus accountability.\n"
+    "content": "# Symphony Run Attempt\n\n## 1. Role\nSymphony Run Attempt will become the durable assignment-bearing execution record for repository work, packaging the live session, its artifacts, and its branch consequences into one accountable object.\n\n## 2. Future Attempt Contract\nAttempt records will carry clearer assignment handles, return paths, artifact bundles, branch-aware outcome linkage, and a stronger distinction between the durable attempt object and the live session nested inside it.\n\n## 3. Operational Consequence\nRepository work will remain reviewable and attributable even as it becomes more asynchronous, more persistent, and more tightly coupled to downstream review and promotion lanes.\n\n## 4. Philosophical Alignment\nSymphony Run Attempt supports To Dig Deep by making each execution pass durable enough to inspect, compare, and govern."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Run Attempt in the Dream branch preserves a richer assignment-bearing execution record. It imagines stronger return-path attribution, clearer artifact bundles, cleaner linkage between attempt outcome and branch discipline, and a more explicit distinction between a durable attempt record and the live session nested inside it. The capsule matters because autonomous repository work should remain reviewable and accountable even as it becomes more persistent, more asynchronous, and more tightly coupled to downstream review and promotion surfaces.",
+    "summary": "Symphony Run Attempt defines the future durable execution record for repository work: assignment handles, richer artifact bundles, clearer branch linkage, and stronger distinction between a live session and the durable attempt object that contains it.",
     "keywords": [
       "symphony",
       "run-attempt",
@@ -83,7 +83,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T16:05:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "84944984ad00b8ce7239213ee9b401ebef2eeeb766e13865e7512559cdcf23a208e23471ef01a6c2d5a6148a414d811a3d5786acedfc7882e8cd04572bb33a85"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

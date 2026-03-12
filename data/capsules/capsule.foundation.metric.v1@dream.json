@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-07T10:22:14.145Z",
+    "updated_at": "2026-03-11T21:25:00Z",
     "name": "Metric",
     "semantic_hash": "capsule-foundation-metric-v1-analytics-tracker-dashboard-kpi",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Metric\n\n## 1. Definition and Essence\nMetric defines a measurable indicator capsule used for planning diagnostics, tracker analytics, and dashboard reporting. It standardizes value semantics, period windows, aggregation methods, and threshold triggers so productivity signals remain comparable across projects.\n\n## 2. Core Attributes\n- `metric_name` canonical identifier for indicator definition\n- `value` numeric observation with unit metadata\n- `window` time period associated with measurement\n- `aggregation` sum, average, percentile, trend strategy\n- `thresholds` configured warning and critical bounds\n\n## 3. Lifecycle\nMetrics are generated from operational events, aggregated over configured windows, visualized in dashboards, and persisted for historical trend analysis and anomaly detection.\n\n## 4. Integration\n- **Tracker:** primary source for execution telemetry.\n- **Analytics:** aggregates metrics into reports and insights.\n- **Dashboard:** renders metric widgets and trend cards.\n- **Project Hubs:** consumes metrics for health assessment.\n\n## 5. Philosophical Alignment\nMetrics apply To Dig Deep by replacing vague impressions with measurable evidence that can guide disciplined improvement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Metric in the Dream branch points toward a richer evidence primitive for the workspace. It preserves the future state where health, velocity, quality, capsule integrity, and agent behavior can all be measured with clearer windows, scopes, and thresholds. The capsule matters because analytics and dashboards only become intelligent when the units underneath them are well designed. Dream therefore keeps Metric as a future measurement grammar for wiser planning, stewardship, and governance.",
+    "summary": "Metric defines a richer evidence primitive for the workspace. It describes how health, velocity, quality, capsule integrity, and agent behavior can be measured with clearer windows, scopes, and thresholds. The capsule matters because analytics and dashboards become intelligent only when the units underneath them are well designed. Metric therefore supplies a measurement grammar for wiser planning, stewardship, governance, reusable evidence, longitudinal comparison, and cross-lane accountability across assistant, planner, and maintenance lanes.",
     "keywords": [
       "metric",
       "analytics",
@@ -74,7 +74,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:25:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so Metric states its measurement doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "6c5b99ff2eb04ad40e53f95014be060fa4b7361b90920d6b8a76676f60e9979dcd2155297cb4201d3ef07bfa3adad715fbacf02b3dd22994f417d469b79063b5"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

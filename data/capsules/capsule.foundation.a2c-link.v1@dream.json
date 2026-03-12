@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.a2c-link.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:13.860Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "A2C Stage: Link",
-    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph",
+    "semantic_hash": "capsule-foundation-a2clink-future-linking-collision-evidence-boundary",
     "priority": "medium",
     "progress": 35,
     "estimatedHours": 155,
@@ -19,17 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Stage: Link\n\n## 1. Definition and Essence\nThe Link stage infers and validates graph relationships for synthesized capsules. It maps entities to existing capsule IDs, selects canonical relation types, and prevents semantically meaningless over-linking.\n\n## 2. Core Attributes\n- `candidate_links` with relation intent and confidence\n- `target_resolution` status for each target_id lookup\n- `linking_policy` constraints for canonical relation usage\n- `redundancy_flags` to remove duplicate or weak links\n- `linking_score` summarizing graph coherence contribution\n\n## 3. Lifecycle\nLink resolves targets against known IDs, filters invalid relation proposals, and emits a recursively linked capsule candidate. Unresolved references trigger warnings or quarantine depending on policy.\n\n## 4. Integration\n- **Synthesize Stage:** receives draft capsule content.\n- **Hash Stage:** forwards linked capsule for semantic and integrity sealing.\n- **Validator G11/G12:** aligns relation canon and target existence.\n- **Capsule Vault Graph:** preserves sparse but meaningful topology.\n\n## 5. Philosophical Alignment\nLinking applies To Dig Deep by connecting ideas with precision, preferring truthful structure over dense but shallow connectivity.\n"
+    "content": "# A2C Stage: Link\n\n## 1. Definition and Essence\nLink provides the topology-construction layer that resolves likely targets, selects canonical relation types, packages contradiction evidence, and keeps graph expansion sparse enough to stay meaningful.\n\n## 2. Core Attributes\n- `candidate_links` with relation intent and confidence\n- `target_resolution` status for each target lookup\n- `collision_evidence` bundles describing contradiction or overlap pressure\n- `redundancy_flags` that remove duplicate or weak links\n- `linking_score` summarizing graph coherence contribution\n\n## 3. Lifecycle\nLink resolves targets against known IDs, filters invalid relation proposals, emits a recursively linked candidate, and packages contested-link evidence for downstream governance. The stage preserves topology evidence; it does not decide branch posture, promotion, or quarantine policy.\n\n## 4. Integration\n- **Synthesize Stage:** supplies the draft capsule content.\n- **Branch Steward Agent:** interprets contested-link evidence when branch routing is unclear.\n- **N-Infinity Parliament:** consumes contradiction bundles that require deeper debate.\n- **Hash Stage:** receives topology only after graph evidence is in place.\n- **Validator G11/G12:** checks relation canon and target existence.\n\n## 5. Philosophical Alignment\nLinking applies To Dig Deep by connecting ideas with precision and evidence discipline, preferring truthful structure over dense but shallow connectivity."
   },
   "neuro_concentrate": {
-    "summary": "A2C Stage: Link in the Dream branch aims toward a smarter topology-construction layer. It imagines stronger target resolution, cleaner relation inference, and better discrimination between weak adjacency and links worthy of entering the canonical graph. The stage matters because graph quality depends as much on edge discipline as on payload quality. Dream therefore preserves Link as a future topological reasoning stage that can enrich the graph without flooding it with low-value relations.",
+    "summary": "A2C Stage: Link provides the topology-construction layer that resolves likely targets, selects canonical relation types, packages contradiction evidence, and emits sparse graph structure before sealing. It preserves contested-link bundles for Branch Steward and Parliament instead of deciding branch posture or promotion itself. This keeps future graph expansion precise, reviewable, and auditable, and it prevents topology construction from silently absorbing governance judgment about where ambiguous structure belongs or whether contradiction pressure should become debate, branching, or later review.",
     "keywords": [
       "a2c",
       "linking",
       "graph",
-      "relations",
+      "collision-evidence",
       "target-resolution",
-      "capsuleos"
+      "branch-routing-evidence",
+      "relation-canon",
+      "topology"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -39,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-a2c-link-v1-stage-linking-graph"
+    "semantic_hash": "capsule-foundation-a2clink-future-linking-collision-evidence-boundary"
   },
   "recursive_layer": {
     "links": [
@@ -58,10 +60,25 @@
       {
         "target_id": "capsule.foundation.capsuleos.relation-types.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.branch-steward-agent.v1",
+        "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.parliament.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "mechanism_policy_separation",
+        "agent": "codex",
+        "rationale": "Future Link doctrine now emits contested-link evidence while Branch Steward and Parliament own routing and contradiction interpretation."
+      }
+    ]
   },
-  "integrity_sha3_512": "0ef8026ff5162ccb2e504adb1571701455da33bed4831f63c20dd2c7b261ee395def3479043a9c70b0b7f7927a021cdee2ad072d76270b17287200c3ef4220d8"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

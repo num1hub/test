@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.tracker.schedule-pressure.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T00:20:00Z",
+    "name": "Tracker Schedule Pressure",
+    "semantic_hash": "tracker-schedule-pressure-reminders-notifications-calendar-timing-loops",
+    "source": {
+      "uri": "internal://capsule.foundation.tracker.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Tracker Schedule Pressure\n\n## 1. Role\nTracker Schedule Pressure owns the timing consequences of execution truth. It turns due dates, drift, and recovery windows into reminders, notifications, and calendar-facing pressure that make commitments visible before they decay into silent failure.\n\n## 2. Schedule Pressure Surface\nThis sub-hub groups `reminder`, `notification`, and `calendar`. Together they define how Tracker converts telemetry into prompt timing, visible urgency, and rhythm-aware schedule pressure rather than leaving deadlines as inert metadata.\n\n## 3. Operating Boundary\nThis sub-hub does not own the tracked work objects, deeper replanning logic, or orchestration feeds into runtime systems. Those responsibilities belong to `tracked-objects`, `planning-feedback`, and `orchestration-signals`."
+  },
+  "neuro_concentrate": {
+    "summary": "Tracker Schedule Pressure groups the timing consequences of execution truth: Reminder, Notification, and Calendar. It keeps reminders, visible urgency, and rhythm-aware schedule pressure together so due dates and drift become actionable timing signals rather than inert metadata. This boundary matters because execution accountability is only useful when time pressure is translated into legible prompts before recovery windows disappear. It gives Tracker one explicit place to shape urgency without mixing timing law into planning logic or runtime orchestration.",
+    "keywords": [
+      "tracker",
+      "schedule-pressure",
+      "reminder",
+      "notification",
+      "calendar",
+      "deadline-drift",
+      "timing-signals"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "tracker-schedule-pressure-reminders-notifications-calendar-timing-loops"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.reminder.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.calendar.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T00:20:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Tracker decomposition to isolate reminder timing, notification pressure, and calendar-facing urgency from tracked objects and runtime orchestration."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

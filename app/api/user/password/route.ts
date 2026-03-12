@@ -1,11 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getPasswordHash, setPasswordHash, verifyPassword } from '@/lib/password';
 import { logActivity } from '@/lib/activity';
-
-function isAuthorized(request: Request) {
-  const authHeader = request.headers.get('authorization');
-  return authHeader === 'Bearer n1-authorized-architect-token-777';
-}
+import { isAuthorized } from '@/lib/apiSecurity';
 
 export async function PUT(request: Request) {
   if (!isAuthorized(request)) {

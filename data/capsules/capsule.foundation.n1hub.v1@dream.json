@@ -1,21 +1,21 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.n1hub.v1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
-    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core",
-    "updated_at": "2026-03-09T21:15:00Z",
+    "semantic_hash": "n1hub-routing-doctrine-intelligence-operator-runtime-program-lines",
+    "updated_at": "2026-03-11T23:58:00Z",
     "source": {
       "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
       "type": "internal_derivation"
     },
     "name": "N1Hub Runtime",
     "priority": "high",
-    "progress": 63,
+    "progress": 66,
     "estimatedHours": 620,
     "actualHours": 288,
     "dueDate": "2026-09-20",
@@ -23,22 +23,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: Dream Overlay\n\n## 1. Current Role of Dream\nReal now owns the canonical statement of the current N1Hub runtime contract. Dream therefore should not restate the live operating focus as if the present runtime were still unsettled.\n\n## 2. What Dream Still Owns\nDream remains the place for future N1Hub delta such as:\n- a calmer and deeper habitat where memory, planning, mining, delegation, and execution feel even more unified,\n- stronger replacement of scattered tools with one sovereign environment,\n- richer long-horizon coordination between Workspace, Personal AI Assistant, A2C, DeepMine, Vault Stewardship, Symphony, and background runtime lanes,\n- a more complete second-brain operating system where one human and many bounded agents can improve memory and execution together.\n\n## 3. Explicit Non-Goals\nDream should not:\n- overwrite the stronger real-side statement of the current runtime contract,\n- collapse present operating law back into broad visionary prose,\n- reintroduce autonomous steward notes as constitutional runtime doctrine.\n\n## 4. Dream Lens\nThe useful Dream stance is to preserve the larger habitat vision and future integration delta while letting Real stay canonical for what N1Hub currently is in operation."
+    "content": "# N1Hub.com: Future Sovereign Habitat\n\n## 1. Role\nN1Hub is the sovereign habitat that turns doctrine into one coherent operating field. It routes that habitat through five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines remain explicit instead of collapsing into one parent directory.\n\n## 2. Routing Surfaces\n- `doctrinal-core` owns existential direction, capsule-generation doctrine, and sovereign capital posture.\n- `intelligence-fabric` owns mining, refinery work, and swarm reasoning over graph state.\n- `operator-surfaces` owns assistant partnership, chat ingress, control visibility, and graph reading.\n- `runtime-coordination` owns daemon continuity, orchestration, agent-lane coordination, and stewardship runtime.\n- `program-lines` owns access posture, flagship program lines, and the active sovereign-refactor track.\n\n## 3. Parent Boundary\nThe parent N1Hub hub keeps only the top-level relationship to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and the five runtime sub-hubs. Detailed habitat routing now flows through those sub-hubs so N1Hub remains the sovereign runtime contract for the larger field rather than a flat list of every adjacent system and strategic line."
   },
   "neuro_concentrate": {
-    "summary": "N1Hub Runtime in the Dream branch now stands as the future habitat overlay rather than the canonical source of current runtime truth. Real owns the live operating contract, while Dream preserves the larger sovereign second-brain vision in which memory, planning, mining, delegation, and bounded background agents feel more deeply unified. This keeps Dream useful as future integration doctrine without letting it replace the sharper real-side description of what N1Hub currently is in operation.",
+    "summary": "N1Hub routes the habitat through five bounded surfaces: doctrinal core, intelligence fabric, operator surfaces, runtime coordination, and program lines. The parent keeps only top-level relationships to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and the five sub-hubs. This makes future habitat doctrine more legible because philosophy, cognition, human ingress, daemon continuity, and strategic expansion no longer hide inside one overloaded parent capsule.",
     "keywords": [
-      "n1hub-runtime",
-      "future-overlay",
+      "n1hub",
+      "sovereign-habitat",
       "second-brain",
-      "sovereign-memory",
-      "integration-delta",
-      "human-agent-symbiosis",
-      "workspace",
-      "a2c",
-      "deepmine",
-      "vault-steward",
-      "bounded-autonomy"
+      "tool-unification",
+      "long-horizon-coordination",
+      "human-agent-partnership",
+      "durable-memory"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -48,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "n1hub-ecosystem-digital-habitat-sovereign-gold-master-core"
+    "semantic_hash": "n1hub-routing-doctrine-intelligence-operator-runtime-program-lines"
   },
   "recursive_layer": {
     "links": [
@@ -61,48 +57,32 @@
         "relation_type": "implements"
       },
       {
-        "target_id": "capsule.foundation.a2c.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.n-infinity.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.deepmine.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.project.tilesims.v1",
-        "relation_type": "supports"
-      },
-      {
-        "target_id": "capsule.foundation.access-models.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.between-zero-and-one.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.capsule-generation-protocol.v1",
-        "relation_type": "references"
-      },
-      {
-        "target_id": "capsule.foundation.sovereign-intellectual-capital.v1",
-        "relation_type": "references"
-      },
-      {
         "target_id": "capsule.foundation.n1hub-gold-master.v1",
         "relation_type": "derived_from"
       },
       {
-        "target_id": "capsule.foundation.tilesims.v1",
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.doctrinal-core.v1",
         "relation_type": "references"
       },
       {
-        "target_id": "capsule.project.n1hub-v0.v1",
-        "relation_type": "part_of"
+        "target_id": "capsule.foundation.n1hub.intelligence-fabric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.operator-surfaces.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.runtime-coordination.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub.program-lines.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -121,8 +101,20 @@
         "agent": "n1",
         "run_id": "TODO-025",
         "rationale": "The Dream N1Hub capsule was narrowed to future-only habitat doctrine after Real became the explicit canonical source for the current N1Hub runtime contract. This preserves the larger vision without leaving the branch split implicit."
+      },
+      {
+        "at": "2026-03-11T13:46:54Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      },
+      {
+        "at": "2026-03-11T23:58:00Z",
+        "event": "hub_decomposition_parent_refactor",
+        "agent": "codex",
+        "rationale": "Refactored Dream N1Hub into five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines no longer collapse into one parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "f3705d9229217f8876f6c8ee1b074d74fc3e071f3f4b3749c94e51b474c23366eee5556f4fdeb64aa542006eb3ab644775f0a7fcdf11ddeb03cbe6a9268e5af8"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

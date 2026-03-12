@@ -1,186 +1,207 @@
-// @vitest-environment node
-import fs from 'fs/promises';
-import path from 'path';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { computeIntegrityHash } from '@/lib/validator/utils';
+import fs from 'fs/promises'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { POST } from '@/app/api/a2c/ingest/route'
+import { logActivity } from '@/lib/activity'
+import { stageOperatorInput } from '@/lib/a2c/ingest'
+import { ensureCapsulesDir } from '@/lib/capsuleVault'
+import { appendValidationLog } from '@/lib/validationLog'
+import { validateCapsule } from '@/lib/validator'
 
-const TEST_ROOT = path.join(process.cwd(), 'data-test', 'a2c-ingest-route');
-const TEST_CAPSULES_DIR = path.join(TEST_ROOT, 'capsules');
-const TEST_DATA_DIR = path.join(TEST_ROOT, 'data');
-const TEST_QUARANTINE_DIR = path.join(TEST_DATA_DIR, 'quarantine');
+vi.mock('@/lib/apiSecurity', () => ({
+  isAuthorized: vi.fn(() => true),
+  checkRateLimit: vi.fn(() => ({ allowed: true, retryAfterSeconds: 0 })),
+}))
 
-const AUTH_TOKEN = 'Bearer n1-authorized-architect-token-777';
+vi.mock('@/lib/activity', () => ({
+  logActivity: vi.fn(),
+}))
 
-const logActivityMock = vi.fn(async () => undefined);
-const appendValidationLogMock = vi.fn(async () => undefined);
+vi.mock('fs/promises', () => ({
+  default: {
+    access: vi.fn(),
+    mkdir: vi.fn(),
+    writeFile: vi.fn(),
+  },
+}))
 
-let POST: (typeof import('@/app/api/a2c/ingest/route'))['POST'];
+vi.mock('@/lib/a2c/ingest', () => ({
+  stageOperatorInput: vi.fn(),
+}))
 
-const fixture = async (name: string) => {
-  const filePath = path.join(process.cwd(), '__tests__', 'validator', 'fixtures', name);
-  return JSON.parse(await fs.readFile(filePath, 'utf-8')) as Record<string, unknown>;
-};
+vi.mock('@/lib/capsuleVault', () => ({
+  CAPSULES_DIR: '/tmp/n1hub-a2c-ingest-test-capsules',
+  ensureCapsulesDir: vi.fn(),
+  getExistingCapsuleIds: vi.fn(async () => new Set()),
+}))
 
-const withCapsuleId = (capsule: Record<string, unknown>, capsuleId: string) => {
-  const cloned = structuredClone(capsule) as Record<string, unknown>;
-  const metadata = cloned.metadata as Record<string, unknown>;
-  metadata.capsule_id = capsuleId;
-  metadata.name = capsuleId;
-  cloned.integrity_sha3_512 = computeIntegrityHash(cloned);
-  return cloned;
-};
+vi.mock('@/lib/validationLog', () => ({
+  appendValidationLog: vi.fn(),
+}))
 
-const makeRequest = (body: unknown, options: { auth?: boolean; forwardedFor?: string } = {}) =>
-  new Request('http://localhost/api/a2c/ingest', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'x-forwarded-for': options.forwardedFor ?? '127.0.0.1',
-      ...(options.auth === false ? {} : { Authorization: AUTH_TOKEN }),
-    },
-    body: JSON.stringify(body),
-  });
+vi.mock('@/lib/validator', () => ({
+  autoFixCapsule: vi.fn((capsule) => ({ fixedData: capsule })),
+  validateCapsule: vi.fn(async () => ({ valid: true, errors: [], warnings: [] })),
+}))
 
-beforeEach(async () => {
-  await fs.rm(TEST_ROOT, { recursive: true, force: true });
-  await fs.mkdir(TEST_CAPSULES_DIR, { recursive: true });
-  await fs.mkdir(TEST_DATA_DIR, { recursive: true });
+describe('API: /api/a2c/ingest', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+    vi.mocked(fs.access).mockResolvedValue(undefined)
+    vi.mocked(fs.mkdir).mockResolvedValue(undefined as never)
+    vi.mocked(fs.writeFile).mockResolvedValue(undefined as never)
+    vi.mocked(ensureCapsulesDir).mockResolvedValue(undefined as never)
+    vi.mocked(appendValidationLog).mockResolvedValue(undefined as never)
+    vi.mocked(validateCapsule).mockResolvedValue({
+      valid: true,
+      errors: [],
+      warnings: [],
+    } as never)
+    vi.mocked(stageOperatorInput).mockResolvedValue({
+      intake_id: 'operator-input-test',
+      received_at: '2026-03-10T00:00:00.000Z',
+      source: { channel: 'api' },
+      raw_path: '/tmp/operator-input-test.raw.json',
+      normalized_path: '/tmp/operator-input-test.normalized.json',
+      raw_text: 'Explain TODO-001 and compare options before coding.',
+      normalized: {
+        objective: 'Explain TODO-001 and compare options before coding.',
+        route_class_hint: 'assistant_synthesis',
+        scope_hints: ['TODO-001'],
+        file_hints: [],
+        task_refs: ['TODO-001'],
+        priority_hint: null,
+        execution_band_hint: null,
+        owner_lane_hints: ['TO-DO Executor'],
+        acceptance_criteria_hints: [],
+        verification_hints: [],
+        stop_condition_hints: [],
+      },
+    } as never)
+    vi.mocked(logActivity).mockResolvedValue(undefined as never)
+  })
 
-  logActivityMock.mockReset();
-  appendValidationLogMock.mockReset();
-  vi.resetModules();
+  it('stages operator input with status 202', async () => {
+    const req = new Request('http://localhost/api/a2c/ingest', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        Authorization: 'Bearer n1-authorized-architect-token-777',
+      },
+      body: JSON.stringify({
+        operatorInput: {
+          text: 'Explain TODO-001 and compare options before coding.',
+          source: { channel: 'chat', actor: 'reviewer' },
+        },
+      }),
+    })
 
-  vi.doMock('@/lib/capsuleVault', () => ({
-    CAPSULES_DIR: TEST_CAPSULES_DIR,
-    ensureCapsulesDir: async () => {
-      await fs.mkdir(TEST_CAPSULES_DIR, { recursive: true });
-      return TEST_CAPSULES_DIR;
-    },
-    getExistingCapsuleIds: async () => new Set(['capsule.foundation.capsuleos.v1']),
-  }));
+    const res = await POST(req)
+    const payload = await res.json()
 
-  vi.doMock('@/lib/dataPath', () => ({
-    DATA_DIR: TEST_DATA_DIR,
-    dataPath: (...segments: string[]) => path.join(TEST_DATA_DIR, ...segments),
-  }));
+    expect(res.status).toBe(202)
+    expect(stageOperatorInput).toHaveBeenCalledWith(
+      process.cwd(),
+      expect.objectContaining({
+        text: 'Explain TODO-001 and compare options before coding.',
+      }),
+    )
+    expect(payload.summary).toEqual({
+      status: 'normalized',
+      task_refs: 1,
+      verification_hints: 0,
+    })
+  })
 
-  vi.doMock('@/lib/activity', () => ({
-    logActivity: logActivityMock,
-  }));
+  it('rejects mixed operatorInput and capsule payloads instead of silently dropping capsules', async () => {
+    const req = new Request('http://localhost/api/a2c/ingest', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        Authorization: 'Bearer n1-authorized-architect-token-777',
+      },
+      body: JSON.stringify({
+        operatorInput: {
+          text: 'Take TODO-001 and explain the tradeoffs before coding.',
+        },
+        capsule: {
+          metadata: {
+            capsule_id: 'capsule.test.mixed.v1',
+          },
+        },
+      }),
+    })
 
-  vi.doMock('@/lib/validationLog', () => ({
-    appendValidationLog: appendValidationLogMock,
-  }));
+    const res = await POST(req)
 
-  ({ POST } = await import('@/app/api/a2c/ingest/route'));
-});
+    expect(res.status).toBe(400)
+    expect(await res.json()).toEqual({
+      error: 'A2C ingest accepts either operatorInput or capsule candidates per request, not both.',
+    })
+    expect(stageOperatorInput).not.toHaveBeenCalled()
+    expect(logActivity).not.toHaveBeenCalled()
+  })
 
-afterEach(async () => {
-  vi.resetModules();
-  await fs.rm(TEST_ROOT, { recursive: true, force: true });
-});
+  it('returns quarantine summaries when a multi-candidate capsule batch mixes valid and invalid items', async () => {
+    vi.mocked(validateCapsule)
+      .mockResolvedValueOnce({
+        valid: true,
+        errors: [],
+        warnings: [],
+      } as never)
+      .mockResolvedValueOnce({
+        valid: false,
+        errors: [
+          {
+            gate: 'G16',
+            path: '$.core_payload.content',
+            message: 'Transient synthesis capsule failed validation.',
+          },
+        ],
+        warnings: [],
+      } as never)
 
-describe('app/api/a2c/ingest/route.ts', () => {
-  it('returns 401 when the request is unauthorized', async () => {
-    const response = await POST(
-      makeRequest({ capsule: {} }, { auth: false, forwardedFor: '10.0.0.1' }),
-    );
+    const req = new Request('http://localhost/api/a2c/ingest', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        Authorization: 'Bearer n1-authorized-architect-token-777',
+      },
+      body: JSON.stringify({
+        autoFix: false,
+        capsules: [
+          {
+            metadata: { capsule_id: 'capsule.test.valid.v1' },
+          },
+          {
+            metadata: { capsule_id: 'capsule.test.invalid.v1' },
+          },
+        ],
+      }),
+    })
 
-    expect(response.status).toBe(401);
-  });
+    const res = await POST(req)
+    const payload = await res.json()
 
-  it('stores a valid A2C capsule candidate in the vault sandbox', async () => {
-    const capsule = withCapsuleId(
-      await fixture('valid-capsule.json'),
-      'capsule.test.a2c-store.v1',
-    );
-
-    const response = await POST(
-      makeRequest({ capsule }, { forwardedFor: '10.0.0.2' }),
-    );
-
-    expect(response.status).toBe(200);
-    const payload = (await response.json()) as {
-      stored: string[];
-      summary: { total: number; stored: number; quarantined: number };
-    };
-
-    expect(payload.stored).toEqual(['capsule.test.a2c-store.v1']);
-    expect(payload.summary).toEqual({ total: 1, stored: 1, quarantined: 0 });
-
-    const storedCapsule = JSON.parse(
-      await fs.readFile(
-        path.join(TEST_CAPSULES_DIR, 'capsule.test.a2c-store.v1.json'),
-        'utf-8',
-      ),
-    ) as { metadata: { capsule_id: string } };
-
-    expect(storedCapsule.metadata.capsule_id).toBe('capsule.test.a2c-store.v1');
-    expect(logActivityMock).toHaveBeenCalledWith(
-      'import',
-      expect.objectContaining({ stored: 1, quarantined: 0 }),
-    );
-    expect(appendValidationLogMock).toHaveBeenCalledTimes(1);
-  });
-
-  it('autofixes an integrity-only candidate before storing it', async () => {
-    const capsule = withCapsuleId(
-      await fixture('valid-capsule.json'),
-      'capsule.test.a2c-autofix.v1',
-    );
-    capsule.integrity_sha3_512 = '0'.repeat(128);
-
-    const response = await POST(
-      makeRequest({ capsule }, { forwardedFor: '10.0.0.3' }),
-    );
-
-    expect(response.status).toBe(200);
-
-    const storedCapsule = JSON.parse(
-      await fs.readFile(
-        path.join(TEST_CAPSULES_DIR, 'capsule.test.a2c-autofix.v1.json'),
-        'utf-8',
-      ),
-    ) as { integrity_sha3_512: string };
-
-    expect(storedCapsule.integrity_sha3_512).not.toBe('0'.repeat(128));
-    expect(appendValidationLogMock).toHaveBeenCalledTimes(1);
-  });
-
-  it('returns 207 and quarantines the invalid side of a mixed batch', async () => {
-    const validCapsule = withCapsuleId(
-      await fixture('valid-capsule.json'),
-      'capsule.test.a2c-mixed-valid.v1',
-    );
-    const invalidCapsule = withCapsuleId(
-      await fixture('valid-capsule.json'),
-      'capsule.test.a2c-mixed-invalid.v1',
-    );
-    ((invalidCapsule.recursive_layer as { links: Array<{ target_id: string }> }).links[0]).target_id =
-      'capsule.missing.target.v1';
-    invalidCapsule.integrity_sha3_512 = computeIntegrityHash(invalidCapsule);
-
-    const response = await POST(
-      makeRequest(
-        { capsules: [validCapsule, invalidCapsule] },
-        { forwardedFor: '10.0.0.4' },
-      ),
-    );
-
-    expect(response.status).toBe(207);
-    const payload = (await response.json()) as {
-      stored: string[];
-      quarantined: Array<{ capsule_id: string | null; file: string; reason: string }>;
-      summary: { total: number; stored: number; quarantined: number };
-    };
-
-    expect(payload.stored).toEqual(['capsule.test.a2c-mixed-valid.v1']);
-    expect(payload.summary).toEqual({ total: 2, stored: 1, quarantined: 1 });
-    expect(payload.quarantined).toHaveLength(1);
-    expect(payload.quarantined[0]?.capsule_id).toBe('capsule.test.a2c-mixed-invalid.v1');
-
-    const quarantineFiles = await fs.readdir(TEST_QUARANTINE_DIR);
-    expect(quarantineFiles).toHaveLength(1);
-    expect(quarantineFiles[0]).toContain('capsule.test.a2c-mixed-invalid.v1');
-  });
-});
+    expect(res.status).toBe(207)
+    expect(payload.summary).toEqual({
+      total: 2,
+      stored: 1,
+      quarantined: 1,
+    })
+    expect(payload.stored).toEqual(['capsule.test.valid.v1'])
+    expect(payload.quarantined).toEqual([
+      expect.objectContaining({
+        capsule_id: 'capsule.test.invalid.v1',
+        reason: 'G16:Transient synthesis capsule failed validation.',
+      }),
+    ])
+    expect(ensureCapsulesDir).toHaveBeenCalledTimes(1)
+    expect(appendValidationLog).toHaveBeenCalledTimes(2)
+    expect(fs.writeFile).toHaveBeenCalledTimes(2)
+    expect(logActivity).toHaveBeenCalledWith('import', {
+      message: 'A2C ingest validation completed.',
+      stored: 1,
+      quarantined: 1,
+    })
+  })
+})

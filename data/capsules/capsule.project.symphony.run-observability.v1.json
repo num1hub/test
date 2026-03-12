@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.symphony.run-observability.v1",
+    "version": "1.0.0",
+    "status": "active",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T02:55:00Z",
+    "name": "Symphony Project Run Observability",
+    "semantic_hash": "project-symphony-run-observability-attempt-retry-status-lineage",
+    "source": {
+      "uri": "internal://capsule.project.symphony.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Project Run Observability\n\n## 1. Role\nSymphony Project Run Observability owns the implementation evidence that explains how one orchestration run behaved. It keeps attempts, retries, status projection, and early lineage references together so operators and downstream capsules can see what happened and what recovery or promotion step comes next.\n\n## 2. Run Observability Surface\nThis sub-hub groups `foundation.symphony.run-observability`, `symphony-run-attempt`, `symphony-retry-entry`, `symphony-observability`, and `project.n1hub-v0`. Together they define run evidence, retry posture, status projection, and the project lineage surface that anchors early adoption history.\n\n## 3. Operating Boundary\nThis sub-hub does not own work-entry selection, live runtime continuity, or workflow safety law. Those responsibilities belong to `assignment-intake`, `live-session-fabric`, and `workflow-safety`."
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Project Run Observability groups the implementation evidence surfaces of the delivery stream: the matching foundation observability surface, Symphony Run Attempt, Symphony Retry Entry, Symphony Observability, and the N1Hub v0 lineage reference. It keeps attempt history, retry posture, operator-visible status, and project lineage together so delivery remains legible after work starts. This boundary matters because implemented orchestration becomes hard to trust when recovery evidence and lineage are scattered across unrelated runtime modules.",
+    "keywords": [
+      "symphony-project",
+      "run-observability",
+      "symphony-run-attempt",
+      "symphony-retry-entry",
+      "symphony-observability",
+      "lineage",
+      "status-evidence"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "project-symphony-run-observability-attempt-retry-status-lineage"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.run-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-run-attempt.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-retry-entry.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-observability.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.n1hub-v0.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Symphony Project decomposition to isolate attempt history, retry posture, status projection, and lineage-facing evidence."
+      }
+    ]
+  },
+  "integrity_sha3_512": "a56c9f5705d14a874b605ecb66676cb399a3ef2a090b0ce3c0dfc1cf888a7cc10cb48aee59df705e9cf1faea419b37a26177ef621a1569cd71470c0db8461130"
+}

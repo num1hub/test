@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T20:10:00Z",
-    "updated_at": "2026-03-08T23:58:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Agent Harness Protocol",
-    "semantic_hash": "agent-harness-protocol-session-turn-events-bidirectional-tools",
+    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-law",
     "source": {
       "uri": "https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions",
       "type": "web_documentation"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Harness Protocol\n\n## Dream Direction\nIn the Dream branch, N1Hub treats harness protocol as a portable runtime law shared across local Codex lanes, background swarms, and future hosted agent services.\n\n## Desired Future State\n- session, turn, approval, interrupt, and artifact semantics are portable across multiple agent backends\n- long-lived agents can pause, resume, replay, and expose status without bespoke glue for every surface\n- human approval and review checkpoints flow through the same protocol instead of ad hoc UI logic\n- swarm lanes can exchange typed artifacts and resume tokens rather than raw prompt text\n- assignment-aware starts and return paths work across web, terminal, mobile, and daemon surfaces\n- hosted and local agent services can coexist under one N1Hub controller without losing observability or safety\n\n## Why It Matters\nDream preserves the idea that agent orchestration should mature from wrapper scripts into stable protocol-driven runtime infrastructure."
+    "content": "# Agent Harness Protocol\n\n## 1. Role\nN1Hub will treat harness protocol as a portable runtime law shared across local agent harnesses, background swarms, and future hosted agent services. Session startup, turns, approvals, interruptions, artifacts, and resumes will be governed through one reusable contract rather than bespoke glue for every surface.\n\n## 2. Future Protocol Surface\n- portable session, turn, approval, interrupt, and artifact semantics across multiple backends\n- resumable agents that expose replay-friendly status instead of one-shot prompt wrappers\n- typed artifact exchange between swarm lanes instead of raw prompt relay\n- assignment-aware starts and return paths across web, terminal, mobile, and daemon surfaces\n- one controller model for local and hosted services without sacrificing observability or safety\n\n## 3. Architectural Consequence\nHarness protocol will make agent execution a stable software interface. That will strengthen reuse, debugging, approvals, lifecycle control, artifact transport, and multi-surface continuity across the whole intelligence stack.\n\n## 4. Philosophical Alignment\nAgent Harness Protocol supports To Dig Deep by making agent work visible as stateful runtime behavior with evidence, events, and control surfaces rather than opaque model invocations."
   },
   "neuro_concentrate": {
-    "summary": "Agent Harness Protocol in the Dream branch captures the future where N1Hub treats app-server style protocols, durable hosted agents, and local harnesses as one class of runtime contract. It imagines portable semantics for sessions, turns, approvals, resume tokens, event streams, artifacts, and assignment-aware starts so different agent backends can coexist under one controller without losing observability or safety. In that future, local Codex lanes, background swarms, and hosted durable agents all plug into the same governing controller instead of needing separate orchestration logic.",
+    "summary": "Agent Harness Protocol defines the future portable runtime law for N1Hub agents: shared session, turn, approval, interrupt, artifact, and resume semantics across local Codex lanes, background swarms, and hosted agent services.",
     "keywords": [
       "agent-harness-protocol",
       "dream-branch",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-harness-protocol-session-turn-events-bidirectional-tools"
+    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-law"
   },
   "recursive_layer": {
     "links": [
@@ -87,7 +87,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "b8079a3c4ab54b045713f14e016a5169f5588f06bbc48fad56267592dd980f63dc38c840f1c02b7ccc9e7a6a3a7d15d97e302cded9ce266295dc3e256d3c6233"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

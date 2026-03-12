@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-07T10:22:14.426Z",
+    "updated_at": "2026-03-11T21:25:00Z",
     "name": "From Zero to Megabytes",
     "semantic_hash": "capsule-project-from-zero-to-megabytes-v1-learning",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# From Zero to Megabytes\n\n## 1. Definition and Essence\nFrom Zero to Megabytes is an independent educational and execution initiative centered on compounding knowledge output from first principles into durable artifacts and measurable digital value.\n\n## 2. Core Attributes\n- `learning_tracks` thematic knowledge progression paths\n- `artifact_targets` tangible outputs expected per phase\n- `measurement_framework` throughput and quality indicators\n- `resource_map` tools, references, and time allocations\n- `publication_plan` cadence for sharing generated artifacts\n\n## 3. Lifecycle\nThe initiative moves through progressive learning and production phases, each ending in publishable outcomes and retrospective learning capture.\n\n## 4. Integration\n- **A2C and Workspace:** optional toolchain support for artifact creation.\n- **Planner:** phase decomposition and schedule management.\n- **Analytics:** progress evidence and growth reporting.\n- **Independent Project Set:** no hierarchical containment under N1 root.\n\n## 5. Philosophical Alignment\nThis project embodies the Zero-to-One arc by turning sparse initial capability into compounding digital production.\n"
   },
   "neuro_concentrate": {
-    "summary": "From Zero to Megabytes in the Dream branch is the future compounding engine for learning, publishing, measurable creative throughput, and explicit memory accumulation. It extends beyond today's educational initiative toward a disciplined pipeline where study becomes repeated artifact production, publication, byte growth, and evidence-backed capability development. The branch matters because the project is less about a fixed product and more about an evolving production system for the self. Dream keeps that more ambitious transformation explicit and reviewable, making creative growth legible inside the graph.",
+    "summary": "From Zero to Megabytes is the compounding engine for learning, publishing, measurable creative throughput, and explicit memory accumulation. It extends beyond a simple educational initiative toward a disciplined pipeline where study becomes repeated artifact production, publication, byte growth, and evidence-backed capability development. The capsule matters because the project is less about a fixed product and more about an evolving production system for the self. It therefore keeps creative growth explicit, measurable, and legible inside the graph.",
     "keywords": [
       "from-zero-to-megabytes",
       "learning",
@@ -74,7 +74,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T21:25:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "codex",
+        "rationale": "Removed branch-aware summary phrasing so From Zero to Megabytes states its compounding doctrine directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "ec88f75de21d621dabe4b202ec64b20389a0702c3229625599189ec07a2096f95e8b060a14aecba9b05d32de90d4e33de55525626e2b71b4bd557c67a7f47b20"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

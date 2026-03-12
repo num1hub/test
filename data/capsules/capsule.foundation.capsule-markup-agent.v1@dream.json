@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:44:00Z",
-    "updated_at": "2026-03-07T12:48:00Z",
+    "updated_at": "2026-03-11T15:33:00Z",
     "name": "Capsule Markup Agent",
-    "semantic_hash": "capsule-markup-agent-metadata-neuro-legibility-annotation-quality",
+    "semantic_hash": "capsule-markup-agent-stronger-semantic-legibility-at-scale",
     "priority": "high",
     "progress": 35,
     "estimatedHours": 240,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Markup Agent\n\n## Dream Direction\nIn the Dream branch, Capsule Markup Agent grows into a stronger semantic annotation worker that keeps the entire vault highly legible to humans and agents at larger scale.\n\n## Desired Future State\n- clearer automatic enrichment of metadata, summaries, and keyword surfaces\n- better taxonomy consistency across types, subtypes, tiers, and naming conventions\n- stronger support for Librarian, retrieval, and graph-grounded assistant answers\n- safer repair of semantically weak capsules without confusing annotation with truth-claim invention\n\n## Why It Matters\nDream preserves the idea that a capsule vault should not only be valid. It should also be readable, retrievable, and cognitively efficient as the system grows."
+    "content": "# Capsule Markup Agent\n\n## 1. Role\nCapsule Markup Agent will keep the vault highly legible to humans and agents as scale increases. Structural validity will not be enough; metadata, summaries, keywords, naming, and taxonomy will also need continuous maintenance as explicit semantic surfaces.\n\n## 2. Future Annotation Surface\n- clearer automatic enrichment of metadata, summaries, and keyword layers\n- tighter taxonomy consistency across types, subtypes, tiers, and naming conventions\n- stronger support for Librarian, retrieval, and graph-grounded assistant answers\n- safer repair of semantically weak capsules without inventing new truth claims\n\n## 3. Operational Consequence\nThe vault will remain readable, retrievable, and cognitively efficient because semantic clarity will be treated as a first-class maintenance lane rather than as optional polish.\n\n## 4. Philosophical Alignment\nCapsule Markup Agent supports To Dig Deep by making depth legible."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Markup Agent in the Dream branch represents a stronger future annotation role for N1Hub. It aims toward more reliable metadata enrichment, cleaner taxonomy discipline, and better support for retrieval and assistant grounding at larger scale. The capsule matters because semantic clarity is one of the main conditions for a useful second brain. Dream therefore preserves the future worker that keeps a fast-growing vault readable and operational instead of merely structurally valid.",
+    "summary": "Capsule Markup Agent defines the future stronger semantic-annotation lane for N1Hub: richer metadata enrichment, tighter taxonomy discipline, better support for retrieval and assistant grounding, and safer repair of semantically weak capsules at scale.",
     "keywords": [
       "capsule-markup-agent",
       "dream-branch",
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-markup-agent-metadata-neuro-legibility-annotation-quality"
+    "semantic_hash": "capsule-markup-agent-stronger-semantic-legibility-at-scale"
   },
   "recursive_layer": {
     "links": [
@@ -91,7 +91,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T15:33:00Z",
+        "event": "dream_hygiene_cleanup",
+        "agent": "n1",
+        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+      }
+    ]
   },
-  "integrity_sha3_512": "6d3cd025e350a2b823e5d986720c6ee7c225bc74994a675f3c5285ee3d304d2dbcae79ebbdde9181e163576529e1252ddb70f4b24b6f2843a4c8c3072c7635d8"
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
 }

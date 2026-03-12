@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.workspace.identity-access.v1",
+    "version": "1.0.1",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:20:37Z",
+    "updated_at": "2026-03-12T03:55:00Z",
+    "name": "Workspace Identity Access",
+    "semantic_hash": "workspace-identity-access-profile-team-marketplace-governance-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.workspace.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Workspace Identity Access\n\n## 1. Boundary\nWorkspace Identity Access owns the human, team, entitlement, and integration surfaces that define who the workspace is serving and what capabilities are available. It exists so profile and access governance remain legible instead of dissolving into the daily command surface.\n\n## 2. What Belongs Here\nThis sub-hub groups `profile`, `user-preferences`, `team`, `invitation`, `role`, `permission`, `marketplace`, `n1-pass`, `integrations`, and `api-gateway`. Together they define the human principal, collaboration envelope, entitlement posture, and integration boundary through which workspace becomes personalized, shared, and externally connected.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own operator cockpits, execution planning, or daemonized AI work. Those belong to `operator-surfaces`, `execution-loop`, and `runtime-lanes`."
+  },
+  "neuro_concentrate": {
+    "summary": "Workspace Identity Access groups the principal, team, permission, marketplace, and integration surfaces that shape who is using workspace and what capabilities they can expose. It keeps identity, entitlement, and external-access law together so profile posture, team membership, invitations, permissions, and integration boundaries stay explicit instead of dissolving into planning or assistant behavior. This boundary matters because workspace should reveal who can act, what they can see, and which capabilities can cross the habitat boundary before execution begins. It gives the habitat one clear seam for identity and access governance.",
+    "keywords": [
+      "workspace",
+      "identity-access",
+      "profile",
+      "team",
+      "permission",
+      "marketplace",
+      "integrations"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "workspace-identity-access-profile-team-marketplace-governance-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.user-preferences.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.invitation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.role.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.permission.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.marketplace.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n1-pass.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.api-gateway.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:20:37Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of workspace hub decomposition to reduce parent link density from 41 outbound to ≤10."
+      },
+      {
+        "at": "2026-03-12T03:55:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the identity-access summary to satisfy validator length requirements while preserving the existing entitlement and integration boundary."
+      }
+    ]
+  },
+  "integrity_sha3_512": "b923320a77ac6024f88af94b00f01d12b999ea4fdb2c127bd87a6d4bb432d4d01b54e30191bd872e141e973ef43b7962019be9604254fd453abc8da550ca264e"
+}

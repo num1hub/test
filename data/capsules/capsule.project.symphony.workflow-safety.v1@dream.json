@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.project.symphony.workflow-safety.v1",
+    "version": "1.0.0",
+    "status": "draft",
+    "type": "project",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T02:55:00Z",
+    "name": "Symphony Project Workflow Safety",
+    "semantic_hash": "project-symphony-workflow-safety-policy-night-controls-guardrails",
+    "source": {
+      "uri": "internal://capsule.project.symphony.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Symphony Project Workflow Safety\n\n## 1. Role\nSymphony Project Workflow Safety owns the delivery surfaces that keep implementation bound to repo law and operator constraints. It keeps workflow contract, approval and sandbox posture, night-shift gating, and testing or security guardrails together so automation remains review-safe in the codebase.\n\n## 2. Workflow Safety Surface\nThis sub-hub groups `foundation.symphony.workflow-safety`, `symphony-workflow`, `night-shift-autonomy`, `testing`, `security`, `agent-control-plane`, and `ai-control-surface`. Together they define the law and visible controls that constrain the implemented orchestrator.\n\n## 3. Operating Boundary\nThis sub-hub does not own assignment discovery, runtime continuity, or retry and status evidence. Those responsibilities belong to `assignment-intake`, `live-session-fabric`, and `run-observability`."
+  },
+  "neuro_concentrate": {
+    "summary": "Symphony Project Workflow Safety groups the repo-law and guardrail surfaces of the delivery stream: the matching foundation workflow-safety surface, Symphony Workflow, Night Shift Autonomy, Testing, Security, Agent Control Plane, and AI Control Surface. It keeps execution contract, operator controls, safety posture, autonomous-night gating, and verification guardrails together so implemented automation stays review-safe in the repository. This boundary matters because delivery quality depends on one explicit place where repo law and safety constraints are enforced in practice.",
+    "keywords": [
+      "symphony-project",
+      "workflow-safety",
+      "symphony-workflow",
+      "night-shift-autonomy",
+      "testing",
+      "security",
+      "agent-control-plane"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "project-symphony-workflow-safety-policy-night-controls-guardrails"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.project.symphony.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.symphony.workflow-safety.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.symphony-workflow.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.night-shift-autonomy.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.testing.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.security.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.agent-control-plane.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.ai-control-surface.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-12T02:55:00Z",
+        "event": "hub_decomposition_sub_hub_minted",
+        "agent": "codex",
+        "rationale": "Minted during Dream Symphony Project decomposition to isolate workflow law, approval posture, night gating, and verification guardrails from intake and live session fabric."
+      }
+    ]
+  },
+  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+}

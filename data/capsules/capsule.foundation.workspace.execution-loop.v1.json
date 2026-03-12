@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "capsule_id": "capsule.foundation.workspace.execution-loop.v1",
+    "version": "1.0.1",
+    "status": "active",
+    "type": "foundation",
+    "subtype": "hub",
+    "author": "Number One Projects",
+    "created_at": "2026-03-11T14:20:37Z",
+    "updated_at": "2026-03-12T03:55:00Z",
+    "name": "Workspace Execution Loop",
+    "semantic_hash": "workspace-execution-loop-plans-tracker-project-routing-boundary",
+    "source": {
+      "uri": "internal://capsule.foundation.workspace.v1",
+      "type": "internal_derivation"
+    },
+    "priority": "high",
+    "tier": 2
+  },
+  "core_payload": {
+    "content_type": "markdown",
+    "content": "# Workspace Execution Loop\n\n## 1. Boundary\nWorkspace Execution Loop owns the operator-facing composition of planning, tracking, and project execution state inside workspace. It exists so the command center can route goals, plans, and follow-through through one bounded surface instead of scattering that logic across unrelated UI and runtime lanes.\n\n## 2. What Belongs Here\nThis sub-hub groups `n1hub-projects`, `project`, `planner`, `tracker`, and `project.workspace` because they define the active execution field: what the operator is trying to do, what project context frames the work, what the plan says should happen, and what follow-through evidence says is actually happening.\n\n## 3. What Does Not Belong Here\nThis sub-hub does not own dashboard-style visibility surfaces, assistant carrier behavior, identity and access governance, or long-lived execution infrastructure. Those belong to `operator-surfaces`, `assistant-control`, `identity-access`, and `runtime-lanes`."
+  },
+  "neuro_concentrate": {
+    "summary": "Workspace Execution Loop groups the project and planning surfaces that turn intent into accountable work: planner, tracker, project hubs, and the workspace project program. It keeps execution-state composition together so workspace can show what is planned, what is moving, and what is drifting without mixing those concerns into assistant control, identity, or deeper runtime routing. This boundary matters because the habitat needs one explicit execution field where goals, projects, and follow-through stay legible across time. It gives workspace a clear seam for accountable work rather than a flat mixture of planning and control surfaces.",
+    "keywords": [
+      "workspace",
+      "execution-loop",
+      "planner",
+      "tracker",
+      "project",
+      "n1hub-projects",
+      "accountability"
+    ],
+    "confidence_vector": {
+      "extraction": 1,
+      "synthesis": 1,
+      "linking": 1,
+      "provenance_coverage": 1,
+      "validation_score": 1,
+      "contradiction_pressure": 0
+    },
+    "semantic_hash": "workspace-execution-loop-plans-tracker-project-routing-boundary"
+  },
+  "recursive_layer": {
+    "links": [
+      {
+        "target_id": "capsule.foundation.workspace.v1",
+        "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.foundation.n1hub-projects.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.workspace.v1",
+        "relation_type": "references"
+      }
+    ],
+    "actions": [],
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T14:20:37Z",
+        "event": "hub_decomposition_mint",
+        "agent": "n1",
+        "rationale": "Minted as part of workspace hub decomposition to reduce parent link density from 41 outbound to ≤10."
+      },
+      {
+        "at": "2026-03-12T03:55:00Z",
+        "event": "validator_structural_repair",
+        "agent": "codex",
+        "rationale": "Expanded the execution-loop summary to satisfy validator length requirements while preserving the existing project and planning boundary."
+      }
+    ]
+  },
+  "integrity_sha3_512": "f134573f8b12bce5b54e48ff84cfb6be819d4b8a3455e9250c6cfd3f7cf167a13984edd829ff3fc950ab1977bce9a9962d7b773a9971d37654a4075f7e102241"
+}

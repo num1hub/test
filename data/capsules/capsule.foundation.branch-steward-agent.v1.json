@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.branch-steward-agent.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:44:00Z",
-    "updated_at": "2026-03-08T22:39:00Z",
+    "updated_at": "2026-03-11T18:09:20Z",
     "name": "Branch Steward Agent",
-    "semantic_hash": "branch-steward-agent-real-dream-governance-sync-discipline",
+    "semantic_hash": "branch-steward-real-dream-governance-routing-boundary-links",
     "source": {
       "uri": "n1hub://specs/key-agent-cluster-2026-03-06",
       "type": "architect_prompt"
@@ -23,21 +23,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Branch Steward Agent\n\n## 1. Definition and Essence\nBranch Steward Agent is the governance worker that watches over the Real and Dream branches of the N1Hub vault. It helps decide where new material belongs, how exploratory structure matures toward reality, and how branch drift, confusion, or contamination should be corrected over time.\n\n## 2. Branch Model\n- **Real** holds what is confirmed, active, or accepted as part of the current trustworthy world.\n- **Dream** holds plans, hypotheses, drafts, future structure, speculative links, and other projectable possibility.\nBranch Steward Agent protects that distinction so the vault does not confuse confirmed reality with unreviewed intention.\n\n## 3. Core Responsibilities\n- `real_dream_governance` keeps present truth, historical fact, plans, and hypotheses from collapsing into one ambiguous graph.\n- `branch_diff_review` explains how Dream diverges from Real and where convergence or promotion might be possible.\n- `promotion_discipline` watches for candidate structures that may be ready to move from Dream toward Real after validation and review.\n- `branch_cleanup` finds stale Dream debris, confused branch routing, and misfiled capsules.\n- `operator_explanation` gives Assistant and control surfaces a legible explanation of branch state.\n\n## 4. N1Hub Role\nIn N1Hub, Branch Steward Agent is the explicit guardian of branch literacy. It protects the meaning of Real and Dream so the mining, planning, chat, and update lanes can explore aggressively without eroding reality discipline.\n\n## 5. Philosophical Alignment\nBranch Steward Agent serves To Dig Deep by allowing exploration to remain deep and ambitious while still preserving a trustworthy boundary around what is already real.\n"
+    "content": "# Branch Steward Agent\n\n## 1. Definition and Essence\nBranch Steward Agent is the governance worker that watches over the Real and Dream branches of the N1Hub vault. It decides where exploratory structure belongs, how drift should be explained, and how branch contamination or convergence should be corrected over time.\n\n## 2. Branch Model\n- **Real** holds what is confirmed, active, or accepted as part of the current trustworthy world.\n- **Dream** holds plans, hypotheses, drafts, future structure, speculative links, and other projectable possibility.\nBranch Steward Agent protects that distinction so the vault does not confuse confirmed reality with unreviewed intention.\n\n## 3. Core Responsibilities\n- `real_dream_governance` keeps present truth, historical fact, plans, and hypotheses from collapsing into one ambiguous graph.\n- `branch_diff_review` explains how Dream diverges from Real and where convergence or promotion might be possible.\n- `contested_link_routing` interprets unresolved link evidence from `a2c-link` and decides whether structure stays exploratory, branches, waits for Parliament, or advances toward review.\n- `promotion_discipline` watches for candidate structures that may be ready to move from Dream toward Real after validation and review.\n- `branch_cleanup` finds stale Dream debris, confused branch routing, and misfiled capsules.\n- `operator_explanation` gives Assistant and control surfaces a legible explanation of branch state.\n\n## 4. Mechanism Boundary\n`a2c-link` resolves targets, canonical relation types, and contradiction evidence. Branch Steward Agent interprets that evidence when the right branch posture is unclear. The steward does not perform graph matching or relation inference itself; it governs where contested structure may live and what review path it must follow.\n\n## 5. N1Hub Role\nIn N1Hub, Branch Steward Agent is the explicit guardian of branch literacy. It protects the meaning of Real and Dream so mining, planning, chat, and update lanes can explore aggressively without eroding reality discipline.\n\n## 6. Philosophical Alignment\nBranch Steward Agent serves To Dig Deep by allowing exploration to remain deep and ambitious while still preserving a trustworthy boundary around what is already real."
   },
   "neuro_concentrate": {
-    "summary": "Branch Steward Agent governs the Real and Dream branches of the N1Hub vault. It matters because a sovereign graph becomes epistemically weak if confirmed reality, active fact, future plans, and speculative design are all stored with the same weight. The steward clarifies the branch model, watches drift, explains meaningful diffs, helps route new material to the correct side of the system, and makes promotion toward reality more disciplined. This gives the vault a durable boundary between exploration and actuality without shutting down ambitious Dream work.",
+    "summary": "Branch Steward Agent governs the Real and Dream branches of the N1Hub vault and now makes contested-link routing explicit. It interprets unresolved link evidence from A2C Link, decides whether structure stays exploratory, branches, waits for Parliament, or advances toward review, and still owns branch drift explanation, contamination cleanup, and promotion discipline. This keeps branch literacy strong because deterministic graph matching stays in the mechanism stage while the steward owns the policy judgment about where ambiguous structure may live and how it may mature toward reality.",
     "keywords": [
       "branch-steward-agent",
       "real-branch",
       "dream-branch",
       "branch-governance",
+      "contested-link-routing",
       "promotion-discipline",
       "branch-literacy",
-      "vault-update",
-      "review",
-      "n1hub",
-      "to-dig-deep"
+      "a2c-link"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -47,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "branch-steward-agent-real-dream-governance-sync-discipline"
+    "semantic_hash": "branch-steward-real-dream-governance-routing-boundary-links"
   },
   "recursive_layer": {
     "links": [
@@ -96,12 +94,23 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.a2c-link.v1",
+        "relation_type": "supports"
+      },
+      {
         "target_id": "capsule.foundation.to-dig-deep.v1",
         "relation_type": "implements"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-11T18:09:20Z",
+        "event": "mechanism_policy_separation",
+        "agent": "codex",
+        "rationale": "Branch Steward now explicitly owns contested-link routing after A2C Link emits deterministic target and contradiction evidence."
+      }
+    ]
   },
-  "integrity_sha3_512": "c1ba0c94b29015257ac60a652dd68ddb800387bc61878ecad2db263c9faabd6c4ba8cf6787a8654107aeb334103e414cbbf6d9aa83a8ed67f5cd472c1884be22"
+  "integrity_sha3_512": "49ad8d64c16215d0a5e517e5cc85dc691eedf1c8dc41c1bb15e8ca190aa5603066b106211bf6e5edb44010f11bf8acf165854947dc8f706c2455a10d04a92b1f"
 }
