@@ -7,17 +7,17 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T16:34:00Z",
     "name": "Profile",
     "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Profile\n\n## 1. Role\nProfile will become the richer human identity substrate of N1Hub, carrying not only account metadata but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Future Identity Contract\nProfile will serve as the durable human envelope from which preferences, assistant relationship, access posture, review authority, and authorship lineage all derive, without collapsing personhood into a session cookie or chat thread.\n\n## 3. Operational Consequence\nThe vault will preserve one accountable human return path across approvals, background autonomy, wallet ownership, and assistant continuity. Identity quality will become part of system trust, not a decorative account surface.\n\n## 4. Philosophical Alignment\nProfile supports To Dig Deep by deepening one person’s continuity inside the second brain rather than erasing it."
+    "content": "# Profile\n\n## 1. Role\nProfile is the richer human identity substrate of N1Hub, carrying not only account metadata but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Identity Contract\nProfile serves as the durable human envelope from which preferences, assistant relationship, access posture, review authority, and authorship lineage all derive, without collapsing personhood into a session cookie or chat thread.\n\n## 3. Operational Consequence\nThe vault preserves one accountable human return path across approvals, background autonomy, wallet ownership, and assistant continuity. Identity quality becomes part of system trust, not a decorative account surface.\n\n## 4. Philosophical Alignment\nProfile supports To Dig Deep by deepening one person's continuity inside the second brain rather than erasing it."
   },
   "neuro_concentrate": {
-    "summary": "Profile defines the future richer human identity substrate for N1Hub: stronger authorship, clearer review authority, deeper assistant continuity, tighter wallet ownership, and a more durable human envelope across approvals, autonomy, and long-horizon graph life.",
+    "summary": "Profile defines the human identity substrate that carries authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon presence inside N1Hub. It acts as the durable human envelope from which preferences, access posture, approval rights, and authorship lineage can derive without collapsing identity into a session cookie or chat thread. The capsule matters because system trust depends on preserving one accountable human return path across autonomy and approvals. It deepens continuity instead of letting identity fragment across tools and sessions.",
     "keywords": [
       "profile",
       "identity-envelope",
@@ -76,9 +76,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing so the capsule states present identity doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "88e72e6993ef5edb5d4c9ea9574524b56de9414d06e0a1699eebdfb08b82270ba3655ae8b8ed95e9085235ed0a9eedd526ec5ddf5ff6872135f0ed6f5e6031da"
 }

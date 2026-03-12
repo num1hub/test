@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:58:00Z",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T17:54:00Z",
     "name": "N1Hub Doctrinal Core",
     "semantic_hash": "n1hub-doctrinal-core-meaning-generation-capital-vision-lineage",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream N1Hub decomposition to isolate existential direction, capsule-generation doctrine, and sovereign capital posture from live runtime and program-routing surfaces."
+        "rationale": "Minted during N1Hub decomposition to isolate existential direction, capsule-generation doctrine, and sovereign capital posture from live runtime and program-routing surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "eb1c92278630da70b601fdfd1ab14964c40500b11802a65b665d7bf9a24881383791296f547f8490df09535337c1f9534940da22f919e9219d7f836a6c2dce8c"
 }

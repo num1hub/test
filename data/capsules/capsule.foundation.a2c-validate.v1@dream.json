@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-11T21:23:25Z",
+    "updated_at": "2026-03-12T16:58:00Z",
     "name": "A2C Stage: Validate",
     "semantic_hash": "capsule-foundation-a2c-validate-v1-stage-gates-autofix",
     "priority": "critical",
@@ -70,9 +70,9 @@
         "at": "2026-03-11T21:23:25Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Validate states its trust-gateway doctrine directly."
+        "rationale": "Removed summary meta-language so Validate states trust-gateway doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "87ebece8ae3dd34fd00a3e4013def8374b9d4de43eec33315893c66b9310a945d6272e654a3ef33b513322e50da31ed5b05d2a3e9f752f92ebf820102f68c9d6"
 }

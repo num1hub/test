@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import { useCapsuleStore } from '@/store/capsuleStore';
 import type { SovereignCapsule } from '@/types/capsule';
 import type { ValidationPanelResult } from '@/components/validation/ValidationPanel';
@@ -21,16 +22,10 @@ export function useCapsuleValidation(
 
     const runValidation = async () => {
       try {
-        const token = localStorage.getItem('n1hub_vault_token');
-        if (!token) return;
-
         setValidationLoading(true);
         const response = await fetch('/api/validate', {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
+          headers: getClientJsonAuthHeaders(),
           body: JSON.stringify({ capsule }),
         });
 

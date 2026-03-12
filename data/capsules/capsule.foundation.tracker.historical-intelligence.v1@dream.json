@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T00:20:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:47:00Z",
     "name": "Tracker Historical Intelligence",
     "semantic_hash": "tracker-historical-intelligence-metrics-analytics-archive-retrospection-memory",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Tracker decomposition to isolate metrics, analytics, and archive memory from live pressure and orchestration signal surfaces."
+        "rationale": "Minted during Tracker decomposition to isolate metrics, analytics, and archive memory from live pressure and orchestration signal surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1d7079f863b21df4d3c7fb7c33d86eb39163ae941a0a974ab6d6941b6c56113a6ecfd55e905cbd89a640c263129e43cb838ef0a9b77b959998902ac3760e017c"
 }

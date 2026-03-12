@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T00:20:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:50:00Z",
     "name": "Tracker Tracked Objects",
     "semantic_hash": "tracker-tracked-objects-goals-milestones-tasks-project-state",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Tracker decomposition to isolate the work objects whose deadlines, progress, and completion state define execution truth."
+        "rationale": "Minted during Tracker decomposition to isolate the work objects whose deadlines, progress, and completion state define execution truth."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "882201b1a90b582b75c57f3800754fb0cf1ed90378c4af323fb6252dcfa30b32bae4cfa8ecf6ceefd993b60359400f5c04e16f40441a15f529603aefe94f89f6"
 }

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
 import ValidationPanel, { type ValidationPanelResult } from '@/components/validation/ValidationPanel';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 
 export default function CapsuleValidator() {
   const [jsonInput, setJsonInput] = useState('');
@@ -10,21 +11,13 @@ export default function CapsuleValidator() {
   const [loading, setLoading] = useState(false);
   const { showToast } = useToast();
 
-  const getAuthHeaders = (): HeadersInit => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    return {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    };
-  };
-
   const runValidate = async () => {
     setLoading(true);
     try {
       const parsed = JSON.parse(jsonInput);
       const res = await fetch('/api/validate', {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsule: parsed }),
       });
 
@@ -56,7 +49,7 @@ export default function CapsuleValidator() {
       const parsed = JSON.parse(jsonInput);
       const res = await fetch('/api/validate/fix', {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsule: parsed }),
       });
 

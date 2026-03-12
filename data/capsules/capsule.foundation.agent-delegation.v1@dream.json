@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-12T04:55:00Z",
+    "updated_at": "2026-03-12T18:18:00Z",
     "name": "Agent Delegation",
     "semantic_hash": "agent-delegation-handoff-lanes-approvals-results-escalation-runtime",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Delegation\n\n## 1. Definition and Essence\nAgent Delegation defines the explicit handoff contract by which one intelligence surface in N1Hub asks another lane to do bounded work. It describes how an assistant session, a suggestion flow, or an operator action turns into a task packet for DeepMine, Symphony, or N-Infinity, and how results or failures return back to the origin.\n\n## 2. Core Attributes\n- `requester` identifies the surface or agent issuing the handoff.\n- `target_lane` names the execution lane such as DeepMine, Symphony, or N-Infinity.\n- `task_packet` contains scope, desired outcome, and relevant capsule references.\n- `approval_boundary` defines whether the handoff is automatic, suggested, or operator-confirmed.\n- `async_assignment_handle` keeps the handoff coherent across clients and delayed execution.\n- `result_summary` captures what came back and how it should be shown or persisted.\n- `ownership_and_due_window` records who should act next and when the system should escalate.\n- `human_override` keeps the user able to pause or redirect autonomy.\n- `escalation_path` defines what happens on ambiguity, failure, or safety conflict.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the bridge between user-facing assistant surfaces and background execution lanes. It prevents delegation from being hidden inside prompts or ad hoc tool calls by naming handoff structure explicitly. Dream extends this bridge into a more governable assignment fabric where handoffs can outlive the initiating chat and still remain legible.\n\n## 4. Architectural Value\nDelegation is where conversational intent becomes accountable work. By formalizing that bridge, N1Hub can reason about routing, approval, async continuity, ownership, and failure without conflating them with either chat history or raw job execution.\n"
+    "content": "# Agent Delegation\n\n## 1. Definition and Essence\nAgent Delegation defines the explicit handoff contract by which one intelligence surface in N1Hub asks another lane to do bounded work. It describes how an assistant session, a suggestion flow, or an operator action turns into a task packet for DeepMine, Symphony, or N-Infinity, and how results or failures return back to the origin.\n\n## 2. Core Attributes\n- `requester` identifies the surface or agent issuing the handoff.\n- `target_lane` names the execution lane such as DeepMine, Symphony, or N-Infinity.\n- `task_packet` contains scope, desired outcome, and relevant capsule references.\n- `approval_boundary` defines whether the handoff is automatic, suggested, or operator-confirmed.\n- `async_assignment_handle` keeps the handoff coherent across clients and delayed execution.\n- `result_summary` captures what came back and how it should be shown or persisted.\n- `ownership_and_due_window` records who should act next and when the system should escalate.\n- `human_override` keeps the user able to pause or redirect autonomy.\n- `escalation_path` defines what happens on ambiguity, failure, or safety conflict.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the bridge between user-facing assistant surfaces and background execution lanes. It prevents delegation from being hidden inside prompts or ad hoc tool calls by naming handoff structure explicitly. The bridge supports a governable assignment fabric where handoffs can outlive the initiating chat and still remain legible across clients.\n\n## 4. Architectural Value\nDelegation is where conversational intent becomes accountable work. By formalizing that bridge, N1Hub can reason about routing, approval, async continuity, ownership, and failure without conflating them with either chat history or raw job execution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Agent Delegation defines a more explicit and governable handoff fabric between conversational surfaces and execution lanes. It sharpens task-packet schemas, approval gradients, async assignment handles, ownership rules, result contracts, and escalation behavior across DeepMine, Symphony, N-Infinity, and future agents without letting orchestration vanish into prompt folklore. The capsule matters because delegation is where user intent becomes accountable machine work. It therefore stands as the routing law for inter-agent handoff rather than a vague bridge concept.",
+    "summary": "Agent Delegation defines a more explicit and governable handoff fabric between conversational surfaces and execution lanes. It sharpens task-packet schemas, approval gradients, async assignment handles, ownership rules, result contracts, and escalation behavior across DeepMine, Symphony, N-Infinity, and additional agent lanes without letting orchestration vanish into prompt folklore. The capsule matters because delegation is where user intent becomes accountable machine work. It therefore stands as the routing law for inter-agent handoff rather than a vague bridge concept.",
     "keywords": [
       "agent-delegation",
       "handoff",
@@ -118,9 +118,9 @@
         "at": "2026-03-12T04:55:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Agent Delegation states handoff doctrine directly as present-tense routing law."
+        "rationale": "Removed summary meta-language so Agent Delegation states handoff doctrine directly as present-tense routing law."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5aa3625979814eea6335246ec62ed4aad6b8e2b3e9318dfd18d951b90499f23d1581dae8c7b4a6de1c9379e6eb1d389ae40e4c00f00619762cbf2a67498c287a"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Vault Steward Agent",
     "created_at": "2026-03-11T13:33:44Z",
-    "updated_at": "2026-03-11T13:33:44Z",
+    "updated_at": "2026-03-12T14:04:54Z",
     "name": "Vault Steward Archive Index",
     "semantic_hash": "vault-steward-archive-index-run-history-rotation-policy",
     "source": {
@@ -19,17 +19,17 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Steward Archive Index\n\n## Purpose\nVault Steward Archive Index holds rotated Vault Steward run snapshots so active operational capsules remain current-only and low-noise.\n\n## Retention Contract\n- Active queue, latest, and plan capsules describe only the current run.\n- Completed run snapshots are preserved as archived run atoms under this hub.\n- Archived run atoms remain available for explicit audit and lineage queries.\n\n## Current Entries\n- `capsule.operations.vault-steward.archive.vault-steward-1773020624098.v1` — archived completed Dream run rotated from the active queue on 2026-03-11T13:33:44Z."
+    "content": "# Vault Steward Archive Index\n\n## Purpose\nVault Steward Archive Index holds rotated Vault Steward run snapshots so active operational capsules remain current-only and low-noise.\n\n## Retention Contract\n- Active queue, latest, and plan capsules describe only the current run.\n- Completed run snapshots are preserved as archived run atoms under this hub.\n- Archived run atoms remain available for explicit audit and lineage queries.\n\n## Current Entries\n- `capsule.operations.vault-steward.archive.vault-steward-1773020624098.v1` — archived completed run rotated from the active queue on 2026-03-11T13:33:44Z."
   },
   "neuro_concentrate": {
-    "summary": "Vault Steward Archive Index is the Dream-side run-history hub for rotated Vault Steward operational capsules. It preserves completed run snapshots while keeping active queue state current-only.",
+    "summary": "Vault Steward Archive Index organizes rotated Vault Steward run snapshots so active operational capsules remain current-only and low-noise. It preserves lineage for completed maintenance cycles, points operators to archived run atoms when historical review is required, and keeps retention intent explicit without forcing the active queue, latest run, or planning surfaces to carry stale operational history. The hub exists so historical audit and current execution stay separated but connected. It makes retention boundaries explicit and gives lineage lookups a stable hub instead of scattering completed run references across live operational capsules.",
     "keywords": [
       "vault-steward",
       "archive",
       "operations",
       "retention",
       "run-history",
-      "dream-branch"
+      "history-index"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -66,9 +66,9 @@
         "at": "2026-03-11T13:33:44Z",
         "event": "archive_hub_minted",
         "agent": "n1",
-        "rationale": "Minted Dream-side archive hub so completed Vault Steward runs can rotate out of the active queue without losing audit lineage."
+        "rationale": "Minted an archive hub so completed Vault Steward runs can rotate out of the active queue without losing audit lineage."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "55d0e61ed15d2eaf71cc9605c80479dae5c869cb01d44fe1d68b596a034f3fba93e1165e29c2c446d34ddf9a363c01f839431842b891bcea6426e5c7e2760864"
 }

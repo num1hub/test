@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-07T10:22:14.121Z",
+    "updated_at": "2026-03-12T16:49:00Z",
     "name": "Hybrid Database",
     "semantic_hash": "capsule-foundation-hybrid-database-v1-postgresql-neo4j-synchronization",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Hybrid Database\n\n## 1. Definition and Essence\nHybrid Database defines the architectural pairing of PostgreSQL and Neo4j for structured transactional records and graph-native relationship traversal. It formalizes synchronization contracts, consistency boundaries, and query responsibilities across both stores.\n\n## 2. Core Attributes\n- `store_roles` relational vs graph responsibilities\n- `sync_strategy` event-driven and reconciliation mechanisms\n- `consistency_model` transactional and eventual consistency boundaries\n- `query_routing` criteria for selecting storage backend\n- `recovery_plan` backup, replay, and divergence remediation\n\n## 3. Lifecycle\nThe architecture evolves through schema migrations, sync tuning, and observability-driven reliability improvements while preserving data lineage and integrity.\n\n## 4. Integration\n- **CapsuleOS Core:** foundational persistence substrate.\n- **Workspace and Projects:** read/write consumers across modules.\n- **Audit Log:** captures cross-store mutation traceability.\n- **Testing:** validates consistency and failover behavior.\n\n## 5. Philosophical Alignment\nHybrid persistence supports To Dig Deep by preserving rich relational and graph context without forcing a shallow single-store compromise.\n"
   },
   "neuro_concentrate": {
-    "summary": "Hybrid Database in the Dream branch represents a more deliberate persistence fabric for the ecosystem. It pushes toward cleaner branch snapshots, better sync guarantees, richer recovery pathways, and a more legible split between transactional certainty and graph-native traversal than the current storage boundary provides. The capsule matters because branch-aware systems eventually fail at the persistence layer if authority boundaries remain merely convenient. Dream therefore preserves Hybrid Database as a future storage contract for sovereign graph operations, not just a pragmatic two-store arrangement.",
+    "summary": "Hybrid Database defines a more deliberate persistence fabric for the ecosystem. It pushes toward cleaner graph snapshots, better sync guarantees, richer recovery pathways, and a more legible split between transactional certainty and graph-native traversal than the current storage boundary provides. The capsule matters because graph-governed systems eventually fail at the persistence layer if authority boundaries remain merely convenient. It therefore preserves Hybrid Database as a storage contract for sovereign graph operations rather than a pragmatic two-store arrangement.",
     "keywords": [
       "hybrid-database",
       "postgresql",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e1c408aa19f5b35ebe16000cb2280f13db3e6375e28da20019b85e57c8ef86b594317bc70c36722928141069763fa05606ea3f4b014567357021196023993673"
+  "integrity_sha3_512": "69ca2e959b3fc65bd008ace23385850af3a8870cc5284500f78cfa2285dbd2e7042a3ba139cbd66ad01ca4f16848ce225b4a1592f3e8ca89ac6a6664c36f1115"
 }

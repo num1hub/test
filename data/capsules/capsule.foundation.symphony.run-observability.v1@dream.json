@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T01:20:00Z",
-    "updated_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T17:58:00Z",
     "name": "Symphony Run Observability",
     "semantic_hash": "symphony-run-observability-attempt-retry-status-recovery-evidence",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-12T01:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony decomposition to isolate attempt evidence, retry posture, and operator-facing run status from intake and live session fabric."
+        "rationale": "Minted during Symphony decomposition to isolate attempt evidence, retry posture, and operator-facing run status from intake and live session fabric."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "67289b86df53b8d07fd67cbc25a3ad530beebb9ffba55ab15c97baa2fcf5fc17d1c9ed1247fabcd4d8a28277d51bd41f2bfef62759bcbcfc62d2c72796adc0ef"
 }

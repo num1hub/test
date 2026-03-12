@@ -54,7 +54,7 @@ export function useCapsuleBranchState(
   const [isPreviewingMerge, setIsPreviewingMerge] = useState(false);
   const [isApplyingMerge, setIsApplyingMerge] = useState(false);
 
-  const refreshBranches = useCallback(async (token: string) => {
+  const refreshBranches = useCallback(async (token?: string | null) => {
     const { response, data } = await fetchBranchList({ token, capsuleId });
     if (!response.ok || !data) {
       setAvailableBranches([]);
@@ -70,11 +70,6 @@ export function useCapsuleBranchState(
   const fetchBranch = useCallback(
     async (branch: BranchName) => {
       const token = getVaultToken();
-      if (!token) {
-        setLoading(false);
-        router.push('/login');
-        return;
-      }
 
       setLoading(true);
       setError('');
@@ -84,11 +79,6 @@ export function useCapsuleBranchState(
 
       try {
         const response = await fetchCapsuleBranchResponse(capsuleId, branch, token);
-
-        if (response.status === 401) {
-          router.push('/login');
-          return;
-        }
 
         if (response.status === 404 && branch !== 'real') {
           showToast(`${branch} branch not found for this capsule.`, 'info');
@@ -126,7 +116,7 @@ export function useCapsuleBranchState(
         setLoading(false);
       }
     },
-    [capsuleId, refreshBranches, router, showToast],
+    [capsuleId, refreshBranches, showToast],
   );
 
   useEffect(() => {
@@ -140,11 +130,6 @@ export function useCapsuleBranchState(
   const handleFork = async () => {
     try {
       const token = getVaultToken();
-      if (!token) {
-        router.push('/login');
-        return;
-      }
-
       const response = await postForkCapsule(capsuleId, token);
       if (!response.ok) {
         throw new Error(await parseErrorMessage(response, 'Failed to fork into Dream branch.'));
@@ -169,11 +154,6 @@ export function useCapsuleBranchState(
     }
 
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     setIsPreviewingMerge(true);
     try {
       const { response, data } = await applyBranchMerge(
@@ -237,11 +217,6 @@ export function useCapsuleBranchState(
 
     try {
       const token = getVaultToken();
-      if (!token) {
-        router.push('/login');
-        return;
-      }
-
       setIsApplyingMerge(true);
 
       if (currentBranch === 'dream') {
@@ -347,11 +322,6 @@ export function useCapsuleBranchState(
     }
 
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     try {
       const { response, data } = await fetchCapsuleDiff(capsuleId, 'real', currentBranch, token, false);
       if (!response.ok || !data) {
@@ -379,11 +349,6 @@ export function useCapsuleBranchState(
     setIsDeleting(true);
     try {
       const token = getVaultToken();
-      if (!token) {
-        router.push('/login');
-        return;
-      }
-
       const response = await deleteCapsuleRequest(capsuleId, token);
       if (!response.ok) {
         throw new Error('Server rejected deletion request.');

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T16:27:00Z",
     "name": "Symphony Retry Entry",
     "semantic_hash": "symphony-retry-entry-backoff-claim-release-reschedule-orchestrator",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Retry Entry\n\n## 1. Role\nSymphony Retry Entry will become the expressive quiet-recovery object for orchestration, capturing why work is being retried, which lane may continue, and how failures should return to the operator without duplicative noise.\n\n## 2. Future Retry Contract\nRetry state will carry lane-aware policy, degraded-mode continuation rules, assignment-aware return paths, and calmer operator behavior for recoverable failures. Recovery will be inspectable and deliberate rather than a thin timer wrapper.\n\n## 3. Operational Consequence\nTrustworthy automation will be able to fail and recover without feeling chaotic. Retry behavior will preserve continuity, attribution, and clarity even when multiple execution lanes and review surfaces are involved.\n\n## 4. Philosophical Alignment\nSymphony Retry Entry supports To Dig Deep by making recovery governed instead of improvised."
+    "content": "# Symphony Retry Entry\n\n## 1. Role\nSymphony Retry Entry is the expressive quiet-recovery object for orchestration, capturing why work is being retried, which lane may continue, and how failures should return to the operator without duplicative noise.\n\n## 2. Retry Contract\nRetry state carries lane-aware policy, degraded-mode continuation rules, assignment-aware return paths, and calmer operator behavior for recoverable failures. Recovery is inspectable and deliberate rather than a thin timer wrapper.\n\n## 3. Operational Consequence\nTrustworthy automation can fail and recover without feeling chaotic. Retry behavior preserves continuity, attribution, and clarity even when multiple execution lanes and review surfaces are involved.\n\n## 4. Philosophical Alignment\nSymphony Retry Entry supports To Dig Deep by making recovery governed instead of improvised."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Retry Entry defines the future quiet-recovery object for orchestration: lane-aware retry policy, degraded-mode continuation, clearer assignment return paths, and calmer operator-visible handling of recoverable failure.",
+    "summary": "Symphony Retry Entry defines the quiet-recovery object that governs how orchestration retries recoverable failure without creating duplicative noise or losing accountability. It captures lane-aware retry policy, degraded-mode continuation rules, assignment return paths, and calmer operator-visible handling when work can continue safely after interruption. The capsule matters because reliable automation should fail and recover in a way that preserves attribution, continuity, and review clarity instead of collapsing into ad hoc timers, hidden loops, or confusing repeated alerts.",
     "keywords": [
       "symphony",
       "retry-entry",
@@ -84,9 +84,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing so the capsule states present recovery doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "3049d483503cc7d67e76c5dc2b2c9cbff581de026905eeedf70829843525fefe23a06efd87d1b1a768a10f32d11c1ac169d5b3f82bb570ac50bd852ecf68a959"
 }

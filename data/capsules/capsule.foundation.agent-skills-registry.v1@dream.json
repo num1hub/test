@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:20:00Z",
     "name": "Agent Skills Registry",
-    "semantic_hash": "agent-skills-registry-full-cycle-procedural-lattice",
+    "semantic_hash": "agent-skills-registry-procedural-lattice-reusable-craft-runtime",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 240,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Skills Registry\n\n## 1. Role\nAgent Skills Registry will become a richer procedural library for N1Hub intelligence surfaces. Skills will remain the local, reviewable place where recurring operational patterns are documented once and reused across mining, refining, reviewing, stewarding, and execution lanes.\n\n## 2. Future Skill Lattice\n- explicit procedures for scout, miner, foreman, reviewer, executor, and steward lanes\n- skill-guided context-pack assembly and structured-output discipline\n- versioned runtime and tool guidance that stays with the repository\n- clearer separation between broad instruction surfaces and narrow procedural playbooks\n- reusable full-cycle procedures that make quarry, refinery, swarm, and execution work repeatable\n\n## 3. Operational Consequence\nThe registry will become the place where the capsule factory learns how to repeat itself without drifting into accidental habit. Agents will improve because good tactics are preserved as inspectable local procedures rather than rediscovered badly in prompts.\n\n## 4. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable craft."
+    "content": "# Agent Skills Registry\n\n## 1. Role\nAgent Skills Registry is the procedural library for N1Hub intelligence surfaces. Skills remain the local, reviewable place where recurring operational patterns are documented once and reused across mining, refining, reviewing, stewarding, and execution lanes.\n\n## 2. Skill Lattice\n- explicit procedures for scout, miner, foreman, reviewer, executor, and steward lanes\n- skill-guided context-pack assembly and structured-output discipline\n- versioned runtime and tool guidance that stays with the repository\n- clearer separation between broad instruction surfaces and narrow procedural playbooks\n- reusable full-cycle procedures that make quarry, refinery, swarm, and execution work repeatable\n\n## 3. Operational Consequence\nThe registry is the place where the capsule factory learns how to repeat itself without drifting into accidental habit. Agents improve because good tactics are preserved as inspectable local procedures rather than rediscovered badly in prompts.\n\n## 4. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable craft."
   },
   "neuro_concentrate": {
-    "summary": "Agent Skills Registry defines the future procedural lattice for N1Hub agents: versioned playbooks for scout, miner, foreman, reviewer, executor, and refiner lanes that turn recurring tactics into explicit reusable craft instead of prompt folklore.",
+    "summary": "Agent Skills Registry defines the procedural lattice that lets N1Hub preserve and reuse recurring operational tactics instead of rediscovering them in prompts. It covers versioned playbooks for scout, miner, foreman, reviewer, executor, and steward lanes, context-pack assembly guidance, tool-use discipline, and the separation between broad instruction surfaces and narrow procedural craft. The capsule matters because good tactics stay inspectable, local, and repeatable across mining, refining, reviewing, stewarding, and execution lanes rather than dissolving into habit or operator folklore.",
     "keywords": [
       "agent-skills",
       "skills",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-skills-registry-full-cycle-procedural-lattice"
+    "semantic_hash": "agent-skills-registry-procedural-lattice-reusable-craft-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -93,12 +93,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "4a7e80ed42f3b717445e5e389373da89b4bc3a684c139c84d541fa1a3feaae209de13550ce7e55d7241aa8e4bdf4ae29f5ff6bd50f66407e93c2e2a18dbc795f"
 }

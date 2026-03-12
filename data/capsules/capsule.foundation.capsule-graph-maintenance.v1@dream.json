@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-12T03:20:00Z",
+    "updated_at": "2026-03-12T17:04:00Z",
     "name": "Capsule Graph Maintenance",
     "semantic_hash": "capsule-graph-maintenance-routing-topology-arbitration-synthesis-runtime",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Capsule Graph Maintenance\n\n## 1. Role\nCapsule Graph Maintenance is the continuous operating discipline that keeps the sovereign graph healthy over time. It routes that discipline through four bounded sub-hubs so topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs remain explicit instead of collapsing into one dense parent hub.\n\n## 2. Routing Surfaces\n- `topology-pressure` owns link hygiene, structural refinement, decomposition pressure, markup repair, and neighborhood-shape diagnostics.\n- `epistemic-arbitration` owns contradiction pressure, debate routing, and advisory handling when claims, links, or cluster boundaries remain contested.\n- `synthesis-evolution` owns resonance clustering, void mapping, novel synthesis, and graph-growth pressure where strong regions should become higher-signal structure.\n- `runtime-jobs` owns capsule jobs, night-shift operation, vault stewardship coupling, and background runtime support that make graph maintenance materially executable.\n\n## 3. Parent Boundary\nThe parent graph-maintenance hub keeps only the top-level relationship to CapsuleOS, N-Infinity, Background Agent Runtime, Vault Stewardship Swarm, To Dig Deep, and the four maintenance sub-hubs. Detailed maintenance routing now flows through those sub-hubs so graph upkeep remains a legible operating contract instead of a flat registry of every worker, debate lane, and runtime hook."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Maintenance routes continuous graph upkeep through four bounded surfaces: topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs. The parent keeps only top-level relationships to CapsuleOS, N-Infinity, Background Agent Runtime, Vault Stewardship Swarm, To Dig Deep, and the four sub-hubs. This makes future maintenance doctrine more legible because topology repair, contradiction handling, synthesis pressure, and executable maintenance jobs no longer hide inside one overloaded parent capsule. The result is a clearer upkeep contract for how the sovereign graph preserves trust while evolving.",
+    "summary": "Capsule Graph Maintenance routes continuous graph upkeep through four bounded surfaces: topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs. The parent keeps only top-level relationships to CapsuleOS, N-Infinity, Background Agent Runtime, Vault Stewardship Swarm, To Dig Deep, and the four sub-hubs. This makes graph-maintenance doctrine more legible because topology repair, contradiction handling, synthesis pressure, and executable maintenance jobs no longer hide inside one overloaded parent capsule. The result is a clearer upkeep contract for how the sovereign graph preserves trust while evolving.",
     "keywords": [
       "capsule-graph-maintenance",
       "hub-decomposition",
@@ -96,9 +96,9 @@
         "at": "2026-03-12T03:20:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Capsule Graph Maintenance into four bounded sub-hubs so topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs no longer collapse into one dense parent hub."
+        "rationale": "Refactored Capsule Graph Maintenance into four bounded sub-hubs so topology pressure, epistemic arbitration, synthesis evolution, and runtime jobs no longer collapse into one dense parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "01e4d41d1e6ff2c52ebd09d6868f5133bab2aad995aa398566a796950f9e9b4ccf05496734ac4675d8174314e498d6a8c037d7cd8f11695df4ad971dedbf07fc"
 }

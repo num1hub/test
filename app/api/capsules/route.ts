@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, checkRateLimit, resolveRole } from '@/lib/apiSecurity';
+import { isAuthorized, checkRateLimit, requireTrustedMutation, resolveRole } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
 import { getExistingCapsuleIds, readCapsulesFromDisk } from '@/lib/capsuleVault';
 import {
@@ -23,6 +23,9 @@ const isFixableGate = (gate: string): boolean => {
 const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
 
 function requireAuthorized(request: Request): NextResponse | null {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) return jsonError(401, 'Unauthorized');
   const rate = checkRateLimit(request);
   if (!rate.allowed) {

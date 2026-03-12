@@ -1,5 +1,5 @@
 <!-- @anchor arch:repo.entrypoint links=doc:n1hub.readme,arch:governance.anchor-spec,doc:validator.reference,doc:a2c.reference,doc:symphony.reference,doc:projects.reference,doc:branching.real-dream-diff note="Repository entrypoint and top-level runtime map for N1Hub." -->
-<!-- @anchor doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,doc:openclaw.fork-notes,script:extract.anchors,script:validate.anchors,script:verify.root-docs,script:file.guardrails.audit note="Repository overview, instruction stack map, and primary command surface for N1Hub." -->
+<!-- @anchor doc:n1hub.readme links=doc:n1hub.agents,doc:n1hub.codex,doc:n1hub.context,doc:n1hub.soul,doc:n1hub.memory,doc:n1hub.tools,doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:workflow.issue-worker,doc:workflow.ninfinity-night-shift,doc:governance.anchors-spec,doc:governance.terminology,doc:governance.naming-grammar,doc:governance.patterns,doc:governance.risk-register,doc:n1hub.low-blast-radius-architecture,doc:openclaw.fork-notes,doc:ops.deploy-vercel-hobby,script:extract.anchors,script:validate.anchors,script:verify.root-docs,script:file.guardrails.audit note="Repository overview, instruction stack map, and primary command surface for N1Hub." -->
 # N1Hub Vault
 
 N1Hub Vault is a Next.js App Router application for managing CapsuleOS knowledge capsules with validator-governed storage, branch overlays, AI-assisted ingestion, workflow automation, and autonomous maintenance lanes.
@@ -204,6 +204,52 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Private Vercel Hobby Deployment
+
+N1Hub can be deployed to Vercel Hobby in a locked private posture.
+
+- unauthenticated page requests are forced onto `/`
+- the root surface acts as a locked access gate, not a public workspace
+- the credential form is available only through the configured private owner route segment
+- production auth is env-backed so it does not depend on persistent local files
+
+Required production environment variables:
+
+- `N1HUB_AUTH_SECRET`
+- `N1HUB_OWNER_LOGIN`
+- `VAULT_PASSWORD`
+- `N1HUB_ACCESS_CODE`
+- `N1HUB_OWNER_ROUTE_SEGMENT`
+
+Notes:
+
+- password changes are intentionally disabled in env-backed production deploys; rotate `VAULT_PASSWORD` in Vercel settings instead
+- access-code rotation should be handled through `N1HUB_ACCESS_CODE` in Vercel settings
+- route-segment rotation should be handled through `N1HUB_OWNER_ROUTE_SEGMENT` in Vercel settings
+- the in-app private route should remain unlinked from the public root surface
+- production deploys are now fail-closed for auth; if the required auth env is incomplete, the owner login route returns `503` instead of silently falling back to a partial local mode
+- a ready-made env template now lives at `ops/env/n1hub-vercel-hobby.env.example`
+- a local preflight command now exists: `npm run deploy:vercel:hobby:check`
+- a bounded rollout guide now lives at `ops/DEPLOY_VERCEL_HOBBY.md`
+
+Suggested Vercel Hobby rollout order:
+
+1. create the project in Vercel
+2. set `N1HUB_AUTH_SECRET`
+3. set `N1HUB_OWNER_LOGIN`
+4. set `VAULT_PASSWORD`
+5. set `N1HUB_ACCESS_CODE`
+6. set `N1HUB_OWNER_ROUTE_SEGMENT`
+7. deploy
+8. open `/architect-gate/<N1HUB_OWNER_ROUTE_SEGMENT>` directly and verify root-gate protection before normal use
+
+Recommended smoke checks after deploy:
+
+1. open `/` and confirm the locked access gate renders
+2. open `/api/deploy/smoke` and confirm it returns `200` with `"ok": true`
+3. open `/architect-gate/<N1HUB_OWNER_ROUTE_SEGMENT>` and confirm the owner form renders
+4. open a protected page like `/vault` in a private window and confirm it redirects back to `/`
 
 ## Core Verification
 

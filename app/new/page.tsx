@@ -7,6 +7,7 @@ import { useToast } from '@/contexts/ToastContext';
 import { useDebounce } from '@/hooks/useDebounce';
 import ValidationPanel, { type ValidationPanelResult } from '@/components/validation/ValidationPanel';
 import CapsuleValidator from '@/components/validation/CapsuleValidator';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 
 const isRecordObject = (value: unknown): value is Record<string, unknown> => {
   return Boolean(value && typeof value === 'object' && !Array.isArray(value));
@@ -21,14 +22,6 @@ export default function NewCapsulePage() {
   const { addCapsuleLocally, setValidationStatus } = useCapsuleStore();
   const { showToast } = useToast();
   const debouncedInput = useDebounce(jsonInput, 600);
-
-  const getAuthHeaders = (): HeadersInit => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    return {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    };
-  };
 
   const hydrateValidationStatus = (capsule: unknown, result: ValidationPanelResult): void => {
     if (!isRecordObject(capsule)) return;
@@ -57,7 +50,7 @@ export default function NewCapsulePage() {
 
       const res = await fetch('/api/validate', {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsule: parsed }),
       });
 
@@ -104,7 +97,7 @@ export default function NewCapsulePage() {
 
       const res = await fetch('/api/validate/fix', {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsule: parsed }),
       });
 
@@ -145,7 +138,7 @@ export default function NewCapsulePage() {
 
       const res = await fetch('/api/capsules', {
         method: 'POST',
-        headers: getAuthHeaders(),
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify(parsed),
       });
 

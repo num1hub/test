@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T18:14:00Z",
     "name": "ApsnyTravel",
     "semantic_hash": "capsule-project-apsnytravel-v1-independent-travel-roadmap-sovereign",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# ApsnyTravel\n\n## 1. Definition and Essence\nApsnyTravel is an independent project initiative with its own product trajectory and sovereign goals. It may reuse selected N1 capabilities but remains a root project without structural containment under N1 platform hubs.\n\n## 2. Core Attributes\n- `domain_scope` travel-oriented product and workflow boundaries\n- `feature_roadmap` independent delivery milestones\n- `integration_points` optional references to N1 modules\n- `ownership` project-specific stewardship and decision rights\n- `success_metrics` domain KPIs and user outcomes\n\n## 3. Lifecycle\nApsnyTravel evolves through independent roadmap iterations, selective integration with shared tooling, and autonomous governance over scope and prioritization.\n\n## 4. Integration\n- **Workspace/Planner:** optional support systems, not hierarchy parent.\n- **A2C:** optional data-to-capsule workflows for travel knowledge.\n- **Independent Project Set:** remains sovereign root node.\n- **Marketplace:** optional future template distribution channel.\n\n## 5. Philosophical Alignment\nApsnyTravel honors To Dig Deep by pursuing domain mastery while preserving sovereign independence from core platform hierarchy.\n"
   },
   "neuro_concentrate": {
-    "summary": "ApsnyTravel is archived alongside the live project line as recoverable travel-intelligence doctrine. It still describes curated place knowledge, itinerary logic, execution workflows, and monetizable travel artifacts converging into a coherent domain system with clear autonomy from the main N1Hub platform. The capsule matters because the initiative remains directionally meaningful even while paused. In archive mode the capsule keeps the richer product shape recoverable instead of presenting it as active planning.",
+    "summary": "ApsnyTravel is an archived but recoverable travel-intelligence doctrine set. It describes curated place knowledge, itinerary logic, execution workflows, and monetizable travel artifacts as one coherent domain system with clear autonomy from the main N1Hub platform. The capsule matters because the initiative remains directionally meaningful even while paused and still preserves usable product structure for later revival. In archive mode it keeps domain shape, operating logic, and project boundaries recoverable without presenting the initiative as active planning.",
     "keywords": [
       "apsnytravel",
       "travel-product",
@@ -74,9 +74,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware archive phrasing so ApsnyTravel states recoverable product doctrine directly."
+        "rationale": "Removed archive meta-language so ApsnyTravel states recoverable product doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b7ddd6ad79b5448c16e98251f4f54ea4428082a0bec124e321f86ae82c6c37a93372711c1f60c98537c36115fa602235a5f7d5a116b64cfd1bf87938a365e2f6"
 }

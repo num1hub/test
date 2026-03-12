@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T16:42:00Z",
     "name": "Marketplace",
     "semantic_hash": "capsule-foundation-marketplace-v1-economy-templates-licensing-tokenomics",
     "priority": "medium",
@@ -74,9 +74,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so Marketplace states its economic-system doctrine directly."
+        "rationale": "Removed meta-summary phrasing so Marketplace states its economic-system doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5cebb5f4b01bcce2e5fc3dabe351787fbefb46eeb7fe5d3e75451772a4f99e9f3ed771b12e51d2eb01eba9b001e520e375441ccfc16a6c03abde0cb753650ba1"
 }

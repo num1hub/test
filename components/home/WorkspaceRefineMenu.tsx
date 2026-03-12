@@ -3,6 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { CAPSULE_TYPES } from '@/components/vault/constants';
 import { CAPSULE_TIERS } from '@/lib/capsuleTier';
+import {
+  CAPSULE_GRAPH_QUALITY_PRESETS,
+  CAPSULE_VISUAL_PROFILES,
+  type CapsuleGraphQualityKey,
+  type CapsuleVisualProfileKey,
+} from '@/lib/capsuleVisualProfile';
 import type { CapsuleSubtype, CapsuleTier, CapsuleType } from '@/types/capsule';
 import type { SortOption } from '@/utils/sortUtils';
 import {
@@ -46,6 +52,10 @@ export default function WorkspaceRefineMenu({
   onClearTiers,
   onToggleSubtype,
   onClearSubtypes,
+  visualProfile,
+  graphQuality,
+  onSelectVisualProfile,
+  onSelectGraphQuality,
   onResetAll,
 }: {
   sortOption: SortOption;
@@ -59,6 +69,10 @@ export default function WorkspaceRefineMenu({
   onClearTiers: () => void;
   onToggleSubtype: (subtype: CapsuleSubtype) => void;
   onClearSubtypes: () => void;
+  visualProfile: CapsuleVisualProfileKey;
+  graphQuality: CapsuleGraphQualityKey;
+  onSelectVisualProfile: (profile: CapsuleVisualProfileKey) => void;
+  onSelectGraphQuality: (quality: CapsuleGraphQualityKey) => void;
   onResetAll: () => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -113,7 +127,7 @@ export default function WorkspaceRefineMenu({
                 Refine Grid
               </div>
               <p className="mt-1 text-sm leading-6 text-slate-400">
-                Sort and filter what the grid and 2D graph show.
+                Sort and filter what the grid, index, and 2D graph show.
               </p>
             </div>
 
@@ -227,6 +241,38 @@ export default function WorkspaceRefineMenu({
                   >
                     {option.label}
                   </button>
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <div className="mb-2 text-[11px] uppercase tracking-[0.22em] text-slate-600">
+                Visual Memory
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {CAPSULE_VISUAL_PROFILES.map((profile) => (
+                  <RefineChip
+                    key={profile.key}
+                    active={visualProfile === profile.key}
+                    label={profile.label}
+                    onClick={() => onSelectVisualProfile(profile.key)}
+                  />
+                ))}
+              </div>
+            </section>
+
+            <section>
+              <div className="mb-2 text-[11px] uppercase tracking-[0.22em] text-slate-600">
+                Graph Quality
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {CAPSULE_GRAPH_QUALITY_PRESETS.map((quality) => (
+                  <RefineChip
+                    key={quality.key}
+                    active={graphQuality === quality.key}
+                    label={quality.label}
+                    onClick={() => onSelectGraphQuality(quality.key)}
+                  />
                 ))}
               </div>
             </section>

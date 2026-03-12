@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:15:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:24:00Z",
     "name": "Agent Subagents",
-    "semantic_hash": "agent-subagents-default-bounded-worker-architecture",
+    "semantic_hash": "agent-subagents-bounded-worker-handoffs-reviewer-specialization-architecture",
     "source": {
       "uri": "https://docs.langchain.com/oss/javascript/deepagents/harness",
       "type": "web_documentation"
@@ -23,13 +23,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Subagents\n\n## 1. Role\nBounded specialist workers will become the standard operating form of autonomous work in N1Hub. Serious tasks will be decomposed into compact workers that can be compared, budgeted, improved, and governed independently instead of being hidden inside one oversized prompt loop.\n\n## 2. Future Worker Chain\n- clear triage, strategy, critique, and execution splits across major swarms\n- typed handoffs that carry bounded context packs and artifacts\n- assignment-aware worker chains instead of loose conversational relay\n- provider-aware specialization across different model lanes and harnesses\n- reviewer veto before risky execution touches Dream or Real\n- replayable outputs that can be compared across runs\n\n## 3. Architectural Consequence\nSubagents will reduce role confusion, prompt inflation, and debugging ambiguity. Different workers will be able to use different cost lanes and runtime contracts while still returning compact artifacts to one governing controller.\n\n## 4. Philosophical Alignment\nAgent Subagents supports To Dig Deep by preferring many bounded deep passes over one inflated pseudo-team."
+    "content": "# Agent Subagents\n\n## 1. Role\nBounded specialist workers are the standard operating form of autonomous work in N1Hub. Serious tasks are decomposed into compact workers that can be compared, budgeted, improved, and governed independently instead of being hidden inside one oversized prompt loop.\n\n## 2. Worker Chain\n- clear triage, strategy, critique, and execution splits across major swarms\n- typed handoffs that carry bounded context packs and artifacts\n- assignment-aware worker chains instead of loose conversational relay\n- provider-aware specialization across different model lanes and harnesses\n- reviewer veto before risky execution touches governed state\n- replayable outputs that can be compared across runs\n\n## 3. Architectural Consequence\nSubagents reduce role confusion, prompt inflation, and debugging ambiguity. Different workers can use different cost lanes and runtime contracts while still returning compact artifacts to one governing controller.\n\n## 4. Philosophical Alignment\nAgent Subagents supports To Dig Deep by preferring many bounded deep passes over one inflated pseudo-team."
   },
   "neuro_concentrate": {
-    "summary": "Agent Subagents defines the future default architecture for autonomous N1Hub work: bounded specialist workers, typed handoffs, assignment-aware chains, reviewer veto, replayable artifacts, and provider-aware specialization instead of oversized prompt teams.",
+    "summary": "Agent Subagents defines the default architecture for autonomous N1Hub work: bounded specialist workers that can be compared, budgeted, improved, and governed independently instead of hiding inside one oversized prompt loop. It covers triage, strategy, critique, and execution splits, typed handoffs carrying compact context packs and artifacts, provider-aware specialization, reviewer veto before risky execution, and replayable outputs across runs. The capsule matters because subagents reduce role confusion, prompt inflation, and debugging ambiguity while still returning compact artifacts to one governing controller.",
     "keywords": [
       "agent-subagents",
-      "dream-branch",
+      "worker-governance",
       "specialist-workers",
       "typed-handoffs",
       "review-lane",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-subagents-default-bounded-worker-architecture"
+    "semantic_hash": "agent-subagents-bounded-worker-handoffs-reviewer-specialization-architecture"
   },
   "recursive_layer": {
     "links": [
@@ -101,12 +101,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "a4fff589d39050761a82818e4148aec643edd2d5faf928e77f009167706468fed52219166c9e1183ef009875a030b6d0a6876dd909c0d00fa09075c20872069b"
 }

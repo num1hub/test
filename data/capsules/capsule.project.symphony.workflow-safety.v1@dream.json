@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:55:00Z",
-    "updated_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T18:12:00Z",
     "name": "Symphony Project Workflow Safety",
     "semantic_hash": "project-symphony-workflow-safety-policy-night-controls-guardrails",
     "source": {
@@ -83,9 +83,9 @@
         "at": "2026-03-12T02:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony Project decomposition to isolate workflow law, approval posture, night gating, and verification guardrails from intake and live session fabric."
+        "rationale": "Minted during Symphony Project decomposition to isolate workflow law, approval posture, night gating, and verification guardrails from intake and live session fabric."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "c038f78e4595c78ab4d4edafb59098a7e85629141aec1206bdc4d5eaf5365209c3650a6cdd39c29e134bee1c84307186a32ca37392901a84879bd4c5cb1d9caa"
 }

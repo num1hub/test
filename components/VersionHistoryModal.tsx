@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientAuthHeaders } from '@/lib/clientAuth';
 import { useCapsuleStore } from '@/store/capsuleStore';
 import type { VersionMeta } from '@/lib/versioning';
 import type { SovereignCapsule } from '@/types/capsule';
@@ -99,10 +100,9 @@ export default function VersionHistoryModal({
     setPreviewVersion(null);
 
     const fetchVersions = async () => {
-      const token = localStorage.getItem('n1hub_vault_token');
       try {
         const res = await fetch(`/api/capsules/${capsuleId}/versions`, {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: getClientAuthHeaders(),
         });
         if (!res.ok) throw new Error('Failed to load version history.');
         const data = (await res.json()) as VersionMeta[];
@@ -119,10 +119,9 @@ export default function VersionHistoryModal({
   }, [isOpen, capsuleId, showToast]);
 
   const handlePreview = async (timestamp: string) => {
-    const token = localStorage.getItem('n1hub_vault_token');
     try {
       const res = await fetch(`/api/capsules/${capsuleId}/versions/${timestamp}`, {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: getClientAuthHeaders(),
       });
       if (!res.ok) throw new Error('Failed to load version payload.');
       const data = (await res.json()) as unknown;
@@ -144,12 +143,11 @@ export default function VersionHistoryModal({
     }
 
     setIsRestoring(timestamp);
-    const token = localStorage.getItem('n1hub_vault_token');
 
     try {
       const res = await fetch(`/api/capsules/${capsuleId}/versions/${timestamp}`, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${token}` },
+        headers: getClientAuthHeaders(),
       });
 
       if (!res.ok) throw new Error('Failed to restore version.');

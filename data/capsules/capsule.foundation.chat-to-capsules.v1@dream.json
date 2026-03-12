@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-11T21:23:25Z",
+    "updated_at": "2026-03-12T16:42:00Z",
     "name": "Chat to Capsules",
     "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
     "priority": "high",
@@ -114,9 +114,9 @@
         "at": "2026-03-11T21:23:25Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Chat to Capsules states its graph-native dialogue doctrine directly."
+        "rationale": "Removed meta-summary framing so Chat to Capsules states its graph-native dialogue doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d791c396be4fb4e5fb07774d3995e300180930d557fb1a8e1ba744f7284a4457ebb3064c54799c1cb0fd25faa96a9dd6a0d00a83e2bcc2f64ef0ba1820e6aa1d"
 }

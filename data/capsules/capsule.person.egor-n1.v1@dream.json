@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "egor-n1-identity-creator-founder-visionary-gold-core",
-    "updated_at": "2026-03-11T23:35:00Z",
+    "updated_at": "2026-03-12T17:43:00Z",
     "name": "Egor N1",
     "tier": 2
   },
@@ -69,9 +69,9 @@
         "at": "2026-03-11T23:35:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so the identity capsule states founding provenance and succession doctrine directly."
+        "rationale": "Removed summary meta-language so the identity capsule states founding provenance and succession doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "59708d7d313ece7788b6ca535323cb619ccec530817093409b55751ca0a79e3048e328cc155439bd246008fd045b3d31fa194632642ddfa3742e49afa7716612"
 }

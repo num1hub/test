@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:10:00Z",
-    "updated_at": "2026-03-11T23:10:00Z",
+    "updated_at": "2026-03-12T17:54:00Z",
     "name": "Vault Stewardship Swarm Work Planning Review",
     "semantic_hash": "vault-stewardship-swarm-planning-review-jobs-handoff-traces",
     "source": {
@@ -19,7 +19,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Stewardship Swarm Work Planning Review\n\n## 1. Role\nVault Stewardship Swarm Work Planning Review owns the planning and judgment layer that turns pressure into bounded jobs. It compresses findings into explicit work packets, challenges weak proposals, records evaluation traces, and routes packets toward the right governance or validation boundary.\n\n## 2. Work Planning Review Surface\nThis sub-hub groups `review-agent`, `branch-steward-agent`, `validation-gatekeeper-agent`, `agent-evals-and-traces`, and `a2c`. Together they define how stewardship packets are critiqued, evidenced, traced, and handed off toward Dream-safe mutation, later Real review, validation, or quarantine rather than drifting forward as ambient intent.\n\n## 3. Operating Boundary\nThis sub-hub does not own the initial vault survey work or the actual mutation workers that change capsules. Those belong to `inventory-pressure` and `mutation-workers`, while runtime posture remains in `runtime-modes`."
+    "content": "# Vault Stewardship Swarm Work Planning Review\n\n## 1. Role\nVault Stewardship Swarm Work Planning Review owns the planning and judgment layer that turns pressure into bounded jobs. It compresses findings into explicit work packets, challenges weak proposals, records evaluation traces, and routes packets toward the right governance or validation boundary.\n\n## 2. Work Planning Review Surface\nThis sub-hub groups `review-agent`, `branch-steward-agent`, `validation-gatekeeper-agent`, `agent-evals-and-traces`, and `a2c`. Together they define how stewardship packets are critiqued, evidenced, traced, and handed off toward governed mutation, later canonical review, validation, or quarantine rather than drifting forward as ambient intent.\n\n## 3. Operating Boundary\nThis sub-hub does not own the initial vault survey work or the actual mutation workers that change capsules. Those belong to `inventory-pressure` and `mutation-workers`, while runtime posture remains in `runtime-modes`."
   },
   "neuro_concentrate": {
     "summary": "Vault Stewardship Swarm Work Planning Review groups the judgment surface of stewardship: Review Agent, Branch Steward Agent, Validation Gatekeeper Agent, Agent Evals and Traces, and A2C handoff. It keeps packet generation, critique pressure, evidence trails, and branch or validation routing together so stewardship proposals do not move from observation to mutation as unchallenged ambient promises. This boundary matters because the vault improves best when job packets are explicit, reviewable, and trace-rich before any worker is allowed to edit structure.",
@@ -75,9 +75,9 @@
         "at": "2026-03-11T23:10:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Vault Stewardship Swarm decomposition to isolate work packet generation, critique pressure, trace evidence, and governance handoff from raw reading and direct mutation."
+        "rationale": "Minted during Vault Stewardship Swarm decomposition to isolate work packet generation, critique pressure, trace evidence, and governance handoff from raw reading and direct mutation."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "0a0d09f7bd0ab3c404ef21a342147457d0c93a7d3dc5bd30db6268144e7b6efeded7dfb8a20c0663b25475d36ce0dd69309aa6b7e987f01f9eaa30df86803877"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-08T20:20:00Z",
+    "updated_at": "2026-03-12T16:49:00Z",
     "name": "Quarantine Buffer",
     "semantic_hash": "capsule-foundation-quarantine-buffer-v1-validation-failure-governance",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Quarantine Buffer\n\n## 1. Definition and Essence\nQuarantine Buffer is the controlled isolation boundary for capsules that fail critical validation or governance checks. It preserves failed artifacts, failure diagnostics, and remediation lineage without allowing contamination of the sovereign active graph.\n\n## 2. Core Attributes\n- `quarantine_reason` normalized failure category\n- `captured_artifact` immutable snapshot of rejected payload\n- `remediation_status` workflow state for repair attempts\n- `release_policy` conditions required for reinstatement\n- `arbiter_notes` parliamentary or architect decisions\n\n## 3. Lifecycle\nArtifacts enter quarantine on hard gate failure, undergo automated and human remediation attempts, and either re-enter the pipeline after successful validation or remain archived with full audit trace.\n\n## 4. Integration\n- **CapsuleOS:** depends on governance and integrity guarantees.\n- **A2C Validate Stage:** receives invalid candidates for isolation.\n- **N-Infinity Parliament:** arbitrates contested or high-impact cases.\n- **Audit Log:** stores immutable review history.\n\n## 5. Philosophical Alignment\nQuarantine advances To Dig Deep by refusing silent failure: every rejected claim remains inspectable, repairable, and accountable.\n"
   },
   "neuro_concentrate": {
-    "summary": "Quarantine Buffer in the Dream branch captures a more advanced failure-containment layer for the ecosystem. It pushes toward richer remediation state, cleaner handoff to branch governance and validation, and better differentiation between malformed knowledge, risky uncertainty, branch confusion, and true contamination. The capsule matters because serious systems need more than rejection; they need structured recovery paths. Dream therefore preserves Quarantine Buffer as a future isolation environment for repairable failure, not merely a holding bin for rejected capsules.",
+    "summary": "Quarantine Buffer captures an advanced failure-containment layer for the ecosystem. It pushes toward richer remediation state, cleaner handoff to branch governance and validation, and better differentiation between malformed knowledge, risky uncertainty, branch confusion, and true contamination. The capsule matters because serious systems need more than rejection; they need structured recovery paths. It therefore preserves Quarantine Buffer as an isolation environment for repairable failure rather than merely a holding bin for rejected capsules.",
     "keywords": [
       "quarantine",
       "buffer",
@@ -87,5 +87,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "5603830c8deccc42d3702eb02a02e8905cabca375ae4e6edd2bebeb9a5d1c0ade1f9015f14c7ff7aeb441bcc16e1d6cbaf1af694e209ef93a1a3d2743d6cf6a2"
+  "integrity_sha3_512": "6e0e2ba31637be64f8099fc57758ae2650656bbfb852249dbf66b400b4fd042c88834a85b6fa872d6eee87c1ce6c359f841781bcea8847c5a0338b4241dc9c8b"
 }

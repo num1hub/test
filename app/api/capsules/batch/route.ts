@@ -8,13 +8,16 @@ import { appendValidationLog } from '@/lib/validationLog';
 import { autoFixCapsule, validateCapsule } from '@/lib/validator';
 import type { ValidationIssue } from '@/lib/validator/types';
 import { isRecordObject } from '@/lib/validator/utils';
-import { isAuthorized } from '@/lib/apiSecurity';
+import { isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 
 const isFixableGate = (gate: string): boolean => {
   return gate === 'G10' || gate === 'G11' || gate === 'G15' || gate === 'G16';
 };
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
@@ -131,6 +134,9 @@ export async function POST(request: Request) {
 }
 
 export async function DELETE(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

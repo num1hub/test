@@ -79,7 +79,6 @@ function ProjectDetailPageContent() {
 
   useEffect(() => {
     const token = getVaultToken();
-    if (!token) return;
 
     void fetchBranchList({ token, projectId }).then(({ response, data }) => {
       if (!response.ok || !data) return;
@@ -108,17 +107,12 @@ function ProjectDetailPageContent() {
 
   const handleProjectDiff = async () => {
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     try {
       const response = await fetch('/api/diff', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
         },
         body: JSON.stringify({
           branchA: 'real',
@@ -151,11 +145,6 @@ function ProjectDetailPageContent() {
     }
 
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     setIsPreviewingMerge(true);
     try {
       const { response, data } = await applyBranchMerge(
@@ -214,11 +203,6 @@ function ProjectDetailPageContent() {
     }
 
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     setIsApplyingMerge(true);
     try {
       const { response, data } = await applyBranchMerge(

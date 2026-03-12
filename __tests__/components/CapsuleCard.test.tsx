@@ -23,7 +23,8 @@ describe('CapsuleCard', () => {
     render(<CapsuleCard capsule={mockCapsule} />)
     
     expect(screen.getByText('capsule.test.v1')).toBeInTheDocument()
-    expect(screen.getByText('concept')).toBeInTheDocument()
+    expect(screen.getByText('[CN] concept')).toBeInTheDocument()
+    expect(screen.getByText('Face TES')).toBeInTheDocument()
     expect(screen.getByText('active')).toBeInTheDocument()
     expect(screen.getByText('This is a test summary for the capsule card.')).toBeInTheDocument()
     // Checks that long hashes are truncated

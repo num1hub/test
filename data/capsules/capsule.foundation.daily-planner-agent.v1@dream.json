@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:28:00Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T17:22:00Z",
     "name": "Daily Planner Agent",
     "semantic_hash": "daily-planner-agent-today-tomorrow-scheduling-focus-execution",
     "priority": "high",
@@ -19,13 +19,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Daily Planner Agent\n\n## 1. Role\nDaily Planner Agent will become the adaptive short-horizon planner that continuously compresses the larger planning field into grounded plans for today, tomorrow, and the immediate week.\n\n## 2. Future Daily Planning Contract\nThe agent will reshape near-horizon work from execution evidence, reminders, risk signals, branch posture, and realistic capacity instead of from static task lists. It will explain why one item deserves today, why another should wait, and what changed when the daily field is re-cut.\n\n## 3. Operational Consequence\nDaily planning will become more responsive to real human load, missed work, changing urgency, and new evidence from the graph. Strategy will stay livable at day scale because the short horizon will update without losing alignment with the roadmap.\n\n## 4. Philosophical Alignment\nDaily Planner Agent supports To Dig Deep by turning strategy into disciplined present-tense action at the scale of real days."
+    "content": "# Daily Planner Agent\n\n## 1. Role\nDaily Planner Agent is the adaptive short-horizon planner that continuously compresses the larger planning field into grounded plans for today, tomorrow, and the immediate week.\n\n## 2. Daily Planning Contract\nThe agent reshapes near-horizon work from execution evidence, reminders, risk signals, execution posture, and realistic capacity instead of from static task lists. It explains why one item deserves today, why another should wait, and what changed when the daily field is re-cut.\n\n## 3. Operational Consequence\nDaily planning becomes more responsive to real human load, missed work, changing urgency, and new evidence from the graph. Strategy stays livable at day scale because the short horizon updates without losing alignment with the roadmap.\n\n## 4. Philosophical Alignment\nDaily Planner Agent supports To Dig Deep by turning strategy into disciplined present-tense action at the scale of real days."
   },
   "neuro_concentrate": {
-    "summary": "Daily Planner Agent defines the future adaptive short-horizon planning role for N1Hub: stronger today/tomorrow reshaping, capacity-aware focus selection, tighter coordination with reminder and risk signals, and clearer explanations of why work enters or leaves the immediate execution window.",
+    "summary": "Daily Planner Agent defines the short-horizon planning lane that compresses broader strategy into grounded plans for today, tomorrow, and the immediate week. It uses execution evidence, reminders, risk signals, execution posture, and realistic capacity to decide what belongs in the active window and what should wait. The capsule matters because strategic intent fails when day-scale plans ignore real human load, missed work, or shifting urgency. It makes near-term planning adaptive, explainable, and aligned with the larger roadmap instead of treating the daily field as a static task list.",
     "keywords": [
       "daily-planner-agent",
-      "dream-branch",
+      "short-horizon",
       "today",
       "tomorrow",
       "week",
@@ -127,9 +127,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present planning doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5fbb20ffde9f67024fb6b03781042ea0a9fc9f505c30cb896c8baa5f7df013859fc0bd4179b4a226cf28526d1215935ddf94c09061ead70aed51e8468cbb180b"
 }

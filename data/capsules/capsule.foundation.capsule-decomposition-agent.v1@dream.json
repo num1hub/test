@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:42:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T17:22:00Z",
     "name": "Capsule Decomposition Agent",
     "semantic_hash": "capsule-decomposition-agent-continuous-atomization-lineage-safe-splits",
     "priority": "high",
@@ -19,13 +19,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Decomposition Agent\n\n## 1. Role\nCapsule Decomposition Agent will continuously keep atoms atomic and hubs bounded as the vault compounds. Structural splitting will become a first-class maintenance skill instead of occasional cleanup performed only after ambiguity has hardened.\n\n## 2. Future Atomization Surface\n- stronger automatic detection of oversized capsules and hidden multi-entity blobs\n- cleaner split previews that preserve lineage, links, and branch meaning\n- tighter cooperation with Review Agent, Branch Steward Agent, and Vault Update Agent\n- safer night-shift queues for bounded structural splitting of stale or overloaded capsules\n\n## 3. Operational Consequence\nThe vault will resist blob growth because decomposition pressure will be continuous, reviewable, and explicitly routed instead of deferred until structure has already become expensive to reason about.\n\n## 4. Philosophical Alignment\nCapsule Decomposition Agent supports To Dig Deep by insisting that deep structure requires clear atoms and bounded hubs."
+    "content": "# Capsule Decomposition Agent\n\n## 1. Role\nCapsule Decomposition Agent continuously keeps atoms atomic and hubs bounded as the vault compounds. Structural splitting is a first-class maintenance skill instead of occasional cleanup performed only after ambiguity has hardened.\n\n## 2. Atomization Surface\n- stronger automatic detection of oversized capsules and hidden multi-entity blobs\n- cleaner split previews that preserve lineage, links, and structural meaning\n- tighter cooperation with Review Agent, Branch Steward Agent, and Vault Update Agent\n- safer night-shift queues for bounded structural splitting of stale or overloaded capsules\n\n## 3. Operational Consequence\nThe vault resists blob growth because decomposition pressure is continuous, reviewable, and explicitly routed instead of deferred until structure has already become expensive to reason about.\n\n## 4. Philosophical Alignment\nCapsule Decomposition Agent supports To Dig Deep by insisting that deep structure requires clear atoms and bounded hubs."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Decomposition Agent defines the future continuous atomization lane for N1Hub: stronger detection of overloaded capsules, lineage-preserving split previews, safer night-shift decomposition queues, and tighter coordination with review and branch-routing workers.",
+    "summary": "Capsule Decomposition Agent defines the maintenance lane that keeps atoms atomic and hubs bounded as the vault grows. It covers early detection of overloaded capsules, split previews that preserve lineage and links, safer night-shift decomposition queues, and coordination with review, stewardship, and update agents. The capsule matters because blob growth makes the graph harder to trust and reason about long before a validator can catch it. It turns structural splitting into an explicit, reviewable discipline instead of a late cleanup triggered only after ambiguity becomes expensive.",
     "keywords": [
       "capsule-decomposition-agent",
-      "dream-branch",
+      "split-governance",
       "atomization",
       "hub-atomic",
       "capsule-splitting",
@@ -100,9 +100,9 @@
         "at": "2026-03-11T15:33:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present decomposition doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "52942e9bc00dbdefabce92d93021a6100e6321f60157a9867e06be84b438a9d8b2edfd0ddc7e7c386659d13e24e1d065168f697ca82e3df5c6d2dd149b7db7d7"
 }

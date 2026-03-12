@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T16:40:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:24:00Z",
     "name": "AI Wallet",
-    "semantic_hash": "ai-wallet-governed-intelligence-portfolio-health-routing",
+    "semantic_hash": "ai-wallet-governed-intelligence-portfolio-routing-budget-readiness",
     "priority": "high",
     "progress": 42,
     "estimatedHours": 260,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Wallet\n\n## 1. Role\nAI Wallet will behave as a true portfolio manager for intelligence access inside N1Hub. Model supply will be managed as a governed system of credentials, subscriptions, hosted lanes, and routing metadata rather than as a loose drawer of unrelated keys.\n\n## 2. Future Portfolio Contract\n- API providers, hosted model lanes, and subscription lanes managed as one coherent portfolio\n- stronger provider health and readiness visibility before long background work starts\n- clearer routing posture across day co-pilot, night autonomy, batch windows, and premium reasoning lanes\n- safer support for local ChatGPT or Codex access without exposing raw credential plumbing in ordinary surfaces\n- tighter linkage between wallet state, assignment classes, control-plane budgets, and runtime policy\n\n## 3. Operational Consequence\nBackground and foreground work will choose the right lane from explicit supply metadata instead of improvisation. Ownership, secrecy, health, routing, and budget posture will remain visible enough for real autonomous work.\n\n## 4. Philosophical Alignment\nAI Wallet supports To Dig Deep by letting users bring intelligence supply into a sovereign workspace without losing routing discipline, secrecy, or control."
+    "content": "# AI Wallet\n\n## 1. Role\nAI Wallet behaves as a true portfolio manager for intelligence access inside N1Hub. Model supply is managed as a governed system of credentials, subscriptions, hosted lanes, and routing metadata rather than as a loose drawer of unrelated keys.\n\n## 2. Portfolio Contract\n- API providers, hosted model lanes, and subscription lanes managed as one coherent portfolio\n- stronger provider health and readiness visibility before long background work starts\n- clearer routing posture across day co-pilot, night autonomy, batch windows, and premium reasoning lanes\n- safer support for local ChatGPT or Codex access without exposing raw credential plumbing in ordinary surfaces\n- tighter linkage between wallet state, assignment classes, control-plane budgets, and runtime policy\n\n## 3. Operational Consequence\nBackground and foreground work choose the right lane from explicit supply metadata instead of improvisation. Ownership, secrecy, health, routing, and budget posture remain visible enough for real autonomous work.\n\n## 4. Philosophical Alignment\nAI Wallet supports To Dig Deep by letting users bring intelligence supply into a sovereign workspace without losing routing discipline, secrecy, or control."
   },
   "neuro_concentrate": {
-    "summary": "AI Wallet defines the future governed intelligence portfolio of N1Hub: healthier provider readiness, clearer routing across API, hosted, and subscription lanes, assignment-aware metadata, and tighter linkage between wallet state, control surfaces, and runtime policy.",
+    "summary": "AI Wallet defines the governed intelligence portfolio that lets N1Hub manage provider access, hosted lanes, subscriptions, routing posture, and budget readiness as one coherent system instead of a drawer of unrelated keys. It covers provider health, readiness before long background work, routing across day, night, batch, and premium reasoning lanes, and tighter linkage between wallet state, assignment classes, control-plane budgets, and runtime policy. The capsule matters because autonomous work can choose lanes from explicit supply metadata while ownership, secrecy, health, and economic posture stay visible enough for serious operation.",
     "keywords": [
       "ai-wallet",
       "provider-credentials",
@@ -44,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "ai-wallet-governed-intelligence-portfolio-health-routing"
+    "semantic_hash": "ai-wallet-governed-intelligence-portfolio-routing-budget-readiness"
   },
   "recursive_layer": {
     "links": [
@@ -124,12 +124,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:37:35Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d0ab9f586ae5701d9d8c9112fb983cae002e54812e3bfdec1362f1b7bd1bec7ed0a1d0b075910cc07d60b390518e25e66661673cd4a7675b9742b51c00d86be9"
 }

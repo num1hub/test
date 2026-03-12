@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T20:40:00Z",
-    "updated_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-12T17:36:00Z",
     "name": "Personal AI Assistant Planning Navigation",
     "semantic_hash": "assistant-planning-navigation-horizon-tracker-librarian-suggestion-boundary",
     "source": {
@@ -87,9 +87,9 @@
         "at": "2026-03-11T20:40:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Personal AI Assistant decomposition to isolate planning, tracking, retrieval, and recommendation routing from chat ingress and deeper execution lanes."
+        "rationale": "Minted during Personal AI Assistant decomposition to isolate planning, tracking, retrieval, and recommendation routing from chat ingress and deeper execution lanes."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "ec1fb0b0c4e2dbcaf685e656d17662001795f0f1a96d944608944be5fcf9a31bd57fbd17f375be082cf77b0be2c8570dff58fcbd123b9cc89e93b00e25006e14"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:38:00Z",
     "name": "A2C Pipeline Project",
     "semantic_hash": "capsule-project-a2c-v1-pipeline-ingest-validate-emit",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Pipeline Project\n\n## 1. Role\nA2C Pipeline Project will become the industrial refinement program that raises capsule production toward higher trust, clearer branch routing, stronger evidence bundles, and more visible uncertainty handling across the full refinement line.\n\n## 2. Future Project Contract\nThe project will widen throughput without lowering rigor. It will improve branch routing between Dream, Real, and quarantine outcomes; strengthen evidence packaging for review; expose where ambiguity entered the line; and tighten the handoff from refinery output into workspace, Symphony, and swarm execution lanes.\n\n## 3. Operational Consequence\nA2C will behave more like a true sovereign factory and less like a brittle transformation chain. The system will be able to refine difficult material at higher scale without sacrificing trust.\n\n## 4. Philosophical Alignment\nA2C Pipeline Project supports To Dig Deep by making refinement industrial, explicit, and auditable."
+    "content": "# A2C Pipeline Project\n\n## 1. Role\nA2C Pipeline Project is the industrial refinement program that raises capsule production toward higher trust, clearer branch routing, stronger evidence bundles, and more visible uncertainty handling across the full refinement line.\n\n## 2. Project Contract\nThe project widens throughput without lowering rigor. It improves branch routing between Dream, Real, and quarantine outcomes; strengthens evidence packaging for review; exposes where ambiguity entered the line; and tightens the handoff from refinery output into workspace, Symphony, and swarm execution lanes.\n\n## 3. Operational Consequence\nA2C behaves more like a true sovereign factory and less like a brittle transformation chain. The system can refine difficult material at higher scale without sacrificing trust.\n\n## 4. Philosophical Alignment\nA2C Pipeline Project supports To Dig Deep by making refinement industrial, explicit, and auditable."
   },
   "neuro_concentrate": {
-    "summary": "A2C Pipeline Project defines the future industrial refinement program of N1Hub: cleaner branch routing, stronger quarantine and evidence bundles, better observability of ambiguity, and safer packaging of refinery output for workspace, Symphony, and swarm lanes.",
+    "summary": "A2C Pipeline Project defines the industrial refinement program that turns difficult source material into trustworthy capsule candidates at scale. It covers branch routing, stronger evidence packaging, clearer observability of ambiguity, and safer handoff from refinery output into workspace, Symphony, and swarm lanes. The capsule matters because capsule production must scale without sacrificing trust. It frames A2C as a governed factory rather than a brittle transformation chain or a loose sequence of model prompts.",
     "keywords": [
       "a2c",
       "pipeline",
@@ -91,9 +91,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so A2C Pipeline Project states refinement doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "eaf1362c36959f92a89826a27ee2362ccbd19b74663ef9af0a79e5c363f4ab6d630bcb6090ee01c13a853d4a50e6dd857f16f91aeaac4d6ef97f617c8cc29ce5"
 }

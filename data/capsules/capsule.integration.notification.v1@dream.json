@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-07T10:22:14.399Z",
+    "updated_at": "2026-03-12T16:31:00Z",
     "name": "Notification Integration",
     "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Notification Integration\n\n## 1. Definition and Essence\nNotification Integration defines external delivery connectors for channels such as email, push, and Telegram. It governs payload adaptation, delivery guarantees, rate limits, and acknowledgment handling.\n\n## 2. Core Attributes\n- `channel_provider` smtp, push, telegram, webhook\n- `delivery_contract` payload templates and action links\n- `rate_limits` channel throughput and burst constraints\n- `ack_model` confirmation and readback semantics\n- `failure_policy` retries, dead-letter, and escalation behavior\n\n## 3. Lifecycle\nIntegrations are configured with credentials, validated through test sends, used by reminder and assistant workflows, and continuously monitored for delivery health.\n\n## 4. Integration\n- **Notification Module:** core producer of outbound events.\n- **Reminder/Tracker:** scheduling and urgency context.\n- **API Gateway:** secure egress and callback management.\n- **Security:** secret handling and abuse protection.\n\n## 5. Philosophical Alignment\nNotification integration advances To Dig Deep by making timely signals reliable across channels users actually trust.\n"
   },
   "neuro_concentrate": {
-    "summary": "Notification Integration in the Dream branch describes a more resilient delivery fabric for turning internal graph urgency into external signals. It imagines stronger channel governance, cleaner retries, richer acknowledgment handling, and better adaptation to user context across email, push, Telegram, or webhook routes. The capsule matters because alerting only works if delivery remains reliable under real operational pressure. Dream therefore preserves Notification Integration as a future connector layer for trustworthy outward communication, not a thin transport shim.",
+    "summary": "Notification Integration defines the external delivery fabric that turns internal graph urgency into trustworthy signals across email, push, Telegram, and webhook routes. It captures channel governance, retry behavior, acknowledgment handling, payload adaptation, and delivery health as an explicit connector contract instead of leaving outward communication as a thin transport shim. The capsule matters because alerting only works when delivery remains reliable under real operational pressure and user context. It therefore treats notification routing as a governed operational surface for dependable outbound communication rather than a best-effort side channel.",
     "keywords": [
       "notification-integration",
       "email",
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b79536df40aa686abe4332ed37dea71c81f44692f5c118088b08c57dfba7981b9b259eddb6eba08944580c37ac86df3b4f13a65362271f65f281e606f47c85e4"
+  "integrity_sha3_512": "5d9b41d1a1c061092d3e8a6159a425a088c1509b4af7304230aae856949a4f190a2c4486b8af25b59008fb14ca2dc35e15cdf0a0fd08e8d66cdfaef3fa6b1242"
 }

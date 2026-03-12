@@ -1,20 +1,32 @@
+'use client';
+
 import Link from 'next/link';
 import { SovereignCapsule } from '@/types/capsule';
 import ProgressBar from '@/components/ui/ProgressBar';
+import CapsuleVisualMark from '@/components/CapsuleVisualMark';
+import { resolveCapsuleFaceprint } from '@/lib/capsuleFaceprint';
+import { resolveCapsulePalette, withAlpha } from '@/lib/capsulePalette';
+import { resolveCapsulePresence } from '@/lib/capsulePresence';
+import type { CapsuleVisualProfileKey } from '@/lib/capsuleVisualProfile';
 import { capsuleTierBadgeClass, formatCapsuleTier } from '@/lib/capsuleTier';
 
-export default function CapsuleDetailView({ capsule }: { capsule: SovereignCapsule }) {
+export default function CapsuleDetailView({
+  capsule,
+  visualProfile,
+}: {
+  capsule: SovereignCapsule;
+  visualProfile?: CapsuleVisualProfileKey;
+}) {
   const { metadata, core_payload, neuro_concentrate, recursive_layer, integrity_sha3_512 } = capsule;
-
-  const typeColors: Record<string, string> = {
-    foundation: 'border-amber-900 bg-amber-900/20 text-amber-400',
-    concept: 'border-blue-900 bg-blue-900/20 text-blue-400',
-    operations: 'border-emerald-900 bg-emerald-900/20 text-emerald-400',
-    physical_object: 'border-orange-900 bg-orange-900/20 text-orange-400',
-    project: 'border-violet-900 bg-violet-900/20 text-violet-400',
-  };
-  const typeBadgeClass =
-    (metadata.type && typeColors[metadata.type]) || 'border-slate-700 bg-slate-800 text-slate-400';
+  const palette = resolveCapsulePalette(metadata);
+  const faceprint = resolveCapsuleFaceprint(metadata.capsule_id);
+  const presence = resolveCapsulePresence({
+    metadata,
+    palette,
+    linkCount: recursive_layer.links?.length ?? 0,
+  });
+  const familyLabel =
+    palette.key === metadata.type || !metadata.type ? null : palette.label;
 
   const getConfidence = (key: string, index: number) => {
     const vector = neuro_concentrate.confidence_vector;
@@ -37,27 +49,116 @@ export default function CapsuleDetailView({ capsule }: { capsule: SovereignCapsu
 
   return (
     <div className="space-y-6">
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-lg">
-        <div className="mb-4 flex flex-wrap gap-2">
-          <span className={`rounded border px-2 py-1 font-mono text-xs ${typeBadgeClass}`}>
-            TYPE: {metadata.type || 'unknown'}
-          </span>
-          <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
-            STATUS: {metadata.status || 'unknown'}
-          </span>
-          <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
-            SUBTYPE: {metadata.subtype || 'unknown'}
-          </span>
-          <span
-            className={`rounded border px-2 py-1 font-mono text-xs ${capsuleTierBadgeClass(
-              metadata.tier,
-            )}`}
+      <div
+        className="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-lg"
+        style={{
+          borderColor: palette.cardBorder,
+          boxShadow: `0 24px 52px -34px ${palette.cardGlow}`,
+        }}
+      >
+        <div className="mb-6 flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
+          <div className="flex flex-wrap gap-2">
+            <span
+              className="rounded border px-2 py-1 font-mono text-xs"
+              style={{
+                color: palette.badgeText,
+                borderColor: palette.badgeBorder,
+                backgroundColor: palette.badgeBackground,
+              }}
+            >
+              TYPE: {metadata.type || 'unknown'}
+            </span>
+            {familyLabel ? (
+              <span
+                className="rounded border px-2 py-1 font-mono text-xs"
+                style={{
+                  color: palette.badgeText,
+                  borderColor: palette.badgeBorder,
+                  backgroundColor: palette.badgeBackground,
+                }}
+              >
+                PALETTE: [{palette.sigil}] {familyLabel} · {palette.tone}
+              </span>
+            ) : null}
+            <span
+              className="rounded border px-2 py-1 font-mono text-xs"
+              style={{
+                color: palette.badgeText,
+                borderColor: palette.badgeBorder,
+                backgroundColor: palette.badgeBackground,
+              }}
+              >
+                RANK: {palette.rankLabel}
+              </span>
+            <span
+              className="rounded border px-2 py-1 font-mono text-xs"
+              style={{
+                color: palette.badgeText,
+                borderColor: palette.badgeBorder,
+                backgroundColor: palette.badgeBackground,
+              }}
+            >
+              PRESENCE: {presence.label}
+            </span>
+            <span
+              className="rounded border px-2 py-1 font-mono text-xs"
+              style={{
+                color: palette.badgeText,
+                borderColor: palette.badgeBorder,
+                backgroundColor: palette.badgeBackground,
+              }}
+            >
+              MOTIF: {palette.motif}
+            </span>
+            <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
+              STATUS: {metadata.status || 'unknown'}
+            </span>
+            <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-300">
+              SUBTYPE: {metadata.subtype || 'unknown'}
+            </span>
+            <span
+              className={`rounded border px-2 py-1 font-mono text-xs ${capsuleTierBadgeClass(
+                metadata.tier,
+              )}`}
+            >
+              {formatCapsuleTier(metadata.tier)}
+            </span>
+            <span className="rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-400 xl:ml-auto">
+              v{metadata.version ?? '-'}
+            </span>
+          </div>
+          <div
+            className="flex items-start gap-3 rounded-2xl border border-slate-800/70 bg-slate-950/60 px-4 py-3"
+            style={{
+              borderColor: withAlpha(palette.accent, 0.22 * presence.ringBoost),
+              boxShadow: `0 18px 44px -34px ${withAlpha(
+                palette.accent,
+                0.18 * presence.haloBoost,
+              )}`,
+            }}
           >
-            {formatCapsuleTier(metadata.tier)}
-          </span>
-          <span className="ml-auto rounded border border-slate-700 bg-slate-800 px-2 py-1 font-mono text-xs text-slate-400">
-            v{metadata.version ?? '-'}
-          </span>
+            <CapsuleVisualMark
+              palette={palette}
+              capsuleId={metadata.capsule_id}
+              presenceTier={presence.tier}
+              visualProfile={visualProfile}
+              size="lg"
+            />
+            <div className="min-w-0">
+              <div className="text-[11px] uppercase tracking-[0.24em]" style={{ color: palette.badgeText }}>
+                [{palette.sigil}] {palette.tone}
+              </div>
+              <div className="mt-1 text-sm font-semibold text-slate-100">{presence.label}</div>
+              <div className="mt-1 text-xs uppercase tracking-[0.2em]" style={{ color: palette.badgeText }}>
+                {palette.rankLabel}
+              </div>
+              <div className="mt-1 text-xs uppercase tracking-[0.2em] text-slate-500">{palette.motif}</div>
+              <div className="mt-1 text-[11px] uppercase tracking-[0.2em]" style={{ color: palette.badgeText }}>
+                Face {faceprint.memoryTag}
+              </div>
+              <div className="mt-1 max-w-sm text-xs leading-5 text-slate-400">{palette.memoryCue}</div>
+            </div>
+          </div>
         </div>
 
         <h1 className="mb-2 break-all text-2xl font-bold text-slate-100 md:text-3xl">

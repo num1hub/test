@@ -17,14 +17,8 @@ export default function EditProjectPage() {
   const { capsules, fetchCapsules, isLoading } = useCapsuleStore();
 
   useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     void fetchCapsules();
-  }, [fetchCapsules, router]);
+  }, [fetchCapsules]);
 
   const project = useMemo(() => {
     return capsules.find(

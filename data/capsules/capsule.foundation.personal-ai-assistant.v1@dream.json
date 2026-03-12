@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-12T18:02:00Z",
     "name": "Personal AI Assistant",
     "semantic_hash": "assistant-parent-routing-conversation-continuity-planning-orchestration-governance",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Personal AI Assistant\n\n## 1. Role\nPersonal AI Assistant is the symbiotic carrier surface through which one human speaks to N1Hub, receives graph-grounded explanation, and routes bounded work into deeper execution lanes. It routes that surface through five bounded sub-hubs so conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control stay explicit instead of collapsing into one overloaded directory.\n\n## 2. Routing Surfaces\n- `conversation-ingress` owns graph-grounded conversation, session memory shell, and prompt surfaces that turn operator intent into bounded assistant work.\n- `memory-continuity` owns identity, memory, context engineering, and preference surfaces that keep the assistant stable across time.\n- `planning-navigation` owns planning, tracking, retrieval, and suggestion surfaces that help the assistant explain what matters now.\n- `execution-orchestration` owns delegation, mining, swarm, stewardship, and A2C handoff surfaces that let the assistant move work into deeper lanes without becoming the fleet itself.\n- `governance-control` owns wallet, control-plane, review, branch, notification, and integration posture that keep assistant action visible and governable.\n\n## 3. Parent Boundary\nThe parent assistant hub keeps only the top-level relationship to Workspace, Human-AI Symbiosis, Key Agents, CapsuleOS, To Dig Deep, and the five sub-hubs. Detailed routing now flows through the sub-hubs so the assistant remains the carrier contract for one stable partner surface instead of a flat registry of every adjacent module."
   },
   "neuro_concentrate": {
-    "summary": "Personal AI Assistant routes its partner surface through five bounded sub-hubs instead of carrying every adjacent module at the parent layer. Conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control now define the assistant topology explicitly, which keeps the carrier surface legible while preserving richer future routing across chat, continuity, planning, swarm handoff, and operator governance. The result is a clearer assistant doctrine that no longer depends on one overlinked parent hub to describe the whole symbiotic system.",
+    "summary": "Personal AI Assistant routes its partner surface through five bounded sub-hubs instead of carrying every adjacent module at the parent layer. Conversation ingress, memory continuity, planning navigation, execution orchestration, and governance control now define the assistant topology explicitly, which keeps the carrier surface legible while preserving richer routing across chat, continuity, planning, swarm handoff, and operator governance. The result is a clearer assistant doctrine that no longer depends on one overlinked parent hub to describe the whole symbiotic system.",
     "keywords": [
       "personal-ai-assistant",
       "hub-decomposition",
@@ -141,21 +141,21 @@
         "event": "governance_sync_retain_dream_applied",
         "agent": "n1",
         "run_id": "TODO-023",
-        "rationale": "The Dream assistant capsule was narrowed to future-only assistant delta after Real became the explicit canonical statement of the current N1 carrier contract. This preserves Dream as roadmap doctrine without letting it override live assistant behavior."
+        "rationale": "The assistant capsule was narrowed to roadmap delta after the canonical N1 carrier contract moved to the live source surface. This preserves the overlay as roadmap doctrine without letting it override live assistant behavior."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states assistant doctrine directly."
       },
       {
         "at": "2026-03-11T20:40:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Personal AI Assistant into five bounded sub-hubs so conversation, continuity, planning, orchestration, and governance routing no longer collapse into a 29-link parent hub."
+        "rationale": "Refactored Personal AI Assistant into five bounded sub-hubs so conversation, continuity, planning, orchestration, and governance routing no longer collapse into a 29-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "4398629a94790ae684a9709a7499090704da5b4d4545f21899fabcacffbd804f8b77940e3cd9e38fa052ace80406862ff26fe8246297a8214fd747ff5063d994"
 }

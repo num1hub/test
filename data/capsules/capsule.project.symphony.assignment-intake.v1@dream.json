@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:55:00Z",
-    "updated_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T18:05:00Z",
     "name": "Symphony Project Assignment Intake",
     "semantic_hash": "project-symphony-assignment-intake-tracker-workspace-jobs-routing",
     "source": {
@@ -79,9 +79,9 @@
         "at": "2026-03-12T02:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony Project decomposition to isolate tracker-fed intake, workspace-origin requests, swarm assignments, and capsule-job routing."
+        "rationale": "Minted during Symphony Project decomposition to isolate tracker-fed intake, workspace-origin requests, swarm assignments, and capsule-job routing."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "7d892f4773bae244d2f94407e4da3bb4507633fc107351d21d9a9557a25abc0c77a7892e9ca6fe75f741a01adc5cf77c4cb229eebba55ca68ebc2ee7b42c2bf7"
 }

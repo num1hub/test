@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { getClientAuthHeaders } from '@/lib/clientAuth';
 
 interface TrendPoint {
   date: string;
@@ -25,11 +26,8 @@ export default function VaultHealthCard() {
   useEffect(() => {
     const run = async () => {
       try {
-        const token = localStorage.getItem('n1hub_vault_token');
         const res = await fetch('/api/validate/stats?limit=1000', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          headers: getClientAuthHeaders(),
         });
 
         if (!res.ok) {

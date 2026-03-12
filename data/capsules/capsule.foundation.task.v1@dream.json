@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T16:12:00Z",
     "name": "Task",
     "semantic_hash": "task-actionable-unit-work-priority-status-gold-core",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Task: The Atomic Unit of Work\n\n## 1. Role\nTask will become a sharper execution atom for N1Hub, carrying enough context, evidence expectation, timing posture, and dependency clarity to support a predictive operating system for action.\n\n## 2. Future Task Contract\nTasks will improve in decomposition quality, effort realism, definition-of-done discipline, dependency semantics, branch targeting, reminder coupling, and coordination between human assignees and bounded agent lanes.\n\n## 3. Operational Consequence\nExecution quality will improve because the smallest useful work unit will stop being vague. Tasks will remain clear enough to track, delegate, review, and complete honestly across human and agent effort.\n\n## 4. Philosophical Alignment\nTask supports To Dig Deep by making atomic work clearer, more accountable, and more useful instead of merely more numerous."
+    "content": "# Task: The Atomic Unit of Work\n\n## 1. Role\nTask is a sharper execution atom for N1Hub, carrying enough context, evidence expectation, timing posture, and dependency clarity to support a predictive operating system for action.\n\n## 2. Task Contract\nTasks improve decomposition quality, effort realism, definition-of-done discipline, dependency semantics, branch targeting, reminder coupling, and coordination between human assignees and bounded agent lanes.\n\n## 3. Operational Consequence\nExecution quality improves because the smallest useful work unit stops being vague. Tasks remain clear enough to track, delegate, review, and complete honestly across human and agent effort.\n\n## 4. Philosophical Alignment\nTask supports To Dig Deep by making atomic work clearer, more accountable, and more useful instead of merely more numerous."
   },
   "neuro_concentrate": {
-    "summary": "Task defines the future sharper execution atom for N1Hub: stronger decomposition quality, clearer dependency semantics, richer definition-of-done discipline, better effort expectations, explicit branch targeting, and tighter coordination with reminder, tracker, and delegation flows.",
+    "summary": "Task defines the atomic execution unit that lets N1Hub turn goals and plans into bounded, reviewable work. It covers decomposition quality, dependency semantics, definition-of-done discipline, realistic effort expectations, reminder coupling, and coordination across human assignees and agent lanes. The capsule matters because execution quality depends on the smallest work object being explicit enough to track, delegate, review, and complete honestly. It keeps action from collapsing into vague intent or unbounded backlog noise.",
     "keywords": [
       "task",
       "action",
@@ -97,9 +97,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing so the capsule states present execution doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "2b1c227452bdd37eb20414af01ca433a86031c3169a003cf5ef31ed0af7bee42da53545b1cf76273bdfee7cb69061b7e9ffff6b51d8bf15fe0c817c9431bbd23"
 }

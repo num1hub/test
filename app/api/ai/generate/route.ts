@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 import { generateTextWithAiProvider } from '@/lib/ai/providerRuntime';
 import { aiWalletProviderIdSchema } from '@/lib/aiWalletSchema';
 
@@ -36,6 +36,9 @@ function resolveAiErrorStatus(error: unknown): number {
 }
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

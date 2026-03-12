@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-07T10:22:14.242Z",
+    "updated_at": "2026-03-12T16:42:00Z",
     "name": "Permission",
     "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write",
     "tier": 2
@@ -17,7 +17,7 @@
     "content": "# Permission\n\n## 1. Definition and Essence\nPermission defines fine-grained capability semantics such as read, write, execute, and administrative rights. It enables policy-driven access control across capsules while preserving auditability and least-privilege governance.\n\n## 2. Core Attributes\n- `permission_key` canonical capability identifier\n- `resource_scope` capsule or module boundary affected\n- `grant_conditions` policy predicates for assignment\n- `revocation_rules` conditions for automatic or manual removal\n- `audit_requirements` logging and review obligations\n\n## 3. Lifecycle\nPermissions are granted through role bindings or direct policy, checked on every protected operation, and continuously audited for least-privilege compliance.\n\n## 4. Integration\n- **Role:** groups permissions into reusable authority bundles.\n- **Project and Team:** enforces scoped collaboration rights.\n- **Workspace:** secures module operations and settings.\n- **Architect Override:** provides exceptional audited bypass path.\n\n## 5. Philosophical Alignment\nPermission capsules operationalize To Dig Deep by enforcing rigorous trust boundaries around sovereign knowledge mutation.\n"
   },
   "neuro_concentrate": {
-    "summary": "Permission in the Dream branch represents a more expressive capability grammar for the ecosystem. It pushes toward cleaner branch-aware rights, sharper agent delegation boundaries, better economic-action controls, and stronger emergency and audit semantics than the current baseline permission model fully encodes. The capsule matters because future sovereignty will be won or lost at the level of exact allowed actions. Dream therefore preserves Permission as a future control language for serious graph governance, not merely the smallest current access unit.",
+    "summary": "Permission defines the capability grammar that keeps access, delegation, emergency controls, and audit obligations precise enough for serious graph governance. It sharpens rights boundaries across human roles, agent actions, economic operations, and exceptional override paths so the system can distinguish allowed work from forbidden mutation with less ambiguity and better traceability. The capsule matters because sovereignty is won or lost at the level of exact permitted actions rather than abstract trust claims. It therefore acts as a control language for disciplined graph governance, not merely the smallest current access unit.",
     "keywords": [
       "permission",
       "capability-unit",
@@ -61,5 +61,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "d40e82c4858ed201d573936e5d87a9eaa565e4c284b1e3e3663f01124dfd63cfce8451a56c6b847425275045e7b379ea20a33e167f977c20d3ab54e8027a64c2"
+  "integrity_sha3_512": "ab0999dda5688fc2c0c720a64c1c4ea2f9570eee1bc2e744e902c948a5de43248ac6de4fcf2457c2ee0243ab8d62606dfd64987bba3b7b5a0688ed80d212c10f"
 }

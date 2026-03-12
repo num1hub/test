@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { NextResponse } from 'next/server';
-import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
 import { stageOperatorInput } from '@/lib/a2c/ingest';
 import { CAPSULES_DIR, ensureCapsulesDir, getExistingCapsuleIds } from '@/lib/capsuleVault';
@@ -66,6 +66,9 @@ async function quarantineCapsule(capsule: unknown, reason: string, errors: Valid
 }
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

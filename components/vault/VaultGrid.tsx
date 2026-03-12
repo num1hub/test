@@ -2,18 +2,21 @@
 
 import { CheckSquare } from 'lucide-react';
 import CapsuleCard from '@/components/CapsuleCard';
+import type { CapsuleVisualProfileKey } from '@/lib/capsuleVisualProfile';
 import type { SovereignCapsule } from '@/types/capsule';
 
 interface VaultGridProps {
   capsules: SovereignCapsule[];
   selectedIds: Set<string>;
   onToggleSelection: (id: string) => void;
+  visualProfile?: CapsuleVisualProfileKey;
 }
 
 export default function VaultGrid({
   capsules,
   selectedIds,
   onToggleSelection,
+  visualProfile,
 }: VaultGridProps) {
   if (capsules.length === 0) {
     return (
@@ -51,7 +54,7 @@ export default function VaultGrid({
                 isSelected ? 'scale-[0.98] rounded-xl ring-2 ring-amber-500' : ''
               }`}
             >
-              <CapsuleCard capsule={capsule} />
+              <CapsuleCard capsule={capsule} visualProfile={visualProfile} />
             </div>
           </div>
         );

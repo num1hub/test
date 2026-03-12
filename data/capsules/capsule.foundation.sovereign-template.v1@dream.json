@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-07T10:22:14.320Z",
+    "updated_at": "2026-03-12T16:48:00Z",
     "name": "Sovereign Template",
     "semantic_hash": "capsule-foundation-sovereign-template-v1-forking-lineage-licensing",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Sovereign Template\n\n## 1. Definition and Essence\nSovereign Template defines reusable project or workflow blueprints that can be forked, customized, and optionally monetized while preserving lineage and licensing semantics across derivative works.\n\n## 2. Core Attributes\n- `template_schema` required structure for reusable blueprint\n- `fork_lineage` ancestry trail for derivative templates\n- `license_model` usage rights and redistribution constraints\n- `versioning_policy` immutable releases with upgrade path\n- `royalty_binding` optional payout policy per derivative adoption\n\n## 3. Lifecycle\nTemplates are authored, validated, published, forked into new initiatives, and continuously versioned while maintaining traceable lineage and optional royalty contracts.\n\n## 4. Integration\n- **Marketplace:** primary discovery and distribution channel.\n- **Royalty Engine:** payout logic for template-derived value.\n- **Project Hubs:** instantiate templates into execution graphs.\n- **A2C and Validator:** enforce structural quality before publication.\n\n## 5. Philosophical Alignment\nTemplate sovereignty aligns with To Dig Deep by turning hard-earned structure into reusable capital without losing attribution or control.\n"
   },
   "neuro_concentrate": {
-    "summary": "Sovereign Template in the Dream branch captures a more advanced packaging layer for reusable knowledge capital. It pushes toward cleaner versioning, richer licensing options, stronger derivation tracking, and a more direct path from internal project structure to external market-ready assets such as capsule packs, workflows, and agent recipes. The capsule matters because templates are where private execution turns into distributable leverage. Dream therefore preserves Sovereign Template as a future productization discipline for know-how, not merely a reusable snapshot format.",
+    "summary": "Sovereign Template defines the packaging layer that turns reusable knowledge capital into versioned, licensable, lineage-preserving assets such as capsule packs, workflows, and agent recipes. It strengthens derivation tracking, richer licensing options, and the path from internal project structure to externally distributable leverage without losing attribution or control. The capsule matters because templates are where private execution becomes reusable capital instead of remaining trapped inside one workspace. It therefore acts as the productization discipline for know-how rather than a simple snapshot format for copied project structure.",
     "keywords": [
       "sovereign-template",
       "blueprint",
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "2b68d3f2e0ca56417ee0eafe52efffe52c1f3daf43990a1c0799e88333ea683c855600a8678fd3aa161128fe4479e6bb31c9b9f2427e5d3fcf7c32f14f8fa421"
+  "integrity_sha3_512": "79ed96087fa00a1b5df2755e8263c2dabb8f691f7b333ea421b7bcd751277a6a725b5ca7fdb6c54581123ae32852f286ad9c89fe910f84f94e121482a1b868dd"
 }

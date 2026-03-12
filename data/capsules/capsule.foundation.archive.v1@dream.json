@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-11T21:10:00Z",
+    "updated_at": "2026-03-12T16:36:00Z",
     "name": "Archive",
     "semantic_hash": "capsule-foundation-archive-v1-retention-restoration-history-tracker",
     "priority": "low",
@@ -22,7 +22,7 @@
     "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed or inactive capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal or governance retention constraints\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores immutable historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context.\n\n## 4. Integration\n- **Workspace:** keeps active view clean while retaining memory.\n- **Tracker:** triggers archival transitions on completion windows.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves governance trace across lifecycle changes.\n\n## 5. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "Archive defines a deeper long-memory system for workspace retention, restoration, and historical retrieval. It points toward more deliberate retention tiers, branch-aware restoration, and smarter historical recall so dormant knowledge can re-enter active context when conditions change. The capsule matters because a second brain must not only remember more, but recover the right memory at the right time. Archive therefore stands as a retention discipline rather than mere cold storage, keeping dormant history operationally recoverable.",
+    "summary": "Archive defines a deeper long-memory system for workspace retention, restoration, and historical retrieval. It sets more deliberate retention tiers, cleaner restoration rules, and smarter historical recall so dormant knowledge can re-enter active context when conditions change. The capsule matters because a second brain must not only remember more, but recover the right memory at the right time. Archive therefore stands as a retention discipline rather than mere cold storage, keeping dormant history operationally recoverable when later work needs lineage, evidence, or reuse.",
     "keywords": [
       "archive",
       "retention",
@@ -83,9 +83,9 @@
         "at": "2026-03-11T21:10:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so Archive states retention doctrine directly."
+        "rationale": "Removed meta-summary phrasing so Archive states retention doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b5391a710e17d5e37ffabfa85bebf42b46334f4c1248940dfa8a85ebc0a598d69fe24fe1cca3a5df25a08745fb78746655b9fd29df64716d49664979ce634daa"
 }

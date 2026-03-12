@@ -1,5 +1,9 @@
-import { describe, expect, it } from 'vitest';
+import fs from 'fs/promises';
+import os from 'os';
+import path from 'path';
+import { afterEach, describe, expect, it } from 'vitest';
 import { getUsageText, parseArgs } from '@/scripts/lib/validateCli/args';
+import { listJsonFiles } from '@/scripts/lib/validateCli/files';
 import { resultsToMarkdown, summarize } from '@/scripts/lib/validateCli/output';
 import type { FileValidationResult } from '@/scripts/lib/validateCli/types';
 
@@ -22,7 +26,15 @@ const sampleResults: FileValidationResult[] = [
   },
 ];
 
+const tempDirs: string[] = [];
+
 describe('validate CLI helpers', () => {
+  afterEach(async () => {
+    await Promise.all(
+      tempDirs.splice(0).map((dir) => fs.rm(dir, { recursive: true, force: true })),
+    );
+  });
+
   it('parses common CLI arguments', () => {
     const options = parseArgs([
       '--dir',
@@ -68,5 +80,24 @@ describe('validate CLI helpers', () => {
     expect(usage).toContain('Usage: n1-validate <file|dir> [options]');
     expect(usage).toContain('--watch');
     expect(usage).toContain('--remote <url>');
+  });
+
+  it('lists real and dream capsules while excluding tombstones', async () => {
+    const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), 'validate-cli-'));
+    tempDirs.push(tempDir);
+
+    await Promise.all([
+      fs.writeFile(path.join(tempDir, 'capsule.real.v1.json'), '{}', 'utf-8'),
+      fs.writeFile(path.join(tempDir, 'capsule.real.v1@dream.json'), '{}', 'utf-8'),
+      fs.writeFile(path.join(tempDir, 'capsule.real.v1@dream.tombstone.json'), '{}', 'utf-8'),
+      fs.writeFile(path.join(tempDir, 'README.md'), 'ignore me', 'utf-8'),
+    ]);
+
+    const files = await listJsonFiles(tempDir);
+
+    expect(files.map((file) => path.basename(file))).toEqual([
+      'capsule.real.v1.json',
+      'capsule.real.v1@dream.json',
+    ]);
   });
 });

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 
 function LockIcon({ className }: { className?: string }) {
   return (
@@ -45,13 +46,9 @@ export default function PasswordChangeForm() {
     setIsLoading(true);
 
     try {
-      const token = localStorage.getItem('n1hub_vault_token');
       const res = await fetch('/api/user/password', {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ currentPassword, newPassword }),
       });
 
@@ -76,6 +73,15 @@ export default function PasswordChangeForm() {
       <div className="mb-4 flex items-center text-slate-100 dark:text-slate-100">
         <LockIcon className="mr-2 h-5 w-5 text-amber-500" />
         <h3 className="text-lg font-bold">Update Master Password</h3>
+      </div>
+
+      <div className="rounded-lg border border-cyan-200 bg-cyan-50 px-4 py-3 text-sm text-cyan-900 dark:border-cyan-900/50 dark:bg-cyan-950/20 dark:text-cyan-100">
+        <div className="font-semibold">Deployment-backed auth note</div>
+        <p className="mt-1 leading-6">
+          In Vercel Hobby mode, the active password and access code should be managed through deployment
+          environment variables such as <code className="font-mono">VAULT_PASSWORD</code> and{' '}
+          <code className="font-mono">N1HUB_ACCESS_CODE</code>. This form is intended for local file-backed mode.
+        </p>
       </div>
 
       <div>

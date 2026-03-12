@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:10:00Z",
-    "updated_at": "2026-03-11T23:10:00Z",
+    "updated_at": "2026-03-12T17:50:00Z",
     "name": "Vault Stewardship Swarm Inventory Pressure",
     "semantic_hash": "vault-stewardship-swarm-inventory-pressure-reading-research-gaps",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:10:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Vault Stewardship Swarm decomposition to isolate vault reading, gap sensing, and research pressure from review, mutation, and runtime control."
+        "rationale": "Minted during Vault Stewardship Swarm decomposition to isolate vault reading, gap sensing, and research pressure from review, mutation, and runtime control."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "fb31a180f0826220aaa0ea2e6c21c0b0014c35e71a77504def1f8286e0a4718328ad71605f4283aa7ccc8ca8a7e5c0c8ed71d6683eee02f22a3019172f912d8f"
 }

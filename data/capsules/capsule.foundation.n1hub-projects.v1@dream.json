@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "n1hub-project-platform-creation-hub-gold-master-core",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T16:50:00Z",
     "name": "N1Hub Projects",
     "priority": "medium",
     "progress": 41,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub Projects\n\n## 1. Portfolio Role\nThe portfolio forms a cleaner and more intelligible fabric: a visible live core, a strategic halo, and a remembered archive instead of one flat soup of projects.\n\n## 2. Portfolio Shape\n- a portfolio map that clearly distinguishes current platform work, strategic expansion lines, and archived memory\n- stronger linkage between project hubs and the capsule-production stack beneath them\n- clearer branch posture for every major initiative\n- more explicit project-capital paths from active work into templates, marketplace circulation, and institutional memory\n- better portfolio hygiene so the platform can grow without losing legibility\n\n## 3. Why It Matters\nProjects are not merely records. They are one of the main structural ways N1Hub thinks, plans, executes, archives, and compounds value over time.\n"
+    "content": "# N1Hub Projects\n\n## 1. Portfolio Role\nThe portfolio forms a cleaner and more intelligible fabric: a visible live core, a strategic halo, and a remembered archive instead of one flat soup of projects.\n\n## 2. Portfolio Shape\n- a portfolio map that clearly distinguishes current platform work, strategic expansion lines, and archived memory\n- stronger linkage between project hubs and the capsule-production stack beneath them\n- clearer operating posture for every major initiative\n- more explicit project-capital paths from active work into templates, marketplace circulation, and institutional memory\n- better portfolio hygiene so the platform can grow without losing legibility\n\n## 3. Why It Matters\nProjects are not merely records. They are one of the main structural ways N1Hub thinks, plans, executes, archives, and compounds value over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1Hub Projects defines a more mature portfolio fabric for project creation, branching, delivery, archive memory, and later circulation. It describes a clearer live core, strategic halo, and remembered archive without breaking lineage. The capsule matters because N1Hub is accumulating not only capsules, but whole project lines that must remain intelligible as one evolving landscape. N1Hub Projects therefore keeps execution, portfolio topology, archive memory, and capital formation connected from the beginning rather than stitched together later.",
+    "summary": "N1Hub Projects defines a more mature portfolio fabric for project creation, evolution, delivery, archive memory, and later circulation. It describes a clearer live core, strategic halo, and remembered archive without breaking lineage. The capsule matters because N1Hub is accumulating not only capsules, but whole project lines that must remain intelligible as one evolving landscape. N1Hub Projects therefore keeps execution, portfolio topology, archive memory, and capital formation connected from the beginning rather than stitched together later.",
     "keywords": [
       "n1hub",
       "project-platform",
@@ -30,7 +30,7 @@
       "capsule-hub",
       "portfolio-topology",
       "marketplace",
-      "real-dream-branching",
+      "portfolio-state-model",
       "n-infinity-agents",
       "to-dig-deep",
       "between-zero-and-one",
@@ -143,9 +143,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed Dream self-reference from the portfolio doctrine so N1Hub Projects states the target portfolio fabric directly."
+        "rationale": "Removed self-referential portfolio language so N1Hub Projects states present portfolio doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "437f82722fc9045f24f0e1da92b81c49bb1303397b0c9c0ca8f95c1aa61cfbfceaa548536f6cab886f8c9bc354f8ad093cbdf5487ca3745be450f60180f47eb5"
 }

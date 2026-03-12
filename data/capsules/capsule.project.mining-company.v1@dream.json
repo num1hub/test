@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-08T23:35:00Z",
+    "updated_at": "2026-03-12T16:31:00Z",
     "name": "Mining Company",
     "semantic_hash": "capsule-project-mining-company-v1-organization-portfolio-capital",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Mining Company\n\n## 1. Definition and Essence\nMining Company frames To Dig Deep as an organizational initiative for sustained knowledge extraction, refinement, synthesis, and compounding intellectual capital across multiple project streams.\n\n## 2. Core Attributes\n- `mission_scope` strategic extraction and compounding goals\n- `operating_model` team, process, and governance structure\n- `project_portfolio` constituent initiatives and priorities\n- `capital_policy` reinvestment and resource allocation rules\n- `impact_metrics` long-term value and resilience indicators\n- `production_chain` quarry, refinery, vault integration, swarm stewardship, and later capitalization\n\n## 3. Lifecycle\nThe initiative is maintained as an evolving strategic portfolio with periodic policy updates, project reprioritization, and capability expansion.\n\n## 4. Integration\n- **To Dig Deep:** direct philosophical implementation anchor.\n- **DeepMine:** quarry and extraction layer.\n- **A2C:** refinery and emission discipline.\n- **N-Infinity:** compounding swarm layer.\n- **Workspace:** operational command interface.\n\n## 5. Philosophical Alignment\nMining Company operationalizes To Dig Deep at organizational scale: find deposits, extract signal, refine structure, and compound value into durable institutional memory.\n"
   },
   "neuro_concentrate": {
-    "summary": "Mining Company in the Dream branch represents the future institutional layer around intellectual extraction, asset formation, and value compounding. It imagines a tighter connection between knowledge mining, template economics, governance, royalties, and long-horizon capital policy than the current real branch can justify today. The branch matters because this initiative is inherently strategic and partially pre-operational. Dream therefore carries the more ambitious organizational thesis: turning To Dig Deep into a durable economic institution, not just a product philosophy.",
+    "summary": "Mining Company defines the institutional layer that turns intellectual extraction, asset formation, and value compounding into a governed organizational program rather than a loose collection of projects. It connects knowledge mining, template economics, governance, royalties, reinvestment policy, and long-horizon capital allocation into one strategic operating thesis. The capsule matters because To Dig Deep becomes durable only when extraction, refinement, ownership, and compounding are organized as a repeatable institution instead of a product slogan. It therefore frames Mining Company as the portfolio-level structure for sovereign intellectual-capital growth.",
     "keywords": [
       "mining-company",
       "portfolio",
@@ -88,5 +88,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "de310e47bc473d9677e2aaa723196841154c7a49793d838ebe180782fb2b090c73c031e048a376c761fa14317fc39dee5a1740e768fcb16a4daddb6c94dbaf73"
+  "integrity_sha3_512": "74a590078d21a13e21184264a67efa7d042a16ec61dc1549a6d88c2acb27fe1ef9fee59c5212f024b8a5c91360de299eb69533d28989ba8d78dbfbf4b1398728"
 }

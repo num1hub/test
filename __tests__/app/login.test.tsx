@@ -2,8 +2,8 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
 import { HttpResponse, http } from 'msw'
 import LoginPage from '@/app/login/page'
-import PrivateOwnerLoginPage from '@/app/architect-gate/egor-n1-vault-7q4x/page'
-import { PRIVATE_OWNER_LOGIN_PATH } from '@/lib/authConfig'
+import PrivateOwnerLoginRoute from '@/app/architect-gate/[[...slug]]/page'
+import PrivateOwnerLoginPage from '@/components/auth/PrivateOwnerLoginPage'
 import { mockRedirect, mockRouter, server } from '../setup'
 
 describe('LoginPage', () => {
@@ -11,12 +11,10 @@ describe('LoginPage', () => {
     window.localStorage.clear()
   })
 
-  it('redirects /login to the private owner gate', async () => {
-    await LoginPage({
-      searchParams: Promise.resolve({ next: '/vault' }),
-    })
+  it('redirects /login back to the locked root entry', async () => {
+    await LoginPage()
 
-    expect(mockRedirect).toHaveBeenCalledWith(`${PRIVATE_OWNER_LOGIN_PATH}?next=%2Fvault`)
+    expect(mockRedirect).toHaveBeenCalledWith('/')
   })
 
   it('renders the private owner login form', () => {
@@ -26,6 +24,14 @@ describe('LoginPage', () => {
     expect(screen.getByPlaceholderText('egor-n1')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('Enter password')).toBeInTheDocument()
     expect(screen.getByPlaceholderText('N1X1')).toBeInTheDocument()
+  })
+
+  it('redirects invalid architect-gate slugs back to root', async () => {
+    await PrivateOwnerLoginRoute({
+      params: Promise.resolve({ slug: ['wrong-secret'] }),
+    })
+
+    expect(mockRedirect).toHaveBeenCalledWith('/')
   })
 
   it('shows error on invalid credentials', async () => {

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T17:58:00Z",
     "name": "Planner",
     "semantic_hash": "planner-routing-objects-horizons-surfaces-signal-intelligence-contract",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Planner\n\n## 1. Role\nPlanner is the strategic and tactical engine of the N1Hub Workspace. It routes that planning field through four bounded sub-hubs so planning objects, horizon compression, operator surfaces, and signal intelligence remain explicit instead of collapsing into one 18-link parent hub.\n\n## 2. Routing Surfaces\n- `planning-objects` owns projects, goals, milestones, tasks, and roadmaps as the explicit planning artifacts whose shape the planner governs.\n- `horizon-compression` owns Planning Horizon Engine plus daily and roadmap planning agents that compress long-range intent into near-term action.\n- `operator-surfaces` owns the assistant and visible planning surfaces that explain, project, and schedule the plan back to the user.\n- `signal-intelligence` owns tracker, swarm, branch, librarian, and agent-lane signals that pressure the planner to re-sequence work under real execution conditions.\n\n## 3. Parent Boundary\nThe parent Planner hub keeps only the top-level relationship to Workspace, CapsuleOS, To Dig Deep, and the four planning sub-hubs. Detailed planning routing now flows through those sub-hubs so Planner remains the sovereign planning contract for N1Hub instead of a flat registry of every object, horizon, surface, and signal lane."
   },
   "neuro_concentrate": {
-    "summary": "Planner routes the planning field through four bounded surfaces: planning objects, horizon compression, operator surfaces, and signal intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the four sub-hubs. This makes future planning doctrine more legible because work artifacts, multi-horizon compression, user-facing planning surfaces, and execution-pressure signals no longer hide inside one overloaded parent capsule. The result is a clearer planning contract for how N1Hub structures intent, compresses it into action, and revises it under real execution pressure.",
+    "summary": "Planner routes the planning field through four bounded surfaces: planning objects, horizon compression, operator surfaces, and signal intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the four sub-hubs. This makes planning doctrine more legible because work artifacts, multi-horizon compression, user-facing planning surfaces, and execution-pressure signals no longer hide inside one overloaded parent capsule. The result is a clearer planning contract for how N1Hub structures intent, compresses it into action, and revises it under real execution pressure.",
     "keywords": [
       "planner",
       "hub-decomposition",
@@ -83,21 +83,21 @@
         "agent": "vault-steward-maintainer",
         "run_id": "vault-steward-1772912850453",
         "job_id": "vault-steward-job-0c9a1c4d8d18a608",
-        "rationale": "The updated summary and keywords are grounded in the capsule content describing the Dream branch's direction toward a clearer multi-horizon operating system, explicit planning discipline, and integration of planning agents. These changes clarify the capsule's focus and support ongoing decomposition efforts."
+        "rationale": "The updated summary and keywords are grounded in the capsule content describing a clearer multi-horizon operating system, explicit planning discipline, and integration of planning agents. These changes clarify the capsule's focus and support ongoing decomposition efforts."
       },
       {
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present planning doctrine directly."
       },
       {
         "at": "2026-03-12T02:15:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Planner into four bounded sub-hubs so planning objects, horizon compression, operator surfaces, and signal intelligence no longer collapse into one 18-link parent hub."
+        "rationale": "Refactored Planner into four bounded sub-hubs so planning objects, horizon compression, operator surfaces, and signal intelligence no longer collapse into one 18-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "fdc772984cff80efa98c2cc85cf126e9e75590bee8e891fe1ef500aab39595b8748a12aa9196168f469c39f3af1f5477d13ef365a3c0f87c813ce07851e15f73"
 }

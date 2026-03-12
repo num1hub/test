@@ -39,7 +39,7 @@ describe('ProjectsPage', () => {
     useCapsuleStore.setState({ capsules: [], isLoading: false, error: null })
   })
 
-  it('redirects to login if token is missing', async () => {
+  it('shows an error state instead of client-side redirecting when local token is missing', async () => {
     const router = useRouter()
 
     render(
@@ -49,8 +49,9 @@ describe('ProjectsPage', () => {
     )
 
     await waitFor(() => {
-      expect(router.push).toHaveBeenCalledWith('/login')
+      expect(screen.getByText('Failed to fetch from server')).toBeInTheDocument()
     })
+    expect(router.push).not.toHaveBeenCalled()
   })
 
   it('renders project cards and supports search', async () => {

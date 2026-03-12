@@ -35,7 +35,6 @@ export const useCapsuleStore = create<CapsuleStore>((set, get) => ({
     set({ isLoading: true, error: null });
     try {
       const token = localStorage.getItem('n1hub_vault_token');
-      if (!token) throw new Error('No token found');
 
       const params = new URLSearchParams();
       if (branch && branch !== 'real') {
@@ -43,7 +42,7 @@ export const useCapsuleStore = create<CapsuleStore>((set, get) => ({
       }
 
       const res = await fetch(`/api/capsules${params.toString() ? `?${params.toString()}` : ''}`, {
-        headers: { Authorization: `Bearer ${token}` },
+        headers: token ? { Authorization: `Bearer ${token}` } : undefined,
       });
 
       if (!res.ok) throw new Error('Failed to fetch from server');

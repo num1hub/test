@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:38:00Z",
     "name": "CapsuleOS Project",
     "semantic_hash": "capsule-project-capsuleos-v1-hub-architecture-governance-execution",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# CapsuleOS Project\n\n## 1. Role\nCapsuleOS Project will become the deeper control-plane program for sovereign knowledge, expanding the platform beyond the current implementation stream toward stronger branch intelligence, safer promotion mechanics, richer validator orchestration, and clearer runtime contracts.\n\n## 2. Future Project Contract\nThe project will focus on making platform law legible at scale, deepening control-plane visibility across runtime, review, promotion, and archive decisions, and creating calmer contracts between quarry, refinery, workspace, swarm, and repository execution lanes.\n\n## 3. Operational Consequence\nSecond-brain behavior will feel more stable because the substrate beneath it will become more deliberate, more governable, and less reliant on scattered folklore.\n\n## 4. Philosophical Alignment\nCapsuleOS Project supports To Dig Deep by making sovereign memory operate through stronger platform law rather than accidental coordination."
+    "content": "# CapsuleOS Project\n\n## 1. Role\nCapsuleOS Project is the deeper control-plane program for sovereign knowledge, expanding the platform beyond the current implementation stream toward stronger branch intelligence, safer promotion mechanics, richer validator orchestration, and clearer runtime contracts.\n\n## 2. Project Contract\nThe project focuses on making platform law legible at scale, deepening control-plane visibility across runtime, review, promotion, and archive decisions, and creating calmer contracts between quarry, refinery, workspace, swarm, and repository execution lanes.\n\n## 3. Operational Consequence\nSecond-brain behavior feels more stable because the substrate beneath it is more deliberate, more governable, and less reliant on scattered folklore.\n\n## 4. Philosophical Alignment\nCapsuleOS Project supports To Dig Deep by making sovereign memory operate through stronger platform law rather than accidental coordination."
   },
   "neuro_concentrate": {
-    "summary": "CapsuleOS Project defines the future control-plane program for sovereign knowledge: stronger branch intelligence, richer validator orchestration, safer promotion mechanics, clearer cross-domain contracts, and a calmer substrate for every downstream N1Hub system.",
+    "summary": "CapsuleOS Project defines the control-plane program that strengthens sovereign knowledge across validator orchestration, promotion mechanics, and cross-domain runtime contracts. It connects platform law to workspace, A2C, DeepMine, Symphony, and N-Infinity so downstream systems inherit a calmer and more governable substrate. The capsule matters because second-brain behavior depends on the platform beneath it being deliberate rather than folkloric. It treats CapsuleOS as the coordinating program for trustworthy memory, not just a label for isolated capsules.",
     "keywords": [
       "capsuleos",
       "platform-root",
@@ -96,9 +96,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so CapsuleOS Project states platform doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "88e164ea9c66f0a86b85e49c52e33b2cc36d3843627da2221acda362f320b64ae895ffdd1e7a6de2063f10fe4bcf4bf8eb6ca651ff4c25f3c79166b02641f0ea"
 }

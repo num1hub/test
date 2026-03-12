@@ -65,8 +65,28 @@ describe('lib/graph/capsuleGraph.ts', () => {
     const coreNode = graphData.nodes.find((node) => node.id === foundation.metadata.capsule_id)
     expect(coreNode).toBeDefined()
     expect(coreNode?.name).toBe('Core')
-    expect(coreNode?.color).toBe('#fbbf24')
-    expect(coreNode?.val).toBe(14.5)
+    expect(coreNode?.color).toBe('#d4b15a')
+    expect(coreNode?.paletteKey).toBe('foundation')
+    expect(coreNode?.paletteLabel).toBe('Foundation')
+    expect(coreNode?.paletteTone).toBe('Gold')
+    expect(coreNode?.paletteSigil).toBe('FD')
+    expect(coreNode?.paletteRankLabel).toBe('Capsule Surface')
+    expect(coreNode?.paletteMotif).toBe('Vault pulse')
+    expect(coreNode?.paletteShape).toBe('orbit')
+    expect(coreNode?.paletteSilhouette).toBe('circle')
+    expect(coreNode?.paletteHeroMark).toBe('neutral')
+    expect(coreNode?.paletteHierarchyDepth).toBe(1)
+    expect(coreNode?.paletteMemoryCue).toBe('neutral capsule signature')
+    expect(coreNode?.presenceLabel).toBe('Hub Surface')
+    expect(coreNode?.presenceTier).toBe('hub')
+    expect(coreNode?.presenceScale).toBe(1.11)
+    expect(coreNode?.connectionCount).toBe(1)
+    expect(coreNode?.faceTag).toBe('COR')
+    expect(coreNode?.faceGlyph).toBeDefined()
+    expect(coreNode?.faceRingCount).toBeGreaterThanOrEqual(1)
+    expect(coreNode?.faceConstellation.length).toBeGreaterThanOrEqual(3)
+    expect(coreNode?.val).toBeCloseTo(16.12)
+    expect(graphData.links[0]?.color).toBe('#d4b15a')
   })
 
   it('drops links pointing outside the visible graph', () => {
@@ -86,14 +106,36 @@ describe('lib/graph/capsuleGraph.ts', () => {
       name: 'Test',
       fullName: 'capsule.concept.test.v1',
       type: '<script>alert(1)</script>',
+      subtype: 'atomic',
       summary: 'summary with <b>unsafe</b> HTML',
       val: 5,
+      paletteKey: 'concept',
+      paletteLabel: 'Concept',
+      paletteTone: 'Blue',
+      paletteSigil: 'CN',
+      paletteRankLabel: 'Capsule Surface',
+      paletteMotif: 'Vault pulse',
+      paletteShape: 'orbit',
+      paletteSilhouette: 'circle',
+      paletteHeroMark: 'neutral',
+      paletteHierarchyDepth: 1,
+      paletteMemoryCue: 'neutral capsule signature',
+      presenceLabel: 'Capsule Surface',
+      presenceTier: 'capsule',
+      presenceScale: 1,
+      connectionCount: 0,
+      faceTag: 'TES',
+      faceGlyph: 'diamond',
+      faceRingCount: 2,
+      faceBandMask: [true, false, true],
+      faceConstellation: [{ x: 0.12, y: -0.24, r: 0.08, opacity: 0.62 }],
       color: '#60a5fa',
       originalColor: '#60a5fa"><script>alert(1)</script>',
     })
 
     expect(tooltip).toContain('&lt;script&gt;alert(1)&lt;/script&gt;')
     expect(tooltip).toContain('&lt;b&gt;unsafe&lt;/b&gt;')
+    expect(tooltip).toContain('Face TES')
     expect(tooltip).not.toContain('<script>')
   })
 

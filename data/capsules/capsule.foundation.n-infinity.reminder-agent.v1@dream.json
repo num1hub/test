@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-07T10:22:14.170Z",
+    "updated_at": "2026-03-12T16:31:00Z",
     "name": "N-Infinity Reminder Agent",
     "semantic_hash": "capsule-foundation-infinity-reminder-agent-v1-deadline-alerts",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# N-Infinity Reminder Agent\n\n## 1. Definition and Essence\nReminder Agent is a specialized N-Infinity worker responsible for deadline proximity detection and reminder dispatch orchestration. It scans task and milestone capsules, applies notification policies, and schedules proactive nudges across configured channels.\n\n## 2. Core Attributes\n- `scan_window` time horizon for upcoming reminder evaluation\n- `reminder_policy` escalation rules by priority and lateness\n- `delivery_channels` in-app, email, push, and optional integrations\n- `snooze_rules` user-controlled deferment and quiet hours handling\n- `dispatch_log` immutable record of reminder events\n\n## 3. Lifecycle\nReminder Agent runs continuously or on interval triggers, computes due-state changes, issues reminders, and records outcomes in activity logs. It cooperates with tracker signals and respects user preferences for timing and channel usage.\n\n## 4. Integration\n- **N-Infinity:** part_of the autonomous agent swarm.\n- **Tracker:** consumes deadline and completion telemetry.\n- **Notification Module:** delegates channel-specific delivery.\n- **User Preferences:** respects quiet windows and urgency policies.\n\n## 5. Philosophical Alignment\nThe reminder agent preserves To Dig Deep momentum by protecting commitments from being forgotten and converting intent into timely action.\n"
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Reminder Agent in the Dream branch represents a more context-aware commitment-preservation service. It imagines reminders that respond better to urgency, quiet hours, dependency state, and demonstrated user behavior instead of relying on simpler timing rules alone. The agent matters because well-timed follow-through is a compound advantage in execution systems. Dream therefore preserves Reminder Agent as a future nudge layer that is more adaptive, respectful, operationally precise, and traceable across channels and user contexts.",
+    "summary": "N-Infinity Reminder Agent defines the commitment-preservation service that keeps deadlines, quiet hours, dependency state, and user context visible enough for timely follow-through. It orchestrates reminders across channels with clearer urgency handling, more respectful timing, and traceable delivery behavior instead of relying on simplistic timing rules alone. The agent matters because well-timed follow-through compounds into a real execution advantage while poorly timed nudges create noise and resentment. It therefore serves as an adaptive, operationally precise reminder layer across channels and user contexts rather than a generic alert loop.",
     "keywords": [
       "n-infinity",
       "reminder-agent",
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "c5de961160f17a3a92fb11e30ae8e96c16ea3b2563616d3cf926110aa5756cf254dc6a80e3f22ca7cf8efe76a4963b4e362519a9ec96ab074ffc6595f4d42e6e"
+  "integrity_sha3_512": "2b8979fb1d1a6eca721c452214ced5bf37793c659db0702fe8fbbd73a9b33907b3cea6a4e5284e20d7b66110f806c1a08d1b164dac76379150c97f6a84913674"
 }

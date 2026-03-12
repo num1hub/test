@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:32:00Z",
     "name": "Symphony Agent Session",
     "semantic_hash": "symphony-agent-session-thread-turn-runtime-codex-workspace",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Agent Session\n\n## 1. Role\nSymphony Agent Session will become the durable live execution envelope for one coding-agent conversation inside one repository assignment, visible across terminal, web, mobile, and control-plane surfaces while work is still in flight.\n\n## 2. Future Session Contract\nSessions will carry assignment handles, richer event and artifact projection, degraded-state visibility, clearer return paths, and stronger linkage between session telemetry, review requests, and downstream operator surfaces.\n\n## 3. Operational Consequence\nSymphony will move from tracking a live thread to managing a searchable, accountable session object whose running state, outputs, failures, and recovery paths remain visible throughout execution.\n\n## 4. Philosophical Alignment\nSymphony Agent Session supports To Dig Deep by making live coding work stateful, inspectable, and attributable while it is still happening."
+    "content": "# Symphony Agent Session\n\n## 1. Role\nSymphony Agent Session is the durable live execution envelope for one coding-agent conversation inside one repository assignment, visible across terminal, web, mobile, and control-plane surfaces while work is still in flight.\n\n## 2. Session Contract\nSessions carry assignment handles, richer event and artifact projection, degraded-state visibility, clearer return paths, and stronger linkage between session telemetry, review requests, and downstream operator surfaces.\n\n## 3. Operational Consequence\nSymphony tracks a live thread through a searchable, accountable session object whose running state, outputs, failures, and recovery paths remain visible throughout execution.\n\n## 4. Philosophical Alignment\nSymphony Agent Session supports To Dig Deep by making live coding work stateful, inspectable, and attributable while it is still happening."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Agent Session defines the future live execution envelope for repository work: assignment handles, richer artifact projection, degraded-session state, cross-surface continuity, and clearer linkage between active coding work and the control surfaces that supervise it.",
+    "summary": "Symphony Agent Session defines the durable live execution envelope for repository work inside N1Hub. It ties assignment handles, active turns, artifact projection, degraded-session visibility, and cross-surface continuity into one inspectable session object that can remain legible across terminal, web, mobile, and control-plane views. The capsule matters because live coding work should not disappear into transient chat threads. It gives running work a stable operational identity so supervision, recovery, review, and downstream artifact routing can stay accountable while execution is still in flight.",
     "keywords": [
       "symphony",
       "agent-session",
@@ -95,9 +95,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Symphony Agent Session states session doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1ae7c5736f4fd6acb9aee8ffff83adb62bcb385e238044b4bc5f412e49cc39b5c4c8c52dc07588420982585e877c0c52e9938c3db1ad4ca44b3cf9367fd88125"
 }

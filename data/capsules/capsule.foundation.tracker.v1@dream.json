@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T15:00:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:58:00Z",
     "name": "Tracker",
     "semantic_hash": "tracker-routing-objects-pressure-feedback-orchestration-history-loop",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Tracker\n\n## 1. Role\nTracker is the predictive execution and accountability layer of N1Hub. It routes that execution field through five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence remain explicit instead of collapsing into one parent hub.\n\n## 2. Routing Surfaces\n- `tracked-objects` owns the goals, milestones, tasks, and project objects whose follow-through Tracker measures.\n- `schedule-pressure` owns reminders, notifications, and calendar pressure that turn telemetry into visible timing consequences.\n- `planning-feedback` owns replanning and operator explanation loops with Planner, Planning Horizon Engine, Personal AI Assistant, and AI Control Surface.\n- `orchestration-signals` owns the execution-risk feeds that Tracker emits toward N-Infinity, Symphony, capsule jobs, and graph-maintenance work.\n- `historical-intelligence` owns metrics, analytics, and archive memory so time-series evidence remains available for retrospection and learning.\n\n## 3. Parent Boundary\nThe parent Tracker hub keeps only the top-level relationship to Workspace, CapsuleOS, To Dig Deep, and the five tracker sub-hubs. Detailed execution routing now flows through those sub-hubs so Tracker remains the predictive execution contract for N1Hub instead of a flat registry of every timing, orchestration, and history surface."
   },
   "neuro_concentrate": {
-    "summary": "Tracker routes the execution field through five bounded surfaces: tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the five sub-hubs. This makes future tracking doctrine more legible because predictive execution, timing pressure, replanning loops, runtime risk feeds, and historical memory no longer hide inside one overloaded parent capsule. The result is a cleaner contract for how execution evidence turns into earlier intervention and better recovery.",
+    "summary": "Tracker routes the execution field through five bounded surfaces: tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence. The parent keeps only top-level relationships to Workspace, CapsuleOS, To Dig Deep, and the five sub-hubs. This makes tracking doctrine more legible because predictive execution, timing pressure, replanning loops, runtime risk feeds, and historical memory no longer hide inside one overloaded parent capsule. The result is a cleaner contract for how execution evidence turns into earlier intervention and better recovery.",
     "keywords": [
       "tracker",
       "hub-decomposition",
@@ -85,21 +85,21 @@
         "event": "governance_sync_retain_dream_applied",
         "agent": "n1",
         "run_id": "TODO-026",
-        "rationale": "The Dream Tracker capsule was narrowed to future-only predictive execution doctrine after Real became the explicit canonical source for the current tracking contract. This preserves the predictive roadmap without leaving the branch split implicit."
+        "rationale": "The tracker capsule was narrowed to predictive-execution delta after the canonical tracking contract moved to the live source surface. This preserves the predictive roadmap without leaving the branch split implicit."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states tracker doctrine directly."
       },
       {
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Tracker into five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence no longer collapse into one parent hub."
+        "rationale": "Refactored Tracker into five bounded sub-hubs so tracked objects, schedule pressure, planning feedback, orchestration signals, and historical intelligence no longer collapse into one parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "fee3c56850b5d875e037ef8ce49a75411d88933aee39a12959bc08b7c51e8e4f5068b579036e95eab0c8704e6930bd1f277fee19b21890dbc2611cc2a427c51d"
 }

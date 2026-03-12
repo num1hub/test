@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import { useCapsuleStore } from '@/store/capsuleStore';
 import { SovereignCapsule } from '@/types/capsule';
 
@@ -92,13 +93,9 @@ export default function ImportModal({ isOpen, onClose }: ImportModalProps) {
     setIsImporting(true);
 
     try {
-      const token = localStorage.getItem('n1hub_vault_token');
       const res = await fetch('/api/capsules/batch', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsules: parsedCapsules, overwrite }),
       });
 

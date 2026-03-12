@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T01:20:00Z",
-    "updated_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T17:58:00Z",
     "name": "Symphony Assignment Intake",
     "semantic_hash": "symphony-assignment-intake-tracker-workspace-jobs-swarm-routing",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T01:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony decomposition to isolate tracker, workspace, swarm, and capsule-job entry surfaces from live session fabric and run-state handling."
+        "rationale": "Minted during Symphony decomposition to isolate tracker, workspace, swarm, and capsule-job entry surfaces from live session fabric and run-state handling."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "e2df434d5e8e0aca5ff424bc769561d189cbce341361ee5a568124c16a4ae8837a1b7ebfac2a6ff5ad5bd938a3ec4272c24a1c39161b7c87c5f611d064c134bf"
 }

@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:42:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:28:00Z",
     "name": "Capsule Librarian Agent",
-    "semantic_hash": "capsule-librarian-agent-vault-memory-guide-branch-archive-literacy",
+    "semantic_hash": "capsule-librarian-agent-vault-retrieval-archive-literacy-grounding",
     "priority": "high",
     "progress": 42,
     "estimatedHours": 270,
@@ -19,18 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Librarian Agent\n\n## 1. Role\nCapsule Librarian Agent will become a richer vault-memory guide that helps users and agents navigate the sovereign library through stronger retrieval, branch literacy, archive awareness, and graph-neighborhood explanation.\n\n## 2. Future Retrieval Surface\n- clearer graph-neighborhood retrieval and ranking\n- stronger duplicate and overlap detection across related capsules\n- better guidance across Real, Dream, and archive contexts\n- deeper support for grounded chat, cross-agent memory, and capsule comparison\n\n## 3. Operational Consequence\nA large capsule vault will remain navigable because retrieval will explain not only what matched, but which canonical nodes are stronger, which branches are relevant, and what historical context should remain in scope.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent supports To Dig Deep by insisting that new work begins with deep retrieval from sovereign memory rather than generic improvisation."
+    "content": "# Capsule Librarian Agent\n\n## 1. Role\nCapsule Librarian Agent is the vault-memory guide that helps users and agents navigate the sovereign library through stronger retrieval, state literacy, archive awareness, and graph-neighborhood explanation.\n\n## 2. Retrieval Surface\n- clearer graph-neighborhood retrieval and ranking\n- stronger duplicate and overlap detection across related capsules\n- better guidance across canonical, projected, and archive contexts\n- deeper support for grounded chat, cross-agent memory, and capsule comparison\n\n## 3. Operational Consequence\nA large capsule vault remains navigable because retrieval explains not only what matched, but which canonical nodes are stronger, which states are relevant, and what historical context stays in scope.\n\n## 4. Philosophical Alignment\nCapsule Librarian Agent supports To Dig Deep by insisting that new work begins with deep retrieval from sovereign memory rather than generic improvisation."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Librarian Agent defines the future richer vault-memory guide for N1Hub: stronger graph-neighborhood retrieval, better overlap detection, clearer Real/Dream/archive literacy, and deeper support for grounding chat and cross-agent memory.",
+    "summary": "Capsule Librarian Agent defines the vault-memory guide that helps users and agents navigate the sovereign library through stronger retrieval, overlap detection, archive awareness, and graph-neighborhood explanation. It covers clearer ranking across canonical, projected, and archived capsules, deeper support for grounded chat and cross-agent memory, and retrieval that explains which nodes are stronger and what historical context stays in scope. The capsule matters because a large vault remains navigable only when retrieval does more than match text and instead teaches the operator how the surrounding graph should be read.",
     "keywords": [
       "capsule-librarian-agent",
-      "dream-branch",
       "retrieval",
       "vault-navigation",
-      "real-branch",
-      "dream-branch",
+      "canonical-state",
+      "projected-state",
       "archive",
+      "grounded-chat",
       "n1hub"
     ],
     "confidence_vector": {
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-librarian-agent-vault-memory-guide-branch-archive-literacy"
+    "semantic_hash": "capsule-librarian-agent-vault-retrieval-archive-literacy-grounding"
   },
   "recursive_layer": {
     "links": [
@@ -89,12 +89,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:37:35Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "9d94197a95e90c838c34a28decccb079636e11dfc6dd9d909814736899bd58151ad9ba42a2b60f81212d462307250c79c62392d5e564f482678b691d773559bd"
 }

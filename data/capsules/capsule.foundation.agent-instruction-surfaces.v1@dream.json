@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T20:05:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:20:00Z",
     "name": "Agent Instruction Surfaces",
-    "semantic_hash": "agent-instruction-surfaces-durable-stack-machine-readable-lane-order",
+    "semantic_hash": "agent-instruction-surfaces-durable-stack-index-load-order",
     "source": {
       "uri": "https://vercel.com/docs/agent-resources",
       "type": "web_documentation"
@@ -23,13 +23,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Instruction Surfaces\n\n## 1. Role\nEvery serious N1Hub agent will enter the repository through a durable local instruction stack before any large tool loop begins. Repository law, doctrine summaries, indexes, and machine-readable exports will remain always-present operating surfaces instead of optional prompt cargo.\n\n## 2. Future Instruction Stack\n- `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `WORKFLOW.md` acting as an explicit layered instruction surface\n- machine-readable exports such as full-vault and codebase index packs\n- concise always-on surfaces that still preserve broad project literacy\n- lane-declared load order so every major swarm lane states which instruction surfaces govern it\n- control-plane awareness of which instruction stack applies to each assignment family\n\n## 3. Operational Consequence\nAgents will enter N1Hub already oriented to repository law, project structure, capsule doctrine, and blast-radius constraints. Skills will remain procedural, while instruction surfaces will carry broad repository and framework truth.\n\n## 4. Philosophical Alignment\nAgent Instruction Surfaces supports To Dig Deep by making versioned local doctrine the default onboarding path for every serious agent lane."
+    "content": "# Agent Instruction Surfaces\n\n## 1. Role\nEvery serious N1Hub agent enters the repository through a durable local instruction stack before any large tool loop begins. Repository law, doctrine summaries, indexes, and machine-readable exports remain always-present operating surfaces instead of optional prompt cargo.\n\n## 2. Instruction Stack\n- `AGENTS.md`, `SOUL.md`, `TOOLS.md`, and `WORKFLOW.md` acting as an explicit layered instruction surface\n- machine-readable exports such as full-vault and codebase index packs\n- concise always-on surfaces that still preserve broad project literacy\n- lane-declared load order so every major swarm lane states which instruction surfaces govern it\n- control-plane awareness of which instruction stack applies to each assignment family\n\n## 3. Operational Consequence\nAgents enter N1Hub already oriented to repository law, project structure, capsule doctrine, and blast-radius constraints. Skills remain procedural, while instruction surfaces carry broad repository and framework truth.\n\n## 4. Philosophical Alignment\nAgent Instruction Surfaces supports To Dig Deep by making versioned local doctrine the default onboarding path for every serious agent lane."
   },
   "neuro_concentrate": {
-    "summary": "Agent Instruction Surfaces defines the future durable instruction stack for N1Hub agents: repo doctrine, compact indexes, machine-readable exports, lane-declared load order, and explicit governance over which surfaces guide each assignment family.",
+    "summary": "Agent Instruction Surfaces defines the durable local instruction stack that every serious N1Hub agent should load before entering a large tool loop. It covers repository law, doctrine summaries, compact indexes, machine-readable exports, lane-declared load order, and explicit governance over which surfaces guide each assignment family. The capsule matters because agents arrive oriented to project structure, capsule doctrine, and blast-radius limits before they improvise. Skills remain procedural overlays, while instruction surfaces carry broader repository truth that stays versioned, local, and reviewable.",
     "keywords": [
       "agent-instruction-surfaces",
-      "dream-branch",
+      "index-packs",
       "agents-md",
       "llms-full",
       "repo-doctrine",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-instruction-surfaces-durable-stack-machine-readable-lane-order"
+    "semantic_hash": "agent-instruction-surfaces-durable-stack-index-load-order"
   },
   "recursive_layer": {
     "links": [
@@ -89,12 +89,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "728495e26f9a6599835d780be5ecd6c69bc425e7af187e702615e929e20afa0e6e69620454f0a4f6bea54c23d59538e704c667dd3e30ebc26f7ade4d1b13daca"
 }

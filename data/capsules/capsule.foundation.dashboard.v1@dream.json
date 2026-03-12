@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T17:28:00Z",
     "name": "Dashboard",
     "semantic_hash": "capsule-foundation-dashboard-v1-workspace-widgets-analytics-tracker",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Dashboard\n\n## 1. Role\nDashboard will become the decisive command surface where the most important graph signals arrive already structured for action rather than merely displayed for inspection.\n\n## 2. Future Dashboard Contract\nThe dashboard will support richer widget composition, stronger project and branch views, clearer capsule-health and swarm-status surfaces, and better prioritization cues across planning, execution, runtime health, and review pressure.\n\n## 3. Operational Consequence\nCompression quality will become visible in the cockpit itself. The user will see what matters now, what is cooling, what is blocked, and which deeper graph paths deserve attention next without drowning in equal-weight signals.\n\n## 4. Philosophical Alignment\nDashboard supports To Dig Deep by guiding attention into the right depth instead of acting as a passive wall of data."
+    "content": "# Dashboard\n\n## 1. Role\nDashboard is the decisive command surface where the most important graph signals arrive already structured for action rather than merely displayed for inspection.\n\n## 2. Dashboard Contract\nThe dashboard supports richer widget composition, stronger project and state views, clearer capsule-health and swarm-status surfaces, and better prioritization cues across planning, execution, runtime health, and review pressure.\n\n## 3. Operational Consequence\nCompression quality becomes visible in the cockpit itself. The user sees what matters now, what is cooling, what is blocked, and which deeper graph paths deserve attention next without drowning in equal-weight signals.\n\n## 4. Philosophical Alignment\nDashboard supports To Dig Deep by guiding attention into the right depth instead of acting as a passive wall of data."
   },
   "neuro_concentrate": {
-    "summary": "Dashboard defines the future command surface of N1Hub: richer widget composition, stronger branch and project views, clearer capsule-health and swarm activity surfaces, and more decisive prioritization so the cockpit guides action instead of merely showing information.",
+    "summary": "Dashboard defines the command surface that gathers graph signals into an operator cockpit shaped for action rather than passive inspection. It covers widget composition, project and state views, capsule-health visibility, swarm status, and prioritization cues across planning, execution, runtime health, and review pressure. The capsule matters because attention collapses when every signal is shown with equal weight. It turns the cockpit into a decision surface that shows what matters now, what is cooling, what is blocked, and where deeper graph work should go next.",
     "keywords": [
       "dashboard",
       "workspace",
@@ -83,9 +83,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present dashboard doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "26a42d44f63fd15216d59c7e76d4a2ee9df9a2ae8a1b423d86452eb9ef10591df821f4b0a21627f4563a6969247d51c6e9eefcccaf0ec6a36d438acd4c8e7a08"
 }

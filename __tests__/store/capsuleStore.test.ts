@@ -37,14 +37,21 @@ describe('capsuleStore', () => {
     expect(result.current.error).toBeNull()
   })
 
-  it('sets error when token is missing', async () => {
+  it('fetches without bearer header when token is missing', async () => {
+    const fetchMock = vi.spyOn(global, 'fetch').mockResolvedValueOnce({
+      ok: true,
+      json: async () => [mockCapsule],
+    } as Response)
+
     const { result } = renderHook(() => useCapsuleStore())
 
     await act(async () => {
       await result.current.fetchCapsules()
     })
 
-    expect(result.current.error).toBe('No token found')
+    expect(fetchMock).toHaveBeenCalledWith('/api/capsules', { headers: undefined })
+    expect(result.current.capsules).toHaveLength(1)
+    expect(result.current.error).toBeNull()
     expect(result.current.isLoading).toBe(false)
   })
 

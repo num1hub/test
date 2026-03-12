@@ -23,8 +23,9 @@ export async function listJsonFiles(targetPath: string): Promise<string[]> {
   return files
     .filter((file) => {
       const parsed = parseBranchFilename(file);
-      return parsed?.branch === 'real' && !parsed.isTombstone;
+      return parsed !== null && !parsed.isTombstone;
     })
+    .sort((left, right) => left.localeCompare(right))
     .map((file) => path.join(targetPath, file));
 }
 

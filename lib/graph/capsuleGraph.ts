@@ -1,5 +1,8 @@
 // @anchor arch:graph.runtime links=doc:projects.reference,doc:branching.real-dream-diff,doc:n1hub.readme note="Capsule graph runtime surface shared by project and vault graph views."
-import type { CapsuleType, SovereignCapsule } from '@/types/capsule';
+import type { SovereignCapsule } from '@/types/capsule';
+import { resolveCapsuleFaceprint } from '@/lib/capsuleFaceprint';
+import { resolveCapsulePalette } from '@/lib/capsulePalette';
+import { resolveCapsulePresence } from '@/lib/capsulePresence';
 
 export type CapsuleGraphNodeData = {
   id: string;
@@ -8,8 +11,29 @@ export type CapsuleGraphNodeData = {
   name: string;
   fullName: string;
   type: string;
+  subtype: string;
   summary: string;
   val: number;
+  paletteKey: string;
+  paletteLabel: string;
+  paletteTone: string;
+  paletteSigil: string;
+  paletteRankLabel: string;
+  paletteMotif: string;
+  paletteShape: string;
+  paletteSilhouette: string;
+  paletteHeroMark: string;
+  paletteHierarchyDepth: number;
+  paletteMemoryCue: string;
+  presenceLabel: string;
+  presenceTier: string;
+  presenceScale: number;
+  connectionCount: number;
+  faceTag: string;
+  faceGlyph: string;
+  faceRingCount: number;
+  faceBandMask: readonly [boolean, boolean, boolean];
+  faceConstellation: readonly { x: number; y: number; r: number; opacity: number }[];
   color: string;
   originalColor: string;
 };
@@ -35,14 +59,6 @@ export type BuildCapsuleGraphOptions = {
 const DEFAULT_NODE_COLOR = '#94a3b8';
 const DEFAULT_LINK_COLOR = '#475569';
 const DEFAULT_SUMMARY = 'No summary available';
-
-const TYPE_COLORS: Record<CapsuleType, string> = {
-  foundation: '#fbbf24',
-  concept: '#60a5fa',
-  operations: '#34d399',
-  physical_object: '#fb923c',
-  project: '#a78bfa',
-};
 
 export const DEFAULT_GRAPH_DIMENSIONS = {
   width: 800,
@@ -73,11 +89,6 @@ function getCapsuleDisplayName(capsule: SovereignCapsule): string {
 
   const parts = capsule.metadata.capsule_id.split('.');
   return parts[parts.length - 2] || capsule.metadata.capsule_id;
-}
-
-function getNodeColor(type?: CapsuleType): string {
-  if (!type) return DEFAULT_NODE_COLOR;
-  return TYPE_COLORS[type] ?? DEFAULT_NODE_COLOR;
 }
 
 function normalizeRelationType(value: string | undefined): string {
@@ -148,11 +159,13 @@ export function buildCapsuleGraphData(
     } satisfies CapsuleGraphEntry;
   });
   const entriesByCapsuleId = new Map<string, CapsuleGraphEntry[]>();
+  const entryByNodeId = new Map<string, CapsuleGraphEntry>();
   const linkCounts = new Map<string, number>();
   const aggregatedLinks = new Map<string, LinkFrequencyBucket>();
   const validNodeIds = new Set(entries.map((entry) => entry.nodeId));
 
   entries.forEach((entry) => {
+    entryByNodeId.set(entry.nodeId, entry);
     const existingEntries = entriesByCapsuleId.get(entry.capsuleId);
     if (existingEntries) {
       existingEntries.push(entry);
@@ -219,8 +232,15 @@ export function buildCapsuleGraphData(
 
   const nodes: CapsuleGraphNodeData[] = entries.map((entry) => {
     const { capsule } = entry;
-    const color = getNodeColor(capsule.metadata.type);
+    const palette = resolveCapsulePalette(capsule.metadata);
+    const faceprint = resolveCapsuleFaceprint(capsule.metadata.capsule_id);
+    const color = palette.graphNode || DEFAULT_NODE_COLOR;
     const connections = linkCounts.get(entry.nodeId) ?? 0;
+    const presence = resolveCapsulePresence({
+      metadata: capsule.metadata,
+      palette,
+      linkCount: connections,
+    });
     const summary =
       typeof capsule.neuro_concentrate?.summary === 'string' &&
       capsule.neuro_concentrate.summary.trim().length > 0
@@ -234,34 +254,76 @@ export function buildCapsuleGraphData(
       name: getCapsuleDisplayName(capsule),
       fullName: entry.capsuleId,
       type: capsule.metadata.type || 'unknown',
+      subtype: capsule.metadata.subtype || 'unknown',
       summary: truncateText(summary, 100),
-      val: 5 + connections * 1.5 + (capsule.metadata.subtype === 'hub' ? 8 : 0),
+      val:
+        5 +
+        connections * 1.5 +
+        (capsule.metadata.subtype === 'hub' ? 8 : 0) +
+        palette.hierarchyDepth * 0.85 +
+        (presence.scaleBoost - 1) * 7,
+      paletteKey: palette.key,
+      paletteLabel: palette.label,
+      paletteTone: palette.tone,
+      paletteSigil: palette.sigil,
+      paletteRankLabel: palette.rankLabel,
+      paletteMotif: palette.motif,
+      paletteShape: palette.shape,
+      paletteSilhouette: palette.silhouette,
+      paletteHeroMark: palette.heroMark,
+      paletteHierarchyDepth: palette.hierarchyDepth,
+      paletteMemoryCue: palette.memoryCue,
+      presenceLabel: presence.label,
+      presenceTier: presence.tier,
+      presenceScale: presence.scaleBoost,
+      connectionCount: connections,
+      faceTag: faceprint.memoryTag,
+      faceGlyph: faceprint.glyph,
+      faceRingCount: faceprint.ringCount,
+      faceBandMask: faceprint.bandMask,
+      faceConstellation: faceprint.constellation,
       color,
-      originalColor: color,
+      originalColor: palette.accent,
     };
   });
 
   const links: CapsuleGraphLinkData[] = Array.from(aggregatedLinks.values())
     .filter((link) => validNodeIds.has(link.sourceId) && validNodeIds.has(link.targetId))
-    .map((link) => ({
-      source: link.sourceId,
-      target: link.targetId,
-      name: link.relationType,
-      color: DEFAULT_LINK_COLOR,
-      weight: link.count,
-    }));
+    .map((link) => {
+      const sourceEntry = entryByNodeId.get(link.sourceId);
+      const sourcePalette = sourceEntry
+        ? resolveCapsulePalette(sourceEntry.capsule.metadata)
+        : null;
+
+      return {
+        source: link.sourceId,
+        target: link.targetId,
+        name: link.relationType,
+        color: sourcePalette?.accent ?? DEFAULT_LINK_COLOR,
+        weight: link.count,
+      };
+    });
 
   return { nodes, links };
 }
 
 export function buildCapsuleGraphTooltip(node: CapsuleGraphNodeData): string {
   const showIdentifier = node.name !== node.fullName;
+  const headerLabel =
+    node.paletteLabel.toLowerCase() === node.type.toLowerCase()
+      ? `[${node.paletteSigil}] ${node.paletteLabel} · ${node.presenceLabel} · ${node.paletteTone}`
+      : `[${node.paletteSigil}] ${node.paletteLabel} · ${node.presenceLabel} · ${node.paletteTone} · ${node.type}`;
 
   return `
     <div style="background: #0f172a; border: 1px solid #334155; padding: 12px; border-radius: 8px; max-width: 300px; color: #e2e8f0; font-family: ui-sans-serif, system-ui, sans-serif; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);">
-      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: ${escapeHtml(node.originalColor)}; margin-bottom: 4px;">${escapeHtml(node.type)}</div>
+      <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em; color: ${escapeHtml(node.originalColor)}; margin-bottom: 4px;">${escapeHtml(headerLabel)}</div>
       <strong style="display: block; margin-bottom: 4px; font-size: 14px; word-break: break-word;">${escapeHtml(node.name)}</strong>
       ${showIdentifier ? `<div style="margin-bottom: 8px; font-size: 11px; color: #64748b; word-break: break-all;">${escapeHtml(node.fullName)}</div>` : ''}
+      <div style="margin-bottom: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: ${escapeHtml(node.originalColor)};">${escapeHtml(node.paletteRankLabel)} · ${escapeHtml(node.paletteSilhouette)} · ${escapeHtml(node.subtype)}</div>
+      <div style="margin-bottom: 4px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: ${escapeHtml(node.originalColor)};">${escapeHtml(node.paletteMotif)}</div>
+      <div style="margin-bottom: 6px; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: ${escapeHtml(node.originalColor)};">Face ${escapeHtml(node.faceTag)}</div>
+      <div style="margin-bottom: 8px; font-size: 11px; color: ${escapeHtml(node.originalColor)};">${escapeHtml(node.paletteMemoryCue)}</div>
+      <div style="margin-bottom: 8px; font-size: 11px; color: #94a3b8;">${escapeHtml(String(node.connectionCount))} connections</div>
       <p style="font-size: 12px; color: #94a3b8; line-height: 1.4; margin: 0;">${escapeHtml(node.summary)}</p>
     </div>
   `;

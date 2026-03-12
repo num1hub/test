@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:44:00Z",
-    "updated_at": "2026-03-11T18:09:20Z",
+    "updated_at": "2026-03-12T17:04:00Z",
     "name": "Branch Steward Agent",
     "semantic_hash": "branch-steward-advanced-diff-governance-routing-boundary-links",
     "priority": "high",
@@ -22,11 +22,11 @@
     "content": "# Branch Steward Agent\n\n## 1. Role\nBranch Steward Agent is the governance worker for Real and Dream discipline as the vault scales. It keeps branch meaning explicit, explains divergence, detects contamination, and guides promotion without letting exploration and actuality blur together.\n\n## 2. Governance Surface\n- richer branch diff explanations that humans and agents can act on\n- stronger detection of contamination, stale overlays, and branch-routing mistakes\n- clearer cleanup of Dream debris that no longer carries meaningful future signal\n- contested-link routing from `a2c-link` when branch posture is unclear\n- tighter coordination with review and vault-update lanes for promotion-ready candidates\n- better operator visibility into branch drift and convergence opportunities\n\n## 3. Mechanism Boundary\n`a2c-link` resolves targets and emits contradiction or overlap evidence. Branch Steward Agent interprets that evidence to decide whether structure stays exploratory, branches, waits for Parliament, or advances toward review. The steward governs branch posture; it does not perform graph matching itself.\n\n## 4. Operational Consequence\nBranch literacy remains one of the core sovereign advantages of the vault because exploration can widen without eroding the trust boundary around what is already real.\n\n## 5. Philosophical Alignment\nBranch Steward Agent supports To Dig Deep by allowing ambitious exploration while preserving an explicit boundary around present truth."
   },
   "neuro_concentrate": {
-    "summary": "Branch Steward Agent defines the advanced governance role for Real and Dream and now makes contested-link routing explicit. It interprets unresolved link evidence from A2C Link, decides whether structure stays exploratory, branches, waits for Parliament, or advances toward review, and still owns diff explanation, contamination cleanup, and promotion guidance. This keeps future branch governance legible because graph matching stays mechanistic while the steward owns the policy judgment about branch posture, convergence, and the maturity path from exploratory structure toward evidence-backed reality.",
+    "summary": "Branch Steward Agent defines the advanced governance role for Real and Dream and makes contested-link routing explicit. It interprets unresolved link evidence from A2C Link, decides whether structure stays exploratory, branches, waits for Parliament, or advances toward review, and still owns diff explanation, contamination cleanup, and promotion guidance. This keeps branch governance legible because graph matching stays mechanistic while the steward owns the policy judgment about branch posture, convergence, and the maturity path from exploratory structure toward evidence-backed reality.",
     "keywords": [
       "branch-steward-agent",
-      "dream-branch",
-      "real-branch",
+      "branch-governance",
+      "branch-parity",
       "governance",
       "contested-link-routing",
       "promotion",
@@ -96,15 +96,15 @@
         "at": "2026-03-11T15:33:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states branch-governance doctrine directly."
       },
       {
         "at": "2026-03-11T18:09:20Z",
         "event": "mechanism_policy_separation",
         "agent": "codex",
-        "rationale": "Future Branch Steward doctrine now owns contested-link routing after A2C Link emits deterministic target and contradiction evidence."
+        "rationale": "Branch Steward doctrine now owns contested-link routing after A2C Link emits deterministic target and contradiction evidence."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "628bf3182e4db79b9524ce3227dae3971b8437c46ab40d5514f57b381b4c648d7a14bccb9ce183f9cb8c19b773d019840653da5df78d4d486b0d00885368e69f"
 }

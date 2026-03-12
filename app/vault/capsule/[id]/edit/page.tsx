@@ -9,6 +9,7 @@ import { useToast } from '@/contexts/ToastContext';
 import { normalizeBranchName } from '@/types/branch';
 import { useDebounce } from '@/hooks/useDebounce';
 import ValidationPanel, { type ValidationPanelResult } from '@/components/validation/ValidationPanel';
+import { getClientAuthHeaders, getClientJsonAuthHeaders } from '@/lib/clientAuth';
 
 const REQUIRED_KEYS = [
   'metadata',
@@ -40,11 +41,7 @@ function EditCapsulePageContent({ params }: { params: Promise<{ id: string }> })
   };
 
   const getAuthHeaders = (): HeadersInit => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    return {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    };
+    return getClientJsonAuthHeaders();
   };
 
   const hydrateValidationStatus = (capsule: unknown, result: ValidationPanelResult): void => {
@@ -106,16 +103,10 @@ function EditCapsulePageContent({ params }: { params: Promise<{ id: string }> })
   };
 
   useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     const fetchCapsule = async () => {
       try {
         const res = await fetch(`/api/capsules/${id}?branch=${branch}`, {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: getClientAuthHeaders(),
         });
 
         if (!res.ok) throw new Error('Failed to load capsule for editing.');

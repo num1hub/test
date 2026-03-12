@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T00:20:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:50:00Z",
     "name": "Tracker Orchestration Signals",
     "semantic_hash": "tracker-orchestration-signals-symphony-swarm-jobs-maintenance-risk",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Tracker decomposition to isolate runtime-facing risk signals for swarms, jobs, and orchestration from local reminder and analytics surfaces."
+        "rationale": "Minted during Tracker decomposition to isolate runtime-facing risk signals for swarms, jobs, and orchestration from local reminder and analytics surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "817cca047ea2cb1d85b37d7cf15f4573e0ec2b24c68fc56d456a0f7be93279fcf0435a74632528da503578c0627433f4c465b891ba92aacb14ff6c845b6fb7d3"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:19Z",
-    "updated_at": "2026-03-11T21:10:00Z",
+    "updated_at": "2026-03-12T16:33:00Z",
     "semantic_hash": "lidar-scanning-roomplan-geometry-capture-calibration-modeling-tilesims",
     "source": {
       "uri": "internal://capsule.project.tilesims.v1",
@@ -26,7 +26,7 @@
     "content": "# LiDAR Scanning Concept for TileSims\n\n## 1. Goal\nDefine a scanning flow that captures room geometry quickly while preserving precision for tile planning and material estimates.\n\n## 2. Method\nUse RoomPlan output as baseline geometry, then apply user calibration points to reduce drift on critical surfaces.\n\n## 3. Output\nProduce a normalized model with surface segmentation and uncertainty metadata ready for downstream design algorithms.\n\n## 4. Open Question\nHow should scan uncertainty propagate into layout and cost recommendations?"
   },
   "neuro_concentrate": {
-    "summary": "LiDAR Scanning is archived with the TileSims line as recoverable geometry-acquisition doctrine for later reactivation. It describes cleaner capture pipelines, stronger calibration discipline, better uncertainty handling, and more useful downstream handoff into layout and cost logic. The concept matters because spatial intelligence starts with trustworthy geometry. In archive mode the capsule keeps this measurement foundation available as future research, implementation leverage, later field validation, simulation fidelity, and dependable capture-system re-entry when the TileSims program resumes.",
+    "summary": "LiDAR Scanning captures the geometry-acquisition doctrine that keeps downstream layout, cost, and simulation logic grounded in trustworthy spatial input. It defines cleaner capture pipelines, stronger calibration discipline, explicit uncertainty handling, and more useful handoff into later layout and estimating stages instead of treating room scans as opaque raw intake. The concept matters because spatial intelligence starts with dependable geometry rather than clever optimization layered over noisy measurement. It therefore keeps this measurement foundation available as a recoverable capture-system capability for field validation, simulation fidelity, and later TileSims implementation work.",
     "keywords": [
       "concept",
       "lidar",
@@ -73,9 +73,9 @@
         "at": "2026-03-11T21:10:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware archive phrasing so the concept states its retained geometry doctrine directly."
+        "rationale": "Removed archive meta-language so the concept states its retained geometry doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "44c1d2c51f39fd94dc867a6f1dae3e7f7a4db2dae17cb77d70788e03b34d09eea80360c73fcd715cc7117d78e4c1b33b42369a801748c12fb00c98bb629eb865"
 }

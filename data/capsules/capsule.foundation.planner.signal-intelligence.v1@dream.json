@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:15:00Z",
-    "updated_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T17:36:00Z",
     "name": "Planner Signal Intelligence",
     "semantic_hash": "planner-signal-intelligence-tracker-branch-librarian-swarm-feedback",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-12T02:15:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Planner decomposition to isolate execution telemetry, swarm pressure, branch literacy, librarian context, and lane-level feedback that force planning to adapt."
+        "rationale": "Minted during Planner decomposition to isolate execution telemetry, swarm pressure, branch literacy, librarian context, and lane-level feedback that force planning to adapt."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "cdece2e4565bba3bdf5bfb0a77a5db41ec19ee43d860cbf707021f603dae7f4ebabce52724a7047fff0554af98484efe3d7d3c5a83241e1eb209cd33f4c9368d"
 }

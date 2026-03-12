@@ -1,7 +1,7 @@
 <!-- @anchor doc:todo.capsule-native-execution links=doc:todo.index,doc:todo.hot-queue,doc:todo.agent-operating-modes,doc:n1hub.context,doc:projects.reference,doc:branching.real-dream-diff,doc:n1hub.readme note="Design brief for moving planning and delegation from markdown into capsule-native execution surfaces." -->
 # Capsule-Native Execution Control Plane
 
-Updated: 2026-03-10
+Updated: 2026-03-12
 
 `TO-DO/` works as a hot markdown buffer right now, but the long-term source of truth for planning and execution should live in the capsule vault. N1Hub already has the primitives for that model.
 
@@ -158,6 +158,14 @@ The next bounded passes after this design brief are:
   build the authenticated workspace home as the first operator-facing control-plane surface over the new execution objects
 - `TODO-036`
   add explicit branch and validation guardrails so Dream planning cannot silently masquerade as Real execution
+
+## Current Launch Posture
+
+- the Real/Dream constitutional wave is materially contained
+- the protected `16-gates` Dream micro-packet is repaired
+- the Dream-wide `G16` finalization wave is complete and the full capsule validator is green
+- the default next substantive capsule-update packet is `TODO-034`
+- the expected order is `TODO-034` projection bridge, then `TODO-036` guardrails, then `TODO-035` workspace consumption of the new control-plane objects
 
 ## Task Link
 

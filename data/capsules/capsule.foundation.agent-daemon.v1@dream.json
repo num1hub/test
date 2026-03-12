@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:18:00Z",
     "name": "Agent Daemon",
-    "semantic_hash": "agent-daemon-disciplined-service-shell-heartbeat-drain-wake",
+    "semantic_hash": "agent-daemon-disciplined-service-heartbeat-drain-wallet-runtime",
     "source": {
       "uri": "internal://docs/agents-operations.md",
       "type": "repository_contract"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Daemon\n\n## 1. Role\nAgent Daemon will become the fully disciplined service shell for background intelligence in N1Hub. A serious daemon will be a uniquely registered fleet member with visible heartbeat, clean lifecycle control, and explicit attachment to assignment classes, budget posture, and autonomy windows.\n\n## 2. Future Daemon Contract\n- one clearly registered daemon family per lane instead of overlapping ghost processes\n- visible heartbeat, restart posture, drain state, and wake semantics in the control plane\n- safer transitions between day co-pilot, night autonomy, degraded mode, paused mode, and shutdown\n- assignment-aware wake and drain behavior instead of blind loop persistence\n- explicit binding to wallet lanes, economic posture, and permitted work classes\n\n## 3. Host Supervision Consequence\nSymphony, N-Infinity, and vault stewardship lanes will remain calm enough to trust over long unattended windows because the daemon layer will be supervised, identifiable, recoverable, and operable as part of a wider fleet rather than as a terminal process left running by habit.\n\n## 4. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a durable, inspectable, and governable runtime posture."
+    "content": "# Agent Daemon\n\n## 1. Role\nAgent Daemon is the fully disciplined service shell for background intelligence in N1Hub. A serious daemon is a uniquely registered fleet member with visible heartbeat, clean lifecycle control, and explicit attachment to assignment classes, budget posture, and autonomy windows.\n\n## 2. Daemon Contract\n- one clearly registered daemon family per lane instead of overlapping ghost processes\n- visible heartbeat, restart posture, drain state, and wake semantics in the control plane\n- safer transitions between day co-pilot, night autonomy, degraded mode, paused mode, and shutdown\n- assignment-aware wake and drain behavior instead of blind loop persistence\n- explicit binding to wallet lanes, economic posture, and permitted work classes\n\n## 3. Host Supervision Consequence\nSymphony, N-Infinity, and vault stewardship lanes remain calm enough to trust over long unattended windows because the daemon layer is supervised, identifiable, recoverable, and operable as part of a wider fleet rather than as a terminal process left running by habit.\n\n## 4. Philosophical Alignment\nAgent Daemon supports To Dig Deep by replacing fragile manual launches with a durable, inspectable, and governable runtime posture."
   },
   "neuro_concentrate": {
-    "summary": "Agent Daemon defines the future disciplined service shell for serious background lanes in N1Hub: visible heartbeat, single-family discipline, drain and wake semantics, assignment-class binding, wallet-aware runtime posture, and stronger host-level supervision.",
+    "summary": "Agent Daemon defines the disciplined service shell for serious background intelligence in N1Hub. It covers registered daemon families, visible heartbeat, restart and drain posture, wake semantics, assignment-class binding, wallet-aware runtime policy, and safer transitions between day co-pilot, night autonomy, degraded mode, pause, and shutdown. The capsule matters because long unattended agent work becomes supervised, identifiable, recoverable, and operable as part of a wider fleet instead of behaving like a forgotten terminal loop with unclear ownership or economic limits.",
     "keywords": [
       "agent-daemon",
       "systemd",
@@ -51,7 +51,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-daemon-disciplined-service-shell-heartbeat-drain-wake"
+    "semantic_hash": "agent-daemon-disciplined-service-heartbeat-drain-wallet-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -103,12 +103,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "0298999111334261db465dd2e4951f9fcd3c88fc2cd03e7caf8f212fb6876e34ebde755606385309c6079ce9fa1f49fd4c1c3fc4f46bf64453c7340d99e46d31"
 }

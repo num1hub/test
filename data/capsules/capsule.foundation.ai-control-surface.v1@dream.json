@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:24:00Z",
     "name": "AI Control Surface",
-    "semantic_hash": "ai-control-surface-calm-trust-console-assignment-review-runtime",
+    "semantic_hash": "ai-control-surface-calm-trust-console-review-runtime",
     "priority": "high",
     "progress": 22,
     "estimatedHours": 360,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Control Surface\n\n## 1. Role\nAI Control Surface will become the calm but deep trust console for human supervision of intelligence inside N1Hub. It will let one operator see what is running, why it is running, what changed most recently, and what requires intervention next without leaving the workspace habitat.\n\n## 2. Future Operating Surface\n- wallet readiness and provider health in one place\n- clear lane visibility for scout, foreman, reviewer, executor, Symphony, and swarm lanes\n- assignment inboxes and review queues that work on mobile and desktop\n- live status for running, idle, degraded, cooling-down, and waiting-for-human states\n- projection of recent artifacts, plan outputs, and candidate Dream-to-Real promotions\n- a strong link to Agent Control Plane so the console reflects administrative truth instead of inventing a parallel state model\n\n## 3. Operational Consequence\nBackground autonomy will remain trustworthy because visibility, intervention, and review readiness will keep pace with capability. The control surface will act as the human-facing dashboard above the deeper control plane.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making intelligence visible, inspectable, correctable, and calmly governable instead of magical."
+    "content": "# AI Control Surface\n\n## 1. Role\nAI Control Surface is the calm but deep trust console for human supervision of intelligence inside N1Hub. It lets one operator see what is running, why it is running, what changed most recently, and what requires intervention next without leaving the workspace habitat.\n\n## 2. Operating Surface\n- wallet readiness and provider health in one place\n- clear lane visibility for scout, foreman, reviewer, executor, Symphony, and swarm lanes\n- assignment inboxes and review queues that work on mobile and desktop\n- live status for running, idle, degraded, cooling-down, and waiting-for-human states\n- projection of recent artifacts, plan outputs, and candidate-to-canonical promotions\n- a strong link to Agent Control Plane so the console reflects administrative truth instead of inventing a parallel state model\n\n## 3. Operational Consequence\nBackground autonomy remains trustworthy because visibility, intervention, and review readiness keep pace with capability. The control surface acts as the human-facing dashboard above the deeper control plane.\n\n## 4. Philosophical Alignment\nAI Control Surface supports To Dig Deep by making intelligence visible, inspectable, correctable, and calmly governable instead of magical."
   },
   "neuro_concentrate": {
-    "summary": "AI Control Surface defines the future calm trust console for AI inside N1Hub: wallet readiness, lane health, assignment inboxes, review queues, daemon status, recent artifacts, and intervention-ready visibility in one human-facing operating surface.",
+    "summary": "AI Control Surface defines the calm human supervision console for intelligence inside N1Hub. It brings wallet readiness, provider health, lane visibility, assignment inboxes, review queues, daemon status, recent artifacts, and intervention-ready visibility into one operator-facing surface that remains linked to the deeper control plane. The capsule matters because background autonomy stays trustworthy only when visibility, review readiness, and corrective action keep pace with capability. It positions the control surface as the dashboard above administrative truth rather than a parallel state model that drifts from the governed runtime.",
     "keywords": [
       "ai-control-surface",
       "control-plane",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "ai-control-surface-calm-trust-console-assignment-review-runtime"
+    "semantic_hash": "ai-control-surface-calm-trust-console-review-runtime"
   },
   "recursive_layer": {
     "links": [
@@ -109,12 +109,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:37:35Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "f6bfc6546e334919beb23b0cd29fb1f508832d7941a47fa7ac7d07813eabc4c701e1ab644128e5f7f205510dd85ec5a3e537bf8e8b686a6690fecc41930131ce"
 }

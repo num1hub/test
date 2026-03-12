@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T16:05:00Z",
     "name": "Reminder",
     "semantic_hash": "capsule-foundation-reminder-v1-tracker-planner-deadline-notification",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Reminder\n\n## 1. Role\nReminder will become a stronger follow-through system for N1Hub, where reminders act as context-aware commitment threads rather than timed pings.\n\n## 2. Future Reminder Contract\nThe reminder layer will know when to resurface work, when to escalate, when to stay quiet, and how to fit the user’s actual rhythm instead of blindly replaying deadlines. It will carry richer quiet-window sensitivity, better return paths, and clearer coordination with tracker, notification, and calendar layers.\n\n## 3. Operational Consequence\nIntentions will stay alive at the right moment without turning the system into ambient pressure. Reminder quality will become a core part of execution trust rather than an afterthought of scheduling.\n\n## 4. Philosophical Alignment\nReminder supports To Dig Deep by protecting commitments without letting the second brain become adversarial."
+    "content": "# Reminder\n\n## 1. Role\nReminder is a stronger follow-through system for N1Hub, where reminders act as context-aware commitment threads rather than timed pings.\n\n## 2. Reminder Contract\nThe reminder layer knows when to resurface work, when to escalate, when to stay quiet, and how to fit the user’s actual rhythm instead of blindly replaying deadlines. It carries richer quiet-window sensitivity, better return paths, and clearer coordination with tracker, notification, and calendar layers.\n\n## 3. Operational Consequence\nIntentions stay alive at the right moment without turning the system into ambient pressure. Reminder quality becomes a core part of execution trust rather than an afterthought of scheduling.\n\n## 4. Philosophical Alignment\nReminder supports To Dig Deep by protecting commitments without letting the second brain become adversarial."
   },
   "neuro_concentrate": {
-    "summary": "Reminder defines the future stronger follow-through system for N1Hub: context-aware commitment threads, better escalation logic, clearer return paths, richer quiet-window handling, and tighter coordination with tracker, notification, and calendar surfaces.",
+    "summary": "Reminder defines the follow-through system that keeps commitments alive at the right moment without turning N1Hub into ambient pressure. It covers context-aware commitment threads, escalation logic, quiet-window handling, return paths, and coordination with tracker, notification, and calendar surfaces. The capsule matters because execution trust erodes when reminders are either noisy or absent. It keeps intentions resurfacing with the right timing and context so commitments stay actionable, humane, and rhythm-aware instead of behaving like blind deadline replays.",
     "keywords": [
       "reminder",
       "tracker",
@@ -84,9 +84,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing so the capsule states present planning doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "ce2765168655d67db208cd83bdda56cd5c1dc663a33d5b0facc993357c89c913e2d04c70aa2918bf48054504de3721a16612c8e877b3244d14df805253f11dec"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:15:00Z",
-    "updated_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T17:40:00Z",
     "name": "Planner Operator Surfaces",
     "semantic_hash": "planner-operator-surfaces-assistant-dashboard-calendar-explanation-projection",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-12T02:15:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Planner decomposition to isolate the assistant, dashboard, and calendar-facing surfaces that project plan state back to the operator."
+        "rationale": "Minted during Planner decomposition to isolate the assistant, dashboard, and calendar-facing surfaces that project plan state back to the operator."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "222b6fd416c921062f012770a541483db116beb9b3bc05744d29aa212bce7465e36a5a475bf49ac3762b52a5a11db53171346fcdf53da3bac461295a807e0325"
 }

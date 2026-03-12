@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:22:00Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T17:18:00Z",
     "name": "DeepMine Miner Agent",
     "semantic_hash": "deepmine-miner-agent-llm-internet-corpus-ore-extraction",
     "priority": "high",
@@ -19,14 +19,14 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine Miner Agent\n\n## 1. Role\nDeepMine Miner Agent will become the industrial extraction worker of the quarry, capable of longer and more disciplined digs that preserve provenance, package ore more cleanly, and optimize for signal rather than raw text volume.\n\n## 2. Future Miner Contract\nThe miner will conduct multi-stage extraction across providers, corpora, and open-web sources while preserving source envelopes, extraction boundaries, and downstream refinement expectations. It will remain a miner rather than a judge, but its ore will become more usable and more inspectable.\n\n## 3. Operational Consequence\nFuture refinery quality will improve because mined output will arrive with stronger provenance, clearer packaging, and better economic discipline. The system will waste less money turning weakly shaped ore into later-stage confusion.\n\n## 4. Philosophical Alignment\nDeepMine Miner Agent supports To Dig Deep by excavating source signal with rigor rather than noise."
+    "content": "# DeepMine Miner Agent\n\n## 1. Role\nDeepMine Miner Agent is the industrial extraction worker of the quarry, capable of longer and more disciplined digs that preserve provenance, package ore more cleanly, and optimize for signal rather than raw text volume.\n\n## 2. Miner Contract\nThe miner conducts multi-stage extraction across providers, corpora, and open-web sources while preserving source envelopes, extraction boundaries, and downstream refinement expectations. It remains a miner rather than a judge, but its ore is more usable and more inspectable.\n\n## 3. Operational Consequence\nRefinery quality improves because mined output arrives with stronger provenance, clearer packaging, and better economic discipline. The system wastes less money turning weakly shaped ore into later-stage confusion.\n\n## 4. Philosophical Alignment\nDeepMine Miner Agent supports To Dig Deep by excavating source signal with rigor rather than noise."
   },
   "neuro_concentrate": {
-    "summary": "DeepMine Miner Agent defines the future industrial extraction worker of N1Hub: deeper multi-pass digs, stronger provenance envelopes, better ore packaging, and more deliberate cost-to-signal optimization across long-running mining jobs.",
+    "summary": "DeepMine Miner Agent defines the industrial extraction lane that performs disciplined multi-stage digs across providers, corpora, and open-web sources. It focuses on preserving provenance envelopes, packaging ore cleanly for refinement, and optimizing for signal quality instead of raw text volume. The capsule matters because refinery and promotion stages inherit the strengths or weaknesses of mined material. It keeps extraction inspectable, economical, and usable so later stages spend less time rescuing poorly shaped ore and more time advancing trustworthy graph value.",
     "keywords": [
       "deepmine",
       "miner-agent",
-      "dream-branch",
+      "quarry-routing",
       "extraction",
       "provenance",
       "night-shift",
@@ -100,9 +100,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so DeepMine Miner Agent states present extraction doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1ab422b626ad1b6990e88fde626989f315f555c63aace5386c4dc3497c909298ec09f4fc2a971bbcaac19bc4b943250683532e4f9cc0306b157767be81b29e6a"
 }

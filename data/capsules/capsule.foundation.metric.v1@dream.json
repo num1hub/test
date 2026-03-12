@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T16:36:00Z",
     "name": "Metric",
     "semantic_hash": "capsule-foundation-metric-v1-analytics-tracker-dashboard-kpi",
     "priority": "medium",
@@ -79,9 +79,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so Metric states its measurement doctrine directly."
+        "rationale": "Removed meta-summary phrasing so Metric states its measurement doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "8c9360e6f3841c3b2e6ebb653dd4be80a4f464c8ddd9eca298055d72e6800398ae8a87fc0434078f792b11d4c83f2edc1790dc3236b0b4ea0203ff354cfbc13c"
 }

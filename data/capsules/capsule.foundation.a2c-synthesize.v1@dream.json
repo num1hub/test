@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-11T21:23:25Z",
+    "updated_at": "2026-03-12T16:58:00Z",
     "name": "A2C Stage: Synthesize",
     "semantic_hash": "capsule-foundation-a2c-synthesize-v1-stage-composition-draft",
     "priority": "high",
@@ -66,9 +66,9 @@
         "at": "2026-03-11T21:23:25Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Synthesize states its integrative doctrine directly."
+        "rationale": "Removed summary meta-language so Synthesize states integrative doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5675b479489f6c9f0df995b0166afa9f061b68767220da86c838dc62c8aed2e209d682ecfa9e873f2bd1865bf2105936f10f37f7b39dfe1f5f51b7a96314bc12"
 }

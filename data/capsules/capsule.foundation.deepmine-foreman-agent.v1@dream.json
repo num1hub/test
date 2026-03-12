@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:24:00Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T17:28:00Z",
     "name": "DeepMine Foreman Agent",
-    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-branch-governance",
+    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-quarry-governance",
     "priority": "high",
     "progress": 37,
     "estimatedHours": 250,
@@ -19,18 +19,18 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine Foreman Agent\n\n## 1. Role\nDeepMine Foreman Agent will become the stronger governor of the quarry, shaping mining queues, branch targeting, cost posture, and shift discipline so extraction power remains economically sane and epistemically well-routed.\n\n## 2. Future Foreman Contract\nThe foreman will arbitrate between opportunity quality, budget pressure, provider posture, autonomy window, and downstream branch consequences before heavy mining work begins. It will decide what should be mined now, what should wait, and what should remain outside the current run.\n\n## 3. Operational Consequence\nMining autonomy will remain useful because the foreman will keep extraction from drifting into cost burn, branch confusion, or unreviewable ore flow. Queue quality will matter as much as model strength.\n\n## 4. Philosophical Alignment\nDeepMine Foreman Agent supports To Dig Deep by governing excavation intensity with discipline instead of enthusiasm."
+    "content": "# DeepMine Foreman Agent\n\n## 1. Role\nDeepMine Foreman Agent is the stronger governor of the quarry, shaping mining queues, routing, cost posture, and shift discipline so extraction power remains economically sane and epistemically well-routed.\n\n## 2. Foreman Contract\nThe foreman arbitrates between opportunity quality, budget pressure, provider posture, autonomy window, and downstream execution consequences before heavy mining work begins. It decides what should be mined now, what should wait, and what should remain outside the current run.\n\n## 3. Operational Consequence\nMining autonomy remains useful because the foreman keeps extraction from drifting into cost burn, routing confusion, or unreviewable ore flow. Queue quality matters as much as model strength.\n\n## 4. Philosophical Alignment\nDeepMine Foreman Agent supports To Dig Deep by governing excavation intensity with discipline instead of enthusiasm."
   },
   "neuro_concentrate": {
-    "summary": "DeepMine Foreman Agent defines the future queue-governor of the quarry: stronger mining arbitration, branch-targeting discipline, cost-aware shift design, and clearer promotion rules between prospecting, extraction, and vault-facing consequences.",
+    "summary": "DeepMine Foreman Agent defines the queue-governing lane that decides how quarry capacity should be allocated before heavy mining begins. It arbitrates between opportunity quality, downstream execution consequences, provider posture, budget pressure, and autonomy windows to choose what should be mined now, deferred, or rejected. The capsule matters because extraction power becomes expensive noise when queue quality is weak. It keeps mining autonomy economically sane and epistemically routed so prospecting, extraction, and vault-facing consequences stay connected by deliberate shift design.",
     "keywords": [
       "deepmine",
       "foreman-agent",
-      "dream-branch",
+      "queue-routing",
       "routing",
       "budget-control",
       "night-shift",
-      "branch-governance",
+      "quarry-governance",
       "n1hub"
     ],
     "confidence_vector": {
@@ -41,7 +41,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-branch-governance"
+    "semantic_hash": "deepmine-foreman-agent-routing-budget-shifts-quarry-governance"
   },
   "recursive_layer": {
     "links": [
@@ -104,9 +104,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present quarry-governance doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b3f65d3d14c896ffa5df5e4cf47fa04891317adbacb73849e0bd80830660bb2dcbb973f3065b5af37bbbc25d9e9ca8810d6c82ef0d9c3c431c50ea51f7c9f47b"
 }

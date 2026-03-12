@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { checkRateLimit, isAuthorized, resolveRole } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation, resolveRole } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
 import { getExistingCapsuleIds } from '@/lib/capsuleVault';
 import { appendValidationLog } from '@/lib/validationLog';
@@ -26,6 +26,9 @@ const extractCapsuleId = (capsule: unknown): string | null => {
 };
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

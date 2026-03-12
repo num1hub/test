@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:15:00Z",
-    "updated_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T17:40:00Z",
     "name": "Planner Horizon Compression",
     "semantic_hash": "planner-horizon-compression-engine-daily-roadmap-horizon-distillation",
     "source": {
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planner Horizon Compression\n\n## 1. Role\nPlanner Horizon Compression owns the multi-horizon logic that distills long-range intent into practical sequencing. It keeps the shared horizon engine plus daily and roadmap planning agents together so the planner can compress ambition into near-term action without losing strategic shape.\n\n## 2. Horizon Compression Surface\nThis sub-hub groups `planning-horizon-engine`, `daily-planner-agent`, and `roadmap-planner-agent`. Together they define how Dream and Real are compressed across horizons, how near-term output is produced, and how longer-range roadmap structure remains coherent.\n\n## 3. Operating Boundary\nThis sub-hub does not own the planning objects themselves, the user-facing planning projection, or the execution-pressure signals that trigger re-sequencing. Those responsibilities belong to `planning-objects`, `operator-surfaces`, and `signal-intelligence`."
+    "content": "# Planner Horizon Compression\n\n## 1. Role\nPlanner Horizon Compression owns the multi-horizon logic that distills long-range intent into practical sequencing. It keeps the shared horizon engine plus daily and roadmap planning agents together so the planner can compress ambition into near-term action without losing strategic shape.\n\n## 2. Horizon Compression Surface\nThis sub-hub groups `planning-horizon-engine`, `daily-planner-agent`, and `roadmap-planner-agent`. Together they define how strategic intent is compressed across horizons, how near-term output is produced, and how longer-range roadmap structure remains coherent.\n\n## 3. Operating Boundary\nThis sub-hub does not own the planning objects themselves, the user-facing planning projection, or the execution-pressure signals that trigger re-sequencing. Those responsibilities belong to `planning-objects`, `operator-surfaces`, and `signal-intelligence`."
   },
   "neuro_concentrate": {
-    "summary": "Planner Horizon Compression groups the multi-horizon logic of the planning system: Planning Horizon Engine, Daily Planner Agent, and Roadmap Planner Agent. It keeps long-range compression, near-term distillation, and strategic-shape maintenance together so the planner can answer what matters now without losing the broader structure of intent. This boundary matters because multi-horizon planning becomes incoherent when the compression seam is hidden. It gives the planner stack one explicit place where Dream and Real are compressed into usable planning horizons.",
+    "summary": "Planner Horizon Compression groups the multi-horizon logic of the planning system: Planning Horizon Engine, Daily Planner Agent, and Roadmap Planner Agent. It keeps long-range compression, near-term distillation, and strategic-shape maintenance together so the planner can answer what matters now without losing the broader structure of intent. This boundary matters because multi-horizon planning becomes incoherent when the compression seam is hidden. It gives the planner stack one explicit place where strategic intent is compressed into usable planning horizons.",
     "keywords": [
       "planner",
       "horizon-compression",
@@ -67,9 +67,9 @@
         "at": "2026-03-12T02:15:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Planner decomposition to isolate the shared horizon engine plus daily and roadmap planning agents as the compression seam between long-range intent and near-term action."
+        "rationale": "Minted during Planner decomposition to isolate the shared horizon engine plus daily and roadmap planning agents as the compression seam between long-range intent and near-term action."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "3cf99855aa5c452c1eb7643a9ae9b193906d15c0e688234924b069f5b76d05dc0953ff7cadb27eefc24983e73f83b4be0a6e513c35c9dd4502587a3094ac17be"
 }

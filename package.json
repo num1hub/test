@@ -49,6 +49,7 @@
     "extract:anchors": "tsx scripts/extract-anchors.ts",
     "validate:anchors": "tsx scripts/validate-anchors.ts",
     "verify:root-docs": "tsx scripts/verify-root-docs.ts",
+    "deploy:vercel:hobby:check": "tsx scripts/check-vercel-hobby-auth.ts --production",
     "anchors:coverage": "tsx scripts/analyze-coverage.ts --out=.anchors-coverage.json",
     "anchors:kpis": "tsx scripts/report-kpis.ts",
     "anchors:intelligence": "tsx scripts/anchors-intelligence.ts --out=.anchors-intelligence.json",

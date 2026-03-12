@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 import { clearAiWalletProvider, listAiWalletProviderSummaries, upsertAiWalletProvider } from '@/lib/aiWallet';
 import { aiWalletUpdateSchema } from '@/lib/aiWalletSchema';
 import { logActivity } from '@/lib/activity';
@@ -32,6 +32,9 @@ export async function GET(request: Request) {
 }
 
 export async function PUT(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

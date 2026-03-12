@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-11T22:01:10.306Z",
+  "generatedAt": "2026-03-12T22:56:01.452Z",
   "scorecard": {
     "score": 100,
     "grade": "A",
@@ -27,22 +27,22 @@
     "darkMatter": []
   },
   "kpis": {
-    "anchorCount": 103,
+    "anchorCount": 84,
     "categoryCounts": {
-      "arch": 18,
-      "doc": 35,
+      "arch": 8,
+      "doc": 36,
       "flow": 2,
-      "interface": 23,
+      "interface": 13,
       "invariant": 1,
       "script": 15,
       "test": 9
     },
-    "meanLinksOverall": 5.49,
-    "meanLinksSpine": 3.61,
+    "meanLinksOverall": 5.96,
+    "meanLinksSpine": 3.63,
     "zeroLinkOverallPct": 0,
     "zeroLinkSpinePct": 0,
-    "medianAnchorPositionOverall": 0.01,
-    "medianAnchorPositionSpine": 0.355,
+    "medianAnchorPositionOverall": 0.008,
+    "medianAnchorPositionSpine": 0.005,
     "spineHeaderCoveragePct": 100,
     "ciOptionalSteps": [],
     "appEntrypointCount": 3,
@@ -51,18 +51,18 @@
     "appEntrypointsMissingAnchor": []
   },
   "intelligence": {
-    "anchorCount": 103,
-    "edgeCount": 565,
+    "anchorCount": 84,
+    "edgeCount": 501,
     "brokenLinkCount": 0,
     "zeroInboundCount": 0,
     "weakComponentCount": 1,
-    "reciprocalEdgeRatio": 0.719,
+    "reciprocalEdgeRatio": 0.715,
     "stronglyConnectedComponentCount": 1,
-    "largestStronglyConnectedComponentSize": 82,
+    "largestStronglyConnectedComponentSize": 84,
     "topOutDegree": [
       {
         "id": "doc:n1hub.readme",
-        "out": 22
+        "out": 23
       },
       {
         "id": "doc:n1hub.agents",
@@ -104,11 +104,7 @@
     "topInDegree": [
       {
         "id": "doc:n1hub.readme",
-        "in": 35
-      },
-      {
-        "id": "doc:validator.reference",
-        "in": 24
+        "in": 30
       },
       {
         "id": "doc:n1hub.codex",
@@ -131,16 +127,20 @@
         "in": 16
       },
       {
-        "id": "script:validator.cli",
-        "in": 16
-      },
-      {
         "id": "doc:todo.hot-queue",
         "in": 15
       },
       {
         "id": "doc:todo.agent-operating-modes",
         "in": 14
+      },
+      {
+        "id": "doc:n1hub.tools",
+        "in": 13
+      },
+      {
+        "id": "doc:n1hub.memory",
+        "in": 12
       }
     ]
   }

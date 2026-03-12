@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `READY`
+- Status: `ACTIVE`
 - Owner Lane: `Control Plane Runtime Agent`
 - Cluster: `Planning / assistant / runtime bridge`
 
@@ -35,9 +35,21 @@ Project accepted markdown queue packets into durable vault-native task and deleg
 - one owned runtime namespace for staged execution projections
 - one clear rule for which fields remain markdown-only during the bridge phase
 
+## Context Snapshot
+
+- `TODO-012` is now materially complete as a design packet: the control loop, durable-vs-temporary state split, and branch posture are explicit
+- the Real/Dream constitutional wave is materially contained, including the protected `16-gates` micro-packet and the Dream-wide `G16` finalization wave
+- the full capsule validator is now green, so the next real gap is not branch cleanup or seal debt but durable projection from accepted queue packets into vault-native task and delegation objects
+
 ## Dependencies
 
 - hard: `TODO-012`
+
+## Source Signals
+
+- `TO-DO/CAPSULE_NATIVE_EXECUTION.md`
+- `TO-DO/tasks/TODO-012-capsule-native-execution-control-plane.md`
+- `reports/validation-2026-03-12T18-43-18-387Z.md`
 
 ## Entry Checklist
 
@@ -50,6 +62,7 @@ Project accepted markdown queue packets into durable vault-native task and deleg
 1. Map queue packet fields to task and delegation attributes.
 2. Define the owned projection namespace and artifact naming.
 3. Add the narrowest runtime code needed to materialize and read the bridge objects.
+4. Prove the bridge against the now-green capsule validator and targeted runtime checks.
 
 ## Acceptance Criteria
 
@@ -75,4 +88,4 @@ Project accepted markdown queue packets into durable vault-native task and deleg
 
 ## Handoff Note
 
-Implement the projection bridge first. If the bridge is weak, every later workspace or validator surface will inherit ambiguity.
+Implement the projection bridge first. The first files to reopen are this packet, `TO-DO/CAPSULE_NATIVE_EXECUTION.md`, and the latest green validator report; if the bridge is weak, every later workspace or validator surface will inherit ambiguity.

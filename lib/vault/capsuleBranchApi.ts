@@ -1,17 +1,18 @@
 'use client';
 
 import type { BranchInfo, DiffResult, MergeResult } from '@/contracts/diff';
+import { getClientVaultToken } from '@/lib/clientAuth';
 import type { BranchName } from '@/types/branch';
 import type { SovereignCapsule } from '@/types/capsule';
 
 type ErrorResponse = { error?: string };
 
 export function getVaultToken() {
-  return localStorage.getItem('n1hub_vault_token');
+  return getClientVaultToken();
 }
 
-export function authHeaders(token: string): HeadersInit {
-  return { Authorization: `Bearer ${token}` };
+export function authHeaders(token?: string | null): HeadersInit {
+  return token ? { Authorization: `Bearer ${token}` } : {};
 }
 
 export async function parseErrorMessage(response: Response, fallback: string) {
@@ -26,7 +27,7 @@ export async function parseErrorMessage(response: Response, fallback: string) {
 export async function fetchCapsuleBranchResponse(
   capsuleId: string,
   branch: BranchName,
-  token: string,
+  token?: string | null,
 ) {
   return fetch(`/api/capsules/${capsuleId}?branch=${branch}`, {
     headers: authHeaders(token),
@@ -36,14 +37,14 @@ export async function fetchCapsuleBranchResponse(
 export async function fetchCapsuleBranchData(
   capsuleId: string,
   branch: BranchName,
-  token: string,
+  token?: string | null,
 ) {
   const response = await fetchCapsuleBranchResponse(capsuleId, branch, token);
   const data = response.ok ? ((await response.json()) as SovereignCapsule) : null;
   return { response, data };
 }
 
-export async function fetchBranchCapsules(branch: BranchName, token: string) {
+export async function fetchBranchCapsules(branch: BranchName, token?: string | null) {
   const search = new URLSearchParams();
   if (branch !== 'real') search.set('branch', branch);
 
@@ -55,7 +56,7 @@ export async function fetchBranchCapsules(branch: BranchName, token: string) {
 }
 
 export async function fetchBranchList(params: {
-  token: string;
+  token?: string | null;
   capsuleId?: string;
   projectId?: string;
 }) {
@@ -74,7 +75,7 @@ export async function fetchCapsuleDiff(
   capsuleId: string,
   branchA: BranchName,
   branchB: BranchName,
-  token: string,
+  token?: string | null,
   recursive: boolean = false,
 ) {
   const search = new URLSearchParams({
@@ -89,14 +90,14 @@ export async function fetchCapsuleDiff(
   return { response, data };
 }
 
-export async function postForkCapsule(capsuleId: string, token: string) {
+export async function postForkCapsule(capsuleId: string, token?: string | null) {
   return fetch(`/api/capsules/${capsuleId}/fork`, {
     method: 'POST',
     headers: authHeaders(token),
   });
 }
 
-export async function postPromoteCapsule(capsuleId: string, token: string) {
+export async function postPromoteCapsule(capsuleId: string, token?: string | null) {
   return fetch(`/api/capsules/${capsuleId}/promote`, {
     method: 'POST',
     headers: authHeaders(token),
@@ -105,7 +106,7 @@ export async function postPromoteCapsule(capsuleId: string, token: string) {
 
 export async function applyBranchMerge(
   body: Record<string, unknown>,
-  token: string,
+  token?: string | null,
 ) {
   const response = await fetch('/api/diff/apply', {
     method: 'POST',
@@ -135,7 +136,7 @@ export async function applyBranchMerge(
   return { response, data };
 }
 
-export async function deleteCapsuleRequest(capsuleId: string, token: string) {
+export async function deleteCapsuleRequest(capsuleId: string, token?: string | null) {
   return fetch(`/api/capsules/${capsuleId}`, {
     method: 'DELETE',
     headers: authHeaders(token),

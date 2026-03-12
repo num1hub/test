@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Vault Steward Agent",
     "created_at": "2026-03-09T01:43:44.097Z",
-    "updated_at": "2026-03-09T01:43:49.398Z",
+    "updated_at": "2026-03-12T14:04:54Z",
     "name": "Vault Steward Latest Run",
     "semantic_hash": "vault-steward-latest-run-operations-maintenance-latest-run",
     "source": {
@@ -20,17 +20,17 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Steward Latest Run\n\n- Run ID: vault-steward-1773020624098\n- Status: completed\n- Reason: analysis_completed\n- Provider: github_models\n- Model: openai/gpt-4.1\n- Completed at: 2026-03-09T01:43:49.398Z\n\n## Overview\nThe capsule graph is structurally healthy with no orphans and a strong foundation/hub presence. The Workspace hub (`capsule.foundation.workspace.v1`) stands out for its high link density and sovereign status, but a decomposition review for this capsule was recently completed, so immediate follow-up would be duplicative. No other hubs with similar density or status are unaddressed, and there are no clear markup or graph refactor gaps among the remaining high-value capsules.\n\n## Observations\n- Workspace hub has high outbound (41) and inbound (42) links, indicating potential structural overload.\n- Recent decomposition review for Workspace hub is completed, so further immediate action is not warranted.\n- No other foundation hubs with comparable link density are unaddressed or outside maintenance cooldown.\n- No orphaned capsules or obvious boundary hygiene issues in the current snapshot.\n- No queued or accepted jobs, and all high-priority hubs are either on cooldown or recently reviewed.\n\n## Suggested Actions\n- Monitor Workspace hub for future structural changes or link growth.\n- Reassess foundation hubs after cooldown periods expire.\n- Watch for emerging hubs with high link density or unclear boundaries.\n- Prioritize markup or graph refactor jobs only if new evidence of edge ambiguity appears.\n- Maintain regular review cadence for sovereign hubs.\n\n## Swarm Lanes\n- Scout [completed] github_models / openai/gpt-4.1: Provider scout completed via github_models and produced a structured capsule-maintenance plan.\n- Codex Foreman [skipped] chatgpt_local_codex: Codex supervisor lane is unavailable, so Vault Steward stayed in provider-only mode. (error: No local Codex auth.json was found. Run codex and sign in with ChatGPT on this machine first.)\n- Codex Reviewer [skipped] chatgpt_local_codex: Codex reviewer lane is unavailable, so the swarm kept provider-led review only. (error: No local Codex auth.json was found. Run codex and sign in with ChatGPT on this machine first.)\n- Executor [skipped] github_models: No queued Dream-branch capsule jobs were available for autonomous executor work.\n\n## Proposed Jobs\n- none\n\n## Executed Jobs\n- none\n\n## Graph Snapshot\n- Total capsules: 187\n- Orphaned capsules: 0\n- Type distribution: operations:7, concept:3, foundation:164, project:13\n\n## Runtime Policy\n- Mode: continuous\n- Interval minutes: 30\n- Night window: 1:00-6:00"
+    "content": "# Vault Steward Latest Run\n\n- Run ID: vault-steward-1773020624098\n- Status: completed\n- Reason: analysis_completed\n- Provider: github_models\n- Model: openai/gpt-4.1\n- Completed at: 2026-03-09T01:43:49.398Z\n\n## Overview\nThe capsule graph is structurally healthy with no orphans and a strong foundation/hub presence. The Workspace hub (`capsule.foundation.workspace.v1`) stands out for its high link density and sovereign status, but a decomposition review for this capsule was recently completed, so immediate follow-up would be duplicative. No other hubs with similar density or status are unaddressed, and there are no clear markup or graph refactor gaps among the remaining high-value capsules.\n\n## Observations\n- Workspace hub has high outbound (41) and inbound (42) links, indicating potential structural overload.\n- Recent decomposition review for Workspace hub is completed, so further immediate action is not warranted.\n- No other foundation hubs with comparable link density are unaddressed or outside maintenance cooldown.\n- No orphaned capsules or obvious boundary hygiene issues in the current snapshot.\n- No queued or accepted jobs, and all high-priority hubs are either on cooldown or recently reviewed.\n\n## Suggested Actions\n- Monitor Workspace hub for future structural changes or link growth.\n- Reassess foundation hubs after cooldown periods expire.\n- Watch for emerging hubs with high link density or unclear boundaries.\n- Prioritize markup or graph refactor jobs only if new evidence of edge ambiguity appears.\n- Maintain regular review cadence for sovereign hubs.\n\n## Swarm Lanes\n- Scout [completed] github_models / openai/gpt-4.1: Provider scout completed via github_models and produced a structured capsule-maintenance plan.\n- Codex Foreman [skipped] chatgpt_local_codex: Codex supervisor lane is unavailable, so Vault Steward stayed in provider-only mode. (error: No local Codex auth.json was found. Run codex and sign in with ChatGPT on this machine first.)\n- Codex Reviewer [skipped] chatgpt_local_codex: Codex reviewer lane is unavailable, so the swarm kept provider-led review only. (error: No local Codex auth.json was found. Run codex and sign in with ChatGPT on this machine first.)\n- Executor [skipped] github_models: No queued capsule jobs were available for autonomous executor work.\n\n## Proposed Jobs\n- none\n\n## Executed Jobs\n- none\n\n## Graph Snapshot\n- Total capsules: 187\n- Orphaned capsules: 0\n- Type distribution: operations:7, concept:3, foundation:164, project:13\n\n## Runtime Policy\n- Mode: continuous\n- Interval minutes: 30\n- Night window: 1:00-6:00"
   },
   "neuro_concentrate": {
-    "summary": "The capsule graph is structurally healthy with no orphans and a strong foundation/hub presence. The Workspace hub (`capsule.foundation.workspace.v1`) stands out for its high link density and sovereign status, but a decomposition review for this capsule was recently completed, so immediate follow-up would be duplicative. No other hubs with similar density or status are unaddressed, and there are no clear markup or graph refactor gaps among the remaining high-value capsules.",
+    "summary": "Vault Steward Latest Run records the current autonomous maintenance cycle, including the operating thesis, observed graph conditions, suggested follow-through, lane outcomes, and queue posture. It explains why the run closed without broad mutation, which hubs remain on the watchlist, and how the runtime balanced structural caution with ongoing stewardship evidence. It also preserves the graph snapshot, provider path, and execution status so later review can distinguish a quiet stable cycle from a degraded or incomplete run.",
     "keywords": [
       "vault-steward",
       "agent-swarm",
       "codex-foreman",
       "background-agent",
       "capsule-maintenance",
-      "dream-branch",
+      "maintenance-runtime",
       "operations",
       "decomposition"
     ],
@@ -38,7 +38,7 @@
       "extraction": 0.88,
       "synthesis": 0.9,
       "linking": 0.86,
-      "provenance_coverage": 0.82,
+      "provenance_coverage": 0.9,
       "validation_score": 0.9,
       "contradiction_pressure": 0.08
     },
@@ -70,5 +70,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b26561973ede83e2505285b14552a1fb7f9705cda3f86d3c9c9e8d40fe851add5aae3976ebb08161c815561817d0e25b80df382ead1075a173ed3e7a21f90788"
+  "integrity_sha3_512": "deff897abf07d86f34e315199b55e20cce7232d2234473ec57ba1b216acaadcafd45aa09fb9beb36f1516c3fd5bd106cd8ff84111e0c14f04f4031e08e40e229"
 }

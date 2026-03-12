@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 import { fetchAiLaneStatuses, refreshAiLanes } from '@/lib/ai/controlSurface';
 
 const refreshSchema = z.object({
@@ -33,6 +33,9 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

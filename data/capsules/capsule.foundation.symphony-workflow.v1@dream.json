@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T16:27:00Z",
     "name": "Symphony Workflow Contract",
     "semantic_hash": "symphony-workflow-md-prompt-hooks-sandbox-policy-contract",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Workflow Contract\n\n## 1. Role\nSymphony Workflow Contract will become the richer repo-owned law surface for orchestration, binding workflow policy, instruction surfaces, harness behavior, and review boundaries into one explicit execution contract.\n\n## 2. Future Workflow Contract\nWorkflow law will keep tracker, workspace, hooks, concurrency, Codex settings, and assignment-aware execution rules versioned in-repo. It will enforce stronger Dream-safe output discipline and cleaner alignment between harness protocol, workflow law, and downstream artifact return.\n\n## 3. Operational Consequence\nAutonomous coding quality will depend less on hidden operator memory and more on one visible repository-owned execution contract that every serious run can load and follow.\n\n## 4. Philosophical Alignment\nSymphony Workflow Contract supports To Dig Deep by keeping orchestration law explicit, legible, and shared."
+    "content": "# Symphony Workflow Contract\n\n## 1. Role\nSymphony Workflow Contract is the richer repo-owned law surface for orchestration, binding workflow policy, instruction surfaces, harness behavior, and review boundaries into one explicit execution contract.\n\n## 2. Workflow Contract\nWorkflow law keeps tracker, workspace, hooks, concurrency, Codex settings, and assignment-aware execution rules versioned in-repo. It enforces stronger output discipline and cleaner alignment between harness protocol, workflow law, and downstream artifact return.\n\n## 3. Operational Consequence\nAutonomous coding quality depends less on hidden operator memory and more on one visible repository-owned execution contract that every serious run can load and follow.\n\n## 4. Philosophical Alignment\nSymphony Workflow Contract supports To Dig Deep by keeping orchestration law explicit, legible, and shared."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Workflow Contract defines the future richer repo-owned law surface for orchestration: stronger instruction-surface integration, assignment-aware execution, stricter Dream-safe output discipline, and better alignment between workflow law, harness protocol, and artifact return.",
+    "summary": "Symphony Workflow Contract defines the repo-owned orchestration law surface that binds workflow policy, instruction surfaces, harness behavior, review boundaries, and artifact return into one explicit execution contract. It covers assignment-aware execution rules, stronger instruction-surface integration, cleaner alignment between workflow law and harness protocol, and output discipline that remains governable across serious runs. The capsule matters because autonomous coding quality should depend on visible repository law instead of hidden operator memory. It keeps orchestration legible, shared, and reviewable as the system grows more capable.",
     "keywords": [
       "symphony-workflow",
       "workflow-md",
@@ -97,9 +97,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing so the capsule states present workflow doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b2ad26819d9d865e505f09bb96f04fd47b764c35407c363b6b457ac722f57519b32ce51187dd5cd826a1ea62e359436ed05627d4f1c0e6534a9fecb93722d400"
 }

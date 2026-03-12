@@ -2,7 +2,7 @@
 
 - Priority: `P1`
 - Execution Band: `NEXT`
-- Status: `ACTIVE`
+- Status: `DONE`
 - Owner Lane: `Capsule Planning Agent`
 - Cluster: `Planning / assistant / swarm control plane`
 
@@ -79,6 +79,7 @@ N1Hub already has the right capsule primitives: `roadmap`, `goal`, `milestone`, 
 - the chosen execution loop is `chat-to-capsules -> personal-ai-assistant -> planner -> planning-horizon-engine -> A2C packet candidate -> markdown queue review -> Real task capsule -> agent delegation -> execution evidence`
 - the chosen branch posture is `Dream for exploratory planning`, `Real for accepted execution and proof`
 - the next work should not be a broad migration; it should be three bounded slices: projection bridge, workspace surface, and branch or validation guardrails
+- the Real/Dream branch wave is now materially contained and the full capsule corpus validator is green after repo-native seal recomputation, so the design packet no longer needs to stay `ACTIVE` as a live frontier
 
 ## Chosen Control Loop
 
@@ -162,4 +163,4 @@ You are the Capsule Planning Agent. Design the smallest viable capsule-native ex
 
 ## Handoff Note
 
-The control-plane model is now explicit enough to stop improvising the architecture. The next pull should be `TODO-034`, which turns accepted queue packets into durable task and delegation projections without trying to replace the whole markdown queue in one leap.
+The control-plane model is explicit enough to stop improvising the architecture, and the branch or validator cleanup wave is no longer the blocker. The next pull is `TODO-034`, which should turn accepted queue packets into durable task and delegation projections without trying to replace the whole markdown queue in one leap.

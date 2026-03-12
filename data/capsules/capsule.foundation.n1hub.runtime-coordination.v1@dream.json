@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:58:00Z",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T18:02:00Z",
     "name": "N1Hub Runtime Coordination",
     "semantic_hash": "n1hub-runtime-coordination-daemon-orchestration-stewardship-agents-continuity",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream N1Hub decomposition to isolate daemon continuity, orchestration, agent-lane coordination, and stewardship runtime from doctrine, operator ingress, and program lines."
+        "rationale": "Minted during N1Hub decomposition to isolate daemon continuity, orchestration, agent-lane coordination, and stewardship runtime from doctrine, operator ingress, and program lines."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "c87b404108b04f3a3f3f982b1c5dfd13307426cd7efaa3fe52ec29926a83c242cd1975b35eecf4cb91c4f67159f6e5d4ead5a3f3a6206726ec833ea2d4c92e82"
 }

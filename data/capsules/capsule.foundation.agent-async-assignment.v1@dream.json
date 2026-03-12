@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T21:40:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:18:00Z",
     "name": "Agent Async Assignment",
-    "semantic_hash": "agent-async-assignment-durable-cross-surface-lineage-routing",
+    "semantic_hash": "agent-async-assignment-cross-surface-artifact-return-routing",
     "source": {
       "uri": "https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/",
       "type": "web_article"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Async Assignment\n\n## 1. Role\nN1Hub will treat asynchronous assignment as a first-class work object that can begin from issues, comments, tasks, assistant actions, mobile controls, or operator surfaces and then continue independently until it returns a bounded artifact or a clarification request.\n\n## 2. Durable Assignment Contract\n- stable assignment handles that survive client switches and daemon restarts\n- visible assignment origin, owner, due window, and lane selection\n- artifact return tied to the same assignment chain\n- clarification loops that route back to the originating surface\n- status projection across web, terminal, mobile, and daemon views\n\n## 3. Runtime Consequence\nAssignment-aware routing will let the control plane, wallet, and daemon layer choose the right execution lane for each job instead of treating all background work as interchangeable. The same assignment will remain legible from request to artifact return even when multiple surfaces and agents participate.\n\n## 4. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by letting deep work continue autonomously without losing origin, ownership, routing discipline, or reviewability."
+    "content": "# Agent Async Assignment\n\n## 1. Role\nN1Hub treats asynchronous assignment as a first-class work object that can begin from issues, comments, tasks, assistant actions, mobile controls, or operator surfaces and then continue independently until it returns a bounded artifact or a clarification request.\n\n## 2. Durable Assignment Contract\n- stable assignment handles that survive client switches and daemon restarts\n- visible assignment origin, owner, due window, and lane selection\n- artifact return tied to the same assignment chain\n- clarification loops that route back to the originating surface\n- status projection across web, terminal, mobile, and daemon views\n\n## 3. Runtime Consequence\nAssignment-aware routing lets the control plane, wallet, and daemon layer choose the right execution lane for each job instead of treating all background work as interchangeable. The same assignment remains legible from request to artifact return even when multiple surfaces and agents participate.\n\n## 4. Philosophical Alignment\nAgent Async Assignment supports To Dig Deep by letting deep work continue autonomously without losing origin, ownership, routing discipline, or reviewability."
   },
   "neuro_concentrate": {
-    "summary": "Agent Async Assignment defines the future durable assignment object for N1Hub: stable handles, cross-client continuation, assignment-aware routing, artifact return, status projection, and review-safe clarification loops across assistant, issue, mobile, terminal, and daemon surfaces.",
+    "summary": "Agent Async Assignment defines the durable assignment object that lets N1Hub launch, supervise, and return bounded work across assistant, issue, mobile, terminal, and daemon surfaces without losing ownership or routing clarity. It captures stable assignment handles, visible origin and due windows, artifact return tied to the originating request, clarification loops that route back to the initiating surface, and status projection across clients. The capsule matters because asynchronous work becomes reviewable and legible instead of dissolving into disconnected background tasks.",
     "keywords": [
       "agent-async-assignment",
       "assignment-origin",
@@ -47,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-async-assignment-durable-cross-surface-lineage-routing"
+    "semantic_hash": "agent-async-assignment-cross-surface-artifact-return-routing"
   },
   "recursive_layer": {
     "links": [
@@ -91,12 +91,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1ed6d646f4c7c76bc76078fac10e0613a4925e57777721eea31f7cb2dea420643d6035e39db44c24f9612c05abc433412b2a0b84dec67cf3c5c03bbb75e85e78"
 }

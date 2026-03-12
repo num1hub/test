@@ -5,6 +5,7 @@ import { hashPassword, verifyPassword } from '@/lib/password';
 
 const AUTH_DIR = dataPath('private', 'auth');
 const ACCESS_CODE_PATH = path.join(AUTH_DIR, 'access-code.txt');
+let envAccessCodeHashPromise: Promise<string> | null = null;
 
 function normalizeAccessCode(value: string) {
   return value.trim().toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 4);
@@ -14,7 +15,32 @@ async function ensureAuthDir() {
   await fs.mkdir(AUTH_DIR, { recursive: true });
 }
 
+function getConfiguredAccessCode() {
+  return process.env.N1HUB_ACCESS_CODE?.trim() || null;
+}
+
+function isEnvBackedAccessCode() {
+  return process.env.NODE_ENV === 'production' && Boolean(getConfiguredAccessCode());
+}
+
+async function getEnvBackedAccessCodeHash() {
+  const configuredCode = getConfiguredAccessCode();
+  if (!configuredCode) {
+    throw new Error('N1HUB_ACCESS_CODE must be configured for env-backed auth.');
+  }
+
+  if (!envAccessCodeHashPromise) {
+    envAccessCodeHashPromise = hashPassword(normalizeAccessCode(configuredCode));
+  }
+
+  return await envAccessCodeHashPromise;
+}
+
 async function readOrCreateAccessCodeHash() {
+  if (isEnvBackedAccessCode()) {
+    return await getEnvBackedAccessCodeHash();
+  }
+
   try {
     const hash = await fs.readFile(ACCESS_CODE_PATH, 'utf-8');
     return hash.trim();

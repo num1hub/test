@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:40:00Z",
-    "updated_at": "2026-03-11T23:10:00Z",
+    "updated_at": "2026-03-12T17:09:00Z",
     "name": "Vault Stewardship Swarm",
     "semantic_hash": "vault-stewardship-swarm-routing-pressure-governance-mutation-runtime",
     "source": {
@@ -26,7 +26,7 @@
     "content": "# Vault Stewardship Swarm\n\n## 1. Role\nVault Stewardship Swarm is the explicit maintenance cluster that studies the vault, plans bounded improvement, and keeps graph quality rising over time. It routes that work through four bounded sub-hubs so inventory pressure, work planning and review, mutation workers, and runtime modes stay explicit instead of collapsing into one flat registry.\n\n## 2. Routing Surfaces\n- `inventory-pressure` owns vault reading, research pressure detection, and gap sensing before any mutation packet is proposed.\n- `work-planning-review` owns job generation, critique pressure, evidence trails, and branch or validation handoff.\n- `mutation-workers` owns decomposition, markup, graph refactor, and update landing once a packet is ready to act.\n- `runtime-modes` owns day and night posture, control surfaces, daemon footing, assignment continuity, and operator-visible stewardship channels.\n\n## 3. Parent Boundary\nThe parent swarm hub keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four stewardship sub-hubs. Detailed worker routing now flows through those sub-hubs so Vault Stewardship Swarm remains a coordination map instead of a 24-link directory of mixed runtime, review, and mutation surfaces."
   },
   "neuro_concentrate": {
-    "summary": "Vault Stewardship Swarm routes stewardship through four bounded surfaces: inventory pressure, work planning and review, mutation workers, and runtime modes. The parent keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four sub-hubs. This makes future stewardship doctrine more legible because vault reading, review discipline, structural mutation, and day or night runtime posture no longer hide inside one overloaded parent capsule.",
+    "summary": "Vault Stewardship Swarm routes stewardship through four bounded surfaces: inventory pressure, work planning and review, mutation workers, and runtime modes. The parent keeps only top-level relationships to Key Agents, Capsule Graph Maintenance, Background Agent Runtime, Personal AI Assistant, To Dig Deep, and the four sub-hubs. This makes stewardship doctrine more legible because vault reading, review discipline, structural mutation, and day or night runtime posture no longer hide inside one overloaded parent capsule.",
     "keywords": [
       "vault-stewardship-swarm",
       "hub-decomposition",
@@ -94,7 +94,7 @@
         "agent": "vault-steward-maintainer",
         "run_id": "vault-steward-1772913358263",
         "job_id": "vault-steward-job-5bcd34a3977e2546",
-        "rationale": "The updated summary and keywords are directly grounded in the capsule content describing the Dream branch's vision for Vault Stewardship Swarm, including its modes, workflows, and importance. The maintenance note acknowledges the current improvements and suggests next steps without inventing new doctrine."
+        "rationale": "The updated summary and keywords are directly grounded in the capsule content describing Vault Stewardship Swarm, including its modes, workflows, and importance. The maintenance note acknowledges the current improvements and suggests next steps without inventing new doctrine."
       },
       {
         "at": "2026-03-08T21:08:28.717Z",
@@ -102,7 +102,7 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1773004016221",
         "job_id": "vault-steward-job-a87a186a170148d2",
-        "rationale": "The capsule content describes a multi-mode, structured approach to vault stewardship, with emphasis on autonomous operation, job generation, and integrated review. The update clarifies these aspects for graph maintenance and prepares for future decomposition without altering recursive links."
+        "rationale": "The capsule content describes a multi-mode, structured approach to vault stewardship, with emphasis on autonomous operation, job generation, and integrated review. The update clarifies these aspects for graph maintenance and prepares for bounded decomposition without altering recursive links."
       },
       {
         "at": "2026-03-08T23:41:03.676Z",
@@ -110,28 +110,28 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1773013204004",
         "job_id": "vault-steward-job-8f856f01ae20f074",
-        "rationale": "The maintenance change is justified by the capsule's focus on structured intelligence, explicit operating modes, and branch-safe workflows, as well as the need for improved clarity and discoverability following the recent graph_refactor pass."
+        "rationale": "The maintenance change is justified by the capsule's focus on structured intelligence, explicit operating modes, and governed workflows, as well as the need for improved clarity and discoverability following the recent graph_refactor pass."
       },
       {
         "at": "2026-03-09T20:24:25Z",
         "event": "governance_sync_rewrite_applied",
         "agent": "n1",
         "run_id": "TODO-021",
-        "rationale": "The Dream branch was rewritten around the live Vault Steward runtime. Current lane stack, Dream-only operational mirrors, queue cooldown discipline, and Dream-first mutation remain real-first canonical, while Dream now preserves only the next-horizon stewardship doctrine around lane contracts, swarm health visibility, and promotion-safe maintenance policy."
+        "rationale": "The capsule was rewritten around the live Vault Steward runtime so lane contracts, swarm health visibility, queue cooldown discipline, and promotion-safe maintenance policy remain explicit and bounded."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Vault Stewardship Swarm states present stewardship doctrine directly."
       },
       {
         "at": "2026-03-11T23:10:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Vault Stewardship Swarm into four bounded sub-hubs so inventory sensing, planning and review, mutation workers, and runtime modes no longer collapse into a 24-link parent hub."
+        "rationale": "Refactored Vault Stewardship Swarm into four bounded sub-hubs so inventory sensing, planning and review, mutation workers, and runtime modes no longer collapse into a 24-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "f701098f988979846b871626eb9414405743fbe9ee936c3cf90372fe2bbc535f0e59ef6515ef466d7ed40b898dce2f9c0af9a8aaaf18e21bcfee877d1cbdbe64"
 }

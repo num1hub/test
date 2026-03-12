@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Vault Steward Agent",
     "created_at": "2026-03-09T01:43:49.399Z",
-    "updated_at": "2026-03-11T13:33:44Z",
+    "updated_at": "2026-03-12T14:04:54Z",
     "name": "Vault Steward Queue",
     "semantic_hash": "vault-steward-queue-active-current-pending-jobs-only",
     "source": {
@@ -20,17 +20,17 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Vault Steward Queue\n\nQueued jobs: 0\n\n## Pending Jobs\n- none\n\n## Rotation Note\nCompleted Dream-side queue history for run `vault-steward-1773020624098` was rotated into `capsule.operations.vault-steward.archive.vault-steward-1773020624098.v1` on 2026-03-11T13:33:44Z so the active queue remains current-only."
+    "content": "# Vault Steward Queue\n\nQueued jobs: 0\n\n## Pending Jobs\n- none\n\n## Rotation Note\nCompleted queue history for run `vault-steward-1773020624098` was rotated into `capsule.operations.vault-steward.archive.vault-steward-1773020624098.v1` on 2026-03-11T13:33:44Z so the active queue remains current-only."
   },
   "neuro_concentrate": {
-    "summary": "Vault Steward Queue now contains only live pending or in-progress Dream-side maintenance jobs. The completed run `vault-steward-1773020624098` was rotated into the archive so the active queue remains operationally current.",
+    "summary": "Vault Steward Queue records the current pending and in-progress maintenance jobs proposed by the autonomous vault agent. It keeps the active worklist visible for operators and notes when completed queue history was rotated into the archive so the active queue remains current-only. The capsule preserves current queue posture, confirmation expectations, and linked maintenance surfaces without forcing review of older completed runs or private runtime state. It also records when completed work was rotated into archive capsules so operators can audit history without polluting the current worklist surface.",
     "keywords": [
       "vault-steward",
       "maintenance-queue",
       "operations",
       "active-queue",
-      "dream-branch",
-      "rotation"
+      "rotation",
+      "history-archive"
     ],
     "confidence_vector": {
       "extraction": 0.9,
@@ -71,9 +71,9 @@
         "at": "2026-03-11T13:33:44Z",
         "event": "queue_rotation_applied",
         "agent": "n1",
-        "rationale": "Moved completed Vault Steward queue history into an archived Dream-side run atom so the active queue contains only current jobs."
+        "rationale": "Moved completed Vault Steward queue history into an archive run atom so the active queue contains only current jobs."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "133d3eaf7d4154f60a4d49acb0e9b9612da344fca936ba4012a3dd257db301c3e7861b50c519e65a42b23e8e7031b24741ba8ee3ba7d01b870dbee1050d82c90"
 }

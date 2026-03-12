@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-11T18:09:20Z",
+    "updated_at": "2026-03-12T17:04:00Z",
     "name": "Background Agent Runtime",
     "semantic_hash": "background-runtime-parent-routing-daemon-control-gates-orchestration",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Background Agent Runtime\n\n## 1. Role\nBackground Agent Runtime provides the durable substrate for long-lived agent work across N1, A2C, Symphony, N-Infinity, and Vault Steward lanes while keeping gating, replay, recovery, and operator trust explicit. It routes that substrate through four bounded sub-hubs so lifecycle, control, mutation authority, and execution orchestration do not collapse into one flat doctrine surface.\n\n## 2. Routing Surfaces\n- `daemon-lifecycle` governs host bring-up, sleep posture, night windows, model readiness, and cost-aware continuity.\n- `control-plane` governs assignment continuity, memory state, instruction surfaces, context packs, harness semantics, and operator-visible controls.\n- `mutation-gates` governs permission-to-run, workspace profiling, intake risk review, branch discipline, validation, and critique pressure.\n- `work-orchestration` governs job envelopes, delegation, observability, stewardship maintenance, and mining or update workers.\n\n## 3. Parent Boundary\nThe parent runtime hub keeps only top-level relationships to N1Hub, Personal AI Assistant, human-ai symbiosis, the enclosing project capsules, To Dig Deep, and the four sub-hubs. Detailed runtime atoms route through the sub-hubs so the autonomy substrate stays legible, replayable, and reviewable."
+    "content": "# Background Agent Runtime\n\n## 1. Role\nBackground Agent Runtime provides the durable substrate for long-lived agent work across N1, A2C, Symphony, N-Infinity, and Vault Steward lanes while keeping gating, replay, recovery, and operator trust explicit. It routes that substrate through four bounded sub-hubs so lifecycle, control, mutation authority, and execution orchestration do not collapse into one flat doctrine surface.\n\n## 2. Routing Surfaces\n- `daemon-lifecycle` governs host bring-up, sleep posture, night windows, model readiness, and cost-aware continuity.\n- `control-plane` governs assignment continuity, memory state, instruction surfaces, context packs, harness semantics, and operator-visible controls.\n- `mutation-gates` governs permission-to-run, workspace profiling, intake risk review, routing discipline, validation, and critique pressure.\n- `work-orchestration` governs job envelopes, delegation, observability, stewardship maintenance, and mining or update workers.\n\n## 3. Parent Boundary\nThe parent runtime hub keeps only top-level relationships to N1Hub, Personal AI Assistant, human-ai symbiosis, the enclosing project capsules, To Dig Deep, and the four sub-hubs. Detailed runtime atoms route through the sub-hubs so the autonomy substrate stays legible, replayable, and reviewable."
   },
   "neuro_concentrate": {
-    "summary": "Background Agent Runtime is the future parent hub for four bounded runtime surfaces: daemon lifecycle, control plane, mutation gates, and work orchestration. The parent keeps only top-level relationships to N1Hub, Personal AI Assistant, human-ai symbiosis, and its project envelopes while the detailed runtime atoms route through sub-hubs. This keeps long-lived autonomy legible, replayable, and reviewable, and it prevents lifecycle logic, control continuity, mutation authority, and worker orchestration from collapsing into one flat doctrine surface.",
+    "summary": "Background Agent Runtime is the parent hub for four bounded runtime surfaces: daemon lifecycle, control plane, mutation gates, and work orchestration. The parent keeps only top-level relationships to N1Hub, Personal AI Assistant, human-ai symbiosis, and its project envelopes while the detailed runtime atoms route through sub-hubs. This keeps long-lived autonomy legible, replayable, and reviewable, and it prevents lifecycle logic, control continuity, mutation authority, and worker orchestration from collapsing into one flat doctrine surface.",
     "keywords": [
       "background-agent-runtime",
       "hub-decomposition",
@@ -145,21 +145,21 @@
         "event": "governance_sync_rewrite_applied",
         "agent": "n1",
         "run_id": "TODO-020",
-        "rationale": "The Dream branch was rewritten around current governed runtime truth. Mutation gates, workspace classification, deep intake posture, ignition discipline, and runtime bring-up remain real-first canonical, while Dream now preserves only the next-horizon runtime delta around lane isolation, policy-shaped dispatch, baton routing, and proof-bearing operator control."
+        "rationale": "The capsule was rewritten around current governed runtime truth. Mutation gates, workspace classification, deep intake posture, ignition discipline, and runtime bring-up remain canonical, while the remaining runtime doctrine preserves lane isolation, policy-shaped dispatch, baton routing, and proof-bearing operator control."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states its runtime doctrine directly."
       },
       {
         "at": "2026-03-11T18:09:20Z",
         "event": "dream_parent_topology_sync",
         "agent": "codex",
-        "rationale": "Synced Dream parent routing to the live four-subhub background-runtime topology so future autonomy doctrine inherits bounded lifecycle, control-plane, mutation-gate, and orchestration seams."
+        "rationale": "Synced parent routing to the live four-subhub background-runtime topology so the autonomy runtime inherits bounded lifecycle, control-plane, mutation-gate, and orchestration seams."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "fb76ddd1cc77fac6fd5c6e5a9775705a646d9e6c4eb328aa0213ade0a9aef15ab0e485592977c9406c82bac33992dcdac52c8e593f3f34eed380bb8367a16ce8"
 }

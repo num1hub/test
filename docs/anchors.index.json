@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "generated_at": "2026-03-11T18:10:08.568Z",
+  "generated_at": "2026-03-12T22:31:19.059Z",
   "root": ".",
-  "anchor_count": 103,
+  "anchor_count": 84,
   "anchors": [
     {
       "id": "arch:a2c.runtime",
@@ -22,34 +22,6 @@
       "id": "arch:api.validate.route",
       "category": "arch",
       "name": "api.validate.route",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__6d9fbed6._.js",
-      "line": 1754,
-      "links": [
-        "arch:validator.engine",
-        "interface:validator.public-api",
-        "doc:validator.reference"
-      ],
-      "state": "active",
-      "note": "Primary validator API boundary shared by app workflows and external callers."
-    },
-    {
-      "id": "arch:api.validate.route",
-      "category": "arch",
-      "name": "api.validate.route",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__8cc1e2f8._.js",
-      "line": 1655,
-      "links": [
-        "arch:validator.engine",
-        "interface:validator.public-api",
-        "doc:validator.reference"
-      ],
-      "state": "active",
-      "note": "Primary validator API boundary shared by app workflows and external callers."
-    },
-    {
-      "id": "arch:api.validate.route",
-      "category": "arch",
-      "name": "api.validate.route",
       "file": "app/api/validate/route.ts",
       "line": 1,
       "links": [
@@ -59,20 +31,6 @@
       ],
       "state": "active",
       "note": "Primary validator API boundary shared by app workflows and external callers."
-    },
-    {
-      "id": "arch:app.root-layout",
-      "category": "arch",
-      "name": "app.root-layout",
-      "file": ".next/dev/server/chunks/ssr/_e47f335c._.js",
-      "line": 97,
-      "links": [
-        "interface:app.landing-entry",
-        "arch:api.validate.route",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "App Router root layout and top-level application shell for N1Hub."
     },
     {
       "id": "arch:app.root-layout",
@@ -101,20 +59,6 @@
       ],
       "state": "active",
       "note": "Normative anchor-governance contract adapted to N1Hub architecture and instruction surfaces."
-    },
-    {
-      "id": "arch:graph.runtime",
-      "category": "arch",
-      "name": "graph.runtime",
-      "file": ".next/dev/static/chunks/_c48db689._.js",
-      "line": 5,
-      "links": [
-        "doc:projects.reference",
-        "doc:branching.real-dream-diff",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "Capsule graph runtime surface shared by project and vault graph views."
     },
     {
       "id": "arch:graph.runtime",
@@ -161,96 +105,6 @@
       ],
       "state": "active",
       "note": "Public Symphony runtime barrel and orchestration surface for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__13ca372b._.js",
-      "line": 2566,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__6d9fbed6._.js",
-      "line": 1595,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__81561b9e._.js",
-      "line": 2467,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__8cc1e2f8._.js",
-      "line": 1496,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__cae134f9._.js",
-      "line": 2440,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
-    },
-    {
-      "id": "arch:validator.engine",
-      "category": "arch",
-      "name": "validator.engine",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__feba9bdc._.js",
-      "line": 2341,
-      "links": [
-        "arch:a2c.runtime",
-        "interface:validator.public-api",
-        "doc:validator.reference",
-        "script:validator.cli"
-      ],
-      "state": "active",
-      "note": "Core Capsule Validator engine and gate orchestration for N1Hub."
     },
     {
       "id": "arch:validator.engine",
@@ -572,6 +426,7 @@
         "doc:governance.risk-register",
         "doc:n1hub.low-blast-radius-architecture",
         "doc:openclaw.fork-notes",
+        "doc:ops.deploy-vercel-hobby",
         "script:extract.anchors",
         "script:validate.anchors",
         "script:verify.root-docs",
@@ -641,6 +496,19 @@
       ],
       "state": "active",
       "note": "Selective OpenClaw pattern adoption notes for N1Hub."
+    },
+    {
+      "id": "doc:ops.deploy-vercel-hobby",
+      "category": "doc",
+      "name": "ops.deploy-vercel-hobby",
+      "file": "ops/DEPLOY_VERCEL_HOBBY.md",
+      "line": 1,
+      "links": [
+        "doc:n1hub.readme",
+        "interface:api.deploy-smoke"
+      ],
+      "state": "active",
+      "note": "Step-by-step deploy checklist for the locked single-owner Vercel Hobby posture."
     },
     {
       "id": "doc:projects.reference",
@@ -1154,69 +1022,17 @@
       "note": "Policy scanner for fragile anchor artifact redirection usage."
     },
     {
-      "id": "interface:app.landing-entry",
+      "id": "interface:api.deploy-smoke",
       "category": "interface",
-      "name": "app.landing-entry",
-      "file": ".next/dev/server/chunks/ssr/[root-of-the-server]__1222724e._.js",
-      "line": 24,
+      "name": "api.deploy-smoke",
+      "file": "app/api/deploy/smoke/route.ts",
+      "line": 1,
       "links": [
-        "arch:app.root-layout",
-        "doc:n1hub.readme"
+        "doc:n1hub.readme",
+        "interface:app.landing-entry"
       ],
       "state": "active",
-      "note": "Public landing entry for the authenticated N1Hub vault experience."
-    },
-    {
-      "id": "interface:app.landing-entry",
-      "category": "interface",
-      "name": "app.landing-entry",
-      "file": ".next/dev/server/chunks/ssr/[root-of-the-server]__21e321fd._.js",
-      "line": 227,
-      "links": [
-        "arch:app.root-layout",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "Auth-aware root entry that serves the public N1Hub landing to guests and a temporary workspace shell to authenticated operators."
-    },
-    {
-      "id": "interface:app.landing-entry",
-      "category": "interface",
-      "name": "app.landing-entry",
-      "file": ".next/dev/server/chunks/ssr/[root-of-the-server]__7a5c939c._.js",
-      "line": 299,
-      "links": [
-        "arch:app.root-layout",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "Auth-aware root entry that serves the public N1Hub landing to guests and a temporary workspace shell to authenticated operators."
-    },
-    {
-      "id": "interface:app.landing-entry",
-      "category": "interface",
-      "name": "app.landing-entry",
-      "file": ".next/dev/server/chunks/ssr/[root-of-the-server]__9b95c430._.js",
-      "line": 263,
-      "links": [
-        "arch:app.root-layout",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "Auth-aware root entry that serves the public N1Hub landing to guests and a temporary workspace shell to authenticated operators."
-    },
-    {
-      "id": "interface:app.landing-entry",
-      "category": "interface",
-      "name": "app.landing-entry",
-      "file": ".next/dev/server/chunks/ssr/[root-of-the-server]__9cb10230._.js",
-      "line": 263,
-      "links": [
-        "arch:app.root-layout",
-        "doc:n1hub.readme"
-      ],
-      "state": "active",
-      "note": "Auth-aware root entry that serves the public N1Hub landing to guests and a temporary workspace shell to authenticated operators."
+      "note": "Public deploy smoke surface that confirms locked-root posture and deploy-auth readiness without exposing the private owner route segment."
     },
     {
       "id": "interface:app.landing-entry",
@@ -1226,100 +1042,11 @@
       "line": 1,
       "links": [
         "arch:app.root-layout",
-        "doc:n1hub.readme"
+        "doc:n1hub.readme",
+        "interface:api.deploy-smoke"
       ],
       "state": "active",
-      "note": "Auth-aware root entry that serves the public N1Hub landing to guests and a temporary workspace shell to authenticated operators."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__13ca372b._.js",
-      "line": 2695,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__6d9fbed6._.js",
-      "line": 1724,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__81561b9e._.js",
-      "line": 2596,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__8cc1e2f8._.js",
-      "line": 1625,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__cae134f9._.js",
-      "line": 2569,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
-    },
-    {
-      "id": "interface:validator.public-api",
-      "category": "interface",
-      "name": "validator.public-api",
-      "file": ".next/dev/server/chunks/[root-of-the-server]__feba9bdc._.js",
-      "line": 2470,
-      "links": [
-        "arch:validator.engine",
-        "doc:validator.reference",
-        "script:validator.cli",
-        "script:validator.openapi"
-      ],
-      "state": "active",
-      "note": "Public validator barrel used by routes, scripts, and tests."
+      "note": "Auth-aware root entry that serves a locked deployment gate to guests and the workspace shell to authenticated operators."
     },
     {
       "id": "interface:validator.public-api",

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-07T10:22:13.831Z",
+    "updated_at": "2026-03-12T16:33:00Z",
     "name": "Dashboard Widget",
     "semantic_hash": "capsule-dashboard-widget-v1-ui-analytics-tracker-planner",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Dashboard Widget\n\n## 1. Definition and Essence\nDashboard Widget models a discrete visual component that renders a focused slice of graph state, such as upcoming deadlines, velocity trends, or overdue risk. Widgets remain modular and composable to support adaptive dashboard layouts.\n\n## 2. Core Attributes\n- `widget_type` chart, list, status-card, timeline, alert-stream\n- `position` layout coordinates and span properties\n- `data_query` capsule-filtered retrieval definition\n- `display_settings` theme, threshold, and formatting options\n- `interaction_hooks` click-through or action triggers\n\n## 3. Lifecycle\nWidgets are instantiated from templates or custom configs, bound to queries, rendered in dashboards, and revised as workflows and monitoring needs change.\n\n## 4. Integration\n- **Dashboard:** parent composition container.\n- **Analytics:** powers data-driven visual summaries.\n- **Tracker and Planner:** common operational data sources.\n- **Workspace:** respects user personalization and access scope.\n\n## 5. Philosophical Alignment\nWidgets support To Dig Deep by turning complex graph telemetry into focused windows that still preserve traceability to source capsules.\n"
   },
   "neuro_concentrate": {
-    "summary": "Dashboard Widget in the Dream branch describes a more expressive visual intelligence atom for the workspace. It pushes toward widgets that react better to branch state, project context, priority signals, and drill-down semantics without becoming noisy or decorative. The capsule matters because dashboard quality is constrained by the quality of its smallest units. Dream therefore preserves Widget as a future attention-shaping component where each visual block becomes more decision-relevant and less like a passive chart tile.",
+    "summary": "Dashboard Widget defines the visual intelligence atom that turns a focused slice of graph state into a decision-relevant interface component. It keeps priority signals, project context, drill-down semantics, and composable display behavior explicit so each widget can shape attention without becoming noisy, decorative, or detached from source capsules. The capsule matters because dashboard quality is constrained by the quality of its smallest units, not only by the container that arranges them. It therefore treats each widget as a governed attention-shaping component rather than a passive chart tile.",
     "keywords": [
       "dashboard",
       "widget",
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "e266d1f196bca0689ee0f2d5a761dfbb8c56c11aad938f09ca8db2009b170bcc3ef60bd60ff56eb0ed8177996d81bbeca0900116f9d66a3f6df90d6d530f7c59"
+  "integrity_sha3_512": "65a5c09ea138770f9b2042574ed7a4e079eb69b89d85e4eccd6e1270a644d9443da95b4fc0e5791bd21180bf719ce1f8bd9c99db12e4b6bece18f1ee34965f6b"
 }

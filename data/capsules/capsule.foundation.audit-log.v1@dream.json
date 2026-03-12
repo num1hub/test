@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:01:40.853Z",
-    "updated_at": "2026-03-12T04:55:00Z",
+    "updated_at": "2026-03-12T17:02:00Z",
     "name": "Audit Log",
     "semantic_hash": "capsule-foundation-audit-log-v1-events-governance-forensics",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Audit Log\n\n## 1. Definition and Essence\nAudit Log defines immutable event recording for capsule creation, mutation, validation, overrides, and governance actions. It standardizes event schema, retention policies, and integrity requirements for forensic traceability.\n\n## 2. Core Attributes\n- `event_id` immutable audit record identifier\n- `actor_ref` identity capsule responsible for action\n- `subject_ref` capsule or resource affected\n- `event_payload` normalized mutation metadata\n- `retention_policy` storage duration and archival tiering\n\n## 3. Lifecycle\nAudit events are emitted on protected operations, indexed for query, rotated by retention policy, and archived while preserving tamper-evident integrity.\n\n## 4. Integration\n- **Validator and A2C:** records gate outcomes and fixes.\n- **Architect Override and Parliament:** logs exceptional governance actions.\n- **Archive:** long-term retention and restoration coupling.\n- **Security:** incident response and compliance evidence source.\n\n## 5. Philosophical Alignment\nAudit logging realizes To Dig Deep by ensuring every important action can be reconstructed, challenged, and learned from.\n"
   },
   "neuro_concentrate": {
-    "summary": "Audit Log represents a stronger evidentiary memory for the platform. It pushes toward richer event granularity, better causal reconstruction, cleaner actor lineage, and more useful long-horizon review of how graph and agent state actually changed over time. The capsule matters because trust depends on reconstructability, not on declarations alone. It therefore stands as the forensic substrate of the ecosystem rather than just a record of notable mutations.",
+    "summary": "Audit Log defines the forensic event memory for capsule creation, mutation, validation, overrides, and governance actions across N1Hub. It covers immutable record identifiers, actor and subject lineage, normalized mutation payloads, retention and archival policy, and the integrity requirements needed for reconstruction after disputes or incidents. The capsule matters because trust depends on reconstructability rather than declarations alone. It therefore serves as the evidentiary substrate that lets operators challenge, explain, and learn from important system actions over time instead of relying on memory or folklore.",
     "keywords": [
       "audit-log",
       "forensics",
@@ -69,9 +69,9 @@
         "at": "2026-03-12T04:55:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Audit Log states forensic-memory doctrine directly."
+        "rationale": "Removed summary meta-language so Audit Log states forensic-memory doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "8eefcd11f479bd8767d1e4c436870b59b6878520b1e3caa5e0d02bfbf5572cd61a8a56d40a51c6454d62598980f6d42d4721520ded6a52566dd12984830060f3"
 }

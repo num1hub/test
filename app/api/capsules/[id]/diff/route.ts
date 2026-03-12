@@ -1,11 +1,14 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, checkRateLimit } from '@/lib/apiSecurity';
+import { isAuthorized, checkRateLimit, requireTrustedMutation } from '@/lib/apiSecurity';
 import { branchNameSchema } from '@/contracts/diff';
 import { computeDiff } from '@/lib/diff/diff-engine';
 
 const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
 
 function requireAuthorized(request: Request): NextResponse | null {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) return jsonError(401, 'Unauthorized');
   const rate = checkRateLimit(request);
   if (!rate.allowed) {

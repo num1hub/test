@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:20:00Z",
     "name": "Agent Soul",
-    "semantic_hash": "agent-soul-stable-symbiotic-identity-across-multi-agent-surfaces",
+    "semantic_hash": "agent-soul-stable-identity-continuity-delegation-partner-contract",
     "priority": "high",
     "progress": 28,
     "estimatedHours": 190,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Soul\n\n## 1. Role\nAgent Soul will remain the stable identity spine across assistant, mining, swarm, and execution surfaces. N1Hub will preserve one recognizable partner contract even while specialized agents operate underneath with different tasks, tools, and runtime lanes.\n\n## 2. Future Identity Contract\n- stable persona, boundaries, and continuity across sessions and channels\n- one coherent partner surface through multi-agent delegation and handoff\n- explicit identity continuity through day co-pilot, night autonomy, and deeper execution modes\n- operator-visible changes to identity and continuity rules\n- stronger separation between identity law and broader repository operating instructions\n\n## 3. Operational Consequence\nUsers will be able to experience one trustworthy intelligence system even when many bounded agents are active. The system will remain aligned to truth, humility, and branch discipline without pretending every lane is the same persona.\n\n## 4. Philosophical Alignment\nAgent Soul supports To Dig Deep by forcing the intelligence layer to stay grounded in real repository and graph truth rather than drifting into free-floating chat behavior."
+    "content": "# Agent Soul\n\n## 1. Role\nAgent Soul is the stable identity spine across assistant, mining, swarm, and execution surfaces. N1Hub preserves one recognizable partner contract even while specialized agents operate underneath with different tasks, tools, and runtime lanes.\n\n## 2. Identity Contract\n- stable persona, boundaries, and continuity across sessions and channels\n- one coherent partner surface through multi-agent delegation and handoff\n- explicit identity continuity through day co-pilot, night autonomy, and deeper execution modes\n- operator-visible changes to identity and continuity rules\n- stronger separation between identity law and broader repository operating instructions\n\n## 3. Operational Consequence\nUsers can experience one trustworthy intelligence system even when many bounded agents are active. The system remains aligned to truth, humility, and branch discipline without pretending every lane is the same persona.\n\n## 4. Philosophical Alignment\nAgent Soul supports To Dig Deep by forcing the intelligence layer to stay grounded in real repository and graph truth rather than drifting into free-floating chat behavior."
   },
   "neuro_concentrate": {
-    "summary": "Agent Soul defines the future stable symbiotic identity contract for N1Hub intelligence: one durable partner spine that survives multi-agent delegation, day/night mode shifts, and deep capsule work without fragmenting into contradictory voices.",
+    "summary": "Agent Soul defines the stable identity contract that lets N1Hub present one recognizable partner surface even while specialized agents handle different tools, tasks, and runtime lanes underneath. It covers persona continuity, operator-visible boundary changes, day and night mode shifts, delegation without identity fragmentation, and the separation between assistant identity law and broader repository operating doctrine. The capsule matters because the intelligence layer stays grounded in repository truth, humility, and durable continuity instead of splintering into contradictory voices as more bounded agents enter the system.",
     "keywords": [
       "agent-soul",
       "soul-md",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-soul-stable-symbiotic-identity-across-multi-agent-surfaces"
+    "semantic_hash": "agent-soul-stable-identity-continuity-delegation-partner-contract"
   },
   "recursive_layer": {
     "links": [
@@ -85,12 +85,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b5fcf5a4b19930c10dbb5f710797802942fdac617c0826e1234e07239a8974e566ba1f6b61d6db0e6915dc4942e1640b40dcc6b1e198a71f1e99a7c815a19225"
 }

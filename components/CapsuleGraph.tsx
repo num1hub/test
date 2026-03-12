@@ -11,6 +11,16 @@ import ForceGraph2D, {
   type ForceGraphMethods,
   type NodeObject,
 } from 'react-force-graph-2d';
+import { withAlpha } from '@/lib/capsulePalette';
+import { isHeroPresenceTier } from '@/lib/capsulePresence';
+import {
+  resolveCapsuleGraphQuality,
+  resolveCapsuleVisualProfile,
+  type CapsuleGraphQuality,
+  type CapsuleGraphQualityKey,
+  type CapsuleVisualProfile,
+  type CapsuleVisualProfileKey,
+} from '@/lib/capsuleVisualProfile';
 import type { SovereignCapsule } from '@/types/capsule';
 import {
   buildCapsuleGraphData,
@@ -26,6 +36,8 @@ interface CapsuleGraphProps {
   capsules: SovereignCapsule[];
   getNodeHref?: (id: string) => string | null | undefined;
   activeBranch?: string | null;
+  visualProfile?: CapsuleVisualProfileKey;
+  graphQuality?: CapsuleGraphQualityKey;
   isFullscreen: boolean;
   onToggleFullscreen: () => void;
   searchQuery?: string;
@@ -62,16 +74,18 @@ type GraphControl = {
 };
 
 const GRAPH_BACKGROUND = '#020617';
+const GRAPH_AMBIENT_COLOR = '#38bdf8';
 const HIGHLIGHT_COLOR = '#fbbf24';
-const BASE_LINK_COLOR = '#475569';
-const DIMMED_LINK_COLOR = 'rgba(71, 85, 105, 0.22)';
-const DIMMED_NODE_COLOR = 'rgba(148, 163, 184, 0.2)';
+const BASE_LINK_COLOR = '#64748b';
+const DIMMED_LINK_COLOR = 'rgba(100, 116, 139, 0.08)';
 const ZOOM_STEP = 1.2;
 const ZOOM_TRANSITION_MS = 400;
 const ZOOM_FIT_PADDING = 50;
 const NODE_REL_SIZE = 1;
 const SELECT_FOCUS_ZOOM = 1.75;
 const MAX_LINK_WEIGHT_BOOST = 2.5;
+const NODE_ACTIVE_RING_WIDTH = 2.2;
+const NODE_IDLE_RING_WIDTH = 1.05;
 
 const MIN_CONTAINER_SIZE = 1;
 
@@ -243,10 +257,771 @@ function GraphControls({
   );
 }
 
+function drawNodeMotif(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  globalScale: number,
+  alpha: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const lineWidth = 1 / globalScale;
+  const stroke = withAlpha(node.originalColor, alpha);
+  const fill = withAlpha(node.originalColor, alpha * 0.78);
+
+  ctx.save();
+  ctx.strokeStyle = stroke;
+  ctx.fillStyle = fill;
+  ctx.lineWidth = lineWidth;
+
+  switch (node.paletteShape) {
+    case 'double-ring':
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.72, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      break;
+    case 'gates':
+      ctx.setLineDash([2 / globalScale, 2 / globalScale]);
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.88, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      ctx.fillRect(x - radius * 0.54, y - radius * 0.62, lineWidth, radius * 1.24);
+      ctx.fillRect(x + radius * 0.54, y - radius * 0.62, lineWidth, radius * 1.24);
+      break;
+    case 'wave':
+      for (const offset of [-radius * 0.34, 0, radius * 0.34]) {
+        ctx.beginPath();
+        ctx.moveTo(x - radius * 0.58, y + offset);
+        ctx.quadraticCurveTo(x, y + offset - radius * 0.18, x + radius * 0.58, y + offset);
+        ctx.stroke();
+      }
+      break;
+    case 'pill':
+      ctx.beginPath();
+      ctx.roundRect(x - radius * 0.62, y - radius * 0.24, radius * 1.24, radius * 0.48, radius * 0.24);
+      ctx.stroke();
+      break;
+    case 'grid':
+      ctx.beginPath();
+      ctx.roundRect(x - radius * 0.66, y - radius * 0.66, radius * 1.32, radius * 1.32, radius * 0.2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.66);
+      ctx.lineTo(x, y + radius * 0.66);
+      ctx.moveTo(x - radius * 0.66, y);
+      ctx.lineTo(x + radius * 0.66, y);
+      ctx.stroke();
+      break;
+    case 'diamond':
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(Math.PI / 4);
+      ctx.beginPath();
+      ctx.roundRect(-radius * 0.48, -radius * 0.48, radius * 0.96, radius * 0.96, radius * 0.14);
+      ctx.stroke();
+      ctx.restore();
+      break;
+    case 'frame':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.68, y - radius * 0.18);
+      ctx.lineTo(x - radius * 0.68, y - radius * 0.68);
+      ctx.lineTo(x - radius * 0.18, y - radius * 0.68);
+      ctx.moveTo(x + radius * 0.68, y - radius * 0.18);
+      ctx.lineTo(x + radius * 0.68, y - radius * 0.68);
+      ctx.lineTo(x + radius * 0.18, y - radius * 0.68);
+      ctx.moveTo(x - radius * 0.68, y + radius * 0.18);
+      ctx.lineTo(x - radius * 0.68, y + radius * 0.68);
+      ctx.lineTo(x - radius * 0.18, y + radius * 0.68);
+      ctx.moveTo(x + radius * 0.68, y + radius * 0.18);
+      ctx.lineTo(x + radius * 0.68, y + radius * 0.68);
+      ctx.lineTo(x + radius * 0.18, y + radius * 0.68);
+      ctx.stroke();
+      break;
+    case 'horizon':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.64, y + radius * 0.36);
+      ctx.lineTo(x + radius * 0.64, y + radius * 0.36);
+      ctx.moveTo(x - radius * 0.38, y - radius * 0.08);
+      ctx.quadraticCurveTo(x, y - radius * 0.34, x + radius * 0.38, y - radius * 0.08);
+      ctx.stroke();
+      break;
+    case 'lanes':
+      for (const offset of [-radius * 0.4, 0, radius * 0.4]) {
+        ctx.fillRect(x + offset - lineWidth / 2, y - radius * 0.62, lineWidth, radius * 1.24);
+      }
+      break;
+    case 'bloom':
+      for (const [dx, dy] of [
+        [0, -radius * 0.56],
+        [-radius * 0.56, 0],
+        [radius * 0.56, 0],
+        [0, radius * 0.56],
+      ]) {
+        ctx.beginPath();
+        ctx.arc(x + dx, y + dy, radius * 0.13, 0, 2 * Math.PI, false);
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.52, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      break;
+    case 'strata':
+      for (const [factor, width] of [
+        [-0.34, 0.9],
+        [0, 0.68],
+        [0.34, 0.98],
+      ]) {
+        ctx.beginPath();
+        ctx.moveTo(x - radius * width * 0.5, y + radius * factor);
+        ctx.lineTo(x + radius * width * 0.5, y + radius * factor);
+        ctx.stroke();
+      }
+      break;
+    case 'crown':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.54, y + radius * 0.28);
+      ctx.lineTo(x - radius * 0.2, y - radius * 0.4);
+      ctx.lineTo(x, y - radius * 0.08);
+      ctx.lineTo(x + radius * 0.2, y - radius * 0.4);
+      ctx.lineTo(x + radius * 0.54, y + radius * 0.28);
+      ctx.stroke();
+      break;
+    case 'spine':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.68);
+      ctx.lineTo(x, y + radius * 0.68);
+      ctx.stroke();
+      for (const offset of [-radius * 0.42, 0, radius * 0.42]) {
+        ctx.beginPath();
+        ctx.arc(x, y + offset, radius * 0.12, 0, 2 * Math.PI, false);
+        ctx.fill();
+      }
+      break;
+    case 'stack':
+      for (const offset of [-radius * 0.26, 0, radius * 0.26]) {
+        ctx.beginPath();
+        ctx.ellipse(x, y + offset, radius * 0.58, radius * 0.22, 0, 0, 2 * Math.PI);
+        ctx.stroke();
+      }
+      break;
+    case 'archive':
+      ctx.beginPath();
+      ctx.roundRect(x - radius * 0.58, y - radius * 0.58, radius * 1.16, radius * 1.16, radius * 0.16);
+      ctx.stroke();
+      for (const offset of [-radius * 0.22, 0, radius * 0.22]) {
+        ctx.beginPath();
+        ctx.moveTo(x - radius * 0.34, y + offset);
+        ctx.lineTo(x + radius * 0.3, y + offset);
+        ctx.stroke();
+      }
+      break;
+    case 'screen':
+      ctx.beginPath();
+      ctx.roundRect(x - radius * 0.66, y - radius * 0.56, radius * 1.32, radius * 1.12, radius * 0.22);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.48, y - radius * 0.24);
+      ctx.lineTo(x + radius * 0.48, y - radius * 0.24);
+      ctx.stroke();
+      break;
+    case 'compass':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.72);
+      ctx.lineTo(x, y + radius * 0.72);
+      ctx.moveTo(x - radius * 0.72, y);
+      ctx.lineTo(x + radius * 0.72, y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.4, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      break;
+    case 'constellation':
+      for (const [dx, dy] of [
+        [-radius * 0.48, -radius * 0.18],
+        [radius * 0.36, -radius * 0.34],
+        [-radius * 0.12, radius * 0.42],
+        [radius * 0.48, radius * 0.16],
+      ]) {
+        ctx.beginPath();
+        ctx.arc(x + dx, y + dy, radius * 0.08, 0, 2 * Math.PI, false);
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.48, y - radius * 0.18);
+      ctx.lineTo(x + radius * 0.36, y - radius * 0.34);
+      ctx.lineTo(x + radius * 0.48, y + radius * 0.16);
+      ctx.moveTo(x - radius * 0.12, y + radius * 0.42);
+      ctx.lineTo(x + radius * 0.48, y + radius * 0.16);
+      ctx.stroke();
+      break;
+    default:
+      break;
+  }
+
+  ctx.restore();
+}
+
+function drawSilhouettePath(
+  ctx: CanvasRenderingContext2D,
+  x: number,
+  y: number,
+  radius: number,
+  silhouette: string,
+) {
+  switch (silhouette) {
+    case 'pill':
+      ctx.beginPath();
+      ctx.roundRect(
+        x - radius * 0.92,
+        y - radius * 0.62,
+        radius * 1.84,
+        radius * 1.24,
+        radius * 0.48,
+      );
+      return;
+    case 'diamond':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius);
+      ctx.lineTo(x + radius, y);
+      ctx.lineTo(x, y + radius);
+      ctx.lineTo(x - radius, y);
+      ctx.closePath();
+      return;
+    case 'hex':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.52, y - radius * 0.9);
+      ctx.lineTo(x + radius * 0.52, y - radius * 0.9);
+      ctx.lineTo(x + radius, y);
+      ctx.lineTo(x + radius * 0.52, y + radius * 0.9);
+      ctx.lineTo(x - radius * 0.52, y + radius * 0.9);
+      ctx.lineTo(x - radius, y);
+      ctx.closePath();
+      return;
+    case 'octagon':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.38, y - radius);
+      ctx.lineTo(x + radius * 0.38, y - radius);
+      ctx.lineTo(x + radius, y - radius * 0.38);
+      ctx.lineTo(x + radius, y + radius * 0.38);
+      ctx.lineTo(x + radius * 0.38, y + radius);
+      ctx.lineTo(x - radius * 0.38, y + radius);
+      ctx.lineTo(x - radius, y + radius * 0.38);
+      ctx.lineTo(x - radius, y - radius * 0.38);
+      ctx.closePath();
+      return;
+    case 'square':
+      ctx.beginPath();
+      ctx.roundRect(
+        x - radius * 0.84,
+        y - radius * 0.84,
+        radius * 1.68,
+        radius * 1.68,
+        radius * 0.28,
+      );
+      return;
+    case 'circle':
+    default:
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+  }
+}
+
+function drawNodeSilhouette(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  globalScale: number,
+  activeAlpha: number,
+  fillAlpha: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const silhouette = node.paletteSilhouette || 'circle';
+  const depth = Math.max(1, node.paletteHierarchyDepth ?? 1);
+  const contourFactors = Array.from({ length: depth }, (_, index) => 1 + index * 0.12).reverse();
+
+  ctx.save();
+  ctx.lineWidth = 1 / globalScale;
+
+  contourFactors.forEach((factor, index) => {
+    drawSilhouettePath(ctx, x, y, radius * factor, silhouette);
+    if (index === contourFactors.length - 1) {
+      ctx.fillStyle = withAlpha(node.originalColor, fillAlpha);
+      ctx.fill();
+    }
+    ctx.strokeStyle = withAlpha(
+      node.originalColor,
+      Math.max(0.14, activeAlpha * (0.92 - index * 0.18)),
+    );
+    ctx.lineWidth =
+      ((index === contourFactors.length - 1 ? NODE_ACTIVE_RING_WIDTH : NODE_IDLE_RING_WIDTH) *
+        (index === contourFactors.length - 1 ? 1 : 0.9)) /
+      globalScale;
+    ctx.stroke();
+  });
+
+  ctx.restore();
+}
+
+function getPresenceAuraStyle(
+  tier: string | undefined,
+  isActive: boolean,
+  isMatched: boolean,
+) {
+  switch (tier) {
+    case 'axis':
+      return {
+        sizeBoost: isActive ? 1.38 : 1.24,
+        alpha: isActive ? 0.26 : isMatched ? 0.17 : 0.12,
+      };
+    case 'major-hub':
+      return {
+        sizeBoost: isActive ? 1.28 : 1.16,
+        alpha: isActive ? 0.2 : isMatched ? 0.14 : 0.1,
+      };
+    case 'hub':
+      return {
+        sizeBoost: isActive ? 1.18 : 1.1,
+        alpha: isActive ? 0.14 : isMatched ? 0.1 : 0.07,
+      };
+    case 'core':
+      return {
+        sizeBoost: isActive ? 1.1 : 1.05,
+        alpha: isActive ? 0.1 : isMatched ? 0.07 : 0.05,
+      };
+    case 'capsule':
+    default:
+      return {
+        sizeBoost: isActive ? 1.04 : 1,
+        alpha: isActive ? 0.06 : isMatched ? 0.05 : 0.03,
+      };
+  }
+}
+
+function buildGraphBackdropStyle(
+  accent: string,
+  quality: CapsuleGraphQuality,
+  profile: CapsuleVisualProfile,
+) {
+  const spotlightCore = withAlpha(
+    accent,
+    Math.min(0.28, quality.spotlightAlpha * 0.68 * profile.presenceAuraBoost),
+  );
+  const spotlightHalo = withAlpha(
+    accent,
+    Math.min(0.22, quality.spotlightAlpha * 0.46 * profile.cardGlowBoost),
+  );
+  const upperWash = withAlpha('#1e293b', 0.18 + quality.vignetteAlpha * 0.16);
+  const sideGlow = withAlpha(accent, Math.min(0.16, quality.spotlightAlpha * 0.28));
+  const rimShade = withAlpha(GRAPH_BACKGROUND, Math.min(0.94, 0.46 + quality.vignetteAlpha));
+  const lowerBasin = withAlpha('#020617', Math.min(0.9, 0.28 + quality.vignetteAlpha * 0.68));
+
+  return {
+    backgroundColor: GRAPH_BACKGROUND,
+    backgroundImage: [
+      `radial-gradient(circle at 50% 48%, ${spotlightCore} 0%, ${spotlightHalo} 16%, rgba(2, 6, 23, 0) 42%)`,
+      `radial-gradient(circle at 16% 18%, ${sideGlow} 0%, rgba(2, 6, 23, 0) 28%)`,
+      `radial-gradient(circle at 84% 16%, ${withAlpha('#0f172a', 0.24 + quality.vignetteAlpha * 0.12)} 0%, rgba(2, 6, 23, 0) 30%)`,
+      `linear-gradient(180deg, ${upperWash} 0%, rgba(2, 6, 23, 0.04) 34%, rgba(2, 6, 23, 0.12) 68%, ${lowerBasin} 100%)`,
+      `radial-gradient(circle at 50% 50%, rgba(2, 6, 23, 0) 56%, ${rimShade} 100%)`,
+    ].join(', '),
+  };
+}
+
+function drawNodePresenceAura(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  isActive: boolean,
+  isMatched: boolean,
+  auraBoost: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const { sizeBoost, alpha } = getPresenceAuraStyle(node.presenceTier, isActive, isMatched);
+
+  if (alpha <= 0) {
+    return;
+  }
+
+  ctx.save();
+  drawSilhouettePath(ctx, x, y, radius * sizeBoost, node.paletteSilhouette || 'circle');
+  ctx.fillStyle = withAlpha(node.originalColor, Math.min(0.34, alpha * auraBoost));
+  ctx.fill();
+  ctx.restore();
+}
+
+function drawNodePresenceBeacons(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  globalScale: number,
+  auraBoost: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const alpha = Math.min(1, 0.56 * auraBoost);
+  const lineWidth = 1 / globalScale;
+
+  ctx.save();
+  ctx.strokeStyle = withAlpha(node.originalColor, alpha);
+  ctx.fillStyle = withAlpha(node.originalColor, Math.min(1, 0.72 * auraBoost));
+  ctx.lineWidth = lineWidth;
+
+  switch (node.presenceTier) {
+    case 'axis':
+      for (const [dx, dy] of [
+        [0, -1],
+        [1, 0],
+        [0, 1],
+        [-1, 0],
+      ] as const) {
+        ctx.beginPath();
+        ctx.moveTo(x + dx * radius * 1.08, y + dy * radius * 1.08);
+        ctx.lineTo(x + dx * radius * 1.34, y + dy * radius * 1.34);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(
+          x + dx * radius * 1.42,
+          y + dy * radius * 1.42,
+          Math.max(1 / globalScale, radius * 0.08),
+          0,
+          2 * Math.PI,
+          false,
+        );
+        ctx.fill();
+      }
+      break;
+    case 'major-hub':
+      for (const [dx, dy] of [
+        [-1, -1],
+        [1, -1],
+        [1, 1],
+        [-1, 1],
+      ] as const) {
+        ctx.beginPath();
+        ctx.arc(
+          x + dx * radius * 0.98,
+          y + dy * radius * 0.98,
+          Math.max(0.8 / globalScale, radius * 0.065),
+          0,
+          2 * Math.PI,
+          false,
+        );
+        ctx.fill();
+      }
+      break;
+    case 'hub':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 1.18, y);
+      ctx.lineTo(x - radius * 0.98, y);
+      ctx.moveTo(x + radius * 0.98, y);
+      ctx.lineTo(x + radius * 1.18, y);
+      ctx.stroke();
+      break;
+    default:
+      break;
+  }
+
+  ctx.restore();
+}
+
+function drawNodeHeroMark(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  globalScale: number,
+  alpha: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const stroke = withAlpha(node.originalColor, alpha);
+  const fill = withAlpha(node.originalColor, Math.min(1, alpha * 1.1));
+
+  ctx.save();
+  ctx.strokeStyle = stroke;
+  ctx.fillStyle = fill;
+  ctx.lineWidth = 0.85 / globalScale;
+
+  switch (node.paletteHeroMark) {
+    case 'axis':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 1.18);
+      ctx.lineTo(x, y - radius * 1.36);
+      ctx.moveTo(x + radius * 1.18, y);
+      ctx.lineTo(x + radius * 1.36, y);
+      ctx.moveTo(x, y + radius * 1.18);
+      ctx.lineTo(x, y + radius * 1.36);
+      ctx.moveTo(x - radius * 1.18, y);
+      ctx.lineTo(x - radius * 1.36, y);
+      ctx.stroke();
+      break;
+    case 'law':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 1.08, y - radius * 0.68);
+      ctx.lineTo(x - radius * 1.08, y + radius * 0.68);
+      ctx.moveTo(x + radius * 1.08, y - radius * 0.68);
+      ctx.lineTo(x + radius * 1.08, y + radius * 0.68);
+      ctx.stroke();
+      break;
+    case 'gates':
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 1.18, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      break;
+    case 'runtime':
+    case 'orchestration':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.92, y - radius * 0.92);
+      ctx.quadraticCurveTo(x, y - radius * 1.08, x + radius * 0.92, y - radius * 0.92);
+      ctx.moveTo(x - radius * 0.92, y + radius * 0.92);
+      ctx.quadraticCurveTo(x, y + radius * 1.08, x + radius * 0.92, y + radius * 0.92);
+      ctx.stroke();
+      break;
+    case 'habitat':
+    case 'architecture':
+      ctx.beginPath();
+      ctx.roundRect(
+        x - radius * 1.18,
+        y - radius * 1.18,
+        radius * 2.36,
+        radius * 2.36,
+        radius * 0.24,
+      );
+      ctx.stroke();
+      break;
+    case 'assistant':
+      for (const [dx, dy] of [
+        [0, -1.16],
+        [1.04, 0.28],
+        [-1.04, 0.28],
+      ] as const) {
+        ctx.beginPath();
+        ctx.arc(
+          x + dx * radius,
+          y + dy * radius,
+          Math.max(0.9 / globalScale, radius * 0.07),
+          0,
+          2 * Math.PI,
+          false,
+        );
+        ctx.fill();
+      }
+      break;
+    case 'planning':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.98, y + radius * 1.02);
+      ctx.lineTo(x + radius * 0.98, y + radius * 1.02);
+      ctx.stroke();
+      break;
+    case 'tracker':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 1.16, y - radius * 0.82);
+      ctx.lineTo(x - radius * 1.16, y + radius * 0.82);
+      ctx.moveTo(x + radius * 1.16, y - radius * 0.82);
+      ctx.lineTo(x + radius * 1.16, y + radius * 0.82);
+      ctx.stroke();
+      break;
+    case 'refinery':
+    case 'boundary':
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(Math.PI / 4);
+      ctx.beginPath();
+      ctx.roundRect(-radius * 0.94, -radius * 0.94, radius * 1.88, radius * 1.88, radius * 0.14);
+      ctx.stroke();
+      ctx.restore();
+      break;
+    case 'swarm':
+      for (const [dx, dy] of [
+        [-1.08, -1.08],
+        [1.08, -1.08],
+        [1.08, 1.08],
+        [-1.08, 1.08],
+      ] as const) {
+        ctx.beginPath();
+        ctx.arc(
+          x + dx * radius * 0.72,
+          y + dy * radius * 0.72,
+          Math.max(0.8 / globalScale, radius * 0.06),
+          0,
+          2 * Math.PI,
+          false,
+        );
+        ctx.fill();
+      }
+      break;
+    case 'excavation':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.98, y + radius * 0.98);
+      ctx.lineTo(x + radius * 0.98, y + radius * 0.98);
+      ctx.moveTo(x - radius * 0.76, y + radius * 1.16);
+      ctx.lineTo(x + radius * 0.76, y + radius * 1.16);
+      ctx.stroke();
+      break;
+    case 'world':
+    case 'origin':
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 1.2, 0, 2 * Math.PI, false);
+      ctx.stroke();
+      break;
+    case 'governance':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.52, y - radius * 1.08);
+      ctx.lineTo(x - radius * 0.16, y - radius * 1.26);
+      ctx.lineTo(x, y - radius * 1.02);
+      ctx.lineTo(x + radius * 0.16, y - radius * 1.26);
+      ctx.lineTo(x + radius * 0.52, y - radius * 1.08);
+      ctx.stroke();
+      break;
+    case 'identity':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 1.18);
+      ctx.lineTo(x, y + radius * 1.18);
+      ctx.stroke();
+      break;
+    case 'economics':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.88, y - radius * 1.02);
+      ctx.lineTo(x + radius * 0.88, y - radius * 1.02);
+      ctx.moveTo(x - radius * 0.88, y + radius * 1.02);
+      ctx.lineTo(x + radius * 0.88, y + radius * 1.02);
+      ctx.stroke();
+      break;
+    case 'archive':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 1.02, y - radius * 0.84);
+      ctx.lineTo(x - radius * 1.02, y + radius * 0.84);
+      ctx.moveTo(x + radius * 1.02, y - radius * 0.84);
+      ctx.lineTo(x + radius * 1.02, y + radius * 0.84);
+      ctx.stroke();
+      break;
+    case 'spatial':
+      for (const [dx, dy] of [
+        [-1.02, -1.02],
+        [1.02, -1.02],
+        [-1.02, 1.02],
+        [1.02, 1.02],
+      ] as const) {
+        ctx.beginPath();
+        ctx.arc(
+          x + dx * radius * 0.78,
+          y + dy * radius * 0.78,
+          Math.max(0.7 / globalScale, radius * 0.045),
+          0,
+          2 * Math.PI,
+          false,
+        );
+        ctx.fill();
+      }
+      break;
+    case 'interface':
+      ctx.beginPath();
+      ctx.moveTo(x - radius * 0.86, y - radius * 1.02);
+      ctx.lineTo(x + radius * 0.86, y - radius * 1.02);
+      ctx.moveTo(x - radius * 0.46, y + radius * 1.02);
+      ctx.lineTo(x + radius * 0.46, y + radius * 1.02);
+      ctx.stroke();
+      break;
+    case 'neutral':
+    default:
+      break;
+  }
+
+  ctx.restore();
+}
+
+function drawNodeFaceprint(
+  ctx: CanvasRenderingContext2D,
+  node: GraphNodeRecord,
+  radius: number,
+  globalScale: number,
+  alpha: number,
+) {
+  const x = node.x ?? 0;
+  const y = node.y ?? 0;
+  const stroke = withAlpha(node.originalColor, alpha);
+  const fill = withAlpha(node.originalColor, alpha * 0.8);
+  const lineWidth = 0.9 / globalScale;
+
+  ctx.save();
+  ctx.strokeStyle = stroke;
+  ctx.fillStyle = fill;
+  ctx.lineWidth = lineWidth;
+
+  for (let index = 1; index < (node.faceRingCount ?? 1); index += 1) {
+    ctx.beginPath();
+    ctx.arc(x, y, radius * (0.32 + index * 0.14), 0, 2 * Math.PI, false);
+    ctx.stroke();
+  }
+
+  (node.faceBandMask ?? []).forEach((active, index) => {
+    if (!active) return;
+    const offset = (-0.24 + index * 0.24) * radius;
+    ctx.beginPath();
+    ctx.moveTo(x - radius * 0.42, y + offset);
+    ctx.lineTo(x + radius * 0.42, y + offset);
+    ctx.stroke();
+  });
+
+  (node.faceConstellation ?? []).forEach((point) => {
+    ctx.beginPath();
+    ctx.arc(
+      x + point.x * radius * 0.82,
+      y + point.y * radius * 0.82,
+      Math.max(0.8 / globalScale, point.r * radius * 0.28),
+      0,
+      2 * Math.PI,
+      false,
+    );
+    ctx.fillStyle = withAlpha(node.originalColor, point.opacity * alpha);
+    ctx.fill();
+  });
+
+  ctx.fillStyle = fill;
+  ctx.strokeStyle = stroke;
+
+  switch (node.faceGlyph) {
+    case 'diamond':
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(Math.PI / 4);
+      ctx.beginPath();
+      ctx.roundRect(-radius * 0.16, -radius * 0.16, radius * 0.32, radius * 0.32, radius * 0.08);
+      ctx.stroke();
+      ctx.restore();
+      break;
+    case 'square':
+      ctx.beginPath();
+      ctx.roundRect(x - radius * 0.18, y - radius * 0.18, radius * 0.36, radius * 0.36, radius * 0.08);
+      ctx.stroke();
+      break;
+    case 'triangle':
+      ctx.beginPath();
+      ctx.moveTo(x, y - radius * 0.22);
+      ctx.lineTo(x + radius * 0.2, y + radius * 0.14);
+      ctx.lineTo(x - radius * 0.2, y + radius * 0.14);
+      ctx.closePath();
+      ctx.stroke();
+      break;
+    default:
+      ctx.beginPath();
+      ctx.arc(x, y, radius * 0.12, 0, 2 * Math.PI, false);
+      ctx.fill();
+      break;
+  }
+
+  ctx.restore();
+}
+
 export default function CapsuleGraph({
   capsules,
   getNodeHref,
   activeBranch = null,
+  visualProfile,
+  graphQuality,
   isFullscreen,
   onToggleFullscreen,
   searchQuery = '',
@@ -269,6 +1044,8 @@ export default function CapsuleGraph({
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const dimensions = useResponsiveGraphDimensions(containerRef, isFullscreen);
   const normalizedSearchQuery = searchQuery.trim().toLowerCase();
+  const quality = useMemo(() => resolveCapsuleGraphQuality(graphQuality), [graphQuality]);
+  const profile = useMemo(() => resolveCapsuleVisualProfile(visualProfile), [visualProfile]);
 
   const graphData = useMemo(
     () => buildCapsuleGraphData(capsules, { activeBranch }),
@@ -381,6 +1158,22 @@ export default function CapsuleGraph({
   const selectedNode = useMemo(
     () => (selectedNodeId ? nodeById.get(selectedNodeId) ?? null : null),
     [nodeById, selectedNodeId],
+  );
+  const backdropAccent = useMemo(() => {
+    if (visualFocusNodeId) {
+      return nodeById.get(visualFocusNodeId)?.originalColor ?? GRAPH_AMBIENT_COLOR;
+    }
+
+    const matchedNode = graphData.nodes.find((node) => matchedNodeIds.has(node.id));
+    if (matchedNode) {
+      return matchedNode.originalColor;
+    }
+
+    return GRAPH_AMBIENT_COLOR;
+  }, [graphData.nodes, matchedNodeIds, nodeById, visualFocusNodeId]);
+  const graphBackdropStyle = useMemo(
+    () => buildGraphBackdropStyle(backdropAccent, quality, profile),
+    [backdropAccent, profile, quality],
   );
 
   const activeNeighbors = useMemo(() => {
@@ -514,21 +1307,37 @@ export default function CapsuleGraph({
           return HIGHLIGHT_COLOR;
         }
         if (matchedNodeIds.has(node.id)) {
-          return node.color || '#94a3b8';
+          return withAlpha(node.color || '#94a3b8', quality.matchedNodeAlpha);
         }
-        return DIMMED_NODE_COLOR;
+        return withAlpha(node.color || '#94a3b8', quality.dimmedNodeAlpha);
       }
-      if (!visualFocusNodeId) return node.color || '#94a3b8';
-      return activeNeighbors.has(node.id) ? node.color || '#94a3b8' : DIMMED_NODE_COLOR;
+      if (!visualFocusNodeId) {
+        return withAlpha(node.color || '#94a3b8', quality.idleNodeAlpha);
+      }
+      return activeNeighbors.has(node.id)
+        ? withAlpha(node.color || '#94a3b8', quality.idleNodeAlpha)
+        : withAlpha(node.color || '#94a3b8', quality.dimmedNodeAlpha);
     },
-    [activeNodeId, activeNeighbors, focusedSearchNodeId, matchedNodeIds, normalizedSearchQuery, visualFocusNodeId],
+    [
+      activeNodeId,
+      activeNeighbors,
+      focusedSearchNodeId,
+      matchedNodeIds,
+      normalizedSearchQuery,
+      quality.dimmedNodeAlpha,
+      quality.idleNodeAlpha,
+      quality.matchedNodeAlpha,
+      visualFocusNodeId,
+    ],
   );
 
   const getLinkColor = useCallback(
     (link: CapsuleGraphLinkData) => {
+      const accent = link.color || BASE_LINK_COLOR;
+
       if (normalizedSearchQuery) {
         if (focusedSearchNodeId && isIncidentLink(link, focusedSearchNodeId)) {
-          return HIGHLIGHT_COLOR;
+          return withAlpha(accent, quality.activeLinkAlpha);
         }
         const sourceId = extractGraphEndpointId(link.source);
         const targetId = extractGraphEndpointId(link.target);
@@ -536,23 +1345,82 @@ export default function CapsuleGraph({
           (sourceId && matchedNodeIds.has(sourceId)) ||
           (targetId && matchedNodeIds.has(targetId))
         ) {
-          return link.color || BASE_LINK_COLOR;
+          return withAlpha(accent, quality.matchedLinkAlpha);
         }
         return DIMMED_LINK_COLOR;
       }
-      if (!visualFocusNodeId) return link.color || BASE_LINK_COLOR;
-      return isIncidentToActiveNode(link) ? HIGHLIGHT_COLOR : DIMMED_LINK_COLOR;
+      if (!visualFocusNodeId) return withAlpha(accent, quality.idleLinkAlpha);
+      return isIncidentToActiveNode(link)
+        ? withAlpha(accent, quality.activeLinkAlpha)
+        : DIMMED_LINK_COLOR;
     },
-    [focusedSearchNodeId, isIncidentToActiveNode, matchedNodeIds, normalizedSearchQuery, visualFocusNodeId],
+    [
+      focusedSearchNodeId,
+      isIncidentToActiveNode,
+      matchedNodeIds,
+      normalizedSearchQuery,
+      quality.activeLinkAlpha,
+      quality.idleLinkAlpha,
+      quality.matchedLinkAlpha,
+      visualFocusNodeId,
+    ],
   );
 
   const getLinkWidth = useCallback(
     (link: CapsuleGraphLinkData) => {
       const weight = link.weight ?? 1;
-      const baseWidth = isIncidentToActiveNode(link) ? 2 : 1;
-      return baseWidth + Math.min(weight - 1, MAX_LINK_WEIGHT_BOOST);
+      const weightBoost = Math.min(Math.max(weight - 1, 0), MAX_LINK_WEIGHT_BOOST) * 0.22;
+
+      if (normalizedSearchQuery) {
+        if (focusedSearchNodeId && isIncidentLink(link, focusedSearchNodeId)) {
+          return quality.activeLinkWidth + weightBoost;
+        }
+
+        const sourceId = extractGraphEndpointId(link.source);
+        const targetId = extractGraphEndpointId(link.target);
+        if (
+          (sourceId && matchedNodeIds.has(sourceId)) ||
+          (targetId && matchedNodeIds.has(targetId))
+        ) {
+          return quality.matchedLinkWidth + weightBoost * 0.65;
+        }
+
+        return 0.35;
+      }
+
+      if (!visualFocusNodeId) {
+        return quality.idleLinkWidth + weightBoost;
+      }
+
+      return isIncidentToActiveNode(link) ? quality.activeLinkWidth + weightBoost : 0.3;
     },
-    [isIncidentToActiveNode],
+    [
+      focusedSearchNodeId,
+      isIncidentToActiveNode,
+      matchedNodeIds,
+      normalizedSearchQuery,
+      quality.activeLinkWidth,
+      quality.idleLinkWidth,
+      quality.matchedLinkWidth,
+      visualFocusNodeId,
+    ],
+  );
+
+  const getLinkArrowLength = useCallback(
+    (link: CapsuleGraphLinkData) => {
+      if (normalizedSearchQuery) {
+        return focusedSearchNodeId && isIncidentLink(link, focusedSearchNodeId)
+          ? quality.activeArrowLength
+          : 0;
+      }
+
+      if (!visualFocusNodeId) {
+        return 0;
+      }
+
+      return isIncidentToActiveNode(link) ? quality.activeArrowLength : 0;
+    },
+    [focusedSearchNodeId, isIncidentToActiveNode, normalizedSearchQuery, quality.activeArrowLength, visualFocusNodeId],
   );
 
   const getLinkLabel = useCallback(
@@ -562,6 +1430,155 @@ export default function CapsuleGraph({
       return `${link.name}${weightSuffix}`;
     },
     [activeNodeId, isIncidentToActiveNode],
+  );
+
+  const paintNode = useCallback(
+    (
+      node: NodeObject<CapsuleGraphNodeData>,
+      ctx: CanvasRenderingContext2D,
+      globalScale: number,
+    ) => {
+      const graphNode = node as GraphNodeRecord;
+      const radius = Math.max(3.2, Math.sqrt(Math.max(graphNode.val ?? 1, 1)) * NODE_REL_SIZE);
+      const isActive =
+        graphNode.id === activeNodeId || graphNode.id === focusedSearchNodeId;
+      const isMatched = matchedNodeIds.has(graphNode.id);
+      const visibleSigil =
+        isActive || isMatched || globalScale >= profile.sigilScaleThreshold;
+      const heroPresence = isHeroPresenceTier(
+        (graphNode.presenceTier as Parameters<typeof isHeroPresenceTier>[0]) ?? 'capsule',
+      );
+      const visibleHeroLabel =
+        isActive || (heroPresence && globalScale >= profile.heroLabelScaleThreshold);
+      const presenceRadius =
+        radius * Math.max(1, (graphNode.presenceScale ?? 1) * 0.98);
+
+      ctx.save();
+      drawNodePresenceAura(
+        ctx,
+        graphNode,
+        presenceRadius + 1.2,
+        isActive,
+        isMatched,
+        profile.presenceAuraBoost,
+      );
+      drawNodePresenceBeacons(
+        ctx,
+        graphNode,
+        presenceRadius,
+        globalScale,
+        profile.presenceAuraBoost,
+      );
+      drawNodeHeroMark(
+        ctx,
+        graphNode,
+        presenceRadius,
+        globalScale,
+        (isActive ? 0.44 : isMatched ? 0.26 : 0.14) * profile.borderBoost * quality.heroMarkBoost,
+      );
+      drawNodeSilhouette(
+        ctx,
+        graphNode,
+        presenceRadius + 0.85,
+        globalScale,
+        isActive ? 0.9 : isMatched ? 0.5 : 0.28,
+        isActive ? 0.12 : isMatched ? 0.08 : 0.05,
+      );
+
+      drawNodeMotif(
+        ctx,
+        graphNode,
+        presenceRadius,
+        globalScale,
+        isActive ? 0.88 * profile.shapeAlphaBoost : isMatched ? 0.5 * profile.shapeAlphaBoost : 0.26 * profile.shapeAlphaBoost,
+      );
+      drawNodeFaceprint(
+        ctx,
+        graphNode,
+        presenceRadius,
+        globalScale,
+        isActive ? 0.82 * profile.faceAlphaBoost : isMatched ? 0.48 * profile.faceAlphaBoost : 0.24 * profile.faceAlphaBoost,
+      );
+
+      if (visibleSigil) {
+        const fontSize = Math.max(8, 10 / globalScale);
+        ctx.font = `600 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        const sigil = graphNode.paletteSigil;
+        const paddingX = 4 / globalScale;
+        const paddingY = 2 / globalScale;
+        const metrics = ctx.measureText(sigil);
+        const labelWidth = metrics.width + paddingX * 2;
+        const labelHeight = fontSize + paddingY * 2;
+        const labelX = (graphNode.x ?? 0);
+        const labelY = (graphNode.y ?? 0) - presenceRadius - 8 / globalScale;
+
+        ctx.fillStyle = withAlpha(GRAPH_BACKGROUND, 0.82);
+        ctx.strokeStyle = withAlpha(graphNode.originalColor, 0.4);
+        ctx.lineWidth = 0.9 / globalScale;
+        ctx.beginPath();
+        ctx.roundRect(
+          labelX - labelWidth / 2,
+          labelY - labelHeight / 2,
+          labelWidth,
+          labelHeight,
+          4 / globalScale,
+        );
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = withAlpha(graphNode.originalColor, isActive ? 1 : 0.9);
+        ctx.fillText(sigil, labelX, labelY);
+      }
+
+      if (visibleHeroLabel) {
+        const heroLabel = heroPresence ? graphNode.faceTag : graphNode.presenceLabel;
+        const fontSize = Math.max(7, 8.5 / globalScale);
+        ctx.font = `600 ${fontSize}px ui-monospace, SFMono-Regular, Menlo, monospace`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+
+        const metrics = ctx.measureText(heroLabel);
+        const paddingX = 4 / globalScale;
+        const paddingY = 1.5 / globalScale;
+        const labelWidth = metrics.width + paddingX * 2;
+        const labelHeight = fontSize + paddingY * 2;
+        const labelX = graphNode.x ?? 0;
+        const labelY = (graphNode.y ?? 0) + presenceRadius + 8 / globalScale;
+
+        ctx.fillStyle = withAlpha(GRAPH_BACKGROUND, heroPresence ? 0.76 : 0.66);
+        ctx.strokeStyle = withAlpha(graphNode.originalColor, heroPresence ? 0.42 : 0.26);
+        ctx.lineWidth = 0.8 / globalScale;
+        ctx.beginPath();
+        ctx.roundRect(
+          labelX - labelWidth / 2,
+          labelY - labelHeight / 2,
+          labelWidth,
+          labelHeight,
+          4 / globalScale,
+        );
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.fillStyle = withAlpha(graphNode.originalColor, heroPresence ? 0.98 : 0.9);
+        ctx.fillText(heroLabel, labelX, labelY);
+      }
+
+      ctx.restore();
+    },
+    [
+      activeNodeId,
+      focusedSearchNodeId,
+      matchedNodeIds,
+      profile.faceAlphaBoost,
+      profile.shapeAlphaBoost,
+      profile.heroLabelScaleThreshold,
+      profile.presenceAuraBoost,
+      profile.sigilScaleThreshold,
+      quality.heroMarkBoost,
+    ],
   );
 
   const handleZoomIn = useCallback(() => {
@@ -699,7 +1716,11 @@ export default function CapsuleGraph({
   }
 
   return (
-    <div ref={containerRef} className="relative h-full w-full overflow-hidden bg-slate-900">
+    <div
+      ref={containerRef}
+      className="relative h-full w-full overflow-hidden bg-slate-900"
+      style={graphBackdropStyle}
+    >
       <GraphControls controls={controlItems} />
 
       {isFullscreen && searchOverlay ? (
@@ -722,8 +1743,23 @@ export default function CapsuleGraph({
           className={`absolute left-3 z-10 max-w-[72%] rounded-lg border border-slate-700 bg-slate-900/85 px-3 py-2 text-xs text-slate-200 shadow-lg backdrop-blur ${
             isFullscreen && searchOverlay ? 'top-[5.75rem]' : 'top-3'
           }`}
+          style={{
+            borderColor: withAlpha(selectedNode.originalColor, 0.38),
+            boxShadow: `0 18px 48px -30px ${withAlpha(selectedNode.originalColor, 0.42)}`,
+          }}
         >
-          <p className="mb-1 text-[11px] uppercase tracking-wide text-slate-400">Selected Node</p>
+          <p
+            className="mb-1 text-[11px] uppercase tracking-wide"
+            style={{ color: withAlpha(selectedNode.originalColor, 0.92) }}
+          >
+            [{selectedNode.paletteSigil}] {selectedNode.paletteLabel} · {selectedNode.presenceLabel}
+          </p>
+          <p
+            className="text-[10px] uppercase tracking-[0.22em]"
+            style={{ color: withAlpha(selectedNode.originalColor, 0.88) }}
+          >
+            {selectedNode.paletteRankLabel} · {selectedNode.paletteTone} · Face {selectedNode.faceTag}
+          </p>
           <p className="truncate font-medium text-slate-100" title={selectedNode.name}>
             {selectedNode.name}
           </p>
@@ -733,7 +1769,13 @@ export default function CapsuleGraph({
             </p>
           )}
           <p className="mt-1 text-[11px] text-slate-400">
-            {selectedNode.type} · {selectedLinkCount} connection{selectedLinkCount === 1 ? '' : 's'}
+            {selectedNode.subtype} · {selectedLinkCount} connection{selectedLinkCount === 1 ? '' : 's'} · silhouette {selectedNode.paletteSilhouette}
+          </p>
+          <p className="mt-1 text-[11px] text-slate-500">
+            {selectedNode.presenceTier} presence · hierarchy {selectedNode.paletteHierarchyDepth}
+          </p>
+          <p className="mt-1 text-[11px]" style={{ color: withAlpha(selectedNode.originalColor, 0.92) }}>
+            {selectedNode.paletteMemoryCue}
           </p>
           <p className="mt-1 text-[11px] text-slate-300">{selectedNode.summary}</p>
           {selectedNodeHref && (
@@ -743,6 +1785,11 @@ export default function CapsuleGraph({
                 target="_blank"
                 rel="noreferrer noopener"
                 className="inline-flex items-center rounded-md border border-amber-400/40 bg-amber-400/10 px-2.5 py-1.5 text-[11px] font-medium text-amber-200 transition-colors hover:border-amber-300 hover:bg-amber-400/15 hover:text-amber-100"
+                style={{
+                  borderColor: withAlpha(selectedNode.originalColor, 0.42),
+                  backgroundColor: withAlpha(selectedNode.originalColor, 0.12),
+                  color: withAlpha(selectedNode.originalColor, 0.95),
+                }}
               >
                 Open details
               </a>
@@ -760,6 +1807,8 @@ export default function CapsuleGraph({
         nodeRelSize={NODE_REL_SIZE}
         nodeVal="val"
         nodeColor={getNodeColor}
+        nodeCanvasObject={paintNode}
+        nodeCanvasObjectMode={() => 'after'}
         nodeLabel={buildCapsuleGraphTooltip}
         onNodeHover={handleNodeHover}
         onNodeClick={handleNodeClick}
@@ -767,10 +1816,13 @@ export default function CapsuleGraph({
         linkColor={getLinkColor}
         linkWidth={getLinkWidth}
         linkLabel={getLinkLabel}
-        linkDirectionalArrowLength={3.5}
+        linkDirectionalArrowLength={getLinkArrowLength}
         linkDirectionalArrowRelPos={1}
         linkDirectionalArrowColor={(link) => getLinkColor(link as CapsuleGraphLinkData)}
-        backgroundColor={GRAPH_BACKGROUND}
+        cooldownTicks={quality.cooldownTicks}
+        d3AlphaDecay={quality.alphaDecay}
+        d3VelocityDecay={quality.velocityDecay}
+        backgroundColor="rgba(0, 0, 0, 0)"
       />
     </div>
   );

@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import ValidationBadge from '@/components/validation/ValidationBadge';
+import { getClientAuthHeaders } from '@/lib/clientAuth';
 import type { ValidationIssue } from '@/lib/validator/types';
 
 interface ValidationLogEntry {
@@ -27,7 +27,6 @@ interface ValidationStatsResponse {
 }
 
 export default function ValidationLogPage() {
-  const router = useRouter();
   const [stats, setStats] = useState<ValidationStatsResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState<'all' | 'pass' | 'fail' | 'warn'>('all');
@@ -36,18 +35,10 @@ export default function ValidationLogPage() {
   const [endDate, setEndDate] = useState('');
 
   useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     const run = async () => {
       try {
         const res = await fetch('/api/validate/stats?limit=2000', {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
+          headers: getClientAuthHeaders(),
         });
 
         if (!res.ok) {
@@ -63,7 +54,7 @@ export default function ValidationLogPage() {
     };
 
     run();
-  }, [router]);
+  }, []);
 
   const filteredEntries = useMemo(() => {
     if (!stats) return [];

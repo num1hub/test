@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-07T10:22:14.392Z",
+    "updated_at": "2026-03-12T16:33:00Z",
     "name": "Calendar Integration",
     "semantic_hash": "capsule-integration-calendar-v1-google-ical-sync-events",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Calendar Integration\n\n## 1. Definition and Essence\nCalendar Integration specifies synchronization semantics with external calendar providers such as Google Calendar and iCal endpoints, including event mapping, conflict handling, and two-way update safety.\n\n## 2. Core Attributes\n- `provider` google, outlook, ical, custom bridge\n- `sync_direction` import, export, bidirectional\n- `event_mapping` field correspondence with internal capsules\n- `conflict_policy` merge strategy on concurrent updates\n- `sync_health` status and error telemetry\n\n## 3. Lifecycle\nConnector instances are authorized, synchronized on schedule or event trigger, monitored for drift, and revalidated when schema or provider APIs change.\n\n## 4. Integration\n- **Calendar Module:** primary consumer and source of events.\n- **Planner/Tracker:** event generation and due-date alignment.\n- **API Gateway:** transport and auth boundary.\n- **User Preferences:** timezone and locale consistency.\n\n## 5. Philosophical Alignment\nCalendar integration supports To Dig Deep by keeping temporal commitments coherent across internal and external systems.\n"
   },
   "neuro_concentrate": {
-    "summary": "Calendar Integration in the Dream branch represents a more intelligent bridge between internal planning reality and external calendar ecosystems. It pushes toward cleaner sync semantics, richer conflict policy, better branch awareness, and stronger protection against external systems quietly rewriting the platform’s temporal truth. The capsule matters because calendar sync becomes dangerous when convenience outruns governance. Dream therefore preserves Calendar Integration as a future connector discipline where interoperability stays useful without compromising local sovereignty.",
+    "summary": "Calendar Integration defines the bridge between internal planning reality and external calendar ecosystems without letting outside systems quietly rewrite local temporal truth. It keeps sync semantics, conflict policy, authorization boundaries, and drift handling explicit so interoperability remains useful while local governance stays intact across imports, exports, and bidirectional updates. The capsule matters because calendar sync becomes dangerous when convenience outruns control and external tools start acting as hidden scheduling authorities. It therefore treats interoperability as a governed connector discipline rather than a naive convenience feature.",
     "keywords": [
       "calendar-integration",
       "google-calendar",
@@ -69,5 +69,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "cbca6c89e9a049bfebe72312d994f6a7f1a9c0fb3b8674df052049876f004ab5cf23337295a3442f8ed2d73d14585d55e25c703d90b02e1af7b98d1baa738671"
+  "integrity_sha3_512": "8ed68de957515737ba488ba04fb7a924db4a63fc9671cba141964d4c379e98a420f742867f2863b368359e73523fb3d4242678508e8c2beec56359d7e4f3c398"
 }

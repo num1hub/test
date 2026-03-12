@@ -59,6 +59,7 @@ export const DEFAULT_INCLUDE_EXTS = new Set([
 export const DEFAULT_EXCLUDE_DIRS = new Set([
   "node_modules",
   ".git",
+  ".next",
   "dist",
   "build",
   "out",

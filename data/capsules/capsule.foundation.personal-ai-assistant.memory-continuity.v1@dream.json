@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T20:40:00Z",
-    "updated_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-12T17:40:00Z",
     "name": "Personal AI Assistant Memory Continuity",
     "semantic_hash": "assistant-memory-continuity-identity-context-preferences-profile-boundary",
     "source": {
@@ -87,9 +87,9 @@
         "at": "2026-03-11T20:40:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Personal AI Assistant decomposition to isolate identity, memory, profile, and context surfaces from planning, delegation, and governance-control responsibilities."
+        "rationale": "Minted during Personal AI Assistant decomposition to isolate identity, memory, profile, and context surfaces from planning, delegation, and governance-control responsibilities."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "f6a064850c0c743099ceef00e066322e975737bcf915666601fb326f936a150d42f5d91890515da745b56611f6a5a7318b47fffb2496b1128fdbf9529b81a946"
 }

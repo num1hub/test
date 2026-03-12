@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientAuthHeaders, getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import {
   AI_WALLET_PROVIDER_IDS,
   AI_WALLET_PROVIDER_METADATA,
@@ -74,13 +75,10 @@ export default function AiWalletForm() {
   }, [providerOrder]);
 
   useEffect(() => {
-    const token = window.localStorage.getItem('n1hub_vault_token');
-    if (!token) return;
-
     const load = async () => {
       try {
         const res = await fetch('/api/user/ai-wallet', {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: getClientAuthHeaders(),
         });
         const data = (await res.json()) as { error?: string; providers?: AiWalletProviderSummary[] };
         if (!res.ok) throw new Error(data.error || 'Failed to load AI wallet');
@@ -117,12 +115,6 @@ export default function AiWalletForm() {
   };
 
   const saveProvider = async (provider: AiWalletProviderId) => {
-    const token = window.localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     const draft = drafts[provider];
     if (!draft.secret.trim() && !draft.configured) {
       showToast('Enter a key before saving.', 'error');
@@ -134,10 +126,7 @@ export default function AiWalletForm() {
     try {
       const res = await fetch('/api/user/ai-wallet', {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({
           provider,
           action: 'save',
@@ -166,21 +155,12 @@ export default function AiWalletForm() {
   };
 
   const clearProvider = async (provider: AiWalletProviderId) => {
-    const token = window.localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     updateDraft(provider, { saving: true });
 
     try {
       const res = await fetch('/api/user/ai-wallet', {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({
           provider,
           action: 'clear',
@@ -206,21 +186,12 @@ export default function AiWalletForm() {
   };
 
   const testProvider = async (provider: AiWalletProviderId) => {
-    const token = window.localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     updateDraft(provider, { testing: true });
 
     try {
       const res = await fetch('/api/ai/generate', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({
           provider,
           prompt: 'Reply with READY and one short sentence confirming the provider is reachable.',

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T00:20:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:50:00Z",
     "name": "Tracker Planning Feedback",
     "semantic_hash": "tracker-planning-feedback-replanning-assistant-control-capacity-explanations",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Tracker decomposition to isolate replanning, horizon compression, and operator explanation from timing pressure and downstream orchestration feeds."
+        "rationale": "Minted during Tracker decomposition to isolate replanning, horizon compression, and operator explanation from timing pressure and downstream orchestration feeds."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "ef24a56e07e4f5bfed9dda2d0d2539e7899ab26c82e55fd6976e87b5c7f6393f3832d77be93d1d2f4e5441775d8a46c4b7c4edba1bbac1e30b5dd9bb208b3ac1"
 }

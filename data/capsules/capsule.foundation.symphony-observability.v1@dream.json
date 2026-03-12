@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T17:09:00Z",
     "name": "Symphony Observability",
     "semantic_hash": "symphony-observability-logs-status-snapshot-telemetry-runtime-surface",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Observability\n\n## 1. Role\nSymphony Observability will become the evidence layer that explains orchestration with enough depth for operators and agents to understand who asked for work, what lane ran it, what it cost, what degraded, and what needs intervention next.\n\n## 2. Future Observability Contract\nThe system will expose assignment-aware status views, cost and rate attribution, cross-client activity filters, and clearer projection of failures, recovery paths, and review requests into operator and control-plane surfaces.\n\n## 3. Operational Consequence\nA trustworthy issue runner will explain not only what ran, but on whose behalf it ran, under which economic posture, and with what next-step obligations. Observability will therefore become a first-class orchestration contract rather than an afterthought dashboard.\n\n## 4. Philosophical Alignment\nSymphony Observability supports To Dig Deep by turning runtime behavior into accountable evidence instead of opaque automation."
+    "content": "# Symphony Observability\n\n## 1. Role\nSymphony Observability is the evidence layer that explains orchestration with enough depth for operators and agents to understand who asked for work, what lane ran it, what it cost, what degraded, and what needs intervention next.\n\n## 2. Observability Contract\nThe system exposes assignment-aware status views, cost and rate attribution, cross-client activity filters, and clearer projection of failures, recovery paths, and review requests into operator and control-plane surfaces.\n\n## 3. Operational Consequence\nA trustworthy issue runner explains not only what ran, but on whose behalf it ran, under which economic posture, and with what next-step obligations. Observability therefore becomes a first-class orchestration contract rather than an afterthought dashboard.\n\n## 4. Philosophical Alignment\nSymphony Observability supports To Dig Deep by turning runtime behavior into accountable evidence instead of opaque automation."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Observability defines the future evidence layer for orchestration: assignment-aware status views, clearer cost and lane attribution, cross-client activity filters, and stronger projection of failures, degraded modes, and review requests into operator surfaces.",
+    "summary": "Symphony Observability defines the evidence layer that explains orchestration with enough depth for operators and agents to understand what ran, who requested it, what lane carried it, what it cost, and what needs intervention next. It covers assignment-aware status views, cost and lane attribution, cross-client activity filters, degraded-state projection, and review-request visibility across operator surfaces. The capsule matters because trustworthy automation depends on reconstructable runtime evidence rather than vague dashboard signals or hidden server state.",
     "keywords": [
       "symphony",
       "observability",
@@ -88,9 +88,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Symphony Observability states present observability doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5c0c73883c63eb637f9b80b415dd9360406dca525b63b597d4722d6a3fbf83ecdaf52cfb82092b690e50a4b6d655872aa5e11cd2b2419d743147e2527b835af8"
 }

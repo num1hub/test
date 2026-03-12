@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-07T10:22:14.344Z",
+    "updated_at": "2026-03-12T16:42:00Z",
     "name": "Team",
     "semantic_hash": "capsule-foundation-team-v1-collaboration-roles-permissions-projects",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# Team\n\n## 1. Definition and Essence\nTeam defines collaborative grouping semantics for shared projects, responsibilities, and communication contexts. It maps members to roles and permissions while preserving ownership boundaries and sovereign data controls.\n\n## 2. Core Attributes\n- `team_id` stable team identifier\n- `member_refs` linked profile capsules in team scope\n- `role_bindings` role assignments per member and project\n- `shared_projects` project hubs collaboratively maintained\n- `governance_rules` participation and decision constraints\n\n## 3. Lifecycle\nTeams are created around initiatives, evolve through invitations and role changes, and may be archived while retaining full collaboration and decision lineage.\n\n## 4. Integration\n- **Project Hubs:** applies team context to delivery work.\n- **Role and Permission:** controls capabilities per member.\n- **Invitation:** governs safe onboarding of collaborators.\n- **Workspace:** surfaces team-scoped views and activities.\n\n## 5. Philosophical Alignment\nTeam capsules express To Dig Deep socially: aligned people, explicit responsibility, and traceable collective execution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Team in the Dream branch describes a more mature collaboration unit with stronger governance memory, richer membership context, and better coupling between roles, invitations, projects, and operating rituals. The capsule matters because collaboration semantics are foundational if N1Hub is to expand beyond a mostly solo habitat. Dream therefore frames Team as the future multi-actor operating cell of the graph, not just the current collaboration placeholder, and makes collaboration scale legible before it fully arrives.",
+    "summary": "Team defines the collaboration unit that keeps membership, roles, invitations, project participation, and operating rituals legible as graph-native structure rather than informal social context. It strengthens governance memory, richer membership context, and tighter coupling between role assignments, shared delivery work, and accountability boundaries so collaboration can scale without turning into invisible coordination debt. The capsule matters because multi-actor work succeeds only when people, permissions, and decision lineage remain explicit. It therefore acts as the operating cell for governed collaboration across the graph rather than a placeholder container for people.",
     "keywords": [
       "team",
       "collaboration-container",
@@ -66,5 +66,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "76f77d46d5d4205e577b4f581d9c1f2dcf0ac160758b3cd0f3e02799bf5b95a343556fa5afb4d63eaedb93295aea4cdfb191f67f51701f0fee35d07f57bb1543"
+  "integrity_sha3_512": "910a4b2e93e9da42c81671669170840a4fa328d02fce105d28e35d7059be677d7d60b445063aa15f40412a27a97d199f388020415c6a35970e9ae5a520c367b5"
 }

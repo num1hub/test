@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-11T21:10:00Z",
+    "updated_at": "2026-03-12T16:56:00Z",
     "name": "A2C Stage: Ingest",
     "semantic_hash": "capsule-foundation-a2c-ingest-v1-stage-capture-pipeline",
     "priority": "high",
@@ -67,9 +67,9 @@
         "at": "2026-03-11T21:10:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so Ingest states future intake doctrine directly."
+        "rationale": "Removed summary meta-language so Ingest states intake doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b73b4e5f9a233007f512b1faf6a34d61c152c85daf80b3d8f5612f35a25463b57513c5074c82f2a98231364e72df8737b24c3aa786b3c3c624c6c4b9868e73b4"
 }

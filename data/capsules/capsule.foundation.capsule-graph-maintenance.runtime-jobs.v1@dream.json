@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T03:20:00Z",
-    "updated_at": "2026-03-12T03:20:00Z",
+    "updated_at": "2026-03-12T17:36:00Z",
     "name": "Capsule Graph Maintenance Runtime Jobs",
     "semantic_hash": "graph-maintenance-runtime-jobs-nightshift-stewardship-background-orchestration",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T03:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Capsule Graph Maintenance decomposition to isolate executable capsule jobs, night-shift posture, stewardship coupling, and runtime support."
+        "rationale": "Minted during Capsule Graph Maintenance decomposition to isolate executable capsule jobs, night-shift posture, stewardship coupling, and runtime support."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "853dc0eb5fd9bfc0f50dac4bb64db4e1a4f4d73427d0ba6c8961daca1d914096b0e4ffb110c884c6fdc05798081274f74924de0802445b8ffc89e4f2c25c0530"
 }

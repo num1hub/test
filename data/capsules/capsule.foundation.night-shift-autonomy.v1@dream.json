@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T21:10:00Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T16:46:00Z",
     "name": "Night Shift Autonomy",
     "semantic_hash": "night-shift-autonomy-window-budget-cooldown-handoff-policy",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Night Shift Autonomy\n\n## 1. Role\nNight Shift Autonomy will become the mature unattended operating mode of N1Hub, shaping what the system may do while the human is offline and how that work must return for daylight review.\n\n## 2. Future Shift Contract\nThis mode will coordinate execution windows, day-vs-night behavior, budget discipline, cooldown posture, handoff rules, and mutation boundaries with much more explicit operator and wallet awareness. Night work will remain bounded, reviewable, and preference-aware instead of merely aggressive.\n\n## 3. Operational Consequence\nThe system will be able to compound useful progress overnight while still producing clear morning return paths, safer Dream-first mutation posture, and better protection against runaway cost or unreviewed structural change.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by making unattended depth calmer, more legible, and more trustworthy."
+    "content": "# Night Shift Autonomy\n\n## 1. Role\nNight Shift Autonomy is the mature unattended operating mode of N1Hub, shaping what the system may do while the human is offline and how that work must return for daylight review.\n\n## 2. Shift Contract\nThis mode coordinates execution windows, day-vs-night behavior, budget discipline, cooldown posture, handoff rules, and mutation boundaries with much more explicit operator and wallet awareness. Night work remains bounded, reviewable, and preference-aware instead of merely aggressive.\n\n## 3. Operational Consequence\nThe system can compound useful progress overnight while still producing clear morning return paths, safer mutation posture, and better protection against runaway cost or unreviewed structural change.\n\n## 4. Philosophical Alignment\nNight Shift Autonomy supports To Dig Deep by making unattended depth calmer, more legible, and more trustworthy."
   },
   "neuro_concentrate": {
-    "summary": "Night Shift Autonomy defines the future mature unattended mode of N1Hub: stronger shift shaping, richer morning handoffs, tighter mutation boundaries, better wallet and preference awareness, and more legible control-plane oversight while humans are offline.",
+    "summary": "Night Shift Autonomy defines the unattended operating mode that shapes what N1Hub may do while the human is offline and how that work must return for daylight review. It covers execution windows, day-versus-night behavior, budget discipline, cooldown posture, mutation boundaries, and operator and wallet awareness. The capsule matters because useful overnight progress becomes dangerous when autonomy is aggressive but poorly bounded. It makes unattended depth calmer, reviewable, and preference-aware so morning handoffs remain legible instead of surprising or structurally unsafe.",
     "keywords": [
       "night-shift-autonomy",
       "night-window",
@@ -114,9 +114,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-commentary leakage so the capsule states present unattended-runtime doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "2008d311d44998f6fb05200b19c711227d787ec63a3b03405f713388aac4a0052be7bdaad525e22a123290173c82b4dbaf53b634684bfb37d20a5807b4903721"
 }

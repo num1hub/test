@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T17:22:00Z",
     "name": "AI Economics: Night and Batch Routing",
     "semantic_hash": "ai-economics-night-batch-explicit-budget-responsive-routing",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Role\nN1Hub will turn current routing heuristics into an explicit economic control system for the intelligence stack. Compute will be treated as a governable substrate that shapes when lanes should run, what kind of work they may absorb, and which provider posture is rational at a given moment.\n\n## 2. Future Economic Routing\n- subscription lanes saturated for human-centered symbiosis\n- programmable API and hosted-inference lanes reserved for unattended and parallel work\n- systematic capture of provider batch and night discounts\n- visible budget posture in operator and control-plane surfaces\n- assignment routing and daemon wakeups that respond to budget state rather than ignoring it\n\n## 3. Operational Consequence\nLarge swarms and deep mining will stay strategically useful because cost posture, wallet health, and runtime scheduling will compound together instead of drifting upward as a hidden background bill.\n\n## 4. Philosophical Alignment\nAI Economics: Night and Batch Routing supports To Dig Deep by making depth financially sustainable and operationally legible."
+    "content": "# AI Economics: Night and Batch Routing\n\n## 1. Role\nN1Hub turns current routing heuristics into an explicit economic control system for the intelligence stack. Compute is treated as a governable substrate that shapes when lanes should run, what kind of work they may absorb, and which provider posture is rational at a given moment.\n\n## 2. Economic Routing Contract\n- subscription lanes saturated for human-centered symbiosis\n- programmable API and hosted-inference lanes reserved for unattended and parallel work\n- systematic capture of provider batch and night discounts\n- visible budget posture in operator and control-plane surfaces\n- assignment routing and daemon wakeups that respond to budget state rather than ignoring it\n\n## 3. Operational Consequence\nLarge swarms and deep mining stay strategically useful because cost posture, wallet health, and runtime scheduling compound together instead of drifting upward as a hidden background bill.\n\n## 4. Philosophical Alignment\nAI Economics: Night and Batch Routing supports To Dig Deep by making depth financially sustainable and operationally legible."
   },
   "neuro_concentrate": {
-    "summary": "AI Economics: Night and Batch Routing defines the future economic control system for the N1Hub swarm: subscription saturation for symbiosis, programmable API routing for automation, automated discount capture, visible budget posture, and assignment-aware daemon wakeups.",
+    "summary": "AI Economics: Night and Batch Routing defines the governed economic control system that lets N1Hub schedule intelligence work according to budget posture instead of loose heuristics. It covers subscription saturation for human-centered symbiosis, programmable API and hosted lanes for unattended work, systematic capture of batch and night discounts, and daemon wakeups that respond to wallet state. The capsule matters because swarm scale stays strategically useful only when cost posture, supply health, and runtime scheduling reinforce each other instead of compounding into hidden background spend.",
     "keywords": [
       "ai-economics",
       "night-batch-routing",
@@ -90,9 +90,9 @@
         "at": "2026-03-11T15:33:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present economic-routing doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "bb2845bb7f3cf3398f1cb1b87ec1ce46668583cd956ab01bf33a2752877fbbfbe408fc99af303f2b7a26e20f8e736ef1e5b96aab8b61ed9386910a035ca56b12"
 }

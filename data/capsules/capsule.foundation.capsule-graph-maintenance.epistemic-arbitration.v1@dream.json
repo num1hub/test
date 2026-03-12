@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T03:20:00Z",
-    "updated_at": "2026-03-12T03:20:00Z",
+    "updated_at": "2026-03-12T17:47:00Z",
     "name": "Capsule Graph Maintenance Epistemic Arbitration",
     "semantic_hash": "graph-maintenance-epistemic-arbitration-weaver-parliament-suggestion-contradictions",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-12T03:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Capsule Graph Maintenance decomposition to isolate contradiction discovery, debate routing, and advisory handling for contested structure."
+        "rationale": "Minted during Capsule Graph Maintenance decomposition to isolate contradiction discovery, debate routing, and advisory handling for contested structure."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5c451e0d7a40d8b819d04ad5085775209cd9f93fa87ed621beded4ff99b73bd3bb4457a8158437b75d05b1d390980ad58a4d0aea1b546512c47ba897a398ef83"
 }

@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "deepmine-llm-extraction-routing-caching-async-ingestion-quarry",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:28:00Z",
     "name": "DeepMine",
     "priority": "high",
     "progress": 37,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# DeepMine: The Future Cognitive Quarry\n\n## 1. Role\nDeepMine will become the broader quarry fabric of N1Hub, extracting high-value intellectual ore from providers, the open internet, and user corpora through more deliberate routing, stronger manifests, and clearer downstream handoff discipline.\n\n## 2. Future Quarry Contract\nThe quarry will widen beyond the current implementation with better provider diversity, more explicit ore manifests, retrieval budgets, cache intelligence, and branch-aware extraction boundaries. Quarry output will carry enough structure that A2C, Workspace, and swarm lanes can consume it without folklore.\n\n## 3. Operational Consequence\nThe rest of the ecosystem will be able to reason more deeply because the raw material entering refinement will be cleaner, cheaper, and better packaged. Quarry quality will remain a first-order limit on higher-order intelligence.\n\n## 4. Philosophical Alignment\nDeepMine supports To Dig Deep by treating extraction quality and extraction economics as foundational rather than incidental."
+    "content": "# DeepMine: The Cognitive Quarry\n\n## 1. Role\nDeepMine is the broader quarry fabric of N1Hub, extracting high-value intellectual ore from providers, the open internet, and user corpora through more deliberate routing, stronger manifests, and clearer downstream handoff discipline.\n\n## 2. Quarry Contract\nThe quarry operates with better provider diversity, more explicit ore manifests, retrieval budgets, cache intelligence, and explicit extraction boundaries. Quarry output carries enough structure that A2C, Workspace, and swarm lanes can consume it without folklore.\n\n## 3. Operational Consequence\nThe rest of the ecosystem can reason more deeply because the raw material entering refinement is cleaner, cheaper, and better packaged. Quarry quality remains a first-order limit on higher-order intelligence.\n\n## 4. Philosophical Alignment\nDeepMine supports To Dig Deep by treating extraction quality and extraction economics as foundational rather than incidental."
   },
   "neuro_concentrate": {
-    "summary": "DeepMine defines the future quarry fabric of N1Hub: broader provider routing, stronger ore-manifest discipline, richer cache and retrieval intelligence, better branch-aware handoff bundles, and more deliberate conversion of external intelligence into reusable raw material.",
+    "summary": "DeepMine defines the quarry fabric that extracts high-value intellectual ore from providers, the open internet, and user corpora for later refinement inside N1Hub. It covers broader provider routing, explicit ore manifests, retrieval budgets, cache intelligence, and cleaner handoff discipline to A2C, Workspace, and swarm lanes. The capsule matters because higher-order reasoning is limited by the quality of raw material entering refinement. It makes extraction quality, packaging, and economics first-class concerns instead of incidental side effects of mining activity.",
     "keywords": [
       "deepmine",
       "extraction-layer",
@@ -113,9 +113,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present extraction doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "9dfa78d3df68ad7a69c1def9724dbe5a7fd6738c445303fe345caaecfbc427332d29fcc159dcf77a42e1aabcf0c39978edb65b4307034bd301d964558a152ac8"
 }

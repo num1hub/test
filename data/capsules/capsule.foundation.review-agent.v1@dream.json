@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:48:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T16:34:00Z",
     "name": "Review Agent",
     "semantic_hash": "review-agent-stronger-critique-merge-and-promotion-readiness",
     "priority": "high",
@@ -19,13 +19,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Review Agent\n\n## 1. Role\nReview Agent will become a stronger critique layer for capsule work, delegated jobs, planning shifts, and branch promotions. It will remain the explicit internal skeptic that explains why something is ready, weak, risky, incomplete, or should remain in Dream.\n\n## 2. Future Critique Surface\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- tighter coordination with validation, roadmap review, and branch governance\n- more legible human-facing review summaries and operator triage surfaces\n\n## 3. Operational Consequence\nA multi-agent vault will remain honest because critique pressure will scale with production pressure. Review will continue to translate skepticism into human-usable guidance and machine-usable feedback instead of leaving quality judgment to intuition.\n\n## 4. Philosophical Alignment\nReview Agent supports To Dig Deep by applying epistemic pressure where the system is tempted to accept easy, flattering, or overconfident output."
+    "content": "# Review Agent\n\n## 1. Role\nReview Agent is a stronger critique layer for capsule work, delegated jobs, planning shifts, and branch promotions. It remains the explicit internal skeptic that explains why something is ready, weak, risky, incomplete, or should remain in projected state.\n\n## 2. Critique Surface\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- tighter coordination with validation, roadmap review, and branch governance\n- more legible human-facing review summaries and operator triage surfaces\n\n## 3. Operational Consequence\nA multi-agent vault remains honest because critique pressure scales with production pressure. Review continues to translate skepticism into human-usable guidance and machine-usable feedback instead of leaving quality judgment to intuition.\n\n## 4. Philosophical Alignment\nReview Agent supports To Dig Deep by applying epistemic pressure where the system is tempted to accept easy, flattering, or overconfident output."
   },
   "neuro_concentrate": {
-    "summary": "Review Agent defines the future stronger critique layer for N1Hub: clearer merge- and promotion-readiness judgments, stronger proof pressure on mined and planned output, and more legible review summaries for humans and other agents.",
+    "summary": "Review Agent defines the critique layer that applies explicit skepticism to capsule work, delegated jobs, planning shifts, and branch promotions across N1Hub. It covers merge-readiness and promotion-readiness judgments, stronger proof pressure on mined and planned output, coordination with validation and branch governance, and review summaries legible to both humans and agents. The capsule matters because production pressure grows faster than judgment unless critique has its own lane. It turns skepticism into actionable guidance instead of leaving quality decisions to intuition or momentum.",
     "keywords": [
       "review-agent",
-      "dream-branch",
+      "projected-state",
       "critique",
       "proof-pressure",
       "merge-readiness",
@@ -101,9 +101,9 @@
         "at": "2026-03-11T15:33:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing and keyword residue so the capsule states present review doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d69e44c1f7c7e5fd7244da915205e083b37adb5491aa06e03a94452caa49d28860034c7838015126981706ff7e26ab9b52f4212d4fe272fece2adf3e74c4851e"
 }

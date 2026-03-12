@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T00:20:00Z",
-    "updated_at": "2026-03-12T00:20:00Z",
+    "updated_at": "2026-03-12T17:36:00Z",
     "name": "Tracker Schedule Pressure",
     "semantic_hash": "tracker-schedule-pressure-reminders-notifications-calendar-timing-loops",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-12T00:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Tracker decomposition to isolate reminder timing, notification pressure, and calendar-facing urgency from tracked objects and runtime orchestration."
+        "rationale": "Minted during Tracker decomposition to isolate reminder timing, notification pressure, and calendar-facing urgency from tracked objects and runtime orchestration."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "efc1d206073888ea0f7f0305898eb4e52d4162c62e0ea64fd8af7220d5e3726519cae9ca5a7dbd84478aa80d5b8fc3afc7337a32a00f3953b6ef6611236e5713"
 }

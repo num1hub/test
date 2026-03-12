@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:55:00Z",
-    "updated_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-12T17:00:00Z",
     "name": "A2C Candidate Construction",
     "semantic_hash": "a2c-candidate-construction-synthesize-link-graph-assembly-reasoning",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream A2C decomposition to isolate candidate assembly and graph placement from raw material preparation and downstream governance or emission gates."
+        "rationale": "Minted during A2C decomposition to isolate candidate assembly and graph placement from raw material preparation and downstream governance or emission gates."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5ab73de717674f9a083445822114cf49a4692bba5a0b7f955202d9c86dd932b2aaf5af1d8c25a94052743d38da85cbf01cb0c6de78252091923e233c827d62b5"
 }

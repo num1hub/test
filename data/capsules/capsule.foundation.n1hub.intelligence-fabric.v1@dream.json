@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:58:00Z",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T17:54:00Z",
     "name": "N1Hub Intelligence Fabric",
     "semantic_hash": "n1hub-intelligence-fabric-mining-refinery-swarm-memory-coordination",
     "source": {
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream N1Hub decomposition to isolate mining, refinement, and swarm reasoning from operator surfaces, daemon coordination, and program lines."
+        "rationale": "Minted during N1Hub decomposition to isolate mining, refinement, and swarm reasoning from operator surfaces, daemon coordination, and program lines."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d1a1042d22627c3089205bda0d00e94065db6d24f708a83c32b5a8778b2412030a73c333a06ece38fdfd313115caf70329f1408dbaa1e33045e501f70456a956"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T17:28:00Z",
     "name": "Integrations",
     "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security",
     "priority": "medium",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Integrations\n\n## 1. Role\nIntegrations will become the governed connector fabric of N1Hub, allowing external services to join the graph through explicit capability boundaries, trust classes, and operability rules rather than through ad hoc plugin sprawl.\n\n## 2. Future Connector Contract\nThe integration layer will carry clearer health monitoring, retry and recovery policy, secret handling, event contracts, and agent-operability distinctions so the system can tell the difference between co-pilot-safe connectors, autonomy-safe connectors, and connectors that require stronger human control.\n\n## 3. Operational Consequence\nExternal capability will deepen without dissolving sovereignty. Connectors will widen the system’s reach while staying inspectable, governable, and compatible with vault law.\n\n## 4. Philosophical Alignment\nIntegrations supports To Dig Deep by letting the ecosystem connect outward without abandoning control inward."
+    "content": "# Integrations\n\n## 1. Role\nIntegrations is the governed connector fabric of N1Hub, allowing external services to join the graph through explicit capability boundaries, trust classes, and operability rules rather than through ad hoc plugin sprawl.\n\n## 2. Connector Contract\nThe integration layer carries clearer health monitoring, retry and recovery policy, secret handling, event contracts, and agent-operability distinctions so the system can tell the difference between co-pilot-safe connectors, autonomy-safe connectors, and connectors that require stronger human control.\n\n## 3. Operational Consequence\nExternal capability deepens without dissolving sovereignty. Connectors widen the system's reach while staying inspectable, governable, and compatible with vault law.\n\n## 4. Philosophical Alignment\nIntegrations supports To Dig Deep by letting the ecosystem connect outward without abandoning control inward."
   },
   "neuro_concentrate": {
-    "summary": "Integrations defines the future governed connector fabric of N1Hub: clearer capability boundaries, better health monitoring, stronger agent-operability rules, and tighter sovereign control over how outside systems join the graph.",
+    "summary": "Integrations defines the governed connector fabric that lets outside services join the N1Hub graph through explicit capability boundaries, trust classes, and operability rules. It covers health monitoring, retry and recovery policy, secret handling, event contracts, and distinctions between co-pilot-safe, autonomy-safe, and human-gated connectors. The capsule matters because external capability should widen the system without dissolving sovereignty or vault law. It keeps connectors inspectable, governable, and operationally legible instead of allowing ad hoc plugin sprawl to dictate system behavior.",
     "keywords": [
       "integrations",
       "connectors",
@@ -79,9 +79,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed stale future-facing phrasing so the capsule states present connector doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "9c66969ed57dcdb9df4a418cc68ef5e670681806de228b48b8d362833aadfe0eef013d19d0e4f63aeab6cc71b6a0697d59678abab51e426b9a1c6a767af59381"
 }

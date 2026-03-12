@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, checkRateLimit } from '@/lib/apiSecurity';
+import { isAuthorized, checkRateLimit, requireTrustedMutation } from '@/lib/apiSecurity';
 import { getVersion, restoreVersion } from '@/lib/versioning';
 import { branchNameSchema } from '@/contracts/diff';
 
@@ -44,6 +44,9 @@ export async function POST(
   request: Request,
   { params }: { params: Promise<{ id: string; timestamp: string }> },
 ) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

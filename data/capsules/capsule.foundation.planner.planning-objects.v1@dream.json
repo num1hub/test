@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:15:00Z",
-    "updated_at": "2026-03-12T02:15:00Z",
+    "updated_at": "2026-03-12T17:47:00Z",
     "name": "Planner Planning Objects",
     "semantic_hash": "planner-planning-objects-goals-milestones-roadmaps-projects-tasks",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-12T02:15:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Planner decomposition to isolate projects, goals, milestones, tasks, and roadmaps as the explicit artifacts whose shape the planner governs."
+        "rationale": "Minted during Planner decomposition to isolate projects, goals, milestones, tasks, and roadmaps as the explicit artifacts whose shape the planner governs."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "6f345bfcdcc010195712180628c536e2ce3615b6795d898700de7e6840e9c3bc82f704d5e2841fc95bfa335eedad810ac8cc8ae84b499072c589df9e2787999f"
 }

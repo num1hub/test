@@ -1,6 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import * as fs from 'fs/promises'
-import { getPasswordHash, setPasswordHash, verifyPassword } from '@/lib/password'
+import {
+  getPasswordHash,
+  isEnvBackedPassword,
+  setPasswordHash,
+  verifyPassword,
+} from '@/lib/password'
 
 vi.mock('fs/promises', () => {
   const access = vi.fn()
@@ -70,6 +75,25 @@ describe('lib/password.ts', () => {
 
       await expect(verifyPassword('env-secret', hash)).resolves.toBe(true)
       await expect(verifyPassword('wrong-pass', hash)).resolves.toBe(false)
+    })
+  })
+
+  describe('env-backed production mode', () => {
+    it('avoids file IO and locks password changes in production', async () => {
+      process.env = {
+        ...originalEnv,
+        NODE_ENV: 'production',
+        VAULT_PASSWORD: 'vercel-owner-pass',
+      }
+
+      const hash = await getPasswordHash()
+
+      expect(isEnvBackedPassword()).toBe(true)
+      expect(hash.startsWith('scrypt$')).toBe(true)
+      expect(fs.readFile).not.toHaveBeenCalled()
+      expect(fs.writeFile).not.toHaveBeenCalled()
+      await expect(verifyPassword('vercel-owner-pass', hash)).resolves.toBe(true)
+      await expect(setPasswordHash('new-pass')).rejects.toThrow(/env-backed/i)
     })
   })
 })

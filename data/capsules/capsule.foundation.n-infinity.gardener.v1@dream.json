@@ -9,7 +9,7 @@
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "gardener-agent-prune-archive-maintain-ecology-gold-core",
     "name": "N-Infinity Gardener",
-    "updated_at": "2026-03-07T10:22:14.156Z",
+    "updated_at": "2026-03-12T16:49:00Z",
     "priority": "medium",
     "progress": 27,
     "estimatedHours": 190,
@@ -22,7 +22,7 @@
     "content": "# Gardener Agent: The Graph Ecologist\n\n## 1. Definition\nThe **Gardener** is a specialized, autonomous background agent within the N-Infinity swarm of the N1Hub ecosystem. Operating as the caretaker and ecologist of the Cognitive Plane, the Gardener's primary mandate is to prevent entropic decay by maintaining the absolute structural hygiene and relevance of the knowledge graph.\n\n## 2. Core Functions\n- **Pruning**: The Gardener continuously scans the `recursive_layer` of all capsules. It detects and flags \"dead links\"—topological edges pointing to non-existent, purged, or indefinitely `quarantined` capsules—ensuring the graph remains fully traversable and unbroken.\n- **Archiving**: It identifies `active` capsules that have suffered from severe link decay, lack of user interaction, or obsolescence. Rather than deleting data, the Gardener transitions these artifacts to the `archived` status (often pending user or Parliament approval), preserving historical provenance while removing noise from default global searches.\n- **Integrity Checks**: The agent acts as a secondary structural auditor, hunting for logical anomalies such as orphaned capsules (capsules with zero outbound links that are not in the `draft` state), ensuring strict adherence to Gate 13 of the CapsuleOS schema.\n\n## 3. Operational Mechanics\n- **Low-Impact Execution**: The Gardener operates continuously but schedules its most intensive graph-traversal algorithms during low-load periods (sleep-time compute), ensuring zero disruption to the active user experience.\n- **Reporting and Alerts**: Rather than executing destructive actions unilaterally, the Gardener frequently generates summary reports and actionable alerts for human architects or higher-order Parliament agents to review.\n\n## 4. Systemic Obedience\nThe Gardener is bound by the fundamental physics of CapsuleOS. It never permanently deletes a sovereign or active capsule without a trace; its actions are restricted to state transitions (e.g., to `archived`) and link pruning, guaranteeing that the intellectual history of the ecosystem is never lost."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Gardener in the Dream branch represents a more proactive graph-care agent. It moves beyond hygiene reports toward deeper decay detection, smarter archival nudges, and better coordination with Planner, Tracker, and archive policy when parts of the graph lose relevance or drift into disorder. The agent matters because knowledge systems age continuously. Dream therefore preserves Gardener as a future ecological maintainer of the graph, not just a cleanup helper running after entropy has already spread.",
+    "summary": "N-Infinity Gardener represents a proactive graph-care agent. It moves beyond hygiene reports toward deeper decay detection, smarter archival nudges, and better coordination with Planner, Tracker, and archive policy when parts of the graph lose relevance or drift into disorder across the sovereign vault. The agent matters because knowledge systems age continuously. It therefore preserves Gardener as an ecological maintainer of the graph rather than a cleanup helper running after entropy has already spread.",
     "keywords": [
       "gardener-agent",
       "n-infinity",
@@ -71,5 +71,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "225fab4a963e43dfd4ae97310ce24ddcae5ec2fa0dadfcf56153671adc55d4ae0e1eea8510d9718240eedd37c73cc14ffc5b479e8e6dc56ac7521fdbe6996ab7"
+  "integrity_sha3_512": "4497cffc02803224a7587522c55ba7caa6940dbf029b0b76083e1a2d74e08037408a838d96543c7bd98bb4cda3685a2f3c29c0c70ed0daaea42cd6e3b62feb47"
 }

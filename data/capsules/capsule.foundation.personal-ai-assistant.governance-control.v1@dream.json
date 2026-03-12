@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T20:40:00Z",
-    "updated_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-12T17:47:00Z",
     "name": "Personal AI Assistant Governance Control",
     "semantic_hash": "assistant-governance-control-wallet-review-runtime-access-boundary",
     "source": {
@@ -91,9 +91,9 @@
         "at": "2026-03-11T20:40:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Personal AI Assistant decomposition to isolate wallet, review, branch, notification, and integration governance from conversational and execution surfaces."
+        "rationale": "Minted during Personal AI Assistant decomposition to isolate wallet, review, branch, notification, and integration governance from conversational and execution surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "72c35fa9fe64057753686c6de03e75b6cb47c4d878f54130de766801129300f9511d8e73d03f038679deee01e3310ce84aa1cb0787b41983e4df5af6b6610810"
 }

@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { X } from 'lucide-react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientAuthHeaders, getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import type { BranchName } from '@/types/branch';
 import type { SovereignCapsule } from '@/types/capsule';
 import { isProject } from '@/types/project';
@@ -32,12 +33,9 @@ export default function AddCapsuleModal({
   const [submittingId, setSubmittingId] = useState<string | null>(null);
 
   useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) return;
-
     setLoading(true);
     void fetch(`/api/capsules?branch=${encodeURIComponent(branch)}`, {
-      headers: { Authorization: `Bearer ${token}` },
+      headers: getClientAuthHeaders(),
     })
       .then(async (response) => {
         if (!response.ok) {
@@ -95,22 +93,13 @@ export default function AddCapsuleModal({
       },
     };
 
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      showToast('Authentication required.', 'error');
-      return;
-    }
-
     setSubmittingId(capsule.metadata.capsule_id);
     try {
       const response = await fetch(
         `/api/capsules/${encodeURIComponent(capsule.metadata.capsule_id)}${branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`}`,
         {
           method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
+          headers: getClientJsonAuthHeaders(),
           body: JSON.stringify(updatedCapsule),
         },
       );

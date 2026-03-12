@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T17:28:00Z",
     "name": "Goal",
     "semantic_hash": "goal-definition-objective-key-result-outcome-gold-core",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Goal: The Strategic Outcome\n\n## 1. Role\nGoal will become a stricter strategic outcome object inside N1Hub, with clearer key-result logic, stronger horizon placement, and tighter coupling to milestones, tasks, and execution evidence.\n\n## 2. Future Goal Contract\nA goal will function as a durable strategic anchor that shapes sequencing, tradeoffs, review pressure, and branch posture. It will carry clearer capacity posture, stronger evidence thresholds, and better distinction between exploratory ambition and committed delivery.\n\n## 3. Operational Consequence\nGoals will stop decaying into motivational text. They will remain the highest practical outcomes in the planning ladder and will structure real planning choices across horizons, reviews, and execution feedback.\n\n## 4. Philosophical Alignment\nGoal supports To Dig Deep by making ambition operational without making it shallow."
+    "content": "# Goal: The Strategic Outcome\n\n## 1. Role\nGoal is the strategic outcome object inside N1Hub, with clear key-result logic, strong horizon placement, and tight coupling to milestones, tasks, and execution evidence.\n\n## 2. Goal Contract\nA goal functions as a durable strategic anchor that shapes sequencing, tradeoffs, review pressure, and execution posture. It carries clear capacity posture, strong evidence thresholds, and a better distinction between exploratory ambition and committed delivery.\n\n## 3. Operational Consequence\nGoals do not decay into motivational text. They remain the highest practical outcomes in the planning ladder and structure real planning choices across horizons, reviews, and execution feedback.\n\n## 4. Philosophical Alignment\nGoal supports To Dig Deep by making ambition operational without making it shallow."
   },
   "neuro_concentrate": {
-    "summary": "Goal defines the future higher bar for strategic intention in N1Hub: richer branch-aware outcome objects with stronger key-result logic, clearer capacity posture, better evidence thresholds, and tighter integration with planning horizons and execution proof.",
+    "summary": "Goal defines the strategic outcome object that anchors planning, sequencing, tradeoffs, and review pressure across N1Hub. It carries stronger key-result logic, clearer horizon placement, explicit capacity posture, evidence thresholds, and tighter coupling to milestones, tasks, and execution proof. The capsule matters because goals become useless when they decay into motivational text or vague aspiration. It keeps strategic intention operational, reviewable, and connected to real planning choices so ambition can shape execution without becoming shallow or ornamental.",
     "keywords": [
       "goal",
       "objective",
@@ -84,9 +84,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed stale future-facing phrasing so the capsule states present planning doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "9cb45b64c18e57e6986c508c1f9ee0535aced57546a722c39a94ec20abf222a2f1f9acfee778eca640f8492ec76888d06f0af049eec65961f1849a98659628b5"
 }

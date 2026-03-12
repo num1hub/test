@@ -1,7 +1,7 @@
 <!-- @anchor doc:todo.hot-queue links=doc:todo.index,doc:todo.decomposition-law,doc:todo.lane-ownership,doc:todo.dependency-map,doc:todo.execution-protocol,doc:todo.roadmap-q2-2026,doc:n1hub.readme,doc:n1hub.agents,doc:n1hub.codex note="Live hot execution queue for AI agents inside N1Hub." -->
 # N1Hub Hot Queue
 
-Updated: 2026-03-09
+Updated: 2026-03-12
 
 Pull order rule: when the user does not give a narrower priority, agents should start from the first unfinished `P0` item in this file.
 
@@ -31,8 +31,8 @@ Pull order rule: when the user does not give a narrower priority, agents should 
 | `TODO-002` | `P1` | `NEXT` | `Cluster Refactor Agent` | `DONE` | Decompose the Vault Steward runtime along real public seams. | `lib/agents/vaultSteward.ts`, `lib/agents/vaultSteward/*`, `scripts/vault-steward.ts` |
 | `TODO-003` | `P1` | `NEXT` | `A2C Test Agent` | `DONE` | Turn the remaining A2C `TO-DO` contracts into real tests and close runtime drift. | `__tests__/a2c/*`, `lib/a2c/*`, `docs/a2c.md` |
 | `TODO-011` | `P1` | `NEXT` | `Diff Test Agent` | `DONE` | Expand Real/Dream promotion and merge test coverage around agent-facing routes. | `app/api/diff/*`, `app/api/capsules/[id]/promote/route.ts`, `__tests__/api/*`, `__tests__/lib/diff/*` |
-| `TODO-012` | `P1` | `NEXT` | `Capsule Planning Agent` | `ACTIVE` | Turn the markdown hot queue into a capsule-native execution control plane backed by the vault. | `data/capsules/*`, `docs/projects.md`, `docs/real-dream-diff.md`, `lib/a2c/*`, `lib/agents/*` |
-| `TODO-034` | `P1` | `NEXT` | `Control Plane Runtime Agent` | `READY` | Project accepted markdown queue packets into durable task and delegation objects without inventing a second planning ontology. | `lib/a2c/*`, `lib/agents/n1/*`, `data/private/a2c/*`, `data/private/agents/n1/*`, `TO-DO/*` |
+| `TODO-012` | `P1` | `NEXT` | `Capsule Planning Agent` | `DONE` | Turn the markdown hot queue into a capsule-native execution control plane backed by the vault. | `data/capsules/*`, `docs/projects.md`, `docs/real-dream-diff.md`, `lib/a2c/*`, `lib/agents/*` |
+| `TODO-034` | `P1` | `NEXT` | `Control Plane Runtime Agent` | `ACTIVE` | Project accepted markdown queue packets into durable task and delegation objects without inventing a second planning ontology. | `lib/a2c/*`, `lib/agents/n1/*`, `data/private/a2c/*`, `data/private/agents/n1/*`, `TO-DO/*` |
 | `TODO-035` | `P1` | `NEXT` | `Workspace Surface Agent` | `ACTIVE` | Turn authenticated `/` into the first real workspace-home control plane surface over graph, queue, and assistant state. | `app/page.tsx`, `components/home/*`, `components/AppNav.tsx`, `app/vault/*`, `app/api/*` |
 | `TODO-036` | `P1` | `NEXT` | `Planning Guardrail Agent` | `READY` | Enforce the difference between Dream planning and Real execution for capsule-native control-plane objects. | `docs/real-dream-diff.md`, `lib/diff/*`, `lib/validator/*`, `lib/a2c/*`, `app/api/*` |
 | `TODO-013` | `P1` | `NEXT` | `Review Systems Agent` | `BLOCKED` | Introduce a cross-model adversarial review lane with opposite-model proof and synthesized verdicts. | `skills/adversarial-review/*`, `scripts/n1-automated-update.ts`, `lib/agents/n1/*`, `docs/agents-operations.md` |
@@ -76,7 +76,8 @@ Reason:
 - `TODO-033` is now closed: `GPT-5.3-Codex-Spark` now also has explicit fields of activity, concrete work packages, and a default first-job ladder instead of only a generic fit matrix.
 - `TODO-018` is now closed: N1 routing is explicit across shared context, skills, and the machine-readable orchestration bridge, including route-to-skill and handoff-target mapping.
 - `TODO-001` is now contained: query reads no longer persist index state or transient synthesis by default, and explicit synthesis lives behind opt-in flags plus contract tests.
-- Front A is now materially contained, so the hot path moves to the A2C intake and packetization wave.
+- Front A is now materially contained and its protected micro-packet plus Dream-wide `G16` finalization wave are complete, so the hot path returns to the A2C intake and packetization wave.
+- The next substantive capsule-update packet is now `TODO-034`: intake, packetization, branch containment, and validator finalization are already in place, so the remaining gap is the durable projection bridge from accepted queue packets into vault-native task and delegation objects.
 - `TODO-016` is now contained: operator input has an explicit `operatorInput` intake envelope plus raw and normalized A2C artifacts, so the next hot path is packet generation in `TODO-017`.
 - `TODO-017` is now contained: normalized intake can be rendered into staged packet candidates under A2C-owned storage, and queue promotion remains an explicit review step.
 - `TODO-019` is now the direct follow-up frontier because the intake and packet-builder contracts are both explicit and ready for fixture coverage.
@@ -105,7 +106,7 @@ Treat the queue as three fronts, not as one flat backlog:
 
 This means:
 
-- `Front A` is now materially contained, so new hot work should default to `Front B` and the `TODO-001` boundary hardening lane unless the operator reopens branch governance
+- `Front A` is now materially contained and branch-facing validator/finalization residue is complete, so new hot work should default to `Front B`, with `TODO-034` as the first substantive capsule-update pull unless the operator explicitly reopens sensitive branch governance
 - do not let `Front C` sprawl ahead of the intake and routing wave without a deliberate priority change
 - when one front changes materially, update the queue order explicitly
 

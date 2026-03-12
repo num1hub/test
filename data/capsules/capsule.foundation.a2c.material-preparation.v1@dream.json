@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:55:00Z",
-    "updated_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-12T17:00:00Z",
     "name": "A2C Material Preparation",
     "semantic_hash": "a2c-material-preparation-ingest-normalize-segment-extract-fabric",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-11T23:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream A2C decomposition to isolate capture, normalization, segmentation, and extraction mechanics from readiness law, candidate reasoning, and later admission gates."
+        "rationale": "Minted during A2C decomposition to isolate capture, normalization, segmentation, and extraction mechanics from readiness law, candidate reasoning, and later admission gates."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "c2d48620cac744159cd3bd09724eec0df4cde499e4f565f4e3ff0f89550b7de4c3775433e6daff49acb5ed1701ee1ceb7a421824258e289fa641c2360e842e13"
 }

@@ -196,4 +196,26 @@ describe("anchor core", () => {
 
     fs.rmSync(rootDir, { recursive: true, force: true });
   });
+
+  it("ignores generated .next directories during scan", () => {
+    const rootDir = makeTempRoot();
+    fs.mkdirSync(path.join(rootDir, "src"), { recursive: true });
+    fs.mkdirSync(path.join(rootDir, ".next", "dev", "server"), {
+      recursive: true,
+    });
+    fs.writeFileSync(
+      path.join(rootDir, "src", "keep.ts"),
+      `// @${TOKEN} arch:keep links=doc:ref\n`,
+    );
+    fs.writeFileSync(
+      path.join(rootDir, ".next", "dev", "server", "drop.js"),
+      `// @${TOKEN} arch:drop links=doc:ref\n`,
+    );
+
+    const anchors = scanAnchors({ rootDir });
+    expect(anchors.map((anchor) => anchor.id)).toEqual(["arch:keep"]);
+    expect(anchors.map((anchor) => anchor.file)).toEqual(["src/keep.ts"]);
+
+    fs.rmSync(rootDir, { recursive: true, force: true });
+  });
 });

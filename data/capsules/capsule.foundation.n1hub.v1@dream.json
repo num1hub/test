@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-26T12:00:00Z",
     "semantic_hash": "n1hub-routing-doctrine-intelligence-operator-runtime-program-lines",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T18:32:00Z",
     "source": {
       "uri": "internal://capsule.foundation.n1hub-gold-master.v1",
       "type": "internal_derivation"
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N1Hub.com: Future Sovereign Habitat\n\n## 1. Role\nN1Hub is the sovereign habitat that turns doctrine into one coherent operating field. It routes that habitat through five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines remain explicit instead of collapsing into one parent directory.\n\n## 2. Routing Surfaces\n- `doctrinal-core` owns existential direction, capsule-generation doctrine, and sovereign capital posture.\n- `intelligence-fabric` owns mining, refinery work, and swarm reasoning over graph state.\n- `operator-surfaces` owns assistant partnership, chat ingress, control visibility, and graph reading.\n- `runtime-coordination` owns daemon continuity, orchestration, agent-lane coordination, and stewardship runtime.\n- `program-lines` owns access posture, flagship program lines, and the active sovereign-refactor track.\n\n## 3. Parent Boundary\nThe parent N1Hub hub keeps only the top-level relationship to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and the five runtime sub-hubs. Detailed habitat routing now flows through those sub-hubs so N1Hub remains the sovereign runtime contract for the larger field rather than a flat list of every adjacent system and strategic line."
+    "content": "# N1Hub.com: Sovereign Habitat\n\n## 1. Role\nN1Hub is the sovereign habitat that turns doctrine into one coherent operating field. It routes that habitat through five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines remain explicit instead of collapsing into one parent directory.\n\n## 2. Routing Surfaces\n- `doctrinal-core` owns existential direction, capsule-generation doctrine, and sovereign capital posture.\n- `intelligence-fabric` owns mining, refinery work, and swarm reasoning over graph state.\n- `operator-surfaces` owns assistant partnership, chat ingress, control visibility, and graph reading.\n- `runtime-coordination` owns daemon continuity, orchestration, agent-lane coordination, and stewardship runtime.\n- `program-lines` owns access posture, flagship program lines, and the active sovereign-refactor track.\n\n## 3. Parent Boundary\nThe parent N1Hub hub keeps only the top-level relationship to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and the five runtime sub-hubs. Detailed habitat routing now flows through those sub-hubs so N1Hub remains the sovereign runtime contract for the larger field rather than a flat list of every adjacent system and strategic line."
   },
   "neuro_concentrate": {
-    "summary": "N1Hub routes the habitat through five bounded surfaces: doctrinal core, intelligence fabric, operator surfaces, runtime coordination, and program lines. The parent keeps only top-level relationships to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and the five sub-hubs. This makes future habitat doctrine more legible because philosophy, cognition, human ingress, daemon continuity, and strategic expansion no longer hide inside one overloaded parent capsule.",
+    "summary": "N1Hub defines the sovereign habitat that routes doctrine, intelligence production, operator surfaces, runtime coordination, and program lines through five bounded sub-hubs. The parent keeps only top-level relationships to CapsuleOS, To Dig Deep, N1Hub Gold Master, the N1Hub v0 project envelope, and those five routing surfaces. The capsule matters because a sovereign habitat becomes unreadable when philosophy, cognition, human ingress, daemon continuity, and strategic expansion collapse into one overloaded parent. It keeps the larger field legible by preserving a clear parent boundary above explicit downstream runtime surfaces.",
     "keywords": [
       "n1hub",
       "sovereign-habitat",
@@ -100,21 +100,21 @@
         "event": "governance_sync_retain_dream_applied",
         "agent": "n1",
         "run_id": "TODO-025",
-        "rationale": "The Dream N1Hub capsule was narrowed to future-only habitat doctrine after Real became the explicit canonical source for the current N1Hub runtime contract. This preserves the larger vision without leaving the branch split implicit."
+        "rationale": "The capsule was narrowed to habitat delta after the canonical N1Hub runtime contract moved to the canonical source surface. This preserves the larger vision without leaving the routing split implicit."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states habitat doctrine directly."
       },
       {
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream N1Hub into five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines no longer collapse into one parent hub."
+        "rationale": "Refactored the capsule into five bounded sub-hubs so doctrinal meaning, intelligence production, operator surfaces, daemon coordination, and program lines no longer collapse into one parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "a751b2d1afd551c2b0f4bdd17437ec133b592e1745f74db8b6205c77b26df33a7a924f7b25346c8a6b71e468e8e7dfe3f334d2ca805b933440d50fd7ca77acd6"
 }

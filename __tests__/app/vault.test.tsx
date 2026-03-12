@@ -14,12 +14,13 @@ describe('VaultDashboard', () => {
     useCapsuleStore.setState({ capsules: [], isLoading: true, error: null })
   })
 
-  it('redirects to login if no token is present', async () => {
+  it('shows an error state instead of client-side redirecting when local token is missing', async () => {
     const router = useRouter()
     renderWithToastProvider(<VaultDashboard />)
     await waitFor(() => {
-      expect(router.push).toHaveBeenCalledWith('/login')
+      expect(screen.getByText('System Error: Failed to fetch from server')).toBeInTheDocument()
     })
+    expect(router.push).not.toHaveBeenCalled()
   })
 
   it('fetches and displays capsules when authorized', async () => {

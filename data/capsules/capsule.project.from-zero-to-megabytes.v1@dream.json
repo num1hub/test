@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T18:12:00Z",
     "name": "From Zero to Megabytes",
     "semantic_hash": "capsule-project-from-zero-to-megabytes-v1-learning",
     "source": {
@@ -79,9 +79,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so From Zero to Megabytes states its compounding doctrine directly."
+        "rationale": "Removed summary meta-language so From Zero to Megabytes states its compounding doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5f485252fdef13029eaaff8c8e7dfbdd4df4fcf5da6cbb8d1bcdba575f383002ec94e39590bb1a51089a4ae79874d7e473bb26eae7660ca975f7cb4a10de242b"
 }

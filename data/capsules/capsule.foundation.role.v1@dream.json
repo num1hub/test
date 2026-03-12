@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-07T10:22:14.290Z",
+    "updated_at": "2026-03-12T16:48:00Z",
     "name": "Role",
     "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance",
     "tier": 2
@@ -17,7 +17,7 @@
     "content": "# Role\n\n## 1. Definition and Essence\nRole defines named responsibility bundles such as owner, contributor, and investor. It specifies expected duties and default authority envelopes that can be instantiated by team and project governance policies.\n\n## 2. Core Attributes\n- `role_name` canonical identifier (owner, contributor, investor)\n- `responsibilities` expected duties and accountability scope\n- `default_permissions` baseline action rights\n- `scope` workspace, team, project applicability\n- `escalation_rules` conditions requiring higher authority\n\n## 3. Lifecycle\nRoles are defined in governance, assigned to profiles by teams or projects, revised when policy evolves, and versioned for historical access reconstruction.\n\n## 4. Integration\n- **Permission:** role definitions map to concrete capabilities.\n- **Team:** binds member identities to role sets.\n- **Project:** applies role policy to collaboration spaces.\n- **Invitation:** role scope included during onboarding.\n\n## 5. Philosophical Alignment\nRole capsules strengthen To Dig Deep by clarifying responsibility and reducing ambiguity in multi-actor execution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Role in the Dream branch captures a more adaptive responsibility system for both humans and agents. It imagines clearer delegation patterns, better review obligations, stronger escalation paths, and more legible coordination between permissions, teams, invitations, and project authority than the current role model yet expresses. The capsule matters because large ecosystems fail when responsibility stays ambiguous even if permissions are technically correct. Dream therefore preserves Role as a future accountability lattice rather than only today’s reusable bundle of rights.",
+    "summary": "Role defines the adaptive responsibility system that keeps delegation patterns, review obligations, escalation paths, and coordination between permissions, teams, invitations, and project authority legible for both humans and agents. It turns role assignment into an explicit accountability lattice instead of leaving responsibility implicit behind permission checks alone. The capsule matters because large ecosystems fail when responsibility stays ambiguous even if permissions are technically correct. It therefore acts as the reusable bundle of duties, expectations, and authority posture that keeps multi-actor execution understandable and governable.",
     "keywords": [
       "role",
       "responsibility-envelope",
@@ -61,5 +61,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "961624483d42b2fccfe25628b1a5c055a61e892709fbea87db9a255b4045c89dc862a5b085307999695070d872028cfb97216544bf05847601b6519838d983e5"
+  "integrity_sha3_512": "bf6ebed454502a9068187bac9cb7a7e0f412f77f638d2b3972ee14ad6e48f1dc0d4b27d0bc96956738fa939b044751f96413b76252a92f17e52a905f670484a4"
 }

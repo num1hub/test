@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientAuthHeaders } from '@/lib/clientAuth';
 import { fetchBranchCapsules, getVaultToken } from '@/lib/vault/capsuleBranchApi';
 import type { SovereignCapsule } from '@/types/capsule';
 import type { ProjectCapsule } from '@/types/project';
@@ -23,10 +24,6 @@ export function useProjectDetailState(projectId: string, branch: BranchName = 'r
 
   const refetchCapsules = useCallback(async () => {
     const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
 
     setIsLoading(true);
     try {
@@ -47,7 +44,7 @@ export function useProjectDetailState(projectId: string, branch: BranchName = 'r
     } finally {
       setIsLoading(false);
     }
-  }, [branch, router, showToast]);
+  }, [branch, showToast]);
 
   useEffect(() => {
     void refetchCapsules();
@@ -149,19 +146,13 @@ export function useProjectDetailState(projectId: string, branch: BranchName = 'r
     const warning = `Delete project "${project.metadata.name ?? project.metadata.capsule_id}"? ${children.length} child capsule(s) will become orphan roots.`;
     if (!window.confirm(warning)) return;
 
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     setDeleting(true);
     try {
       const response = await fetch(
         `/api/capsules/${encodeURIComponent(project.metadata.capsule_id)}`,
         {
           method: 'DELETE',
-          headers: { Authorization: `Bearer ${token}` },
+          headers: getClientAuthHeaders(),
         },
       );
 

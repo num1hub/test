@@ -3,6 +3,7 @@ import { POST } from '@/app/api/diff/apply/route'
 import { mergeResultSchema } from '@/contracts/diff'
 import { mergeBranches } from '@/lib/diff/merge-engine'
 import { createAuthToken } from '@/__tests__/helpers/auth'
+import { AUTH_COOKIE_NAME } from '@/lib/apiSecurity'
 
 const baseDiff = {
   branchA: 'real',
@@ -139,5 +140,26 @@ describe('API: /api/diff/apply', () => {
 
     expect(res.status).toBe(401)
     expect(await res.json()).toEqual({ error: 'Unauthorized' })
+  })
+
+  it('rejects cookie-backed merge requests without a trusted origin', async () => {
+    const req = new Request('http://localhost/api/diff/apply', {
+      method: 'POST',
+      headers: {
+        cookie: `${AUTH_COOKIE_NAME}=${createAuthToken()}`,
+      },
+      body: JSON.stringify({
+        sourceBranch: 'dream',
+        targetBranch: 'real',
+        scopeType: 'capsule',
+        scopeRootId: 'capsule.test.merge.v1',
+        conflictResolution: 'source-wins',
+      }),
+    })
+
+    const res = await POST(req)
+    expect(res.status).toBe(403)
+    expect(await res.json()).toEqual({ error: 'Forbidden: cross-site mutation request rejected.' })
+    expect(mergeBranches).not.toHaveBeenCalled()
   })
 })

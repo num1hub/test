@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T17:43:00Z",
     "name": "Workspace Project",
     "semantic_hash": "capsule-project-workspace-v1-planner-tracker-assistant-dashboard",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Workspace Project\n\n## 1. Role\nWorkspace Project will become a truly seamless second-brain habitat: one place to ask, think, plan, upload, review, and delegate without context leaking into disconnected tools.\n\n## 2. Future Habitat Contract\nThe project will deliver a unified multimodal composer for text, voice, files, and capsule-aware commands; visible day, week, roadmap, and branch context in one calm operating surface; native-feeling assistant and swarm visibility; and stronger human override and approval patterns around mutation and delegation.\n\n## 3. Operational Consequence\nWorkspace will stop feeling like a productivity shell wrapped around deeper systems. It will feel like the place where a human genuinely lives with the second brain and where graph truth, agent help, and daily rhythm become one coherent instrument.\n\n## 4. Philosophical Alignment\nWorkspace Project supports To Dig Deep by making second-brain life calm, legible, habitual, and graph-native every day."
+    "content": "# Workspace Project\n\n## 1. Role\nWorkspace Project is a seamless second-brain habitat: one place to ask, think, plan, upload, review, and delegate without context leaking into disconnected tools.\n\n## 2. Habitat Contract\nThe project delivers a unified multimodal composer for text, voice, files, and capsule-aware commands; visible day, week, roadmap, and branch context in one calm operating surface; native-feeling assistant and swarm visibility; and stronger human override and approval patterns around mutation and delegation.\n\n## 3. Operational Consequence\nWorkspace stops feeling like a productivity shell wrapped around deeper systems. It becomes the place where a human genuinely lives with the second brain and where graph truth, agent help, and daily rhythm become one coherent instrument.\n\n## 4. Philosophical Alignment\nWorkspace Project supports To Dig Deep by making second-brain life calm, legible, habitual, and graph-native every day."
   },
   "neuro_concentrate": {
-    "summary": "Workspace Project defines the future seamless habitat of N1Hub: a unified multimodal composer, calmer day/week/roadmap context, native assistant and swarm visibility, stronger approval patterns, and a more coherent place to live with the second brain instead of merely using adjacent tools.",
+    "summary": "Workspace Project defines the habitat where a human lives with the N1Hub second brain through one coherent multimodal surface instead of scattered adjacent tools. It covers unified composition across text, voice, files, and capsule-aware commands, calmer day and roadmap context, native assistant and swarm visibility, and stronger approval patterns around delegation and mutation. The capsule matters because product coherence determines whether deep graph intelligence feels usable every day. It turns workspace from a shell into a stable environment for planning and execution.",
     "keywords": [
       "workspace",
       "product-surface",
@@ -92,9 +92,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Workspace states its project doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "3433bb786c7f9495c1dc0725e7ef8be497688b8da059a01f4cb7b2d47cc9967b8e1178f3b450006b1682000c63b64e40174ef1e0b672f2719a6ef78a6c61f7ca"
 }

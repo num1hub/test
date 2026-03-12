@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:49:09.572Z",
-    "updated_at": "2026-03-11T21:23:25Z",
+    "updated_at": "2026-03-12T16:56:00Z",
     "name": "A2C Stage: Extract",
     "semantic_hash": "capsule-foundation-a2c-extract-v1-stage-entities-evidence",
     "priority": "high",
@@ -67,9 +67,9 @@
         "at": "2026-03-11T21:23:25Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary framing so Extract states its evidence-mining doctrine directly."
+        "rationale": "Removed summary meta-language so Extract states evidence-mining doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "caf29626fc438a3ce0a17a89113fb7ce8d38cbeabb87b905376e5af453f4cae079a0e6776f214788cd64349c7e98e27a7e5430e9c72f235101a2e8308ba9f99b"
 }

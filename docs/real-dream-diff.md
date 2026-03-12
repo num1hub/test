@@ -235,21 +235,23 @@ The migration script:
 
 ## Field Audit Snapshot
 
-Measured on `2026-03-09` against the live vault.
+Measured on `2026-03-12` against the live vault.
 
 Verified census:
 
-- total files in `data/capsules`: `378`
-- real files: `192`
-- dream overlays: `186`
-- paired `real/dream` ids: `183`
-- dream-only ids: `3`
-- real-only ids: `9`
+- total files in `data/capsules`: `489`
+- real files: `257`
+- dream overlays: `232`
+- paired `real/dream` ids: `227`
+- dream-only ids: `5`
+- real-only ids: `30`
 - legacy `*.dream.json` count: `0`
 - non-dream overlay branch count in `data/capsules`: `0`
 
 Current dream-only ids:
 
+- `capsule.operations.vault-steward.archive.v1`
+- `capsule.operations.vault-steward.archive.vault-steward-1773020624098.v1`
 - `capsule.operations.vault-steward.latest.v1`
 - `capsule.operations.vault-steward.plan.v1`
 - `capsule.operations.vault-steward.queue.v1`
@@ -258,13 +260,54 @@ Current real-only ids:
 
 - `capsule.foundation.agent-activation-readiness.v1`
 - `capsule.foundation.ai-friendly-engineering.v1`
+- `capsule.foundation.background-agent-runtime.control-plane.v1`
+- `capsule.foundation.background-agent-runtime.daemon-lifecycle.v1`
+- `capsule.foundation.background-agent-runtime.mutation-gates.v1`
+- `capsule.foundation.background-agent-runtime.work-orchestration.v1`
 - `capsule.foundation.contract-governed-boundaries.v1`
 - `capsule.foundation.deep-intake-investigation.v1`
 - `capsule.foundation.domain-capsule-boundaries.v1`
 - `capsule.foundation.golden-path-engineering.v1`
 - `capsule.foundation.ignition-ritual.v1`
+- `capsule.foundation.key-agents.governance-lane.v1`
+- `capsule.foundation.key-agents.mining-lane.v1`
+- `capsule.foundation.key-agents.planning-lane.v1`
+- `capsule.foundation.key-agents.stewardship-lane.v1`
+- `capsule.foundation.key-agents.swarm-lane.v1`
+- `capsule.foundation.key-agents.user-lane.v1`
 - `capsule.foundation.low-blast-radius-architecture.v1`
+- `capsule.foundation.n-infinity.governance-metrics.v1`
+- `capsule.foundation.n-infinity.runtime-fabric.v1`
+- `capsule.foundation.n-infinity.signal-fabric.v1`
+- `capsule.foundation.n-infinity.swarm-roster.v1`
+- `capsule.foundation.sovereign-refactor.v1`
 - `capsule.foundation.workspace-recon.v1`
+- `capsule.foundation.workspace.assistant-control.v1`
+- `capsule.foundation.workspace.execution-loop.v1`
+- `capsule.foundation.workspace.identity-access.v1`
+- `capsule.foundation.workspace.operator-surfaces.v1`
+- `capsule.foundation.workspace.runtime-lanes.v1`
+- `capsule.project.n1hub-sovereign-refactor.v1`
+
+Current parity classification note:
+
+- the `background-agent-runtime` decomposition family is now explicitly classified as `real-first canonical`
+- the Dream parent `capsule.foundation.background-agent-runtime.v1@dream` already routes through `control-plane`, `daemon-lifecycle`, `mutation-gates`, and `work-orchestration`
+- those four real-only sub-hubs therefore act as live decomposition surfaces rather than missing Dream mirrors
+- the `key-agents` decomposition family is now explicitly classified as `real-first canonical`
+- the Dream parent `capsule.foundation.key-agents.v1@dream` already routes through `user-lane`, `mining-lane`, `planning-lane`, `stewardship-lane`, `governance-lane`, and `swarm-lane`
+- those six real-only lane hubs therefore act as live decomposition surfaces rather than missing Dream mirrors
+- the `workspace` decomposition family is now explicitly classified as `real-first canonical`
+- the Dream parent `capsule.foundation.workspace.v1@dream` already routes through `assistant-control`, `execution-loop`, `identity-access`, `operator-surfaces`, and `runtime-lanes`
+- those five real-only workspace sub-hubs therefore act as live decomposition surfaces rather than missing Dream mirrors
+- the `n-infinity` decomposition family is now explicitly classified as `real-first canonical`
+- the Dream parent `capsule.foundation.n-infinity.v1@dream` already routes through `runtime-fabric`, `swarm-roster`, `signal-fabric`, and `governance-metrics`
+- those four real-only N-Infinity sub-hubs therefore act as live decomposition surfaces rather than missing Dream mirrors
+- the sovereign-refactor planning family is now explicitly classified as `real-first canonical`
+- `capsule.foundation.sovereign-refactor.v1` and `capsule.project.n1hub-sovereign-refactor.v1` are live operator-directed real-only planning surfaces rather than missing Dream mirrors
+- `capsule.foundation.n1hub-gold-master.v1` is not an unresolved parity gap: its Real/Dream pair is already lawful, with Real carrying the current constitutional charter and Dream carrying the next-horizon constitutional extension
+- the CapsuleOS branch frontier is now materially contained: the paired `capsuleos*` law surfaces are already lawful branch pairs, the protected Dream `16-gates` micro-packet is repaired, and the Dream-wide `G16` finalization wave is complete
+- the original engineering-law set plus the measured decomposition/planning families are now explicitly classified; remaining branch-sensitive work is no longer live parity or validator debt and should reopen only through a deliberate protected-law governance decision
 
 Measured hub ranking method:
 
@@ -298,5 +341,5 @@ Current top measured hub drift set:
 Operational consequence:
 
 - `TODO-008` should start from the measured top drift hubs instead of stale intuition lists
-- `TODO-009` remains bound to the three Vault Steward dream-only capsules
-- `TODO-010` remains bound to the nine real-only engineering law capsules
+- `TODO-009` is now bound to five Dream-only Vault Steward operational and archive capsules
+- `TODO-010` must account for thirty real-only ids, including the original engineering-law set and the newer decomposition families

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:40:00Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T18:28:00Z",
     "name": "Roadmap Planner Agent",
     "semantic_hash": "roadmap-planner-agent-long-horizon-phases-sequencing-strategy",
     "priority": "high",
@@ -19,13 +19,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Roadmap Planner Agent\n\n## 1. Role\nRoadmap Planner Agent will become a more dynamic strategic planner capable of branch-aware sequencing, scenario comparison, and adaptation under uncertainty without degrading roadmap readability.\n\n## 2. Future Strategic Contract\nThe agent will shape stronger phase design across 30/60/90, 365-day, and 1000-day horizons, maintain roadmap variants for exploration versus delivery, and feed Planning Horizon Engine with strategic structures that remain intelligible under risk and change.\n\n## 3. Operational Consequence\nN1Hub will keep long-range coherence under pressure because roadmap structure, review pressure, tracker evidence, and execution uncertainty will remain connected instead of drifting apart.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent supports To Dig Deep by keeping long-horizon strategy explicit, branch-aware, and compressible into grounded execution."
+    "content": "# Roadmap Planner Agent\n\n## 1. Role\nRoadmap Planner Agent is a dynamic strategic planner capable of variant-aware sequencing, scenario comparison, and adaptation under uncertainty without degrading roadmap readability.\n\n## 2. Strategic Contract\nThe agent shapes stronger phase design across 30/60/90, 365-day, and 1000-day horizons, maintains roadmap variants for exploration versus delivery, and feeds Planning Horizon Engine with strategic structures that remain intelligible under risk and change.\n\n## 3. Operational Consequence\nN1Hub keeps long-range coherence under pressure because roadmap structure, review pressure, tracker evidence, and execution uncertainty remain connected instead of drifting apart.\n\n## 4. Philosophical Alignment\nRoadmap Planner Agent supports To Dig Deep by keeping long-horizon strategy explicit, variant-aware, and compressible into grounded execution."
   },
   "neuro_concentrate": {
-    "summary": "Roadmap Planner Agent defines the future adaptive strategic planning role for N1Hub: branch-aware sequencing, scenario comparison, stronger phase design across long horizons, and cleaner handoff from roadmap structure into grounded daily execution.",
+    "summary": "Roadmap Planner Agent defines the strategic planning lane that shapes long-horizon sequencing, scenario comparison, and roadmap adaptation under uncertainty. It covers variant-aware sequencing, stronger phase design across major horizons, cleaner handoff into Planning Horizon Engine, and tighter connection between roadmap structure, review pressure, tracker evidence, and grounded execution. The capsule matters because long-range coherence breaks when strategy, delivery pressure, and evidence drift apart. It keeps roadmap intelligence adaptive without letting the larger plan become vague, decorative, or disconnected from reality.",
     "keywords": [
       "roadmap-planner-agent",
-      "dream-branch",
+      "projected-state",
       "strategy",
       "roadmap",
       "phases",
@@ -116,9 +116,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed planning meta-language so the capsule states present doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "e6aed29407f144d435e09ff8d78a8b5eb40561188ea26b08732fb8f35713137a4a4e77c50fd5628bb28a00a35f5bf5493b71b07ceb8687a12b8d8835a9b39806"
 }

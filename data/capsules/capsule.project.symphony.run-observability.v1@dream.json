@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T02:55:00Z",
-    "updated_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T18:05:00Z",
     "name": "Symphony Project Run Observability",
     "semantic_hash": "project-symphony-run-observability-attempt-retry-status-lineage",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-12T02:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony Project decomposition to isolate attempt history, retry posture, status projection, and lineage-facing evidence."
+        "rationale": "Minted during Symphony Project decomposition to isolate attempt history, retry posture, status projection, and lineage-facing evidence."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "9cd3ec4d0768b26da25ee4fa271429ff3eaff3b77df0e3c26669ab1f4aa591f38f461badfde63575cb3e142c725abef9ff4e148e4e0a74a65d9e4359d67c181c"
 }

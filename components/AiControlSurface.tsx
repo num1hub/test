@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientAuthHeaders, getClientJsonAuthHeaders, getClientVaultToken } from '@/lib/clientAuth';
 import type { AiWalletProviderId } from '@/lib/aiWalletSchema';
 
 type ProviderCatalogEntry = {
@@ -216,24 +217,32 @@ export default function AiControlSurface() {
   const [vaultStewardSaving, setVaultStewardSaving] = useState(false);
   const [vaultStewardAction, setVaultStewardAction] = useState<null | 'start' | 'stop' | 'run_once'>(null);
 
-  const token = useMemo(() => {
-    if (typeof window === 'undefined') return null;
-    return window.localStorage.getItem('n1hub_vault_token');
-  }, []);
+  const token = useMemo(() => getClientVaultToken(), []);
+
+  const requestHeaders = useMemo(
+    (): HeadersInit | undefined => {
+      const headers = getClientAuthHeaders();
+      return Object.keys(headers).length > 0 ? headers : undefined;
+    },
+    [token],
+  );
+
+  const jsonRequestHeaders = useMemo(
+    (): HeadersInit => getClientJsonAuthHeaders(),
+    [token],
+  );
 
   const loadControlState = async () => {
-    if (!token) return;
-
     try {
       const [providersResponse, controlResponse, vaultStewardResponse] = await Promise.all([
         fetch('/api/ai/providers', {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: requestHeaders,
         }),
         fetch('/api/ai/control-state', {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: requestHeaders,
         }),
         fetch('/api/agents/vault-steward', {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: requestHeaders,
         }),
       ]);
 
@@ -290,10 +299,6 @@ export default function AiControlSurface() {
   const vaultStewardBusy = vaultStewardSaving || vaultStewardAction !== null;
 
   const submitPrompt = async () => {
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
     if (!form.prompt.trim()) {
       showToast('Enter a prompt first.', 'error');
       return;
@@ -303,10 +308,7 @@ export default function AiControlSurface() {
     try {
       const response = await fetch('/api/ai/generate', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: jsonRequestHeaders,
         body: JSON.stringify({
           provider: form.provider || undefined,
           model: form.model.trim() || undefined,
@@ -329,19 +331,11 @@ export default function AiControlSurface() {
   };
 
   const refreshLanes = async (lane: 'symphony' | 'ninfinity' | 'all' = 'all') => {
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     setRefreshing(true);
     try {
       const response = await fetch('/api/ai/control-state', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: jsonRequestHeaders,
         body: JSON.stringify({ lane }),
       });
       const payload = (await response.json()) as {
@@ -373,11 +367,6 @@ export default function AiControlSurface() {
     overrides?: Partial<typeof DEFAULT_VAULT_STEWARD_FORM>,
     options?: { silent?: boolean },
   ) => {
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     const nextForm = {
       ...vaultStewardForm,
       ...overrides,
@@ -387,10 +376,7 @@ export default function AiControlSurface() {
     try {
       const response = await fetch('/api/agents/vault-steward', {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: jsonRequestHeaders,
         body: JSON.stringify({
           enabled: nextForm.enabled,
           provider: nextForm.provider || 'auto',
@@ -437,10 +423,6 @@ export default function AiControlSurface() {
   };
 
   const toggleVaultSteward = async (enabled: boolean) => {
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
     if (enabled && !vaultStewardHasReadyProvider) {
       showToast('Add and enable at least one AI provider in Wallet before turning the agent on.', 'error');
       return;
@@ -473,19 +455,11 @@ export default function AiControlSurface() {
   };
 
   const controlVaultSteward = async (action: 'start' | 'stop' | 'run_once') => {
-    if (!token) {
-      showToast('Session missing. Please log in again.', 'error');
-      return;
-    }
-
     setVaultStewardAction(action);
     try {
       const response = await fetch('/api/agents/vault-steward', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: jsonRequestHeaders,
         body: JSON.stringify({ action }),
       });
       const payload = (await response.json()) as {

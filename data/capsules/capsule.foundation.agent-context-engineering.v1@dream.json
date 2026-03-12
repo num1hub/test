@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:10:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:18:00Z",
     "name": "Agent Context Engineering",
-    "semantic_hash": "agent-context-engineering-replayable-branch-aware-holographic-packs",
+    "semantic_hash": "agent-context-engineering-replayable-evidence-packs-handoff-coverage",
     "source": {
       "uri": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
       "type": "web_article"
@@ -23,17 +23,17 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Context Engineering\n\n## 1. Role\nEvery serious N1Hub run will begin from a designed context pack rather than from a raw transcript, vault dump, or accidental residue from earlier chat turns. Context will be assembled as a bounded evidence artifact that preserves branch meaning, doctrine framing, and task-specific signal.\n\n## 2. Future Context Pack Discipline\n- replayable context packs that can be diffed and audited after a run\n- explicit Real and Dream labeling instead of silent branch blending\n- deliberate instruction-surface injection rather than accidental prompt inheritance\n- handoff-ready bundles that move cleanly between scout, foreman, reviewer, and executor lanes\n- retrieval budgets that keep large vaults deep without becoming noisy or economically irrational\n\n## 3. Holographic Coverage\nA strong pack will preserve a compact image of the whole source alongside the local fragment: essence, governing axiom, modality profile, and the evidence needed for the immediate step. This keeps local edits grounded in the larger truth instead of rewarding narrow but context-starved reasoning.\n\n## 4. Operational Consequence\nContext engineering will make swarm work cheaper, deeper, and easier to explain because each run can show why it saw the evidence it saw, which doctrine framed it, and what was intentionally left out.\n\n## 5. Philosophical Alignment\nAgent Context Engineering supports To Dig Deep by making depth come from careful evidence design rather than raw prompt volume."
+    "content": "# Agent Context Engineering\n\n## 1. Role\nEvery serious N1Hub run begins from a designed context pack rather than from a raw transcript, vault dump, or accidental residue from earlier chat turns. Context is assembled as a bounded evidence artifact that preserves state meaning, doctrine framing, and task-specific signal.\n\n## 2. Context Pack Discipline\n- replayable context packs that can be diffed and audited after a run\n- explicit canonical and projected state labeling instead of silent state blending\n- deliberate instruction-surface injection rather than accidental prompt inheritance\n- handoff-ready bundles that move cleanly between scout, foreman, reviewer, and executor lanes\n- retrieval budgets that keep large vaults deep without becoming noisy or economically irrational\n\n## 3. Holographic Coverage\nA strong pack preserves a compact image of the whole source alongside the local fragment: essence, governing axiom, modality profile, and the evidence needed for the immediate step. This keeps local edits grounded in the larger truth instead of rewarding narrow but context-starved reasoning.\n\n## 4. Operational Consequence\nContext engineering makes swarm work cheaper, deeper, and easier to explain because each run can show why it saw the evidence it saw, which doctrine framed it, and what was intentionally left out.\n\n## 5. Philosophical Alignment\nAgent Context Engineering supports To Dig Deep by making depth come from careful evidence design rather than raw prompt volume."
   },
   "neuro_concentrate": {
-    "summary": "Agent Context Engineering defines the future evidence-pack discipline for N1Hub: replayable, branch-aware, handoff-ready context packs with deliberate instruction injection, retrieval budgeting, and holographic coverage of both the local fragment and the larger source.",
+    "summary": "Agent Context Engineering defines the evidence-pack discipline that lets N1Hub start serious runs from deliberate context rather than chat residue or oversized vault dumps. It covers replayable packs, explicit state labeling, instruction-surface injection, handoff-ready bundles for scout, foreman, reviewer, and executor lanes, and retrieval budgets that preserve deep coverage without noise. The capsule also explains holographic coverage: each pack should preserve local detail alongside governing axiom and broader source image so later edits remain grounded in the larger system truth.",
     "keywords": [
       "agent-context-engineering",
-      "dream-branch",
+      "state-labeling",
       "context-pack",
       "replayable-context",
       "handoff-bundle",
-      "branch-aware",
+      "state-aware-context",
       "vault-stewardship-swarm",
       "agent-memory-state",
       "n1hub"
@@ -46,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-context-engineering-replayable-branch-aware-holographic-packs"
+    "semantic_hash": "agent-context-engineering-replayable-evidence-packs-handoff-coverage"
   },
   "recursive_layer": {
     "links": [
@@ -102,12 +102,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "925f3c625558027a33624730710c0bf82e3ded04a3f70d2115840144f89786437b16f806553baeb89b2fab6c18686cd206941785bf61240dfaf61aa505c71743"
 }

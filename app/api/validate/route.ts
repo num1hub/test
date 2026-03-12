@@ -1,6 +1,6 @@
 // @anchor arch:api.validate.route links=arch:validator.engine,interface:validator.public-api,doc:validator.reference note="Primary validator API boundary shared by app workflows and external callers."
 import { NextResponse } from 'next/server';
-import { checkRateLimit, isAuthorized } from '@/lib/apiSecurity';
+import { checkRateLimit, isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 import { logActivity } from '@/lib/activity';
 import { getExistingCapsuleIds } from '@/lib/capsuleVault';
 import { appendValidationLog } from '@/lib/validationLog';
@@ -49,6 +49,9 @@ const toValidatorOptions = async (
 };
 
 export async function POST(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }

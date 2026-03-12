@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:58:00Z",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T18:02:00Z",
     "name": "N1Hub Program Lines",
     "semantic_hash": "n1hub-program-lines-tilesims-refactor-access-expansion-value",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream N1Hub decomposition to isolate economic posture, flagship program lines, and the live sovereign-refactor program from the parent runtime contract."
+        "rationale": "Minted during N1Hub decomposition to isolate economic posture, flagship program lines, and the live sovereign-refactor program from the parent runtime contract."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "69d360f92df6fc67af060e605ecbcde8dd546c15a33c00ea2eb12922d1591e5b55219cb4766b8015edd91ff1ebefa351d50b6b02fc8ad248a4f8d46a12e5ef02"
 }

@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T03:20:00Z",
-    "updated_at": "2026-03-12T03:20:00Z",
+    "updated_at": "2026-03-12T17:47:00Z",
     "name": "Capsule Graph Maintenance Topology Pressure",
     "semantic_hash": "graph-maintenance-topology-pressure-refactor-markup-decomposition-tracker",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T03:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Capsule Graph Maintenance decomposition to isolate topology hygiene, decomposition pressure, markup repair, and structural-drift diagnostics."
+        "rationale": "Minted during Capsule Graph Maintenance decomposition to isolate topology hygiene, decomposition pressure, markup repair, and structural-drift diagnostics."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5b2f26fa4447f8514bfd83139078231e3e43347e529a661d80f193e0503d4a23e6ca5c9d7118c04892a787ce470c889c033143d7cc1e5a7c502d167f04b45768"
 }

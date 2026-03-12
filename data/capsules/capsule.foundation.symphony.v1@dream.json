@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T18:02:00Z",
     "name": "Symphony",
     "semantic_hash": "symphony-routing-intake-session-governance-observability-runtime-contract",
     "source": {
@@ -97,7 +97,7 @@
         "at": "2026-03-11T23:35:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware summary phrasing so Symphony states reusable orchestration doctrine directly."
+        "rationale": "Removed summary meta-language so Symphony states reusable orchestration doctrine directly."
       },
       {
         "at": "2026-03-12T01:20:00Z",
@@ -107,5 +107,5 @@
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "2ef63cd9be361bd073a473580ae5fe528fb3718a61d5db2668f8ae57e249d674bb0f9d3ae50112c61101138798f35e7c575a6468833004e6c413bb49855d75c0"
 }

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T09:20:00Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T17:18:00Z",
     "name": "Hybrid LLM Access",
     "semantic_hash": "hybrid-llm-access-subscription-api-wallet-routing-economics",
     "priority": "high",
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Hybrid LLM Access\n\n## 1. Role\nHybrid LLM Access will become the governed intelligence supply fabric of N1Hub, routing subscription seats, API pools, hosted inference, and bridge providers through one policy engine instead of treating them as unrelated access modes.\n\n## 2. Future Supply Contract\nThe wallet and control plane will understand workload classes, failover preferences, assignment types, budget posture, and safety boundaries across the full supply portfolio. Interactive symbiosis, unattended mining, and background execution will therefore choose the right lane without ad hoc manual reconfiguration.\n\n## 3. Operational Consequence\nN1Hub will treat access to intelligence like a resilient infrastructure portfolio rather than a provider toggle. Supply routing will become more durable, more economical, and easier to supervise as providers and pricing models change.\n\n## 4. Philosophical Alignment\nHybrid LLM Access supports To Dig Deep by making access diversity governable instead of accidental."
+    "content": "# Hybrid LLM Access\n\n## 1. Role\nHybrid LLM Access is the governed intelligence supply fabric of N1Hub, routing subscription seats, API pools, hosted inference, and bridge providers through one policy engine instead of treating them as unrelated access modes.\n\n## 2. Supply Contract\nThe wallet and control plane understand workload classes, failover preferences, assignment types, budget posture, and safety boundaries across the full supply portfolio. Interactive symbiosis, unattended mining, and background execution therefore choose the right lane without ad hoc manual reconfiguration.\n\n## 3. Operational Consequence\nN1Hub treats access to intelligence like a resilient infrastructure portfolio rather than a provider toggle. Supply routing becomes more durable, more economical, and easier to supervise as providers and pricing models change.\n\n## 4. Philosophical Alignment\nHybrid LLM Access supports To Dig Deep by making access diversity governable instead of accidental."
   },
   "neuro_concentrate": {
-    "summary": "Hybrid LLM Access defines the future intelligence supply fabric of N1Hub: one governed policy engine across subscription seats, API pools, hosted inference, and bridge providers, with better failover, assignment-aware placement, and workload-specific routing.",
+    "summary": "Hybrid LLM Access defines the governed intelligence supply fabric that routes subscription seats, API pools, hosted inference, and bridge providers through one policy engine. It covers workload-aware placement, failover behavior, assignment classes, budget posture, and safety boundaries across the full supply portfolio. The capsule matters because serious autonomy cannot rely on ad hoc provider toggles or manual lane switching. It turns model access into resilient infrastructure that remains economical, supervised, and adaptable as providers, pricing, and runtime demands change.",
     "keywords": [
       "hybrid-llm-access",
       "subscription",
@@ -98,9 +98,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Hybrid LLM Access states present supply doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d0f2b56665256339d6efea58e144fe767f34c7f32c22012ca574d75951e97148fad5fda4208d7a53d2b8f9601b102773a1f481205da287e3bb25e77342dba130"
 }

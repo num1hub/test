@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T01:20:00Z",
-    "updated_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T17:58:00Z",
     "name": "Symphony Live Session Fabric",
     "semantic_hash": "symphony-live-session-fabric-daemon-harness-runtime-continuity",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-12T01:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony decomposition to isolate daemon footing, harness protocol, session continuity, and background runtime support."
+        "rationale": "Minted during Symphony decomposition to isolate daemon footing, harness protocol, session continuity, and background runtime support."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "cc26379d5ad24281f75f680f6a057b0abfff77e17f9e7a22da14f4593299bd1cc6365f3ddee471d72fb6cdb102aac8f9f8b3c3d2a3a5188e2314a439f4be5e7e"
 }

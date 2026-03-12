@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, checkRateLimit } from '@/lib/apiSecurity';
+import { isAuthorized, checkRateLimit, requireTrustedMutation } from '@/lib/apiSecurity';
 import type { BranchInfo } from '@/contracts/diff';
 import { branchNameSchema } from '@/contracts/diff';
 import {
@@ -11,6 +11,9 @@ import {
 const jsonError = (status: number, error: string) => NextResponse.json({ error }, { status });
 
 function requireAuthorized(request: Request): NextResponse | null {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) return jsonError(401, 'Unauthorized');
   const rate = checkRateLimit(request);
   if (!rate.allowed) {

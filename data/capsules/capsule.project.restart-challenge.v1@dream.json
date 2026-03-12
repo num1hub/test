@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T21:25:00Z",
+    "updated_at": "2026-03-12T18:14:00Z",
     "name": "Restart Challenge",
     "semantic_hash": "capsule-project-restart-challenge-v1-habits-execution-planning",
     "source": {
@@ -27,7 +27,7 @@
     "content": "# Restart Challenge\n\n## 1. Definition and Essence\nRestart Challenge is an independent initiative focused on disciplined reboot of execution habits, constraints, and measurable weekly output using capsule-native planning and reflection.\n\n## 2. Core Attributes\n- `challenge_scope` personal reboot objectives and boundaries\n- `phase_plan` staged milestones over challenge timeline\n- `accountability_metrics` consistency and output indicators\n- `reflection_loop` retrospective cadence and lesson capture\n- `success_criteria` objective completion thresholds\n\n## 3. Lifecycle\nThe challenge runs through finite phases with explicit checkpoints, periodic retrospectives, and archive of outcomes for future reuse.\n\n## 4. Integration\n- **Planner/Tracker:** core execution instrumentation.\n- **To Dig Deep:** philosophical north star for sustained effort.\n- **Workspace Project:** optional tooling support, not containment.\n- **Independent Project Set:** remains sovereign root initiative.\n\n## 5. Philosophical Alignment\nThe challenge interprets To Dig Deep as behavioral renewal through consistent, measurable forward movement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Restart Challenge is archived together with the real project line as a recoverable recovery campaign pattern. It frames habit repair, planning discipline, weekly output, and accountability as a system that becomes resilient and self-reinforcing over time. The capsule matters because behavioral transformation benefits from having a recoverable target pattern. In archive mode the capsule keeps that intended steady state of regained momentum and structured self-command intact as dormant future leverage.",
+    "summary": "Restart Challenge is an archived but recoverable recovery campaign pattern. It frames habit repair, planning discipline, weekly output, and accountability as a system that becomes resilient and self-reinforcing over time. The capsule matters because behavioral transformation benefits from a preserved target pattern that can be reactivated when momentum needs rebuilding. In archive mode it keeps regained momentum, structured self-command, and measurable follow-through intact without claiming that the challenge is currently active.",
     "keywords": [
       "restart-challenge",
       "habit-reboot",
@@ -74,9 +74,9 @@
         "at": "2026-03-11T21:25:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed branch-aware archive phrasing so Restart Challenge states its recoverable target pattern directly."
+        "rationale": "Removed archive meta-language so Restart Challenge states its recoverable target pattern directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5d22d9962575e922d4d96e746fe0f03b73650410d80323ff48116474e5814c1c6cd5b1568e9858f6c5c81a918dee5796a3041f029a8648b37963dd5aac8d632f"
 }

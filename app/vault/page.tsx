@@ -13,6 +13,7 @@ import VaultFilterBar from '@/components/vault/VaultFilterBar';
 import VaultGrid from '@/components/vault/VaultGrid';
 import TierInsights from '@/components/vault/TierInsights';
 import VaultTopActions from '@/components/vault/VaultTopActions';
+import { useCapsuleVisualPreferences } from '@/hooks/useCapsuleVisualPreferences';
 import { useCapsuleStore } from '@/store/capsuleStore';
 import { useToast } from '@/contexts/ToastContext';
 import { useVaultDashboardState } from '@/hooks/useVaultDashboardState';
@@ -44,6 +45,7 @@ function VaultDashboardContent() {
   const [branch, setBranch] = useState<BranchName>(initialBranch);
   const [availableBranches, setAvailableBranches] = useState<BranchName[]>(['real']);
   const [realBaselineCapsules, setRealBaselineCapsules] = useState<SovereignCapsule[] | null>(null);
+  const { visualProfile, graphQuality } = useCapsuleVisualPreferences();
   const {
     view,
     searchQuery,
@@ -69,17 +71,11 @@ function VaultDashboardContent() {
   }, [initialBranch]);
 
   useEffect(() => {
-    const token = getVaultToken();
-    if (!token) {
-      router.push('/login');
-      return;
-    }
     void fetchCapsules(branch);
-  }, [branch, fetchCapsules, router]);
+  }, [branch, fetchCapsules]);
 
   useEffect(() => {
     const token = getVaultToken();
-    if (!token) return;
 
     void fetchBranchList({ token }).then(({ response, data }) => {
       if (!response.ok || !data) return;
@@ -95,7 +91,6 @@ function VaultDashboardContent() {
 
   useEffect(() => {
     const token = getVaultToken();
-    if (!token) return;
 
     if (branch === 'real') {
       setRealBaselineCapsules(null);
@@ -208,6 +203,7 @@ function VaultDashboardContent() {
             capsules={processedCapsules}
             selectedIds={selectedIds}
             onToggleSelection={toggleSelection}
+            visualProfile={visualProfile}
           />
         ) : (
           <div
@@ -220,6 +216,8 @@ function VaultDashboardContent() {
             <CapsuleGraph
               capsules={processedCapsules}
               activeBranch={branch}
+              visualProfile={visualProfile}
+              graphQuality={graphQuality}
               getNodeHref={(id) =>
                 `/vault/capsule/${encodeURIComponent(id)}${
                   branch === 'real' ? '' : `?branch=${encodeURIComponent(branch)}`

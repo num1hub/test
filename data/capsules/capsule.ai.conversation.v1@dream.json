@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-08T21:05:00Z",
+    "updated_at": "2026-03-12T16:57:00Z",
     "name": "AI Conversation Session",
     "semantic_hash": "capsule-ai-conversation-v1-session-assistant-context-operations",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Conversation Session\n\n## 1. Definition and Essence\nAI Conversation Session models a bounded interaction thread between user and assistant. It stores message chronology, context snapshots, branch posture, and intent transitions that support continuity, auditability, and follow-up automation across workspace modules.\n\n## 2. Core Attributes\n- `session_id` stable conversation identifier\n- `message_history` ordered turns with role and timestamp\n- `context_refs` linked capsules grounding conversation state\n- `intent_state` detected active user intent and confidence\n- `branch_posture` whether the session is primarily reading `Real`, shaping `Dream`, or comparing both\n- `approval_state` whether potential mutations were only discussed, suggested, approved, or rejected\n- `resolution_state` open, resolved, delegated, archived\n\n## 3. Lifecycle\nSessions begin from user input, accumulate state as dialogue evolves, trigger agent actions when approved, and close when intent resolves or context expires. In Dream this object should mature into a cross-client continuity shell that preserves the difference between ordinary dialogue, suggestion, planning, and mutation requests.\n\n## 4. Integration\n- **Personal AI Assistant:** primary conversational surface.\n- **Prompt Capsule:** supplies reusable system and task prompts.\n- **Suggestion Capsule:** stores candidate recommendations produced in session.\n- **Agent Memory State:** preserves longer-lived continuity beyond one thread.\n- **A2C Pipeline:** optionally converts conversation output into capsules.\n\n## 5. Philosophical Alignment\nConversation sessions support To Dig Deep by preserving reasoning context over time, enabling refinement rather than one-off shallow answers.\n"
+    "content": "# AI Conversation Session\n\n## 1. Definition and Essence\nAI Conversation Session models a bounded interaction thread between user and assistant. It stores message chronology, context snapshots, branch posture, and intent transitions that support continuity, auditability, and follow-up automation across workspace modules.\n\n## 2. Core Attributes\n- `session_id` stable conversation identifier\n- `message_history` ordered turns with role and timestamp\n- `context_refs` linked capsules grounding conversation state\n- `intent_state` detected active user intent and confidence\n- `branch_posture` whether the session is primarily reading `Real`, shaping `Dream`, or comparing both\n- `approval_state` whether potential mutations were only discussed, suggested, approved, or rejected\n- `resolution_state` open, resolved, delegated, archived\n\n## 3. Lifecycle\nSessions begin from user input, accumulate state as dialogue evolves, trigger agent actions when approved, and close when intent resolves or context expires. The object operates as a cross-client continuity shell that preserves the difference between ordinary dialogue, suggestion, planning, and mutation requests.\n\n## 4. Integration\n- **Personal AI Assistant:** primary conversational surface.\n- **Prompt Capsule:** supplies reusable system and task prompts.\n- **Suggestion Capsule:** stores candidate recommendations produced in session.\n- **Agent Memory State:** preserves longer-lived continuity beyond one thread.\n- **A2C Pipeline:** optionally converts conversation output into capsules.\n\n## 5. Philosophical Alignment\nConversation sessions support To Dig Deep by preserving reasoning context over time, enabling refinement rather than one-off shallow answers.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Conversation Session in the Dream branch represents a richer continuity model for human-assistant work. It imagines dialogues that preserve stronger memory, cleaner grounding, branch posture, approval state, better task and suggestion handoff, and more explicit transitions from conversation into accountable graph actions. The capsule matters because assistant value compounds through context, not through isolated replies. Dream therefore preserves a future conversation object that behaves more like an operational thread of work than a disposable transcript and makes the boundary between talking, planning, and mutating the vault much clearer.",
+    "summary": "AI Conversation Session defines a richer continuity model for human-assistant work. It preserves stronger memory, cleaner grounding, branch posture, approval state, better task and suggestion handoff, and more explicit transitions from conversation into accountable graph actions. The capsule matters because assistant value compounds through context rather than isolated replies. It therefore treats conversation as an operational thread of work instead of a disposable transcript and clarifies the boundary between talking, planning, delegating, and mutating the vault.",
     "keywords": [
       "ai",
       "conversation",
@@ -36,7 +36,7 @@
       "context",
       "operations",
       "chat",
-      "branch-aware",
+      "branch-posture",
       "approval-gated"
     ],
     "confidence_vector": {
@@ -91,5 +91,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "dd2d45d13b6d626d7768fd3da8869e357b6d1de76a0a3793d43a79c14769d642288f7c65b1bd339b1e9ae93d3f681e6f6e67bdacaba752d56395611fc6ecc01f"
+  "integrity_sha3_512": "fcdcac65691127bb7365f88d5663344ae0c953f397e4b8f734207b1e9f9e6de073bffd0da19ceeae96dcbdc9cd6af4dc7cbff418d97e9ffaad84189546c5c3e3"
 }

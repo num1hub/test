@@ -11,6 +11,7 @@ import { createAuthToken } from '@/__tests__/helpers/auth'
 vi.mock('@/lib/apiSecurity', () => ({
   isAuthorized: vi.fn(() => true),
   checkRateLimit: vi.fn(() => ({ allowed: true, retryAfterSeconds: 0 })),
+  requireTrustedMutation: vi.fn(() => null),
 }))
 
 vi.mock('@/lib/activity', () => ({

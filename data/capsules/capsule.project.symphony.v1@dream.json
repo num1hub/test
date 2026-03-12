@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:40:10Z",
-    "updated_at": "2026-03-12T02:55:00Z",
+    "updated_at": "2026-03-12T17:09:00Z",
     "name": "Symphony Project",
     "semantic_hash": "project-symphony-routing-intake-session-safety-observability-delivery",
     "source": {
@@ -26,7 +26,7 @@
     "content": "# Symphony Project\n\n## 1. Role\nSymphony Project is the concrete N1Hub engineering stream that delivers repository orchestration in the live codebase. It routes that delivery work through four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability remain explicit instead of collapsing into one 16-link project hub.\n\n## 2. Routing Surfaces\n- `assignment-intake` owns tracker-fed intake, workspace entry, swarm-fed assignments, and capsule-job routing before live execution begins.\n- `live-session-fabric` owns service runtime, workspace lifecycle, harness protocol, and assignment continuity while a run is active.\n- `workflow-safety` owns workflow law, approval and sandbox posture, night-shift gating, and the testing or security guardrails around execution.\n- `run-observability` owns attempts, retries, status projection, lineage, and the evidence surfaces that explain what happened and what must happen next.\n\n## 3. Parent Boundary\nThe parent Symphony Project hub keeps only the top-level relationship to CapsuleOS platform work, the Symphony foundation contract, and the four project delivery sub-hubs. Detailed implementation routing now flows through those sub-hubs so the project remains a legible delivery map instead of a flat registry of every runtime atom, control surface, and integration lane."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Project routes repository delivery through four bounded surfaces: assignment intake, live session fabric, workflow safety, and run observability. The parent keeps only top-level relationships to the CapsuleOS platform, the Symphony foundation contract, and the four project sub-hubs. This makes future project doctrine more legible because intake, runtime continuity, workflow law, and recovery evidence no longer hide inside one overloaded project capsule. The result is a clearer implementation contract for how repository orchestration is delivered in code.",
+    "summary": "Symphony Project routes repository delivery through four bounded surfaces: assignment intake, live session fabric, workflow safety, and run observability. The parent keeps only top-level relationships to the CapsuleOS platform, the Symphony foundation contract, and the four project sub-hubs. This makes project doctrine more legible because intake, runtime continuity, workflow law, and recovery evidence no longer hide inside one overloaded project capsule. The result is a clearer implementation contract for how repository orchestration is delivered in code.",
     "keywords": [
       "symphony-project",
       "hub-decomposition",
@@ -80,15 +80,15 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Symphony Project states present delivery doctrine directly."
       },
       {
         "at": "2026-03-12T02:55:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream Symphony Project into four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability no longer collapse into a 16-link project hub."
+        "rationale": "Refactored Symphony Project into four bounded sub-hubs so assignment intake, live session fabric, workflow safety, and run observability no longer collapse into a 16-link project hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "300dd1d4a3e9a58e19c3b2dab9d992235069a503c44a8253319afadf84a939c30f6b7aa0417a271228058bd50bcefa19e33487b5774e935b8f3acab0c7ce4793"
 }

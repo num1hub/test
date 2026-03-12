@@ -1,23 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import AppNav from '@/components/AppNav';
 import ProjectForm from '@/components/projects/ProjectForm';
 
 export default function NewProjectPage() {
-  const router = useRouter();
   const [parentId] = useState<string | undefined>(() => {
     if (typeof window === 'undefined') return undefined;
     const params = new URLSearchParams(window.location.search);
     return params.get('parent') ?? undefined;
   });
-
-  useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) router.push('/login');
-  }, [router]);
 
   return (
     <div className="min-h-screen bg-slate-950 p-6">

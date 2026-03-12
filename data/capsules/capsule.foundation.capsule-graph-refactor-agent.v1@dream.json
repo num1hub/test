@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T12:46:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T17:22:00Z",
     "name": "Capsule Graph Refactor Agent",
     "semantic_hash": "capsule-graph-refactor-agent-continuous-topology-repair-lane",
     "priority": "high",
@@ -19,13 +19,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Capsule Graph Refactor Agent\n\n## 1. Role\nCapsule Graph Refactor Agent will become a stronger topology specialist that continuously improves graph neighborhoods, link quality, and containment structure across the growing vault.\n\n## 2. Future Topology Surface\n- better automatic detection of weak, stale, or confused relationships\n- cleaner `part_of` repair workflows across hubs, atoms, and project lines\n- deeper collaboration with Weaver, Gardener, Branch Steward Agent, and Review Agent\n- more reliable night-shift graph refactors that stay bounded and reviewable\n\n## 3. Operational Consequence\nA growing vault will remain coherent not only in content but also in topological shape because graph repair will have an explicit maintenance lane instead of relying on opportunistic cleanup.\n\n## 4. Philosophical Alignment\nCapsule Graph Refactor Agent supports To Dig Deep by insisting that deep knowledge needs deep topology."
+    "content": "# Capsule Graph Refactor Agent\n\n## 1. Role\nCapsule Graph Refactor Agent is a topology specialist that continuously improves graph neighborhoods, link quality, and containment structure across the growing vault.\n\n## 2. Topology Surface\n- better automatic detection of weak, stale, or confused relationships\n- cleaner `part_of` repair workflows across hubs, atoms, and project lines\n- deeper collaboration with Weaver, Gardener, Branch Steward Agent, and Review Agent\n- more reliable night-shift graph refactors that stay bounded and reviewable\n\n## 3. Operational Consequence\nA growing vault remains coherent not only in content but also in topological shape because graph repair has an explicit maintenance lane instead of relying on opportunistic cleanup.\n\n## 4. Philosophical Alignment\nCapsule Graph Refactor Agent supports To Dig Deep by insisting that deep knowledge needs deep topology."
   },
   "neuro_concentrate": {
-    "summary": "Capsule Graph Refactor Agent defines the future continuous topology-repair lane for N1Hub: stronger weak-edge detection, cleaner containment repair, deeper collaboration with swarm maintenance roles, and more reliable bounded graph refactors during maintenance windows.",
+    "summary": "Capsule Graph Refactor Agent defines the topology-maintenance lane that improves graph neighborhoods, link quality, and containment structure as the vault compounds. It covers detection of weak or stale edges, cleaner part-of repair across hubs and atoms, bounded night-shift graph refactors, and collaboration with maintenance roles responsible for review and topology stewardship. The capsule matters because content quality alone does not keep a vault coherent when topology drifts. It makes graph repair an explicit, reviewable capability instead of opportunistic cleanup performed after structural confusion has already spread.",
     "keywords": [
       "capsule-graph-refactor-agent",
-      "dream-branch",
+      "topology-stewardship",
       "link-hygiene",
       "topology",
       "part-of-repair",
@@ -100,9 +100,9 @@
         "at": "2026-03-11T15:33:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present topology-repair doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "e033bac4ab7324ccf070afb32e76a86e404f25773a04b9a9274b9322fd9ae439c8e63c4e0b487375b4e7691b93e86957cad9dcec86cb5faebd8899388197d78e"
 }

@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getPasswordHash, verifyPassword } from '@/lib/password';
 import { logActivity } from '@/lib/activity';
-import { getAuthToken, setSessionCookie } from '@/lib/apiSecurity';
+import { getAuthToken, requireSameOriginMutation, setSessionCookie } from '@/lib/apiSecurity';
+import { getDeployAuthErrorMessage } from '@/lib/deployAuth';
 import { matchesAuthorizedLogin, verifyAccessCode } from '@/lib/authFactors';
 
 type LoginAttemptState = {
@@ -51,6 +52,14 @@ function resetAttempts(key: string) {
 
 export async function POST(request: Request) {
   try {
+    const mutationError = requireSameOriginMutation(request);
+    if (mutationError) return mutationError;
+
+    const deployAuthError = getDeployAuthErrorMessage();
+    if (deployAuthError) {
+      return NextResponse.json({ error: deployAuthError }, { status: 503 });
+    }
+
     const {
       login,
       password,

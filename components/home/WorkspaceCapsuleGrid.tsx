@@ -5,24 +5,34 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import CapsuleCard from '@/components/CapsuleCard';
 import SearchBar from '@/components/SearchBar';
+import WorkspaceCapsuleIndex from '@/components/home/WorkspaceCapsuleIndex';
 import WorkspaceGraphSearchPanel from '@/components/home/WorkspaceGraphSearchPanel';
 import WorkspaceRefineMenu from '@/components/home/WorkspaceRefineMenu';
 import WorkspaceSelectionBar from '@/components/home/WorkspaceSelectionBar';
+import WorkspaceVisualLegend from '@/components/home/WorkspaceVisualLegend';
 import {
   processVaultDashboardCapsules,
   useVaultDashboardState,
 } from '@/hooks/useVaultDashboardState';
+import { useCapsuleVisualPreferences } from '@/hooks/useCapsuleVisualPreferences';
 import { exportCapsulesAsSeparateFiles, exportCapsulesToDisk } from '@/lib/vault/exportCapsules';
 import type { SovereignCapsule } from '@/types/capsule';
 import { WORKSPACE_SORT_LABELS } from '@/components/home/workspaceRefineConfig';
 
 type WorkspaceBranch = 'real' | 'dream';
-type WorkspaceViewMode = 'grid' | '2d';
+type WorkspaceViewMode = 'grid' | '2d' | 'list';
 
 const CapsuleGraph = dynamic(() => import('@/components/CapsuleGraph'), { ssr: false });
 
-export default function WorkspaceCapsuleGrid() {
+export default function WorkspaceCapsuleGrid({
+  ownerLabel = 'Operator',
+  ownerProfileId = 'capsule.person.egor-n1.v1',
+}: {
+  ownerLabel?: string;
+  ownerProfileId?: string;
+}) {
   const router = useRouter();
+  const workspaceViewStorageKey = `workspace-view-mode:${ownerProfileId}`;
   const [capsules, setCapsules] = useState<SovereignCapsule[]>([]);
   const [branch, setBranch] = useState<WorkspaceBranch>('real');
   const [viewMode, setViewMode] = useState<WorkspaceViewMode>('grid');
@@ -61,6 +71,33 @@ export default function WorkspaceCapsuleGrid() {
   } = useVaultDashboardState(capsules, {
     selectionStorageKey: `workspace-grid-selection:${branch}`,
   });
+  const {
+    visualProfile,
+    graphQuality,
+    setVisualProfile,
+    setGraphQuality,
+    resolvedVisualProfile: activeVisualProfile,
+    resolvedGraphQuality: activeGraphQuality,
+  } = useCapsuleVisualPreferences(ownerProfileId);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    const storedViewMode = window.localStorage.getItem(workspaceViewStorageKey);
+    if (storedViewMode === 'grid' || storedViewMode === '2d' || storedViewMode === 'list') {
+      setViewMode(storedViewMode);
+    }
+  }, [workspaceViewStorageKey]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+
+    window.localStorage.setItem(workspaceViewStorageKey, viewMode);
+  }, [viewMode, workspaceViewStorageKey]);
 
   useEffect(() => {
     let active = true;
@@ -81,7 +118,7 @@ export default function WorkspaceCapsuleGrid() {
         });
 
         if (response.status === 401) {
-          router.push('/login');
+          router.push('/');
           return;
         }
 
@@ -306,7 +343,7 @@ export default function WorkspaceCapsuleGrid() {
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
             <div className="w-full xl:max-w-3xl">
-              {viewMode === 'grid' ? (
+              {viewMode === 'grid' || viewMode === 'list' ? (
                 <SearchBar
                   value={searchQuery}
                   onChange={handleWorkspaceSearchChange}
@@ -321,6 +358,7 @@ export default function WorkspaceCapsuleGrid() {
               <div className="inline-flex rounded-2xl border border-slate-800 bg-slate-950/70 p-1">
                 {([
                   { value: 'grid', label: 'Grid' },
+                  { value: 'list', label: 'Index' },
                   { value: '2d', label: '2D Graph' },
                 ] as const).map((candidate) => {
                   const active = candidate.value === viewMode;
@@ -371,6 +409,8 @@ export default function WorkspaceCapsuleGrid() {
                 activeTypes={activeTypes}
                 activeTiers={activeTiers}
                 activeSubtypes={activeSubtypes}
+                visualProfile={visualProfile}
+                graphQuality={graphQuality}
                 onSelectSort={handleSortChange}
                 onToggleType={toggleTypeFilter}
                 onClearTypes={clearTypeFilters}
@@ -378,6 +418,8 @@ export default function WorkspaceCapsuleGrid() {
                 onClearTiers={clearTierFilters}
                 onToggleSubtype={toggleSubtypeFilter}
                 onClearSubtypes={clearSubtypeFilters}
+                onSelectVisualProfile={setVisualProfile}
+                onSelectGraphQuality={setGraphQuality}
                 onResetAll={() => {
                   clearFilters();
                   handleSortChange('date-new');
@@ -390,12 +432,28 @@ export default function WorkspaceCapsuleGrid() {
         <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.22em] text-slate-500 sm:gap-3">
           <span>{branch === 'real' ? 'Real Capsules' : 'Dream Capsules'}</span>
           <span className="text-slate-700">•</span>
-          <span>{viewMode === 'grid' ? 'Grid View' : '2D Graph View'}</span>
+          <span>
+            {viewMode === 'grid'
+              ? 'Grid View'
+              : viewMode === 'list'
+                ? 'Index View'
+                : '2D Graph View'}
+          </span>
           <span className="text-slate-700">•</span>
           <span>Sort {currentSortLabel}</span>
           <span className="text-slate-700">•</span>
-          <span>{viewMode === 'grid' ? processedCapsules.length : graphCapsules.length} visible</span>
+          <span>{viewMode === '2d' ? graphCapsules.length : processedCapsules.length} visible</span>
+          <span className="text-slate-700">•</span>
+          <span>{activeVisualProfile.label} profile</span>
+          <span className="text-slate-700">•</span>
+          <span>{activeGraphQuality.label} graph</span>
           {viewMode === 'grid' && searchQuery.trim() ? (
+            <>
+              <span className="text-slate-700">•</span>
+              <span>{capsules.length} total</span>
+            </>
+          ) : null}
+          {viewMode === 'list' && searchQuery.trim() ? (
             <>
               <span className="text-slate-700">•</span>
               <span>{capsules.length} total</span>
@@ -408,6 +466,13 @@ export default function WorkspaceCapsuleGrid() {
             </>
           ) : null}
         </div>
+
+        <WorkspaceVisualLegend
+          capsules={viewMode === '2d' ? graphCapsules : processedCapsules}
+          ownerLabel={ownerLabel}
+          visualProfile={visualProfile}
+          graphQuality={graphQuality}
+        />
 
         <div className="mt-5">
           {loading ? (
@@ -425,6 +490,10 @@ export default function WorkspaceCapsuleGrid() {
           ) : viewMode === '2d' && graphCapsules.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-slate-800 bg-slate-950/50 py-20 text-center text-sm text-slate-500">
               No capsules match the current filters.
+            </div>
+          ) : viewMode === 'list' && processedCapsules.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-800 bg-slate-950/50 py-20 text-center text-sm text-slate-500">
+              No capsules match the current search.
             </div>
           ) : viewMode === 'grid' ? (
             <div className="space-y-4">
@@ -450,6 +519,7 @@ export default function WorkspaceCapsuleGrid() {
                     key={capsule.metadata.capsule_id}
                     capsule={capsule}
                     href={getCapsuleHref(capsule.metadata.capsule_id)}
+                    visualProfile={visualProfile}
                     showValidationBadge={false}
                     selectable
                     selected={selectedIds.has(capsule.metadata.capsule_id)}
@@ -458,6 +528,12 @@ export default function WorkspaceCapsuleGrid() {
                 ))}
               </div>
             </div>
+          ) : viewMode === 'list' ? (
+            <WorkspaceCapsuleIndex
+              capsules={processedCapsules}
+              getCapsuleHref={getCapsuleHref}
+              visualProfile={visualProfile}
+            />
           ) : (
             <div
               className={`overflow-hidden border border-slate-800 bg-slate-950 shadow-2xl ${
@@ -469,6 +545,8 @@ export default function WorkspaceCapsuleGrid() {
             <CapsuleGraph
               capsules={graphCapsules}
               activeBranch={branch}
+              visualProfile={visualProfile}
+              graphQuality={graphQuality}
               getNodeHref={getCapsuleHref}
               isFullscreen={graphFullscreen}
               onToggleFullscreen={() => setGraphFullscreen((current) => !current)}

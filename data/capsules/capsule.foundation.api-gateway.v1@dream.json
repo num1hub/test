@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:24:00Z",
     "name": "API Gateway",
-    "semantic_hash": "api-gateway-hard-sovereignty-surface-actor-bound-boundary-law",
+    "semantic_hash": "api-gateway-sovereignty-boundary-auth-observability-economics-policy",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 250,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# API Gateway\n\n## 1. Role\nAPI Gateway will become one of the hardest sovereignty surfaces in N1Hub. Every provider call, hosted-inference request, webhook callback, connector exchange, and background agent egress will pass through a boundary that is lane-aware, redactable, auditable, and economically governed.\n\n## 2. Future Boundary Contract\n- richer route catalogs for model providers, hosted inference, connectors, and callbacks\n- actor-bound authentication and authorization at the boundary itself\n- lane-aware rate and budget control for interactive, background, and hosted traffic\n- stronger observability and artifact lineage for every boundary crossing\n- policy hooks for redaction, review, compliance, and trust enforcement\n\n## 3. Operational Consequence\nExternal capability will deepen without becoming opaque because outside power will remain searchable, reviewable, and constrained by explicit policy rather than disappearing into scripts or intuition.\n\n## 4. Philosophical Alignment\nAPI Gateway supports To Dig Deep by making openness powerful without weakening control."
+    "content": "# API Gateway\n\n## 1. Role\nAPI Gateway is one of the hardest sovereignty surfaces in N1Hub. Every provider call, hosted-inference request, webhook callback, connector exchange, and background agent egress passes through a boundary that is lane-aware, redactable, auditable, and economically governed.\n\n## 2. Boundary Contract\n- richer route catalogs for model providers, hosted inference, connectors, and callbacks\n- actor-bound authentication and authorization at the boundary itself\n- lane-aware rate and budget control for interactive, background, and hosted traffic\n- stronger observability and artifact lineage for every boundary crossing\n- policy hooks for redaction, review, compliance, and trust enforcement\n\n## 3. Operational Consequence\nExternal capability deepens without becoming opaque because outside power remains searchable, reviewable, and constrained by explicit policy rather than disappearing into scripts or intuition.\n\n## 4. Philosophical Alignment\nAPI Gateway supports To Dig Deep by making openness powerful without weakening control."
   },
   "neuro_concentrate": {
-    "summary": "API Gateway defines the future hardest sovereignty surface in N1Hub: stricter service contracts, actor-bound auth, lane-aware economics, stronger observability, and reviewable policy hooks around every external boundary crossing.",
+    "summary": "API Gateway defines one of the hardest sovereignty surfaces in N1Hub: the boundary through which provider calls, hosted inference, webhooks, connector exchanges, and background-agent egress are authenticated, observed, rate-governed, and audited. It covers actor-bound authorization, lane-aware economics, stronger observability, artifact lineage, and policy hooks for redaction, review, compliance, and trust enforcement. The capsule matters because external capability can deepen without becoming opaque when every boundary crossing remains searchable, reviewable, and constrained by explicit policy rather than dissolving into scripts or operator intuition.",
     "keywords": [
       "api-gateway",
       "routing",
@@ -40,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "api-gateway-hard-sovereignty-surface-actor-bound-boundary-law"
+    "semantic_hash": "api-gateway-sovereignty-boundary-auth-observability-economics-policy"
   },
   "recursive_layer": {
     "links": [
@@ -76,12 +76,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:37:35Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "65317b9c86ceab653fc0495212e25e4543464c7b0ea45f5612c28cd3dd5bd3a9a4109d01cc07bf70d08eefe672073c15dff5411d47a7469e1d7336d9e7632cf2"
 }

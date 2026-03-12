@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-08T21:05:00Z",
+    "updated_at": "2026-03-12T16:31:00Z",
     "name": "AI Prompt",
     "semantic_hash": "capsule-ai-prompt-v1-template-llm-assistant-operations",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable or instance-specific instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, context expectations, and expected output schema so model interactions remain deterministic and auditable.\n\n## 2. Core Attributes\n- `prompt_type` system, user, planner, risk, summarization\n- `template` raw prompt text with placeholders\n- `constraints` schema and style boundaries\n- `model_profile` routing hints for selected engine\n- `context_requirements` what evidence, capsules, and artifacts should accompany execution\n- `evaluation_notes` quality outcomes from prior runs\n\n## 3. Lifecycle\nPrompts are authored, versioned, executed in runtime interactions, evaluated against outcome quality, and refined through feedback loops and governance review. In Dream this layer should mature into a governed instruction substrate where prompts are easier to compare, test, route, and retire.\n\n## 4. Integration\n- **AI Conversation:** supplies context-aware message generation.\n- **Suggestion Module:** drives recommendation synthesis.\n- **DeepMine:** routes prompt execution to LLM providers.\n- **Instruction Surfaces:** define higher-order instruction law.\n- **Context Engineering:** shapes evidence bundles before execution.\n- **Validator/Audit:** preserves deterministic artifacts for review.\n\n## 5. Philosophical Alignment\nPrompt capsules align with To Dig Deep by making model instructions explicit, inspectable, and improvable rather than hidden magic.\n"
+    "content": "# AI Prompt\n\n## 1. Definition and Essence\nAI Prompt captures reusable or instance-specific instruction payloads used by assistant and agent workflows. It defines intent framing, constraints, context expectations, and expected output schema so model interactions remain deterministic and auditable.\n\n## 2. Core Attributes\n- `prompt_type` system, user, planner, risk, summarization\n- `template` raw prompt text with placeholders\n- `constraints` schema and style boundaries\n- `model_profile` routing hints for selected engine\n- `context_requirements` what evidence, capsules, and artifacts should accompany execution\n- `evaluation_notes` quality outcomes from prior runs\n\n## 3. Lifecycle\nPrompts are authored, versioned, executed in runtime interactions, evaluated against outcome quality, and refined through feedback loops and governance review. This layer operates as a governed instruction substrate where prompts are easier to compare, test, route, and retire across assistants, agents, and background workflows.\n\n## 4. Integration\n- **AI Conversation:** supplies context-aware message generation.\n- **Suggestion Module:** drives recommendation synthesis.\n- **DeepMine:** routes prompt execution to LLM providers.\n- **Instruction Surfaces:** define higher-order instruction law.\n- **Context Engineering:** shapes evidence bundles before execution.\n- **Validator/Audit:** preserves deterministic artifacts for review.\n\n## 5. Philosophical Alignment\nPrompt capsules align with To Dig Deep by making model instructions explicit, inspectable, and improvable rather than hidden magic.\n"
   },
   "neuro_concentrate": {
-    "summary": "AI Prompt in the Dream branch represents a more mature instruction layer for the ecosystem. It points toward prompts that are easier to compare, test, route, and govern across assistants, agents, and background workflows without disappearing into hidden application logic. The capsule matters because prompt quality quietly shapes trust, determinism, cost, and context quality. Dream therefore preserves Prompt as a future operational contract for model behavior, not just a stored instruction string hidden behind application code, but part of a governed instruction-and-context surface.",
+    "summary": "AI Prompt defines the governed instruction layer that keeps prompt payloads comparable, testable, routable, and auditable across assistants, agents, and background workflows. It captures templates, constraints, context requirements, model-profile hints, and evaluation feedback as first-class operational artifacts instead of leaving model behavior buried in application code or ad hoc prompt strings. The capsule matters because prompt quality shapes trust, determinism, cost, and context quality long before downstream validation sees an artifact. It therefore treats prompting as part of a governed instruction-and-context surface rather than a disposable implementation detail.",
     "keywords": [
       "ai",
       "prompt",
@@ -100,5 +100,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "b13b53dba9b8922febb6ee0a556f5cfc5808c36aada183fc439fa4f1b999a1a734830d961f72c1e187131c1ab8b1b45b605479cab8bb16dcf3d74dfa6699eaa8"
+  "integrity_sha3_512": "41090befa1de41563ddabbedd8f8df0237624272745de738daeeb48f2faadfad26510d0fdd29c859c8cd4bb3d6cab0972d782003351d37d545c3bd5e7382d515"
 }

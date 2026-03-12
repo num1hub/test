@@ -1,11 +1,24 @@
 import { NextResponse } from 'next/server';
-import { getPasswordHash, setPasswordHash, verifyPassword } from '@/lib/password';
+import { getPasswordHash, isEnvBackedPassword, setPasswordHash, verifyPassword } from '@/lib/password';
 import { logActivity } from '@/lib/activity';
-import { isAuthorized } from '@/lib/apiSecurity';
+import { isAuthorized, requireTrustedMutation } from '@/lib/apiSecurity';
 
 export async function PUT(request: Request) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  if (isEnvBackedPassword()) {
+    return NextResponse.json(
+      {
+        error:
+          'Password changes are disabled in env-backed deployments. Update VAULT_PASSWORD in your deployment settings instead.',
+      },
+      { status: 409 },
+    );
   }
 
   try {

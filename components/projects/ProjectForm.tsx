@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import {
   PROJECT_STATUSES,
   buildProjectPayload,
@@ -111,13 +112,6 @@ export default function ProjectForm({
       return;
     }
 
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      showToast('Authentication required.', 'error');
-      router.push('/login');
-      return;
-    }
-
     const normalizedValues: ProjectFormValues = {
       ...parsedForm.data,
       capsuleId: parsedForm.data.capsuleId ?? '',
@@ -138,10 +132,7 @@ export default function ProjectForm({
         isEdit ? `/api/capsules/${encodeURIComponent(targetId)}` : '/api/capsules',
         {
           method: isEdit ? 'PUT' : 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-          },
+          headers: getClientJsonAuthHeaders(),
           body: JSON.stringify(payload),
         },
       );

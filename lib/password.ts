@@ -9,6 +9,7 @@ const SCRYPT_N = 16384;
 const SCRYPT_R = 8;
 const SCRYPT_P = 1;
 const KEY_LENGTH = 64;
+let envPasswordHashPromise: Promise<string> | null = null;
 
 const ensurePasswordDir = async () => {
   const dir = path.dirname(PASSWORD_FILE_PATH);
@@ -63,6 +64,27 @@ const hashWithParams = async (password: string, salt: Buffer, n: number, r: numb
   return await scryptBuffer(password, salt, n, r, p);
 };
 
+function getConfiguredPassword() {
+  return process.env.VAULT_PASSWORD?.trim() || null;
+}
+
+export function isEnvBackedPassword() {
+  return process.env.NODE_ENV === 'production' && Boolean(getConfiguredPassword());
+}
+
+async function getEnvBackedPasswordHash() {
+  const configuredPassword = getConfiguredPassword();
+  if (!configuredPassword) {
+    throw new Error('VAULT_PASSWORD must be configured for env-backed auth.');
+  }
+
+  if (!envPasswordHashPromise) {
+    envPasswordHashPromise = hashPassword(configuredPassword);
+  }
+
+  return await envPasswordHashPromise;
+}
+
 export async function hashPassword(password: string): Promise<string> {
   const salt = crypto.randomBytes(16);
   const hash = await hashWithParams(password, salt, SCRYPT_N, SCRYPT_R, SCRYPT_P);
@@ -74,6 +96,10 @@ export async function hashPassword(password: string): Promise<string> {
  * using the VAULT_PASSWORD environment variable or a fallback default.
  */
 export async function getPasswordHash(): Promise<string> {
+  if (isEnvBackedPassword()) {
+    return await getEnvBackedPasswordHash();
+  }
+
   try {
     const hash = await fs.readFile(PASSWORD_FILE_PATH, 'utf-8');
     return hash.trim();
@@ -93,6 +119,10 @@ export async function getPasswordHash(): Promise<string> {
  * Saves a new password hash to the local file system.
  */
 export async function setPasswordHash(newPassword: string): Promise<void> {
+  if (isEnvBackedPassword()) {
+    throw new Error('Password changes are disabled while VAULT_PASSWORD is env-backed.');
+  }
+
   const hash = await hashPassword(newPassword);
   await ensurePasswordDir();
   await fs.writeFile(PASSWORD_FILE_PATH, hash, 'utf-8');

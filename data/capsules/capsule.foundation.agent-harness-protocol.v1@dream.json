@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T20:10:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:20:00Z",
     "name": "Agent Harness Protocol",
-    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-law",
+    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-semantics",
     "source": {
       "uri": "https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions",
       "type": "web_documentation"
@@ -23,13 +23,13 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Harness Protocol\n\n## 1. Role\nN1Hub will treat harness protocol as a portable runtime law shared across local agent harnesses, background swarms, and future hosted agent services. Session startup, turns, approvals, interruptions, artifacts, and resumes will be governed through one reusable contract rather than bespoke glue for every surface.\n\n## 2. Future Protocol Surface\n- portable session, turn, approval, interrupt, and artifact semantics across multiple backends\n- resumable agents that expose replay-friendly status instead of one-shot prompt wrappers\n- typed artifact exchange between swarm lanes instead of raw prompt relay\n- assignment-aware starts and return paths across web, terminal, mobile, and daemon surfaces\n- one controller model for local and hosted services without sacrificing observability or safety\n\n## 3. Architectural Consequence\nHarness protocol will make agent execution a stable software interface. That will strengthen reuse, debugging, approvals, lifecycle control, artifact transport, and multi-surface continuity across the whole intelligence stack.\n\n## 4. Philosophical Alignment\nAgent Harness Protocol supports To Dig Deep by making agent work visible as stateful runtime behavior with evidence, events, and control surfaces rather than opaque model invocations."
+    "content": "# Agent Harness Protocol\n\n## 1. Role\nN1Hub treats harness protocol as a portable runtime law shared across local agent harnesses, background swarms, and hosted agent services. Session startup, turns, approvals, interruptions, artifacts, and resumes are governed through one reusable contract rather than bespoke glue for every surface.\n\n## 2. Protocol Surface\n- portable session, turn, approval, interrupt, and artifact semantics across multiple backends\n- resumable agents that expose replay-friendly status instead of one-shot prompt wrappers\n- typed artifact exchange between swarm lanes instead of raw prompt relay\n- assignment-aware starts and return paths across web, terminal, mobile, and daemon surfaces\n- one controller model for local and hosted services without sacrificing observability or safety\n\n## 3. Architectural Consequence\nHarness protocol makes agent execution a stable software interface. This strengthens reuse, debugging, approvals, lifecycle control, artifact transport, and multi-surface continuity across the whole intelligence stack.\n\n## 4. Philosophical Alignment\nAgent Harness Protocol supports To Dig Deep by making agent work visible as stateful runtime behavior with evidence, events, and control surfaces rather than opaque model invocations."
   },
   "neuro_concentrate": {
-    "summary": "Agent Harness Protocol defines the future portable runtime law for N1Hub agents: shared session, turn, approval, interrupt, artifact, and resume semantics across local Codex lanes, background swarms, and hosted agent services.",
+    "summary": "Agent Harness Protocol defines the portable runtime law that lets N1Hub carry the same session, turn, approval, interrupt, artifact, and resume semantics across local harnesses, background swarms, and hosted agent services. It covers typed artifact exchange, resumable agents, assignment-aware start and return paths, and a unified controller model that keeps observability and safety intact across different backends. The capsule matters because execution becomes a stable software interface that strengthens debugging, approvals, lifecycle control, artifact transport, and multi-surface continuity instead of remaining bespoke glue.",
     "keywords": [
       "agent-harness-protocol",
-      "dream-branch",
+      "typed-artifacts",
       "durable-agents",
       "resume-tokens",
       "event-streams",
@@ -45,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-law"
+    "semantic_hash": "agent-harness-protocol-portable-session-artifact-resume-semantics"
   },
   "recursive_layer": {
     "links": [
@@ -89,12 +89,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "b0260ee829af2cad066066870d70797780063b2a1a617d74f057cb38b03a80ba093ef23998414a4890bc333217015e94c776135ede80fd3726fb8a4f61a98ef2"
 }

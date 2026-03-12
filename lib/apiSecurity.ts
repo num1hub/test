@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import type { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 type RateLimitBucket = { count: number; windowStart: number };
 
@@ -16,6 +16,7 @@ export type AuthSession = {
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
 const SESSION_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
 const DEV_AUTH_SECRET = 'n1hub-local-dev-auth-secret';
+const MUTATION_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
 
 export const AUTH_COOKIE_NAME = 'n1hub_session';
 
@@ -62,13 +63,24 @@ function parseCookieValue(cookieHeader: string | null, key: string) {
   return null;
 }
 
-function getRequestToken(request: Request) {
+function getBearerToken(request: Request) {
   const authHeader = request.headers.get('authorization');
   if (authHeader?.startsWith('Bearer ')) {
     return authHeader.slice('Bearer '.length).trim();
   }
 
+  return null;
+}
+
+function getSessionCookieToken(request: Request) {
   return parseCookieValue(request.headers.get('cookie'), AUTH_COOKIE_NAME);
+}
+
+function getRequestToken(request: Request) {
+  const bearerToken = getBearerToken(request);
+  if (bearerToken) return bearerToken;
+
+  return getSessionCookieToken(request);
 }
 
 function isSessionShape(value: unknown): value is AuthSession {
@@ -146,14 +158,82 @@ export function clearSessionCookie(response: NextResponse) {
   });
 }
 
+export type RequestAuthTransport = 'bearer' | 'session' | 'none';
+
+export function getRequestAuthTransport(request: Request): RequestAuthTransport {
+  if (getBearerToken(request)) return 'bearer';
+  if (getSessionCookieToken(request)) return 'session';
+  return 'none';
+}
+
+function getTrustedRequestOrigin(request: Request): string | null {
+  const originHeader = request.headers.get('origin');
+  if (originHeader) {
+    try {
+      return new URL(originHeader).origin;
+    } catch {
+      return null;
+    }
+  }
+
+  const refererHeader = request.headers.get('referer');
+  if (!refererHeader) return null;
+
+  try {
+    return new URL(refererHeader).origin;
+  } catch {
+    return null;
+  }
+}
+
+function requestUsesMutationMethod(request: Request): boolean {
+  return MUTATION_METHODS.has(request.method.toUpperCase());
+}
+
+export function isTrustedMutationOrigin(request: Request): boolean {
+  const requestOrigin = getTrustedRequestOrigin(request);
+  if (!requestOrigin) return false;
+
+  try {
+    return requestOrigin === new URL(request.url).origin;
+  } catch {
+    return false;
+  }
+}
+
+export function getTrustedMutationError(request: Request): string | null {
+  if (!requestUsesMutationMethod(request)) return null;
+  if (getRequestAuthTransport(request) !== 'session') return null;
+  return isTrustedMutationOrigin(request)
+    ? null
+    : 'Forbidden: cross-site mutation request rejected.';
+}
+
+export function requireTrustedMutation(request: Request): NextResponse | null {
+  const error = getTrustedMutationError(request);
+  return error ? NextResponse.json({ error }, { status: 403 }) : null;
+}
+
+export function getSameOriginMutationError(request: Request): string | null {
+  if (!requestUsesMutationMethod(request)) return null;
+  return isTrustedMutationOrigin(request) ? null : 'Forbidden: untrusted mutation origin.';
+}
+
+export function requireSameOriginMutation(request: Request): NextResponse | null {
+  const error = getSameOriginMutationError(request);
+  return error ? NextResponse.json({ error }, { status: 403 }) : null;
+}
+
 export function isAuthorized(request: Request): boolean {
   return Boolean(getSessionFromToken(getRequestToken(request)));
 }
 
 export function resolveRole(request: Request): SessionRole {
-  const explicitRole = request.headers.get('x-n1-role');
-  if (explicitRole === 'owner' || explicitRole === 'editor' || explicitRole === 'viewer') {
-    return explicitRole;
+  if (process.env.NODE_ENV === 'test') {
+    const explicitRole = request.headers.get('x-n1-role');
+    if (explicitRole === 'owner' || explicitRole === 'editor' || explicitRole === 'viewer') {
+      return explicitRole;
+    }
   }
 
   return getSessionFromToken(getRequestToken(request))?.role ?? 'viewer';

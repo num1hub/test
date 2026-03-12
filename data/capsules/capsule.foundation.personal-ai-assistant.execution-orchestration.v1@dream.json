@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T20:40:00Z",
-    "updated_at": "2026-03-11T20:40:00Z",
+    "updated_at": "2026-03-12T17:40:00Z",
     "name": "Personal AI Assistant Execution Orchestration",
     "semantic_hash": "assistant-execution-orchestration-delegation-runtime-swarm-synthesis-boundary",
     "source": {
@@ -99,9 +99,9 @@
         "at": "2026-03-11T20:40:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Personal AI Assistant decomposition to isolate delegation, swarm, runtime, stewardship, and A2C handoff surfaces from conversation and governance control."
+        "rationale": "Minted during Personal AI Assistant decomposition to isolate delegation, swarm, runtime, stewardship, and A2C handoff surfaces from conversation and governance control."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "8551ff52af2bbc8cf95ceef115594a9851271f7f69381014880515349348420b27518b3fed7ca3a5393472e94c06a637c7f8a7356568c74f305418e3dbc5e397"
 }

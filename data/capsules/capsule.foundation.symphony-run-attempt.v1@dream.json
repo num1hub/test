@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T15:58:22Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:32:00Z",
     "name": "Symphony Run Attempt",
     "semantic_hash": "symphony-run-attempt-issue-workspace-status-retry-lifecycle",
     "source": {
@@ -23,10 +23,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Symphony Run Attempt\n\n## 1. Role\nSymphony Run Attempt will become the durable assignment-bearing execution record for repository work, packaging the live session, its artifacts, and its branch consequences into one accountable object.\n\n## 2. Future Attempt Contract\nAttempt records will carry clearer assignment handles, return paths, artifact bundles, branch-aware outcome linkage, and a stronger distinction between the durable attempt object and the live session nested inside it.\n\n## 3. Operational Consequence\nRepository work will remain reviewable and attributable even as it becomes more asynchronous, more persistent, and more tightly coupled to downstream review and promotion lanes.\n\n## 4. Philosophical Alignment\nSymphony Run Attempt supports To Dig Deep by making each execution pass durable enough to inspect, compare, and govern."
+    "content": "# Symphony Run Attempt\n\n## 1. Role\nSymphony Run Attempt is the durable assignment-bearing execution record for repository work, packaging the live session, its artifacts, and its branch consequences into one accountable object.\n\n## 2. Attempt Contract\nAttempt records carry clearer assignment handles, return paths, artifact bundles, outcome linkage, and a stronger distinction between the durable attempt object and the live session nested inside it.\n\n## 3. Operational Consequence\nRepository work remains reviewable and attributable even as it becomes more asynchronous, more persistent, and more tightly coupled to downstream review and promotion lanes.\n\n## 4. Philosophical Alignment\nSymphony Run Attempt supports To Dig Deep by making each execution pass durable enough to inspect, compare, and govern."
   },
   "neuro_concentrate": {
-    "summary": "Symphony Run Attempt defines the future durable execution record for repository work: assignment handles, richer artifact bundles, clearer branch linkage, and stronger distinction between a live session and the durable attempt object that contains it.",
+    "summary": "Symphony Run Attempt defines the durable execution record for repository work inside N1Hub. It packages assignment handles, artifact bundles, branch consequences, status transitions, and downstream review linkage into one accountable object that remains distinct from the live session nested inside it. The capsule matters because asynchronous repository work needs a persistent record that can be inspected, compared, retried, and governed after the live conversation has moved on. It turns execution from a transient event into a durable operational artifact with clear ownership and lifecycle boundaries.",
     "keywords": [
       "symphony",
       "run-attempt",
@@ -88,9 +88,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Symphony Run Attempt states execution doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "fe5ee1aef19ff4864b1db8486e20135d56d922b45736e891b60f0a78c22427f948adf4482944a1728166c3bc2737c5d23149b1d7922302de4ddbc9ca14df3cab"
 }

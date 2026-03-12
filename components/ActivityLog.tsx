@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
 import type { ActivityEntry } from '@/lib/activity';
+import { getClientAuthHeaders } from '@/lib/clientAuth';
 
 type IconProps = { className?: string };
 
@@ -116,9 +117,8 @@ export default function ActivityLog() {
   useEffect(() => {
     const fetchLogs = async () => {
       try {
-        const token = localStorage.getItem('n1hub_vault_token');
         const res = await fetch('/api/activity?limit=100', {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: getClientAuthHeaders(),
         });
         if (!res.ok) throw new Error('Failed to fetch audit trail');
 

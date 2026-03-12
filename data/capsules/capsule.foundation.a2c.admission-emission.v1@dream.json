@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:55:00Z",
-    "updated_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-12T17:00:00Z",
     "name": "A2C Admission Emission",
     "semantic_hash": "a2c-admission-emission-hash-validate-emit-sealing-governance",
     "source": {
@@ -19,7 +19,7 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Admission Emission\n\n## 1. Role\nA2C Admission Emission owns the terminal mechanics of the refinery. It seals candidate geometry, forces candidates through the validation gates, and publishes or diverts the result according to the outcome of those gate checks.\n\n## 2. Admission Emission Surface\nThis sub-hub groups `a2c-hash`, `a2c-validate`, and `a2c-emit`. Together they define how the refinery computes provisional seals, checks candidate legality against structural and epistemic law, and turns a validated result into publication or quarantine-ready output.\n\n## 3. Operating Boundary\nThis sub-hub does not decide whether the packet should exist, how the candidate should be synthesized, or what branch policy should interpret it. Those responsibilities belong to `readiness-control`, `candidate-construction`, and `governance-handoffs`."
+    "content": "# A2C Admission Emission\n\n## 1. Role\nA2C Admission Emission owns the terminal mechanics of the refinery. It seals candidate geometry, forces candidates through the validation gates, and publishes or diverts the result according to the outcome of those gate checks.\n\n## 2. Admission Emission Surface\nThis sub-hub groups `a2c-hash`, `a2c-validate`, and `a2c-emit`. Together they define how the refinery computes provisional seals, checks candidate legality against structural and epistemic law, and turns a validated result into publication or quarantine-ready output.\n\n## 3. Operating Boundary\nThis sub-hub does not decide whether the packet should exist, how the candidate should be synthesized, or what governance surface should interpret it. Those responsibilities belong to `readiness-control`, `candidate-construction`, and `governance-handoffs`."
   },
   "neuro_concentrate": {
     "summary": "A2C Admission Emission groups the terminal refinery mechanics: Hash, Validate, and Emit. It keeps sealing, gate enforcement, and publication or quarantine output together so the last part of the pipeline remains explicit and mechanically legible. This boundary matters because admission should happen through named final-stage contracts rather than as a vague tail end of synthesis, and because emission quality depends on validation and seal law staying visible until the very end.",
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream A2C decomposition to isolate sealing, validation, and publication mechanics from earlier stage work and policy-bearing governance surfaces."
+        "rationale": "Minted during A2C decomposition to isolate sealing, validation, and publication mechanics from earlier stage work and policy-bearing governance surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1140db3f98a8768a9a2bf8c381bd8043979f83a09016755d5ffd67ea21d3c6d55892ef35c6b6541f11a6e8e32403b759742afc2354a5be26e4a1236bb27c3f5c"
 }

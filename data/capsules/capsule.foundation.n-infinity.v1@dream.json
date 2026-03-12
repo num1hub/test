@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "ninfinity-parent-routing-runtime-roster-signals-governance-fabric",
-    "updated_at": "2026-03-12T04:55:00Z",
+    "updated_at": "2026-03-12T17:43:00Z",
     "name": "N-Infinity",
     "priority": "high",
     "progress": 30,
@@ -22,7 +22,7 @@
     "content": "# N-Infinity\n\n## 1. Role\nN-Infinity provides the governed iteration fabric of N1Hub, and it routes that fabric through four bounded sub-hubs so runtime substrate, worker roster, upstream signal sources, and governance metrics remain explicit instead of collapsing into one dense role-and-physics directory.\n\n## 2. Routing Surfaces\n- `runtime-fabric` owns the execution substrate: background runtime, Symphony lane, job envelopes, continuity state, and night-window posture.\n- `swarm-roster` owns the named N-Infinity worker family: Weaver, Gardener, Parliament, Innovator, Reminder, Risk Detector, and Suggestion Agent.\n- `signal-fabric` owns the external lanes and operator-facing surfaces that feed context, urgency, and supply into the swarm.\n- `governance-metrics` owns relation semantics, confidence geometry, and epistemic memory the swarm uses to reason about graph quality.\n\n## 3. Parent Boundary\nThe parent hub keeps only the top-level relationship to CapsuleOS, N1Hub, To Dig Deep, the broader Mining Company frame, the enclosing N-Infinity project, and the four sub-hubs. Detailed runtime atoms and worker topology flow through the sub-hubs so N-Infinity stays a navigable swarm contract rather than a gravity well of mixed substrate, roles, and reasoning law."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity is the future parent hub for four bounded swarm surfaces: runtime fabric, swarm roster, signal fabric, and governance metrics. The parent keeps only top-level doctrinal and project relationships while detailed runtime atoms, worker roles, signal sources, and reasoning metrics route through sub-hubs. This keeps the swarm contract legible, makes baton exchange and observability easier to inspect, and prevents the future iteration fabric from collapsing into one dense directory of mixed substrate, roles, and epistemic law.",
+    "summary": "N-Infinity is the parent hub for four bounded swarm surfaces: runtime fabric, swarm roster, signal fabric, and governance metrics. The parent keeps only top-level doctrinal and project relationships while detailed runtime atoms, worker roles, signal sources, and reasoning metrics route through sub-hubs. This keeps the swarm contract legible, makes baton exchange and observability easier to inspect, and prevents the iteration fabric from collapsing into one dense directory of mixed substrate, roles, and epistemic law.",
     "keywords": [
       "n-infinity",
       "hub-decomposition",
@@ -90,27 +90,27 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1773015063934",
         "job_id": "vault-steward-job-9bad6a9311d08afe",
-        "rationale": "The capsule already separates essence, origin, agent archetypes, bounded future routing, and full-cycle position, so these boundary repairs and routing keywords are directly grounded in its existing sections."
+        "rationale": "The capsule already separates essence, origin, agent archetypes, bounded routing, and full-cycle position, so these boundary repairs and routing keywords are directly grounded in its existing sections."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present swarm doctrine directly."
       },
       {
         "at": "2026-03-11T18:09:20Z",
         "event": "dream_parent_topology_sync",
         "agent": "codex",
-        "rationale": "Synced Dream parent routing to the live four-subhub N-Infinity topology so future swarm doctrine inherits bounded runtime, roster, signal, and governance seams."
+        "rationale": "Synced parent routing to the live four-subhub N-Infinity topology so the swarm overlay inherits bounded runtime, roster, signal, and governance seams."
       },
       {
         "at": "2026-03-12T04:55:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed stale branch-aware ledger phrasing so Dream N-Infinity remains filename-signaled even in maintenance rationale."
+        "rationale": "Removed stale ledger meta-language so the maintenance rationale stays neutral and present-tense."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "5da868ca6f11870fa63aa7b92fbd160457847a6028bc205beb9da44f8f434928df4aafa23d4c90bb2ec263c89ea65dab6db425b6b32c0d81a0fe156fa049f395"
 }

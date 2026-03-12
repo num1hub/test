@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import PasswordChangeForm from '@/components/PasswordChangeForm';
@@ -8,6 +8,14 @@ import AiWalletForm from '@/components/AiWalletForm';
 import AppNav from '@/components/AppNav';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useToast } from '@/contexts/ToastContext';
+import {
+  DEFAULT_CAPSULE_VISUAL_OWNER_ID,
+  useCapsuleVisualPreferences,
+} from '@/hooks/useCapsuleVisualPreferences';
+import {
+  CAPSULE_GRAPH_QUALITY_PRESETS,
+  CAPSULE_VISUAL_PROFILES,
+} from '@/lib/capsuleVisualProfile';
 import { logClientAction } from '@/lib/clientActivity';
 
 function LogoutIcon({ className }: { className?: string }) {
@@ -61,15 +69,45 @@ function ActivityIcon({ className }: { className?: string }) {
   );
 }
 
+function PreferenceChip({
+  active,
+  label,
+  hint,
+  onClick,
+}: {
+  active: boolean;
+  label: string;
+  hint: string;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-xl border px-3 py-3 text-left transition-colors ${
+        active
+          ? 'border-amber-400/50 bg-amber-500/10 text-amber-100'
+          : 'border-slate-300 bg-slate-50 text-slate-700 hover:border-slate-400 hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:border-slate-600 dark:hover:bg-slate-700'
+      }`}
+    >
+      <div className="text-sm font-semibold">{label}</div>
+      <div className="mt-1 text-xs leading-5 opacity-80">{hint}</div>
+    </button>
+  );
+}
+
 export default function SettingsPage() {
   const router = useRouter();
   const { theme, toggleTheme } = useTheme();
   const { showToast } = useToast();
-
-  useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) router.push('/login');
-  }, [router]);
+  const {
+    visualProfile,
+    graphQuality,
+    setVisualProfile,
+    setGraphQuality,
+    resolvedVisualProfile,
+    resolvedGraphQuality,
+  } = useCapsuleVisualPreferences(DEFAULT_CAPSULE_VISUAL_OWNER_ID);
 
   const handleLogout = async () => {
     void logClientAction('logout', { message: 'Session terminated by architect.' });
@@ -82,7 +120,7 @@ export default function SettingsPage() {
 
     localStorage.removeItem('n1hub_vault_token');
     showToast('Session terminated.', 'info');
-    router.push('/login');
+    router.push('/');
   };
 
   return (
@@ -115,7 +153,7 @@ export default function SettingsPage() {
                     Chief Architect
                   </h2>
                   <p className="font-mono text-sm text-slate-500 dark:text-slate-400">
-                    ID: capsule.person.egor-n1.v1
+                    ID: {DEFAULT_CAPSULE_VISUAL_OWNER_ID}
                   </p>
                 </div>
               </div>
@@ -144,6 +182,60 @@ export default function SettingsPage() {
 
               <div className="my-4 h-px bg-slate-200 dark:bg-slate-800" />
 
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                    Visual Memory Profile
+                  </span>
+                  <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2.5 py-1 text-[11px] uppercase tracking-[0.18em] text-amber-500">
+                    {resolvedVisualProfile.label}
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                  {resolvedVisualProfile.hint}
+                </p>
+                <div className="mt-3 grid gap-2">
+                  {CAPSULE_VISUAL_PROFILES.map((profile) => (
+                    <PreferenceChip
+                      key={profile.key}
+                      active={visualProfile === profile.key}
+                      label={profile.label}
+                      hint={profile.hint}
+                      onClick={() => setVisualProfile(profile.key)}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="my-4 h-px bg-slate-200 dark:bg-slate-800" />
+
+              <div>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+                    2D Graph Quality
+                  </span>
+                  <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-2.5 py-1 text-[11px] uppercase tracking-[0.18em] text-cyan-500">
+                    {resolvedGraphQuality.label}
+                  </span>
+                </div>
+                <p className="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">
+                  {resolvedGraphQuality.hint}
+                </p>
+                <div className="mt-3 grid gap-2">
+                  {CAPSULE_GRAPH_QUALITY_PRESETS.map((quality) => (
+                    <PreferenceChip
+                      key={quality.key}
+                      active={graphQuality === quality.key}
+                      label={quality.label}
+                      hint={quality.hint}
+                      onClick={() => setGraphQuality(quality.key)}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="my-4 h-px bg-slate-200 dark:bg-slate-800" />
+
               <Link
                 href="/activity"
                 className="flex w-full items-center justify-center rounded border border-slate-300 bg-slate-100 px-4 py-2 font-medium text-slate-700 transition-colors hover:bg-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
@@ -163,6 +255,14 @@ export default function SettingsPage() {
           </div>
 
           <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-lg dark:border-slate-800 dark:bg-slate-900">
+            <div className="mb-4 rounded-lg border border-amber-400/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-100 dark:text-amber-100">
+              <div className="font-semibold">Vercel Hobby auth mode</div>
+              <p className="mt-1 leading-6 text-amber-100/80">
+                This deployment is intended to run behind the locked architect gate. In production, rotate the
+                master password and access code through deployment environment settings instead of relying on
+                in-app mutation.
+              </p>
+            </div>
             <PasswordChangeForm />
           </div>
         </div>

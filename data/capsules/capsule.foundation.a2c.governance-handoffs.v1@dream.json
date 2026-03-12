@@ -7,9 +7,9 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:55:00Z",
-    "updated_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-12T17:00:00Z",
     "name": "A2C Governance Handoffs",
-    "semantic_hash": "a2c-governance-handoffs-branch-validation-update-review-routing",
+    "semantic_hash": "a2c-governance-handoffs-routing-validation-update-review-landing",
     "source": {
       "uri": "internal://capsule.foundation.a2c.v1",
       "type": "internal_derivation"
@@ -19,14 +19,14 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C Governance Handoffs\n\n## 1. Role\nA2C Governance Handoffs owns the policy-bearing surfaces that interpret refinery outputs once deterministic stage work has produced evidence. It routes ambiguous structure toward branch policy, validation judgment, or controlled landing without collapsing those decisions into the stage mechanics themselves.\n\n## 2. Governance Handoff Surface\nThis sub-hub groups `branch-steward-agent`, `validation-gatekeeper-agent`, and `vault-update-agent`. Together they define how A2C packets move into branch posture decisions, final acceptance or rejection judgment, and controlled vault landing after the stage pipeline has already produced evidence-rich candidates.\n\n## 3. Operating Boundary\nThis sub-hub does not capture source material, construct candidates, or execute sealing mechanics. Those responsibilities belong to `readiness-control`, `material-preparation`, `candidate-construction`, and `admission-emission`."
+    "content": "# A2C Governance Handoffs\n\n## 1. Role\nA2C Governance Handoffs owns the policy-bearing surfaces that interpret refinery outputs once deterministic stage work has produced evidence. It routes ambiguous structure toward routing policy, validation judgment, or controlled landing without collapsing those decisions into the stage mechanics themselves.\n\n## 2. Governance Handoff Surface\nThis sub-hub groups `branch-steward-agent`, `validation-gatekeeper-agent`, and `vault-update-agent`. Together they define how A2C packets move into routing posture decisions, final acceptance or rejection judgment, and controlled vault landing after the stage pipeline has already produced evidence-rich candidates.\n\n## 3. Operating Boundary\nThis sub-hub does not capture source material, construct candidates, or execute sealing mechanics. Those responsibilities belong to `readiness-control`, `material-preparation`, `candidate-construction`, and `admission-emission`."
   },
   "neuro_concentrate": {
-    "summary": "A2C Governance Handoffs groups the policy-bearing surfaces around the refinery: Branch Steward Agent, Validation Gatekeeper Agent, and Vault Update Agent. It keeps branch posture, acceptance judgment, and controlled landing together so interpretive decisions remain explicit after deterministic stage mechanics have finished their work. This boundary matters because candidate evidence should not silently authorize branch routing, admission, or update landing by itself without a clearly named governance surface. It keeps policy judgment visible at the refinery edge.",
+    "summary": "A2C Governance Handoffs groups the policy-bearing surfaces around the refinery: Branch Steward Agent, Validation Gatekeeper Agent, and Vault Update Agent. It keeps routing posture, acceptance judgment, and controlled landing together so interpretive decisions remain explicit after deterministic stage mechanics have finished their work. This boundary matters because candidate evidence should not silently authorize routing, admission, or update landing by itself without a clearly named governance surface. It keeps policy judgment visible at the refinery edge.",
     "keywords": [
       "a2c",
       "governance-handoffs",
-      "branch-steward-agent",
+      "routing-stewardship",
       "validation-gatekeeper-agent",
       "vault-update-agent",
       "policy-routing",
@@ -40,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "a2c-governance-handoffs-branch-validation-update-review-routing"
+    "semantic_hash": "a2c-governance-handoffs-routing-validation-update-review-landing"
   },
   "recursive_layer": {
     "links": [
@@ -67,9 +67,9 @@
         "at": "2026-03-11T23:55:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream A2C decomposition to keep branch posture, admission judgment, and controlled vault landing separate from deterministic stage mechanics."
+        "rationale": "Minted during A2C decomposition to keep routing posture, admission judgment, and controlled vault landing separate from deterministic stage mechanics."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "1ad9a3d7da01918de4c757aed6e273b74e68f3fb91e8979515c0053b0adb55dd9a75d018b06afc6ac46b770a4759f2f686a11baecf6fc520a82e0059bf8a9164"
 }

@@ -7,9 +7,9 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-08T18:20:00Z",
-    "updated_at": "2026-03-11T15:33:00Z",
+    "updated_at": "2026-03-12T18:20:00Z",
     "name": "Agent Evals and Traces",
-    "semantic_hash": "agent-evals-traces-replayable-canaries-assignment-lineage",
+    "semantic_hash": "agent-evals-traces-replayable-lineage-canaries-evidence-loop",
     "source": {
       "uri": "https://developers.openai.com/api/docs/guides/agents-sdk",
       "type": "web_documentation"
@@ -23,14 +23,14 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Evals and Traces\n\n## 1. Role\nEvery serious N1Hub lane will produce replayable traces and structured evaluations by design. The system will not judge major runtime changes only by operator impression. It will compare runs, preserve assignment lineage, and inspect recurring failure patterns as explicit engineering evidence.\n\n## 2. Future Evidence Loop\n- structured traces that can be replayed and diffed\n- assignment-aware lineage instead of anonymous run blur\n- review and validation scores on plans, jobs, and artifacts before promotion\n- clustered failure modes that become visible maintenance work\n- representative canary suites for prompts, models, routing policy, and harness changes\n\n## 3. Operational Consequence\nOperators and agents will be able to ask not only what a lane produced, but how reliable that pattern has been across time, which context and policy framed it, and whether a new configuration genuinely improved the system.\n\n## 4. Philosophical Alignment\nAgent Evals and Traces supports To Dig Deep by making long-lived agent improvement evidence-driven, replayable, and reviewable."
+    "content": "# Agent Evals and Traces\n\n## 1. Role\nEvery serious N1Hub lane produces replayable traces and structured evaluations by design. The system does not judge major runtime changes only by operator impression. It compares runs, preserves assignment lineage, and inspects recurring failure patterns as explicit engineering evidence.\n\n## 2. Evidence Loop\n- structured traces that can be replayed and diffed\n- assignment-aware lineage instead of anonymous run blur\n- review and validation scores on plans, jobs, and artifacts before promotion\n- clustered failure modes that become visible maintenance work\n- representative canary suites for prompts, models, routing policy, and harness changes\n\n## 3. Operational Consequence\nOperators and agents can ask not only what a lane produced, but how reliable that pattern has been across time, which context and policy framed it, and whether a new configuration genuinely improved the system.\n\n## 4. Philosophical Alignment\nAgent Evals and Traces supports To Dig Deep by making long-lived agent improvement evidence-driven, replayable, and reviewable."
   },
   "neuro_concentrate": {
-    "summary": "Agent Evals and Traces defines the future evidence loop for N1Hub agents: replayable traces, assignment-aware lineage, structured review scores, failure clustering, and representative canaries that let the swarm improve through evidence instead of folklore.",
+    "summary": "Agent Evals and Traces defines the evidence loop that lets N1Hub improve agents through replayable traces and structured evaluation instead of operator impression. It covers assignment lineage, review and validation scoring on plans, jobs, and artifacts, clustered failure patterns that become explicit maintenance work, and representative canary suites for prompts, models, routing policy, and harness changes. The capsule matters because operators can ask how reliable a lane has been across time, which context framed it, and whether a new configuration genuinely improved the system.",
     "keywords": [
       "agent-evals",
       "agent-traces",
-      "dream-branch",
+      "trace-lineage",
       "replayable-runs",
       "canary-tasks",
       "failure-clustering",
@@ -46,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-evals-traces-replayable-canaries-assignment-lineage"
+    "semantic_hash": "agent-evals-traces-replayable-lineage-canaries-evidence-loop"
   },
   "recursive_layer": {
     "links": [
@@ -94,12 +94,12 @@
     "actions": [],
     "epistemic_ledger": [
       {
-        "at": "2026-03-11T15:33:00Z",
+        "at": "2026-03-12T14:22:01Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states current doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "de572cfebf6f5569f4dbb1ac1a6a1256f4ab7263147a36d9ee767fd0c76b34b810029b71a2bfb8b3fcedbe3222522bf0711489b2fbd99ea08ab2bd7f921481dd"
 }

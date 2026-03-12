@@ -13,6 +13,7 @@ import {
   CapsuleDetailLoadingState,
 } from '@/components/vault/detail/CapsuleDetailState';
 import CapsuleDetailToolbar from '@/components/vault/detail/CapsuleDetailToolbar';
+import { useCapsuleVisualPreferences } from '@/hooks/useCapsuleVisualPreferences';
 import { useCapsuleBranchState } from '@/hooks/useCapsuleBranchState';
 import { useCapsuleValidation } from '@/hooks/useCapsuleValidation';
 import { isBranchType, type BranchName } from '@/types/branch';
@@ -24,6 +25,7 @@ function CapsuleDetailPageContent({
 }) {
   const resolvedParams = use(params);
   const capsuleId = resolvedParams.id;
+  const { visualProfile } = useCapsuleVisualPreferences();
   const searchParams = useSearchParams();
   const requestedBranch = useMemo<BranchName>(() => {
     const raw = searchParams.get('branch');
@@ -88,7 +90,7 @@ function CapsuleDetailPageContent({
                 : ''
           }`}
         >
-          <CapsuleDetailView capsule={capsule} />
+          <CapsuleDetailView capsule={capsule} visualProfile={visualProfile} />
         </div>
 
         <ValidationPanel

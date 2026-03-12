@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-07T11:05:00Z",
-    "updated_at": "2026-03-11T15:47:00Z",
+    "updated_at": "2026-03-12T16:46:00Z",
     "name": "Planning Horizon Engine",
     "semantic_hash": "planning-horizon-engine-dream-real-compression-today-roadmap",
     "priority": "high",
@@ -19,14 +19,14 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Planning Horizon Engine\n\n## 1. Role\nPlanning Horizon Engine will become the explicit coordination layer that can hold the entire Dream field, pass it through Real, and continuously generate stable horizon views from today to 1000 days.\n\n## 2. Future Horizon Contract\nThe engine will provide trustworthy Dream-to-Real compression, clearer explanation of horizon placement, stronger capacity and evidence filters, tighter execution feedback loops, and better orchestration between roadmap, reminder, suggestion, risk, and branch-governance lanes.\n\n## 3. Operational Consequence\nPlanning in N1Hub will behave like a real horizon engine instead of a loose mix of roadmaps, tasks, and reminders. The vault will preserve the whole future field while still answering the hardest question: what should happen now.\n\n## 4. Philosophical Alignment\nPlanning Horizon Engine supports To Dig Deep by making long-range intent compressible into grounded action without losing branch discipline."
+    "content": "# Planning Horizon Engine\n\n## 1. Role\nPlanning Horizon Engine is the explicit coordination layer that can hold the broader planning field and continuously generate stable horizon views from today to 1000 days.\n\n## 2. Horizon Contract\nThe engine provides trustworthy horizon compression, clear explanation of horizon placement, strong capacity and evidence filters, tight execution feedback loops, and better orchestration between roadmap, reminder, suggestion, risk, and governance lanes.\n\n## 3. Operational Consequence\nPlanning in N1Hub behaves like a real horizon engine instead of a loose mix of roadmaps, tasks, and reminders. The vault preserves the whole planning field while still answering the hardest question: what should happen now.\n\n## 4. Philosophical Alignment\nPlanning Horizon Engine supports To Dig Deep by making long-range intent compressible into grounded action without losing planning discipline."
   },
   "neuro_concentrate": {
-    "summary": "Planning Horizon Engine defines the future explicit horizon-compression layer for N1Hub: stronger Dream-to-Real transformation, clearer explanation of horizon placement, better capacity and evidence filtering, and tighter orchestration between strategic, daily, reminder, suggestion, and branch-governance lanes.",
+    "summary": "Planning Horizon Engine defines the coordination layer that holds the broader planning field and compresses it into trustworthy horizons from today to long-range planning windows. It covers horizon placement logic, capacity and evidence filters, and orchestration between strategic, daily, reminder, suggestion, risk, and governance lanes. The capsule matters because planning quality collapses when the system cannot explain why something belongs now, later, or outside the current horizon. It makes long-range intent compressible into grounded action without losing planning discipline.",
     "keywords": [
       "planning-horizon-engine",
-      "dream-branch",
-      "real-branch",
+      "projected-state",
+      "horizon-compression",
       "today",
       "tomorrow",
       "30-60-90",
@@ -112,9 +112,9 @@
         "at": "2026-03-11T15:47:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Stripped future-meta phrasing and keyword residue so the capsule states present planning doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "ff362b2752680719cc12b3b99a0d170c1f43b13822eef6d8a3a7d5d52ca6c7ba7e9b5e925ff66bd90bff5219c1ba64bb9be347320c16d3b5080f72edefed2a92"
 }

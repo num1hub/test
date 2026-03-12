@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:50:00Z",
-    "updated_at": "2026-03-12T04:55:00Z",
+    "updated_at": "2026-03-12T18:28:00Z",
     "name": "Key Agents",
     "semantic_hash": "key-agents-parent-routing-lane-topology-governance-swarm",
     "priority": "high",
@@ -22,7 +22,7 @@
     "content": "# Key Agents\n\n## 1. Role\nKey Agents provides the coordination topology for a more explicit multi-lane intelligence system where role boundaries stay clear and cross-lane cooperation remains inspectable. It routes that topology through six bounded lane hubs so user-facing, mining, planning, stewardship, governance, and swarm work do not collapse into one long list of workers.\n\n## 2. Routing Lanes\n- `user-lane` owns the assistant carrier, graph-grounded conversational ingress, and vault-native retrieval roles.\n- `mining-lane` owns DeepMine scouting, extraction, and supervision workers.\n- `planning-lane` owns horizon-compression and planning agents that turn intent into bounded plans.\n- `stewardship-lane` owns vault-maintenance workers that improve structure and land reviewed updates.\n- `governance-lane` owns branch discipline, validation authority, and critique pressure.\n- `swarm-lane` owns the N-Infinity role family plus the background runtime substrate.\n\n## 3. Parent Boundary\nThe parent hub keeps only the top-level relationship to N1Hub, Workspace, To Dig Deep, and the six lane hubs. Detailed role membership flows through the lane hubs so Key Agents remains a navigable coordination topology instead of a flat registry of leaves."
   },
   "neuro_concentrate": {
-    "summary": "Key Agents is the future parent hub for six bounded role lanes: user, mining, planning, stewardship, governance, and swarm. The parent keeps only top-level architectural relationships while detailed membership routes through lane hubs, which makes coordination contracts, planning compression, stewardship flow, and governance pressure easier to inspect. This prevents the role map from collapsing into one long agent list and keeps the swarm legible as it grows more capable and more assignment-aware.",
+    "summary": "Key Agents is the parent hub for six bounded role lanes: user, mining, planning, stewardship, governance, and swarm. The parent keeps only top-level architectural relationships while detailed membership routes through lane hubs, which makes coordination contracts, planning compression, stewardship flow, and governance pressure easier to inspect. This prevents the role map from collapsing into one long agent list and keeps the swarm legible as it grows more capable and more assignment-aware.",
     "keywords": [
       "key-agents",
       "hub-decomposition",
@@ -106,7 +106,7 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1772918751730",
         "job_id": "vault-steward-job-ed8d05b39e0742cb",
-        "rationale": "The maintenance change is justified by the capsule's emphasis on modularity, orchestration, explicit planning swarm, and future decomposition needs. The added keywords and refined summary directly reflect the content and support operator navigation and classification."
+        "rationale": "The maintenance change is justified by the capsule's emphasis on modularity, orchestration, explicit planning swarm, and bounded decomposition needs. The added keywords and refined summary directly reflect the content and support operator navigation and classification."
       },
       {
         "at": "2026-03-08T08:33:06.384Z",
@@ -114,7 +114,7 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1772958727635",
         "job_id": "vault-steward-job-afd8bdae723d3e1b",
-        "rationale": "The changes are grounded in the capsule's content, which emphasizes modularity, explicit coordination, and the need for clearer role boundaries and orchestration. The added keywords and refined summary directly reflect these themes and support future decomposition work as indicated in the capsule and maintenance notes."
+        "rationale": "The changes are grounded in the capsule's content, which emphasizes modularity, explicit coordination, and the need for clearer role boundaries and orchestration. The added keywords and refined summary directly reflect these themes and support bounded decomposition work as indicated in the capsule and maintenance notes."
       },
       {
         "at": "2026-03-08T14:57:58.419Z",
@@ -122,7 +122,7 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1772981823476",
         "job_id": "vault-steward-job-56290ea8a4770d3f",
-        "rationale": "The capsule content explicitly describes Key Agents as an operating map with stronger role boundaries, better implementation alignment, richer coordination across assistant, mining, planning, maintenance, and review workers, and a planning swarm that carries Dream into day-level execution. The maintenance change sharpens that existing hub role and records likely subordinate boundaries without introducing new doctrine."
+        "rationale": "The capsule content explicitly describes Key Agents as an operating map with stronger role boundaries, better implementation alignment, richer coordination across assistant, mining, planning, maintenance, and review workers, and a planning swarm that carries long-horizon coordination into day-level execution. The maintenance change sharpens that existing hub role and records likely subordinate boundaries without introducing new doctrine."
       },
       {
         "at": "2026-03-09T00:13:04.584Z",
@@ -130,34 +130,34 @@
         "agent": "vault-steward-executor",
         "run_id": "vault-steward-1773015063934",
         "job_id": "vault-steward-job-9bad6a9311d08afe",
-        "rationale": "The content emphasizes stronger role boundaries, orchestration across named worker classes, and a clearer implementation roadmap, so the maintenance change is justified by the capsule’s existing scope and future-potential bullets."
+        "rationale": "The content emphasizes stronger role boundaries, orchestration across named worker classes, and a clearer implementation roadmap, so the maintenance change is justified by the capsule’s existing scope and expansion-oriented bullets."
       },
       {
         "at": "2026-03-09T21:05:00Z",
         "event": "governance_sync_retain_dream_applied",
         "agent": "n1",
         "run_id": "TODO-024",
-        "rationale": "The Dream Key Agents capsule was narrowed to future-only topology and coordination delta after Real became the explicit canonical source for the live lane map. This preserves Dream as roadmap doctrine without leaving the current branch split implicit."
+        "rationale": "The Key Agents capsule was narrowed to topology and coordination delta after the canonical live lane map became explicit. This preserves roadmap doctrine without leaving the lane split implicit."
       },
       {
         "at": "2026-03-11T13:46:54Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so Key Agents states present coordination doctrine directly."
       },
       {
         "at": "2026-03-11T18:09:20Z",
         "event": "dream_parent_topology_sync",
         "agent": "codex",
-        "rationale": "Synced Dream parent routing to the live six-lane Key Agents topology so future coordination doctrine inherits explicit user, mining, planning, stewardship, governance, and swarm seams."
+        "rationale": "Synced parent routing to the live six-lane Key Agents topology so coordination doctrine inherits explicit user, mining, planning, stewardship, governance, and swarm seams."
       },
       {
         "at": "2026-03-12T04:55:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
-        "rationale": "Removed stale branch-aware ledger phrasing so Dream Key Agents now stays filename-signaled even in maintenance rationale."
+        "rationale": "Removed stale meta-language so Key Agents stays filename-signaled even in maintenance rationale."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "a06d84702fe1f157bd4d1f9f55be9a39dffa0d61c41284f2b06b5296bb1684c84e90933b3868961258979a3adb15e2f8bac33f21040fb440a0bfc79e9cc9b64e"
 }

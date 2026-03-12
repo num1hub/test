@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import BatchToolbar from '@/components/BatchToolbar';
 import ProjectsFilters from '@/components/projects/ProjectsFilters';
 import ProjectsGrid from '@/components/projects/ProjectsGrid';
@@ -37,7 +36,6 @@ function ProjectsErrorState({ error }: { error: string }) {
 }
 
 export default function ProjectsPage() {
-  const router = useRouter();
   const { capsules, fetchCapsules, isLoading, error, removeCapsulesLocally } = useCapsuleStore();
   const {
     view,
@@ -63,14 +61,8 @@ export default function ProjectsPage() {
   } = useProjectsDashboardState(capsules);
 
   useEffect(() => {
-    const token = localStorage.getItem('n1hub_vault_token');
-    if (!token) {
-      router.push('/login');
-      return;
-    }
-
     void fetchCapsules();
-  }, [fetchCapsules, router]);
+  }, [fetchCapsules]);
 
   const handleBatchDeleteComplete = (deletedIds: string[]) => {
     removeCapsulesLocally(deletedIds);

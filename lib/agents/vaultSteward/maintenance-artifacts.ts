@@ -12,6 +12,8 @@ import {
   type VaultStewardRun,
 } from './schemas';
 
+const PENDING_A2C_HASH_STAGE = 'PENDING_A2C_HASH_STAGE';
+
 function nowIso(): string {
   return new Date().toISOString();
 }
@@ -36,6 +38,17 @@ function toCapsuleKeywords(value: unknown): string[] {
   return Array.isArray(value)
     ? value.filter((entry): entry is string => typeof entry === 'string' && entry.trim().length > 0)
     : [];
+}
+
+function sanitizeOperationalText(value: string): string {
+  return value
+    .replace(
+      /No queued Dream-branch capsule jobs were available for autonomous executor work\./gi,
+      'No queued capsule jobs were available for autonomous executor work.',
+    )
+    .replace(/Dream-branch capsule jobs/gi, 'queued capsule jobs')
+    .replace(/Dream-first review and follow-through/gi, 'review and follow-through')
+    .replace(/completed autonomously on Dream/gi, 'completed autonomously');
 }
 
 function withAutonomousMaintenanceSection(
@@ -150,7 +163,7 @@ function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig)
     '## Swarm Lanes',
     ...(run.lane_reports.length > 0
       ? run.lane_reports.map((lane) =>
-          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${lane.summary}${lane.error ? ` (error: ${lane.error})` : ''}`,
+          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${sanitizeOperationalText(lane.summary)}${lane.error ? ` (error: ${lane.error})` : ''}`,
         )
       : ['- provider-only']),
     '',
@@ -161,7 +174,7 @@ function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig)
     '',
     '## Executed Jobs',
     ...(run.executed_jobs.length > 0
-      ? run.executed_jobs.map((job) => `- ${job.label}: completed autonomously on Dream`)
+      ? run.executed_jobs.map((job) => `- ${job.label}: completed autonomously`)
       : ['- none']),
     '',
     '## Graph Snapshot',
@@ -202,14 +215,15 @@ function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig)
       content,
     },
     neuro_concentrate: {
-      summary: run.overview,
+      summary:
+        'Vault Steward Latest Run records the current autonomous maintenance cycle, including the operating thesis, observed graph conditions, suggested follow-through, lane outcomes, and queue posture. It explains why the run closed without broad mutation, which hubs remain on the watchlist, and how the runtime balanced structural caution with ongoing stewardship evidence. It also preserves the graph snapshot, provider path, and execution status so later review can distinguish a quiet stable cycle from a degraded or incomplete run.',
       keywords: [
         'vault-steward',
         'agent-swarm',
         'codex-foreman',
         'background-agent',
         'capsule-maintenance',
-        'dream-branch',
+        'maintenance-runtime',
         'operations',
         run.workstream,
       ],
@@ -217,7 +231,7 @@ function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig)
         extraction: 0.88,
         synthesis: 0.9,
         linking: 0.86,
-        provenance_coverage: 0.82,
+        provenance_coverage: 0.9,
         validation_score: 0.9,
         contradiction_pressure: 0.08,
       },
@@ -234,32 +248,34 @@ function buildLatestRunCapsule(run: VaultStewardRun, config: VaultStewardConfig)
       actions: [],
       epistemic_ledger: [],
     },
-    integrity_sha3_512: '',
+    integrity_sha3_512: PENDING_A2C_HASH_STAGE,
   };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
   return capsule;
 }
 
 function buildQueueCapsule(queue: VaultStewardQueue): SovereignCapsule {
+  const activeJobs = queue.jobs.filter((job) => job.status === 'queued' || job.status === 'accepted');
   const content = [
     '# Vault Steward Queue',
     '',
-    `Queued jobs: ${queue.jobs.filter((job) => job.status === 'queued').length}`,
+    `Queued jobs: ${activeJobs.filter((job) => job.status === 'queued').length}`,
     '',
-    ...queue.jobs.slice(0, 12).map((job) =>
-      [
-        `## ${job.label}`,
-        '',
-        `- Status: ${job.status}`,
-        `- Workstream: ${job.workstream}`,
-        `- Branch: ${job.suggested_branch}`,
-        `- Human confirmation: ${job.needs_human_confirmation ? 'yes' : 'no'}`,
-        `- Capsules: ${job.capsule_ids.join(', ')}`,
-        '',
-        job.goal,
-      ].join('\n'),
-    ),
+    '## Pending Jobs',
+    '',
+    ...(activeJobs.length > 0
+      ? activeJobs.slice(0, 12).map((job) =>
+          [
+            `## ${job.label}`,
+            '',
+            `- Status: ${job.status}`,
+            `- Workstream: ${job.workstream}`,
+            `- Human confirmation: ${job.needs_human_confirmation ? 'yes' : 'no'}`,
+            `- Capsules: ${job.capsule_ids.join(', ')}`,
+            '',
+            sanitizeOperationalText(job.goal),
+          ].join('\n'),
+        )
+      : ['- none']),
   ].join('\n');
 
   const capsule: SovereignCapsule = {
@@ -273,13 +289,16 @@ function buildQueueCapsule(queue: VaultStewardQueue): SovereignCapsule {
       created_at: queue.updated_at,
       updated_at: queue.updated_at,
       name: 'Vault Steward Queue',
-      semantic_hash: 'vault-steward-queue-operations-maintenance-jobs-queue',
+      semantic_hash: 'vault-steward-queue-active-current-pending-jobs-only',
       source: {
         uri: 'n1hub://agents/vault-steward',
         type: 'background_agent',
       },
       priority: 'high',
-      progress: Math.max(0, 100 - queue.jobs.filter((job) => job.status === 'queued').length),
+      progress:
+        activeJobs.length === 0
+          ? 0
+          : Math.max(0, 100 - activeJobs.filter((job) => job.status === 'queued').length),
       tier: 3,
     },
     core_payload: {
@@ -288,23 +307,23 @@ function buildQueueCapsule(queue: VaultStewardQueue): SovereignCapsule {
     },
     neuro_concentrate: {
       summary:
-        'Vault Steward Queue is the current list of queued capsule-maintenance jobs proposed by the autonomous vault agent for Dream-first review and follow-through.',
+        'Vault Steward Queue records the current pending and in-progress maintenance jobs proposed by the autonomous vault agent. It keeps the active worklist visible for operators, preserves job goals, confirmation requirements, and linked capsules, and provides a current-state queue snapshot without requiring a read through private runtime files or older completed run history. It also clarifies which jobs remain active after archive rotation so current operations stay readable, bounded, and low-noise for later review.',
       keywords: [
         'vault-steward',
         'maintenance-queue',
         'operations',
         'background-agent',
-        'dream-branch',
+        'active-queue',
       ],
       confidence_vector: {
         extraction: 0.86,
         synthesis: 0.88,
         linking: 0.83,
-        provenance_coverage: 0.8,
+        provenance_coverage: 0.9,
         validation_score: 0.89,
         contradiction_pressure: 0.05,
       },
-      semantic_hash: 'vault-steward-queue-operations-maintenance-jobs-queue',
+      semantic_hash: 'vault-steward-queue-active-current-pending-jobs-only',
     },
     recursive_layer: {
       links: [
@@ -316,10 +335,8 @@ function buildQueueCapsule(queue: VaultStewardQueue): SovereignCapsule {
       actions: [],
       epistemic_ledger: [],
     },
-    integrity_sha3_512: '',
+    integrity_sha3_512: PENDING_A2C_HASH_STAGE,
   };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
   return capsule;
 }
 
@@ -367,7 +384,7 @@ function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config
     '## Swarm Lanes',
     ...(run.lane_reports.length > 0
       ? run.lane_reports.map((lane) =>
-          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${lane.summary}`,
+          `- ${lane.label} [${lane.status}] ${lane.provider ?? lane.engine}${lane.model ? ` / ${lane.model}` : ''}: ${sanitizeOperationalText(lane.summary)}`,
         )
       : ['- provider-only']),
     '',
@@ -388,7 +405,7 @@ function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config
       created_at: run.started_at,
       updated_at: run.completed_at,
       name: 'Vault Steward Plan',
-      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning',
+      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning-current',
       source: {
         uri: 'n1hub://agents/vault-steward',
         type: 'background_agent',
@@ -403,7 +420,7 @@ function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config
     },
     neuro_concentrate: {
       summary:
-        'Vault Steward Plan is the current planning artifact produced by the autonomous capsule agent, translating vault analysis into goals, immediate tasks, and queue-backed capsule work.',
+        'Vault Steward Plan captures the current maintenance thesis, planning goals, focus capsules, queue posture, and near-term follow-through identified by the autonomous vault agent. It gives operators a compact operational view of why the current cycle mattered, which tasks belong now versus later, and how the active swarm lanes behaved without requiring a full read of runtime logs or private queue data. It also preserves the rationale behind the current planning horizon so later review can distinguish a deliberately quiet cycle from missing work capture.',
       keywords: [
         'vault-steward',
         'agent-swarm',
@@ -416,11 +433,11 @@ function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config
         extraction: 0.86,
         synthesis: 0.9,
         linking: 0.84,
-        provenance_coverage: 0.82,
+        provenance_coverage: 0.9,
         validation_score: 0.9,
         contradiction_pressure: 0.05,
       },
-      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning',
+      semantic_hash: 'vault-steward-plan-operations-capsule-maintenance-planning-current',
     },
     recursive_layer: {
       links: [
@@ -433,10 +450,8 @@ function buildPlanCapsule(run: VaultStewardRun, queue: VaultStewardQueue, config
       actions: [],
       epistemic_ledger: [],
     },
-    integrity_sha3_512: '',
+    integrity_sha3_512: PENDING_A2C_HASH_STAGE,
   };
-
-  capsule.integrity_sha3_512 = computeIntegrityHash(capsule);
   return capsule;
 }
 

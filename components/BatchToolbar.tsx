@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useToast } from '@/contexts/ToastContext';
+import { getClientJsonAuthHeaders } from '@/lib/clientAuth';
 import { logClientAction } from '@/lib/clientActivity';
 import type { SovereignCapsule } from '@/types/capsule';
 
@@ -106,13 +107,9 @@ export default function BatchToolbar({
 
     setIsDeleting(true);
     try {
-      const token = localStorage.getItem('n1hub_vault_token');
       const res = await fetch('/api/capsules/batch', {
         method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
+        headers: getClientJsonAuthHeaders(),
         body: JSON.stringify({ capsuleIds: Array.from(selectedIds) }),
       });
 

@@ -7,7 +7,7 @@
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-07T10:22:14.212Z",
+    "updated_at": "2026-03-12T16:49:00Z",
     "name": "N1 Pass",
     "semantic_hash": "capsule-foundation-n1-pass-v1-subscription-tiers-entitlements",
     "priority": "medium",
@@ -22,7 +22,7 @@
     "content": "# N1 Pass\n\n## 1. Definition and Essence\nN1 Pass defines subscription tiers and entitlement bundles for premium capabilities across compute, support, and marketplace privileges. It standardizes benefits, billing cadence, and policy-controlled access upgrades.\n\n## 2. Core Attributes\n- `tier_catalog` available subscription levels and pricing\n- `benefit_matrix` capabilities unlocked per tier\n- `billing_cycle` monthly, annual, or custom cadence\n- `entitlement_checks` runtime access validation hooks\n- `upgrade_path` tier migration and proration behavior\n\n## 3. Lifecycle\nPasses are purchased, activated, verified on capability checks, upgraded or downgraded over time, and archived with complete billing and entitlement history.\n\n## 4. Integration\n- **Marketplace:** unlocks premium listing and distribution features.\n- **Boost:** can bundle compute accelerators by tier.\n- **Tokenomics:** aligns subscription economics with ecosystem value.\n- **Workspace:** surfaces active entitlements to users.\n\n## 5. Philosophical Alignment\nN1 Pass supports To Dig Deep by funding high-quality infrastructure while preserving transparent, explicit access policies.\n"
   },
   "neuro_concentrate": {
-    "summary": "N1 Pass in the Dream branch describes a more coherent subscription contract for the ecosystem. It pushes toward cleaner mapping between payment, entitlement, premium models, collaboration rights, recurring compute allowances, hosted inference, and agent-lane priority without scattering that logic across disconnected modules. The capsule matters because subscriptions become brittle when business rules are implicit. Dream therefore preserves N1 Pass as a future operating agreement where premium access is explicit, composable, and legible across the whole graph.",
+    "summary": "N1 Pass defines a more coherent subscription contract for the ecosystem. It pushes toward cleaner mapping between payment, entitlement, premium models, collaboration rights, recurring compute allowances, hosted inference, and agent-lane priority without scattering that logic across disconnected modules. The capsule matters because subscriptions become brittle when business rules are implicit. It therefore preserves N1 Pass as an operating agreement where premium access is explicit, composable, and legible across the whole graph.",
     "keywords": [
       "n1-pass",
       "subscription",
@@ -78,5 +78,5 @@
     "actions": [],
     "epistemic_ledger": []
   },
-  "integrity_sha3_512": "1687152784760417bb70eb4c8e73db5c9d12470dd7d2d40580fb7434563663cdb18ed08e5979b3eddecc2e84d62e5a514a7dc2dc3fabda18adb1e671f1b6e8de"
+  "integrity_sha3_512": "bce569c71d9760e568fc962e5b3189a6c600d4e9f5d39274add274b9cf02a9462bbe2ec413685cf6ac97a0a2bc6171613c6edb2918b8aa1e6d4b351bbc17ece5"
 }

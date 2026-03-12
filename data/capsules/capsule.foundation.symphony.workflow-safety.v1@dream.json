@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T01:20:00Z",
-    "updated_at": "2026-03-12T01:20:00Z",
+    "updated_at": "2026-03-12T18:32:00Z",
     "name": "Symphony Workflow Safety",
     "semantic_hash": "symphony-workflow-safety-policy-night-testing-security-governance",
     "source": {
@@ -75,9 +75,9 @@
         "at": "2026-03-12T01:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Symphony decomposition to isolate repo workflow law, safety posture, night gating, and verification guardrails from live runtime continuity."
+        "rationale": "Minted during Symphony decomposition to isolate repo workflow law, safety posture, night gating, and verification guardrails from live runtime continuity."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "52c8394d56788191e2fcc38d6477f02a1d665a6744d3b5f85aff453fb0682e9334b4e70458a1502e940719ac2bfd117c8c25e695ed3cc2c4353a925847413d7a"
 }

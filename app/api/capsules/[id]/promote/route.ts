@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { isAuthorized, checkRateLimit, resolveRole } from '@/lib/apiSecurity';
+import { isAuthorized, checkRateLimit, requireTrustedMutation, resolveRole } from '@/lib/apiSecurity';
 import { branchExists } from '@/lib/branching';
 import { dematerializeOverlayCapsule, readOverlayCapsule } from '@/lib/diff/branch-manager';
 import { mergeBranches } from '@/lib/diff/merge-engine';
@@ -10,6 +10,9 @@ export async function POST(
   request: Request,
   { params }: { params: Promise<{ id: string }> },
 ) {
+  const mutationError = requireTrustedMutation(request);
+  if (mutationError) return mutationError;
+
   if (!isAuthorized(request)) {
     return jsonError(401, 'Unauthorized');
   }

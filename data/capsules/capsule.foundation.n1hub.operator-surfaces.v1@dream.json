@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T23:58:00Z",
-    "updated_at": "2026-03-11T23:58:00Z",
+    "updated_at": "2026-03-12T17:54:00Z",
     "name": "N1Hub Operator Surfaces",
     "semantic_hash": "n1hub-operator-surfaces-assistant-chat-control-navigation-human",
     "source": {
@@ -71,9 +71,9 @@
         "at": "2026-03-11T23:58:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream N1Hub decomposition to isolate assistant, chat, control, and graph-reading surfaces from refinement lanes and daemon coordination."
+        "rationale": "Minted during N1Hub decomposition to isolate assistant, chat, control, and graph-reading surfaces from refinement lanes and daemon coordination."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "08d1e8420b164b13a2f5c596de463f38d5a43d1236ecdf25fcd8459b6f2aedd1531e8f9c4b13e6a7b14937e509eb7de23ab39177bac0da386bde05dede64b296"
 }

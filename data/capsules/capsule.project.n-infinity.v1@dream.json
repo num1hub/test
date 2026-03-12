@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-11T16:05:00Z",
+    "updated_at": "2026-03-12T18:05:00Z",
     "name": "N-Infinity Project",
     "semantic_hash": "capsule-project-infinity-iterations-autonomy-swarm-deployment-economics",
     "source": {
@@ -24,10 +24,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# N-Infinity Project\n\n## 1. Role\nN-Infinity Project will become the long-horizon control-plane program for a denser, more visible, and more economically disciplined autonomous swarm.\n\n## 2. Future Project Contract\nThe project will grow a richer iteration fabric where planning, mining, refinement, stewardship, review, repository execution, and promotion reinforce one another through explicit lane budgets, visible assignment maps, stronger evidence thresholds, and calmer baton exchange between lanes.\n\n## 3. Operational Consequence\nAutonomous service will widen only when proof, cooldown, rollback, and budget law are mature enough to support it. The swarm program will remain governed even as it becomes more continuous and more capable.\n\n## 4. Philosophical Alignment\nN-Infinity Project supports To Dig Deep by making autonomous scale answerable to explicit law, evidence, and economic discipline."
+    "content": "# N-Infinity Project\n\n## 1. Role\nN-Infinity Project is the long-horizon control-plane program for a denser, more visible, and more economically disciplined autonomous swarm.\n\n## 2. Project Contract\nThe project grows a richer iteration fabric where planning, mining, refinement, stewardship, review, repository execution, and promotion reinforce one another through explicit lane budgets, visible assignment maps, stronger evidence thresholds, and calmer baton exchange between lanes.\n\n## 3. Operational Consequence\nAutonomous service widens only when proof, cooldown, rollback, and budget law are mature enough to support it. The swarm program remains governed even as it becomes more continuous and more capable.\n\n## 4. Philosophical Alignment\nN-Infinity Project supports To Dig Deep by making autonomous scale answerable to explicit law, evidence, and economic discipline."
   },
   "neuro_concentrate": {
-    "summary": "N-Infinity Project defines the future control-plane program for a denser autonomous swarm: richer iteration fabric, explicit lane budgets, stronger evidence thresholds, calmer baton exchange, and more visible assignment maps across planning, mining, refinement, review, and repository execution.",
+    "summary": "N-Infinity Project defines the control-plane program for a denser autonomous swarm inside N1Hub. It covers richer iteration fabric, explicit lane budgets, stronger evidence thresholds, calmer baton exchange, and more visible assignment maps across planning, mining, refinement, review, and repository execution. The capsule matters because autonomous scale should widen only when proof, cooldown, rollback, and economic law are mature enough to support it. It treats swarm growth as a governed program rather than a pile of background loops.",
     "keywords": [
       "n-infinity",
       "agent-swarm",
@@ -95,9 +95,9 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the project states its doctrine directly."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "a052e89b8fd74b67d8080f66f015b1e6c6cc4b79974b3d3fecefaa7bf65efb303c809ca9eeb925d03cc81a023ebcfb303c36f52e482164341864dd6c3786c5aa"
 }

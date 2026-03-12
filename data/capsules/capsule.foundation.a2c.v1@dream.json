@@ -8,7 +8,7 @@
     "author": "Number One Projects",
     "created_at": "2026-02-27T12:00:00Z",
     "semantic_hash": "a2c-routing-readiness-refinement-candidate-admission-governance-fabric",
-    "updated_at": "2026-03-11T23:55:00Z",
+    "updated_at": "2026-03-12T17:22:00Z",
     "name": "A2C Pipeline",
     "priority": "high",
     "progress": 49,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Role\nA2C is the governed refinery that turns hostile, ambiguous, and high-volume source material into graph-admissible capsule state. It routes that refinery through five bounded sub-hubs so readiness law, material preparation, candidate construction, governance handoff, and admission mechanics remain explicit instead of collapsing into one 19-link parent directory.\n\n## 2. Routing Surfaces\n- `readiness-control` owns activation readiness, workspace recon, and deep intake risk scoring before stage work begins.\n- `material-preparation` owns ingest, normalize, segment, and extract as the early mechanical refinery line.\n- `candidate-construction` owns synthesize, link, and graph-aware swarm support for candidate assembly.\n- `governance-handoffs` owns branch posture, validation judgment, and controlled vault landing once evidence exists.\n- `admission-emission` owns hash, validate, and emit as the terminal admission mechanics.\n\n## 3. Parent Boundary\nThe parent A2C hub keeps only the top-level relationship to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five refinery sub-hubs. Detailed stage routing now flows through those sub-hubs so A2C remains the refinery contract for sovereign memory rather than a flat list of every stage and policy surface."
+    "content": "# A2C (Anything-to-Capsules): The Cognitive Refinery\n\n## 1. Role\nA2C is the governed refinery that turns hostile, ambiguous, and high-volume source material into graph-admissible capsule state. It routes that refinery through five bounded sub-hubs so readiness law, material preparation, candidate construction, governance handoff, and admission mechanics remain explicit instead of collapsing into one 19-link parent directory.\n\n## 2. Routing Surfaces\n- `readiness-control` owns activation readiness, workspace recon, and deep intake risk scoring before stage work begins.\n- `material-preparation` owns ingest, normalize, segment, and extract as the early mechanical refinery line.\n- `candidate-construction` owns synthesize, link, and graph-aware swarm support for candidate assembly.\n- `governance-handoffs` owns routing posture, validation judgment, and controlled vault landing once evidence exists.\n- `admission-emission` owns hash, validate, and emit as the terminal admission mechanics.\n\n## 3. Parent Boundary\nThe parent A2C hub keeps only the top-level relationship to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five refinery sub-hubs. Detailed stage routing now flows through those sub-hubs so A2C remains the refinery contract for sovereign memory rather than a flat list of every stage and policy surface."
   },
   "neuro_concentrate": {
-    "summary": "A2C routes the refinery through five bounded surfaces: readiness control, material preparation, candidate construction, governance handoffs, and admission emission. The parent keeps only top-level relationships to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five sub-hubs. This makes future refinery doctrine more legible because pre-mutation control, stage mechanics, policy routing, and terminal admission no longer hide inside one overloaded parent capsule. The parent now reads as a routing contract instead of a flat inventory.",
+    "summary": "A2C routes the refinery through five bounded surfaces: readiness control, material preparation, candidate construction, governance handoffs, and admission emission. The parent keeps only top-level relationships to CapsuleOS, DeepMine, N1Hub, To Dig Deep, the Mining Company frame, the A2C project envelope, and the five sub-hubs. This makes refinery doctrine more legible because pre-mutation control, stage mechanics, policy routing, and terminal admission no longer hide inside one overloaded parent capsule. The parent now reads as a routing contract instead of a flat inventory.",
     "keywords": [
       "a2c",
       "anything-to-capsules",
@@ -33,7 +33,7 @@
       "capsuleos",
       "deepmine",
       "demon-of-structure",
-      "branch-discipline",
+      "routing-discipline",
       "candidate-emission"
     ],
     "confidence_vector": {
@@ -99,15 +99,15 @@
         "at": "2026-03-11T16:05:00Z",
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
-        "rationale": "Stripped meta-commentary leakage. Dream now asserts future state directly."
+        "rationale": "Removed meta-language so the capsule states present refinery doctrine directly."
       },
       {
         "at": "2026-03-11T23:55:00Z",
         "event": "hub_decomposition_parent_refactor",
         "agent": "codex",
-        "rationale": "Refactored Dream A2C into five bounded sub-hubs so readiness control, stage mechanics, governance handoff, and admission surfaces no longer collapse into a 19-link parent hub."
+        "rationale": "Refactored A2C into five bounded sub-hubs so readiness control, stage mechanics, governance handoff, and admission surfaces no longer collapse into a 19-link parent hub."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "51419e09dc4e4b7250741d4f891f981750b58daab903b79edb06e8e468a139ba4e48b2af62e269e71a89fb3b0b397d1ff4b135f30750f19a4f4820fa4afec03a"
 }

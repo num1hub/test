@@ -7,7 +7,7 @@
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-12T03:20:00Z",
-    "updated_at": "2026-03-12T03:20:00Z",
+    "updated_at": "2026-03-12T17:36:00Z",
     "name": "Capsule Graph Maintenance Synthesis Evolution",
     "semantic_hash": "graph-maintenance-synthesis-evolution-gardener-innovator-voids-resonance",
     "source": {
@@ -63,9 +63,9 @@
         "at": "2026-03-12T03:20:00Z",
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
-        "rationale": "Minted during Dream Capsule Graph Maintenance decomposition to isolate resonance clustering, void mapping, and constructive synthesis pressure."
+        "rationale": "Minted during Capsule Graph Maintenance decomposition to isolate resonance clustering, void mapping, and constructive synthesis pressure."
       }
     ]
   },
-  "integrity_sha3_512": "PENDING_A2C_HASH_STAGE"
+  "integrity_sha3_512": "d68a66bdc95b16b2aa54abb927388df1373c1784204dfc9d904aca2a200c7ea17061ede552ff28f272acc05d24f57f2781463605ee6f95c676a4bd7bfe874409"
 }
