@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server';
 import { getPrivateOwnerLoginPath } from '@/lib/authConfig';
-import { AUTH_COOKIE_NAME, getSessionFromToken } from '@/lib/apiSecurity';
+import { getSessionFromTokenEdge } from '@/lib/apiSecurityEdge';
+import { AUTH_COOKIE_NAME } from '@/lib/apiSecurityShared';
 
 const PUBLIC_PAGE_PATHS = new Set(['/']);
 const PUBLIC_API_PATHS = new Set(['/api/auth', '/api/auth/logout', '/api/deploy/smoke']);
@@ -30,11 +31,11 @@ function isPublicAsset(pathname: string) {
   );
 }
 
-function getSession(request: NextRequest) {
-  return getSessionFromToken(request.cookies.get(AUTH_COOKIE_NAME)?.value);
+async function getSession(request: NextRequest) {
+  return getSessionFromTokenEdge(request.cookies.get(AUTH_COOKIE_NAME)?.value);
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const privateOwnerLoginPath = getPrivateOwnerLoginPath();
 
@@ -42,7 +43,7 @@ export function middleware(request: NextRequest) {
     return applySecurityHeaders(NextResponse.next());
   }
 
-  const session = getSession(request);
+  const session = await getSession(request);
 
   if (session && pathname === privateOwnerLoginPath) {
     const destination = request.nextUrl.clone();

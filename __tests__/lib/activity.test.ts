@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import * as fs from 'fs/promises'
 import { getRecentActivity, logActivity } from '@/lib/activity'
 
@@ -19,6 +19,10 @@ vi.mock('fs/promises', () => {
 describe('lib/activity.ts', () => {
   beforeEach(() => {
     vi.clearAllMocks()
+  })
+
+  afterEach(() => {
+    delete process.env.VERCEL
   })
 
   describe('logActivity', () => {
@@ -46,6 +50,16 @@ describe('lib/activity.ts', () => {
 
       expect(fs.mkdir).toHaveBeenCalledTimes(1)
       expect(fs.appendFile).toHaveBeenCalledTimes(1)
+    })
+
+    it('writes to /tmp on Vercel deployments', async () => {
+      process.env.VERCEL = '1'
+      vi.mocked(fs.access).mockResolvedValue(undefined)
+
+      await logActivity('login')
+
+      const [filePath] = vi.mocked(fs.appendFile).mock.calls[0]
+      expect(filePath).toMatch(/^\/tmp\/n1hub\/activity\.log$/)
     })
   })
 

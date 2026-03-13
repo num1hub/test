@@ -24,10 +24,16 @@ export interface ActivityEntry {
   details?: Record<string, unknown>;
 }
 
-const LOG_FILE_PATH = dataPath('activity.log');
+function getActivityLogPath() {
+  if (process.env.VERCEL) {
+    return path.join('/tmp', 'n1hub', 'activity.log');
+  }
+
+  return dataPath('activity.log');
+}
 
 const ensureLogDir = async () => {
-  const dir = path.dirname(LOG_FILE_PATH);
+  const dir = path.dirname(getActivityLogPath());
   try {
     await fs.access(dir);
   } catch {
@@ -65,7 +71,7 @@ export async function logActivity(
 
   try {
     await ensureLogDir();
-    await fs.appendFile(LOG_FILE_PATH, `${JSON.stringify(entry)}\n`, 'utf-8');
+    await fs.appendFile(getActivityLogPath(), `${JSON.stringify(entry)}\n`, 'utf-8');
   } catch (error) {
     console.error('Failed to write to activity log:', error);
   }
@@ -78,7 +84,7 @@ export async function getRecentActivity(limit: number = 50): Promise<ActivityEnt
   const boundedLimit = Number.isFinite(limit) ? Math.max(1, Math.min(500, Math.floor(limit))) : 50;
 
   try {
-    const fileContent = await fs.readFile(LOG_FILE_PATH, 'utf-8');
+    const fileContent = await fs.readFile(getActivityLogPath(), 'utf-8');
     const lines = fileContent
       .split('\n')
       .map((line) => line.trim())

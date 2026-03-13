@@ -1,24 +1,19 @@
-import crypto from 'crypto';
 import { NextResponse } from 'next/server';
+import crypto from 'crypto';
+import {
+  AUTH_COOKIE_NAME,
+  isSessionShape,
+  type AuthFactor,
+  type AuthSession,
+  type SessionRole,
+} from '@/lib/apiSecurityShared';
 
 type RateLimitBucket = { count: number; windowStart: number };
-
-export type SessionRole = 'owner' | 'editor' | 'viewer';
-export type AuthFactor = 'password' | 'access_code';
-export type AuthSession = {
-  sub: string;
-  role: SessionRole;
-  factors: AuthFactor[];
-  issuedAt: number;
-  expiresAt: number;
-};
 
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
 const SESSION_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
 const DEV_AUTH_SECRET = 'n1hub-local-dev-auth-secret';
 const MUTATION_METHODS = new Set(['POST', 'PUT', 'PATCH', 'DELETE']);
-
-export const AUTH_COOKIE_NAME = 'n1hub_session';
 
 function base64UrlEncode(value: string | Buffer) {
   return Buffer.from(value)
@@ -83,18 +78,8 @@ function getRequestToken(request: Request) {
   return getSessionCookieToken(request);
 }
 
-function isSessionShape(value: unknown): value is AuthSession {
-  if (!value || typeof value !== 'object') return false;
-
-  const session = value as Partial<AuthSession>;
-  return (
-    typeof session.sub === 'string' &&
-    (session.role === 'owner' || session.role === 'editor' || session.role === 'viewer') &&
-    Array.isArray(session.factors) &&
-    typeof session.issuedAt === 'number' &&
-    typeof session.expiresAt === 'number'
-  );
-}
+export { AUTH_COOKIE_NAME };
+export type { SessionRole, AuthFactor, AuthSession };
 
 export function getAuthToken(options: {
   sub?: string;
