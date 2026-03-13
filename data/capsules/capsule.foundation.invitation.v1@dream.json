@@ -1,33 +1,35 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.invitation.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-12T16:57:00Z",
+    "updated_at": "2026-03-13T17:14:30Z",
     "name": "Invitation",
-    "semantic_hash": "capsule-foundation-invitation-v1-onboarding-team-project-access",
+    "semantic_hash": "invitation-collaborative-mining-entry-scoped-trust-onboarding-boundaries",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Invitation\n\n## 1. Definition and Essence\nInvitation defines secure participation onboarding into teams and projects. It captures inviter authority, recipient identity claims, scope of access, expiry semantics, and acceptance outcomes for auditable collaboration.\n\n## 2. Core Attributes\n- `inviter_id` profile issuing the invitation\n- `recipient_handle` email or identity reference\n- `scope` team, project, or role-specific access grant\n- `expires_at` validity boundary for acceptance\n- `state` pending, accepted, declined, revoked\n\n## 3. Lifecycle\nInvitations are issued by authorized actors, validated against role and permission policy, accepted or declined by recipients, and preserved for compliance and audit reconstruction.\n\n## 4. Integration\n- **Team:** primary recipient container for membership.\n- **Role/Permission:** determines access granted upon acceptance.\n- **Profile:** resolves recipient identity and ownership.\n- **Project:** enables scoped contributor onboarding.\n\n## 5. Philosophical Alignment\nInvitation capsules align with To Dig Deep by making trust boundaries explicit and auditable during collaboration growth.\n"
+    "content": "# Invitation\n\n## 1. Definition and Essence\nInvitation defines secure participation onboarding into teams and projects. It captures inviter authority, recipient identity claims, scope of access, expiry semantics, and acceptance outcomes for auditable collaboration.\n\n## 2. Core Attributes\n- `inviter_id` profile issuing the invitation\n- `recipient_handle` email or identity reference\n- `scope` team, project, or role-specific access grant\n- `expires_at` validity boundary for acceptance\n- `state` pending, accepted, declined, revoked\n\n## 3. Lifecycle\nInvitations are issued by authorized actors, validated against role and permission policy, accepted or declined by recipients, and preserved for compliance and audit reconstruction.\n\n## 4. Integration\n- **Team:** primary recipient container for membership.\n- **Role/Permission:** determines access granted upon acceptance.\n- **Profile:** resolves recipient identity and ownership.\n- **Project:** enables scoped contributor onboarding.\n\n## 5. Collaborative Mining Entry Contracts\nCollaborative mining needs invitation law that is stricter than a generic access link. Before a new actor enters shared intake, project memory, or archive-adjacent work, Invitation must capture what kind of entry is being granted and what trust transition is actually occurring.\n\nIn collaborative mining contexts, Invitation owns:\n- entry contracts for gatherer, tagger, synthesizer, and orchestrator participation before those roles become active inside shared spaces\n- the difference between exploratory observation, scoped contribution, and merge-capable participation so new actors do not arrive with silent write power\n- trial or bounded entry paths for collaborators, mentors, reviewers, or outside specialists whose access should begin narrow and expand only after explicit review\n- the requirement that project onboarding preserve provenance, acknowledgement, and revocation history when shared mining work moves from invitation into active team or project memory\n\nInvitation does not replace Team, Permission, Archive, or Chat to Capsules. Team owns coordination, Permission owns capability envelopes, Archive owns cooled lineage, and Chat to Capsules owns triage conversation. Invitation owns the trust transition that moves an external person from outside the boundary into a reviewable shared-mining entry state.\n\n## 6. Philosophical Alignment\nInvitation capsules align with To Dig Deep by making trust boundaries explicit and auditable during collaboration growth.\n"
   },
   "neuro_concentrate": {
-    "summary": "Invitation defines a deliberate onboarding contract for multi-actor collaboration. It supports staged acceptance, richer trust negotiation, clearer temporary scopes, and tighter integration with role, team, and project policy before a collaborator becomes an active participant in the graph. The capsule matters because scaling collaboration safely requires more than sending access links. It therefore treats invitations as explicit membership-governance instruments with auditable trust boundaries, not just lightweight onboarding artifacts across the system.",
+    "summary": "Invitation defines the trust-transition contract that moves a collaborator from outside the boundary into a reviewable shared-mining entry state. It now makes collaborative mining entry explicit: what kind of participation is being granted, how narrow entry can begin, how provenance and acknowledgement are preserved during onboarding, and how invitation remains distinct from team coordination, permission envelopes, archive lineage, and chat triage. The capsule matters because serious collaboration starts with bounded trust transitions rather than with silent access links. Invitation therefore acts as the onboarding law for shared project memory, not just as a lightweight membership artifact.",
     "keywords": [
       "invitation",
-      "onboarding-artifact",
-      "trust-boundary",
-      "membership-history",
-      "role-assignment",
-      "expiry",
+      "collaborative-mining-entry",
+      "trust-transition",
+      "scoped-onboarding",
+      "role-entry",
+      "project-boundary",
+      "team-boundary",
       "team",
       "project",
-      "access-review"
+      "acknowledgement",
+      "revocation-history"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -37,7 +39,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-invitation-v1-onboarding-team-project-access"
+    "semantic_hash": "invitation-collaborative-mining-entry-scoped-trust-onboarding-boundaries"
   },
   "recursive_layer": {
     "links": [
@@ -56,10 +58,25 @@
       {
         "target_id": "capsule.foundation.project.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T17:14:30Z",
+        "event": "collaborative_mining_entry_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable collaborative-mining entry doctrine from data.txt so shared project and team memory can distinguish scoped onboarding, trust transition, and revocation lineage without importing cadence or marketing residue."
+      }
+    ]
   },
-  "integrity_sha3_512": "e0b2c3846d50921e2d2b371256feeba4ad11dc09dd956bf93b8317dd6c3dca2c09c0df26ea30506dcd06c9f534609576fd3047886682cfa59cbae7abbd9bfd8d"
+  "integrity_sha3_512": "99721b7cd5b34957f007ac41cbe7bf9843a70327167c5380d0967c26761fba04cff27acc0d1d005e1d1975855d2e4612968f595efdd04d9c018d2e47eef05780"
 }

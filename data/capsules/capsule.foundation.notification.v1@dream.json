@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.notification.v1",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-12T16:12:00Z",
+    "updated_at": "2026-03-13T16:06:00Z",
     "name": "Notification",
-    "semantic_hash": "capsule-foundation-notification-v1-delivery-alerts-channels-priority",
+    "semantic_hash": "notification-milestone-dormant-readiness-delivery-return-routing-channels",
     "priority": "medium",
     "progress": 38,
     "estimatedHours": 220,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Notification\n\n## 1. Role\nNotification is the mature attention system of N1Hub, designed to deliver fewer but more meaningful signals with explicit distinction between human prompts, machine-operational alerts, and mixed review events.\n\n## 2. Attention Contract\nThe notification layer classifies what kind of event is happening, how urgent it truly is, whether it belongs to day co-pilot or night autonomy, and whether the human needs interruption, quiet queuing, or later review.\n\n## 3. Operational Consequence\nAttention sharpens instead of fragmenting. Notification preserves return paths, escalation semantics, and operator clarity while reducing low-value noise across planning, assistant, control-plane, and runtime surfaces.\n\n## 4. Philosophical Alignment\nNotification supports To Dig Deep by making significance visible without allowing the second brain to decay into alert spam."
+    "content": "# Notification\n\n## 1. Role\nNotification is the mature attention system of N1Hub, designed to deliver fewer but more meaningful signals with explicit distinction between human prompts, machine-operational alerts, and mixed review events.\n\n## 2. Attention Contract\nThe notification layer classifies what kind of event is happening, how urgent it truly is, whether it belongs to day co-pilot or night autonomy, and whether the human needs interruption, quiet queuing, or later review.\n\n## 3. Operational Consequence\nAttention sharpens instead of fragmenting. Notification preserves return paths, escalation semantics, and operator clarity while reducing low-value noise across planning, assistant, control-plane, and runtime surfaces.\n\n## 4. Milestone and Revival Delivery\nThe Dream branch now makes explicit that Notification is the delivery layer for out-of-cockpit maturity signals once Dashboard, Milestone, and Suggestion Agent have already formed the operator-facing evidence.\n\nA clean notification surface may carry:\n- milestone transition alerts when a checkpoint is crossed, blocked, or still missing decisive evidence\n- dormant-insight revival nudges when neglected notes or clusters deserve bounded review rather than silent decay\n- readiness nudges when the next rational move is capture, restructuring, synthesis, automation, or review and the operator is not already inside the cockpit\n- return-path links that send the operator back into the exact dashboard view, suggestion packet, or evidence surface that justified the alert\n\nNotification does not own telemetry, reporting, or recommendation logic. Metric defines units, Analytics derives reporting, Milestone owns checkpoint evidence, Suggestion Agent owns ranked dormant-revival options, and Dashboard owns cockpit composition. Notification owns delivery timing, interruption posture, channel routing, and acknowledgement semantics once those upstream surfaces have already decided that a signal deserves attention.\n\nThis also means maturity delivery must stay non-gamified. Notification can make significance visible, but it must not mutate into streak pressure, badge spam, or synthetic urgency theater.\n\n## 5. Philosophical Alignment\nNotification supports To Dig Deep by making significance visible without allowing the second brain to decay into alert spam."
   },
   "neuro_concentrate": {
-    "summary": "Notification defines the attention system that delivers fewer but more meaningful signals across planner, assistant, runtime, and control-plane surfaces. It separates human prompts, machine-operational alerts, and mixed review events while also carrying urgency, escalation logic, return paths, and explicit attention classes. The capsule matters because a second brain decays when important events drown in undifferentiated noise. It keeps attention sharp by making significance, interruption posture, and follow-up routing legible instead of letting the system degrade into alert spam.",
+    "summary": "Notification defines the attention system that delivers fewer but more meaningful signals across planner, assistant, runtime, and control-plane surfaces. It now also makes milestone transitions, dormant-insight revival prompts, and readiness nudges explicit as out-of-cockpit delivery events once upstream evidence has already been formed by Dashboard, Milestone, and Suggestion Agent. The capsule matters because a second brain fails if significance stays trapped inside dashboards or decays into alert spam. Notification keeps delivery legible by owning interruption posture, return paths, acknowledgement semantics, and channel routing without stealing telemetry, recommendation, or checkpoint authority from the surfaces that generated the signal.",
     "keywords": [
       "notification",
       "delivery",
@@ -32,7 +32,11 @@
       "tracker",
       "assistant",
       "return-path",
-      "attention-class"
+      "attention-class",
+      "milestone-alerts",
+      "dormant-revival",
+      "readiness-nudges",
+      "dashboard-handoff"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -42,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-notification-v1-delivery-alerts-channels-priority"
+    "semantic_hash": "notification-milestone-dormant-readiness-delivery-return-routing-channels"
   },
   "recursive_layer": {
     "links": [
@@ -53,6 +57,18 @@
       {
         "target_id": "capsule.foundation.reminder.v1",
         "relation_type": "supports"
+      },
+      {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
@@ -102,8 +118,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Stripped future-meta phrasing so the capsule states present attention doctrine directly."
+      },
+      {
+        "at": "2026-03-13T16:06:00Z",
+        "event": "vault_maturity_notification_delivery_integrated",
+        "agent": "n1",
+        "rationale": "Integrated milestone alerts, dormant revival nudges, and readiness delivery semantics as notification-owned out-of-cockpit signals while leaving telemetry, recommendation, and checkpoint authority in their upstream capsules."
       }
     ]
   },
-  "integrity_sha3_512": "37c064b60b8bd7cea8af4b87bb3042b9eb17522812d1d39f52ea9b892eb0accfc8e1251044afe33e4d22a42fb9559360ad9e4d8b0f05a83b41431a4a206c552e"
+  "integrity_sha3_512": "e3ee6e51da4186f4d83b3c8c8b565876dd23314fd78cd39bb623ebb33ccc0ac5860f11da6985f40005d4699704ddce699dafa2f369a71e617828339c89b1ff0f"
 }

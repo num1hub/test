@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.milestone.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-12T16:05:00Z",
+    "updated_at": "2026-03-13T15:48:22Z",
     "name": "Milestone",
-    "semantic_hash": "milestone-key-date-marker-roadmap-checkpoint-gold-core",
+    "semantic_hash": "milestone-phase-gate-fztm-stage-checkpoints-readiness-evidence",
     "priority": "medium",
     "progress": 34,
     "estimatedHours": 132,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Role\nMilestone is a stricter phase-gate object for N1Hub, where checkpoints are tied to measurable readiness, stronger evidence bundles, and explicit decision boundaries.\n\n## 2. Milestone Contract\nA milestone does not merely mark a date on a roadmap. It asks whether a phase is truly crossed, delayed, or still speculative, and it carries the review and evidence posture needed to justify that answer.\n\n## 3. Operational Consequence\nRoadmaps gain sharper phase integrity because progress passes through verifiable checkpoints instead of being narrated as momentum. Milestones act as high-signal gates for planning review, tracker pressure, and promotion readiness.\n\n## 4. Philosophical Alignment\nMilestone supports To Dig Deep by turning long journeys into evidence-bearing checkpoints rather than stories of movement."
+    "content": "# Milestone: The Critical Checkpoint\n\n## 1. Role\nMilestone is a stricter phase-gate object for N1Hub, where checkpoints are tied to measurable readiness, stronger evidence bundles, and explicit decision boundaries.\n\n## 2. Milestone Contract\nA milestone does not merely mark a date on a roadmap. It asks whether a phase is truly crossed, delayed, or still speculative, and it carries the review and evidence posture needed to justify that answer.\n\n## 3. Operational Consequence\nRoadmaps gain sharper phase integrity because progress passes through verifiable checkpoints instead of being narrated as momentum. Milestones act as high-signal gates for planning review, tracker pressure, and promotion readiness.\n\n## 4. FZTM Stage Checkpoints\nMilestone can also express stage transitions for growth programs such as FZTM without reducing readiness to a date alone. In that pattern, a checkpoint is crossed only when the evidence bundle justifies the stage claim.\n\nA clean FZTM checkpoint bundle may include:\n- **Seed:** initial capture volume is real, an inbox or intake surface exists, and the system is no longer at zero.\n- **Sprout:** organizational structure exists through tags or folders, first low-risk automations are tested, and early links between notes appear.\n- **Tree:** the vault shows structural density through hundreds of nodes, meaningful semantic links, and a refined taxonomy.\n- **Forest:** automation, search, and reporting operate at scale, with recurring workflows and pattern surfacing supported by evidence.\n- **Ecosystem:** recursive improvement, collaboration, and self-sustaining review loops are active enough that the system compounds beyond simple accumulation.\n\nThis does not make Milestone the owner of raw telemetry. Metric defines units, Analytics derives reporting, and project hubs explain why the threshold matters. Milestone owns the decision boundary that says a stage was truly crossed.\n\n## 5. Philosophical Alignment\nMilestone supports To Dig Deep by turning long journeys into evidence-bearing checkpoints rather than stories of movement."
   },
   "neuro_concentrate": {
-    "summary": "Milestone defines the phase-gate object that marks whether a meaningful checkpoint has truly been crossed inside N1Hub. It carries measurable readiness, stronger evidence bundles, explicit decision boundaries, and clearer review posture before a phase is treated as crossed, delayed, or still speculative. The capsule matters because roadmaps lose integrity when progress is narrated as momentum instead of justified through verifiable checkpoints. It turns long journeys into evidence-bearing gates that sharpen planning review, tracker pressure, and promotion readiness across the system.",
+    "summary": "Milestone defines the phase-gate object that marks whether a meaningful checkpoint has truly been crossed inside N1Hub. It now also makes FZTM-style stage checkpoints explicit by showing how transitions such as Seed, Sprout, Tree, Forest, and Ecosystem should be treated as evidence-bearing gates rather than dates or motivational labels. The capsule matters because roadmaps lose integrity when progress is narrated as momentum instead of justified through verifiable readiness, stronger evidence bundles, and explicit decision boundaries. It sharpens planning review, tracker pressure, and promotion posture across the system.",
     "keywords": [
       "milestone",
       "checkpoint",
@@ -30,7 +30,10 @@
       "progress",
       "roadmap",
       "review",
-      "evidence"
+      "evidence",
+      "fztm",
+      "stage-checkpoint",
+      "readiness-gate"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +43,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "milestone-key-date-marker-roadmap-checkpoint-gold-core"
+    "semantic_hash": "milestone-phase-gate-fztm-stage-checkpoints-readiness-evidence"
   },
   "recursive_layer": {
     "links": [
@@ -73,6 +76,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.metric.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.capsuleos.v1",
         "relation_type": "depends_on"
       },
@@ -92,8 +103,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Stripped future-meta phrasing so the capsule states present planning doctrine directly."
+      },
+      {
+        "at": "2026-03-13T15:48:22Z",
+        "event": "fztm_stage_checkpoints_integrated",
+        "agent": "n1",
+        "rationale": "Integrated FZTM stage-transition checkpoints as milestone-owned evidence gates while leaving telemetry in Metric and scheduling in Planner and Tracker."
       }
     ]
   },
-  "integrity_sha3_512": "b106f3cc0da0d260442149270dc9e2d29bc1ec62f78529b6e12d0a87266145bb22a692913e11188cd1f7e2684ce9a42071725c2134713851cac1335f1a705a4e"
+  "integrity_sha3_512": "3306ea0973b042dc7e746679db6045cdb07497f1294b9ef2cea3b9e8617da9d66fafb16bb5e2f2e8584293e79c7d6f774dab4d88040532513273909d448b0901"
 }

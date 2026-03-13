@@ -1,33 +1,37 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.chat-to-capsules.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T22:05:00Z",
-    "updated_at": "2026-03-12T16:42:00Z",
+    "updated_at": "2026-03-13T16:21:22Z",
     "name": "Chat to Capsules",
-    "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation",
+    "semantic_hash": "chatcapsules-inbox-triage-multimodal-grounding-review-approval-routing",
     "priority": "high",
-    "progress": 16,
+    "progress": 24,
     "estimatedHours": 380,
-    "actualHours": 54,
+    "actualHours": 61,
     "dueDate": "2026-10-31",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined path by which a conversation can inspect capsules, summarize graph context, draft new capsules, refine existing ones, and delegate bounded actions into the deeper runtime.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_drafting` turns conversational intent into structured candidate capsules or edits.\n- `multimodal_ingest` treats text, file content, and voice transcripts as one ingress family.\n- `memory_alignment` keeps session continuity useful without confusing agent memory or vault truth.\n- `explainability` shows which capsules, prompts, or runtime paths informed the answer.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, or N-Infinity.\n- `planning_entry` allows chat to open bounded backlog work for later swarm execution.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the missing user-level bridge between Personal AI Assistant, AI Conversation Session, A2C, and the background-agent runtime. It gives the system a clear model for how users talk to the graph without collapsing serious graph work into shallow chat UX.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, delegable, and explicit about when it is answering, when it is planning, and when it is asking for mutation approval.\n"
+    "content": "# Chat to Capsules\n\n## 1. Definition and Essence\nChat to Capsules defines the user-facing operating pattern where natural language conversation becomes grounded capsule work inside N1Hub. It is not generic chat. It is the disciplined path by which a conversation can inspect capsules, summarize graph context, draft new capsules, refine existing ones, and delegate bounded actions into the deeper runtime.\n\n## 2. Core Responsibilities\n- `graph_grounding` keeps replies anchored to actual capsule references rather than free-floating model output.\n- `capsule_drafting` turns conversational intent into structured candidate capsules or edits.\n- `multimodal_ingest` treats text, file content, and voice transcripts as one ingress family.\n- `memory_alignment` keeps session continuity useful without confusing agent memory or vault truth.\n- `explainability` shows which capsules, prompts, or runtime paths informed the answer.\n- `delegation_entry` allows a conversation to hand bounded work to DeepMine, Symphony, or N-Infinity.\n- `planning_entry` allows chat to open bounded backlog work for later swarm execution.\n- `auditability` preserves enough session structure to reconstruct how chat turned into action.\n\n## 3. N1Hub Role\nIn N1Hub this capsule is the missing user-level bridge between Personal AI Assistant, AI Conversation Session, A2C, and the background-agent runtime. It gives the system a clear model for how users talk to the graph without collapsing serious graph work into shallow chat UX.\n\n## 4. Boundary\nChat to Capsules is not the graph itself and not the daemon. It is the conversational ingress surface that must stay grounded, inspectable, delegable, and explicit about when it is answering, when it is planning, and when it is asking for mutation approval.\n\n## 5. Inbox and To-Sort Triage\nChat to Capsules also owns the conversational review loop for imported but not yet canonical material. Users can bring inbox items, to-sort buffers, voice transcripts, clipped snippets, unsorted notes, and migration batches into chat and ask for grounded triage: summarize, tag, cluster, compare, defer, archive, or prepare capsule-grade mutations.\n\nThis surface does not own transport ingestion itself. Integrations owns connector doctrine, Archive owns retention and restoration policy, and Suggestion Agent owns ranked revival options. Chat to Capsules owns the review conversation that turns unsorted material into a legible next decision with explicit approval boundaries.\n"
   },
   "neuro_concentrate": {
-    "summary": "Chat to Capsules defines a richer conversational ingress where graph grounding, drafting, explainability, planning, and delegation feel native rather than bolted on. It strengthens memory continuity, evidence display, conversion from chat into structured capsule work, and handoff into DeepMine, Symphony, or N-Infinity. The capsule matters because user trust in AI depends on seeing how conversation maps to real graph action. Chat to Capsules therefore serves as the graph-native dialogue surface that turns language into legible, governed work.",
+    "summary": "Chat to Capsules defines the graph-native dialogue surface that turns language into legible, governed work inside N1Hub. Beyond grounding, drafting, explainability, planning, and delegation, it now explicitly covers inbox and to-sort triage for imported files, voice transcripts, clipped snippets, and unsorted notes. The capsule matters because user trust depends on seeing how raw incoming material becomes a reviewable next decision instead of disappearing into hidden ingestion or silent automation. Chat to Capsules therefore owns the conversational review loop that converts unsorted material into explicit capsule-grade options with clear approval boundaries.",
     "keywords": [
       "chat-to-capsules",
       "conversation",
       "capsule-grounding",
       "assistant",
+      "inbox-triage",
+      "to-sort",
+      "voice-transcripts",
+      "unsorted-notes",
       "delegation",
       "a2c",
       "graph-actions",
@@ -43,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "chat-to-capsules-conversation-grounding-graph-actions-delegation"
+    "semantic_hash": "chatcapsules-inbox-triage-multimodal-grounding-review-approval-routing"
   },
   "recursive_layer": {
     "links": [
@@ -84,6 +88,18 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.background-agent-runtime.v1",
         "relation_type": "references"
       },
@@ -115,8 +131,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed meta-summary framing so Chat to Capsules states its graph-native dialogue doctrine directly."
+      },
+      {
+        "at": "2026-03-13T16:21:22Z",
+        "event": "inbox_triage_ingress_integrated",
+        "agent": "n1",
+        "rationale": "Integrated inbox and to-sort triage from data.txt as a conversational review surface for imported files, voice transcripts, and unsorted notes without mixing transport doctrine, retention policy, or ranked revival ownership."
       }
     ]
   },
-  "integrity_sha3_512": "d791c396be4fb4e5fb07774d3995e300180930d557fb1a8e1ba744f7284a4457ebb3064c54799c1cb0fd25faa96a9dd6a0d00a83e2bcc2f64ef0ba1820e6aa1d"
+  "integrity_sha3_512": "a67c8048ff8601c51430569431ab159402df7109e99dccdbd08841eaed4f77cd55be53acdc963dae6c76f6202f763bd9750ca9353465c6c7d06d53ebf4dea48d"
 }

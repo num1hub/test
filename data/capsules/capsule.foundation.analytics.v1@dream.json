@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.analytics.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-12T16:36:00Z",
+    "updated_at": "2026-03-13T15:38:42Z",
     "name": "Analytics",
-    "semantic_hash": "capsule-foundation-analytics-v1-reports-metrics-dashboard-tracker",
+    "semantic_hash": "analytics-fztm-vault-maturity-reporting-derived-progress-evidence",
     "priority": "medium",
     "progress": 35,
     "estimatedHours": 300,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Analytics\n\n## 1. Definition and Essence\nAnalytics defines the aggregation engine that transforms operational events and metric capsules into reports, trends, and diagnostics. It supports decision-making by converting raw telemetry into interpretable longitudinal insight across projects and modules.\n\n## 2. Core Attributes\n- `aggregation_jobs` configured metric rollup processes\n- `report_definitions` canonical report templates and filters\n- `trend_models` moving averages and anomaly detection profiles\n- `retention_policy` historical storage and archive boundaries\n- `consumers` dashboards, assistant prompts, and governance views\n\n## 3. Lifecycle\nAnalytics ingests tracker and planner signals, computes derived metrics, publishes report artifacts, and refreshes dashboard surfaces on schedule or event triggers.\n\n## 4. Integration\n- **Workspace:** provides shared analytical intelligence surface.\n- **Tracker and Metric capsules:** primary telemetry providers.\n- **Dashboard:** visualizes output in interactive widgets.\n- **Personal AI Assistant:** uses analytics for recommendations.\n\n## 5. Philosophical Alignment\nAnalytics furthers To Dig Deep by replacing intuition-only judgments with auditable patterns and evidence-backed retrospection.\n"
+    "content": "# Analytics\n\n## 1. Definition and Essence\nAnalytics defines the aggregation engine that transforms operational events and metric capsules into reports, trends, and diagnostics. It supports decision-making by converting raw telemetry into interpretable longitudinal insight across projects and modules.\n\n## 2. Core Attributes\n- `aggregation_jobs` configured metric rollup processes\n- `report_definitions` canonical report templates and filters\n- `trend_models` moving averages and anomaly detection profiles\n- `retention_policy` historical storage and archive boundaries\n- `consumers` dashboards, assistant prompts, and governance views\n\n## 3. Lifecycle\nAnalytics ingests tracker and planner signals, computes derived metrics, publishes report artifacts, and refreshes dashboard surfaces on schedule or event triggers.\n\n## 4. Integration\n- **Workspace:** provides shared analytical intelligence surface.\n- **Tracker and Metric capsules:** primary telemetry providers.\n- **Dashboard:** visualizes output in interactive widgets.\n- **Personal AI Assistant:** uses analytics for recommendations.\n\n## 5. Vault-Maturity Reporting\nThe Dream branch now makes explicit that Analytics can derive non-gamified progress evidence for projects such as FZTM from the metric layer rather than relying on streaks, badges, or motivational dashboards.\n\nA clean vault-maturity reporting bundle may include:\n- stage-transition reports showing when the vault appears to move from Seed to Sprout, Tree, Forest, or Ecosystem\n- growth rollups that compare byte accumulation, structural density, and synthesis output across reporting windows\n- milestone evidence summaries that explain why a stage claim is justified instead of presenting raw numbers without interpretation\n- readiness diagnostics that tell the operator whether stronger automation, review pressure, or manual restructuring is the rational next move\n\nAnalytics owns the derived report logic for those surfaces. Metric defines the measurable units underneath them, and Dashboard chooses how much of that evidence should be shown at once.\n\n## 6. Philosophical Alignment\nAnalytics furthers To Dig Deep by replacing intuition-only judgments with auditable patterns and evidence-backed retrospection.\n"
   },
   "neuro_concentrate": {
-    "summary": "Analytics defines deeper evidence synthesis across execution, project health, capsule stewardship, and long-horizon learning. It points toward stronger trend modeling, better retrospective intelligence, and more meaningful rollups that inform planning instead of merely describing the past. The capsule matters because analytical surfaces become valuable when they convert telemetry into judgment. Analytics therefore provides the evidence architecture for wiser prioritization, learning, governance, operational retrospection, and cumulative decision memory that stays useful over time.",
+    "summary": "Analytics defines the evidence-synthesis layer that turns telemetry into reports, trends, and decision support across execution, project health, and stewardship. It now also makes vault-maturity reporting explicit for initiatives such as FZTM by naming stage-transition reports, growth rollups, milestone evidence summaries, and readiness diagnostics as legitimate derived outputs rather than gamified progress theater. The capsule matters because analytical surfaces become useful only when they convert raw measurements into judgment about what is changing, what is maturing, and what should happen next.",
     "keywords": [
       "analytics",
       "reports",
@@ -30,7 +30,11 @@
       "dashboard",
       "tracker",
       "planner",
-      "insights"
+      "insights",
+      "fztm",
+      "vault-maturity",
+      "progress-evidence",
+      "derived-reporting"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-analytics-v1-reports-metrics-dashboard-tracker"
+    "semantic_hash": "analytics-fztm-vault-maturity-reporting-derived-progress-evidence"
   },
   "recursive_layer": {
     "links": [
@@ -71,6 +75,14 @@
       {
         "target_id": "capsule.foundation.dashboard.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.metric.v1",
+        "relation_type": "depends_on"
       }
     ],
     "actions": [],
@@ -80,8 +92,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed meta-summary phrasing so Analytics states its evidence-synthesis doctrine directly."
+      },
+      {
+        "at": "2026-03-13T15:38:42Z",
+        "event": "vault_maturity_reporting_integrated",
+        "agent": "n1",
+        "rationale": "Integrated non-gamified FZTM vault-maturity reporting as an analytics-layer example bundle derived from metric telemetry and milestone evidence."
       }
     ]
   },
-  "integrity_sha3_512": "fbb21d9c3e4c156d7404d9c43eb89928b2a1fa05d9e02405a5f9f36f28595275e192c8876758576959753bf724d97ed45b9113ae88b5e0d5f5d62a86c2dc5d60"
+  "integrity_sha3_512": "941d7e6bcc72d2fae9997bc928f761aae8e9dd854af65b95d28b04ef6274c0cfa730e995b37bfca5959f2dd405874de48da7d73ad5287722380f2ad85239af1a"
 }

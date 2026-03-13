@@ -1,23 +1,23 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.permission.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-12T16:42:00Z",
+    "updated_at": "2026-03-13T16:57:18Z",
     "name": "Permission",
-    "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write",
+    "semantic_hash": "permission-collective-mining-capability-envelopes-mergereview-archive-scope",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Permission\n\n## 1. Definition and Essence\nPermission defines fine-grained capability semantics such as read, write, execute, and administrative rights. It enables policy-driven access control across capsules while preserving auditability and least-privilege governance.\n\n## 2. Core Attributes\n- `permission_key` canonical capability identifier\n- `resource_scope` capsule or module boundary affected\n- `grant_conditions` policy predicates for assignment\n- `revocation_rules` conditions for automatic or manual removal\n- `audit_requirements` logging and review obligations\n\n## 3. Lifecycle\nPermissions are granted through role bindings or direct policy, checked on every protected operation, and continuously audited for least-privilege compliance.\n\n## 4. Integration\n- **Role:** groups permissions into reusable authority bundles.\n- **Project and Team:** enforces scoped collaboration rights.\n- **Workspace:** secures module operations and settings.\n- **Architect Override:** provides exceptional audited bypass path.\n\n## 5. Philosophical Alignment\nPermission capsules operationalize To Dig Deep by enforcing rigorous trust boundaries around sovereign knowledge mutation.\n"
+    "content": "# Permission\n\n## 1. Definition and Essence\nPermission defines fine-grained capability semantics such as read, write, execute, and administrative rights. It enables policy-driven access control across capsules while preserving auditability and least-privilege governance.\n\n## 2. Core Attributes\n- `permission_key` canonical capability identifier\n- `resource_scope` capsule or module boundary affected\n- `grant_conditions` policy predicates for assignment\n- `revocation_rules` conditions for automatic or manual removal\n- `audit_requirements` logging and review obligations\n\n## 3. Lifecycle\nPermissions are granted through role bindings or direct policy, checked on every protected operation, and continuously audited for least-privilege compliance.\n\n## 4. Integration\n- **Role:** groups permissions into reusable authority bundles.\n- **Project and Team:** enforces scoped collaboration rights.\n- **Workspace:** secures module operations and settings.\n- **Architect Override:** provides exceptional audited bypass path.\n\n## 5. Collective Mining Capability Envelopes\nShared knowledge-mining systems need more than generic read and write flags. In collective mining contexts, permission law must distinguish:\n- capture authority: who may ingest raw notes, transcripts, links, and source artifacts into shared intake surfaces\n- taxonomy authority: who may tag, rename, split, or merge cluster structure without silently rewriting shared meaning\n- synthesis authority: who may turn clusters into frameworks, guides, or project-facing outputs\n- review authority: who may approve, reject, or request refinement on AI-generated summaries, links, and merge proposals\n- archive authority: who may retire, quarantine, or restore shared material with provenance preserved\n- sensitive-scope authority: who may view or mutate capsules carrying privacy, commercial, or restricted-team boundaries\n\nThese capability envelopes do not replace role, team, or project governance. They give collaborative mining a precise access grammar so gathering, tagging, synthesis, contradiction review, and archive actions remain attributable and least-privilege instead of collapsing into one broad contributor right.\n\n## 6. Philosophical Alignment\nPermission capsules operationalize To Dig Deep by enforcing rigorous trust boundaries around sovereign knowledge mutation.\n"
   },
   "neuro_concentrate": {
-    "summary": "Permission defines the capability grammar that keeps access, delegation, emergency controls, and audit obligations precise enough for serious graph governance. It sharpens rights boundaries across human roles, agent actions, economic operations, and exceptional override paths so the system can distinguish allowed work from forbidden mutation with less ambiguity and better traceability. The capsule matters because sovereignty is won or lost at the level of exact permitted actions rather than abstract trust claims. It therefore acts as a control language for disciplined graph governance, not merely the smallest current access unit.",
+    "summary": "Permission defines the capability grammar that keeps access, delegation, emergency controls, and audit obligations precise enough for serious graph governance. It now also names collaborative mining capability envelopes for capture, taxonomy mutation, synthesis, review, archive, and sensitive-scope access so shared knowledge work can distinguish what different contributors may actually do instead of collapsing all collaboration into broad read or write rights. The capsule matters because sovereignty is won or lost at the level of exact permitted actions rather than abstract trust claims. It therefore acts as a control language for disciplined graph governance, not merely the smallest current access unit.",
     "keywords": [
       "permission",
       "capability-unit",
@@ -27,7 +27,10 @@
       "auditability",
       "scope",
       "governance",
-      "security"
+      "security",
+      "collaborative-mining",
+      "merge-review",
+      "archive-authority"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -37,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-permission-v1-access-control-read-write"
+    "semantic_hash": "permission-collective-mining-capability-envelopes-mergereview-archive-scope"
   },
   "recursive_layer": {
     "links": [
@@ -56,10 +59,25 @@
       {
         "target_id": "capsule.foundation.team.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T16:57:18Z",
+        "event": "collective_mining_capability_envelopes_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable shared-mining capability envelopes from data.txt so collaborative capture, taxonomy mutation, synthesis, review, and archive actions can stay least-privilege without importing timing or marketing residue."
+      }
+    ]
   },
-  "integrity_sha3_512": "ab0999dda5688fc2c0c720a64c1c4ea2f9570eee1bc2e744e902c948a5de43248ac6de4fcf2457c2ee0243ab8d62606dfd64987bba3b7b5a0688ed80d212c10f"
+  "integrity_sha3_512": "f06e8388ef9c430cada19f09e1460096f7240e08007ef6e1e06e6d111c1d0cf2e602e0ea040784e6ea9e0df22269a282408138b5a714d511e3e9b1a37d4f2e99"
 }

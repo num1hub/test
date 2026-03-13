@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.metric.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-12T16:36:00Z",
+    "updated_at": "2026-03-13T15:11:12Z",
     "name": "Metric",
-    "semantic_hash": "capsule-foundation-metric-v1-analytics-tracker-dashboard-kpi",
+    "semantic_hash": "metric-fztm-vault-maturity-telemetry-thresholds-evidence-grammar",
     "priority": "medium",
     "progress": 34,
     "estimatedHours": 190,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Metric\n\n## 1. Definition and Essence\nMetric defines a measurable indicator capsule used for planning diagnostics, tracker analytics, and dashboard reporting. It standardizes value semantics, period windows, aggregation methods, and threshold triggers so productivity signals remain comparable across projects.\n\n## 2. Core Attributes\n- `metric_name` canonical identifier for indicator definition\n- `value` numeric observation with unit metadata\n- `window` time period associated with measurement\n- `aggregation` sum, average, percentile, trend strategy\n- `thresholds` configured warning and critical bounds\n\n## 3. Lifecycle\nMetrics are generated from operational events, aggregated over configured windows, visualized in dashboards, and persisted for historical trend analysis and anomaly detection.\n\n## 4. Integration\n- **Tracker:** primary source for execution telemetry.\n- **Analytics:** aggregates metrics into reports and insights.\n- **Dashboard:** renders metric widgets and trend cards.\n- **Project Hubs:** consumes metrics for health assessment.\n\n## 5. Philosophical Alignment\nMetrics apply To Dig Deep by replacing vague impressions with measurable evidence that can guide disciplined improvement.\n"
+    "content": "# Metric\n\n## 1. Definition and Essence\nMetric defines a measurable indicator capsule used for planning diagnostics, tracker analytics, and dashboard reporting. It standardizes value semantics, period windows, aggregation methods, and threshold triggers so productivity signals remain comparable across projects.\n\n## 2. Core Attributes\n- `metric_name` canonical identifier for indicator definition\n- `value` numeric observation with unit metadata\n- `window` time period associated with measurement\n- `aggregation` sum, average, percentile, trend strategy\n- `thresholds` configured warning and critical bounds\n\n## 3. Lifecycle\nMetrics are generated from operational events, aggregated over configured windows, visualized in dashboards, and persisted for historical trend analysis and anomaly detection.\n\n## 4. Integration\n- **Tracker:** primary source for execution telemetry.\n- **Analytics:** aggregates metrics into reports and insights.\n- **Dashboard:** renders metric widgets and trend cards.\n- **Project Hubs:** consumes metrics for health assessment.\n\n## 5. Vault-Maturity Telemetry\nThe Dream branch now makes explicit that Metric can define vault-maturity telemetry for initiatives such as FZTM without importing gamified streaks, badges, or motivational scoring.\n\nA clean FZTM-aligned metric bundle may include:\n- `vault_volume_mb` to track corpus size against stage thresholds such as `0-1 MB`, `1-10 MB`, `10-100 MB`, `100 MB-1 GB`, and `1 GB+`\n- `linked_note_count` or `interconnection_density` to show whether byte growth is turning into usable graph structure\n- `synthesis_output_count` to measure whether guides, frameworks, or summaries are being produced from accumulated material\n- `automation_readiness_stage` as a derived status signal that reflects whether the vault has enough structure to justify stronger background assistance\n\nThe metric layer owns the measurable grammar of those signals. Project hubs decide why they matter, and Tracker decides how they route into execution pressure and review surfaces.\n\n## 6. Philosophical Alignment\nMetrics apply To Dig Deep by replacing vague impressions with measurable evidence that can guide disciplined improvement.\n"
   },
   "neuro_concentrate": {
-    "summary": "Metric defines a richer evidence primitive for the workspace. It describes how health, velocity, quality, capsule integrity, and agent behavior can be measured with clearer windows, scopes, and thresholds. The capsule matters because analytics and dashboards become intelligent only when the units underneath them are well designed. Metric therefore supplies a measurement grammar for wiser planning, stewardship, governance, reusable evidence, longitudinal comparison, and cross-lane accountability across assistant, planner, and maintenance lanes.",
+    "summary": "Metric defines the evidence grammar used to measure health, velocity, quality, capsule integrity, and agent behavior across the workspace. It now also makes vault-maturity telemetry explicit for initiatives such as FZTM by naming the kinds of signals that can track byte growth, structural density, synthesis output, and automation readiness without collapsing into gamified streak logic. The capsule matters because analytics and dashboards become intelligent only when the units underneath them are well designed, scoped, and tied to real thresholds instead of vague impressions.",
     "keywords": [
       "metric",
       "analytics",
@@ -30,7 +30,11 @@
       "dashboard",
       "kpi",
       "measurement",
-      "trend"
+      "trend",
+      "fztm",
+      "vault-maturity",
+      "telemetry",
+      "thresholds"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-metric-v1-analytics-tracker-dashboard-kpi"
+    "semantic_hash": "metric-fztm-vault-maturity-telemetry-thresholds-evidence-grammar"
   },
   "recursive_layer": {
     "links": [
@@ -71,6 +75,10 @@
       {
         "target_id": "capsule.foundation.project.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -80,8 +88,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed meta-summary phrasing so Metric states its measurement doctrine directly."
+      },
+      {
+        "at": "2026-03-13T15:11:12Z",
+        "event": "vault_maturity_telemetry_integrated",
+        "agent": "n1",
+        "rationale": "Integrated FZTM-aligned vault-maturity telemetry as a metric-layer example bundle while leaving gamified progress mechanics out of capsule law."
       }
     ]
   },
-  "integrity_sha3_512": "8c9360e6f3841c3b2e6ebb653dd4be80a4f464c8ddd9eca298055d72e6800398ae8a87fc0434078f792b11d4c83f2edc1790dc3236b0b4ea0203ff354cfbc13c"
+  "integrity_sha3_512": "8e5dfea51c90e38c18152601e99eb95b4bfb85ee3c6c467c4ce557c70d942bc5ec8a736130c4b1845af2f77d1f3f1aa618bc5d1e680c2a50ea2a5d1c55f138be"
 }

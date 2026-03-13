@@ -1,35 +1,41 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.archive.v1",
-    "version": "1.2.0",
+    "version": "1.4.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-12T16:36:00Z",
+    "updated_at": "2026-03-13T17:11:29Z",
     "name": "Archive",
-    "semantic_hash": "capsule-foundation-archive-v1-retention-restoration-history-tracker",
+    "semantic_hash": "archive-import-batches-collaborative-restore-cooled-lineage-return",
     "priority": "low",
-    "progress": 31,
+    "progress": 44,
     "estimatedHours": 180,
-    "actualHours": 40,
+    "actualHours": 52,
     "dueDate": "2026-09-30",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed or inactive capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal or governance retention constraints\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores immutable historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context.\n\n## 4. Integration\n- **Workspace:** keeps active view clean while retaining memory.\n- **Tracker:** triggers archival transitions on completion windows.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves governance trace across lifecycle changes.\n\n## 5. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time.\n"
+    "content": "# Archive\n\n## 1. Definition and Essence\nArchive defines long-term retention, retrieval, and restoration policies for completed or inactive capsules. It preserves history without cluttering active workspaces, while maintaining searchable and auditable continuity across project lifecycles.\n\n## 2. Core Attributes\n- `archive_policy` rules for when capsules transition to archive\n- `retention_tier` storage class and cost/performance profile\n- `restore_workflow` conditions and steps for reactivation\n- `search_index_refs` pointers to archived retrieval indices\n- `compliance_flags` legal or governance retention constraints\n\n## 3. Lifecycle\nArchive receives completed capsules according to policy, stores immutable historical records, supports filtered retrieval, and allows controlled restoration when historical work must return to active context.\n\n## 4. Integration\n- **Workspace:** keeps active view clean while retaining memory.\n- **Tracker:** triggers archival transitions on completion windows.\n- **Analytics:** consumes archived data for longitudinal trends.\n- **Audit Log:** preserves governance trace across lifecycle changes.\n\n## 5. Import-Batch Retention and Restore Lineage\nArchive also owns cold-history retention for imported but not yet canonical material once a staging batch leaves active triage. That includes inbox or to-sort batches, normalized source snapshots, deferred migration bundles, and reviewed-but-not-promoted material that should stay recoverable without remaining in the live cockpit.\n\nArchive does not own transport ingestion, conversational triage, or ranked revival logic. Integrations owns import doctrine, Chat to Capsules owns review conversation, and Suggestion Agent owns resurfacing options. Archive owns the retained lineage after those surfaces decide a batch should cool down without being forgotten.\n\nA clean archive record for staged imports should preserve:\n- source provenance and original import batch identity\n- normalization state and any transformation notes\n- restoration path back into chat triage, dashboard review, or governed promotion\n- acknowledgment of whether the batch was deferred, partially promoted, merged, or archived untouched\n\n## 6. Collaborative Restore and Cooled Lineage\nArchive also owns the colder lineage of shared project and team memory once collaborative work is no longer active enough to stay in live coordination surfaces. This is not the same as deleting, forgetting, or flattening the work into one final artifact. It is the decision to cool shared memory while preserving enough structure that it can later be reopened lawfully.\n\nFor collaborative restore, Archive should preserve:\n- contributor lineage across project, team, and profile references so restored material keeps accountable human ownership\n- review state and merge state so reopened clusters do not return as context-free text blobs\n- the distinction between project memory, team memory, and archive memory once a shared workstream cools down\n- restore paths back into project review, dashboard visibility, or conversational triage when previously cooled material becomes relevant again\n\nArchive does not own invitation contracts, capability envelopes, or active team coordination. Invitation governs trust transition, Permission governs what each actor may do, Team governs live collaboration, and Project governs accountable delivery memory. Archive owns the cooled lineage that lets shared work leave the hot path without losing restoration integrity.\n\n## 7. Philosophical Alignment\nArchive serves To Dig Deep by preserving the full excavation history, enabling reflection, learning, and accountable reuse over time.\n"
   },
   "neuro_concentrate": {
-    "summary": "Archive defines a deeper long-memory system for workspace retention, restoration, and historical retrieval. It sets more deliberate retention tiers, cleaner restoration rules, and smarter historical recall so dormant knowledge can re-enter active context when conditions change. The capsule matters because a second brain must not only remember more, but recover the right memory at the right time. Archive therefore stands as a retention discipline rather than mere cold storage, keeping dormant history operationally recoverable when later work needs lineage, evidence, or reuse.",
+    "summary": "Archive defines the long-memory retention and restoration discipline for N1Hub, including both imported staging material and cooled collaborative work that leaves active project or team coordination without becoming disposable. It preserves source provenance, import-batch identity, contributor lineage, review state, merge state, and restore paths back into chat triage, dashboard review, or accountable project memory when previously cooled material becomes relevant again. The capsule matters because a serious second brain should not force a false choice between clutter and forgetting. Archive therefore turns deferred and cooled work into recoverable lineage instead of letting collaborative history vanish once active attention moves elsewhere.",
     "keywords": [
       "archive",
       "retention",
       "restoration",
-      "history",
-      "tracker",
-      "analytics",
+      "import-batch",
+      "collaborative-restore",
+      "cooled-lineage",
+      "lineage",
+      "provenance",
+      "project-memory",
+      "team-memory",
+      "review-state",
+      "dashboard-return",
       "workspace"
     ],
     "confidence_vector": {
@@ -40,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-archive-v1-retention-restoration-history-tracker"
+    "semantic_hash": "archive-import-batches-collaborative-restore-cooled-lineage-return"
   },
   "recursive_layer": {
     "links": [
@@ -73,6 +79,26 @@
         "relation_type": "depends_on"
       },
       {
+        "target_id": "capsule.foundation.integrations.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.chat-to-capsules.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.project.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "part_of"
       }
@@ -84,8 +110,20 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed meta-summary phrasing so Archive states retention doctrine directly."
+      },
+      {
+        "at": "2026-03-13T16:34:08Z",
+        "event": "import_batch_retention_lineage_integrated",
+        "agent": "n1",
+        "rationale": "Integrated retention and restore-lineage doctrine for staged import batches from data.txt so deferred inbox and to-sort material can cool down without losing provenance or return paths."
+      },
+      {
+        "at": "2026-03-13T17:11:29Z",
+        "event": "collaborative_restore_lineage_integrated",
+        "agent": "n1",
+        "rationale": "Integrated archive-owned collaborative restore doctrine from data.txt so cooled project and team memory can preserve contributor lineage, review state, and lawful return paths without importing invitation, permission, or timing law."
       }
     ]
   },
-  "integrity_sha3_512": "b5391a710e17d5e37ffabfa85bebf42b46334f4c1248940dfa8a85ebc0a598d69fe24fe1cca3a5df25a08745fb78746655b9fd29df64716d49664979ce634daa"
+  "integrity_sha3_512": "efd99890c120b24411f8d0cb3b17988e9463027ec32d2185df085a3428096af4314b2b1d58602b466ba9fca53bb7ba3e3789ae833695f0ed3f9b8bd7f6d19de3"
 }

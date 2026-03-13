@@ -1,23 +1,23 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.role.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-12T16:48:00Z",
+    "updated_at": "2026-03-13T16:22:32Z",
     "name": "Role",
-    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance",
+    "semantic_hash": "role-collective-mining-archetypes-gatherer-tagger-synthesizer-orchestrator",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Role\n\n## 1. Definition and Essence\nRole defines named responsibility bundles such as owner, contributor, and investor. It specifies expected duties and default authority envelopes that can be instantiated by team and project governance policies.\n\n## 2. Core Attributes\n- `role_name` canonical identifier (owner, contributor, investor)\n- `responsibilities` expected duties and accountability scope\n- `default_permissions` baseline action rights\n- `scope` workspace, team, project applicability\n- `escalation_rules` conditions requiring higher authority\n\n## 3. Lifecycle\nRoles are defined in governance, assigned to profiles by teams or projects, revised when policy evolves, and versioned for historical access reconstruction.\n\n## 4. Integration\n- **Permission:** role definitions map to concrete capabilities.\n- **Team:** binds member identities to role sets.\n- **Project:** applies role policy to collaboration spaces.\n- **Invitation:** role scope included during onboarding.\n\n## 5. Philosophical Alignment\nRole capsules strengthen To Dig Deep by clarifying responsibility and reducing ambiguity in multi-actor execution.\n"
+    "content": "# Role\n\n## 1. Definition and Essence\nRole defines named responsibility bundles such as owner, contributor, and investor. It specifies expected duties and default authority envelopes that can be instantiated by team and project governance policies.\n\n## 2. Core Attributes\n- `role_name` canonical identifier (owner, contributor, investor)\n- `responsibilities` expected duties and accountability scope\n- `default_permissions` baseline action rights\n- `scope` workspace, team, project applicability\n- `escalation_rules` conditions requiring higher authority\n\n## 3. Lifecycle\nRoles are defined in governance, assigned to profiles by teams or projects, revised when policy evolves, and versioned for historical access reconstruction.\n\n## 4. Integration\n- **Permission:** role definitions map to concrete capabilities.\n- **Team:** binds member identities to role sets.\n- **Project:** applies role policy to collaboration spaces.\n- **Invitation:** role scope included during onboarding.\n\n## 5. Collective Mining Role Archetypes\nShared knowledge-mining systems need reusable role bundles beyond generic owner or contributor labels. In collective mining contexts, the most durable archetypes are:\n- `gatherer`: scouts inputs, captures raw material, and keeps the intake edge alive\n- `tagger`: stabilizes taxonomy, labeling, and retrieval readiness across incoming material\n- `synthesizer`: compresses clusters into reusable outputs, frameworks, and downstream decisions\n- `orchestrator`: coordinates priorities, sequencing, review boundaries, and cross-role handoffs\n\nThese archetypes do not replace project governance, invitation policy, or permission law. They give multi-actor mining systems a sharper vocabulary for who is expected to collect, structure, synthesize, or coordinate knowledge as it compounds.\n\n## 6. Philosophical Alignment\nRole capsules strengthen To Dig Deep by clarifying responsibility and reducing ambiguity in multi-actor execution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Role defines the adaptive responsibility system that keeps delegation patterns, review obligations, escalation paths, and coordination between permissions, teams, invitations, and project authority legible for both humans and agents. It turns role assignment into an explicit accountability lattice instead of leaving responsibility implicit behind permission checks alone. The capsule matters because large ecosystems fail when responsibility stays ambiguous even if permissions are technically correct. It therefore acts as the reusable bundle of duties, expectations, and authority posture that keeps multi-actor execution understandable and governable.",
+    "summary": "Role defines the adaptive responsibility system that keeps delegation patterns, review obligations, escalation paths, and coordination between permissions, teams, invitations, and project authority legible for both humans and agents. It now also names collective mining archetypes such as gatherer, tagger, synthesizer, and orchestrator so multi-actor knowledge work can distinguish intake, taxonomy, synthesis, and coordination responsibilities without collapsing them into generic contributor labels. The capsule matters because large ecosystems fail when responsibility stays ambiguous even if permissions are technically correct.",
     "keywords": [
       "role",
       "responsibility-envelope",
@@ -27,7 +27,12 @@
       "permissions-bundle",
       "governance-vocabulary",
       "assignment",
-      "accountability"
+      "accountability",
+      "collective-mining",
+      "gatherer",
+      "tagger",
+      "synthesizer",
+      "orchestrator"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -37,7 +42,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-role-v1-owner-contributor-investor-governance"
+    "semantic_hash": "role-collective-mining-archetypes-gatherer-tagger-synthesizer-orchestrator"
   },
   "recursive_layer": {
     "links": [
@@ -54,12 +59,27 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.team.v1",
         "relation_type": "part_of"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T16:22:32Z",
+        "event": "collective_mining_role_archetypes_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable collective-mining role bundles from data.txt so shared knowledge systems can distinguish gathering, tagging, synthesis, and orchestration responsibilities without importing community-marketing residue."
+      }
+    ]
   },
-  "integrity_sha3_512": "bf6ebed454502a9068187bac9cb7a7e0f412f77f638d2b3972ee14ad6e48f1dc0d4b27d0bc96956738fa939b044751f96413b76252a92f17e52a905f670484a4"
+  "integrity_sha3_512": "6be346f43f9e84ddda3bec26f0259b6878f479934c508406af542d5ad3848f6452dee3834f29a8a5f6fc9e1d85b46c0c279d42e6a55dc6eb1a2b2db6cfb96d98"
 }

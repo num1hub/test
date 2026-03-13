@@ -1,36 +1,41 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.integrations.v1",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-12T17:28:00Z",
+    "updated_at": "2026-03-13T17:39:58Z",
     "name": "Integrations",
-    "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security",
+    "semantic_hash": "integrations-collaborative-ingress-provenance-actoraware-governed-staging-sources",
     "priority": "medium",
-    "progress": 29,
+    "progress": 36,
     "estimatedHours": 280,
-    "actualHours": 63,
+    "actualHours": 69,
     "dueDate": "2026-09-25",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Integrations\n\n## 1. Role\nIntegrations is the governed connector fabric of N1Hub, allowing external services to join the graph through explicit capability boundaries, trust classes, and operability rules rather than through ad hoc plugin sprawl.\n\n## 2. Connector Contract\nThe integration layer carries clearer health monitoring, retry and recovery policy, secret handling, event contracts, and agent-operability distinctions so the system can tell the difference between co-pilot-safe connectors, autonomy-safe connectors, and connectors that require stronger human control.\n\n## 3. Operational Consequence\nExternal capability deepens without dissolving sovereignty. Connectors widen the system's reach while staying inspectable, governable, and compatible with vault law.\n\n## 4. Philosophical Alignment\nIntegrations supports To Dig Deep by letting the ecosystem connect outward without abandoning control inward."
+    "content": "# Integrations\n\n## 1. Role\nIntegrations is the governed connector fabric of N1Hub, allowing external services to join the graph through explicit capability boundaries, trust classes, and operability rules rather than through ad hoc plugin sprawl.\n\n## 2. Connector Contract\nThe integration layer carries clearer health monitoring, retry and recovery policy, secret handling, event contracts, and agent-operability distinctions so the system can tell the difference between co-pilot-safe connectors, autonomy-safe connectors, and connectors that require stronger human control.\n\n## 3. Migration-Grade Intake Contracts\nIntegrations owns the connector doctrine for bringing outside material into sovereign staging without leaking foreign schemas directly into the graph. Import-grade connectors must support files, APIs, email-style drops, clipper feeds, transcripts, and watched folders as one governed intake family. They land imported material in explicit staging surfaces such as inbox or to-sort buffers, preserve source provenance and import-batch lineage, normalize foreign payloads into capsule-compatible shapes, and keep bidirectional sync optional and human-gated instead of silently letting outside tools redefine canonical state.\n\n## 4. Collaborative Source Ingress\nShared mining systems need an integration layer that understands more than one operator dropping files into one inbox. In collaborative ingress contexts, Integrations governs:\n- source classes such as shared documents, meeting capture, email drops, clipper queues, web captures, and workspace exports entering one governed staging fabric\n- actor-aware ingress metadata so imported material preserves who forwarded, clipped, transcribed, or synced it before team or project review begins\n- boundary-safe translation from outside collaborative systems into N1Hub staging without letting foreign collaboration models silently override local invitation, profile, team, or permission law\n- duplicate and provenance hints that help downstream triage distinguish a new source artifact from a second pathway into the same underlying material\n\nIntegrations does not decide trust transition, contributor identity, or capability envelopes. Invitation owns onboarding, Profile owns durable human continuity, Team owns coordination, and Permission owns access grammar. Integrations owns the external-to-staging contract that keeps multi-source collaborative ingress inspectable before canonical promotion.\n\n## 5. Operational Consequence\nExternal capability deepens without dissolving sovereignty. Connectors widen the system's reach while staying inspectable, governable, and compatible with vault law.\n\n## 6. Philosophical Alignment\nIntegrations supports To Dig Deep by letting the ecosystem connect outward without abandoning control inward."
   },
   "neuro_concentrate": {
-    "summary": "Integrations defines the governed connector fabric that lets outside services join the N1Hub graph through explicit capability boundaries, trust classes, and operability rules. It covers health monitoring, retry and recovery policy, secret handling, event contracts, and distinctions between co-pilot-safe, autonomy-safe, and human-gated connectors. The capsule matters because external capability should widen the system without dissolving sovereignty or vault law. It keeps connectors inspectable, governable, and operationally legible instead of allowing ad hoc plugin sprawl to dictate system behavior.",
+    "summary": "Integrations defines the governed connector fabric that lets outside services join the N1Hub graph through explicit capability boundaries, trust classes, and operability rules. It now covers both migration-grade intake and collaborative source ingress: foreign files, APIs, transcripts, clipper feeds, shared documents, meeting captures, email drops, and workspace exports must land in explicit staging surfaces, preserve provenance, and retain actor-aware ingress metadata before canonical promotion. That matters because connector reach should widen the system without letting outside tools redefine sovereign graph state, erase who introduced material, or collapse multi-source collaboration into opaque imports.",
     "keywords": [
       "integrations",
       "connectors",
-      "webhooks",
-      "api",
-      "security",
-      "workspace",
-      "architecture"
+      "import",
+      "provenance",
+      "staging",
+      "shared-doc-ingress",
+      "meeting-capture",
+      "email-drop",
+      "web-clipping",
+      "actor-aware-ingest",
+      "collaborative-source-ingress",
+      "workspace"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-integrations-v1-connectors-webhooks-api-security"
+    "semantic_hash": "integrations-collaborative-ingress-provenance-actoraware-governed-staging-sources"
   },
   "recursive_layer": {
     "links": [
@@ -65,11 +70,31 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.a2c.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.archive.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.integration.calendar.v1",
         "relation_type": "references"
       },
       {
         "target_id": "capsule.integration.notification.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.invitation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.profile.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.team.v1",
         "relation_type": "references"
       }
     ],
@@ -80,8 +105,20 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Removed stale future-facing phrasing so the capsule states present connector doctrine directly."
+      },
+      {
+        "at": "2026-03-13T16:13:14Z",
+        "event": "migration_grade_intake_contracts_integrated",
+        "agent": "n1",
+        "rationale": "Integrated vendor-neutral intake and import doctrine from data.txt so foreign material lands in governed staging with preserved provenance before canonical promotion."
+      },
+      {
+        "at": "2026-03-13T17:39:58Z",
+        "event": "collaborative_source_ingress_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable collaborative ingress doctrine from data.txt so shared documents, meeting capture, email drops, and web clipping preserve actor-aware provenance before team or project review without importing foreign trust or capability models."
       }
     ]
   },
-  "integrity_sha3_512": "9c66969ed57dcdb9df4a418cc68ef5e670681806de228b48b8d362833aadfe0eef013d19d0e4f63aeab6cc71b6a0697d59678abab51e426b9a1c6a767af59381"
+  "integrity_sha3_512": "e5f6223e280a9121dc1c3c291cfd7bc3c552168c1b5836c38c0ab599f6b93325205c6bac4b4dada9696f89572d6f7a8021a2e1e88709e8e55ee1048a61d4c3d2"
 }

@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.review-agent.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T23:48:00Z",
-    "updated_at": "2026-03-12T16:34:00Z",
+    "updated_at": "2026-03-13T17:29:00Z",
     "name": "Review Agent",
-    "semantic_hash": "review-agent-stronger-critique-merge-and-promotion-readiness",
+    "semantic_hash": "reviewagent-deliverable-critique-packaging-share-promotion-pressure-readiness",
     "priority": "high",
     "progress": 41,
     "estimatedHours": 260,
@@ -19,16 +19,19 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Review Agent\n\n## 1. Role\nReview Agent is a stronger critique layer for capsule work, delegated jobs, planning shifts, and branch promotions. It remains the explicit internal skeptic that explains why something is ready, weak, risky, incomplete, or should remain in projected state.\n\n## 2. Critique Surface\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- tighter coordination with validation, roadmap review, and branch governance\n- more legible human-facing review summaries and operator triage surfaces\n\n## 3. Operational Consequence\nA multi-agent vault remains honest because critique pressure scales with production pressure. Review continues to translate skepticism into human-usable guidance and machine-usable feedback instead of leaving quality judgment to intuition.\n\n## 4. Philosophical Alignment\nReview Agent supports To Dig Deep by applying epistemic pressure where the system is tempted to accept easy, flattering, or overconfident output."
+    "content": "# Review Agent\n\n## 1. Role\nReview Agent is a stronger critique layer for capsule work, delegated jobs, planning shifts, and branch promotions. It remains the explicit internal skeptic that explains why something is ready, weak, risky, incomplete, or should remain in projected state.\n\n## 2. Critique Surface\n- clearer merge-readiness and promotion-readiness judgments\n- stronger proof pressure on mined, planned, or synthesized output\n- tighter coordination with validation, roadmap review, and branch governance\n- more legible human-facing review summaries and operator triage surfaces\n\n## 3. Deliverable Review Layer\nAs jobs increasingly return guides, checklists, frameworks, reports, and share-ready artifacts, Review Agent must judge output shape as well as factual quality.\n\n- `deliverable_class_review` checks whether the returned artifact matches the declared job contract.\n- `evidence_coupling` verifies that summaries, frameworks, and reports stay grounded in source clusters instead of drifting into detached rhetoric.\n- `share_readiness` distinguishes operator-private drafts, collaborator-ready material, and promotion-sensitive outputs before they spread through the vault.\n- `critique_packaging` pressures outputs toward clearer structure, tighter wording, and lower ambiguity before wider circulation.\n- `reentry_path` decides whether the artifact goes back to the job chain for revision, moves to dashboard or notification surfaces for operator attention, or advances toward governed mutation.\n\n## 4. Operational Consequence\nA multi-agent vault remains honest because critique pressure scales with production pressure and because deliverables are judged before they harden into guidance, reporting, or shareable artifacts. Review continues to translate skepticism into human-usable guidance and machine-usable feedback instead of leaving quality judgment to intuition.\n\n## 5. Philosophical Alignment\nReview Agent supports To Dig Deep by applying epistemic pressure where the system is tempted to accept easy, flattering, or overconfident output, and by forcing shaped deliverables to prove their grounding before they earn broader visibility."
   },
   "neuro_concentrate": {
-    "summary": "Review Agent defines the critique layer that applies explicit skepticism to capsule work, delegated jobs, planning shifts, and branch promotions across N1Hub. It covers merge-readiness and promotion-readiness judgments, stronger proof pressure on mined and planned output, coordination with validation and branch governance, and review summaries legible to both humans and agents. The capsule matters because production pressure grows faster than judgment unless critique has its own lane. It turns skepticism into actionable guidance instead of leaving quality decisions to intuition or momentum.",
+    "summary": "Review Agent defines the critique layer that applies explicit skepticism to capsule work, delegated jobs, planning shifts, and branch promotions across N1Hub. It now also judges deliverable shape for guides, checklists, frameworks, reports, and share-ready artifacts, not just raw correctness. The capsule matters because production pressure grows faster than judgment unless critique owns proof pressure, packaging pressure, and share-readiness boundaries at the same time. It turns skepticism into actionable guidance, routes weak artifacts back into revision, and keeps reviewable outputs coupled to evidence before they spread through the vault.",
     "keywords": [
       "review-agent",
       "projected-state",
       "critique",
       "proof-pressure",
       "merge-readiness",
+      "deliverable-review",
+      "share-readiness",
+      "artifact-packaging",
       "capsule-job",
       "promotion",
       "validation",
@@ -42,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "review-agent-stronger-critique-merge-and-promotion-readiness"
+    "semantic_hash": "reviewagent-deliverable-critique-packaging-share-promotion-pressure-readiness"
   },
   "recursive_layer": {
     "links": [
@@ -83,6 +86,14 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.notification.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.roadmap.v1",
         "relation_type": "references"
       },
@@ -102,8 +113,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Stripped future-meta phrasing and keyword residue so the capsule states present review doctrine directly."
+      },
+      {
+        "at": "2026-03-13T17:29:00Z",
+        "event": "deliverable_review_layer_integrated",
+        "agent": "n1",
+        "rationale": "Integrated deliverable-grade critique from data.txt so guides, checklists, frameworks, and reports face explicit evidence and share-readiness judgment before wider circulation."
       }
     ]
   },
-  "integrity_sha3_512": "d69e44c1f7c7e5fd7244da915205e083b37adb5491aa06e03a94452caa49d28860034c7838015126981706ff7e26ab9b52f4212d4fe272fece2adf3e74c4851e"
+  "integrity_sha3_512": "6e3f68561b5b91580c4c74c9b7201ccbc734844bea0c4a57a33955dcd748157614cc0f487681437a8a713df153d98c8f568494b70bb1b2863bc76c610a49892d"
 }

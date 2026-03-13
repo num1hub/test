@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.personal-ai-assistant.planning-navigation.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-11T20:40:00Z",
-    "updated_at": "2026-03-12T17:36:00Z",
+    "updated_at": "2026-03-13T17:45:51Z",
     "name": "Personal AI Assistant Planning Navigation",
-    "semantic_hash": "assistant-planning-navigation-horizon-tracker-librarian-suggestion-boundary",
+    "semantic_hash": "assistant-planning-navigation-session-retrieval-action-surfacing-crossproject",
     "source": {
       "uri": "internal://capsule.foundation.personal-ai-assistant.v1",
       "type": "internal_derivation"
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Personal AI Assistant Planning Navigation\n\n## 1. Role\nPersonal AI Assistant Planning Navigation owns the surfaces that let the assistant explain what matters now, what comes later, and how live work is drifting against intent. It binds planning, tracking, retrieval, and recommendation signals into one bounded navigation layer so the assistant can reason over time without owning execution lanes outright.\n\n## 2. Planning Navigation Surface\nThis sub-hub groups `planner`, `planning-horizon-engine`, `tracker`, `daily-planner-agent`, `roadmap-planner-agent`, `capsule-librarian-agent`, `project`, and `ai.suggestion`. Together they define how the assistant compresses long-horizon intent into today, retrieves the right capsule context, tracks execution truth, and packages the next useful recommendation.\n\n## 3. Operating Boundary\nThis sub-hub does not own raw conversational ingress, durable identity continuity, or delegated execution infrastructure. Those belong to `conversation-ingress`, `memory-continuity`, and `execution-orchestration`."
+    "content": "# Personal AI Assistant Planning Navigation\n\n## 1. Role\nPersonal AI Assistant Planning Navigation owns the surfaces that let the assistant explain what matters now, what comes later, and how live work is drifting against intent. It binds planning, tracking, retrieval, and recommendation signals into one bounded navigation layer so the assistant can reason over time without owning execution lanes outright.\n\n## 2. Planning Navigation Surface\nThis sub-hub groups `planner`, `planning-horizon-engine`, `tracker`, `daily-planner-agent`, `roadmap-planner-agent`, `capsule-librarian-agent`, `project`, and `ai.suggestion`. Together they define how the assistant compresses long-horizon intent into today, retrieves the right capsule context, tracks execution truth, and packages the next useful recommendation.\n\n## 3. Operating Boundary\nThis sub-hub does not own raw conversational ingress, durable identity continuity, or delegated execution infrastructure. Those belong to `conversation-ingress`, `memory-continuity`, and `execution-orchestration`.\n\n## 4. Session-Scoped Retrieval and Action Surfacing\nWhen the user enters a live meeting, client prep loop, strategy session, or review window, this layer assembles bounded navigation packets rather than forcing open-ended search. It should surface the most relevant case studies, prior proposals, active project threads, recent action items, dormant but timely notes, and cross-project patterns that sharpen the current conversation. `Capsule Librarian` retrieves, `AI Suggestion` ranks, and `Dashboard` may visualize, but Planning Navigation owns the assistant-side packaging that says what matters for this session now and what the operator should do next."
   },
   "neuro_concentrate": {
-    "summary": "Personal AI Assistant Planning Navigation groups the time and retrieval surfaces the assistant uses to orient the user: Planner, Planning Horizon Engine, Tracker, planning agents, Capsule Librarian, Project, and AI Suggestion. It keeps explanation of priorities, drift, retrieval, and next actions in one bounded layer instead of scattering them across unrelated runtime lanes. This boundary matters because the assistant must continuously explain why something belongs now, later, or nowhere without folding that reasoning into chat ingress or execution machinery.",
+    "summary": "Personal AI Assistant Planning Navigation groups the time and retrieval surfaces the assistant uses to orient the user: Planner, Planning Horizon Engine, Tracker, planning agents, Capsule Librarian, Project, and AI Suggestion. It keeps explanation of priorities, drift, retrieval, and next actions in one bounded layer instead of scattering them across unrelated runtime lanes. It now also makes session-scoped retrieval explicit: meetings, client prep, strategy sessions, and review windows should surface the right case studies, prior proposals, action items, dormant notes, and cross-project patterns without collapsing into open-ended search or raw chat memory.",
     "keywords": [
       "personal-ai-assistant",
       "planning-navigation",
@@ -30,7 +30,11 @@
       "planning-horizon-engine",
       "tracker",
       "capsule-librarian-agent",
-      "ai-suggestion"
+      "ai-suggestion",
+      "session-retrieval",
+      "action-surfacing",
+      "case-study-recall",
+      "cross-project-context"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "assistant-planning-navigation-horizon-tracker-librarian-suggestion-boundary"
+    "semantic_hash": "assistant-planning-navigation-session-retrieval-action-surfacing-crossproject"
   },
   "recursive_layer": {
     "links": [
@@ -77,6 +81,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.ai.suggestion.v1",
         "relation_type": "references"
       }
@@ -88,8 +96,14 @@
         "event": "hub_decomposition_sub_hub_minted",
         "agent": "codex",
         "rationale": "Minted during Personal AI Assistant decomposition to isolate planning, tracking, retrieval, and recommendation routing from chat ingress and deeper execution lanes."
+      },
+      {
+        "at": "2026-03-13T17:45:51Z",
+        "event": "session_scoped_retrieval_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable meeting, client-prep, and strategy-session retrieval semantics from data.txt so planning navigation can package relevant case studies, action items, dormant notes, and cross-project context without collapsing into chat ingress or dashboard ownership."
       }
     ]
   },
-  "integrity_sha3_512": "ec1fb0b0c4e2dbcaf685e656d17662001795f0f1a96d944608944be5fcf9a31bd57fbd17f375be082cf77b0be2c8570dff58fcbd123b9cc89e93b00e25006e14"
+  "integrity_sha3_512": "0be5095c763007f8fb066c4192ae486779a7186eb173be95054998dc1e67f94b7a72d93fc23210c5ce9af491d94c9b377bc18e110316b20a5a014d121cd157c9"
 }

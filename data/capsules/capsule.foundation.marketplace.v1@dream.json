@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.marketplace.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:56:44.830Z",
-    "updated_at": "2026-03-12T16:42:00Z",
+    "updated_at": "2026-03-13T17:37:01Z",
     "name": "Marketplace",
-    "semantic_hash": "capsule-foundation-marketplace-v1-economy-templates-licensing-tokenomics",
+    "semantic_hash": "marketplace-framework-listings-kits-workshops-courses-distribution-lineage",
     "priority": "medium",
     "progress": 21,
     "estimatedHours": 420,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Marketplace\n\n## 1. Definition and Essence\nMarketplace defines the sovereign exchange layer where templates, capabilities, and project assets can be discovered, licensed, rated, and transacted. It formalizes participants, listing semantics, and settlement pathways tied to N1 economic primitives.\n\n## 2. Core Attributes\n- `listing_model` template and asset publication schema\n- `participant_roles` seller, buyer, curator, reviewer\n- `pricing_policy` fixed, tiered, subscription, royalty modes\n- `reputation_signals` ratings, reviews, dispute outcomes\n- `settlement_path` token and fiat-compatible payment channels\n\n## 3. Lifecycle\nListings are published from sovereign templates or projects, priced and licensed, transacted through settlement workflows, and continuously updated through reputation and governance feedback loops.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** native value and incentive substrate.\n- **Sovereign Template:** marketplace inventory source.\n- **Royalty Engine:** automated distribution after sales.\n- **Workspace/Projects:** publishing and consumption surfaces.\n\n## 5. Philosophical Alignment\nMarketplace advances To Dig Deep by rewarding durable knowledge artifacts and transparent value exchange around real contribution.\n"
+    "content": "# Marketplace\n\n## 1. Definition and Essence\nMarketplace defines the sovereign exchange layer where templates, capabilities, and project assets can be discovered, licensed, rated, and transacted. It formalizes participants, listing semantics, and settlement pathways tied to N1 economic primitives.\n\n## 2. Core Attributes\n- `listing_model` template and asset publication schema\n- `participant_roles` seller, buyer, curator, reviewer\n- `pricing_policy` fixed, tiered, subscription, royalty modes\n- `reputation_signals` ratings, reviews, dispute outcomes\n- `settlement_path` token and fiat-compatible payment channels\n\n## 3. Lifecycle\nListings are published from sovereign templates or projects, priced and licensed, transacted through settlement workflows, and continuously updated through reputation and governance feedback loops.\n\n## 4. Integration\n- **N1 Coin Tokenomics:** native value and incentive substrate.\n- **Sovereign Template:** marketplace inventory source.\n- **Royalty Engine:** automated distribution after sales.\n- **Workspace/Projects:** publishing and consumption surfaces.\n\n## 5. Knowledge Asset Listing Classes\nMarketplace owns the external listing grammar for reusable knowledge assets once they have already crossed the internal packaging and review boundary.\n\nThis layer governs:\n- listing classes for frameworks, checklists, workflow packs, workshop blueprints, course modules, and operator kits that can circulate as reusable knowledge capital\n- clear separation between template packaging and marketplace presentation so a reusable asset can be listed without collapsing lineage, authorship, or derivative history\n- distinctions between direct-use listings, forkable listings, and service-attached listings where a framework or kit is sold alongside review, adaptation, or guided delivery\n- discovery surfaces that expose what kind of asset is being offered, what reuse rights exist, and what evidence of quality or review accompanies the listing\n\nMarketplace does not decide whether a mined deliverable deserves to become reusable capital; Sovereign Template, Capsule Job, and Review Agent own that transformation boundary. Marketplace owns what happens after that boundary: external circulation, comparison, licensing posture, and channel-facing listing semantics.\n\n## 6. Philosophical Alignment\nMarketplace advances To Dig Deep by rewarding durable knowledge artifacts and transparent value exchange around real contribution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Marketplace defines the circulation layer where sovereign templates, capsule packs, agent recipes, royalties, subscriptions, pricing, licensing, reputation, and distribution work as one governed economic system. It matters because reusable memory capital becomes durable only when commercialization preserves lineage, governance, and creator fairness. The capsule therefore describes a place where reusable knowledge assets become liquid without degrading trust, and where commercialization behaves like system architecture instead of a loose listing page.",
+    "summary": "Marketplace defines the circulation layer where sovereign templates, capsule packs, workflow kits, frameworks, course modules, royalties, pricing, licensing, reputation, and distribution operate as one governed economic system. It now makes knowledge asset listing classes explicit: reusable frameworks, checklists, workflow packs, workshop blueprints, and operator kits can be presented externally without severing lineage, review state, or reuse rights. The capsule matters because reusable memory capital becomes durable only when commercialization preserves provenance, governance, and creator fairness instead of flattening every asset into the same generic listing shape.",
     "keywords": [
       "marketplace",
       "economic-hub",
@@ -31,8 +31,11 @@
       "settlement",
       "distribution",
       "templates",
+      "frameworks",
+      "workflow-packs",
+      "course-modules",
+      "operator-kits",
       "royalties",
-      "tokenomics",
       "knowledge-capital"
     ],
     "confidence_vector": {
@@ -43,7 +46,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-marketplace-v1-economy-templates-licensing-tokenomics"
+    "semantic_hash": "marketplace-framework-listings-kits-workshops-courses-distribution-lineage"
   },
   "recursive_layer": {
     "links": [
@@ -57,6 +60,14 @@
       },
       {
         "target_id": "capsule.foundation.royalty-engine.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.review-agent.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.capsule-job.v1",
         "relation_type": "references"
       },
       {
@@ -75,8 +86,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed meta-summary phrasing so Marketplace states its economic-system doctrine directly."
+      },
+      {
+        "at": "2026-03-13T17:37:01Z",
+        "event": "knowledge_asset_listing_classes_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable listing-class doctrine from data.txt so frameworks, workflow packs, course modules, and operator kits can circulate as market-facing knowledge assets without importing gamification or timing residue."
       }
     ]
   },
-  "integrity_sha3_512": "5cebb5f4b01bcce2e5fc3dabe351787fbefb46eeb7fe5d3e75451772a4f99e9f3ed771b12e51d2eb01eba9b001e520e375441ccfc16a6c03abde0cb753650ba1"
+  "integrity_sha3_512": "1ad4d18536f3fcced0f0acb233d562f608b3e15325f0a755507f171487e260433a2d38ca949e1d393168b383ab32d8f68f7bb732bb5adae0ab87f86491781b2f"
 }

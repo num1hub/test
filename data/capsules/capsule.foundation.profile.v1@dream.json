@@ -1,33 +1,36 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.profile.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-12T16:34:00Z",
+    "updated_at": "2026-03-13T17:21:40Z",
     "name": "Profile",
-    "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys",
+    "semantic_hash": "profile-collaborative-mining-identity-authorship-trust-handoff-continuity",
     "tier": 2
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Profile\n\n## 1. Role\nProfile is the richer human identity substrate of N1Hub, carrying not only account metadata but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Identity Contract\nProfile serves as the durable human envelope from which preferences, assistant relationship, access posture, review authority, and authorship lineage all derive, without collapsing personhood into a session cookie or chat thread.\n\n## 3. Operational Consequence\nThe vault preserves one accountable human return path across approvals, background autonomy, wallet ownership, and assistant continuity. Identity quality becomes part of system trust, not a decorative account surface.\n\n## 4. Philosophical Alignment\nProfile supports To Dig Deep by deepening one person's continuity inside the second brain rather than erasing it."
+    "content": "# Profile\n\n## 1. Role\nProfile is the richer human identity substrate of N1Hub, carrying not only account metadata but durable authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon second-brain presence.\n\n## 2. Identity Contract\nProfile serves as the durable human envelope from which preferences, assistant relationship, access posture, review authority, and authorship lineage all derive, without collapsing personhood into a session cookie or chat thread.\n\n## 3. Operational Consequence\nThe vault preserves one accountable human return path across approvals, background autonomy, wallet ownership, and assistant continuity. Identity quality becomes part of system trust, not a decorative account surface.\n\n## 5. Collaborative Identity Continuity\nShared mining systems need more than a generic account record. Once a vault expands from one operator into trusted collaboration, Profile owns the durable human identity layer that keeps authorship, review lineage, and trust posture coherent across invitations, role bindings, shared projects, and archive restoration.\n\nIn collaborative mining contexts, Profile governs:\n- stable collaborator identity claims that connect display name, handles, expertise, and authorship boundary across project and team surfaces\n- contributor lineage that lets captured notes, merges, reviews, and published outputs resolve back to one human principal even as role bindings change\n- trust posture distinctions between operator, collaborator, reviewer, mentor, and limited-scope participant without turning identity law into capability law\n- handoff-ready identity cues for acknowledgements, follow-up routing, and escalation when multiple humans co-mine the same graph\n\nProfile does not replace Invitation, Team, Role, or Permission. Invitation owns trust transition, Team owns coordination, Role owns archetypal function, and Permission owns capability envelopes. Profile owns the durable human continuity that lets collaborative mining stay attributable over time.\n\n## 6. Philosophical Alignment\nProfile supports To Dig Deep by deepening one person's continuity inside the second brain rather than erasing it."
   },
   "neuro_concentrate": {
-    "summary": "Profile defines the human identity substrate that carries authorship, review authority, trust posture, wallet ownership, assistant continuity, and long-horizon presence inside N1Hub. It acts as the durable human envelope from which preferences, access posture, approval rights, and authorship lineage can derive without collapsing identity into a session cookie or chat thread. The capsule matters because system trust depends on preserving one accountable human return path across autonomy and approvals. It deepens continuity instead of letting identity fragment across tools and sessions.",
+    "summary": "Profile defines the human identity substrate that carries authorship, review authority, trust posture, wallet ownership, assistant continuity, and collaborative continuity inside N1Hub. It now also makes shared-mining identity explicit: one durable human envelope can preserve contributor lineage, trusted-collaborator posture, and handoff-ready acknowledgements across invitations, role changes, shared projects, and archive restoration without collapsing identity into transient session state. The capsule matters because system trust depends on preserving one accountable human return path across autonomy, approvals, and collaboration rather than letting identity fragment across tools, sessions, or changing team bindings.",
     "keywords": [
       "profile",
+      "collaborative-identity",
+      "authorship-lineage",
+      "trust-posture",
+      "handoff-continuity",
+      "contributor-principal",
       "identity-envelope",
-      "authorship",
       "workspace-actor",
-      "personalization",
-      "portable-context",
+      "project-collaboration",
+      "team-continuity",
       "accountability",
-      "principal",
-      "user-boundary"
+      "principal"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -37,7 +40,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-profile-v1-identity-workspace-user-keys"
+    "semantic_hash": "profile-collaborative-mining-identity-authorship-trust-handoff-continuity"
   },
   "recursive_layer": {
     "links": [
@@ -68,6 +71,14 @@
       {
         "target_id": "capsule.foundation.project.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.invitation.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.role.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -77,8 +88,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Stripped future-meta phrasing so the capsule states present identity doctrine directly."
+      },
+      {
+        "at": "2026-03-13T17:21:40Z",
+        "event": "collaborative_identity_continuity_integrated",
+        "agent": "n1",
+        "rationale": "Integrated identity-owned collaborative mining continuity from data.txt so contributor lineage, trust posture, and handoff routing stay attributable without collapsing into invitation, team, or permission law."
       }
     ]
   },
-  "integrity_sha3_512": "88e72e6993ef5edb5d4c9ea9574524b56de9414d06e0a1699eebdfb08b82270ba3655ae8b8ed95e9085235ed0a9eedd526ec5ddf5ff6872135f0ed6f5e6031da"
+  "integrity_sha3_512": "1a6a22c7ffedcce8840fe0dfb1aea7040e61d824f976711c1f4dafc351051ce1fcab6b196a285efc7262866f414f9dc380be74aa2c211669fe434095d6350f8e"
 }

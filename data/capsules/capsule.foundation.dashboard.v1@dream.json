@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.dashboard.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:53:03.253Z",
-    "updated_at": "2026-03-12T17:28:00Z",
+    "updated_at": "2026-03-13T15:56:52Z",
     "name": "Dashboard",
-    "semantic_hash": "capsule-foundation-dashboard-v1-workspace-widgets-analytics-tracker",
+    "semantic_hash": "dashboard-fztm-maturity-visibility-operator-cockpit-readiness-clusters",
     "priority": "medium",
     "progress": 47,
     "estimatedHours": 330,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Dashboard\n\n## 1. Role\nDashboard is the decisive command surface where the most important graph signals arrive already structured for action rather than merely displayed for inspection.\n\n## 2. Dashboard Contract\nThe dashboard supports richer widget composition, stronger project and state views, clearer capsule-health and swarm-status surfaces, and better prioritization cues across planning, execution, runtime health, and review pressure.\n\n## 3. Operational Consequence\nCompression quality becomes visible in the cockpit itself. The user sees what matters now, what is cooling, what is blocked, and which deeper graph paths deserve attention next without drowning in equal-weight signals.\n\n## 4. Philosophical Alignment\nDashboard supports To Dig Deep by guiding attention into the right depth instead of acting as a passive wall of data."
+    "content": "# Dashboard\n\n## 1. Role\nDashboard is the decisive command surface where the most important graph signals arrive already structured for action rather than merely displayed for inspection.\n\n## 2. Dashboard Contract\nThe dashboard supports richer widget composition, stronger project and state views, clearer capsule-health and swarm-status surfaces, and better prioritization cues across planning, execution, runtime health, and review pressure.\n\n## 3. Vault-Maturity Visibility\nThe Dream branch now makes explicit that Dashboard can surface vault-maturity and FZTM progress as an operator-facing attention layer without collapsing into gamified progress theater.\n\nA clean maturity-visibility surface may include:\n- stage progress cards that show the current maturity zone, the next threshold, and the evidence still missing to justify a transition\n- cluster concentration views that surface which topics, tags, or semantic neighborhoods are dense enough to deserve synthesis and which remain thin or fragmented\n- saved-search or recovery panels that keep recent, stale, or underused material reviewable without flooding the cockpit with the full corpus\n- milestone evidence widgets that explain why a checkpoint is credible instead of showing raw counts without interpretation\n- readiness and pressure panels that help the operator distinguish whether the next move is capture, restructuring, synthesis, automation, or review\n\nDashboard does not own the units underneath those surfaces. Metric defines telemetry grammar, Analytics derives reporting, Milestone owns checkpoint evidence, and Tracker or Planner own timing and pressure. Dashboard owns the visible subset, composition, and attention order that turn those signals into a usable cockpit.\n\n## 4. Operational Consequence\nCompression quality becomes visible in the cockpit itself. The user sees what matters now, what is cooling, what is blocked, and which deeper graph paths deserve attention next without drowning in equal-weight signals.\n\n## 5. Philosophical Alignment\nDashboard supports To Dig Deep by guiding attention into the right depth instead of acting as a passive wall of data."
   },
   "neuro_concentrate": {
-    "summary": "Dashboard defines the command surface that gathers graph signals into an operator cockpit shaped for action rather than passive inspection. It covers widget composition, project and state views, capsule-health visibility, swarm status, and prioritization cues across planning, execution, runtime health, and review pressure. The capsule matters because attention collapses when every signal is shown with equal weight. It turns the cockpit into a decision surface that shows what matters now, what is cooling, what is blocked, and where deeper graph work should go next.",
+    "summary": "Dashboard defines the command surface that gathers graph signals into an operator cockpit shaped for action rather than passive inspection. It now also makes vault-maturity visibility explicit by framing stage progress, cluster concentration, milestone evidence, recovery panels, and readiness diagnostics as dashboard-owned attention surfaces rather than raw telemetry dumps. The capsule matters because the operator needs to see what stage the vault is in, what evidence is missing, which clusters deserve synthesis, and what kind of next move is rational without reading every underlying capsule first.",
     "keywords": [
       "dashboard",
       "workspace",
@@ -30,7 +30,11 @@
       "analytics",
       "tracker",
       "planner",
-      "ui"
+      "ui",
+      "fztm",
+      "vault-maturity",
+      "readiness",
+      "clusters"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +44,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-dashboard-v1-workspace-widgets-analytics-tracker"
+    "semantic_hash": "dashboard-fztm-maturity-visibility-operator-cockpit-readiness-clusters"
   },
   "recursive_layer": {
     "links": [
@@ -55,6 +59,18 @@
       {
         "target_id": "capsule.foundation.analytics.v1",
         "relation_type": "depends_on"
+      },
+      {
+        "target_id": "capsule.foundation.metric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
       },
       {
         "target_id": "capsule.foundation.ai-control-surface.v1",
@@ -75,6 +91,10 @@
       {
         "target_id": "capsule.foundation.tracker.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
@@ -84,8 +104,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Removed meta-language so the capsule states present dashboard doctrine directly."
+      },
+      {
+        "at": "2026-03-13T15:56:52Z",
+        "event": "vault_maturity_dashboard_surface_integrated",
+        "agent": "n1",
+        "rationale": "Integrated a dashboard-owned maturity visibility layer for FZTM progress, readiness, cluster concentration, and milestone evidence while leaving telemetry, reporting, and timing in their existing surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "26a42d44f63fd15216d59c7e76d4a2ee9df9a2ae8a1b423d86452eb9ef10591df821f4b0a21627f4563a6969247d51c6e9eefcccaf0ec6a36d438acd4c8e7a08"
+  "integrity_sha3_512": "cfcc9f50bf6c83333b322a0030a7d039def52a49d54b4162b5752f92d18dcab17d2b8ddf8d6897802194be69ce2e822b12b0904784967c32210f96bb827b52d8"
 }

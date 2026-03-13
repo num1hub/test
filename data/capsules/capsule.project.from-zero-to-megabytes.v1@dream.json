@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.project.from-zero-to-megabytes.v1",
-    "version": "1.1.0",
+    "version": "1.4.0",
     "status": "draft",
     "type": "project",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:00:10.536Z",
-    "updated_at": "2026-03-12T18:12:00Z",
+    "updated_at": "2026-03-13T16:18:00Z",
     "name": "From Zero to Megabytes",
-    "semantic_hash": "capsule-project-from-zero-to-megabytes-v1-learning",
+    "semantic_hash": "from-zero-megabytes-stage-ladder-tooling-quality-dream",
     "source": {
       "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
       "sha256": "714e81795420b7a8551f3e9fd3a3fb9ab5b0824f400b29fd5b292910500818f3",
@@ -24,21 +24,22 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# From Zero to Megabytes\n\n## 1. Definition and Essence\nFrom Zero to Megabytes is an independent educational and execution initiative centered on compounding knowledge output from first principles into durable artifacts and measurable digital value.\n\n## 2. Core Attributes\n- `learning_tracks` thematic knowledge progression paths\n- `artifact_targets` tangible outputs expected per phase\n- `measurement_framework` throughput and quality indicators\n- `resource_map` tools, references, and time allocations\n- `publication_plan` cadence for sharing generated artifacts\n\n## 3. Lifecycle\nThe initiative moves through progressive learning and production phases, each ending in publishable outcomes and retrospective learning capture.\n\n## 4. Integration\n- **A2C and Workspace:** optional toolchain support for artifact creation.\n- **Planner:** phase decomposition and schedule management.\n- **Analytics:** progress evidence and growth reporting.\n- **Independent Project Set:** no hierarchical containment under N1 root.\n\n## 5. Philosophical Alignment\nThis project embodies the Zero-to-One arc by turning sparse initial capability into compounding digital production.\n"
+    "content": "# From Zero to Megabytes\n\n## 1. Definition and Essence\nFrom Zero to Megabytes is an independent educational and execution initiative centered on compounding knowledge output from first principles into durable artifacts and measurable digital value.\n\n## 2. Core Attributes\n- `learning_tracks` thematic knowledge progression paths\n- `artifact_targets` tangible outputs expected per phase\n- `measurement_framework` throughput and quality indicators\n- `resource_map` tools, references, and time allocations\n- `publication_plan` cadence for sharing generated artifacts\n\n## 3. FZTM Progression Model\nThe Dream branch now carries the explicit FZTM growth ladder as a measurable progression model for the project.\n\n| Stage | Volume Range | User Posture | Expected System Behavior |\n|---|---|---|---|\n| Seed | 0-1 MB | Capture fragments, tolerate low structure, and establish a lightweight inbox. | Minimal automation, broad categorization, and first-organization support. |\n| Sprout | 1-10 MB | Build capture habits, organize notes, and begin recurring review. | Auto-tagging, basic summarization, early intelligent linking, and first pattern surfacing. |\n| Tree | 10-100 MB | Strengthen structure, bulk-import material, refine taxonomy, and connect major themes. | Advanced linking, clustering, synthesis of guides or frameworks, and deeper topic organization. |\n| Forest | 100 MB-1 GB | Operate at scale with a richly interconnected vault and regular review pressure. | System-wide automation, semantic search, intelligent dashboards, and recurring pattern surfacing. |\n| Ecosystem | 1 GB+ | Steward a self-sustaining knowledge environment that compounds beyond personal capture. | Fully integrated automation, recursive growth cycles, collaboration support, and portfolio-scale leverage. |\n\n## 4. FZTM Operating Loop\nThe project also carries a stage-agnostic operating loop that explains how byte growth turns into usable intellectual capital without binding the work to a rigid calendar.\n\n- **Capture and Ingest:** collect fragments, notes, questions, links, and source material with minimal friction.\n- **Structure and Tag:** apply lightweight organization, early categorization, and preliminary clustering so the graph stays navigable.\n- **Enrich and Connect:** add context, semantic links, and cross-domain relationships that raise the value of isolated fragments.\n- **Synthesize and Output:** turn mature clusters into summaries, guides, frameworks, or publishable assets.\n- **Review and Iterate:** prune redundancy, revisit weak areas, and feed fresh structure back into earlier stages for recursive improvement.\n\n## 5. Stage Tooling and Quality Checks\nFZTM also needs a project-owned resource map that says which tool posture and quality questions matter at each stage without turning that guidance into rigid calendar law.\n\n- **Seed:** lightweight inbox tooling such as web capture, voice capture, and direct ingestion should make centralization frictionless. The key question is whether material is landing in one searchable place.\n- **Sprout:** tagging, clustering, and first graph views should make early structure legible. The key question is whether notes are becoming navigable clusters instead of isolated fragments.\n- **Tree:** summarization, framework generation, and export tooling should help convert clusters into reusable outputs. The key question is whether knowledge is being repurposed into guides, checklists, or publishable artifacts.\n- **Forest:** advanced search, collaboration surfaces, and publishing integrations should support scale without collapse. The key question is whether the system surfaces cross-domain insight and measurable value instead of only storing more material.\n- **Ecosystem:** dashboard-grade visibility, portfolio packaging, and stronger agent assistance should support recursive stewardship. The key question is whether the knowledge environment is now self-improving and leverage-rich rather than dependent on constant manual rescue.\n\nThe project owns which tools and quality questions matter for FZTM. Metric owns units, Milestone owns checkpoint evidence, Analytics owns reporting, and Roadmap owns long-horizon phase sequencing.\n\n## 6. Lifecycle\nThe initiative moves through the five FZTM stages while repeatedly cycling through the operating loop above, so byte growth and knowledge refinement compound together instead of diverging into raw storage without structure.\n\n## 7. Integration\n- **A2C and Workspace:** optional toolchain support for artifact creation.\n- **Planner:** phase decomposition and schedule management.\n- **Roadmap:** phase ordering and transition logic.\n- **Metric and Milestone:** threshold grammar and stage-checkpoint evidence.\n- **Analytics:** progress evidence and growth reporting.\n- **Personal AI Assistant:** supports guided progression through the project without re-owning its methodology.\n- **Independent Project Set:** no hierarchical containment under N1 root.\n\n## 8. Philosophical Alignment\nThis project embodies the Zero-to-One arc by turning sparse initial capability into compounding digital production, with byte growth treated as an explicit signal of structure, discipline, and usable intellectual capital, the operating loop treated as the means by which that capital is refined, and the stage tooling map treated as the practical posture that keeps growth executable.\n"
   },
   "neuro_concentrate": {
-    "summary": "From Zero to Megabytes is the compounding engine for learning, publishing, measurable creative throughput, and explicit memory accumulation. It extends beyond a simple educational initiative toward a disciplined pipeline where study becomes repeated artifact production, publication, byte growth, and evidence-backed capability development. The capsule matters because the project is less about a fixed product and more about an evolving production system for the self. It therefore keeps creative growth explicit, measurable, and legible inside the graph.",
+    "summary": "From Zero to Megabytes is the Dream-side compounding model for learning, byte growth, and durable production. It now carries a five-stage progression ladder, a project-specific operating loop, and a stage-specific resource map that clarifies which tooling posture and quality questions matter as the vault matures from Seed to Ecosystem. The capsule matters because the initiative becomes measurable, executable, and reviewable instead of remaining a vague aspiration. It therefore gives FZTM a practical grammar for how sparse fragments turn into structured knowledge, refined outputs, and eventually self-sustaining intellectual capital.",
     "keywords": [
       "from-zero-to-megabytes",
-      "learning",
-      "production",
-      "digital-artifacts",
-      "growth",
-      "publication",
-      "retrospectives",
-      "throughput",
+      "fztm",
+      "stage-ladder",
+      "operating-loop",
+      "stage-tooling",
+      "quality-checkpoints",
+      "byte-growth",
+      "resource-map",
+      "knowledge-compounding",
       "memory-capital",
-      "independent-project"
+      "production"
     ],
     "confidence_vector": {
       "extraction": 0.93,
@@ -48,12 +49,24 @@
       "validation_score": 1,
       "contradiction_pressure": 0.12
     },
-    "semantic_hash": "capsule-project-from-zero-to-megabytes-v1-learning"
+    "semantic_hash": "from-zero-megabytes-stage-ladder-tooling-quality-dream"
   },
   "recursive_layer": {
     "links": [
       {
         "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.roadmap.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.metric.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
         "relation_type": "references"
       },
       {
@@ -80,8 +93,26 @@
         "event": "dream_hygiene_cleanup",
         "agent": "codex",
         "rationale": "Removed summary meta-language so From Zero to Megabytes states its compounding doctrine directly."
+      },
+      {
+        "at": "2026-03-13T14:26:48Z",
+        "event": "fztm_stage_taxonomy_integrated",
+        "agent": "codex",
+        "rationale": "Integrated the strongest durable FZTM signal from data.txt into the Dream project capsule as an explicit five-stage byte-growth ladder."
+      },
+      {
+        "at": "2026-03-13T14:34:57Z",
+        "event": "fztm_operating_loop_integrated",
+        "agent": "codex",
+        "rationale": "Integrated the project-specific FZTM operating loop from data.txt after stripping schedule-heavy ritual framing and keeping only the durable execution mechanics."
+      },
+      {
+        "at": "2026-03-13T16:18:00Z",
+        "event": "fztm_stage_tooling_integrated",
+        "agent": "codex",
+        "rationale": "Integrated stage-specific tooling posture and quality questions from data.txt into the FZTM Dream capsule while leaving cadence, metrics, milestones, and reporting to their existing surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "5f485252fdef13029eaaff8c8e7dfbdd4df4fcf5da6cbb8d1bcdba575f383002ec94e39590bb1a51089a4ae79874d7e473bb26eae7660ca975f7cb4a10de242b"
+  "integrity_sha3_512": "68a17196d4934152d60baec5aff91022eb4cd1d4edd3914479942dc22bc6bac1451eb7f7a7389d113cfa598157101bd6b52ad898b7da7618fd58cfd4b5aec534"
 }

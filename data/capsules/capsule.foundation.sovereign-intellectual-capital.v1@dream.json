@@ -1,14 +1,14 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.sovereign-intellectual-capital.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T12:00:00Z",
-    "semantic_hash": "sovereign-intellectual-capital-negentropy-value-creation-gold-core",
-    "updated_at": "2026-03-12T17:09:00Z",
+    "semantic_hash": "sovereign-intellectual-capital-fztm-ladder-compounding-value-forms",
+    "updated_at": "2026-03-13T15:01:34Z",
     "name": "Sovereign Intellectual Capital",
     "priority": "medium",
     "progress": 18,
@@ -19,19 +19,22 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Sovereign Intellectual Capital\n\n## 1. Definition and Essence\nWithin the N1Hub ecosystem, **Sovereign Intellectual Capital** is the governed value form of refined knowledge. It converts raw, entropic material into structured, lineage-rich, durable graph assets that preserve authorship, provenance, and long-horizon reuse.\n\n## 2. Core Principles\nUnlike ordinary files that lose context over time, Sovereign Intellectual Capital remains compounding and legible:\n- **Cryptographic Integrity**: CapsuleOS sealing makes silent mutation detectable and keeps asset lineage auditable.\n- **Semantic Autonomy**: Neuro-concentrate and the confidence vector preserve essence, provenance, and structural confidence.\n- **Topological Compounding**: The recursive layer links assets into reusable knowledge graphs instead of isolated outputs.\n\n## 3. Ecosystem Interactions\nSovereign Intellectual Capital is the value layer of N1Hub:\n- **DeepMine** extracts conceptual ore from external models and sources.\n- **A2C** refines that ore into governed capsule assets.\n- **N-Infinity** weaves those assets into compound knowledge structures.\n- **N1 Coin Tokenomics** and the **Marketplace** define how that capital can be licensed, exchanged, or otherwise governed economically.\n\n## 4. Philosophical Alignment\nThis capsule realizes **To Dig Deep** by turning disciplined extraction and refinement into durable value. It also clarifies the journey **Between Zero and One** by showing how chaotic intake becomes accountable graph capital.\n\n## 5. Operational Consequence\nAs the ecosystem grows, Sovereign Intellectual Capital keeps knowledge economically legible, lineage-rich, and governable across products, institutions, and markets."
+    "content": "# Sovereign Intellectual Capital\n\n## 1. Definition and Essence\nWithin the N1Hub ecosystem, **Sovereign Intellectual Capital** is the governed value form of refined knowledge. It converts raw, entropic material into structured, lineage-rich, durable graph assets that preserve authorship, provenance, and long-horizon reuse.\n\n## 2. Core Principles\nUnlike ordinary files that lose context over time, Sovereign Intellectual Capital remains compounding and legible:\n- **Cryptographic Integrity**: CapsuleOS sealing makes silent mutation detectable and keeps asset lineage auditable.\n- **Semantic Autonomy**: Neuro-concentrate and the confidence vector preserve essence, provenance, and structural confidence.\n- **Topological Compounding**: The recursive layer links assets into reusable knowledge graphs instead of isolated outputs.\n\n## 3. Ecosystem Interactions\nSovereign Intellectual Capital is the value layer of N1Hub:\n- **DeepMine** extracts conceptual ore from external models and sources.\n- **A2C** refines that ore into governed capsule assets.\n- **N-Infinity** weaves those assets into compound knowledge structures.\n- **N1 Coin Tokenomics** and the **Marketplace** define how that capital can be licensed, exchanged, or otherwise governed economically.\n\n## 4. Philosophical Alignment\nThis capsule realizes **To Dig Deep** by turning disciplined extraction and refinement into durable value. It also clarifies the journey **Between Zero and One** by showing how chaotic intake becomes accountable graph capital.\n\n## 5. Capital Evolution Across FZTM\nAs the FZTM project scales, the economic posture of knowledge changes with it:\n- **0-1 MB: Seed Capital**\n  Capture and habit formation dominate. Knowledge remains small, scattered, and full of latent value.\n- **1-10 MB: Portfolio Capital**\n  Structure and synthesis begin. Clusters, guides, and early frameworks emerge as the first reusable investments.\n- **10-100 MB: Operational Capital**\n  Reusable assets, decision support, and systemized outputs become routine. Knowledge starts generating active returns.\n- **100 MB-1 GB: Institutional Capital**\n  Frameworks, playbooks, and strategic assets scale across teams, collaborations, and larger operating surfaces.\n- **1 GB+: Generational Capital**\n  Stewardship, renewal, and continuity dominate. The capital base outlasts individual sessions and supports future growth.\n\n## 6. Operational Consequence\nAs the ecosystem grows, Sovereign Intellectual Capital keeps knowledge economically legible, lineage-rich, and governable across products, institutions, and markets."
   },
   "neuro_concentrate": {
-    "summary": "Sovereign Intellectual Capital defines the governed value layer that turns refined knowledge into durable, lineage-rich graph assets. It covers how extraction, refinement, sealing, linking, and economic governance convert raw material into reusable capital that can compound across products, institutions, and markets without losing provenance. The capsule matters because the platform's philosophical promise only becomes real when knowledge gains accountable economic shape. It therefore describes intellectual capital as a managed asset class inside N1Hub rather than a loose byproduct of mining or synthesis.",
+    "summary": "Sovereign Intellectual Capital defines the governed value layer that turns refined knowledge into durable, lineage-rich graph assets. It explains how extraction, sealing, linking, and economic governance convert raw material into reusable capital that compounds across products, institutions, and markets without losing provenance. The capsule now also distinguishes five capital forms across FZTM growth: seed, portfolio, operational, institutional, and generational. That staged ladder matters because economic posture changes as the vault matures, and later governance, marketplace, and stewardship decisions depend on knowing which form of value the graph is actually carrying.",
     "keywords": [
       "sovereign-intellectual-capital",
-      "negentropy",
-      "value-creation",
-      "immutable-knowledge",
+      "fztm",
+      "seed-capital",
+      "portfolio-capital",
+      "operational-capital",
+      "institutional-capital",
+      "generational-capital",
       "capsuleos",
       "n1hub",
       "digital-asset",
-      "cryptographic-provenance",
+      "marketplace",
       "compound-intelligence"
     ],
     "confidence_vector": {
@@ -42,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "sovereign-intellectual-capital-negentropy-value-creation-gold-core"
+    "semantic_hash": "sovereign-intellectual-capital-fztm-ladder-compounding-value-forms"
   },
   "recursive_layer": {
     "links": [
@@ -77,10 +80,21 @@
       {
         "target_id": "capsule.foundation.marketplace.v1",
         "relation_type": "part_of"
+      },
+      {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T15:01:34Z",
+        "event": "capital_evolution_ladder_integrated",
+        "agent": "n1",
+        "rationale": "Integrated the explicit FZTM-linked capital progression ladder from data.txt into the Dream capsule without carrying over marketing metaphors or gamified framing."
+      }
+    ]
   },
-  "integrity_sha3_512": "c2909e4a6cb82687fb6ac4861f04dfcff169f17e57a1654e64fd25f5249a5df9b4ea773bd29e14f051bbe153118440186a6493302285827f6ef8e165de97e6b0"
+  "integrity_sha3_512": "4f41bc962111eb4a66182007a44c4b4d3d0442d3bc274b83b68c3303b3ea9dfcdbe7803bda60cecc6629f60cb789ca579c55ff1ea352f4fc59ade31a8298b4e8"
 }

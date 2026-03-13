@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.roadmap.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:43:05.326Z",
-    "updated_at": "2026-03-12T16:34:00Z",
+    "updated_at": "2026-03-13T16:07:00Z",
     "name": "Roadmap",
-    "semantic_hash": "roadmap-timeline-phases-milestones-strategic-planning-gold-core",
+    "semantic_hash": "roadmap-fztm-phase-sequencing-transition-logic-horizon-governance",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 190,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Roadmap\n\n## 1. Role\nRoadmap is a more adaptive strategic timeline that can hold alternative futures, branch posture, capacity notes, and review anchors without collapsing into vague ambition.\n\n## 2. Roadmap Contract\nRoadmap supports stronger phase models across major horizons, clearer separation between exploratory, committed, and promotion-ready phases, richer review anchors tied to evidence and execution pressure, and better compression into daily action through Planning Horizon Engine.\n\n## 3. Operational Consequence\nLong-horizon structure stays intelligible while adapting under pressure. Roadmap remains a living planning instrument that guides execution without becoming brittle, decorative, or disconnected from tracker evidence.\n\n## 4. Philosophical Alignment\nRoadmap supports To Dig Deep by making long-horizon intent explicit, reviewable, and compressible into reality."
+    "content": "# Roadmap\n\n## 1. Role\nRoadmap is a more adaptive strategic timeline that can hold alternative futures, branch posture, capacity notes, and review anchors without collapsing into vague ambition.\n\n## 2. Roadmap Contract\nRoadmap supports stronger phase models across major horizons, clearer separation between exploratory, committed, and promotion-ready phases, richer review anchors tied to evidence and execution pressure, and better compression into daily action through Planning Horizon Engine.\n\n## 3. FZTM Phase Roadmaps\nRoadmap can also hold phase-sequenced growth models when a project needs long-horizon transition logic without collapsing that logic into raw metrics, milestone gates, or calendar rituals. In the FZTM case, Roadmap owns the ordered progression from Seed to Sprout to Tree to Forest to Ecosystem as a strategic path of increasing structural depth and system leverage.\n\n- Seed establishes trusted capture and centralization.\n- Sprout builds first clusters, tags, and lightweight connection habits.\n- Tree converts structured clusters into reusable frameworks, outputs, and strategic assets.\n- Forest scales automation, reporting, and cross-domain synthesis without losing coherence.\n- Ecosystem marks collaborative, recursive, and self-improving knowledge stewardship.\n\nRoadmap owns the phase ordering and transition narrative. Metric owns units and telemetry, Milestone owns checkpoint evidence, and Analytics owns derived reporting.\n\n## 4. Operational Consequence\nLong-horizon structure stays intelligible while adapting under pressure. Roadmap remains a living planning instrument that guides execution without becoming brittle, decorative, or disconnected from tracker evidence.\n\n## 5. Philosophical Alignment\nRoadmap supports To Dig Deep by making long-horizon intent explicit, reviewable, and compressible into reality."
   },
   "neuro_concentrate": {
-    "summary": "Roadmap defines the long-horizon planning surface that holds strategic timelines, branch posture, review anchors, and phase structure without collapsing into vague ambition. It covers stronger phase design, clearer distinction between exploratory and committed paths, richer evidence-linked review anchors, and better compression into daily execution through planning layers downstream. The capsule matters because long-range intent loses force when it cannot adapt under pressure or connect to execution reality. It keeps strategic direction legible, reviewable, and compressible without becoming brittle or merely decorative.",
+    "summary": "Roadmap defines the long-horizon planning surface that holds strategic timelines, branch posture, review anchors, and phase structure without collapsing into vague ambition. It now also clarifies how roadmap-owned phase sequencing differs from metrics, milestone evidence, and calendar cadence by giving FZTM a clean Seed-to-Ecosystem transition path. The capsule matters because major growth systems need an ordered horizon model that explains how structural depth and leverage should increase over time without turning that model into raw telemetry or brittle rituals. It keeps strategic direction legible, reviewable, and compressible while preserving clear ownership boundaries across planning surfaces.",
     "keywords": [
       "roadmap",
       "timeline",
@@ -30,7 +30,10 @@
       "milestones",
       "strategic-planning",
       "horizon",
-      "compression"
+      "compression",
+      "fztm",
+      "phase-sequencing",
+      "transition-logic"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -40,7 +43,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "roadmap-timeline-phases-milestones-strategic-planning-gold-core"
+    "semantic_hash": "roadmap-fztm-phase-sequencing-transition-logic-horizon-governance"
   },
   "recursive_layer": {
     "links": [
@@ -97,6 +100,10 @@
         "relation_type": "references"
       },
       {
+        "target_id": "capsule.project.from-zero-to-megabytes.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.ai.suggestion.v1",
         "relation_type": "references"
       },
@@ -116,8 +123,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Stripped future-meta phrasing so the capsule states present roadmap doctrine directly."
+      },
+      {
+        "at": "2026-03-13T16:07:00Z",
+        "event": "fztm_phase_roadmap_integrated",
+        "agent": "codex",
+        "rationale": "Integrated the durable FZTM phase-sequencing model into Roadmap while leaving cadence, telemetry, and checkpoint ownership to their existing planning surfaces."
       }
     ]
   },
-  "integrity_sha3_512": "b84a9b0bacc992584c1cdf3757b4259b90f71166360e095b6020a73219317350ab8dd7ad5c6cce32fb7424d781702a215ce460d70e3ee36222beceb15ab14567"
+  "integrity_sha3_512": "092aa78dcc655c40e2e484e9cfb1a5403a2d941b57cb87ddd470bb227cb85c75a1aa470d931e9d9cb5a8cbbe995eb9e5b89a678d3327b1e3bf842a3adeb2f394"
 }

@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.team.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "sovereign",
     "type": "foundation",
     "subtype": "hub",
     "author": "Number One Projects",
     "created_at": "2026-03-05T18:55:08.091Z",
-    "updated_at": "2026-03-12T16:42:00Z",
+    "updated_at": "2026-03-13T16:31:42Z",
     "name": "Team",
-    "semantic_hash": "capsule-foundation-team-v1-collaboration-roles-permissions-projects",
+    "semantic_hash": "team-collaborative-mining-role-bindings-shared-stewardship-governance",
     "priority": "medium",
     "progress": 29,
     "estimatedHours": 320,
@@ -19,10 +19,10 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Team\n\n## 1. Definition and Essence\nTeam defines collaborative grouping semantics for shared projects, responsibilities, and communication contexts. It maps members to roles and permissions while preserving ownership boundaries and sovereign data controls.\n\n## 2. Core Attributes\n- `team_id` stable team identifier\n- `member_refs` linked profile capsules in team scope\n- `role_bindings` role assignments per member and project\n- `shared_projects` project hubs collaboratively maintained\n- `governance_rules` participation and decision constraints\n\n## 3. Lifecycle\nTeams are created around initiatives, evolve through invitations and role changes, and may be archived while retaining full collaboration and decision lineage.\n\n## 4. Integration\n- **Project Hubs:** applies team context to delivery work.\n- **Role and Permission:** controls capabilities per member.\n- **Invitation:** governs safe onboarding of collaborators.\n- **Workspace:** surfaces team-scoped views and activities.\n\n## 5. Philosophical Alignment\nTeam capsules express To Dig Deep socially: aligned people, explicit responsibility, and traceable collective execution.\n"
+    "content": "# Team\n\n## 1. Definition and Essence\nTeam defines collaborative grouping semantics for shared projects, responsibilities, and communication contexts. It maps members to roles and permissions while preserving ownership boundaries and sovereign data controls.\n\n## 2. Core Attributes\n- `team_id` stable team identifier\n- `member_refs` linked profile capsules in team scope\n- `role_bindings` role assignments per member and project\n- `shared_projects` project hubs collaboratively maintained\n- `governance_rules` participation and decision constraints\n\n## 3. Lifecycle\nTeams are created around initiatives, evolve through invitations and role changes, and may be archived while retaining full collaboration and decision lineage.\n\n## 4. Integration\n- **Project Hubs:** applies team context to delivery work.\n- **Role and Permission:** controls capabilities per member.\n- **Invitation:** governs safe onboarding of collaborators.\n- **Workspace:** surfaces team-scoped views and activities.\n\n## 5. Collective Mining Coordination\nShared knowledge-mining systems need a team surface that owns more than membership lists. In collective mining contexts, Team governs:\n- role bindings between gatherers, taggers, synthesizers, and orchestrators across one shared knowledge base\n- intake and merge conventions that keep raw material, taxonomy work, and synthesis handoffs legible between contributors\n- contradiction and duplication escalation paths when multiple members refine the same cluster or claim\n- shared stewardship rules for when outputs become team memory, project memory, or archive material\n\nTeam does not replace permission law, planner cadence, or tracker pressure. It gives collaborative mining a governed social container so multi-actor knowledge work stays attributable, reviewable, and composable instead of dissolving into informal coordination.\n\n## 6. Philosophical Alignment\nTeam capsules express To Dig Deep socially: aligned people, explicit responsibility, and traceable collective execution.\n"
   },
   "neuro_concentrate": {
-    "summary": "Team defines the collaboration unit that keeps membership, roles, invitations, project participation, and operating rituals legible as graph-native structure rather than informal social context. It strengthens governance memory, richer membership context, and tighter coupling between role assignments, shared delivery work, and accountability boundaries so collaboration can scale without turning into invisible coordination debt. The capsule matters because multi-actor work succeeds only when people, permissions, and decision lineage remain explicit. It therefore acts as the operating cell for governed collaboration across the graph rather than a placeholder container for people.",
+    "summary": "Team defines the collaboration unit that keeps membership, role bindings, invitations, project participation, and collective mining governance legible as graph-native structure instead of informal social context. It now also owns the coordination layer for shared knowledge work: who gathers, tags, synthesizes, orchestrates, merges, escalates contradictions, and stewards shared outputs across one evolving memory surface. The capsule matters because multi-actor mining fails when responsibility, merge rules, and stewardship stay implicit even if permissions are technically correct. It therefore acts as the governed social container for collaborative knowledge compounding rather than a placeholder list of people.",
     "keywords": [
       "team",
       "collaboration-container",
@@ -32,7 +32,10 @@
       "project-participation",
       "governance",
       "invitation-flow",
-      "accountability"
+      "accountability",
+      "collaborative-mining",
+      "shared-second-brain",
+      "stewardship"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -42,7 +45,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "capsule-foundation-team-v1-collaboration-roles-permissions-projects"
+    "semantic_hash": "team-collaborative-mining-role-bindings-shared-stewardship-governance"
   },
   "recursive_layer": {
     "links": [
@@ -61,10 +64,25 @@
       {
         "target_id": "capsule.foundation.invitation.v1",
         "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.project.mining-company.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.deepmine.v1",
+        "relation_type": "references"
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T16:31:42Z",
+        "event": "collective_mining_team_coordination_integrated",
+        "agent": "n1",
+        "rationale": "Integrated durable team-owned coordination rules from data.txt so collaborative mining systems can bind role archetypes, merge conventions, and shared stewardship without importing schedule-heavy or marketing residue."
+      }
+    ]
   },
-  "integrity_sha3_512": "910a4b2e93e9da42c81671669170840a4fa328d02fce105d28e35d7059be677d7d60b445063aa15f40412a27a97d199f388020415c6a35970e9ae5a520c367b5"
+  "integrity_sha3_512": "fd0a4d782ae92ed63b4883c9791919707038dd161ccd8a13327c58142ec95f78f8cb0fc5a3dedc2554193bf659618fe7cc7b81e526231d5b1b568879935f00fe"
 }

@@ -1,41 +1,47 @@
 {
   "metadata": {
     "capsule_id": "capsule.integration.notification.v1",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "status": "active",
     "type": "operations",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-05T19:03:03.522Z",
-    "updated_at": "2026-03-12T16:31:00Z",
+    "updated_at": "2026-03-13T16:12:00Z",
     "name": "Notification Integration",
-    "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery",
+    "semantic_hash": "notification-integration-milestone-revival-readiness-channel-delivery-contracts",
     "source": {
       "uri": "n1hub://specs/capsule-graph-expansion-2026-03-05",
       "sha256": "71155031e3e8f441f023dbd23aa498655a91f23e23513d30c6b3f1b6ef9bbc01",
       "type": "architect_prompt"
     },
     "priority": "medium",
-    "progress": 34,
+    "progress": 39,
     "estimatedHours": 188,
-    "actualHours": 51,
+    "actualHours": 57,
     "dueDate": "2026-08-22",
     "tier": 3
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Notification Integration\n\n## 1. Definition and Essence\nNotification Integration defines external delivery connectors for channels such as email, push, and Telegram. It governs payload adaptation, delivery guarantees, rate limits, and acknowledgment handling.\n\n## 2. Core Attributes\n- `channel_provider` smtp, push, telegram, webhook\n- `delivery_contract` payload templates and action links\n- `rate_limits` channel throughput and burst constraints\n- `ack_model` confirmation and readback semantics\n- `failure_policy` retries, dead-letter, and escalation behavior\n\n## 3. Lifecycle\nIntegrations are configured with credentials, validated through test sends, used by reminder and assistant workflows, and continuously monitored for delivery health.\n\n## 4. Integration\n- **Notification Module:** core producer of outbound events.\n- **Reminder/Tracker:** scheduling and urgency context.\n- **API Gateway:** secure egress and callback management.\n- **Security:** secret handling and abuse protection.\n\n## 5. Philosophical Alignment\nNotification integration advances To Dig Deep by making timely signals reliable across channels users actually trust.\n"
+    "content": "# Notification Integration\n\n## 1. Definition and Essence\nNotification Integration defines external delivery connectors for channels such as email, push, and Telegram. It governs payload adaptation, delivery guarantees, rate limits, and acknowledgment handling.\n\n## 2. Core Attributes\n- `channel_provider` smtp, push, telegram, webhook\n- `delivery_contract` payload templates and action links\n- `rate_limits` channel throughput and burst constraints\n- `ack_model` confirmation and readback semantics\n- `failure_policy` retries, dead-letter, and escalation behavior\n\n## 3. Lifecycle\nIntegrations are configured with credentials, validated through test sends, used by reminder and assistant workflows, and continuously monitored for delivery health.\n\n## 4. Integration\n- **Notification Module:** core producer of outbound events.\n- **Reminder/Tracker:** scheduling and urgency context.\n- **API Gateway:** secure egress and callback management.\n- **Security:** secret handling and abuse protection.\n\n## 5. Milestone and Revival Channel Contracts\nNotification Integration now makes explicit that external channels must preserve the structure of milestone alerts, dormant-insight revival prompts, and readiness nudges once the upstream evidence has already been formed by foundation-owned surfaces.\n\nA clean delivery contract may include:\n- milestone transition payloads that preserve checkpoint state, decisive evidence, and a direct return path into the originating dashboard or milestone view\n- dormant-revival prompts that preserve why a note or cluster was surfaced, what bounded action is proposed, and which suggestion packet produced the option\n- readiness nudges that preserve the next recommended move without inventing new scoring logic inside the transport layer\n- acknowledgement and callback semantics that let the system distinguish delivery success, operator seen-state, and explicit defer, accept, or dismiss outcomes where the channel supports them\n\nNotification Integration does not decide whether something is important enough to send. Notification owns attention posture, Milestone owns checkpoint evidence, Suggestion Agent owns ranked dormant-revival options, and Dashboard owns the cockpit evidence that justified the alert. Integration owns adaptation across email, push, Telegram, and webhook channels so the same signal can travel outward without losing meaning, acknowledgement state, or return-path precision.\n\nThis also means the external layer stays non-gamified. Delivery connectors can carry significance, but they must not mutate milestone or revival signals into badge spam, streak pressure, or synthetic unlock theater.\n\n## 6. Philosophical Alignment\nNotification integration advances To Dig Deep by making timely signals reliable across channels users actually trust.\n"
   },
   "neuro_concentrate": {
-    "summary": "Notification Integration defines the external delivery fabric that turns internal graph urgency into trustworthy signals across email, push, Telegram, and webhook routes. It captures channel governance, retry behavior, acknowledgment handling, payload adaptation, and delivery health as an explicit connector contract instead of leaving outward communication as a thin transport shim. The capsule matters because alerting only works when delivery remains reliable under real operational pressure and user context. It therefore treats notification routing as a governed operational surface for dependable outbound communication rather than a best-effort side channel.",
+    "summary": "Notification Integration defines the external delivery fabric that turns internal graph urgency into trustworthy signals across email, push, Telegram, and webhook routes. It now also makes milestone alerts, dormant-insight revival prompts, and readiness nudges explicit as channel contracts that preserve evidence context, acknowledgement state, and direct return paths back into dashboard, milestone, or suggestion surfaces. The capsule matters because notification meaning is lost when transport strips away why a signal mattered or where the operator should return. It therefore treats channel routing as a governed delivery layer rather than a best-effort side channel.",
     "keywords": [
       "notification-integration",
       "email",
       "push",
       "telegram",
+      "webhook",
       "delivery",
       "tracker",
-      "reminder"
+      "reminder",
+      "milestone-alerts",
+      "dormant-revival",
+      "readiness-nudges",
+      "return-paths",
+      "acknowledgement"
     ],
     "confidence_vector": {
       "extraction": 0.9,
@@ -45,7 +51,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0.2
     },
-    "semantic_hash": "capsule-integration-notification-v1-email-push-telegram-delivery"
+    "semantic_hash": "notification-integration-milestone-revival-readiness-channel-delivery-contracts"
   },
   "recursive_layer": {
     "links": [
@@ -58,6 +64,18 @@
         "relation_type": "supports"
       },
       {
+        "target_id": "capsule.foundation.dashboard.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.milestone.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.n-infinity.suggestion-agent.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.api-gateway.v1",
         "relation_type": "depends_on"
       },
@@ -67,7 +85,14 @@
       }
     ],
     "actions": [],
-    "epistemic_ledger": []
+    "epistemic_ledger": [
+      {
+        "at": "2026-03-13T16:12:00Z",
+        "event": "milestone_revival_delivery_contracts_integrated",
+        "agent": "n1",
+        "rationale": "Integrated external delivery contracts for milestone alerts, dormant revival prompts, and readiness nudges while leaving timing, scoring, and upstream evidence ownership with foundation notification surfaces."
+      }
+    ]
   },
-  "integrity_sha3_512": "5d9b41d1a1c061092d3e8a6159a425a088c1509b4af7304230aae856949a4f190a2c4486b8af25b59008fb14ca2dc35e15cdf0a0fd08e8d66cdfaef3fa6b1242"
+  "integrity_sha3_512": "58664caaaf4171e0788dfcc473af5f4e699f9ddb5b32f2018c2d7f9d632c03a89d319283fece18dd184828505192e2061e29a8c1994f999b05dd57d418507213"
 }

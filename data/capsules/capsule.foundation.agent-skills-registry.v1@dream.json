@@ -1,15 +1,15 @@
 {
   "metadata": {
     "capsule_id": "capsule.foundation.agent-skills-registry.v1",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "draft",
     "type": "foundation",
     "subtype": "atomic",
     "author": "Number One Projects",
     "created_at": "2026-03-06T18:20:00Z",
-    "updated_at": "2026-03-12T18:20:00Z",
+    "updated_at": "2026-03-13T14:36:00Z",
     "name": "Agent Skills Registry",
-    "semantic_hash": "agent-skills-registry-procedural-lattice-reusable-craft-runtime",
+    "semantic_hash": "skills-registry-jointcomining-playbooks-procedural-lattice-humanloop-dream",
     "priority": "high",
     "progress": 31,
     "estimatedHours": 240,
@@ -19,23 +19,25 @@
   },
   "core_payload": {
     "content_type": "markdown",
-    "content": "# Agent Skills Registry\n\n## 1. Role\nAgent Skills Registry is the procedural library for N1Hub intelligence surfaces. Skills remain the local, reviewable place where recurring operational patterns are documented once and reused across mining, refining, reviewing, stewarding, and execution lanes.\n\n## 2. Skill Lattice\n- explicit procedures for scout, miner, foreman, reviewer, executor, and steward lanes\n- skill-guided context-pack assembly and structured-output discipline\n- versioned runtime and tool guidance that stays with the repository\n- clearer separation between broad instruction surfaces and narrow procedural playbooks\n- reusable full-cycle procedures that make quarry, refinery, swarm, and execution work repeatable\n\n## 3. Operational Consequence\nThe registry is the place where the capsule factory learns how to repeat itself without drifting into accidental habit. Agents improve because good tactics are preserved as inspectable local procedures rather than rediscovered badly in prompts.\n\n## 4. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable craft."
+    "content": "# Agent Skills Registry\n\n## 1. Role\nAgent Skills Registry is the procedural library for N1Hub intelligence surfaces. Skills remain the local, reviewable place where recurring operational patterns are documented once and reused across mining, refining, reviewing, stewarding, and execution lanes.\n\n## 2. Skill Lattice\n- explicit procedures for scout, miner, foreman, reviewer, executor, and steward lanes\n- skill-guided context-pack assembly and structured-output discipline\n- versioned runtime and tool guidance that stays with the repository\n- clearer separation between broad instruction surfaces and narrow procedural playbooks\n- reusable full-cycle procedures that make quarry, refinery, swarm, and execution work repeatable\n\n## 3. Joint Co-Mining Playbooks\n- explicit human-agent playbooks for sessions where selection, synthesis, and refinement bounce between operator judgment and agent automation\n- candidate work objects surfaced by the assistant or swarm, such as clusters, dormant nodes, contradiction sets, draft summaries, and link proposals\n- operator-first scope selection so the human chooses the target cluster, desired output, and acceptance threshold before mutation work proceeds\n- draft generation and structural proposals from the agent, including candidate summaries, tags, links, contradiction notes, and integration paths\n- review-and-adjust steps where the human confirms, edits, rejects, or reframes the proposed structure before it becomes durable state\n- integration handoff that returns approved changes as updated summaries, links, next actions, or candidate promotion packets\n- explicit boundary separation so cadence remains planner/tracker-owned and sovereign partnership posture remains human-ai-symbiosis-owned\n\n## 4. Operational Consequence\nThe registry is the place where the capsule factory learns how to repeat itself without drifting into accidental habit. Agents improve because good tactics are preserved as inspectable local procedures rather than rediscovered badly in prompts. Joint co-mining playbooks extend that discipline to shared sessions where the assistant and operator alternate tightly rather than pretending every useful workflow is fully autonomous.\n\n## 5. Philosophical Alignment\nAgent Skills Registry supports To Dig Deep by turning recurring operational wisdom into explicit, local, inspectable craft, including sessions where the human stays sovereign by making the key judgments inside the loop."
   },
   "neuro_concentrate": {
-    "summary": "Agent Skills Registry defines the procedural lattice that lets N1Hub preserve and reuse recurring operational tactics instead of rediscovering them in prompts. It covers versioned playbooks for scout, miner, foreman, reviewer, executor, and steward lanes, context-pack assembly guidance, tool-use discipline, and the separation between broad instruction surfaces and narrow procedural craft. The capsule matters because good tactics stay inspectable, local, and repeatable across mining, refining, reviewing, stewarding, and execution lanes rather than dissolving into habit or operator folklore.",
+    "summary": "Agent Skills Registry defines the procedural lattice that lets N1Hub preserve and reuse recurring operational tactics instead of rediscovering them in prompts. It covers versioned playbooks for scout, miner, foreman, reviewer, executor, and steward lanes, plus joint co-mining sessions where the assistant surfaces candidate work, drafts structure, and returns proposals that the human confirms, edits, or rejects before durable state changes. The capsule matters because repeatable craft must cover both autonomous lanes and tightly interleaved human-agent work without collapsing procedure into schedule or posture.",
     "keywords": [
       "agent-skills",
       "skills",
       "skill-md",
-      "workspace-skills",
+      "joint-co-mining",
+      "human-agent-playbooks",
+      "interactive-procedures",
       "deepmine",
-      "capsule-validation",
-      "symphony",
       "n-infinity",
-      "tool-guidance",
-      "n1hub",
       "a2c",
-      "full-cycle-procedures"
+      "tool-guidance",
+      "structured-output",
+      "full-cycle-procedures",
+      "workspace-skills",
+      "n1hub"
     ],
     "confidence_vector": {
       "extraction": 1,
@@ -45,7 +47,7 @@
       "validation_score": 1,
       "contradiction_pressure": 0
     },
-    "semantic_hash": "agent-skills-registry-procedural-lattice-reusable-craft-runtime"
+    "semantic_hash": "skills-registry-jointcomining-playbooks-procedural-lattice-humanloop-dream"
   },
   "recursive_layer": {
     "links": [
@@ -82,6 +84,18 @@
         "relation_type": "implements"
       },
       {
+        "target_id": "capsule.foundation.human-ai-symbiosis.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.planner.v1",
+        "relation_type": "references"
+      },
+      {
+        "target_id": "capsule.foundation.tracker.v1",
+        "relation_type": "references"
+      },
+      {
         "target_id": "capsule.foundation.personal-ai-assistant.v1",
         "relation_type": "part_of"
       },
@@ -97,8 +111,14 @@
         "event": "dream_hygiene_cleanup",
         "agent": "n1",
         "rationale": "Removed meta-language so the capsule states current doctrine directly."
+      },
+      {
+        "at": "2026-03-13T14:36:00Z",
+        "event": "joint_co_mining_playbooks_integrated",
+        "agent": "n1",
+        "rationale": "Integrated procedure-only human-agent playbooks from data.txt after separating collaborative steps from planner-owned cadence and symbiosis-owned posture."
       }
     ]
   },
-  "integrity_sha3_512": "4a7e80ed42f3b717445e5e389373da89b4bc3a684c139c84d541fa1a3feaae209de13550ce7e55d7241aa8e4bdf4ae29f5ff6bd50f66407e93c2e2a18dbc795f"
+  "integrity_sha3_512": "ea65d7227a0e84923f825b263e7c361c680b3f5b4364a6ad2a0da7f2e1fb92e5cf709ae72f66ee5a3201564c90daf16ce3e120d35679bfa837e0bb7b4395ea6e"
 }
