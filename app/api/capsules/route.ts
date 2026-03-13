@@ -58,7 +58,7 @@ export async function GET(request: Request) {
     const materializedOnly = searchParams.get('materialized') === 'true';
     const branch = resolveBranch(request);
     if (!branch) return jsonError(400, 'Invalid branch name');
-    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+    if (branch !== 'real' && branch !== 'dream' && !(await readBranchManifest(branch))) {
       return jsonError(404, 'Branch not found');
     }
 
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
   try {
     const branch = resolveBranch(request);
     if (!branch) return jsonError(400, 'Invalid branch name');
-    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+    if (branch !== 'real' && branch !== 'dream' && !(await readBranchManifest(branch))) {
       return jsonError(404, 'Branch not found');
     }
 

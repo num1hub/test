@@ -113,7 +113,7 @@ export async function PUT(
     const { id } = await params;
     const branch = resolveBranch(request);
     if (!branch) return jsonError(400, 'Invalid branch name');
-    if (branch !== 'real' && !(await readBranchManifest(branch))) {
+    if (branch !== 'real' && branch !== 'dream' && !(await readBranchManifest(branch))) {
       return jsonError(404, 'Branch not found');
     }
 

@@ -139,6 +139,42 @@ describe('API: /api/capsules/[id]', () => {
       expect(logActivity).toHaveBeenCalledWith('update', expect.objectContaining({ capsule_id: 'test.v1' }))
     })
 
+    it('allows built-in dream writes without manifest lookup', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+
+      const req = new Request('http://localhost/api/capsules/test.v1?branch=dream', {
+        method: 'PUT',
+        headers: authHeader,
+        body: JSON.stringify(payload),
+      })
+
+      vi.mocked(readOverlayCapsule).mockResolvedValue(payload as never)
+      vi.mocked(validateCapsule).mockResolvedValue({
+        valid: true,
+        errors: [],
+        warnings: [],
+      } as never)
+
+      const res = await PUT(req, { params: Promise.resolve({ id: 'test.v1' }) })
+      expect(res.status).toBe(200)
+      expect(writeOverlayCapsule).toHaveBeenCalledWith(expect.any(Object), 'dream')
+      expect(readBranchManifest).not.toHaveBeenCalled()
+    })
+
+    it('returns 404 for a missing custom branch', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+
+      const req = new Request('http://localhost/api/capsules/test.v1?branch=experimental-1', {
+        method: 'PUT',
+        headers: authHeader,
+        body: JSON.stringify(payload),
+      })
+
+      const res = await PUT(req, { params: Promise.resolve({ id: 'test.v1' }) })
+      expect(res.status).toBe(404)
+      expect(readBranchManifest).toHaveBeenCalledWith('experimental-1')
+    })
+
     it('returns 409 when project re-parenting would create a cycle', async () => {
       const projectPayload = {
         metadata: {

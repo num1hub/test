@@ -132,6 +132,32 @@ describe('API: /api/capsules', () => {
       expect(data).toHaveLength(1)
       expect(loadOverlayGraph).toHaveBeenCalledWith('dream')
     })
+
+    it('allows built-in dream without manifest lookup', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+      vi.mocked(loadOverlayGraph).mockResolvedValue([mockCapsule] as never)
+
+      const req = new Request('http://localhost/api/capsules?branch=dream', {
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
+      })
+
+      const res = await GET(req)
+      expect(res.status).toBe(200)
+      expect(loadOverlayGraph).toHaveBeenCalledWith('dream')
+      expect(readBranchManifest).not.toHaveBeenCalled()
+    })
+
+    it('returns 404 for a missing custom branch', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+
+      const req = new Request('http://localhost/api/capsules?branch=experimental-1', {
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
+      })
+
+      const res = await GET(req)
+      expect(res.status).toBe(404)
+      expect(readBranchManifest).toHaveBeenCalledWith('experimental-1')
+    })
   })
 
   describe('POST', () => {
@@ -169,6 +195,21 @@ describe('API: /api/capsules', () => {
 
       const res = await POST(req)
       expect(res.status).toBe(404)
+    })
+
+    it('allows built-in dream writes without manifest lookup', async () => {
+      vi.mocked(readBranchManifest).mockResolvedValueOnce(null)
+
+      const req = new Request('http://localhost/api/capsules?branch=dream', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${createAuthToken()}` },
+        body: JSON.stringify(mockCapsule),
+      })
+
+      const res = await POST(req)
+      expect(res.status).toBe(201)
+      expect(writeOverlayCapsule).toHaveBeenCalledWith(expect.objectContaining(mockCapsule), 'dream')
+      expect(readBranchManifest).not.toHaveBeenCalled()
     })
 
     it('injects parent link when parentId is provided', async () => {
